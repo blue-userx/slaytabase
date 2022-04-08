@@ -1,6 +1,6 @@
 import { MessageEmbed } from 'discord.js';
 import characters from './characters.js';
-const exportURL = 'https://darkvexon.github.io/export';
+import cfg from './cfg.js';
 
 function embed(item) {
     let e = new MessageEmbed();
@@ -8,25 +8,25 @@ function embed(item) {
     switch (item.itemType) {
         case 'card':
             let character = characters[item.color];
-            e.thumbnail = {url: `${exportURL}/${item.mod}/card-images/${item.color.slice(0,10)}-${item.name.replaceAll(' ', '').replace('+', 'Plus')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/card-images/${item.color.slice(0,10)}-${item.name.replaceAll(' ', '').replace('+', 'Plus')}.png`};
             e.color = character[1];
             e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.description.includes('Unplayable') ? '' : `${item.cost} ${character[2]} / `}${character[0]}\n\n${item.description}`;
             break;
 
         case 'relic':
             let pool = characters[item.pool];
-            e.thumbnail = {url: `${exportURL}/${item.mod}/relics/${pool[3]}${item.name.replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${pool[3]}${item.name.replaceAll(' ', '')}.png`};
             e.color = pool[1];
             e.description = ` ${item.tier} Relic / ${pool[0]}\n\n${item.description}\n*${item.flavorText}*`;
             break;
             
         case 'potion':
-            e.thumbnail = {url: `${exportURL}/${item.mod}/potions/${item.name.replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.name.replaceAll(' ', '')}.png`};
             e.description = `${item.rarity}\n\n${item.description}`;
             break;
             
         case 'creature':
-            e.thumbnail = {url: `${exportURL}/${item.mod}/creatures/${item.name.replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.name.replaceAll(' ', '')}.png`};
             e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP`;
             break;
         

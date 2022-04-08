@@ -47,7 +47,7 @@ bot.on('messageCreate', msg => {
 
 async function main() {
     console.log('fetching data...');
-    let response = await fetch('https://darkvexon.github.io/export/items.json');
+    let response = await fetch(`${cfg.exportURL}/items.json`);
     console.log('fetched data, parsing it...');
     let data = await response.json();
     let i = 0;
