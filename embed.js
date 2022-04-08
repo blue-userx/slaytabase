@@ -26,6 +26,7 @@ function embed(item) {
             break;
             
         case 'creature':
+            e.thumbnail = {url: `${exportURL}/${item.mod}/creatures/${item.name.replaceAll(' ', '')}.png`};
             e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP`;
             break;
         
