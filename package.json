@@ -1,0 +1,19 @@
+{
+  "name": "downfallbot",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "js-search": "^2.0.0",
+    "node-fetch": "^3.2.3"
+  }
+}
