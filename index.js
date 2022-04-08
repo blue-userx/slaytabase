@@ -12,6 +12,7 @@ const search = new JsSearch.Search('id');
 search.addIndex('name');
 search.addIndex('itemType');
 search.addIndex('color');
+search.addIndex('type');
 
 const queryLimit = 10; //max number of embeds on a discord message
 
