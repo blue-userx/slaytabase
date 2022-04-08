@@ -10,7 +10,7 @@ function embed(item) {
             let character = characters[item.color];
             e.thumbnail = {url: `${exportURL}/${item.mod}/card-images/${item.color.slice(0,10)}-${item.name.replaceAll(' ', '').replace('+', 'Plus')}.png`};
             e.color = character[1];
-            e.description = `${item.rarity} ${item.type} / ${item.cost} ${character[2]} / ${character[0]}\n\n${item.description}`;
+            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.description.includes('Unplayable') ? '' : `${item.cost} ${character[2]} / `}${character[0]}\n\n${item.description}`;
             break;
 
         case 'relic':
