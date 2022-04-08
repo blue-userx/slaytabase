@@ -13,5 +13,6 @@ export default {
     'Snecko_cyan': ['The Snecko', 6333629, '<:e_snecko:961809971954217030>', 'sneckomod-'],
     'The_champ_gray': ['The Champ', 2242624, '<:e_champ:961809971920633936>', 'champ-'],
     'Guardian': ['The Guardian', 10721357, '<:e_guardian:961809971950014504>', 'Guardian-'],
+    'Hermit_yellow': ['The Hermit', 10049803, '<:e_colorless:961808772609769512>', 'hermit-'],
     '': ['All', 8026746, '<:e_colorless:961808772609769512>', ''],
 };
