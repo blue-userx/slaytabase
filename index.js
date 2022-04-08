@@ -27,16 +27,18 @@ bot.on('messageCreate', msg => {
             let embeds = []
             for (let i of queries) {
                 let query = i[1]
-                let results = search.search(query);
-                let item = results.length > 0 ? (query.startsWith('=') ? results.find(e => e.name.toLowerCase() == query.slice(1).toLowerCase()) : (query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])) : undefined;
-                if (item == undefined)
-                    item = {
-                        itemType: 'fail',
-                        name: 'No results',
-                        query,
-                    };
-                console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.itemType} "${item.name}"` : 'nothing'}`);
-                embeds.push(embed(item))
+                if (!(query.startsWith('@') || query.startsWith('#'))) {
+                    let results = search.search(query);
+                    let item = results.length > 0 ? (query.startsWith('=') ? results.find(e => e.name.toLowerCase() == query.slice(1).toLowerCase()) : (query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])) : undefined;
+                    if (item == undefined)
+                        item = {
+                            itemType: 'fail',
+                            name: 'No results',
+                            query,
+                        };
+                    console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.itemType} "${item.name}"` : 'nothing'}`);
+                    embeds.push(embed(item))
+                }
             }
             msg.channel.send({embeds}).catch(e => {});
         }
