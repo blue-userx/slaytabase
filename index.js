@@ -38,10 +38,10 @@ bot.on('messageCreate', msg => {
                 console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.itemType} "${item.name}"` : 'nothing'}`);
                 embeds.push(embed(item))
             }
-            msg.channel.send({embeds});
+            msg.channel.send({embeds}).catch(e => {});
         }
     } else {
-        msg.channel.send("I can only take up to 10 queries at a time");
+        msg.channel.send("I can only take up to 10 queries at a time").catch(e => {});
     }
 });
 
