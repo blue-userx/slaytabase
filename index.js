@@ -11,18 +11,28 @@ search.addIndex('name');
 search.addIndex('itemType');
 search.addIndex('color');
 
+const queryLimit = 10;
+
 bot.once('ready', async () => {
 	console.log('connected to discord. ready!');
 });
 
 bot.on('messageCreate', msg => {
     let queries = [...msg.content.matchAll(/\<(.*?)\>/g)];
-    for (let i of queries) {
-        let query = i[1]
-        let results = search.search(query);
-        let item = results.length > 0 ? (query.includes('+') ? results.find(e => e.name.includes('+')) : results[0]) : undefined;
-        console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.itemType} "${item.name}"` : 'nothing'}`);
-        msg.channel.send({embeds: [embed(item)]});
+    if (queries.length <= queryLimit) {
+        if (queries.length > 0) {
+            let embeds = []
+            for (let i of queries) {
+                let query = i[1]
+                let results = search.search(query);
+                let item = results.length > 0 ? (query.includes('+') ? results.find(e => e.name.includes('+')) : results[0]) : undefined;
+                console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.itemType} "${item.name}"` : 'nothing'}`);
+                embeds.push(embed(item))
+            }
+            msg.channel.send({embeds});
+        }
+    } else {
+        msg.channel.send("I can only take up to 10 queries at a time");
     }
 });
 
