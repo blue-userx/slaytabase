@@ -29,7 +29,7 @@ bot.on('messageCreate', msg => {
             let embeds = []
             for (let i of queries) {
                 let query = i[1]
-                if (!(query.startsWith('@') || query.startsWith('#') || query.startsWith(':'))) {
+                if (!(query.startsWith('@') || query.startsWith('#') || query.startsWith(':') || query == 'init')) {
                     let results = search.search(query);
                     let item = results.length > 0 ? (query.startsWith('=') ? results.find(e => e.name.toLowerCase() == query.slice(1).toLowerCase()) : (query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])) : undefined;
                     if (item == undefined)
