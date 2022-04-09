@@ -1,5 +1,4 @@
 import { MessageEmbed } from 'discord.js';
-import characters from './characters.js';
 import cfg from './cfg.js';
 
 function embed(item) {
@@ -7,17 +6,15 @@ function embed(item) {
     e.title = item.name;
     switch (item.itemType) {
         case 'card':
-            let character = characters[item.color];
             e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/card-images/${item.color.slice(0,10)}-${item.name.replaceAll(' ', '').replace('+', 'Plus')}.png`};
-            e.color = character[1];
-            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.description.includes('Unplayable') ? '' : `${item.cost} ${character[2]} / `}${character[0]}\n\n${item.description}`;
+            e.color = item.character[1];
+            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.description.includes('Unplayable') ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]}\n\n${item.description}`;
             break;
 
         case 'relic':
-            let pool = characters[item.pool];
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${pool[3]}${item.name.replaceAll(' ', '')}.png`};
-            e.color = pool[1];
-            e.description = ` ${item.tier} Relic / ${pool[0]}\n\n${item.description}\n*${item.flavorText}*`;
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.character[3]}${item.name.replaceAll(' ', '')}.png`};
+            e.color = item.character[1];
+            e.description = ` ${item.tier} Relic / ${item.character[0]}\n\n${item.description}\n*${item.flavorText}*`;
             break;
             
         case 'potion':

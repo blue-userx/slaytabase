@@ -13,6 +13,7 @@ search.addIndex('name');
 search.addIndex('itemType');
 search.addIndex('color');
 search.addIndex('type');
+search.addIndex(['character', 0]);
 
 const queryLimit = 10; //max number of embeds on a discord message
 
@@ -72,6 +73,7 @@ async function main() {
                 itemType: itemType.slice(0,-1),
                 mod: item.mod == '' ? 'slay-the-spire' : item.mod.toLowerCase(),
                 description: item.hasOwnProperty('description') ? keywordify(item.description, character) : null,
+                character,
             });
         }
     search.addDocument({

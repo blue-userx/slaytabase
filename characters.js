@@ -9,10 +9,10 @@ export default {
     'Hexa_ghost_purple': ['The Hexaghost', 10704819, '<:e_hexa:961809972105199636>', 'hexamod-'],
     'The_bronze_automaton': ['The Automaton', 16772999, '<:e_automaton:961809971572523069>', 'bronze-'],
     'Slimebound': ['The Slime Boss', 27404, '<:e_slime:961809971840950275>', 'Slimebound-'],
-    'Gremlin': ['Gremlins', 11693019, '<:e_red:961808772177731624>', 'Gremlin-'],
+    'Gremlin': ['Gremlins', 11693019, '<:e_gremlin:962318548414386176>', 'Gremlin-'],
     'Snecko_cyan': ['The Snecko', 6333629, '<:e_snecko:961809971954217030>', 'sneckomod-'],
     'The_champ_gray': ['The Champ', 2242624, '<:e_champ:961809971920633936>', 'champ-'],
     'Guardian': ['The Guardian', 10721357, '<:e_guardian:961809971950014504>', 'Guardian-'],
-    'Hermit_yellow': ['The Hermit', 10049803, '<:e_colorless:961808772609769512>', 'hermit-'],
+    'Hermit_yellow': ['The Hermit', 10049803, '<:e_hermit:962318671164870706>', 'hermit-'],
     '': ['All', 8026746, '<:e_colorless:961808772609769512>', ''],
 };
