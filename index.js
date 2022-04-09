@@ -42,7 +42,7 @@ bot.on('messageCreate', msg => {
                     embeds.push(embed(item))
                 }
             }
-            msg.channel.send({embeds}).catch(e => {});
+            msg.reply({embeds, allowedMentions: {repliedUser: false}}).catch(e => {});
         }
     } else {
         msg.channel.send("I can only take up to 10 queries at a time").catch(e => {});
