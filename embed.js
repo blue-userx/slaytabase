@@ -3,7 +3,8 @@ import cfg from './cfg.js';
 
 function embed(item) {
     let e = new MessageEmbed();
-    e.title = item.name;
+    e.title = `__${item.name}__`;
+    e.footer = {text: `<${item.query}>`};
     switch (item.itemType) {
         case 'card':
             e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/card-images/${item.color.slice(0,10)}-${item.name.replaceAll(' ', '').replace('+', 'Plus')}.png`};
@@ -34,12 +35,11 @@ function embed(item) {
         case 'help':
             e.title = 'DownfallBot';
             e.color = 16777215;
-            e.description = 'Search for an item with <item name>.\nTo view a card\'s upgrade, use <item name+>.\nIf the result is of the wrong type (e.g. you are looking for <agony> and get "Endless Agony") you can search the item type, with <agony keyword> or <agony k>.\nTo search for a result with a title EXACTLY matching "item name", use <=item name>.\n\nAnything highlighted in **bold** is a searchable keyword.';
+            e.description = 'Search for an item with <item name>.\nTo view a card\'s upgrade, use <item name+>.\nIf the result is of the wrong type (e.g. you are looking for <agony> and get "Endless Agony") you can search the item type, with <agony keyword> or <agony k>.\n\nAnything highlighted in **bold** is a searchable keyword.';
             break;
         
         case 'fail':
             e.color = 0;
-            e.description = `Sorry, couldn\'t find anything matching "${item.query}".`;
             break;
     }
     return e;

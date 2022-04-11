@@ -6,7 +6,7 @@ import characters from './characters.js';
 import keywordify from './keywords.js';
 import cfg from './cfg.js';
 
-const bot = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const bot = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES], partials: ['CHANNEL'] });
 
 const search = new JsSearch.Search('id');
 search.addIndex('name');
@@ -31,15 +31,17 @@ bot.on('messageCreate', msg => {
                 let query = i[1]
                 if (!(query.startsWith('@') || query.startsWith('#') || query.startsWith(':') || query == 'init')) {
                     let results = search.search(query);
-                    let item = results.length > 0 ? (query.startsWith('=') ? results.find(e => e.name.toLowerCase() == query.slice(1).toLowerCase()) : (query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])) : undefined;
+                    let item = results.length > 0 ? (query.includes('+') ? results.find(e => e.name.includes('+')) : results[0]) : undefined;
+                    let exactResult = results.find(e => e.name.toLowerCase() == query.toLowerCase());
+                    if (exactResult != undefined)
+                        item = exactResult;
                     if (item == undefined)
                         item = {
                             itemType: 'fail',
                             name: 'No results',
-                            query,
                         };
                     console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.itemType} "${item.name}"` : 'nothing'}`);
-                    embeds.push(embed(item))
+                    embeds.push(embed({...item, query}))
                 }
             }
             msg.reply({embeds, allowedMentions: {repliedUser: false}}).catch(e => {});
