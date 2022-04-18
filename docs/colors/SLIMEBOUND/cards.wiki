@@ -311,7 +311,7 @@ Take 3 damage.
 |Uncommon
 |[[Power]]
 |1
-|The first (2) card(s) you play each turn that targets enemies also [[slimeboundmod:Commands]].
+|The first (2) card(s) you play each turn that targets enemies also [[slimeboundmod:Commands]] ([[slimeboundmod:Command]]).
 |-
 |[[Level Up]]
 |[[File:|thumb|289x289px]]
@@ -389,8 +389,8 @@ Gain a Lick.
 |Uncommon
 |[[Skill]]
 |1
-|Choose a card in hand.
-Gain a copy on top (not on top)of your draw pile (it).
+|Choose a card.
+Put (Gain) a copy on top (not on top)of your draw pile (it).
 [[Exhaust]].
 |-
 |[[Repurpose]]
@@ -564,7 +564,7 @@ If [[Fatal]], raise your Max HP by 3 (4).
 |Rare
 |[[Skill]]
 |2
-|Next turn, gain [E] [E] [E] ([E]) and 3 [[Strength]], and gain SLIME CRUSH (*CRUSH+).
+|Next turn, gain SLIME CRUSH (*CRUSH+), [E] [E] [E] ([E]) and 3 [[Strength]].
 [[Exhaust]].
 |-
 |[[Rally the Troops]]

@@ -44,9 +44,9 @@ Discarded Curses are [[Exhausted]].
 |Common
 |[[Skill]]
 |1
-|Gain 10 (16) [[Block]].
-Add a Defend (*Defend+) to your discard pile.
-[[Exhaust]].
+|Discard a card.
+Gain 6 (8) [[Block]].
+If it was a Skill, gain 6 (8) more [[Block]].
 |-
 |[[Coalescence]]
 |[[File:|thumb|289x289px]]
@@ -218,7 +218,7 @@ Apply 1 (2) [[Vulnerable]].
 |0
 |Deal damage equal to your hand size.
 hermit:Dead_On:
-Draw 1 (2) card(s).
+Draw 1 (2) Attack(s).
 |-
 |[[Cheat]]
 |[[File:|thumb|289x289px]]
@@ -370,9 +370,9 @@ Discard the rest of your hand.
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
-|2 (1)
-|[[Upgrade]] all Strikes and Defends this combat.
-This can [[upgrade]] them any number of times.
+|1
+|Your Strikes deal 3 (4) more damage. 
+(Gain 1 [[Dexterity]].)
 |-
 |[[Malice]]
 |[[File:|thumb|289x289px]]
@@ -495,8 +495,7 @@ Reduce each of your debuffs by 1 (2).
 |Rare
 |[[Power]]
 |3 (2)
-|At the end of your turn, you can [[Exhaust]] up to 2 cards.
-Gain 4 [[Block]] for each.
+|At the end of your turn, you can [[Exhaust]] a card to gain 6 [[Block]].
 |-
 |[[Black Wind]]
 |[[File:|thumb|289x289px]]
@@ -520,8 +519,9 @@ If [[Fatal]], get a [[hermit:Bounty]].
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Skill]]
-|1
-|Next turn, gain 20 (30) [[Block]].
+|2
+|Gain 12 (18) [[Block]].
+[[Block]] is not removed at the start of your next 2 turns.
 [[Exhaust]].
 |-
 |[[Eternal Form]]

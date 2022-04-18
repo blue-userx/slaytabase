@@ -7431,7 +7431,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 10 damage.\nAdd a random Boss card to your hand. It costs 0 until played.\nExhaust.",
+      "description": "Deal 10 damage.\nGain a random Boss card. It costs 0 until played.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -7440,7 +7440,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 12 damage.\nAdd a random Upgraded Boss card to your hand. It costs 0 until played.\nExhaust.",
+      "description": "Deal 12 damage.\nGain a random Upgraded Boss card. It costs 0 until played.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -8934,7 +8934,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "bronze:Insert random Status.\nGain 1 [E] .\nbronze:Encode.",
+      "description": "bronze:Insert a Dazed.\nGain 1 [E] .\nbronze:Encode.",
       "mod": "Downfall"
     },
     {
@@ -8943,7 +8943,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "0",
-      "description": "bronze:Insert random Status.\nGain 1 [E] .\nbronze:Encode.",
+      "description": "bronze:Insert a Dazed.\nGain 1 [E] .\nbronze:Encode.",
       "mod": "Downfall"
     },
     {
@@ -9834,7 +9834,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 15 damage.\nbronze:Encode.\nbronze:Compile Error - bronze:Insert 3 random Status cards.",
+      "description": "Deal 15 damage.\nbronze:Encode.\nbronze:Compile Error - bronze:Insert a Burn, a Wound, and a Slimed.",
       "mod": "Downfall"
     },
     {
@@ -9843,7 +9843,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 20 damage.\nbronze:Encode.\nbronze:Compile Error - bronze:Insert 3 random Status cards.",
+      "description": "Deal 20 damage.\nbronze:Encode.\nbronze:Compile Error - bronze:Insert a Burn, a Wound, and a Slimed.",
       "mod": "Downfall"
     },
     {
@@ -10815,7 +10815,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "1",
-      "description": "The first 2 cards you play each turn that targets enemies also slimeboundmod:Commands.",
+      "description": "The first 2 cards you play each turn that targets enemies also slimeboundmod:Command.",
       "mod": "Downfall"
     },
     {
@@ -10986,7 +10986,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Choose a card in hand.\nGain a copy on top of your draw pile.\nExhaust.",
+      "description": "Choose a card.\nPut a copy on top of your draw pile.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -10995,7 +10995,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Choose a card in hand.\nGain a copy of it.\nExhaust.",
+      "description": "Choose a card.\nGain a copy of it.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -11364,7 +11364,7 @@
       "rarity": "Rare",
       "type": "Skill",
       "cost": "2",
-      "description": "Next turn, gain [E] [E] [E] and 3 Strength, and gain SLIME CRUSH.\nExhaust.",
+      "description": "Next turn, gain SLIME CRUSH, [E] [E] [E] and 3 Strength.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -11373,7 +11373,7 @@
       "rarity": "Rare",
       "type": "Skill",
       "cost": "2",
-      "description": "Next turn, gain [E] [E] [E] [E] and 3 Strength, and gain SLIME CRUSH+.\nExhaust.",
+      "description": "Next turn, gain SLIME CRUSH+, [E] [E] [E] [E] and 3 Strength.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -11805,7 +11805,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "0",
-      "description": "Whenever you draw this card, gain an gremlin:Echo of it.\nDeal 1 damage.\nDraw a card.\nExhaust.",
+      "description": "When drawn, gain an gremlin:Echo of this.\nDeal 1 damage.\nDraw a card.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -13830,7 +13830,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "0",
-      "description": "sneckomod:Snekproof. Fleeting.\nChoose a card in hand which started Unidentified. sneckomod:Identify it.",
+      "description": "sneckomod:Snekproof. Fleeting.\nChoose a card which started Unidentified. sneckomod:Identify it.",
       "mod": "Downfall"
     },
     {
@@ -13839,7 +13839,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "0",
-      "description": "sneckomod:Snekproof. Fleeting. Retain.\nChoose a card in hand which started Unidentified. sneckomod:Identify it.",
+      "description": "sneckomod:Snekproof. Fleeting. Retain.\nChoose a card which started Unidentified. sneckomod:Identify it.",
       "mod": "Downfall"
     },
     {
@@ -14190,7 +14190,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "2",
-      "description": "Whenever you sneckomod:Muddle a card, gain 2 Block.",
+      "description": "Whenever you Muddle a card, gain 2 Block.",
       "mod": "Downfall"
     },
     {
@@ -14199,7 +14199,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "2",
-      "description": "Innate.\nWhenever you sneckomod:Muddle a card, gain 2 Block.",
+      "description": "Innate.\nWhenever you Muddle a card, gain 2 Block.",
       "mod": "Downfall"
     },
     {
@@ -14406,7 +14406,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 7 Block.\nGain 2 Temporary Strength.",
+      "description": "Gain 7 Block.\nGain 2 temporary Strength.",
       "mod": "Downfall"
     },
     {
@@ -14415,7 +14415,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 9 Block.\nGain 4 Temporary Strength.",
+      "description": "Gain 9 Block.\nGain 4 temporary Strength.",
       "mod": "Downfall"
     },
     {
@@ -14604,7 +14604,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 6 damage.\nThe next Strike you play this turn is played twice.",
+      "description": "Deal 6 damage.\nThe next \"Strike\" card you play this turn is played twice.",
       "mod": "Downfall"
     },
     {
@@ -14613,7 +14613,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 9 damage.\nThe next Strike you play this turn is played twice.",
+      "description": "Deal 9 damage.\nThe next \"Strike\" card you play this turn is played twice.",
       "mod": "Downfall"
     },
     {
@@ -14640,7 +14640,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "2",
-      "description": "Deal 8 damage.\nDeals 3 additional damage for ALL your cards containing \"Strike\".",
+      "description": "Deal 8 damage.\nDeals 3 additional damage for ALL your \"Strike\" cards.",
       "mod": "Downfall"
     },
     {
@@ -14649,7 +14649,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "2",
-      "description": "Deal 8 damage.\nDeals 4 additional damage for ALL your cards containing \"Strike\".",
+      "description": "Deal 8 damage.\nDeals 4 additional damage for ALL your \"Strike\" cards.",
       "mod": "Downfall"
     },
     {
@@ -15072,7 +15072,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 4 damage 2 times.\nA Strike in your hand costs 0 this turn.",
+      "description": "Deal 4 damage 2 times.\nA \"Strike\" card in your hand costs 0 this turn.",
       "mod": "Downfall"
     },
     {
@@ -15081,7 +15081,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 6 damage 2 times.\nA Strike in your hand costs 0 this turn.",
+      "description": "Deal 6 damage 2 times.\nA \"Strike\" card in your hand costs 0 this turn.",
       "mod": "Downfall"
     },
     {
@@ -15162,7 +15162,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "2",
-      "description": "Gain 12 Block.\nNext turn, gain [E] and draw 3 cards.\n[fist_icon]   champ:Finisher",
+      "description": "Gain 12 Block.\nNext turn, gain [E] and draw 2 cards.\n[fist_icon]   champ:Finisher",
       "mod": "Downfall"
     },
     {
@@ -15171,7 +15171,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "2",
-      "description": "Gain 12 Block.\nNext turn, gain [E] [E] and draw 3 cards.\n[fist_icon]   champ:Finisher",
+      "description": "Gain 12 Block.\nNext turn, gain [E] [E] and draw 2 cards.\n[fist_icon]   champ:Finisher",
       "mod": "Downfall"
     },
     {
@@ -15648,7 +15648,7 @@
       "rarity": "Rare",
       "type": "Skill",
       "cost": "1",
-      "description": "Requires Defensive or Berserker.\nEnter champ:Ultimate Stance for 2 turns.\nExhaust.",
+      "description": "During your next turn, you are in champ:Ultimate Stance.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -15656,8 +15656,8 @@
       "color": "The_champ_gray",
       "rarity": "Rare",
       "type": "Skill",
-      "cost": "1",
-      "description": "Requires Defensive or Berserker.\nEnter champ:Ultimate Stance for 3 turns.\nExhaust.",
+      "cost": "0",
+      "description": "During your next turn, you are in champ:Ultimate Stance.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -16152,7 +16152,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "0",
-      "description": "guardianmod:Accelerate until a card in guardianmod:Stasis returns.\nExhaust.",
+      "description": "guardianmod:Accelerate until a card in guardianmod:Stasis leaves it.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -16161,7 +16161,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "0",
-      "description": "guardianmod:Accelerate until a card in guardianmod:Stasis returns to your hand.",
+      "description": "guardianmod:Accelerate until a card in guardianmod:Stasis leaves it.",
       "mod": "Downfall"
     },
     {
@@ -17052,7 +17052,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 10 Block. \nAdd a Defend to your discard pile.\nExhaust.",
+      "description": "Discard a card.\nGain 6 Block.\nIf it was a Skill, gain 6 more Block.",
       "mod": "Downfall"
     },
     {
@@ -17061,7 +17061,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 16 Block.\nAdd a Defend+ to your discard pile.\nExhaust.",
+      "description": "Discard a card.\nGain 8 Block.\nIf it was a Skill, gain 8 more Block.",
       "mod": "Downfall"
     },
     {
@@ -17430,7 +17430,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "0",
-      "description": "Deal damage equal to your hand size.\nhermit:Dead_On:\nDraw 1 card.",
+      "description": "Deal damage equal to your hand size.\nhermit:Dead_On:\nDraw 1 Attack.",
       "mod": "Downfall"
     },
     {
@@ -17439,7 +17439,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "0",
-      "description": "Deal damage equal to your hand size.\nhermit:Dead_On:\nDraw 2 cards.",
+      "description": "Deal damage equal to your hand size.\nhermit:Dead_On:\nDraw 2 Attacks.",
       "mod": "Downfall"
     },
     {
@@ -17753,8 +17753,8 @@
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
       "type": "Skill",
-      "cost": "2",
-      "description": "Upgrade all Strikes and Defends this combat.\nThis can upgrade them any number of times.",
+      "cost": "1",
+      "description": "Your Strikes deal 3 more damage.",
       "mod": "Downfall"
     },
     {
@@ -17763,7 +17763,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Upgrade all Strikes and Defends this combat.\nThis can upgrade them any number of times.",
+      "description": "Your Strikes deal 4 more damage.\nGain 1 Dexterity.",
       "mod": "Downfall"
     },
     {
@@ -18024,7 +18024,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "3",
-      "description": "At the end of your turn, you can Exhaust up to 2 cards.\nGain 4 Block for each.",
+      "description": "At the end of your turn, you can Exhaust a card to gain 6 Block.",
       "mod": "Downfall"
     },
     {
@@ -18033,7 +18033,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "2",
-      "description": "At the end of your turn, you can Exhaust up to 2 cards.\nGain 4 Block for each.",
+      "description": "At the end of your turn, you can Exhaust a card to gain 6 Block.",
       "mod": "Downfall"
     },
     {
@@ -18077,8 +18077,8 @@
       "color": "Hermit_yellow",
       "rarity": "Rare",
       "type": "Skill",
-      "cost": "1",
-      "description": "Next turn, gain 20 Block.\nExhaust.",
+      "cost": "2",
+      "description": "Gain 12 Block.\nBlock is not removed at the start of your next 2 turns.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -18086,8 +18086,8 @@
       "color": "Hermit_yellow",
       "rarity": "Rare",
       "type": "Skill",
-      "cost": "1",
-      "description": "Next turn, gain 30 Block.\nExhaust.",
+      "cost": "2",
+      "description": "Gain 18 Block.\nBlock is not removed at the start of your next 2 turns.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -18410,7 +18410,7 @@
       "name": "Snecko Soul",
       "tier": "Starter",
       "pool": "Snecko_cyan",
-      "description": "First time you play an sneckomod:Offclass in a combat, gain [E] and draw a card.",
+      "description": "The first time you play an sneckomod:Offclass card in a combat, gain [E] and draw a card.",
       "flavorText": "0...3...2...2...1",
       "mod": "Downfall"
     },
@@ -20290,7 +20290,7 @@
       "name": "Makeshift Battery",
       "tier": "Boss",
       "pool": "",
-      "description": "Gain [E] and add a random Status card into your discard pile at the start of your turn.",
+      "description": "Gain [E] and add a Slimed into your discard pile at the start of your turn.",
       "flavorText": "It's an 8.9 volt.",
       "mod": "Downfall"
     },
@@ -20442,7 +20442,7 @@
       "name": "Super Snecko Soul",
       "tier": "Boss",
       "pool": "Snecko_cyan",
-      "description": "Replaces Snecko Soul.\nFirst time you play an sneckomod:Offclass in a turn, gain [E] .",
+      "description": "Replaces Snecko Soul.\nThe first time you play an sneckomod:Offclass each turn, gain [E] .",
       "flavorText": "3120231321230320",
       "mod": "Downfall"
     },
@@ -20482,7 +20482,7 @@
       "name": "Victorious Crown",
       "tier": "Boss",
       "pool": "The_champ_gray",
-      "description": "Replaces Champion's Crown.\nStart each combat in champ:Ultimate Stance, which lasts for 2 turns.",
+      "description": "Replaces Champion's Crown.\nStart each combat in champ:Ultimate Stance, which lasts for 1 turn.",
       "flavorText": "Conglaturation!! You are the greatest winner.",
       "mod": "Downfall"
     },

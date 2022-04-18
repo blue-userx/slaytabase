@@ -134,7 +134,7 @@ Gain 3 (5) Temporary [[Thorns]].
 |Common
 |[[Attack]]
 |0
-|(Whenever you draw this card, gain an [[gremlin:Echo]] of it.)
+|(When drawn, gain an [[gremlin:Echo]] of this.)
  Deal 1 damage.
 Draw a card.
 [[Exhaust]].

@@ -113,6 +113,6 @@ It costs 0 until played.
 |[[Attack]]
 |1
 |Deal 10 (12) damage.
-Add a random ([[Upgraded]]) Boss card to your hand. It costs 0 until played.
+Gain a random ([[Upgraded]]) Boss card. It costs 0 until played.
 [[Exhaust]].
 |-

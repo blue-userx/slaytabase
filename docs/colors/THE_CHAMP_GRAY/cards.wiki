@@ -53,7 +53,7 @@ Enter [[champ:Defensive]].
 |[[Skill]]
 |1
 |Gain 7 (9) [[Block]].
-Gain 2 (4) Temporary [[Strength]].
+Gain 2 (4) temporary [[Strength]].
 |-
 |[[Backstep]]
 |[[File:|thumb|289x289px]]
@@ -143,7 +143,7 @@ Defensive champ:Combo: Gain 4 (6) [[champ:Counter]] and 4 (6) [[Block]].
 |[[Attack]]
 |1
 |Deal 6 (9) damage.
-The next Strike you play this turn is played twice.
+The next "Strike" card you play this turn is played twice.
 |-
 |[[Headbutt]]
 |[[File:|thumb|289x289px]]
@@ -159,7 +159,7 @@ Put a card from your discard pile on top of your draw pile.
 |[[Attack]]
 |2
 |Deal 8 damage.
-Deals 3 (4) additional damage for ALL your cards containing "Strike".
+Deals 3 (4) additional damage for ALL your "Strike" cards.
 |-
 |[[Piledriver]]
 |[[File:|thumb|289x289px]]
@@ -363,7 +363,7 @@ Lose half of your [[champ:Counter]].
 |[[Attack]]
 |1
 |Deal 4 (6) damage 2 times.
-A Strike in your hand costs 0 this turn.
+A "Strike" card in your hand costs 0 this turn.
 |-
 |[[Reckless Strike]]
 |[[File:|thumb|289x289px]]
@@ -405,7 +405,7 @@ If the last played card this combat was a [[champ:Finisher]], deal 9 (12) damage
 |[[Skill]]
 |2
 |Gain 12 [[Block]].
-Next turn, gain [E] ([E]) and draw 3 cards.
+Next turn, gain [E] ([E]) and draw 2 cards.
 [fist_icon] [[champ:Finisher]]
 |-
 |[[Set A Trap]]
@@ -627,8 +627,7 @@ Gain 2 ([[Upgraded]]) Strikes. They cost 0 and trigger Skill Bonuses.
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Skill]]
-|1
-|Requires Defensive or Berserker.
-Enter [[champ:Ultimate]] [[Stance]] for 2 (3) turns.
+|1 (0)
+|During your next turn, you are in [[champ:Ultimate]] [[Stance]].
 [[Exhaust]].
 |-

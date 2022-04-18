@@ -79,7 +79,7 @@ The option not chosen is [[bronze:Encoded]].
 |Common
 |[[Skill]]
 |1 (0)
-|[[bronze:Insert]] random [[Status]].
+|[[bronze:Insert]] a Dazed.
 Gain 1 [E].
 [[bronze:Encode]].
 |-
@@ -506,7 +506,7 @@ Gain 2 [[Burns]].
 |1
 |Deal 15 (20) damage.
 [[bronze:Encode]].
-[[bronze:Compile]] Error - [[bronze:Insert]] 3 random [[Status]] cards.
+[[bronze:Compile]] Error - [[bronze:Insert]] a Burn, a Wound, and a Slimed.
 |-
 |[[Burn Out]]
 |[[File:|thumb|289x289px]]

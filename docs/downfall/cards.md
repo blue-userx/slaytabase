@@ -52,7 +52,7 @@
 | YOU ARE MINE! | ![](small-card-images/Boss-YOUAREMINE!.png) | ![](small-card-images/Boss-YOUAREMINE!Plus.png) | Uncommon | Skill | 2 | Remove Block from, and apply 3 (5) Weak and Vulnerable to, ALL enemies. Exhaust. |
 | Quick Study | ![](small-card-images/Boss-QuickStudy.png) | ![](small-card-images/Boss-QuickStudyPlus.png) | Rare | Skill | 1 | Choose 1 of 3 (Upgraded) Boss cards to gain. It costs 0 until played. Exhaust. |
 | Study the Spire | ![](small-card-images/Boss-StudytheSpire.png) | ![](small-card-images/Boss-StudytheSpirePlus.png) | Rare | Power | 3 | Gain a random (Upgraded) Boss card (not card)at the start of your next 3 turns. They cost 0. |
-| The Evil Within | ![](small-card-images/Boss-TheEvilWithin.png) | ![](small-card-images/Boss-TheEvilWithinPlus.png) | Rare | Attack | 1 | Deal 10 (12) damage. Add a random (Upgraded) Boss card to your hand. It costs 0 until played. Exhaust. |
+| The Evil Within | ![](small-card-images/Boss-TheEvilWithin.png) | ![](small-card-images/Boss-TheEvilWithinPlus.png) | Rare | Attack | 1 | Deal 10 (12) damage. Gain a random (Upgraded) Boss card. It costs 0 until played. Exhaust. |
 | Defend | ![](small-card-images/Hexa_ghost-Defend.png) | ![](small-card-images/Hexa_ghost-DefendPlus.png) | Basic | Skill | 1 | Gain 5 (8) Block. |
 | Float | ![](small-card-images/Hexa_ghost-Float.png) | ![](small-card-images/Hexa_ghost-FloatPlus.png) | Basic | Skill | 0 | Draw a card. (You may choose to hexamod:Retract or) hexamod:Advance. |
 | Kindle | ![](small-card-images/Hexa_ghost-Kindle.png) | ![](small-card-images/Hexa_ghost-KindlePlus.png) | Basic | Skill | 1 | If (hexamod:Ignite) the current Ghostflame is not Ignited, hexamod:Ignite it (not is not Ignited, hexamod:Ignite it). |
@@ -136,7 +136,7 @@
 | Bit Shift | ![](small-card-images/The_bronze-BitShift.png) | ![](small-card-images/The_bronze-BitShiftPlus.png) | Common | Skill | 0 | (Retain.)  Choose an Encoded card to return to your hand. It gains Retain. Exhaust. |
 | Branch | ![](small-card-images/The_bronze-Branch.png) | ![](small-card-images/The_bronze-BranchPlus.png) | Common | Attack | 1 | Deal 7 (9) damage or gain 6 (8) Block. The option not chosen is bronze:Encoded. Exhaust. |
 | Bug Barrage | ![](small-card-images/The_bronze-BugBarrage.png) | ![](small-card-images/The_bronze-BugBarragePlus.png) | Common | Attack | 1 | Gain 1 (2) Wound(s). bronze:Cycle each Status, dealing 7 damage for each. |
-| Buggy Mess | ![](small-card-images/The_bronze-BuggyMess.png) | ![](small-card-images/The_bronze-BuggyMessPlus.png) | Common | Skill | 1 (0) | bronze:Insert random Status. Gain 1 [E] . bronze:Encode. |
+| Buggy Mess | ![](small-card-images/The_bronze-BuggyMess.png) | ![](small-card-images/The_bronze-BuggyMessPlus.png) | Common | Skill | 1 (0) | bronze:Insert a Dazed. Gain 1 [E] . bronze:Encode. |
 | Cleanse | ![](small-card-images/The_bronze-Cleanse.png) | ![](small-card-images/The_bronze-CleansePlus.png) | Common | Attack | 1 | Deal 9 (12) damage. Exhaust a random Status card in your draw pile. |
 | Cut Through | ![](small-card-images/The_bronze-CutThrough.png) | ![](small-card-images/The_bronze-CutThroughPlus.png) | Common | Attack | 1 | Deal 5 (7) damage. Scry 2 (3). bronze:Encode. bronze:Compile - Draw 1 card. |
 | Delayed Guard | ![](small-card-images/The_bronze-DelayedGuard.png) | ![](small-card-images/The_bronze-DelayedGuardPlus.png) | Common | Skill | 0 | Next turn, gain 7 (10) Block. bronze:Encode. |
@@ -186,7 +186,7 @@
 | Terminator | ![](small-card-images/The_bronze-Terminator.png) | ![](small-card-images/The_bronze-TerminatorPlus.png) | Uncommon | Skill | 1 (0) | bronze:Encode. bronze:Compile - If this is the last card in the Sequence, Function gains 'Play this again'. |
 | Undervolt | ![](small-card-images/The_bronze-Undervolt.png) | ![](small-card-images/The_bronze-UndervoltPlus.png) | Uncommon | Skill | 1 | ALL enemies lose 2 (3) Strength. Gain 2 Burns. Exhaust. |
 | Assembly | ![](small-card-images/The_bronze-Assembly.png) | ![](small-card-images/The_bronze-AssemblyPlus.png) | Rare | Skill | 1 | Scry 5 (8). bronze:Encode all Encodable cards discarded (in selected order). Exhaust. |
-| Break | ![](small-card-images/The_bronze-Break.png) | ![](small-card-images/The_bronze-BreakPlus.png) | Rare | Attack | 1 | Deal 15 (20) damage. bronze:Encode. bronze:Compile Error - bronze:Insert 3 random Status cards. |
+| Break | ![](small-card-images/The_bronze-Break.png) | ![](small-card-images/The_bronze-BreakPlus.png) | Rare | Attack | 1 | Deal 15 (20) damage. bronze:Encode. bronze:Compile Error - bronze:Insert a Burn, a Wound, and a Slimed. |
 | Burn Out | ![](small-card-images/The_bronze-BurnOut.png) | ![](small-card-images/The_bronze-BurnOutPlus.png) | Rare | Attack | 1 | Deal 6 (9) damage to a random enemy for ALL of your Status cards, then Exhaust them. Exhaust. |
 | Clean Code | ![](small-card-images/The_bronze-CleanCode.png) | ![](small-card-images/The_bronze-CleanCodePlus.png) | Rare | Power | 1 | (Innate.)  Remove the next 3 bronze:Compile Errors you would bronze:Encode. |
 | Dev Tools | ![](small-card-images/The_bronze-DevTools.png) | ![](small-card-images/The_bronze-DevToolsPlus.png) | Rare | Skill | 0 | Retain. Gain Debug, Batch, Decompile, or Byte Shift. Exhaust. (not Exhaust.) |
@@ -240,7 +240,7 @@
 | Growth Punch | ![](small-card-images/Slimebound-GrowthPunch.png) | ![](small-card-images/Slimebound-GrowthPunchPlus.png) | Uncommon | Attack | 1 | Deal 4 (5) damage. Gain 4 (5) Block. slimeboundmod:Consume - Increase this card's effects by 4 (5) this combat. |
 | Hungry Tackle | ![](small-card-images/Slimebound-HungryTackle.png) | ![](small-card-images/Slimebound-HungryTacklePlus.png) | Uncommon | Attack | 1 | Deal 10 (14) damage. Take 3 damage. expansioncontent:Exhume a random Lick. |
 | Just Desserts | ![](small-card-images/Slimebound-JustDesserts.png) | ![](small-card-images/Slimebound-JustDessertsPlus.png) | Uncommon | Attack | 1 | Deal 6 (8) damage to ALL enemies. expansioncontent:Exhume 2 (3) random Lick cards. |
-| Lead By Example | ![](small-card-images/Slimebound-LeadByExample.png) | ![](small-card-images/Slimebound-LeadByExamplePlus.png) | Uncommon | Power | 1 | The first (2) card(s) you play each turn that targets enemies also slimeboundmod:Commands. |
+| Lead By Example | ![](small-card-images/Slimebound-LeadByExample.png) | ![](small-card-images/Slimebound-LeadByExamplePlus.png) | Uncommon | Power | 1 | The first (2) card(s) you play each turn that targets enemies also slimeboundmod:Commands (slimeboundmod:Command). |
 | Level Up | ![](small-card-images/Slimebound-LevelUp.png) | ![](small-card-images/Slimebound-LevelUpPlus.png) | Uncommon | Power | 1 | Gain 1 (2) slimeboundmod:Potency. |
 | Mega-Lick | ![](small-card-images/Slimebound-Mega-Lick.png) | ![](small-card-images/Slimebound-Mega-LickPlus.png) | Uncommon | Skill | 0 | Apply 1 Weak and 4 slimeboundmod:Goop to ALL enemies. (Draw a card.)  Exhaust. |
 | Nibble and Lick | ![](small-card-images/Slimebound-NibbleandLick.png) | ![](small-card-images/Slimebound-NibbleandLickPlus.png) | Uncommon | Attack | 0 | Deal 1 damage. Gain a Lick. (Draw a card.)  Exhaust. |
@@ -250,7 +250,7 @@
 | Rain of Goop | ![](small-card-images/Slimebound-RainofGoop.png) | ![](small-card-images/Slimebound-RainofGoopPlus.png) | Uncommon | Skill | 1 | Apply 3 slimeboundmod:Goop to a random enemy 4 (6) times. |
 | Recklessness | ![](small-card-images/Slimebound-Recklessness.png) | ![](small-card-images/Slimebound-RecklessnessPlus.png) | Uncommon | Power | 1 | slimeboundmod:Tackles deal 6 (9) more damage to enemies, and 1 more damage to you. |
 | Recollect | ![](small-card-images/Slimebound-Recollect.png) | ![](small-card-images/Slimebound-RecollectPlus.png) | Uncommon | Skill | 1 | Gain 8 (11) Block. expansioncontent:Exhume a random Lick card. |
-| Replication | ![](small-card-images/Slimebound-Replication.png) | ![](small-card-images/Slimebound-ReplicationPlus.png) | Uncommon | Skill | 1 | Choose a card in hand. Gain a copy on top (not on top)of your draw pile (it). Exhaust. |
+| Replication | ![](small-card-images/Slimebound-Replication.png) | ![](small-card-images/Slimebound-ReplicationPlus.png) | Uncommon | Skill | 1 | Choose a card. Put (Gain) a copy on top (not on top)of your draw pile (it). Exhaust. |
 | Repurpose | ![](small-card-images/Slimebound-Repurpose.png) | ![](small-card-images/Slimebound-RepurposePlus.png) | Uncommon | Skill | 0 | slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist. (slimeboundmod:Command.)  Exhaust. |
 | Serve & Protect | ![](small-card-images/Slimebound-Serve&Protect.png) | ![](small-card-images/Slimebound-Serve&ProtectPlus.png) | Uncommon | Skill | 1 | Gain 10 (15) Block and 1 bronze:Blur for each Slime. slimeboundmod:Absorb all Slimes. Exhaust. |
 | Shape of Puddle | ![](small-card-images/Slimebound-ShapeofPuddle.png) | ![](small-card-images/Slimebound-ShapeofPuddlePlus.png) | Uncommon | Skill | 3 (2) | Gain 1 Intangible. Exhaust. |
@@ -271,7 +271,7 @@
 | One-Two Combo | ![](small-card-images/Slimebound-One-TwoCombo.png) | ![](small-card-images/Slimebound-One-TwoComboPlus.png) | Rare | Attack | 0 | Deal 3 damage. (slimeboundmod:Command.)  When you slimeboundmod:Split, return this from the discard pile to your hand. |
 | Ooze Bath | ![](small-card-images/Slimebound-OozeBath.png) | ![](small-card-images/Slimebound-OozeBathPlus.png) | Rare | Skill | 1 | Apply 6 (9) slimeboundmod:Goop to target enemy at the start of each of its turns. Exhaust. |
 | Overexert | ![](small-card-images/Slimebound-Overexert.png) | ![](small-card-images/Slimebound-OverexertPlus.png) | Rare | Power | 1 | Gain 4 slimeboundmod:Potency. (slimeboundmod:Command twice.)  2 turns from now, slimeboundmod:Absorb all Slimes. |
-| Prepare: Crush | ![](small-card-images/Slimebound-Prepare-Crush.png) | ![](small-card-images/Slimebound-Prepare-CrushPlus.png) | Rare | Skill | 2 | Next turn, gain [E] [E] [E] ([E]) and 3 Strength, and gain SLIME CRUSH (*CRUSH+). Exhaust. |
+| Prepare: Crush | ![](small-card-images/Slimebound-Prepare-Crush.png) | ![](small-card-images/Slimebound-Prepare-CrushPlus.png) | Rare | Skill | 2 | Next turn, gain SLIME CRUSH (*CRUSH+), [E] [E] [E] ([E]) and 3 Strength. Exhaust. |
 | Rally the Troops | ![](small-card-images/Slimebound-RallytheTroops.png) | ![](small-card-images/Slimebound-RallytheTroopsPlus.png) | Rare | Attack | 1 | Deal 7 (9) damage. The next 2 (3) cards played this turn trigger a slimeboundmod:Command. |
 | Recycling | ![](small-card-images/Slimebound-Recycling.png) | ![](small-card-images/Slimebound-RecyclingPlus.png) | Rare | Power | 1 | (Innate.)  At the start of your turn, expansioncontent:Exhume a random Lick card. |
 | Reformation | ![](small-card-images/Slimebound-Reformation.png) | ![](small-card-images/Slimebound-ReformationPlus.png) | Rare | Power | 1 | Whenever you slimeboundmod:Absorb a Slime, gain 1 Strength (and 1 Dexterity). |
@@ -295,7 +295,7 @@
 | Irritability | ![](small-card-images/Gremlin-Irritability.png) | ![](small-card-images/Gremlin-IrritabilityPlus.png) | Common | Skill | 1 | Gain 6 (8) Block. Gain 3 (5) Temporary Thorns. gremlin:Swap to gremlin:Mad_Gremlin. |
 | Jeer | ![](small-card-images/Gremlin-Jeer.png) | ![](small-card-images/Gremlin-JeerPlus.png) | Common | Attack | 1 | Deal 7 (11) damage. If the enemy has a debuff, gain 2 (4) Temporary_HP. |
 | Patsy | ![](small-card-images/Gremlin-Patsy.png) | ![](small-card-images/Gremlin-PatsyPlus.png) | Common | Skill | 0 | Gain 4 (6) Block. gremlin:Swap to the next Gremlin. |
-| Pinprick | ![](small-card-images/Gremlin-Pinprick.png) | ![](small-card-images/Gremlin-PinprickPlus.png) | Common | Attack | 0 | (Whenever you draw this card, gain an gremlin:Echo of it.)  Deal 1 damage. Draw a card. Exhaust. |
+| Pinprick | ![](small-card-images/Gremlin-Pinprick.png) | ![](small-card-images/Gremlin-PinprickPlus.png) | Common | Attack | 0 | (When drawn, gain an gremlin:Echo of this.)  Deal 1 damage. Draw a card. Exhaust. |
 | Pour Salt | ![](small-card-images/Gremlin-PourSalt.png) | ![](small-card-images/Gremlin-PourSaltPlus.png) | Common | Attack | 1 | Deal 4 damage. If the enemy is Weak, remove a stack to gain 2 (3) Shivs. |
 | Presto! | ![](small-card-images/Gremlin-Presto!.png) | ![](small-card-images/Gremlin-Presto!Plus.png) | Common | Attack | 1 | Deal 7 (11) damage. Gain 1 (2) gremlin:Wiz. |
 | Pretaliation | ![](small-card-images/Gremlin-Pretaliation.png) | ![](small-card-images/Gremlin-PretaliationPlus.png) | Common | Attack | 2 | Deal 20 (27) damage if the enemy intends to attack. Deal 5 damage otherwise. |
@@ -404,7 +404,7 @@
 | Improvised Attack | ![](small-card-images/Snecko_cya-ImprovisedAttack.png) | ![](small-card-images/Snecko_cya-ImprovisedAttackPlus.png) | Uncommon | Attack | 1 | Deal 9 (12) damage. Gain a random sneckomod:Offclass Attack and sneckomod:Muddle it. |
 | Improvised Guard | ![](small-card-images/Snecko_cya-ImprovisedGuard.png) | ![](small-card-images/Snecko_cya-ImprovisedGuardPlus.png) | Uncommon | Skill | 1 | Gain 8 (11) Block. Gain a random sneckomod:Offclass Skill and sneckomod:Muddle it. |
 | Master Eye | ![](small-card-images/Snecko_cya-MasterEye.png) | ![](small-card-images/Snecko_cya-MasterEyePlus.png) | Uncommon | Power | 1 | Become Confused. Draw 1 (2) additional card(s) each turn. |
-| Memorize | ![](small-card-images/Snecko_cya-Memorize.png) | ![](small-card-images/Snecko_cya-MemorizePlus.png) | Uncommon | Skill | 0 | sneckomod:Snekproof. Fleeting. (Retain.) Choose a card in hand which started Unidentified. sneckomod:Identify it. |
+| Memorize | ![](small-card-images/Snecko_cya-Memorize.png) | ![](small-card-images/Snecko_cya-MemorizePlus.png) | Uncommon | Skill | 0 | sneckomod:Snekproof. Fleeting. (Retain.) Choose a card which started Unidentified. sneckomod:Identify it. |
 | Mix It Up! | ![](small-card-images/Snecko_cya-MixItUp!.png) | ![](small-card-images/Snecko_cya-MixItUp!Plus.png) | Uncommon | Attack | 1 | *Transform your Potions. Deal 5 damage 2 (3) times. Exhaust. |
 | Rain of Dice | ![](small-card-images/Snecko_cya-RainofDice.png) | ![](small-card-images/Snecko_cya-RainofDicePlus.png) | Uncommon | Attack | 1 | Deal 6 (9) - 12 (15) damage to a random enemy. sneckomod:Muddle this, then return this to your hand. |
 | Rotation | ![](small-card-images/Snecko_cya-Rotation.png) | ![](small-card-images/Snecko_cya-RotationPlus.png) | Uncommon | Skill | 0 | sneckomod:Snekproof. Discard all sneckomod:Offclass cards. Draw that many cards (plus 1). |
@@ -424,7 +424,7 @@
 | Exotic Form | ![](small-card-images/Snecko_cya-ExoticForm.png) | ![](small-card-images/Snecko_cya-ExoticFormPlus.png) | Rare | Power | 3 (2) | Whenever you play an sneckomod:Offclass card, draw 1 card. |
 | Glittering Gambit | ![](small-card-images/Snecko_cya-GlitteringGambit.png) | ![](small-card-images/Snecko_cya-GlitteringGambitPlus.png) | Rare | Skill | 0 | sneckomod:Snekproof. Gain -10 (0) - 30 Gold. Exhaust. |
 | More Power! | ![](small-card-images/Snecko_cya-MorePower!.png) | ![](small-card-images/Snecko_cya-MorePower!Plus.png) | Rare | Power | 1 (0) | Obtain an additional Upgraded Unidentified card reward at the end of combat. |
-| Mud Shield | ![](small-card-images/Snecko_cya-MudShield.png) | ![](small-card-images/Snecko_cya-MudShieldPlus.png) | Rare | Power | 2 | (Innate.)  Whenever you sneckomod:Muddle a card, gain 2 Block. |
+| Mud Shield | ![](small-card-images/Snecko_cya-MudShield.png) | ![](small-card-images/Snecko_cya-MudShieldPlus.png) | Rare | Power | 2 | (Innate.)  Whenever you Muddle a card, gain 2 Block. |
 | Pure Luck | ![](small-card-images/Snecko_cya-PureLuck.png) | ![](small-card-images/Snecko_cya-PureLuckPlus.png) | Rare | Skill | 0 | sneckomod:Snekproof. Gain sneckomod:Lucky until the end of turn. Exhaust. (not Exhaust.) |
 | Restock | ![](small-card-images/Snecko_cya-Restock.png) | ![](small-card-images/Snecko_cya-RestockPlus.png) | Rare | Skill | 1 (0) | sneckomod:Snekproof. Discard your hand. Draw 5-10 cards. Exhaust. |
 | Soul Exchange | ![](small-card-images/Snecko_cya-SoulExchange.png) | ![](small-card-images/Snecko_cya-SoulExchangePlus.png) | Rare | Skill | 0 | sneckomod:Snekproof. Draw 1 (2) card(s), Choose a card, then Transform your hand to that card's class. |
@@ -436,7 +436,7 @@
 | Defensive Shout | ![](small-card-images/The_champ_-DefensiveShout.png) | ![](small-card-images/The_champ_-DefensiveShoutPlus.png) | Basic | Skill | 0 | Gain 4 (8) champ:Counter. Enter champ:Defensive. |
 | Execute | ![](small-card-images/The_champ_-Execute.png) | ![](small-card-images/The_champ_-ExecutePlus.png) | Basic | Attack | 2 | Deal 6 (9) damage 2 times. [fist_icon]   champ:Finisher |
 | Strike | ![](small-card-images/The_champ_-Strike.png) | ![](small-card-images/The_champ_-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
-| Adrenal Armor | ![](small-card-images/The_champ_-AdrenalArmor.png) | ![](small-card-images/The_champ_-AdrenalArmorPlus.png) | Common | Skill | 1 | Gain 7 (9) Block. Gain 2 (4) Temporary Strength. |
+| Adrenal Armor | ![](small-card-images/The_champ_-AdrenalArmor.png) | ![](small-card-images/The_champ_-AdrenalArmorPlus.png) | Common | Skill | 1 | Gain 7 (9) Block. Gain 2 (4) temporary Strength. |
 | Backstep | ![](small-card-images/The_champ_-Backstep.png) | ![](small-card-images/The_champ_-BackstepPlus.png) | Common | Skill | 1 | Enter champ:Defensive. Gain 6 (9) Block, increased by Vigor. |
 | Bob and Weave | ![](small-card-images/The_champ_-BobandWeave.png) | ![](small-card-images/The_champ_-BobandWeavePlus.png) | Common | Skill | 1 | Enter champ:Berserker. Gain 4 (6) Block. Gain 4 (6) Vigor. |
 | Bring It On | ![](small-card-images/The_champ_-BringItOn.png) | ![](small-card-images/The_champ_-BringItOnPlus.png) | Common | Skill | 1 | Gain 9 (12) Block. Gain 9 (12) champ:Counter. [fist_icon]   champ:Finisher |
@@ -447,9 +447,9 @@
 | Encircle | ![](small-card-images/The_champ_-Encircle.png) | ![](small-card-images/The_champ_-EncirclePlus.png) | Common | Attack | 1 | Deal 7 (10) damage to ALL enemies. Trigger Skill Bonus for each enemy hit. |
 | Fan of Knives | ![](small-card-images/The_champ_-FanofKnives.png) | ![](small-card-images/The_champ_-FanofKnivesPlus.png) | Common | Attack | 1 | Deal 5 (8) damage to ALL enemies. Berserker champ:Combo: Deals damage twice. |
 | Flash Strike | ![](small-card-images/The_champ_-FlashStrike.png) | ![](small-card-images/The_champ_-FlashStrikePlus.png) | Common | Attack | 1 | Deal 6 (8) damage. Defensive champ:Combo: Gain 4 (6) champ:Counter and 4 (6) Block. |
-| Flurry of Strikes | ![](small-card-images/The_champ_-FlurryofStrikes.png) | ![](small-card-images/The_champ_-FlurryofStrikesPlus.png) | Common | Attack | 1 | Deal 6 (9) damage. The next Strike you play this turn is played twice. |
+| Flurry of Strikes | ![](small-card-images/The_champ_-FlurryofStrikes.png) | ![](small-card-images/The_champ_-FlurryofStrikesPlus.png) | Common | Attack | 1 | Deal 6 (9) damage. The next "Strike" card you play this turn is played twice. |
 | Headbutt | ![](small-card-images/The_champ_-Headbutt.png) | ![](small-card-images/The_champ_-HeadbuttPlus.png) | Common | Attack | 1 | Deal 9 (12) damage. Put a card from your discard pile on top of your draw pile. |
-| Perfecter Strike | ![](small-card-images/The_champ_-PerfecterStrike.png) | ![](small-card-images/The_champ_-PerfecterStrikePlus.png) | Common | Attack | 2 | Deal 8 damage. Deals 3 (4) additional damage for ALL your cards containing "Strike". |
+| Perfecter Strike | ![](small-card-images/The_champ_-PerfecterStrike.png) | ![](small-card-images/The_champ_-PerfecterStrikePlus.png) | Common | Attack | 2 | Deal 8 damage. Deals 3 (4) additional damage for ALL your "Strike" cards. |
 | Piledriver | ![](small-card-images/The_champ_-Piledriver.png) | ![](small-card-images/The_champ_-PiledriverPlus.png) | Common | Attack | 2 | Deal 10 (14) damage. Apply 2 Vulnerable. Apply 2 Weak. [fist_icon]   champ:Finisher |
 | Precise Thrust | ![](small-card-images/The_champ_-PreciseThrust.png) | ![](small-card-images/The_champ_-PreciseThrustPlus.png) | Common | Attack | 1 | Deal 7 (9) damage. Berserker champ:Combo: Deal 7 (9) damage. Defensive champ:Combo: Gain 7 (9) Block. |
 | Stance Dance | ![](small-card-images/The_champ_-StanceDance.png) | ![](small-card-images/The_champ_-StanceDancePlus.png) | Common | Skill | 0 | Choose a Stance to Enter. If you were already in that Stance, gain (Gain) a champ:Combo of that Stance. |
@@ -473,12 +473,12 @@
 | Moment of Truth | ![](small-card-images/The_champ_-MomentofTruth.png) | ![](small-card-images/The_champ_-MomentofTruthPlus.png) | Uncommon | Skill | 0 | Retain. Draw 1 (2) card(s). [fist_icon] champ:Finisher |
 | Parry | ![](small-card-images/The_champ_-Parry.png) | ![](small-card-images/The_champ_-ParryPlus.png) | Uncommon | Skill | 2 | Gain 6 Block. Gain 10 (16) champ:Counter. If your champ:Counter is used this turn, Gain Riposte. |
 | Preemptive Strike | ![](small-card-images/The_champ_-PreemptiveStrike.png) | ![](small-card-images/The_champ_-PreemptiveStrikePlus.png) | Uncommon | Attack | 1 (0) | Deal damage equal to your champ:Counter to ALL enemies. Lose half of your champ:Counter. |
-| Rapid Strikes | ![](small-card-images/The_champ_-RapidStrikes.png) | ![](small-card-images/The_champ_-RapidStrikesPlus.png) | Uncommon | Attack | 1 | Deal 4 (6) damage 2 times. A Strike in your hand costs 0 this turn. |
+| Rapid Strikes | ![](small-card-images/The_champ_-RapidStrikes.png) | ![](small-card-images/The_champ_-RapidStrikesPlus.png) | Uncommon | Attack | 1 | Deal 4 (6) damage 2 times. A "Strike" card in your hand costs 0 this turn. |
 | Reckless Strike | ![](small-card-images/The_champ_-RecklessStrike.png) | ![](small-card-images/The_champ_-RecklessStrikePlus.png) | Uncommon | Attack | 2 | Deal 18 damage. Gain 2 Strength. Lose 1 Dexterity. Exhaust. (not Exhaust.) |
 | Refreshment | ![](small-card-images/The_champ_-Refreshment.png) | ![](small-card-images/The_champ_-RefreshmentPlus.png) | Uncommon | Skill | 1 | *Berserker champ:Combo: Gain [E] [E] ([E]), then Exhaust this. Defensive champ:Combo: Draw 3 (4) cards. |
 | Reinforced Body | ![](small-card-images/The_champ_-ReinforcedBody.png) | ![](small-card-images/The_champ_-ReinforcedBodyPlus.png) | Uncommon | Skill | X | Gain 7 (9) Block X times. |
 | Rising Strike | ![](small-card-images/The_champ_-RisingStrike.png) | ![](small-card-images/The_champ_-RisingStrikePlus.png) | Uncommon | Attack | 1 | Deal 9 (12) damage. If the last played card this combat was a champ:Finisher, deal 9 (12) damage again. |
-| Rope-a-dope | ![](small-card-images/The_champ_-Rope-a-dope.png) | ![](small-card-images/The_champ_-Rope-a-dopePlus.png) | Uncommon | Skill | 2 | Gain 12 Block. Next turn, gain [E] ([E]) and draw 3 cards. [fist_icon] champ:Finisher |
+| Rope-a-dope | ![](small-card-images/The_champ_-Rope-a-dope.png) | ![](small-card-images/The_champ_-Rope-a-dopePlus.png) | Uncommon | Skill | 2 | Gain 12 Block. Next turn, gain [E] ([E]) and draw 2 cards. [fist_icon] champ:Finisher |
 | Set A Trap | ![](small-card-images/The_champ_-SetATrap.png) | ![](small-card-images/The_champ_-SetATrapPlus.png) | Uncommon | Skill | 1 | Gain 6 (8) Block, twice if any enemy is Weak. Defensive champ:Combo: Apply 2 (3) Weak to ALL enemies. |
 | Shatter | ![](small-card-images/The_champ_-Shatter.png) | ![](small-card-images/The_champ_-ShatterPlus.png) | Uncommon | Attack | 1 | Remove the enemy's Block (and Artifact). Deal 10 (12) damage. |
 | Sigil of Victory | ![](small-card-images/The_champ_-SigilofVictory.png) | ![](small-card-images/The_champ_-SigilofVictoryPlus.png) | Uncommon | Skill | 0 | Trigger your current Stance's Skill Bonus 4 (6) times. Exhaust. |
@@ -505,7 +505,7 @@
 | Strike of Genius | ![](small-card-images/The_champ_-StrikeofGenius.png) | ![](small-card-images/The_champ_-StrikeofGeniusPlus.png) | Rare | Power | 2 | At the start of your turn, gain a random (Upgraded) "Strike". It costs 0 until played and gains Exhaust. |
 | Sword Throw | ![](small-card-images/The_champ_-SwordThrow.png) | ![](small-card-images/The_champ_-SwordThrowPlus.png) | Rare | Attack | 1 | Deal 8 (11) damage 2 times. Gain 2 Weak. Berserker champ:Combo: Don't gain Weak. |
 | Triple Strike | ![](small-card-images/The_champ_-TripleStrike.png) | ![](small-card-images/The_champ_-TripleStrikePlus.png) | Rare | Attack | 2 | Deal 6 (9) damage. Gain 2 (Upgraded) Strikes. They cost 0 and trigger Skill Bonuses. Exhaust. |
-| Ultimate Stance | ![](small-card-images/The_champ_-UltimateStance.png) | ![](small-card-images/The_champ_-UltimateStancePlus.png) | Rare | Skill | 1 | Requires Defensive or Berserker. Enter champ:Ultimate Stance for 2 (3) turns. Exhaust. |
+| Ultimate Stance | ![](small-card-images/The_champ_-UltimateStance.png) | ![](small-card-images/The_champ_-UltimateStancePlus.png) | Rare | Skill | 1 (0) | During your next turn, you are in champ:Ultimate Stance. Exhaust. |
 | Curl Up | ![](small-card-images/Guardian-CurlUp.png) | ![](small-card-images/Guardian-CurlUpPlus.png) | Basic | Skill | 1 | Place a random (not random)card from (in) your hand into guardianmod:Stasis. guardianmod:Brace 10 (12). |
 | Defend | ![](small-card-images/Guardian-Defend.png) | ![](small-card-images/Guardian-DefendPlus.png) | Basic | Skill | 1 | Gain 5 (8) Block. |
 | Strike | ![](small-card-images/Guardian-Strike.png) | ![](small-card-images/Guardian-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
@@ -536,7 +536,7 @@
 | Body Slam | ![](small-card-images/Guardian-BodySlam.png) | ![](small-card-images/Guardian-BodySlamPlus.png) | Uncommon | Attack | 1 (0) | Deal damage equal to your Block. |
 | Charge Up | ![](small-card-images/Guardian-ChargeUp.png) | ![](small-card-images/Guardian-ChargeUpPlus.png) | Uncommon | Skill | 0 (1) | Place this into guardianmod:Stasis. guardianmod:Tick - Gain 8 Block and 1 Strength. guardianmod:Volatile. |
 | Clone | ![](small-card-images/Guardian-Clone.png) | ![](small-card-images/Guardian-ClonePlus.png) | Uncommon | Skill | 1 | Choose a card. Place a copy of that card into guardianmod:Stasis. (guardianmod:Accelerate.)  Exhaust. |
-| Emergency | ![](small-card-images/Guardian-Emergency.png) | ![](small-card-images/Guardian-EmergencyPlus.png) | Uncommon | Skill | 0 | guardianmod:Accelerate until a card in guardianmod:Stasis returns (to your hand). Exhaust. (not Exhaust.) |
+| Emergency | ![](small-card-images/Guardian-Emergency.png) | ![](small-card-images/Guardian-EmergencyPlus.png) | Uncommon | Skill | 0 | guardianmod:Accelerate until a card in guardianmod:Stasis leaves it. Exhaust. (not Exhaust.) |
 | Evasive Protocol | ![](small-card-images/Guardian-EvasiveProtocol.png) | ![](small-card-images/Guardian-EvasiveProtocolPlus.png) | Uncommon | Power | 1 | While in Defensive Mode, raise your Dexterity by 3 (5). At the start of your turn, guardianmod:Brace 3. |
 | Floating Orbs | ![](small-card-images/Guardian-FloatingOrbs.png) | ![](small-card-images/Guardian-FloatingOrbsPlus.png) | Uncommon | Power | 1 (0) | At the start of your turn, gain an Orb Slam. |
 | Fragmented Gem | ![](small-card-images/Guardian-FragmentedGem.png) | ![]() | Uncommon | Skill | 0 | guardianmod:Gem. Gain a Crystal Shiv. |
@@ -585,7 +585,7 @@
 | Defend | ![](small-card-images/Hermit_yel-Defend.png) | ![](small-card-images/Hermit_yel-DefendPlus.png) | Basic | Skill | 1 | Gain 5 (8) Block. |
 | Snapshot | ![](small-card-images/Hermit_yel-Snapshot.png) | ![](small-card-images/Hermit_yel-SnapshotPlus.png) | Basic | Attack | 1 | Deal 5 (7) damage. hermit:Dead_On: Gain 8 (10) Block. |
 | Strike | ![](small-card-images/Hermit_yel-Strike.png) | ![](small-card-images/Hermit_yel-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
-| Body Armor | ![](small-card-images/Hermit_yel-BodyArmor.png) | ![](small-card-images/Hermit_yel-BodyArmorPlus.png) | Common | Skill | 1 | Gain 10 (16) Block. Add a Defend (*Defend+) to your discard pile. Exhaust. |
+| Body Armor | ![](small-card-images/Hermit_yel-BodyArmor.png) | ![](small-card-images/Hermit_yel-BodyArmorPlus.png) | Common | Skill | 1 | Discard a card. Gain 6 (8) Block. If it was a Skill, gain 6 (8) more Block. |
 | Coalescence | ![](small-card-images/Hermit_yel-Coalescence.png) | ![](small-card-images/Hermit_yel-CoalescencePlus.png) | Common | Skill | 1 | Gain 5 (8) Block. Retain up to 2 (3) cards this turn. |
 | Desperado | ![](small-card-images/Hermit_yel-Desperado.png) | ![](small-card-images/Hermit_yel-DesperadoPlus.png) | Common | Attack | 1 | Deal 14 (18) damage. Gain 2 Frail. |
 | Dive | ![](small-card-images/Hermit_yel-Dive.png) | ![](small-card-images/Hermit_yel-DivePlus.png) | Common | Skill | 1 | Gain 7 (10) Block. hermit:Dead_On: Gain 1 (2) Plated Armor. |
@@ -606,7 +606,7 @@
 | Vantage | ![](small-card-images/Hermit_yel-Vantage.png) | ![](small-card-images/Hermit_yel-VantagePlus.png) | Common | Skill | 1 | Gain 7 (10) Block. hermit:Dead_On: Upgrade 2 (3) random cards in your hand for the rest of combat. |
 | Wide Open | ![](small-card-images/Hermit_yel-WideOpen.png) | ![](small-card-images/Hermit_yel-WideOpenPlus.png) | Common | Attack | 1 | Deal 6 (8) damage. Apply 1 (2) Vulnerable. |
 | Brawl | ![](small-card-images/Hermit_yel-Brawl.png) | ![](small-card-images/Hermit_yel-BrawlPlus.png) | Uncommon | Power | 2 | At the start of your turn, apply 5 (6) hermit:Bruise to ALL enemies. |
-| Called Shot | ![](small-card-images/Hermit_yel-CalledShot.png) | ![](small-card-images/Hermit_yel-CalledShotPlus.png) | Uncommon | Attack | 0 | Deal damage equal to your hand size. hermit:Dead_On: Draw 1 (2) card(s). |
+| Called Shot | ![](small-card-images/Hermit_yel-CalledShot.png) | ![](small-card-images/Hermit_yel-CalledShotPlus.png) | Uncommon | Attack | 0 | Deal damage equal to your hand size. hermit:Dead_On: Draw 1 (2) Attack(s). |
 | Cheat | ![](small-card-images/Hermit_yel-Cheat.png) | ![](small-card-images/Hermit_yel-CheatPlus.png) | Uncommon | Skill | 1 | Play one of the top 4 (6) cards in your draw pile. hermit:Dead_On: Also trigger its hermit:Dead_On effect. |
 | Combo | ![](small-card-images/Hermit_yel-Combo.png) | ![](small-card-images/Hermit_yel-ComboPlus.png) | Uncommon | Power | 2 (1) | Whenever you trigger a hermit:Dead_On effect, add a random card with hermit:Dead_On to your hand. |
 | Cursed Weapon | ![](small-card-images/Hermit_yel-CursedWeapon.png) | ![](small-card-images/Hermit_yel-CursedWeaponPlus.png) | Uncommon | Attack | 0 | Lose 4 (3) HP. Deal 4 damage. This card permanently gains 3 damage. Exhaust. |
@@ -624,7 +624,7 @@
 | Horror | ![](small-card-images/Hermit_yel-Horror.png) | ![](small-card-images/Hermit_yel-HorrorPlus.png) | Uncommon | Skill | 1 | Apply 4 (6) hermit:Bruise to ALL enemies. hermit:Bruise does not wear off this turn. |
 | Lone Wolf | ![](small-card-images/Hermit_yel-LoneWolf.png) | ![](small-card-images/Hermit_yel-LoneWolfPlus.png) | Uncommon | Skill | 1 (0) | Choose a card. It costs 0 this combat. Discard the rest of your hand. Exhaust. |
 | Luck of the Draw | ![](small-card-images/Hermit_yel-LuckoftheDraw.png) | ![](small-card-images/Hermit_yel-LuckoftheDrawPlus.png) | Uncommon | Skill | 1 | Draw until you draw 3 (4) total [E] worth of cards. |
-| Maintenance | ![](small-card-images/Hermit_yel-Maintenance.png) | ![](small-card-images/Hermit_yel-MaintenancePlus.png) | Uncommon | Skill | 2 (1) | Upgrade all Strikes and Defends this combat. This can upgrade them any number of times. |
+| Maintenance | ![](small-card-images/Hermit_yel-Maintenance.png) | ![](small-card-images/Hermit_yel-MaintenancePlus.png) | Uncommon | Skill | 1 | Your Strikes deal 3 (4) more damage.  (Gain 1 Dexterity.) |
 | Malice | ![](small-card-images/Hermit_yel-Malice.png) | ![](small-card-images/Hermit_yel-MalicePlus.png) | Uncommon | Attack | 2 | Exhaust a card. Deal 16 (20) damage. If you Exhaust a Curse, deal 16 (20) damage to ALL enemies instead. |
 | Midnight | ![](small-card-images/Hermit_yel-Midnight.png) | ![](small-card-images/Hermit_yel-MidnightPlus.png) | Uncommon | Skill | 1 | Ethereal. (not Ethereal.) Gain 12 (13) Block. Add an Impending Doom to your hand. |
 | No Holds Barred | ![](small-card-images/Hermit_yel-NoHoldsBarred.png) | ![](small-card-images/Hermit_yel-NoHoldsBarredPlus.png) | Uncommon | Attack | 2 | Deal 18 (22) damage and apply 4 (5) hermit:Bruise to ALL enemies. Gain 1 less [E] next turn. |
@@ -639,10 +639,10 @@
 | Take Aim | ![](small-card-images/Hermit_yel-TakeAim.png) | ![](small-card-images/Hermit_yel-TakeAimPlus.png) | Uncommon | Power | 1 | (hermit:Concentrate.)  At the start of your turn, hermit:Concentrate. |
 | Take Cover | ![](small-card-images/Hermit_yel-TakeCover.png) | ![](small-card-images/Hermit_yel-TakeCoverPlus.png) | Uncommon | Skill | X | Add X Defends (*Defends+) to your hand. They cost 0 this combat. Exhaust. |
 | Virtue | ![](small-card-images/Hermit_yel-Virtue.png) | ![](small-card-images/Hermit_yel-VirtuePlus.png) | Uncommon | Skill | 0 | Retain. Reduce each of your debuffs by 1 (2). |
-| Adapt | ![](small-card-images/Hermit_yel-Adapt.png) | ![](small-card-images/Hermit_yel-AdaptPlus.png) | Rare | Power | 3 (2) | At the end of your turn, you can Exhaust up to 2 cards. Gain 4 Block for each. |
+| Adapt | ![](small-card-images/Hermit_yel-Adapt.png) | ![](small-card-images/Hermit_yel-AdaptPlus.png) | Rare | Power | 3 (2) | At the end of your turn, you can Exhaust a card to gain 6 Block. |
 | Black Wind | ![](small-card-images/Hermit_yel-BlackWind.png) | ![](small-card-images/Hermit_yel-BlackWindPlus.png) | Rare | Attack | 2 (1) | Ethereal. Deal damage equal to your missing health. Exhaust. |
 | Dead Or Alive | ![](small-card-images/Hermit_yel-DeadOrAlive.png) | ![](small-card-images/Hermit_yel-DeadOrAlivePlus.png) | Rare | Attack | X | Deal 8 (11) damage X times. If Fatal, get a hermit:Bounty. Exhaust. |
-| Dissolve | ![](small-card-images/Hermit_yel-Dissolve.png) | ![](small-card-images/Hermit_yel-DissolvePlus.png) | Rare | Skill | 1 | Next turn, gain 20 (30) Block. Exhaust. |
+| Dissolve | ![](small-card-images/Hermit_yel-Dissolve.png) | ![](small-card-images/Hermit_yel-DissolvePlus.png) | Rare | Skill | 2 | Gain 12 (18) Block. Block is not removed at the start of your next 2 turns. Exhaust. |
 | Eternal Form | ![](small-card-images/Hermit_yel-EternalForm.png) | ![](small-card-images/Hermit_yel-EternalFormPlus.png) | Rare | Power | 3 | Your first 4 (5) cards each turn cost 0. Gain no [E] at start of turn. |
 | Fatal Desire | ![](small-card-images/Hermit_yel-FatalDesire.png) | ![](small-card-images/Hermit_yel-FatalDesirePlus.png) | Rare | Power | 1 | (Innate.)  At the start of your turn, draw 2 cards and add an Injury to your hand. |
 | Final Canter | ![](small-card-images/Hermit_yel-FinalCanter.png) | ![](small-card-images/Hermit_yel-FinalCanterPlus.png) | Rare | Attack | 0 | Retain. Deal 13 (16) damage for each Curse in hand. Exhaust. |

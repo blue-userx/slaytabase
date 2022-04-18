@@ -376,7 +376,7 @@ Draw 1 (2) additional card(s) each turn.
 |[[Skill]]
 |0
 |[[sneckomod:Snekproof]]. [[Fleeting]]. ([[Retain]].)
-Choose a card in hand which started Unidentified. [[sneckomod:Identify]] it.
+Choose a card which started Unidentified. [[sneckomod:Identify]] it.
 |-
 |[[Mix It Up!]]
 |[[File:|thumb|289x289px]]
@@ -419,7 +419,7 @@ Choose 1 of 3 random [[sneckomod:Offclass]] cards to gain. It costs 0 this turn.
 |[[Skill]]
 |0
 |[[sneckomod:Snekproof]].
-[[Transform]] all [[sneckomod:Offclass]] cards in your hand. 
+Transform all [[sneckomod:Offclass]] cards in your hand. 
 (They cost 1 less.)
 |-
 |[[Slither Strike]]
@@ -542,7 +542,7 @@ Gain -10 (0) - 30 Gold.
 |[[Power]]
 |2
 |([[Innate]].)
- Whenever you [[sneckomod:Muddle]] a card, gain 2 [[Block]].
+ Whenever you Muddle a card, gain 2 [[Block]].
 |-
 |[[Pure Luck]]
 |[[File:|thumb|289x289px]]

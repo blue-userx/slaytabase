@@ -262,7 +262,7 @@ Place a copy of that card into [[guardianmod:Stasis]].
 |Uncommon
 |[[Skill]]
 |0
-|[[guardianmod:Accelerate]] until a card in [[guardianmod:Stasis]] returns (to your hand).
+|[[guardianmod:Accelerate]] until a card in [[guardianmod:Stasis]] leaves it.
 [[Exhaust]]. (not
 Exhaust.)
 |-
