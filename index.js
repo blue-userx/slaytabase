@@ -35,8 +35,8 @@ bot.on('messageCreate', async msg => {
         if (queries.length > 0) {
             let embeds = []
             for (let originalQuery of queries) {
-                let query = originalQuery.trim().toLowerCase().unPunctuate();
-                if (!(query.startsWith('@') || query.startsWith('#') || query.startsWith(':') || query == 'init')) {
+                if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery == 'init')) {
+                    let query = originalQuery.trim().toLowerCase().unPunctuate();
                     let results = search.search(query);
                     let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
                     if (commands.hasOwnProperty(query))
