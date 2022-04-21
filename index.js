@@ -53,7 +53,7 @@ bot.on('messageCreate', async msg => {
                         let exactMatch = search._docs.find(e => e.searchName == query);
                         if (exactMatch != undefined)
                             item = {item: exactMatch, score: 0};
-                    } else
+                    }
                     console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                     let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
                     if (genEmbed != null)
