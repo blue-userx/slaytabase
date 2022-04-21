@@ -49,8 +49,8 @@ bot.on('messageCreate', async msg => {
                             itemType: 'fail',
                             name: 'No results',
                         }};
-                    else if (item.item.name.toLowerCase().unPunctuate() != query) {
-                        let exactMatch = search._docs.find(e => e.name.toLowerCase().unPunctuate() == query);
+                    else if (item.item.searchName != query) {
+                        let exactMatch = search._docs.find(e => e.searchName == query);
                         if (exactMatch != undefined)
                             item = {item: exactMatch, score: 0};
                     } else
@@ -85,6 +85,7 @@ async function main() {
             }
             let newItem = {
                 ...item,
+                searchName: item.name.toLowerCase().unPunctuate(),
                 itemType: itemType.slice(0,-1),
                 mod: item.mod == '' ? 'slay-the-spire' : item.mod.toLowerCase(),
                 description: item.hasOwnProperty('description') ? keywordify(item.description, character) : null,
@@ -98,6 +99,8 @@ async function main() {
                     'type',
                     'color',
                     'description',
+                    'tier',
+                    'rarity',
                 ].map(key => {
                     if (Array.isArray(key)) {
                         let look = newItem;

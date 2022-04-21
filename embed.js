@@ -28,7 +28,7 @@ async function embed(item, msg, embeds) {
     }
     e.footer = {
         //iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=32`,
-        text: `<${item.query}> = ${item.name == 'No results' ? '?' : item.name}${item.score != undefined ? ', '+String(Math.round((1 - item.score) * 100))+'% sure' : ''}`, //text: `${msg.author.username}: <${item.query}>`,
+        text: `<${item.query}> = ${item.name == 'No results' ? '?' : item.searchName}${item.score != undefined ? ', '+String(Math.round((1 - item.score) * 100))+'% sure' : ''}`, //text: `${msg.author.username}: <${item.query}>`,
     };
     switch (item.itemType) {
         case 'card':
