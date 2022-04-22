@@ -50,7 +50,7 @@ const height = 874;
                     c.description += ` (${word.value.includes(':') ? ' ' : ''}${word.value.replace('\n', '')}${word.value.includes(':') ? ' ' : ''})${word.value.includes('\n') ? '\n' : ''}${word.value.endsWith(' ') ? ' ' : ''}`;
                 else if (word.removed) {
                     if (!diff.hasOwnProperty(i+1) || !diff[i+1].added)
-                        c.description += `${(word.value.endsWith('\n') ? word.value.replace('\n', '') : word.value).replace('.', '').replace(' ', '')} (not ${word.value.replace('\n', '').replace('.', '').replace(' ', '')}${word.value.includes(':') ? ' ' : ''})${word.value.includes('.') ? '.' : ''}${word.value.endsWith(' ') ? ' ' : ''}${word.value.endsWith('\n') ? '\n' : ''}`;
+                        c.description += `${word.value.startsWith('\n') ? '\n' : ''}~~- ${word.value.replaceAll('\n', '')} -~~${word.value.endsWith('\n') ? '\n' : ' '}`;
                     else
                         c.description += word.value;
                 }
