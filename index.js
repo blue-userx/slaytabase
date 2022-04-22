@@ -22,7 +22,7 @@ search.add({
     itemType: 'help',
 });
 
-String.prototype.unPunctuate = function() {return this.replace(/[^\w\s+]|_/g, "").replace(/\s+/g, " ")};
+String.prototype.unPunctuate = function() {return this.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ")};
 
 bot.once('ready', async () => {
     bot.user.setActivity('Downfall | <help>');
@@ -69,7 +69,7 @@ bot.on('messageCreate', async msg => {
 
 async function main() {
     console.log('loading and parsing data...');
-    let data = JSON.parse(fs.readFileSync('./docs/items.json'));
+    let data = JSON.parse(fs.readFileSync('./docs/altered/items.json'));
     for (let itemType in data)
         for (let item of data[itemType]) {
             let character = characters[''];

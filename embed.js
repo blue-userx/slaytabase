@@ -32,7 +32,7 @@ async function embed(item, msg, embeds) {
     };
     switch (item.itemType) {
         case 'card':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/card-images/${item.color.slice(0,10)}-${item.name.replace('+', 'Plus').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/altered/img/cards/${item.color.slice(0,10)}-${item.name.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '')}.png`};
             e.color = item.character[1];
             e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.description.includes('Unplayable') ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]}\n\n${item.description}`;
             break;
