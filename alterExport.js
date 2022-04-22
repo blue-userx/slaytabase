@@ -49,13 +49,13 @@ const height = 874;
                         c.description += word.value;
                 }
             }
+            c.description = c.description.replaceAll('([E]', '( [E]');
             console.log('\n'+c.description);
         }
         //save image
-        //let out = fs.createWriteStream(`docs/altered/img/cards/${cardPath}.png`);
-        //canv.createPNGStream().pipe(out);
-        //out.on('finish', () => finish());
-        finish();
+        let out = fs.createWriteStream(`docs/altered/img/cards/${cardPath}.png`);
+        canv.createPNGStream().pipe(out);
+        out.on('finish', () => finish());
 
         newCards.push(c);
         await finished;
