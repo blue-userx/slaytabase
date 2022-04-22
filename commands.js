@@ -8,6 +8,8 @@ If the result isn\'t what you were looking for, you can also include the followi
 
 Anything highlighted in **bold** is a searchable keyword.
 
+If you edit or delete your message containing your searches, I will edit or delete my reply to it, according to your changes.
+
 __Commands:__
 <del> deletes your last search in this channel.
 `,
@@ -22,7 +24,7 @@ __Commands:__
             m = m[1];
             let found = true;
             let repliedTo = await msg.channel.messages.fetch(m.reference.messageId).catch(e => found = false);
-            if (!found) continue
+            if (!found) continue;
             if (repliedTo.author.id == msg.author.id) {
                 await m.delete().catch(e => {});
                 await repliedTo.delete().catch(e => {});

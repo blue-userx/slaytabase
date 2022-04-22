@@ -29,11 +29,11 @@ bot.once('ready', async () => {
 	console.log('connected to discord. ready!');
 });
 
-bot.on('messageCreate', async msg => {
+async function getEmbeds(msg) {
     let queries = [...msg.content.matchAll(/\<(.*?)\>/g)].map(e => e[1]);
     if (queries.length <= queryLimit) {
         if (queries.length > 0) {
-            let embeds = []
+            let embeds = [];
             for (let originalQuery of queries) {
                 if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery == 'init')) {
                     let query = originalQuery.trim().toLowerCase().unPunctuate();
@@ -60,11 +60,40 @@ bot.on('messageCreate', async msg => {
                         embeds.push(genEmbed)
                 }
             }
-            msg.reply({embeds, allowedMentions: {repliedUser: false}}).catch(e => {});
-        }
-    } else {
-        msg.reply("I can only take up to 10 queries at a time!").catch(e => {});
+            return embeds; //
+        } else return 0;
+    } else return null; //msg.reply("I can only take up to 10 queries at a time!").catch(e => {});
+}
+
+bot.on('messageCreate', async msg => {
+    let embeds = await getEmbeds(msg);
+    if (embeds === null)
+        msg.reply('I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.').catch(e => {});
+    else if (embeds === 0)
+        return;
+    else
+        msg.reply({embeds, allowedMentions: {repliedUser: false}}).catch(e => {});
+});
+
+bot.on('messageUpdate', async (oldMsg, newMsg) => {
+    let messages = await newMsg.channel.messages.fetch();
+    let reply = messages.find(i => i.author.id == bot.user.id && i.reference != null && i.reference.messageId == oldMsg.id);
+    if (reply != undefined) {
+        let embeds = await getEmbeds(newMsg);
+        if (embeds === null)
+            reply.edit({content: 'I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.', embeds: []}).catch(e => {});
+        else if (embeds === 0)
+            reply.delete().catch(e => {});
+        else
+            reply.edit({content: ' ', embeds, allowedMentions: {repliedUser: false}}).catch(e => {});
     }
+});
+
+bot.on('messageDelete', async msg => {
+    let messages = await msg.channel.messages.fetch();
+    let reply = messages.find(i => i.author.id == bot.user.id && i.reference != null && i.reference.messageId == msg.id);
+    if (reply != undefined)
+        reply.delete().catch(e => {});
 });
 
 async function main() {
