@@ -47,7 +47,7 @@ const height = 874;
                 if (!word.hasOwnProperty('added'))
                     c.description += word.value;
                 else if (word.added)
-                    c.description += ` (${word.value.includes(':') ? ' ' : ''}${word.value.replace('\n', '')}${word.value.includes(':') ? ' ' : ''})${word.value.includes('\n') ? '\n' : ''}`;
+                    c.description += ` (${word.value.includes(':') ? ' ' : ''}${word.value.replace('\n', '')}${word.value.includes(':') ? ' ' : ''})${word.value.includes('\n') ? '\n' : ''}${word.value.endsWith(' ') ? ' ' : ''}`;
                 else if (word.removed) {
                     if (!diff.hasOwnProperty(i+1) || !diff[i+1].added)
                         c.description += `${(word.value.endsWith('\n') ? word.value.replace('\n', '') : word.value).replace('.', '').replace(' ', '')} (not ${word.value.replace('\n', '').replace('.', '').replace(' ', '')}${word.value.includes(':') ? ' ' : ''})${word.value.includes('.') ? '.' : ''}${word.value.endsWith(' ') ? ' ' : ''}${word.value.endsWith('\n') ? '\n' : ''}`;
@@ -73,7 +73,7 @@ const height = 874;
     //add new data
     const extraData = JSON.parse(fs.readFileSync('extraItems.json', 'utf-8'));
     for (let category in extraData)
-        data[category] = data.hasOwnProperty(category) ? [...data[category], ...extraData[categoy]] : extraData[category]; //add the extra items to the category (or create it if it doesnt exist)
+        data[category] = data.hasOwnProperty(category) ? [...data[category], ...extraData[category]] : extraData[category]; //add the extra items to the category (or create it if it doesnt exist)
     
     //save new data
     fs.writeFileSync('docs/altered/items.json', JSON.stringify(data));
