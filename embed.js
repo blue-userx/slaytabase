@@ -22,7 +22,7 @@ async function embed(item, msg, embeds) {
         item.mod = 'downfall';
     if (item.hasOwnProperty('mod')) {
         e.url = `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/${searchize(item)}`;
-        let timesRepeated = embeds.filter(embed => embed.url.startsWith(e.url));
+        let timesRepeated = embeds.filter(embed => embed.hasOwnProperty('url') && embed.url.startsWith(e.url));
         if (timesRepeated.length > 0)
             e.url += `?t=${timesRepeated.length}`;
     }
