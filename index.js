@@ -35,7 +35,7 @@ async function getEmbeds(msg) {
         if (queries.length > 0) {
             let embeds = [];
             for (let originalQuery of queries) {
-                if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery == 'init')) {
+                if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery.startsWith('http') || originalQuery == 'init')) {
                     let query = originalQuery.trim().toLowerCase().unPunctuate();
                     let results = search.search(query);
                     let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
