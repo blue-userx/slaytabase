@@ -22,7 +22,7 @@ const height = 874;
         let finish;
         let finished = new Promise(res => finish = res);
 
-        let up = cards.find(e => e.name == c.name+'+'); //find upgraded version of card
+        let up = cards.find(e => e.name == c.name+'+' && e.color == c.color); //find upgraded version of card
 
         //create image of card next to its upgrade
         if (exportImages) {
