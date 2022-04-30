@@ -12,7 +12,7 @@ const searchize = item => {
     let name = item.name;
     if (item.hasOwnProperty('character') && wikiItems[item.character[0]].hasOwnProperty(item.name))
         name = wikiItems[item.character[0]][item.name]
-    return name.replaceAll(' ', '_').replaceAll('+', '');
+    return name.replaceAll(' ', '_').replaceAll('+', '').replaceAll('???', 'Unidentified');
 };
 
 async function embed(item, msg, embeds=[]) {
