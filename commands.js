@@ -1,4 +1,4 @@
-import { search } from './index.js';
+import { bot, search } from './index.js';
 import embed from './embed.js';
 
 const delSearchLimit = 25;
@@ -17,11 +17,12 @@ __Commands:__
 <del> deletes your last search in this channel.
 <? [search query]> shows the 10 most likely results for a search query.
 `,
+        thumbnail: {url: bot.user.avatarURL()},
     }),
 
     del: async msg => {
         let messages = await msg.channel.messages.fetch();
-        messages = messages.filter(i => i.author.id == msg.client.user.id && i.reference != null);
+        messages = messages.filter(i => i.author.id == bot.user.id && i.reference != null);
         let i = 0;
         for (let m of messages) {
             i++;
