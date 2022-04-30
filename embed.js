@@ -15,7 +15,7 @@ const searchize = item => {
     return name.replaceAll(' ', '_').replaceAll('+', '');
 };
 
-async function embed(item, msg, embeds) {
+async function embed(item, msg, embeds=[]) {
     let e = new MessageEmbed();
     e.title = `${item.name}`;
     if (!mods.hasOwnProperty(item.mod))
@@ -66,7 +66,7 @@ async function embed(item, msg, embeds) {
             e.title = '';
             delete e.url;
             delete e.footer;
-            let result = await item.do(msg);
+            let result = await item.do(msg, item.query.split(' ').slice(1).join(' '));
             for (let i in result)
                 e[i] = result[i];
             break;

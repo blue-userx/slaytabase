@@ -22,7 +22,9 @@ search.add({
     itemType: 'help',
 });
 
-String.prototype.unPunctuate = function() {return this.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ")};
+export {bot, search};
+
+String.prototype.unPunctuate = function() {return this.replace(/[^\w\s?]|_/g, "").replace(/\s+/g, " ")};
 
 bot.once('ready', async () => {
     bot.user.setActivity('Downfall | <help>');
@@ -36,12 +38,14 @@ async function getEmbeds(msg) {
             let embeds = [];
             for (let originalQuery of queries) {
                 if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery.startsWith('http') || originalQuery == 'init')) {
-                    let query = originalQuery.trim().toLowerCase().unPunctuate();
+                    let query = originalQuery.toLowerCase().unPunctuate().trim();
                     let results = search.search(query);
                     let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
-                    if (commands.hasOwnProperty(query))
+                    let cmdName = query.split(' ')[0];
+                    if (commands.hasOwnProperty(cmdName))
                         item = {item: {
-                            do: commands[query],
+                            name: cmdName,
+                            do: commands[cmdName],
                             itemType: 'command',
                         }};
                     else if (item == undefined)

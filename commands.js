@@ -1,3 +1,6 @@
+import { search } from './index.js';
+import embed from './embed.js';
+
 const delSearchLimit = 25;
 
 export default {
@@ -12,6 +15,7 @@ If you edit or delete your message containing your searches, I will edit or dele
 
 __Commands:__
 <del> deletes your last search in this channel.
+<? [search query]> shows the 10 most likely results for a search query.
 `,
     }),
 
@@ -34,5 +38,18 @@ __Commands:__
             if (i >= delSearchLimit) break;
         }
         return;
+    },
+
+    '?': async (msg, arg) => {
+        let results = search.search(arg).slice(0, 10);
+        let resultText = results.map((i, index) => `${index+1}: ${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} **${i.item.name}** - ${String(Math.round((1 - i.score) * 100))}% sure`).join('\n');
+        let firstEmbed = results.length > 0 ? await embed(results[0].item, msg) : {thumbnail: null};
+        return {
+            title: `Searched for "${arg}"`,
+            description: results.length == 0 ? 'No results.' : resultText,
+            thumbnail: firstEmbed.thumbnail,
+            //footer: {text: `${results.length} results`},
+            color: 14598591,
+        };
     },
 };
