@@ -24,7 +24,7 @@ search.add({
 
 export {bot, search};
 
-String.prototype.unPunctuate = function() {return this.replaceAll('\n', ' ').replace(/[^\w\s?]|_/g, "").replace(/\s+/g, " ")};
+String.prototype.unPunctuate = function() {return this.replaceAll('\n', ' ').replace(/[^\w\s?]|_/g, "").replace(/\s+/g, " ").trim()};
 
 bot.once('ready', async () => {
     bot.user.setActivity('Downfall | <help>');
@@ -38,7 +38,7 @@ async function getEmbeds(msg) {
             let embeds = [];
             for (let originalQuery of queries) {
                 if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery.startsWith('a:') || originalQuery.startsWith('http') || originalQuery == 'init')) {
-                    let query = originalQuery.toLowerCase().unPunctuate().trim();
+                    let query = originalQuery.toLowerCase().unPunctuate();
                     let results = search.search(query);
                     let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
                     let cmdName = query.split(' ')[0];
@@ -115,6 +115,10 @@ async function main() {
                 case 'relics':
                     character = characters[item.pool];
                     break;
+
+                case 'events':
+                    character = characters[item.character];
+                    break;
             }
             let newItem = {
                 ...item,
@@ -128,6 +132,7 @@ async function main() {
             newItem.searchText = [
                     'name',
                     ['character', 0],
+                    'campaign',
                     'itemType',
                     'type',
                     'color',
@@ -141,10 +146,10 @@ async function main() {
                             if (!look.hasOwnProperty(j)) return '';
                             look = look[j];
                         }
-                        return String(look).unPunctuate();
-                    } else if (newItem.hasOwnProperty(key)) return String(newItem[key]).unPunctuate();
+                        return String(look);
+                    } else if (newItem.hasOwnProperty(key)) return String(newItem[key]);
                     else return '';
-                }).join(' '),
+                }).join(' ').unPunctuate(),
             search.add(newItem);
         }
     console.log('parsed data, connecting to discord...');

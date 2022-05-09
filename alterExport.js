@@ -78,9 +78,9 @@ const height = 874;
         let desc = event.options.map(o =>`w/[${o[0]}${o[1] == null ? '' : ` n/(${o[1]})`}] ${o[2]}`).join('\n');
         event.description = desc.replaceAll('w/', '').replaceAll('g/', '').replaceAll('r/', '').replaceAll('n/', '');
         event.colouredDesc = desc.replaceAll('w/', '[2;37m').replaceAll('g/', '[2;32m').replaceAll('r/', '[2;31m').replaceAll('n/', '[0;2m');
-        event.color = event.hasOwnProperty('color') ? event.color : '';
+        event.character = event.hasOwnProperty('character') ? event.character : '';
         delete event.options;
-        event.campaign = event.mod;
+        event.campaign = event.mod == '' ? 'standard' : event.mod;
         data.events[i] = event;
     }
     
