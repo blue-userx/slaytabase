@@ -10,7 +10,6 @@ const searchize = item => {
     if (!item.hasOwnProperty('name'))
         return '';
     let name = item.name;
-    console.log(item.searchText);
     if (item.hasOwnProperty('character') && wikiItems[item.character[0]].hasOwnProperty(item.name))
         name = wikiItems[item.character[0]][item.name]
     return name.replaceAll(' ', '_').replaceAll('+', '').replaceAll('???', 'Unidentified');
