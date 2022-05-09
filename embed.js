@@ -10,6 +10,7 @@ const searchize = item => {
     if (!item.hasOwnProperty('name'))
         return '';
     let name = item.name;
+    console.log(item.searchText);
     if (item.hasOwnProperty('character') && wikiItems[item.character[0]].hasOwnProperty(item.name))
         name = wikiItems[item.character[0]][item.name]
     return name.replaceAll(' ', '_').replaceAll('+', '').replaceAll('???', 'Unidentified');
@@ -55,7 +56,7 @@ async function embed(item, msg, embeds=[]) {
         case 'event':
             e.color = mods[item.mod.toLowerCase()][3];
             e.thumbnail = {url: `${cfg.exportURL}/altered/img/events/${item.mod[0]}-${item.name.toLowerCase().replaceAll(' ', '')}.png`};
-            e.description = `${mods[item.mod.toLowerCase()][2]} event / Act${item.acts.length > 1 ? 's' : ''} ${item.acts.join(', ')} / ${item.character[0]}${item.character = 'All' ? ' characters' : ''}\n\`\`\`ansi\n${item.colouredDesc.replaceAll('\n', '\n``````ansi\n')}\n\`\`\``;
+            e.description = `${mods[item.mod.toLowerCase()][2]} event / Act${item.acts.length > 1 ? 's' : ''} ${item.acts.join(', ')} / ${item.character[0]}${item.character == 'All' ? ' characters' : ''}\n\`\`\`ansi\n${item.colouredDesc.replaceAll('\n', '\n``````ansi\n')}\n\`\`\``;
             break;
             
         case 'creature':

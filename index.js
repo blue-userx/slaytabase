@@ -14,7 +14,7 @@ const search = new Fuse([], {
     includeScore: true,
     useExtendedSearch: true,
     keys: ['searchText'],
-    distance: 1000,
+    ignoreLocation: true,
 });
 const queryLimit = 10; //max number of embeds on a discord message
 search.add({
