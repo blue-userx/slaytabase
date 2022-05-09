@@ -53,4 +53,18 @@ __Commands:__
             color: 14598591,
         };
     },
+
+    'discuss': async (msg, arg) => {
+        if (msg.channel.type == "GUILD_TEXT" && msg.member.permissions.has('MANAGE_MESSAGES')) { //has manage messages permission?
+            msg.startThread({name: `Discussion - ${arg}`})
+                .then(thread => {
+                    thread.send(`<${arg}>`).catch(e => {});
+                })
+                .catch(e => {});
+        } else
+            return {
+                title: 'Cannot create a discussion',
+                description: 'You must have the manage messages permission'
+            };  
+    },
 };

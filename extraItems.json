@@ -1,5 +1,15 @@
 {
     "events": [
-
+        {
+            "name": "Mind Bloom",
+            "acts": [3],
+            "mod": "downfall",
+            "options": [
+                ["I am an Echo", null, "r/Fight yourself. g/Obtain a Rare Relic."],
+                ["I am Complete", "requires all keys broken", "g/Upgrade all Cards. r/Lose Heart Blessings n/and r/10 Max HP."],
+                ["I am Gorged", "before chest", "g/Gain 999 Souls r/Cursed - 2 Normality."],
+                ["I am Healthy", "after chest", "g/Heal to full HP. r/Cursed - Doubt."]
+            ]
+        }
     ]
 }

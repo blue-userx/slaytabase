@@ -17,7 +17,6 @@ const height = 874;
     let newCards = [];
     for (let c of cards) {
         if (c.name.includes('+')) continue; //skip upgraded cards
-        console.log('\n\n'+c.name);
 
         let finish;
         let finished = new Promise(res => finish = res);
@@ -56,7 +55,6 @@ const height = 874;
                 }
             }
             c.description = c.description.replaceAll('([E]', '( [E]');
-            console.log('\n'+c.description);
         }
         if (exportImages) {
             //save image
@@ -74,6 +72,17 @@ const height = 874;
     const extraData = JSON.parse(fs.readFileSync('extraItems.json', 'utf-8'));
     for (let category in extraData)
         data[category] = data.hasOwnProperty(category) ? [...data[category], ...extraData[category]] : extraData[category]; //add the extra items to the category (or create it if it doesnt exist)
+    
+    for (let i in data.events) {
+        let event = data.events[i];
+        let desc = event.options.map(o =>`w/[${o[0]}${o[1] == null ? '' : ` n/(${o[1]})`}] ${o[2]}`).join('\n');
+        event.description = desc.replaceAll('w/', '').replaceAll('g/', '').replaceAll('r/', '').replaceAll('n/', '');
+        event.colouredDesc = desc.replaceAll('w/', '[2;37m').replaceAll('g/', '[2;32m').replaceAll('r/', '[2;31m').replaceAll('n/', '[0;2m');
+        event.color = event.hasOwnProperty('color') ? event.color : '';
+        delete event.options;
+        event.campaign = event.mod;
+        data.events[i] = event;
+    }
     
     //save new data
     fs.writeFileSync('docs/altered/items.json', JSON.stringify(data));

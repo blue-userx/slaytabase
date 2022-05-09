@@ -24,7 +24,7 @@ search.add({
 
 export {bot, search};
 
-String.prototype.unPunctuate = function() {return this.replace(/[^\w\s?]|_/g, "").replace(/\s+/g, " ")};
+String.prototype.unPunctuate = function() {return this.replaceAll('\n', ' ').replace(/[^\w\s?]|_/g, "").replace(/\s+/g, " ")};
 
 bot.once('ready', async () => {
     bot.user.setActivity('Downfall | <help>');

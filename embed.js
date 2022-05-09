@@ -3,8 +3,8 @@ import wikiItems from './wikiItems.js';
 import cfg from './cfg.js';
 
 const mods = {
-    'slay-the-spire': ['Slay the Spire', 'slay-the-spire'],
-    'downfall': ['Downfall', 'sts-downfall'],
+    'slay-the-spire': ['Slay the Spire', 'slay-the-spire', 'Standard'],
+    'downfall': ['Downfall', 'sts-downfall', 'Downfall'],
 };
 const searchize = item => {
     if (!item.hasOwnProperty('name'))
@@ -50,6 +50,11 @@ async function embed(item, msg, embeds=[]) {
             e.url = `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/Potions`;
             e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.name.replaceAll(' ', '')}.png`};
             e.description = `${item.rarity}\n\n${item.description}`;
+            break;
+        
+        case 'event':
+            e.thumbnail = {url: `${cfg.exportURL}/altered/img/events/${item.mod[0]}-${item.name.toLowerCase().replaceAll(' ', '')}.png`};
+            e.description = `${mods[item.mod.toLowerCase()][2]} event / Act${item.acts.length > 1 ? 's' : ''} ${item.acts.join(', ')}\`\`\`ansi\n${item.colouredDesc}\n\`\`\``;
             break;
             
         case 'creature':
