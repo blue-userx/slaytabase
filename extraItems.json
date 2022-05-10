@@ -128,7 +128,8 @@
             "acts": [2],
             "mod": "",
             "options": [
-                ["Take", "Obtain g/Enchiridionn/, g/Nilry's Codexn/, or g/Necronomicon. r/Lose 16 a/(21) r/HP."]
+                ["Take", null, "Obtain g/Enchiridionn/, g/Nilry's Codexn/, or g/Necronomicon. r/Lose 16 a/(21) r/HP."],
+                ["Leave", null, ""]
             ]
         },
 
