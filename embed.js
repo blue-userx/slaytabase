@@ -54,7 +54,7 @@ async function embed(item, msg, embeds=[]) {
         
         case 'event':
             e.color = mods[item.mod.toLowerCase()][3];
-            e.thumbnail = {url: `${cfg.exportURL}/altered/img/events/${item.name.toLowerCase().replaceAll(' ', '').replaceAll('?', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/altered/img/events/${item.name.toLowerCase().replaceAll(' ', '').replaceAll('?', '')}.jpg`};
             e.description = `${mods[item.mod.toLowerCase()][2]} event / Act${item.acts.length > 1 ? 's' : ''} ${item.acts.join(', ')} / ${item.character[0]}${item.character == 'All' ? ' characters' : ''}\n\`\`\`ansi\n${item.colouredDesc.replaceAll('\n', '\n``````ansi\n')}\n\`\`\``;
             break;
             
