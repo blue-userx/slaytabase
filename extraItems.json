@@ -497,8 +497,8 @@
             "acts": [2],
             "mod": "",
             "options": [
-                ["Elegance", null, "Remove a card from your deck."],
-                ["Simplicity", null, "Upgrade all Strikes and Defends."],
+                ["Elegance", null, "g/Remove a card from your deck."],
+                ["Simplicity", null, "g/Upgrade all Strikes and Defends."],
                 ["Unification", "automaton only", "All g/Strikes n/and g/Defends n/gain g/Encode."],
                 ["Intuition", "champ only", "g/Add y/'trigger Skill Bonus.' n/to all g/Strikes n/and g/Defends."],
                 ["Caprice", "gremlins only", "g/Replace n/all g/Strikes n/and g/Defends n/with g/Shivs n/and g/Wards."],
