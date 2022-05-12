@@ -274,15 +274,6 @@
         },
 
         {
-            "name": "The Library",
-            "acts": ["?"],
-            "mod": "downfall",
-            "options": [
-                ["Seek", "champ only", "Locate a g/Book n/on Fighting. (Will be g/Berserker's guiden/, g/Defensive Thesisn/, Gladiators Manualn/, or g/Dolphin's Style Guiden/)"]
-            ]
-        },
-
-        {
             "name": "Tome of Technique",
             "acts": ["?"],
             "mod": "downfall",
@@ -834,7 +825,8 @@
             "mod": "",
             "options": [
                 ["Read", null, "g/Choose 1 of 20 cards to add to your deck."],
-                ["Sleep", null, "g/Heal 33% a/(20%) g/of your max HP."]
+                ["Sleep", null, "g/Heal 33% a/(20%) g/of your max HP."],
+                ["Seek", "champ only", "Locate a g/Book n/on Fighting. (Will be g/Berserker's guiden/, g/Defensive Thesisn/, g/Gladiators Manualn/, or g/Dolphin's Style Guiden/)"]
             ]
         },
 
