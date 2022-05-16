@@ -98,7 +98,7 @@ __Commands:__
         if (result == null) return {title: "no result?"};
         return {
             title: `"${arg}" yields:`,
-            description: result.item.searchText,
+            description: result.item.searchText.toLowerCase(),
         };
     },
 
