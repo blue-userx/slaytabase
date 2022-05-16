@@ -72,7 +72,8 @@ async function embed(item, msg, embeds=[]) {
             e.title = '';
             delete e.url;
             delete e.footer;
-            let result = await item.do(msg, item.query.split(' ').slice(1).join(' '));
+            let args = item.query.split(' ').slice(1);
+            let result = await item.do(msg, args.join(' '), args);
             for (let i in result)
                 e[i] = result[i];
             break;

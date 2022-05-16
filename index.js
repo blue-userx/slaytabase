@@ -24,7 +24,7 @@ search.add({
 
 export {bot, search};
 
-String.prototype.unPunctuate = function() {return this.replaceAll('\n', ' ').replace(/[^\w\s?]|_/g, "").replace(/\s+/g, " ").trim()};
+String.prototype.unPunctuate = function() {return this.replaceAll('\n', ' ').replace(/[^\w\s?=]|_/g, "").replace(/\s+/g, " ").trim()};
 
 bot.once('ready', async () => {
     bot.user.setActivity('Downfall | <help>');
@@ -39,6 +39,7 @@ async function getEmbeds(msg) {
             for (let originalQuery of queries) {
                 if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery.startsWith('a:') || originalQuery.startsWith('http') || originalQuery == 'init')) {
                     let query = originalQuery.toLowerCase().unPunctuate();
+                    if (query.length <= 0) continue;
                     let results = search.search(query);
                     let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
                     let cmdName = query.split(' ')[0];

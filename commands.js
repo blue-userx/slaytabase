@@ -15,7 +15,12 @@ If you edit or delete your message containing your searches, I will edit or dele
 
 __Commands:__
 <del> deletes your last search in this channel.
-<? [search query]> shows the 10 most likely results for a search query.
+<? [search query]> shows the most likely results for a search query.
+- search query may include the following:
+- - page=? - specify result page
+- - cost=? - only returns cards with specified cost
+<lists> links to lists of all items in the database
+<wiki> links to the homepage of the wiki
 `,
         thumbnail: {url: bot.user.avatarURL()},
     }),
@@ -41,18 +46,50 @@ __Commands:__
         return;
     },
 
-    '?': async (msg, arg) => {
-        let results = search.search(arg).slice(0, 10);
-        let resultText = results.map((i, index) => `${index+1}: ${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} **${i.item.name}** - ${String(Math.round((1 - i.score) * 100))}% sure`).join('\n');
+    '?': async (msg, arg, args) => {
+        let searchQ = args.filter(a => !a.includes("=")).join(" ");
+        let results = search.search(searchQ);
+        let page = 0;
+        for (let i of args) {
+            if (i.includes("=")) {
+                let prop = i.slice(0, i.indexOf("="));
+                let val = i.slice(i.indexOf("=")+1);
+                switch (prop) {
+                    case "cost":
+                        results = results.filter(r => r.item.hasOwnProperty('cost') && r.item.cost.toLowerCase().includes(val));
+                        break;
+                    
+                    case "page":
+                        page = Math.max(0, parseInt(val)-1);
+                        if (Number.isNaN(page)) page = 0;
+                        break;
+                }
+            }
+        }
+        let totalResults = results.length;
+        results = results.slice(10*page, 10*(page+1));
+
+        let resultText = results.map((i, index) => `${(page*10)+index+1}: ${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} **${i.item.name}** - ${String(Math.round((1 - i.score) * 100))}% sure`).join('\n');
         let firstEmbed = results.length > 0 ? await embed(results[0].item, msg) : {thumbnail: null};
+
         return {
-            title: `Searched for "${arg}"`,
+            title: `Searched for "${searchQ}"`,
             description: results.length == 0 ? 'No results.' : resultText,
             thumbnail: firstEmbed.thumbnail,
-            //footer: {text: `${results.length} results`},
+            footer: {text: `Page ${page+1}/${Math.ceil(totalResults/10)}`},
             color: 14598591,
         };
     },
+
+    'lists': async () => ({
+        title: "lists",
+        description: "export: https://oceanuwu.github.io/downfallbot/\nmanually added items: https://github.com/OceanUwU/downfallbot/blob/main/extraItems.json",
+    }),
+
+    'wiki': async () => ({
+        title: "wiki",
+        url: "https://sts-downfall.fandom.com/wiki/Downfall_Wiki"
+    }),
 
     'discuss': async (msg, arg) => {
         if (msg.channel.type == "GUILD_TEXT" && msg.member.permissions.has('MANAGE_MESSAGES')) { //has manage messages permission?
