@@ -14,8 +14,9 @@ Anything highlighted in **bold** is a searchable keyword.
 If you edit or delete your message containing your searches, I will edit or delete my reply to it, according to your changes.
 
 __Commands:__
-<del> deletes your last search in this channel.
-<? [search query]> shows the most likely results for a search query.
+<[item name]> displays info about an item
+<del> deletes your last search in this channel
+<? [search query]> shows the most likely results for a search query
 - search query may include the following:
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
@@ -90,6 +91,16 @@ __Commands:__
         title: "wiki",
         url: "https://sts-downfall.fandom.com/wiki/Downfall_Wiki"
     }),
+
+    'searchtext': async (msg, arg) => {
+        let results = search.search(arg);
+        let result = results.length > 0 ? results[0] : null;
+        if (result == null) return {title: "no result?"};
+        return {
+            title: `"${arg}" yields:`,
+            description: result.item.searchText,
+        };
+    },
 
     'discuss': async (msg, arg) => {
         if (msg.channel.type == "GUILD_TEXT" && msg.member.permissions.has('MANAGE_MESSAGES')) { //has manage messages permission?
