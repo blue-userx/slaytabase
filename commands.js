@@ -20,6 +20,7 @@ __Commands:__
 - search query may include the following:
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
+<choose [word1 word2 word3...]> chooses one of the specified words for you at random
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
 `,
@@ -100,6 +101,13 @@ __Commands:__
             title: `"${arg}" yields:`,
             description: result.item.searchText.toLowerCase(),
         };
+    },
+
+    'choose': async (msg, arg, args) => {
+        if (args.length > 0)
+            return {
+                title: `I choose "${args[Math.floor(Math.random() * args.length)]}"`,
+            };
     },
 
     'discuss': async (msg, arg) => {
