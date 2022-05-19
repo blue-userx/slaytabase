@@ -2,7 +2,7 @@ import fs from 'fs';
 import canvas from 'canvas';
 import { diffWords } from 'diff';
 
-const exportImages = false;
+const exportImages = true;
 
 const width = 678;
 const height = 874;
@@ -10,7 +10,7 @@ const height = 874;
 (async () => {
     //load data
     console.log('Starting...')
-    const data = JSON.parse(fs.readFileSync('docs/items.json', 'utf-8'));
+    const data = JSON.parse(fs.readFileSync('docs/export/items.json', 'utf-8'));
 
     //alter cards
     let cards = data.cards;
@@ -24,17 +24,20 @@ const height = 874;
         let up = cards.find(e => e.name == c.name+'+' && e.color == c.color); //find upgraded version of card
 
         //create image of card next to its upgrade
+        let canv, ctx;
         if (exportImages) {
-            let canv = canvas.createCanvas(width * (up == undefined ? 1 : 2), height); //double-width canvas if there is an upgrade
-            let ctx = canv.getContext('2d');
+            canv = canvas.createCanvas(width * 2, height); //double-width canvas if there is an upgrade
+            ctx = canv.getContext('2d');
         }
         let cardPath = `${c.color.slice(0,10)}-${c.name.replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '')}`;
-        let imgPath = `docs/${c.mod == '' ? 'slay-the-spire' : c.mod}/card-images/${cardPath}`;
-        if (exportImages)
+        let imgPath = `docs/export/${c.mod == '' ? 'slay-the-spire' : c.mod}/card-images/${cardPath}`;
+        if (exportImages) {
             ctx.drawImage(await canvas.loadImage(imgPath+'.png'), 0, 0);
+            ctx.drawImage(await canvas.loadImage(imgPath.replace('export', 'betaartexport')+(up != undefined ? 'Plus' : '')+'.png'), width, 0);
+        }
         if (up != undefined) {
             if (exportImages)
-                ctx.drawImage(await canvas.loadImage(imgPath+'Plus.png'), width, 0);
+                ctx.drawImage(await canvas.loadImage(imgPath.replace('export', 'betaartexport')+'Plus.png'), width, 0);
 
             //update card to include numbers from upgrade
             if (c.cost != up.cost) c.cost = `${c.cost} (${up.cost})`;
@@ -61,6 +64,7 @@ const height = 874;
             let out = fs.createWriteStream(`docs/altered/img/cards/${cardPath}.png`);
             canv.createPNGStream().pipe(out);
             out.on('finish', () => finish());
+            console.log(`exported ${cardPath}`);
         } else finish()
 
         newCards.push(c);

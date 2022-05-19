@@ -7,6 +7,7 @@ invite the bot: https://discord.com/oauth2/authorize?client_id=96182444365357468
 3. `npm start`
 
 ## updating export
-1. download [modded spire exporter](https://steamcommunity.com/sharedfiles/filedetails/?id=2069872611) and run it in-game with "export vanilla items" enabled.
-2. move the `export` directory it creates to `docs` in this repo
-3. `node alterExport.js`
+1. download [modded spire exporter](https://steamcommunity.com/sharedfiles/filedetails/?id=2069872611) and enable "export vanilla items"
+2. on a profile where no beta art is enabled, create an export and move the `export` directory it creates to `docs/export` in this repo
+3. on a profile where ALL beta art is enabled, create an export and move the `export` directory it creates to `docs/betaartexport` in this repo
+4. `node alterExport.js`

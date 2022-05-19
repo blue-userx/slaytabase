@@ -1,0 +1,118 @@
+
+{| class="article-table sortable"
+|+ Cards
+|-
+!Name
+!Picture
+!Rarity
+!Type
+!Energy
+!Description
+|-
+|[[Automa-Beam]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Attack]]
+|2
+|Deal 26 (34) damage to ALL enemies.
+At the start of your next turn, lose [E].
+[[Exhaust]].
+|-
+|[[Awaken]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Power]]
+|2
+|When you would die, or at the end of combat, heal 8 (12) HP instead and lose this buff.
+|-
+|[[Chrono-Boost]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Power]]
+|2
+|Gain 1 [[Strength]] (.
+Gain 1 [[Strength]]) for every 12th card you play.
+|-
+|[[Guardian Whirl]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Attack]]
+|2
+|Requires 10 [[Block]].
+Deal 4 (6) damage to ALL enemies 4 times.
+[[Exhaust]].
+|-
+|[[Hexaburn]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Power]]
+|2
+|In 3 (2) turns, deal 6 damage to a random enemy 6 times.
+Scales with [[Strength]].
+|-
+|[[Invincible]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Power]]
+|2 (1)
+|Gain 10 [[expansioncontent:Invincible]].
+If you already had [[expansioncontent:Invincible]], it lasts another turn instead.
+|-
+|[[Last Stand]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Power]]
+|2
+|Remove all Debuffs.
+Gain 1 [[Strength]].
+If you are below half HP, Gain (Heal 10 and gain) 2 [[Strength]].
+|-
+|[[Prepare Crush]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Skill]]
+|2
+|Gain 10 (15) [[Block]].
+Next turn, gain [E] [E] [E] and SLIME CRUSH (*CRUSH+).
+[[Exhaust]].
+|-
+|[[Shaper's Blessing]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Power]]
+|2
+|Choose - Gain 2 (3) [[Strength]] or 5 (8) Plated Armor.
+|-
+|[[YOU ARE MINE!]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Skill]]
+|2
+|Remove [[Block]] from, and apply 3 (5) [[Weak]] and [[Vulnerable]] to, ALL enemies.
+[[Exhaust]].
+|-
+|[[Quick Study]]
+|[[File:|thumb|289x289px]]
+|Rare
+|[[Skill]]
+|1
+|Choose 1 of 3 ([[Upgraded]]) Boss cards to gain.
+It costs 0 until played.
+[[Exhaust]].
+|-
+|[[Study the Spire]]
+|[[File:|thumb|289x289px]]
+|Rare
+|[[Power]]
+|3
+|Gain a random ([[Upgraded]]) Boss card (not card)at the start of your next 3 turns. They cost 0.
+|-
+|[[The Evil Within]]
+|[[File:|thumb|289x289px]]
+|Rare
+|[[Attack]]
+|1
+|Deal 10 (12) damage.
+Gain a random ([[Upgraded]]) Boss card. It costs 0 until played.
+[[Exhaust]].
+|-

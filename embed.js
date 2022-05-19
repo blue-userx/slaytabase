@@ -39,7 +39,7 @@ async function embed(item, msg, embeds=[]) {
 
         case 'relic':
             if (item.mod == 'slay-the-spire')
-                e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.character[3]}${item.name.replaceAll(' ', '').replaceAll('\'', '')}.png`};
+                e.thumbnail = {url: `${cfg.exportURL}/export/${item.mod}/relics/${item.character[3]}${item.name.replaceAll(' ', '').replaceAll('\'', '')}.png`};
             else
                 e.thumbnail = {url: `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/Special:Filepath/${searchize(item)}.png`};
             e.color = item.character[1];
@@ -48,7 +48,7 @@ async function embed(item, msg, embeds=[]) {
             
         case 'potion':
             e.url = `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/Potions`;
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.name.replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/export/${item.mod}/potions/${item.name.replaceAll(' ', '')}.png`};
             e.description = `${item.rarity}\n\n${item.description}`;
             break;
         
@@ -59,7 +59,7 @@ async function embed(item, msg, embeds=[]) {
             break;
             
         case 'creature':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.name.replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/export/${item.mod}/creatures/${item.name.replaceAll(' ', '')}.png`};
             e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP`;
             break;
         
