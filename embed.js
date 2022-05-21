@@ -63,6 +63,12 @@ async function embed(item, msg, embeds=[]) {
             e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP`;
             break;
         
+        case 'boss':
+            e.thumbnail = {url: `${cfg.exportURL}/altered/img/bosses/${item.name.replace(' (Act ', '').replace(' Boss)', '').toLowerCase()}.png`};
+            e.color = item.character[1];
+            e.description = item.description;
+            break;
+        
         case 'keyword':
             e.description = `Keyword\n\n${item.description}`;
             break;

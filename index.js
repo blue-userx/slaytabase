@@ -117,6 +117,10 @@ async function main() {
                     character = characters[item.pool];
                     break;
 
+                case 'bosss':
+                    character = Object.values(characters).find(ch => ch[0].replace('The ', '') == item.name.slice(0, item.name.indexOf(' ')));
+                    break;
+
                 case 'events':
                     character = characters[item.character];
                     break;

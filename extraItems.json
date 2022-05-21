@@ -1,4 +1,113 @@
 {
+    "bosss": [
+        {
+            "name": "Ironclad (Act 1 Boss)",
+            "buff": ["Synchronize", "Whenever Ironclad generates a Status card, a duplicate is added into your discard pile."],
+            "cards": ["Bash", "Flawed", "Doubt", "Reckless Charge", "Wild Strike(+)", "Defend", "Power Through", "Second Wind", "Seeing Red", "Immolate", "Icky", "True Grit+", "Thunderclap+", "Feel No Pain"],
+            "relics": ["Art of War", "Champion's Belt", "Orichalcum (A19)"]
+        },
+        
+        {
+            "name": "Ironclad (Act 2 Boss)",
+            "buff": ["Feeding Frenzy", "Ironclad's Reaper foes not Exhaust and targets ALL Mushrooms. When Ironclad kills a Mushroom, he gains 1 Strength."],
+            "cards": ["Twin Strike", "Feed", "Clothesline", "Fungus Among Us", "Ghostly Armor+", "Hemokinesis", "Reaper", "Defend", "Haunted", "Swift Strike", "Heavy Blade", "Clumsy", "Bloodletting", "Headbutt", "Flame Barrier+", "Inflame(+)", "Strike"],
+            "customCards": [["Fungus Among Us", "Kill all Mushrooms. Heal HP equal to their remaining HP. Summon two Mushrooms."]],
+            "relics": ["Red Skull", "Magic Flower", "Vajra", "Du-Vu Doll (A19)"]
+        },
+        
+        {
+            "name": "Ironclad (Act 3 Boss)",
+            "buff": ["Bastion", "Ironclad begins the fight with a Fortification, which will grant him 10 block each turn. When the Fortification has been destroyed, Ironclad loses Barricade, but gains 5 Strength at the start of each turn."],
+            "cards": ["Feel No Pain", "Impervious", "Intimidate", "Flame Barrier(+)", "Body Slam", "Clumsy", "Entrench", "Metallicize", "Decay", "Power Through", "Second Wind", "Ghostly Armor"],
+            "relics": ["Odd Mushroom", "Torii", "Cursed Key", "Horn Cleat", "Self-Forming Clay (A19)"]
+        },
+        
+        {
+            "name": "Silent (Act 1 Boss)",
+            "buff": ["Warning: Highly Toxic", "Poison is blockable and deals damage at end of turn. Receive an Antidote at the start of combat."],
+            "cards": ["Crippling Cloud", "Survivor", "Burst", "Poisoned Stab", "Dodge and Roll", "Strike", "Bane(+)", "Defend", "Deflect", "Footwork", "Noxious Fumes", "Deadly Poison"],
+            "customCards": [["Antidote", "Lose all Poison."]],
+            "relics": ["Horn Cleat", "Twisted Funnel", "Lantern (A19)"]
+        },
+        
+        {
+            "name": "Silent (Act 2 Boss)",
+            "buff": ["Seeing Double", "At the start of each turn, a mirror image of Silent will hide her real location. Attacking silent or the mirror removes it from combat for the turn."],
+            "cards": ["After Image+", "Backstab", "Doppelganger+", "Nightmare", "Deflect(+)", "J.A.X.+", "Dagger Spray", "Decay", "Outmaneuver", "Flying Knee", "Blur", "Footwork", "Leg Sweep", "Riddle with Holes"],
+            "relics": ["Paper Krane", "Anchor", "Bag of Marbles", "Oddly Smooth Stone (A19)"]
+        },
+        
+        {
+            "name": "Silent (Act 3 Boss)",
+            "buff": ["Bag of Knives", "The first time you play a card that costs 2 or more each turn, Silent gains 2 Shivs."],
+            "cards": ["Predator", "Flying Knee", "Burst", "Flechettes", "Leg Sweep", "Cloak and Dagger", "Neutralize", "Blur", "Endless Agony", "Finisher+", "Defend", "Blade Dance -> Shiv", "Sucker Punch", "Dagger Spray", "Piercing Wail", "After Image", "Dash"],
+            "relics": ["Mummified Hand", "Fusion Hammer", "Shuriken", "Ornamental Fan", "Kunai (A19)"]
+        },
+        
+        {
+            "name": "Defect (Act 1 Boss)",
+            "buff": ["Energy Thief", "Whenever Defect generates a Void, it goes to the top of your draw pile."],
+            "cards": ["Buffer", "Doom and Gloom(+)", "Shame", "Steam Barrier", "Defend", "Aged", "Turbo+", "Sunder", "Defend", "Strike", "Core Surge", "Equilibrium"],
+            "relics": ["Clockwork souvenir", "Fossilized Helix", "Symbiotic Virus (A19)"]
+        },
+        
+        {
+            "name": "Defect (Act 2 Boss)",
+            "buff": ["Ancient Construct", "Begins the fight with 2 Bronze Orb minions. Gains 1 Artifact at the end of its turn if it did not already have Artifact."],
+            "cards": ["Boot Sequence", "Claw", "Machine Learning+", "Leap", "Cold Snap+", "Panic Button", "Strike", "Reprogram", "Swift Strike", "Rebound", "Charge Battery", "Genetic Algorithm+", "Shame", "Hyperbeam(+)", "Flawed", "Defend", "Clumsy"],
+            "relics": ["Turnip", "Red Mask", "Kunai", "Ginger (A19)"]
+        },
+        
+        {
+            "name": "Defect (Act 3 Boss)",
+            "buff": ["Unbiased Cognision", "Whenever you play a Power card, Defect gains 1 Focus."],
+            "cards": ["Rainbow", "Reinforced Body", "Charge Battery", "Zap+", "Dualcast", "Multi-Cast", "Cold Snap", "Barrage+", "Leap", "Storm", "Defragment(+)", "Blind"],
+            "relics": ["Coffee Dripper", "Fossilized Helix", "Lantern", "Data Disk", "Art of War (A19)"]
+        },
+        
+        {
+            "name": "Watcher (Act 1 Boss)",
+            "buff": ["Unbridled Rage", "At the end of her turn, if Watcher is at or below 50% HP, she enters Wrath. Watcher's Wrath increases damage dealt and received by 50% instead of 100%."],
+            "cards": ["Wallop(+)", "Halt", "Defend+", "Clumsy", "Sands of Time", "Talk to the Hand", "Crush Joints", "Panacea", "Fasting", "Regret", "Parasite"],
+            "relics": ["Bag of Preparation", "Cloak Clasp", "Mercury Hourglass (A19)"]
+        },
+        
+        {
+            "name": "Watcher (Act 2 Boss)",
+            "buff": ["Blasphemer's Demise", "When Watcher loses 150 more HP, apply -4 Strength to her when she next enters Divinity or plays Ragnarok."],
+            "cards": ["Like Water", "Defend", "Ragnarok+", "Strike", "Follow-Up", "Wave of the Hand", "Defend+", "Wallop+", "Blasphemy+", "Flying Sleeves+", "Wish(+) -> Become Almighty(+)", "Tranquility+", "Vigilance", "Empty Body", "Wish -> Live Forever", "Consecrate+"],
+            "relics": ["Incense Burner", "Teardrop Locket", "Oddly Smooth Stone", "Enchiridion (A19)"]
+        },
+        
+        {
+            "name": "Watcher (Act 3 Boss)",
+            "buff": ["Fleeting Faith", "Watcher gains 1 Mantra whenever you play a card. Watcher loses 5 Mantra at the start of her turn. Watcher does not exit Divinity at the end of her turn."],
+            "cards": ["Wish -> Live Forever", "Good Instincts", "Shame", "Wave of the Hand", "Swivel", "Blind", "Signature Move", "Conjure Blade -> Expunger", "Sanctity", "Protect+", "Empty Fist(+)", "Normality", "Strike", "Devotion"],
+            "relics": ["Velvet Choker", "Torii", "Captain's Wheel", "Thread and Needle", "Damaru (A19)"]
+        },
+        
+        {
+            "name": "Hermit (Act 1 Boss)",
+            "buff": ["Deadly Focus", "Hermit has Concentration, which adds special Dead On effects to his cards. Dealing 10 unblocked damage to him breaks the concentration, causing his cards to lose their Dead On effects."],
+            "cards": ["Headshot", "Defend", "Injury", "Itchy Trigger", "Strike", "Ghostly Presence", "Dive(+)", "Lone Wolf", "Roughhouse", "Deadeye"],
+            "relics": ["Calipers", "Oddly Smooth Stone", "The Abacus", "Orichalcum (A19)"]
+        },
+        
+        {
+            "name": "Hermit (Act 2 Boss)",
+            "buff": ["Wheel of Fortune", "Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card. Every 6 times this happens, Hermit gains 1 Strength."],
+            "cards": ["Showdown+", "Strike+", "Strike", "Defend", "Desperado", "Wide Open+", "Hole Up", "Flash Powder(+)", "Itchy Trigger", "Hand of Greed", "Virtue+", "Maintenance+", "Necronomicurse"],
+            "relics": ["Necronomicon", "Philosopher's Stone", "Pen Nib"]
+        },
+        
+        {
+            "name": "Hermit (Act 3 Boss)",
+            "buff": ["Doomsday", "At the start of your turn, gain an Impending Doom with Retain."],
+            "cards": ["Covet+", "Defend", "Pain", "Clumsy", "Spite", "Misfire", "Glare", "Ghostly Presence", "Master of Strategy", "Bandage Up", "Lone Wolf", "Wide Open", "Malice", "Spray n' Pray", "Enervate", "Low Profile", "Doubt", "Purgatory", "Grudge"],
+            "relics": ["Charred Glove", "Gremlin Visage", "Art of War", "Omamori", "Calling Bell", "Orichalcum (A19)"]
+        }
+    ],
+
     "events": [
         {
             "name": "Mind Bloom",
