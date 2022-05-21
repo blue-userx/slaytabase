@@ -88,7 +88,7 @@
         
         {
             "name": "Hermit (Act 1 Boss)",
-            "buff": ["Deadly Focus", "Hermit has Concentration, which adds special Dead On effects to his cards. Dealing 10 unblocked damage to him breaks the concentration, causing his cards to lose their Dead On effects."],
+            "buff": ["Deadly Focus ", "Hermit has Concentration, which adds special Dead On effects to his cards. Dealing 10 unblocked damage to him breaks the concentration, causing his cards to lose their Dead On effects."],
             "cards": ["Headshot", "Defend", "Injury", "Itchy Trigger", "Strike", "Ghostly Presence", "Dive(+)", "Lone Wolf", "Roughhouse", "Deadeye"],
             "relics": ["Calipers", "Oddly Smooth Stone", "The Abacus", "Orichalcum (A19)"]
         },
