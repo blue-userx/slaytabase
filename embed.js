@@ -64,9 +64,10 @@ async function embed(item, msg, embeds=[]) {
             break;
         
         case 'boss':
-            e.thumbnail = {url: `${cfg.exportURL}/altered/img/bosses/${item.name.replace(' (Act ', '').replace(' Boss)', '').toLowerCase()}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/altered/img/bosses/${item.name.replaceAll(' ', '').toLowerCase()}.png`};
             e.color = item.character[1];
             e.description = item.description;
+            e.url = e.url.replace('_', '_(Act_')+'_Boss)';
             break;
         
         case 'keyword':
