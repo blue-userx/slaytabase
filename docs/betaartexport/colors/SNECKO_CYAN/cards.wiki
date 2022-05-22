@@ -526,7 +526,7 @@ Repeat this for each [[sneckomod:Offclass]] card in your hand, then [[Exhaust]] 
 |[[Skill]]
 |0
 |[[sneckomod:Snekproof]].
-Gain -10 (0) - 30 Souls.
+Gain -10 (0) - 30 Gold.
 [[Exhaust]].
 |-
 |[[More Power!]]

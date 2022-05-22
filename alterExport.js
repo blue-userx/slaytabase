@@ -2,7 +2,7 @@ import fs from 'fs';
 import canvas from 'canvas';
 import { diffWords } from 'diff';
 
-const exportImages = false;
+const exportImages = true;
 
 const width = 678;
 const height = 874;

@@ -5,7 +5,7 @@
 | ![](relics/champ-ChampionCrown.png) | Champion's Crown | Starter | The_champ_gray | At the start of combat, enter #bDefensive or #rBerserker Stance. | A WINNER IS YOU! |
 | ![](relics/Slimebound-AbsorbEndCombat.png) | Heart of Goo | Starter | Slimebound | Whenever you #yslimeboundmod:Consume, heal #b2 HP, up to #b8 each combat. | I feel so funky. |
 | ![](relics/Gremlin-GremlinKnob.png) | Mob Leader's Staff | Starter | Gremlin | At the start of each combat, gain [E] , draw #b1 card, and #ySwap to the next Gremlin. | Among gremlin mobs, the one with the best horn maintains complete command over the troupe, until another one manages to steal it. |
-| ![](relics/hermit-Momento.png) | Old Locket | Starter | Hermit_yellow | At the start of each combat, gain a #yMemento. | There's a faded picture inside. |
+| ![](relics/hermit-Momento.png) | Old Locket | Starter | Hermit_yellow | At the start of each combat, add a #yMemento into your hand. | There's a faded picture inside. |
 | ![](relics/sneckomod-SneckoSoul.png) | Snecko Soul | Starter | Snecko_cyan | The first time you play an #ysneckomod:Offclass card in a combat, gain [E] and draw a card. | 0...3...2...2...1 |
 | ![](relics/hexamod-SpiritBrand.png) | Spirit Brand | Starter | Hexa_ghost_purple | The first time you #yIgnite a Ghostflame each turn, gain #b4 #yBlock. | A bound protector. |
 | ![](relics/Guardian-PocketSentry.png) | Arumba's Pocket Sentry | Common |  | At the start of each turn, alternates between: NL Deal #b7 damage to a random enemy. NL Apply #b1 #yWeak to ALL enemies. | Sentry Mode active. Target acquired. No hard feelings. |
@@ -20,12 +20,12 @@
 | ![](relics/sneckomod-LoadedDie.png) | Loaded Die | Common | Snecko_cyan | Cards that choose random numbers have +1 minimum. | Cheese-stuffed. |
 | ![](relics/Guardian-PickAxe.png) | Pick of Rhapsody | Common | Guardian | You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites (up to #b3 times). | With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them. |
 | ![](relics/bronze-ProtectiveGoggles.png) | Protective Goggles | Common | The_bronze_automaton | If you end your turn with no cards in the #ySequence, gain #b4 #yBlock. | Look closely. |
-| ![](relics/hexamod-BolsterEngine.png) | Rod of Bolstering Flame | Common |  | The first time you play a #yPower card each combat, gain #b6 #yBlock and #b1 #yStrength. | Fire shields! Fire strengthens. |
-| ![](relics/hermit-RyeStalk.png) | Rye Stalk | Common | Hermit_yellow | #yhermit:Bruise is no longer reduced on hit. | Still in mint condition, despite being chewed on for so long. |
+| ![](relics/hermit-RyeStalk.png) | Rye Stalk | Common | Hermit_yellow | At the end of your turn, ALL enemies lose HP equal to their #yhermit:Bruise. | Still in mint condition, despite being chewed on for so long. |
 | ![](relics/sneckomod-SneckoCommon.png) | Seal of Approval | Common | Snecko_cyan | Upon pickup, choose #b1 of #b3 #yUnidentified #yCharacter cards to add to your deck. All future #yUnidentified #yCharacter cards found will be of this character. | I'm The Ironclad and this is my favorite Relic in the Spire. -Merchant Advertising Pamphlet |
 | ![](relics/bronze-SilverBullet.png) | Silver Bullet | Common | The_bronze_automaton | Start each combat with a #yPiercing #yShot in the #ySequence. | Spirewolves are long gone. |
 | ![](relics/hexamod-MatchstickCase.png) | Sneaky Teakwood Match | Common | Hexa_ghost_purple | At the start of each combat, #yhexamod:Ignite the current Ghostflame and #yhexamod:Advance. | Lights on any surface! |
 | ![](relics/Gremlin-SupplyScroll.png) | Supply Scroll | Common |  | At the start of your 3rd turn, gain a #ySupply #yScroll. | A surprisingly detailed inventory of the mob's various bits and bobbles. |
+| ![](relics/hexamod-BolsterEngine.png) | Tricky's Bolster-Rod | Common |  | The first time you play a #yPower card each combat, gain #b6 #yBlock and #b1 #yStrength. | Backed by the study of a thousand books. Knowledge is power! |
 | ![](relics/Gremlin-WizardHat.png) | Wizard Hat | Common | Gremlin | Whenever you consume #yWiz, remove a debuff at random. | The accompanying robes have long since been stolen. |
 | ![](relics/hermit-BloodyTooth.png) | Broken Tooth | Uncommon |  | Whenever you beat an Elite encounter, gain #b1 #yStrength at the start of each combat for the rest of the Act. | Appears too large to have come from a human jaw... |
 | ![](relics/bronze-CableSpool.png) | Cable Spool | Uncommon | The_bronze_automaton | Add a copy of the first card you play with #yEncode each combat to the #ySequence. | Tangled... |
@@ -96,7 +96,7 @@
 | ![](relics/GremlinWheel.png) | Wheel of Change | Special |  | At each Rest Site, you may spin the wheel once. Choosing to collect its reward uses up this relic. | No one gets two spins, he says. |
 | ![](relics/sneckomod-BabySnecko.png) | Young Snecko | Special |  | Deals #b5 damage to a random enemy at the start of your turn. | Bewilderingly adorable. |
 | ![](relics/Slimebound-AbsorbEndCombatUpgraded.png) | Black Heart of Goo | Boss | Slimebound | Replaces [#40c840ff]Heart[] [#40c840ff]of[] [#40c840ff]Goo[][#40c840ff].[] NL Whenever you #yslimeboundmod:Consume, heal #b3 HP, up to #b15 each combat. | The Secret of the Ooze. |
-| ![](relics/hermit-ClaspedLocket.png) | Clasped Locket | Boss | Hermit_yellow | Replaces #yOld #yLocket. At the start of each combat, gain [E] for each #rCurse in your deck. Upon pickup, obtain #b2 #rInjuries. | It won't open anymore. |
+| ![](relics/hermit-ClaspedLocket.png) | Clasped Locket | Boss | Hermit_yellow | Replaces #yOld #yLocket. First time you draw a curse each turn, #yExhaust it and draw #b2 cards. Upon pickup, obtain #b2 #rInjuries. | It won't open anymore. |
 | ![](relics/hermit-DentedPlate.png) | Dented Plate | Boss | Hermit_yellow | While your HP is at or below #b50%, gain [E] and draw #b1 card at the start of your turn. | Several bullets are still lodged inside. |
 | ![](relics/bronze-ElectromagneticCoil.png) | Electromagnetic Coil | Boss | The_bronze_automaton | #yFunctions are now made up of #b4 cards. | An inefficient but entertaining power source. |
 | ![](relics/Gremlin-LeaderVoucher.png) | Gremlin Leader's Voucher | Boss | Gremlin | Gain [E] at the start of your turn. NL Upon pickup, #rpermanently #rlose #ra #rGremlin.Gain [E] at the start of your turn. NL Upon pickup, #rpermanently #rlose #ra #rGremlin. | IOU 1 Gremlin |

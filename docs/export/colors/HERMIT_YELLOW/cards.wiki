@@ -30,7 +30,7 @@ Discarded Curses are [[Exhausted]].
 |Basic
 |[[Attack]]
 |1
-|Deal 5 (7) damage. hermit:Dead_On: Gain 8 (10) [[Block]].
+|Deal 5 (7) damage. hermit:Dead_On: Gain [[Block]] equal to the unblocked damage dealt.
 |-
 |[[Strike]]
 |[[File:|thumb|289x289px]]
@@ -46,30 +46,22 @@ Discarded Curses are [[Exhausted]].
 |1
 |Discard a card.
 Gain 6 (8) [[Block]].
-If it was a Skill, gain 6 (8) more [[Block]].
+If it was a non-Attack, gain 6 (8) [[Block]] again.
 |-
 |[[Coalescence]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |1
-|Gain 5 (8) [[Block]].
+|Gain 6 (9) [[Block]].
 [[Retain]] up to 2 (3) cards this turn.
-|-
-|[[Desperado]]
-|[[File:|thumb|289x289px]]
-|Common
-|[[Attack]]
-|1
-|Deal 14 (18) damage.
-Gain 2 [[Frail]].
 |-
 |[[Dive]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |1
-|Gain 7 (10) [[Block]].
+|Gain 8 (10) [[Block]].
 hermit:Dead_On:
 Gain 1 (2) Plated Armor.
 |-
@@ -86,7 +78,8 @@ Apply 2 (3) [[hermit:Bruise]] to ALL enemies.
 |Common
 |[[Skill]]
 |0
-|Apply 1 (2) [[Weak]] and (1) [[Vulnerable]].
+|([[Retain]].)
+ Apply 1 [[Weak]] and [[Vulnerable]].
 |-
 |[[Headshot]]
 |[[File:|thumb|289x289px]]
@@ -101,8 +94,8 @@ hermit:Dead_On: Deal double damage.
 |Common
 |[[Attack]]
 |1
-|Deal 12 (18) damage.
-Add a Strike (*Strike+) to your discard pile.
+|Deal 12 (15) damage.
+Add a Strike (*Strike+) to your hand.
 [[Exhaust]].
 |-
 |[[Hole Up]]
@@ -117,9 +110,9 @@ Gain 2 [[Weak]].
 |[[File:|thumb|289x289px]]
 |Common
 |[[Attack]]
-|2
-|Deal 15 (20) damage.
-hermit:Dead_On: Reduce the cost of a random card in your hand to 0 this turn.
+|1
+|Deal 7 (9) damage.
+hermit:Dead_On: Reduce the cost of a random card in your hand by 1 (2) this turn.
 |-
 |[[Low Profile]]
 |[[File:|thumb|289x289px]]
@@ -151,7 +144,7 @@ Shuffle a Clumsy into your draw pile.
 |[[Attack]]
 |1
 |Deal 6 (8) damage.
-Apply 5 (6) [[hermit:Bruise]].
+Apply 3 (5) [[hermit:Bruise]].
 |-
 |[[Quickdraw]]
 |[[File:|thumb|289x289px]]
@@ -192,7 +185,7 @@ Deal 9 (12) damage.
 |Common
 |[[Skill]]
 |1
-|Gain 7 (10) [[Block]].
+|Gain 8 (11) [[Block]].
 hermit:Dead_On:
 [[Upgrade]] 2 (3) random cards in your hand for the rest of combat.
 |-
@@ -209,7 +202,7 @@ Apply 1 (2) [[Vulnerable]].
 |Uncommon
 |[[Power]]
 |2
-|At the start of your turn, apply 5 (6) [[hermit:Bruise]] to ALL enemies.
+|At the start of your turn, apply 4 (6) [[hermit:Bruise]] to ALL enemies.
 |-
 |[[Called Shot]]
 |[[File:|thumb|289x289px]]
@@ -261,6 +254,14 @@ This card permanently gains 3 damage.
 hermit:Dead_On:
 Gain 2 (3) [[Strength]].
 |-
+|[[Desperado]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Attack]]
+|1
+|Deal 10 (12) damage.
+Double this card's damage this combat. It costs 1 more.
+|-
 |[[Determination]]
 |[[File:|thumb|289x289px]]
 |Uncommon
@@ -310,7 +311,7 @@ ALL enemies lose 1 (2) [[Strength]].
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
-|2
+|1
 |Gain 2 [[hermit:Rugged]].
 Gain 2 (1) [[Vulnerable]].
 [[Exhaust]].
@@ -320,9 +321,9 @@ Gain 2 (1) [[Vulnerable]].
 |Uncommon
 |[[Skill]]
 |1
-|Gain 8 (11) [[Block]].
+|Gain 8 (10) [[Block]].
 hermit:Dead_On:
-Apply 1 [[Weak]] to ALL enemies.
+Apply 1 (2) [[Weak]] to ALL enemies.
 |-
 |[[Golden Bullet]]
 |[[File:|thumb|289x289px]]
@@ -346,7 +347,7 @@ Deals 2 (3) more for ALL your [[Curse]] cards.
 |Uncommon
 |[[Skill]]
 |1
-|Apply 4 (6) [[hermit:Bruise]] to ALL enemies.
+|Apply 3 (5) [[hermit:Bruise]] to ALL enemies.
 [[hermit:Bruise]] does not wear off this turn.
 |-
 |[[Lone Wolf]]
@@ -355,9 +356,8 @@ Deals 2 (3) more for ALL your [[Curse]] cards.
 |[[Skill]]
 |1 (0)
 |Choose a card.
-It costs 0 this combat.
+It costs 0 this turn.
 Discard the rest of your hand.
-[[Exhaust]].
 |-
 |[[Luck of the Draw]]
 |[[File:|thumb|289x289px]]
@@ -371,8 +371,9 @@ Discard the rest of your hand.
 |Uncommon
 |[[Skill]]
 |1
-|Your Strikes deal 3 (4) more damage. 
-(Gain 1 [[Dexterity]].)
+|*Strikes deal 3 (4) more damage this combat.
+Gain 1 (2) [[Dexterity]].
+This costs 1 more this combat.
 |-
 |[[Malice]]
 |[[File:|thumb|289x289px]]
@@ -415,7 +416,7 @@ Gain 1 less [E] next turn.
 |1
 |Gain 4 (5) Plated Armor.
 hermit:Dead_On:
-Gain 5 (10) Souls.
+Gain 5 (10) Gold.
 [[Exhaust]].
 |-
 |[[Shadow Cloak]]
@@ -437,10 +438,11 @@ Costs 1 less [E] per Strike or Defend played this turn.
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Attack]]
-|2 (1)
+|1
 |[[Retain]].
-Deal 9 damage.
-Play all Strikes in your hand on random targets.
+Deal 8 (13) damage.
+Play all Strikes in your hand.
+[[Exhaust]].
 |-
 |[[Smoking Barrel]]
 |[[File:|thumb|289x289px]]
@@ -495,7 +497,7 @@ Reduce each of your debuffs by 1 (2).
 |Rare
 |[[Power]]
 |3 (2)
-|At the end of your turn, you can [[Exhaust]] a card to gain 6 [[Block]].
+|At the start of your turn, you can [[Exhaust]] a card to gain 8 [[Block]].
 |-
 |[[Black Wind]]
 |[[File:|thumb|289x289px]]
@@ -529,8 +531,9 @@ If [[Fatal]], get a [[hermit:Bounty]].
 |Rare
 |[[Power]]
 |3
-|Your first 4 (5) cards each turn cost 0.
-Gain no [E] at start of turn.
+|[[Ethereal]].
+(not Ethereal.)
+At the start of your turn, reduce the cost of all cards in hand by 1 this turn.
 |-
 |[[Fatal Desire]]
 |[[File:|thumb|289x289px]]
@@ -561,7 +564,8 @@ Deal 13 (16) damage for each [[Curse]] in hand.
 |Rare
 |[[Skill]]
 |0
-|Put 3 (4) random Attacks from your discard pile into your hand. [[Exhaust]].
+|Put 2 (3) random Attacks from your discard pile into your hand. They cost 1 less this turn.
+[[Exhaust]].
 |-
 |[[Heroic Bravado]]
 |[[File:|thumb|289x289px]]
@@ -585,7 +589,7 @@ Increase the cost of this card by 2 (1) this combat.
 |[[Attack]]
 |1
 |Discard 6 cards.
-For each card, deal 6 (9) damage.
+For each card, deal 5 (7) damage.
 |-
 |[[Overwhelming Power]]
 |[[File:|thumb|289x289px]]
@@ -602,16 +606,16 @@ Whenever you end your turn with 0 [[Energy]], lose 4 (2) HP.
 |[[Attack]]
 |3
 |[[Ethereal]].
-(not Ethereal.)
-Deal 30 damage to ALL enemies.
+Deal 24 (30) damage to ALL enemies.
 |-
 |[[Reprieve]]
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Skill]]
-|1 (0)
-|[[Exhaust]] ALL Curses.
-If you [[exhaust]] at least 13 (10) Curses, take an extra turn after this one.
+|2
+|[[Ethereal]].
+Heal 12 (15) HP.
+[[Exhaust]].
 |-
 |[[Roughhouse]]
 |[[File:|thumb|289x289px]]
@@ -619,7 +623,7 @@ If you [[exhaust]] at least 13 (10) Curses, take an extra turn after this one.
 |[[Attack]]
 |3
 |Deal 24 (30) damage. hermit:Dead_On:
-Gain 16 (20) [[Block]].
+Gain 20 (24) [[Block]].
 |-
 |[[Roundhouse Kick]]
 |[[File:|thumb|289x289px]]

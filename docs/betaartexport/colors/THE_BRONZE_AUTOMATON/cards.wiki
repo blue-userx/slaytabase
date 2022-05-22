@@ -150,7 +150,7 @@ Gain 1 [E].
 |1
 |Deal 4 (5) damage and apply 4 (5) [[Poison]].
 [[bronze:Encode]].
-[[bronze:Compile]] Error - [[bronze:Insert]] 1 Slimed.
+[[bronze:Compile]] Error - [[bronze:Insert]] a Slimed.
 |-
 |[[Overheat]]
 |[[File:|thumb|289x289px]]
@@ -206,7 +206,7 @@ Add a Void into your discard pile.
 |[[Attack]]
 |1
 |Deal 12 (17) damage. π
-[[bronze:Insert]] 1 Wound.
+[[bronze:Insert]] a Wound.
 |-
 |[[Allocate]]
 |[[File:|thumb|289x289px]]

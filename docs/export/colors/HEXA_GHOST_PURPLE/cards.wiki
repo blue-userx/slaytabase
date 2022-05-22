@@ -418,7 +418,7 @@ Gain [E] (and draw 1 card).
 |[[Power]]
 |1
 |[[Ethereal]] (not Ethereal)[[hexamod:Seal]].
-At the end of combat, gain 10 additional Souls.
+At the end of combat, gain 10 additional Gold.
 |-
 |[[Spectral Spark]]
 |[[File:|thumb|289x289px]]

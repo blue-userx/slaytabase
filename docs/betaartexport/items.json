@@ -8349,7 +8349,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "1",
-      "description": "Ethereal hexamod:Seal.\nAt the end of combat, gain 10 additional Souls.",
+      "description": "Ethereal hexamod:Seal.\nAt the end of combat, gain 10 additional Gold.",
       "mod": "Downfall"
     },
     {
@@ -8358,7 +8358,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "1",
-      "description": "hexamod:Seal.\nAt the end of combat, gain 10 additional Souls.",
+      "description": "hexamod:Seal.\nAt the end of combat, gain 10 additional Gold.",
       "mod": "Downfall"
     },
     {
@@ -9078,7 +9078,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 4 damage and apply 4 Poison.\nbronze:Encode.\nbronze:Compile Error - bronze:Insert 1 Slimed.",
+      "description": "Deal 4 damage and apply 4 Poison.\nbronze:Encode.\nbronze:Compile Error - bronze:Insert a Slimed.",
       "mod": "Downfall"
     },
     {
@@ -9087,7 +9087,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 5 damage and apply 5 Poison.\nbronze:Encode.\nbronze:Compile Error - bronze:Insert 1 Slimed.",
+      "description": "Deal 5 damage and apply 5 Poison.\nbronze:Encode.\nbronze:Compile Error - bronze:Insert a Slimed.",
       "mod": "Downfall"
     },
     {
@@ -9204,7 +9204,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 12 damage. \u03C0\nbronze:Insert 1 Wound.",
+      "description": "Deal 12 damage. \u03C0\nbronze:Insert a Wound.",
       "mod": "Downfall"
     },
     {
@@ -9213,7 +9213,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 17 damage. \u03C0\nbronze:Insert 1 Wound.",
+      "description": "Deal 17 damage. \u03C0\nbronze:Insert a Wound.",
       "mod": "Downfall"
     },
     {
@@ -12750,7 +12750,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "4",
-      "description": "Gain 20 Temporary_HP.\nMutate into Gremlin Nob until you run out of Temporary_HP.",
+      "description": "Gain 20 Temporary_HP.\nMutate into Gremlin gremlin:Nob until you run out of Temporary_HP.",
       "mod": "Downfall"
     },
     {
@@ -12759,7 +12759,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "4",
-      "description": "Gain 30 Temporary_HP.\nMutate into Gremlin Nob until you run out of Temporary_HP.",
+      "description": "Gain 30 Temporary_HP.\nMutate into Gremlin gremlin:Nob until you run out of Temporary_HP.",
       "mod": "Downfall"
     },
     {
@@ -14154,7 +14154,7 @@
       "rarity": "Rare",
       "type": "Skill",
       "cost": "0",
-      "description": "sneckomod:Snekproof.\nGain -10 - 30 Souls.\nExhaust.",
+      "description": "sneckomod:Snekproof.\nGain -10 - 30 Gold.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -14163,7 +14163,7 @@
       "rarity": "Rare",
       "type": "Skill",
       "cost": "0",
-      "description": "sneckomod:Snekproof.\nGain 0 - 30 Souls.\nExhaust.",
+      "description": "sneckomod:Snekproof.\nGain 0 - 30 Gold.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -17016,7 +17016,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 5 damage. hermit:Dead_On: Gain 8 Block.",
+      "description": "Deal 5 damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt.",
       "mod": "Downfall"
     },
     {
@@ -17025,7 +17025,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 7 damage. hermit:Dead_On: Gain 10 Block.",
+      "description": "Deal 7 damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt.",
       "mod": "Downfall"
     },
     {
@@ -17052,7 +17052,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Discard a card.\nGain 6 Block.\nIf it was a Skill, gain 6 more Block.",
+      "description": "Discard a card.\nGain 6 Block.\nIf it was a non-Attack, gain 6 Block again.",
       "mod": "Downfall"
     },
     {
@@ -17061,7 +17061,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Discard a card.\nGain 8 Block.\nIf it was a Skill, gain 8 more Block.",
+      "description": "Discard a card.\nGain 8 Block.\nIf it was a non-Attack, gain 8 Block again.",
       "mod": "Downfall"
     },
     {
@@ -17070,7 +17070,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 5 Block.\nRetain up to 2 cards this turn.",
+      "description": "Gain 6 Block.\nRetain up to 2 cards this turn.",
       "mod": "Downfall"
     },
     {
@@ -17079,25 +17079,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 8 Block.\nRetain up to 3 cards this turn.",
-      "mod": "Downfall"
-    },
-    {
-      "name": "Desperado",
-      "color": "Hermit_yellow",
-      "rarity": "Common",
-      "type": "Attack",
-      "cost": "1",
-      "description": "Deal 14 damage.\nGain 2 Frail.",
-      "mod": "Downfall"
-    },
-    {
-      "name": "Desperado+",
-      "color": "Hermit_yellow",
-      "rarity": "Common",
-      "type": "Attack",
-      "cost": "1",
-      "description": "Deal 18 damage.\nGain 2 Frail.",
+      "description": "Gain 9 Block.\nRetain up to 3 cards this turn.",
       "mod": "Downfall"
     },
     {
@@ -17106,7 +17088,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 7 Block.\nhermit:Dead_On:\nGain 1 Plated Armor.",
+      "description": "Gain 8 Block.\nhermit:Dead_On:\nGain 1 Plated Armor.",
       "mod": "Downfall"
     },
     {
@@ -17151,7 +17133,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "0",
-      "description": "Apply 2 Weak and 1 Vulnerable.",
+      "description": "Retain.\nApply 1 Weak and Vulnerable.",
       "mod": "Downfall"
     },
     {
@@ -17178,7 +17160,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 12 damage.\nAdd a Strike to your discard pile.\nExhaust.",
+      "description": "Deal 12 damage.\nAdd a Strike to your hand.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -17187,7 +17169,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 18 damage.\nAdd a Strike+ to your discard pile.\nExhaust.",
+      "description": "Deal 15 damage.\nAdd a Strike+ to your hand.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -17213,8 +17195,8 @@
       "color": "Hermit_yellow",
       "rarity": "Common",
       "type": "Attack",
-      "cost": "2",
-      "description": "Deal 15 damage.\nhermit:Dead_On: Reduce the cost of a random card in your hand to 0 this turn.",
+      "cost": "1",
+      "description": "Deal 7 damage.\nhermit:Dead_On: Reduce the cost of a random card in your hand by 1 this turn.",
       "mod": "Downfall"
     },
     {
@@ -17222,8 +17204,8 @@
       "color": "Hermit_yellow",
       "rarity": "Common",
       "type": "Attack",
-      "cost": "2",
-      "description": "Deal 20 damage.\nhermit:Dead_On: Reduce the cost of a random card in your hand to 0 this turn.",
+      "cost": "1",
+      "description": "Deal 9 damage.\nhermit:Dead_On: Reduce the cost of a random card in your hand by 2 this turn.",
       "mod": "Downfall"
     },
     {
@@ -17286,7 +17268,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 6 damage.\nApply 5 hermit:Bruise.",
+      "description": "Deal 6 damage.\nApply 3 hermit:Bruise.",
       "mod": "Downfall"
     },
     {
@@ -17295,7 +17277,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 8 damage.\nApply 6 hermit:Bruise.",
+      "description": "Deal 8 damage.\nApply 5 hermit:Bruise.",
       "mod": "Downfall"
     },
     {
@@ -17376,7 +17358,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 7 Block.\nhermit:Dead_On:\nUpgrade 2 random cards in your hand for the rest of combat.",
+      "description": "Gain 8 Block.\nhermit:Dead_On:\nUpgrade 2 random cards in your hand for the rest of combat.",
       "mod": "Downfall"
     },
     {
@@ -17385,7 +17367,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 10 Block.\nhermit:Dead_On:\nUpgrade 3 random cards in your hand for the rest of combat.",
+      "description": "Gain 11 Block.\nhermit:Dead_On:\nUpgrade 3 random cards in your hand for the rest of combat.",
       "mod": "Downfall"
     },
     {
@@ -17412,7 +17394,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "2",
-      "description": "At the start of your turn, apply 5 hermit:Bruise to ALL enemies.",
+      "description": "At the start of your turn, apply 4 hermit:Bruise to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -17533,6 +17515,24 @@
       "mod": "Downfall"
     },
     {
+      "name": "Desperado",
+      "color": "Hermit_yellow",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 10 damage.\nDouble this card's damage this combat. It costs 1 more.",
+      "mod": "Downfall"
+    },
+    {
+      "name": "Desperado+",
+      "color": "Hermit_yellow",
+      "rarity": "Uncommon",
+      "type": "Attack",
+      "cost": "1",
+      "description": "Deal 12 damage.\nDouble this card's damage this combat. It costs 1 more.",
+      "mod": "Downfall"
+    },
+    {
       "name": "Determination",
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
@@ -17627,7 +17627,7 @@
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
       "type": "Skill",
-      "cost": "2",
+      "cost": "1",
       "description": "Gain 2 hermit:Rugged.\nGain 2 Vulnerable.\nExhaust.",
       "mod": "Downfall"
     },
@@ -17636,7 +17636,7 @@
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
       "type": "Skill",
-      "cost": "2",
+      "cost": "1",
       "description": "Gain 2 hermit:Rugged.\nGain 1 Vulnerable.\nExhaust.",
       "mod": "Downfall"
     },
@@ -17655,7 +17655,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 11 Block.\nhermit:Dead_On:\nApply 1 Weak to ALL enemies.",
+      "description": "Gain 10 Block.\nhermit:Dead_On:\nApply 2 Weak to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -17700,7 +17700,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Apply 4 hermit:Bruise to ALL enemies.\nhermit:Bruise does not wear off this turn.",
+      "description": "Apply 3 hermit:Bruise to ALL enemies.\nhermit:Bruise does not wear off this turn.",
       "mod": "Downfall"
     },
     {
@@ -17709,7 +17709,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Apply 6 hermit:Bruise to ALL enemies.\nhermit:Bruise does not wear off this turn.",
+      "description": "Apply 5 hermit:Bruise to ALL enemies.\nhermit:Bruise does not wear off this turn.",
       "mod": "Downfall"
     },
     {
@@ -17718,7 +17718,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Choose a card.\nIt costs 0 this combat.\nDiscard the rest of your hand.\nExhaust.",
+      "description": "Choose a card.\nIt costs 0 this turn.\nDiscard the rest of your hand.",
       "mod": "Downfall"
     },
     {
@@ -17727,7 +17727,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "0",
-      "description": "Choose a card.\nIt costs 0 this combat.\nDiscard the rest of your hand.\nExhaust.",
+      "description": "Choose a card.\nIt costs 0 this turn.\nDiscard the rest of your hand.",
       "mod": "Downfall"
     },
     {
@@ -17754,7 +17754,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Your Strikes deal 3 more damage.",
+      "description": "*Strikes deal 3 more damage this combat.\nGain 1 Dexterity.\nThis costs 1 more this combat.",
       "mod": "Downfall"
     },
     {
@@ -17763,7 +17763,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Your Strikes deal 4 more damage.\nGain 1 Dexterity.",
+      "description": "*Strikes deal 4 more damage this combat.\nGain 2 Dexterity.\nThis costs 1 more this combat.",
       "mod": "Downfall"
     },
     {
@@ -17844,7 +17844,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 4 Plated Armor.\nhermit:Dead_On:\nGain 5 Souls.\nExhaust.",
+      "description": "Gain 4 Plated Armor.\nhermit:Dead_On:\nGain 5 Gold.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -17853,7 +17853,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 5 Plated Armor.\nhermit:Dead_On:\nGain 10 Souls.\nExhaust.",
+      "description": "Gain 5 Plated Armor.\nhermit:Dead_On:\nGain 10 Gold.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -17897,8 +17897,8 @@
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
       "type": "Attack",
-      "cost": "2",
-      "description": "Retain.\nDeal 9 damage.\nPlay all Strikes in your hand on random targets.",
+      "cost": "1",
+      "description": "Retain.\nDeal 8 damage.\nPlay all Strikes in your hand.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -17907,7 +17907,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Retain.\nDeal 9 damage.\nPlay all Strikes in your hand on random targets.",
+      "description": "Retain.\nDeal 13 damage.\nPlay all Strikes in your hand.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -18024,7 +18024,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "3",
-      "description": "At the end of your turn, you can Exhaust a card to gain 6 Block.",
+      "description": "At the start of your turn, you can Exhaust a card to gain 8 Block.",
       "mod": "Downfall"
     },
     {
@@ -18033,7 +18033,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "2",
-      "description": "At the end of your turn, you can Exhaust a card to gain 6 Block.",
+      "description": "At the start of your turn, you can Exhaust a card to gain 8 Block.",
       "mod": "Downfall"
     },
     {
@@ -18096,7 +18096,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "3",
-      "description": "Your first 4 cards each turn cost 0.\nGain no [E] at start of turn.",
+      "description": "Ethereal.\nAt the start of your turn, reduce the cost of all cards in hand by 1 this turn.",
       "mod": "Downfall"
     },
     {
@@ -18105,7 +18105,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "3",
-      "description": "Your first 5 cards each turn cost 0.\nGain no [E] at start of turn.",
+      "description": "At the start of your turn, reduce the cost of all cards in hand by 1 this turn.",
       "mod": "Downfall"
     },
     {
@@ -18168,7 +18168,7 @@
       "rarity": "Rare",
       "type": "Skill",
       "cost": "0",
-      "description": "Put 3 random Attacks from your discard pile into your hand. Exhaust.",
+      "description": "Put 2 random Attacks from your discard pile into your hand. They cost 1 less this turn.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -18177,7 +18177,7 @@
       "rarity": "Rare",
       "type": "Skill",
       "cost": "0",
-      "description": "Put 4 random Attacks from your discard pile into your hand. Exhaust.",
+      "description": "Put 3 random Attacks from your discard pile into your hand. They cost 1 less this turn.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -18222,7 +18222,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "1",
-      "description": "Discard 6 cards.\nFor each card, deal 6 damage.",
+      "description": "Discard 6 cards.\nFor each card, deal 5 damage.",
       "mod": "Downfall"
     },
     {
@@ -18231,7 +18231,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "1",
-      "description": "Discard 6 cards.\nFor each card, deal 9 damage.",
+      "description": "Discard 6 cards.\nFor each card, deal 7 damage.",
       "mod": "Downfall"
     },
     {
@@ -18258,7 +18258,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "3",
-      "description": "Ethereal.\nDeal 30 damage to ALL enemies.",
+      "description": "Ethereal.\nDeal 24 damage to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -18267,7 +18267,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "3",
-      "description": "Deal 30 damage to ALL enemies.",
+      "description": "Ethereal.\nDeal 30 damage to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -18275,8 +18275,8 @@
       "color": "Hermit_yellow",
       "rarity": "Rare",
       "type": "Skill",
-      "cost": "1",
-      "description": "Exhaust ALL Curses.\nIf you exhaust at least 13 Curses, take an extra turn after this one.",
+      "cost": "2",
+      "description": "Ethereal.\nHeal 12 HP.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -18284,8 +18284,8 @@
       "color": "Hermit_yellow",
       "rarity": "Rare",
       "type": "Skill",
-      "cost": "0",
-      "description": "Exhaust ALL Curses.\nIf you exhaust at least 10 Curses, take an extra turn after this one.",
+      "cost": "2",
+      "description": "Ethereal.\nHeal 15 HP.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -18294,7 +18294,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "3",
-      "description": "Deal 24 damage. hermit:Dead_On:\nGain 16 Block.",
+      "description": "Deal 24 damage. hermit:Dead_On:\nGain 20 Block.",
       "mod": "Downfall"
     },
     {
@@ -18303,7 +18303,7 @@
       "rarity": "Rare",
       "type": "Attack",
       "cost": "3",
-      "description": "Deal 30 damage. hermit:Dead_On:\nGain 20 Block.",
+      "description": "Deal 30 damage. hermit:Dead_On:\nGain 24 Block.",
       "mod": "Downfall"
     },
     {
@@ -18386,7 +18386,7 @@
       "name": "Old Locket",
       "tier": "Starter",
       "pool": "Hermit_yellow",
-      "description": "At the start of each combat, gain a Memento.",
+      "description": "At the start of each combat, add a Memento into your hand.",
       "flavorText": "There's a faded picture inside.",
       "mod": "Downfall"
     },
@@ -18538,7 +18538,7 @@
       "name": "Ceramic Fish",
       "tier": "Common",
       "pool": "",
-      "description": "Whenever you add a card to your deck, gain 9 Souls.",
+      "description": "Whenever you add a card to your deck, gain 9 Gold.",
       "flavorText": "Meticulously painted, these fish were revered to bring great fortune.",
       "mod": ""
     },
@@ -18634,7 +18634,7 @@
       "name": "Maw Bank",
       "tier": "Common",
       "pool": "",
-      "description": "Whenever you climb a floor, gain 12 Souls. No longer works when you spend any Souls at a shop.",
+      "description": "Whenever you climb a floor, gain 12 Gold. No longer works when you spend any Gold at a shop.",
       "flavorText": "Surprisingly popular, despite maw attacks being a regular occurrence.",
       "mod": ""
     },
@@ -18735,18 +18735,10 @@
       "mod": ""
     },
     {
-      "name": "Rod of Bolstering Flame",
-      "tier": "Common",
-      "pool": "",
-      "description": "The first time you play a Power card each combat, gain 6 Block and 1 Strength.",
-      "flavorText": "Fire shields! Fire strengthens.",
-      "mod": "Downfall"
-    },
-    {
       "name": "Rye Stalk",
       "tier": "Common",
       "pool": "Hermit_yellow",
-      "description": "hermit:Bruise is no longer reduced on hit.",
+      "description": "At the end of your turn, ALL enemies lose HP equal to their hermit:Bruise.",
       "flavorText": "Still in mint condition, despite being chewed on for so long.",
       "mod": "Downfall"
     },
@@ -18770,7 +18762,7 @@
       "name": "Smiling Mask",
       "tier": "Common",
       "pool": "",
-      "description": "The Merchant's card removal service now always costs 50 Souls.",
+      "description": "The Merchant's card removal service now always costs 50 Gold.",
       "flavorText": "Mask worn by the Merchant. He must have spares...",
       "mod": ""
     },
@@ -18829,6 +18821,14 @@
       "description": "Whenever you use a potion, heal 5 HP.",
       "flavorText": "\"This little toy is the perfect companion for the lone adventurer!\"",
       "mod": ""
+    },
+    {
+      "name": "Tricky's Bolster-Rod",
+      "tier": "Common",
+      "pool": "",
+      "description": "The first time you play a Power card each combat, gain 6 Block and 1 Strength.",
+      "flavorText": "Backed by the study of a thousand books. Knowledge is power!",
+      "mod": "Downfall"
     },
     {
       "name": "Vajra",
@@ -19530,7 +19530,7 @@
       "name": "Old Coin",
       "tier": "Rare",
       "pool": "",
-      "description": "Upon pickup, gain 300 Souls.",
+      "description": "Upon pickup, gain 300 Gold.",
       "flavorText": "Unique coins are highly valued by merchants for their historical value and rare metallic composition.",
       "mod": ""
     },
@@ -19778,7 +19778,7 @@
       "name": "Bloody Idol",
       "tier": "Special",
       "pool": "",
-      "description": "Whenever you gain Souls, heal 5 HP.",
+      "description": "Whenever you gain Gold, heal 5 HP.",
       "flavorText": "The idol now weeps a constant stream of blood.",
       "mod": ""
     },
@@ -19858,7 +19858,7 @@
       "name": "Golden Idol",
       "tier": "Special",
       "pool": "",
-      "description": "Enemies drop 25% more Souls.",
+      "description": "Enemies drop 25% more Gold.",
       "flavorText": "Made of solid gold, you feel richer just holding it.",
       "mod": ""
     },
@@ -20058,7 +20058,7 @@
       "name": "Ssserpent Head",
       "tier": "Special",
       "pool": "",
-      "description": "Whenever you enter a ? room, gain 50 Souls.",
+      "description": "Whenever you enter a ? room, gain 50 Gold.",
       "flavorText": "The most fulfilling of lives is that in which you can buy anything!",
       "mod": ""
     },
@@ -20162,7 +20162,7 @@
       "name": "Clasped Locket",
       "tier": "Boss",
       "pool": "Hermit_yellow",
-      "description": "Replaces Old Locket. At the start of each combat, gain [E] for each Curse in your deck. Upon pickup, obtain 2 Injuries.",
+      "description": "Replaces Old Locket. First time you draw a curse each turn, Exhaust it and draw 2 cards. Upon pickup, obtain 2 Injuries.",
       "flavorText": "It won't open anymore.",
       "mod": "Downfall"
     },
@@ -20194,7 +20194,7 @@
       "name": "Ectoplasm",
       "tier": "Boss",
       "pool": "",
-      "description": "Gain [E] at the start of your turn. You can no longer gain Souls.",
+      "description": "Gain [E] at the start of your turn. You can no longer gain Gold.",
       "flavorText": "This blob of slime and energy seems to pulse with life.",
       "mod": ""
     },
@@ -20418,7 +20418,7 @@
       "name": "Slaver's Collar",
       "tier": "Boss",
       "pool": "",
-      "description": "During Merchant, Boss, and Elite combats, gain [E] at the start of your turn.",
+      "description": "During Boss and Elite combats, gain [E] at the start of your turn.",
       "flavorText": "Rusty miserable chains.",
       "mod": ""
     },
@@ -20466,7 +20466,7 @@
       "name": "Tiny House",
       "tier": "Boss",
       "pool": "",
-      "description": "Upon pickup, obtain 1 potion.\nGain 50 Souls.\nRaise your Max HP by 5.\nObtain 1 card.\nUpgrade 1 random card.",
+      "description": "Upon pickup, obtain 1 potion.\nGain 50 Gold.\nRaise your Max HP by 5.\nObtain 1 card.\nUpgrade 1 random card.",
       "flavorText": "\"A near perfect implementation of miniaturization. My finest work to date, but still not adequate.\" - The Architect",
       "mod": ""
     },
@@ -20829,12 +20829,6 @@
       "mod": ""
     },
     {
-      "name": "Brew of Sharpness",
-      "rarity": "Common",
-      "description": "Gain 25 Counter.",
-      "mod": "Downfall"
-    },
-    {
       "name": "Colorless Potion",
       "rarity": "Common",
       "description": "Choose 1 of 3 random Colorless cards to add to your hand, it costs 0 this turn.",
@@ -20901,18 +20895,6 @@
       "mod": "Downfall"
     },
     {
-      "name": "Molotov",
-      "rarity": "Common",
-      "description": "Apply 30 Soulburn.",
-      "mod": "Downfall"
-    },
-    {
-      "name": "Pizazz Potion",
-      "rarity": "Common",
-      "description": "Gain 10 Vigor.",
-      "mod": "Downfall"
-    },
-    {
       "name": "Poison Potion",
       "rarity": "Common",
       "description": "Apply 6 Poison.",
@@ -20941,12 +20923,6 @@
       "rarity": "Common",
       "description": "Gain 5 Dexterity. At the end of your turn, lose 5 Dexterity.",
       "mod": ""
-    },
-    {
-      "name": "Spiked Energy Drink",
-      "rarity": "Common",
-      "description": "Muddle the 2 highest-cost cards in your hand. Cards Muddled this way cannot cost 3.",
-      "mod": "Downfall"
     },
     {
       "name": "Strategy Potion",
@@ -20995,12 +20971,6 @@
       "rarity": "Uncommon",
       "description": "Gain 1 Artifact.",
       "mod": ""
-    },
-    {
-      "name": "Armorer's Tincture",
-      "rarity": "Uncommon",
-      "description": "Gain 4 Block each time you play a card this turn.",
-      "mod": "Downfall"
     },
     {
       "name": "Black Bile",
@@ -21111,12 +21081,6 @@
       "mod": ""
     },
     {
-      "name": "Vexing Draught",
-      "rarity": "Uncommon",
-      "description": "Gain 2 Strength and 2 Dexterity.\nAdd two Burn+ cards to your draw pile.",
-      "mod": "Downfall"
-    },
-    {
       "name": "Ambrosia",
       "rarity": "Rare",
       "description": "Enter Divinity Stance.",
@@ -21198,12 +21162,6 @@
       "name": "Liquid Void",
       "rarity": "Rare",
       "description": "Put 1 card from your exhaust pile into your hand. It costs 0 this turn.",
-      "mod": "Downfall"
-    },
-    {
-      "name": "Ooze-Infused Drink",
-      "rarity": "Rare",
-      "description": "Add 4 random 0-cost cards to your hand.",
       "mod": "Downfall"
     },
     {
@@ -21326,8 +21284,8 @@
     {
       "name": "Acid Slime (M)",
       "type": "Normal",
-      "minHP": "32",
-      "maxHP": "32",
+      "minHP": "30",
+      "maxHP": "30",
       "mod": ""
     },
     {
@@ -21340,8 +21298,8 @@
     {
       "name": "Apology Slime",
       "type": "Normal",
-      "minHP": "10",
-      "maxHP": "10",
+      "minHP": "11",
+      "maxHP": "11",
       "mod": ""
     },
     {
@@ -21361,8 +21319,8 @@
     {
       "name": "Bear",
       "type": "Normal",
-      "minHP": "39",
-      "maxHP": "39",
+      "minHP": "40",
+      "maxHP": "40",
       "mod": ""
     },
     {
@@ -21375,8 +21333,8 @@
     {
       "name": "Book of Stabbing",
       "type": "Elite",
-      "minHP": "160",
-      "maxHP": "160",
+      "minHP": "162",
+      "maxHP": "162",
       "mod": ""
     },
     {
@@ -21389,15 +21347,15 @@
     {
       "name": "Byrd",
       "type": "Normal",
-      "minHP": "30",
-      "maxHP": "30",
+      "minHP": "27",
+      "maxHP": "27",
       "mod": ""
     },
     {
       "name": "Byrd (Grounded)",
       "type": "Normal",
-      "minHP": "28",
-      "maxHP": "28",
+      "minHP": "31",
+      "maxHP": "31",
       "mod": ""
     },
     {
@@ -21410,8 +21368,8 @@
     {
       "name": "Chosen",
       "type": "Normal",
-      "minHP": "97",
-      "maxHP": "97",
+      "minHP": "95",
+      "maxHP": "95",
       "mod": ""
     },
     {
@@ -21431,8 +21389,8 @@
     {
       "name": "Dagger",
       "type": "Normal",
-      "minHP": "20",
-      "maxHP": "20",
+      "minHP": "25",
+      "maxHP": "25",
       "mod": ""
     },
     {
@@ -21487,8 +21445,8 @@
     {
       "name": "Fungi Beast",
       "type": "Normal",
-      "minHP": "27",
-      "maxHP": "27",
+      "minHP": "26",
+      "maxHP": "26",
       "mod": ""
     },
     {
@@ -21501,15 +21459,15 @@
     {
       "name": "Gremlin Leader",
       "type": "Elite",
-      "minHP": "143",
-      "maxHP": "143",
+      "minHP": "147",
+      "maxHP": "147",
       "mod": ""
     },
     {
       "name": "Gremlin Nob",
       "type": "Elite",
-      "minHP": "84",
-      "maxHP": "84",
+      "minHP": "83",
+      "maxHP": "83",
       "mod": ""
     },
     {
@@ -21550,15 +21508,15 @@
     {
       "name": "Lagavulin",
       "type": "Elite",
-      "minHP": "110",
-      "maxHP": "110",
+      "minHP": "109",
+      "maxHP": "109",
       "mod": ""
     },
     {
       "name": "Lagavulin (Awake)",
       "type": "Elite",
-      "minHP": "110",
-      "maxHP": "110",
+      "minHP": "111",
+      "maxHP": "111",
       "mod": ""
     },
     {
@@ -21571,15 +21529,15 @@
     {
       "name": "Looter",
       "type": "Normal",
-      "minHP": "44",
-      "maxHP": "44",
+      "minHP": "47",
+      "maxHP": "47",
       "mod": "Downfall"
     },
     {
       "name": "Looter",
       "type": "Normal",
-      "minHP": "44",
-      "maxHP": "44",
+      "minHP": "45",
+      "maxHP": "45",
       "mod": "Downfall"
     },
     {
@@ -21605,7 +21563,7 @@
     },
     {
       "name": "Merchant",
-      "type": "Elite",
+      "type": "Boss",
       "minHP": "300",
       "maxHP": "300",
       "mod": "Downfall"
@@ -21613,15 +21571,15 @@
     {
       "name": "Mugger",
       "type": "Normal",
-      "minHP": "50",
-      "maxHP": "50",
+      "minHP": "48",
+      "maxHP": "48",
       "mod": ""
     },
     {
       "name": "Mystic",
       "type": "Normal",
-      "minHP": "52",
-      "maxHP": "52",
+      "minHP": "50",
+      "maxHP": "50",
       "mod": ""
     },
     {
@@ -21648,8 +21606,8 @@
     {
       "name": "Orb Walker",
       "type": "Normal",
-      "minHP": "96",
-      "maxHP": "96",
+      "minHP": "93",
+      "maxHP": "93",
       "mod": ""
     },
     {
@@ -21662,36 +21620,36 @@
     {
       "name": "Reptomancer",
       "type": "Elite",
-      "minHP": "182",
-      "maxHP": "182",
+      "minHP": "188",
+      "maxHP": "188",
       "mod": ""
     },
     {
       "name": "Repulsor",
       "type": "Normal",
-      "minHP": "32",
-      "maxHP": "32",
+      "minHP": "33",
+      "maxHP": "33",
       "mod": ""
     },
     {
       "name": "Romeo",
       "type": "Normal",
-      "minHP": "35",
-      "maxHP": "35",
+      "minHP": "39",
+      "maxHP": "39",
       "mod": ""
     },
     {
       "name": "Sentry",
       "type": "Elite",
-      "minHP": "38",
-      "maxHP": "38",
+      "minHP": "39",
+      "maxHP": "39",
       "mod": ""
     },
     {
       "name": "Shelled Parasite",
       "type": "Normal",
-      "minHP": "71",
-      "maxHP": "71",
+      "minHP": "70",
+      "maxHP": "70",
       "mod": ""
     },
     {
@@ -21739,8 +21697,8 @@
     {
       "name": "Snecko",
       "type": "Normal",
-      "minHP": "116",
-      "maxHP": "116",
+      "minHP": "119",
+      "maxHP": "119",
       "mod": ""
     },
     {
@@ -21760,15 +21718,15 @@
     {
       "name": "Spike Slime (S)",
       "type": "Normal",
-      "minHP": "12",
-      "maxHP": "12",
+      "minHP": "13",
+      "maxHP": "13",
       "mod": ""
     },
     {
       "name": "Spiker",
       "type": "Normal",
-      "minHP": "56",
-      "maxHP": "56",
+      "minHP": "48",
+      "maxHP": "48",
       "mod": ""
     },
     {
@@ -21795,8 +21753,8 @@
     {
       "name": "Taskmaster",
       "type": "Elite",
-      "minHP": "56",
-      "maxHP": "56",
+      "minHP": "55",
+      "maxHP": "55",
       "mod": ""
     },
     {
@@ -22013,7 +21971,7 @@
     },
     {
       "name": "Bruise",
-      "description": "Bruised targets take more attack damage. Each hit, Bruise is reduced by 1. Wears off on turn end.",
+      "description": "Bruised targets take more attack damage. Wears off on turn end.",
       "names": ["hermit:bruised"],
       "mod": "Downfall"
     },
@@ -22192,6 +22150,12 @@
       "mod": "Downfall"
     },
     {
+      "name": "Gremlin Nob",
+      "description": "At the start of your turn, add 1 Bellow , Skull Bash and Rush to your hand.",
+      "names": [],
+      "mod": "Downfall"
+    },
+    {
       "name": "Gremlin Wizard",
       "description": "After you play a skill, gain 1 Wiz.",
       "names": ["gremlin:gremlin_wizard"],
@@ -22313,7 +22277,7 @@
     },
     {
       "name": "Rugged",
-      "description": "Reduces next instance of attack damage taken to 3.",
+      "description": "Reduces next instance of attack damage taken to 2.",
       "names": ["hermit:null","hermit:rugged"],
       "mod": "Downfall"
     },

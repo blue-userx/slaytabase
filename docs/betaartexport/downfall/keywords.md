@@ -25,6 +25,7 @@
 | Fat Gremlin | After you play an attack, apply 1 Weak to all targets. |
 | Gremlin Wizard | After you play a skill, gain 1 Wiz. |
 | Mad Gremlin | Gain 2 Temporary Strength when attacked. |
+| Gremlin Nob | At the start of your turn, add 1 Bellow , Skull Bash and Rush to your hand. |
 | Shield Gremlin | After you play a skill, gain 2 Block. |
 | Sneaky Gremlin | After you play an attack, deal 3 damage to a random enemy. |
 | Steal | Target loses specified amount of resource. You gain the amount that was lost. |
@@ -45,8 +46,8 @@
 | Dead On | Dead On cards have a bonus effect when in the middle of your hand. |
 | Stun | Stunned enemies skip their turn. |
 | Bounty | Normal Enemy: 15 gold. Elite Enemy: 40 gold. Boss: 100 gold. |
-| Bruise | Bruised targets take more attack damage. Each hit, Bruise is reduced by 1. Wears off on turn end. |
-| Rugged | Reduces next instance of attack damage taken to 3. |
+| Bruise | Bruised targets take more attack damage. Wears off on turn end. |
+| Rugged | Reduces next instance of attack damage taken to 2. |
 | Active | The Active Ghostflame can be Ignited by meeting its listed Ignition requirements. |
 | Advance | Move to the next Ghostflame. Moving onto a Ghostflame Extinguishes it. |
 | Afterlife | If this card is Exhausted, its effects activate. |

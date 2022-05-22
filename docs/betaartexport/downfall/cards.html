@@ -1186,7 +1186,7 @@ Gain [E] (and draw 1 card).</td>
     <td>Power</td>
     <td>1</td>
     <td>Ethereal (not Ethereal)hexamod:Seal.
-At the end of combat, gain 10 additional Souls.</td>
+At the end of combat, gain 10 additional Gold.</td>
   </tr>
   
   <tr>
@@ -1645,7 +1645,7 @@ bronze:Encode.</td>
     <td>1</td>
     <td>Deal 4 (5) damage and apply 4 (5) Poison.
 bronze:Encode.
-bronze:Compile Error - bronze:Insert 1 Slimed.</td>
+bronze:Compile Error - bronze:Insert a Slimed.</td>
   </tr>
   
   <tr>
@@ -1722,7 +1722,7 @@ Add a Void into your discard pile.</td>
     <td>Attack</td>
     <td>1</td>
     <td>Deal 12 (17) damage. π
-bronze:Insert 1 Wound.</td>
+bronze:Insert a Wound.</td>
   </tr>
   
   <tr>
@@ -3923,7 +3923,7 @@ Deal 5 (7) damage 3 times.</td>
     <td>Power</td>
     <td>4</td>
     <td>Gain 20 (30) Temporary_HP.
-Mutate into Gremlin Nob until you run out of Temporary_HP.</td>
+Mutate into Gremlin gremlin:Nob until you run out of Temporary_HP.</td>
   </tr>
   
   <tr>
@@ -4708,7 +4708,7 @@ Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those ca
     <td>Skill</td>
     <td>0</td>
     <td>sneckomod:Snekproof.
-Gain -10 (0) - 30 Souls.
+Gain -10 (0) - 30 Gold.
 Exhaust.</td>
   </tr>
   
@@ -6537,7 +6537,7 @@ Discarded Curses are Exhausted.</td>
     <td>Basic</td>
     <td>Attack</td>
     <td>1</td>
-    <td>Deal 5 (7) damage. hermit:Dead_On: Gain 8 (10) Block.</td>
+    <td>Deal 5 (7) damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt.</td>
   </tr>
   
   <tr>
@@ -6559,7 +6559,7 @@ Discarded Curses are Exhausted.</td>
     <td>1</td>
     <td>Discard a card.
 Gain 6 (8) Block.
-If it was a Skill, gain 6 (8) more Block.</td>
+If it was a non-Attack, gain 6 (8) Block again.</td>
   </tr>
   
   <tr>
@@ -6569,19 +6569,8 @@ If it was a Skill, gain 6 (8) more Block.</td>
     <td>Common</td>
     <td>Skill</td>
     <td>1</td>
-    <td>Gain 5 (8) Block.
+    <td>Gain 6 (9) Block.
 Retain up to 2 (3) cards this turn.</td>
-  </tr>
-  
-  <tr>
-    <td>Desperado</td>
-    <td><a href="card-images/Hermit_yel-Desperado.png"><img src="small-card-images/Hermit_yel-Desperado.png" height="298"></a></td>
-    <td><a href="card-images/Hermit_yel-DesperadoPlus.png"><img src="small-card-images/Hermit_yel-DesperadoPlus.png" height="298"></a></td>
-    <td>Common</td>
-    <td>Attack</td>
-    <td>1</td>
-    <td>Deal 14 (18) damage.
-Gain 2 Frail.</td>
   </tr>
   
   <tr>
@@ -6591,7 +6580,7 @@ Gain 2 Frail.</td>
     <td>Common</td>
     <td>Skill</td>
     <td>1</td>
-    <td>Gain 7 (10) Block.
+    <td>Gain 8 (10) Block.
 hermit:Dead_On:
 Gain 1 (2) Plated Armor.</td>
   </tr>
@@ -6614,7 +6603,8 @@ Apply 2 (3) hermit:Bruise to ALL enemies.</td>
     <td>Common</td>
     <td>Skill</td>
     <td>0</td>
-    <td>Apply 1 (2) Weak and (1) Vulnerable.</td>
+    <td>(Retain.)
+ Apply 1 Weak and Vulnerable.</td>
   </tr>
   
   <tr>
@@ -6635,8 +6625,8 @@ hermit:Dead_On: Deal double damage.</td>
     <td>Common</td>
     <td>Attack</td>
     <td>1</td>
-    <td>Deal 12 (18) damage.
-Add a Strike (*Strike+) to your discard pile.
+    <td>Deal 12 (15) damage.
+Add a Strike (*Strike+) to your hand.
 Exhaust.</td>
   </tr>
   
@@ -6657,9 +6647,9 @@ Gain 2 Weak.</td>
     <td><a href="card-images/Hermit_yel-ItchyTriggerPlus.png"><img src="small-card-images/Hermit_yel-ItchyTriggerPlus.png" height="298"></a></td>
     <td>Common</td>
     <td>Attack</td>
-    <td>2</td>
-    <td>Deal 15 (20) damage.
-hermit:Dead_On: Reduce the cost of a random card in your hand to 0 this turn.</td>
+    <td>1</td>
+    <td>Deal 7 (9) damage.
+hermit:Dead_On: Reduce the cost of a random card in your hand by 1 (2) this turn.</td>
   </tr>
   
   <tr>
@@ -6703,7 +6693,7 @@ Shuffle a Clumsy into your draw pile.</td>
     <td>Attack</td>
     <td>1</td>
     <td>Deal 6 (8) damage.
-Apply 5 (6) hermit:Bruise.</td>
+Apply 3 (5) hermit:Bruise.</td>
   </tr>
   
   <tr>
@@ -6759,7 +6749,7 @@ Deal 9 (12) damage.</td>
     <td>Common</td>
     <td>Skill</td>
     <td>1</td>
-    <td>Gain 7 (10) Block.
+    <td>Gain 8 (11) Block.
 hermit:Dead_On:
 Upgrade 2 (3) random cards in your hand for the rest of combat.</td>
   </tr>
@@ -6782,7 +6772,7 @@ Apply 1 (2) Vulnerable.</td>
     <td>Uncommon</td>
     <td>Power</td>
     <td>2</td>
-    <td>At the start of your turn, apply 5 (6) hermit:Bruise to ALL enemies.</td>
+    <td>At the start of your turn, apply 4 (6) hermit:Bruise to ALL enemies.</td>
   </tr>
   
   <tr>
@@ -6854,6 +6844,17 @@ Gain 2 (3) Strength.</td>
   </tr>
   
   <tr>
+    <td>Desperado</td>
+    <td><a href="card-images/Hermit_yel-Desperado.png"><img src="small-card-images/Hermit_yel-Desperado.png" height="298"></a></td>
+    <td><a href="card-images/Hermit_yel-DesperadoPlus.png"><img src="small-card-images/Hermit_yel-DesperadoPlus.png" height="298"></a></td>
+    <td>Uncommon</td>
+    <td>Attack</td>
+    <td>1</td>
+    <td>Deal 10 (12) damage.
+Double this card's damage this combat. It costs 1 more.</td>
+  </tr>
+  
+  <tr>
     <td>Determination</td>
     <td><a href="card-images/Hermit_yel-Determination.png"><img src="small-card-images/Hermit_yel-Determination.png" height="298"></a></td>
     <td><a href="card-images/Hermit_yel-DeterminationPlus.png"><img src="small-card-images/Hermit_yel-DeterminationPlus.png" height="298"></a></td>
@@ -6919,7 +6920,7 @@ Exhaust.</td>
     <td><a href="card-images/Hermit_yel-GestaltPlus.png"><img src="small-card-images/Hermit_yel-GestaltPlus.png" height="298"></a></td>
     <td>Uncommon</td>
     <td>Skill</td>
-    <td>2</td>
+    <td>1</td>
     <td>Gain 2 hermit:Rugged.
 Gain 2 (1) Vulnerable.
 Exhaust.</td>
@@ -6932,9 +6933,9 @@ Exhaust.</td>
     <td>Uncommon</td>
     <td>Skill</td>
     <td>1</td>
-    <td>Gain 8 (11) Block.
+    <td>Gain 8 (10) Block.
 hermit:Dead_On:
-Apply 1 Weak to ALL enemies.</td>
+Apply 1 (2) Weak to ALL enemies.</td>
   </tr>
   
   <tr>
@@ -6967,7 +6968,7 @@ Deals 2 (3) more for ALL your Curse cards.</td>
     <td>Uncommon</td>
     <td>Skill</td>
     <td>1</td>
-    <td>Apply 4 (6) hermit:Bruise to ALL enemies.
+    <td>Apply 3 (5) hermit:Bruise to ALL enemies.
 hermit:Bruise does not wear off this turn.</td>
   </tr>
   
@@ -6979,9 +6980,8 @@ hermit:Bruise does not wear off this turn.</td>
     <td>Skill</td>
     <td>1 (0)</td>
     <td>Choose a card.
-It costs 0 this combat.
-Discard the rest of your hand.
-Exhaust.</td>
+It costs 0 this turn.
+Discard the rest of your hand.</td>
   </tr>
   
   <tr>
@@ -7001,8 +7001,9 @@ Exhaust.</td>
     <td>Uncommon</td>
     <td>Skill</td>
     <td>1</td>
-    <td>Your Strikes deal 3 (4) more damage. 
-(Gain 1 Dexterity.)</td>
+    <td>*Strikes deal 3 (4) more damage this combat.
+Gain 1 (2) Dexterity.
+This costs 1 more this combat.</td>
   </tr>
   
   <tr>
@@ -7060,7 +7061,7 @@ Gain 1 less [E] next turn.</td>
     <td>1</td>
     <td>Gain 4 (5) Plated Armor.
 hermit:Dead_On:
-Gain 5 (10) Souls.
+Gain 5 (10) Gold.
 Exhaust.</td>
   </tr>
   
@@ -7091,10 +7092,11 @@ Costs 1 less [E] per Strike or Defend played this turn.</td>
     <td><a href="card-images/Hermit_yel-ShowdownPlus.png"><img src="small-card-images/Hermit_yel-ShowdownPlus.png" height="298"></a></td>
     <td>Uncommon</td>
     <td>Attack</td>
-    <td>2 (1)</td>
+    <td>1</td>
     <td>Retain.
-Deal 9 damage.
-Play all Strikes in your hand on random targets.</td>
+Deal 8 (13) damage.
+Play all Strikes in your hand.
+Exhaust.</td>
   </tr>
   
   <tr>
@@ -7170,7 +7172,7 @@ Reduce each of your debuffs by 1 (2).</td>
     <td>Rare</td>
     <td>Power</td>
     <td>3 (2)</td>
-    <td>At the end of your turn, you can Exhaust a card to gain 6 Block.</td>
+    <td>At the start of your turn, you can Exhaust a card to gain 8 Block.</td>
   </tr>
   
   <tr>
@@ -7216,8 +7218,9 @@ Exhaust.</td>
     <td>Rare</td>
     <td>Power</td>
     <td>3</td>
-    <td>Your first 4 (5) cards each turn cost 0.
-Gain no [E] at start of turn.</td>
+    <td>Ethereal.
+(not Ethereal.)
+At the start of your turn, reduce the cost of all cards in hand by 1 this turn.</td>
   </tr>
   
   <tr>
@@ -7260,7 +7263,8 @@ Exhaust.</td>
     <td>Rare</td>
     <td>Skill</td>
     <td>0</td>
-    <td>Put 3 (4) random Attacks from your discard pile into your hand. Exhaust.</td>
+    <td>Put 2 (3) random Attacks from your discard pile into your hand. They cost 1 less this turn.
+Exhaust.</td>
   </tr>
   
   <tr>
@@ -7293,7 +7297,7 @@ Increase the cost of this card by 2 (1) this combat.</td>
     <td>Attack</td>
     <td>1</td>
     <td>Discard 6 cards.
-For each card, deal 6 (9) damage.</td>
+For each card, deal 5 (7) damage.</td>
   </tr>
   
   <tr>
@@ -7316,8 +7320,7 @@ Whenever you end your turn with 0 Energy, lose 4 (2) HP.</td>
     <td>Attack</td>
     <td>3</td>
     <td>Ethereal.
-(not Ethereal.)
-Deal 30 damage to ALL enemies.</td>
+Deal 24 (30) damage to ALL enemies.</td>
   </tr>
   
   <tr>
@@ -7326,9 +7329,10 @@ Deal 30 damage to ALL enemies.</td>
     <td><a href="card-images/Hermit_yel-ReprievePlus.png"><img src="small-card-images/Hermit_yel-ReprievePlus.png" height="298"></a></td>
     <td>Rare</td>
     <td>Skill</td>
-    <td>1 (0)</td>
-    <td>Exhaust ALL Curses.
-If you exhaust at least 13 (10) Curses, take an extra turn after this one.</td>
+    <td>2</td>
+    <td>Ethereal.
+Heal 12 (15) HP.
+Exhaust.</td>
   </tr>
   
   <tr>
@@ -7339,7 +7343,7 @@ If you exhaust at least 13 (10) Curses, take an extra turn after this one.</td>
     <td>Attack</td>
     <td>3</td>
     <td>Deal 24 (30) damage. hermit:Dead_On:
-Gain 16 (20) Block.</td>
+Gain 20 (24) Block.</td>
   </tr>
   
   <tr>

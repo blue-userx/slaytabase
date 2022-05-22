@@ -556,7 +556,7 @@ Deal 5 (7) damage 3 times.
 |[[Power]]
 |4
 |Gain 20 (30) [[Temporary_HP]].
-Mutate into Gremlin Nob until you run out of [[Temporary_HP]].
+Mutate into Gremlin [[gremlin:Nob]] until you run out of [[Temporary_HP]].
 |-
 |[[Necromancy]]
 |[[File:|thumb|289x289px]]

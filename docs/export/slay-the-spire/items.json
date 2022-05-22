@@ -5929,7 +5929,7 @@
       "name": "Ceramic Fish",
       "tier": "Common",
       "pool": "",
-      "description": "Whenever you add a card to your deck, gain 9 Souls.",
+      "description": "Whenever you add a card to your deck, gain 9 Gold.",
       "flavorText": "Meticulously painted, these fish were revered to bring great fortune."
     },
     {
@@ -5978,7 +5978,7 @@
       "name": "Maw Bank",
       "tier": "Common",
       "pool": "",
-      "description": "Whenever you climb a floor, gain 12 Souls. No longer works when you spend any Souls at a shop.",
+      "description": "Whenever you climb a floor, gain 12 Gold. No longer works when you spend any Gold at a shop.",
       "flavorText": "Surprisingly popular, despite maw attacks being a regular occurrence."
     },
     {
@@ -6055,7 +6055,7 @@
       "name": "Smiling Mask",
       "tier": "Common",
       "pool": "",
-      "description": "The Merchant's card removal service now always costs 50 Souls.",
+      "description": "The Merchant's card removal service now always costs 50 Gold.",
       "flavorText": "Mask worn by the Merchant. He must have spares..."
     },
     {
@@ -6503,7 +6503,7 @@
       "name": "Old Coin",
       "tier": "Rare",
       "pool": "",
-      "description": "Upon pickup, gain 300 Souls.",
+      "description": "Upon pickup, gain 300 Gold.",
       "flavorText": "Unique coins are highly valued by merchants for their historical value and rare metallic composition."
     },
     {
@@ -6608,7 +6608,7 @@
       "name": "Bloody Idol",
       "tier": "Special",
       "pool": "",
-      "description": "Whenever you gain Souls, heal 5 HP.",
+      "description": "Whenever you gain Gold, heal 5 HP.",
       "flavorText": "The idol now weeps a constant stream of blood."
     },
     {
@@ -6636,7 +6636,7 @@
       "name": "Golden Idol",
       "tier": "Special",
       "pool": "",
-      "description": "Enemies drop 25% more Souls.",
+      "description": "Enemies drop 25% more Gold.",
       "flavorText": "Made of solid gold, you feel richer just holding it."
     },
     {
@@ -6720,7 +6720,7 @@
       "name": "Ssserpent Head",
       "tier": "Special",
       "pool": "",
-      "description": "Whenever you enter a ? room, gain 50 Souls.",
+      "description": "Whenever you enter a ? room, gain 50 Gold.",
       "flavorText": "The most fulfilling of lives is that in which you can buy anything!"
     },
     {
@@ -6783,7 +6783,7 @@
       "name": "Ectoplasm",
       "tier": "Boss",
       "pool": "",
-      "description": "Gain [E] at the start of your turn. You can no longer gain Souls.",
+      "description": "Gain [E] at the start of your turn. You can no longer gain Gold.",
       "flavorText": "This blob of slime and energy seems to pulse with life."
     },
     {
@@ -6895,7 +6895,7 @@
       "name": "Slaver's Collar",
       "tier": "Boss",
       "pool": "",
-      "description": "During Merchant, Boss, and Elite combats, gain [E] at the start of your turn.",
+      "description": "During Boss and Elite combats, gain [E] at the start of your turn.",
       "flavorText": "Rusty miserable chains."
     },
     {
@@ -6916,7 +6916,7 @@
       "name": "Tiny House",
       "tier": "Boss",
       "pool": "",
-      "description": "Upon pickup, obtain 1 potion.\nGain 50 Souls.\nRaise your Max HP by 5.\nObtain 1 card.\nUpgrade 1 random card.",
+      "description": "Upon pickup, obtain 1 potion.\nGain 50 Gold.\nRaise your Max HP by 5.\nObtain 1 card.\nUpgrade 1 random card.",
       "flavorText": "\"A near perfect implementation of miniaturization. My finest work to date, but still not adequate.\" - The Architect"
     },
     {
@@ -7327,8 +7327,8 @@
     {
       "name": "Acid Slime (M)",
       "type": "Normal",
-      "minHP": "32",
-      "maxHP": "32"
+      "minHP": "30",
+      "maxHP": "30"
     },
     {
       "name": "Acid Slime (S)",
@@ -7339,8 +7339,8 @@
     {
       "name": "Apology Slime",
       "type": "Normal",
-      "minHP": "10",
-      "maxHP": "10"
+      "minHP": "11",
+      "maxHP": "11"
     },
     {
       "name": "Awakened One",
@@ -7351,14 +7351,14 @@
     {
       "name": "Bear",
       "type": "Normal",
-      "minHP": "39",
-      "maxHP": "39"
+      "minHP": "40",
+      "maxHP": "40"
     },
     {
       "name": "Book of Stabbing",
       "type": "Elite",
-      "minHP": "160",
-      "maxHP": "160"
+      "minHP": "162",
+      "maxHP": "162"
     },
     {
       "name": "Bronze Automaton",
@@ -7369,14 +7369,14 @@
     {
       "name": "Byrd",
       "type": "Normal",
-      "minHP": "30",
-      "maxHP": "30"
+      "minHP": "27",
+      "maxHP": "27"
     },
     {
       "name": "Byrd (Grounded)",
       "type": "Normal",
-      "minHP": "28",
-      "maxHP": "28"
+      "minHP": "31",
+      "maxHP": "31"
     },
     {
       "name": "Centurion",
@@ -7387,8 +7387,8 @@
     {
       "name": "Chosen",
       "type": "Normal",
-      "minHP": "97",
-      "maxHP": "97"
+      "minHP": "95",
+      "maxHP": "95"
     },
     {
       "name": "Corrupt Heart",
@@ -7405,8 +7405,8 @@
     {
       "name": "Dagger",
       "type": "Normal",
-      "minHP": "20",
-      "maxHP": "20"
+      "minHP": "25",
+      "maxHP": "25"
     },
     {
       "name": "Darkling",
@@ -7441,8 +7441,8 @@
     {
       "name": "Fungi Beast",
       "type": "Normal",
-      "minHP": "27",
-      "maxHP": "27"
+      "minHP": "26",
+      "maxHP": "26"
     },
     {
       "name": "Giant Head",
@@ -7453,14 +7453,14 @@
     {
       "name": "Gremlin Leader",
       "type": "Elite",
-      "minHP": "143",
-      "maxHP": "143"
+      "minHP": "147",
+      "maxHP": "147"
     },
     {
       "name": "Gremlin Nob",
       "type": "Elite",
-      "minHP": "84",
-      "maxHP": "84"
+      "minHP": "83",
+      "maxHP": "83"
     },
     {
       "name": "Gremlin Wizard",
@@ -7483,14 +7483,14 @@
     {
       "name": "Lagavulin",
       "type": "Elite",
-      "minHP": "110",
-      "maxHP": "110"
+      "minHP": "109",
+      "maxHP": "109"
     },
     {
       "name": "Lagavulin (Awake)",
       "type": "Elite",
-      "minHP": "110",
-      "maxHP": "110"
+      "minHP": "111",
+      "maxHP": "111"
     },
     {
       "name": "Looter",
@@ -7513,14 +7513,14 @@
     {
       "name": "Mugger",
       "type": "Normal",
-      "minHP": "50",
-      "maxHP": "50"
+      "minHP": "48",
+      "maxHP": "48"
     },
     {
       "name": "Mystic",
       "type": "Normal",
-      "minHP": "52",
-      "maxHP": "52"
+      "minHP": "50",
+      "maxHP": "50"
     },
     {
       "name": "Nemesis",
@@ -7531,8 +7531,8 @@
     {
       "name": "Orb Walker",
       "type": "Normal",
-      "minHP": "96",
-      "maxHP": "96"
+      "minHP": "93",
+      "maxHP": "93"
     },
     {
       "name": "Pointy",
@@ -7543,32 +7543,32 @@
     {
       "name": "Reptomancer",
       "type": "Elite",
-      "minHP": "182",
-      "maxHP": "182"
+      "minHP": "188",
+      "maxHP": "188"
     },
     {
       "name": "Repulsor",
       "type": "Normal",
-      "minHP": "32",
-      "maxHP": "32"
+      "minHP": "33",
+      "maxHP": "33"
     },
     {
       "name": "Romeo",
       "type": "Normal",
-      "minHP": "35",
-      "maxHP": "35"
+      "minHP": "39",
+      "maxHP": "39"
     },
     {
       "name": "Sentry",
       "type": "Elite",
-      "minHP": "38",
-      "maxHP": "38"
+      "minHP": "39",
+      "maxHP": "39"
     },
     {
       "name": "Shelled Parasite",
       "type": "Normal",
-      "minHP": "71",
-      "maxHP": "71"
+      "minHP": "70",
+      "maxHP": "70"
     },
     {
       "name": "Shield Gremlin",
@@ -7609,8 +7609,8 @@
     {
       "name": "Snecko",
       "type": "Normal",
-      "minHP": "116",
-      "maxHP": "116"
+      "minHP": "119",
+      "maxHP": "119"
     },
     {
       "name": "Spheric Guardian",
@@ -7627,14 +7627,14 @@
     {
       "name": "Spike Slime (S)",
       "type": "Normal",
-      "minHP": "12",
-      "maxHP": "12"
+      "minHP": "13",
+      "maxHP": "13"
     },
     {
       "name": "Spiker",
       "type": "Normal",
-      "minHP": "56",
-      "maxHP": "56"
+      "minHP": "48",
+      "maxHP": "48"
     },
     {
       "name": "Spire Growth",
@@ -7657,8 +7657,8 @@
     {
       "name": "Taskmaster",
       "type": "Elite",
-      "minHP": "56",
-      "maxHP": "56"
+      "minHP": "55",
+      "maxHP": "55"
     },
     {
       "name": "The Champ",

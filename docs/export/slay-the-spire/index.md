@@ -445,14 +445,14 @@
 | ![](relics/BloodVial.png) | Blood Vial | Common |  | At the start of each combat, heal #b2 HP. | A vial containing the blood of a pure and elder vampire. |
 | ![](relics/BronzeScales.png) | Bronze Scales | Common |  | Start each combat with #b3 #yThorns. | The sharp scales of the Guardian. Rearranges itself to protect its user. |
 | ![](relics/CentennialPuzzle.png) | Centennial Puzzle | Common |  | The first time you lose HP each combat, draw #b3 cards. | Upon solving the puzzle, you feel a powerful warmth in your chest. |
-| ![](relics/CeramicFish.png) | Ceramic Fish | Common |  | Whenever you add a card to your deck, gain #b9 #ySouls. | Meticulously painted, these fish were revered to bring great fortune. |
+| ![](relics/CeramicFish.png) | Ceramic Fish | Common |  | Whenever you add a card to your deck, gain #b9 #yGold. | Meticulously painted, these fish were revered to bring great fortune. |
 | ![](relics/Damaru.png) | Damaru | Common | Purple | At the start of your turn, gain #b1 #yMantra. | The sound of the small drum keeps your mind awake, revealing a path forward. |
 | ![](relics/DataDisk.png) | Data Disk | Common | Blue | Start each combat with #b1 #yFocus. | This disk contains precious data on birds and snakes. |
 | ![](relics/DreamCatcher.png) | Dream Catcher | Common |  | Whenever you #yRest, you may add a card into your deck. | The northern tribes would often use dream catchers at night, believing they led to self improvement. |
 | ![](relics/HappyFlower.png) | Happy Flower | Common |  | Every #b3 turns, gain [E] . | This unceasingly joyous plant is a popular novelty item among nobles. |
 | ![](relics/JuzuBracelet.png) | Juzu Bracelet | Common |  | Normal enemy combats are no longer encountered in #y? rooms. | A ward against the unknown. |
 | ![](relics/Lantern.png) | Lantern | Common |  | Start each combat with an additional [E] . | An eerie lantern which illuminates only for the wielder. |
-| ![](relics/MawBank.png) | Maw Bank | Common |  | Whenever you climb a floor, gain #b12 #ySouls. No longer works when you spend any #ySouls at a shop. | Surprisingly popular, despite maw attacks being a regular occurrence. |
+| ![](relics/MawBank.png) | Maw Bank | Common |  | Whenever you climb a floor, gain #b12 #yGold. No longer works when you spend any #yGold at a shop. | Surprisingly popular, despite maw attacks being a regular occurrence. |
 | ![](relics/MealTicket.png) | Meal Ticket | Common |  | Whenever you enter a shop, heal #b15 HP. | "Complimentary meatballs with every visit!" |
 | ![](relics/Nunchaku.png) | Nunchaku | Common |  | Every time you play #b10 #yAttacks, gain [E] . | A good training tool. Improves the posture and agility of the wielder. |
 | ![](relics/OddlySmoothStone.png) | Oddly Smooth Stone | Common |  | Start each combat with #b1 #yDexterity. | You have never seen something so smooth and pristine. This must be the work of the Ancients. |
@@ -463,7 +463,7 @@
 | ![](relics/PreservedInsect.png) | Preserved Insect | Common |  | Enemies in Elite combats have #b25% less HP. | The insect seems to create a shrinking aura that targets particularly large enemies. |
 | ![](relics/RedSkull.png) | Red Skull | Common | Red | While your HP is at or below #b50%, you have #b3 additional #yStrength. | A small skull covered in ornamental paint. |
 | ![](relics/RegalPillow.png) | Regal Pillow | Common |  | Whenever you #yRest, heal an additional #b15 HP. | Now you can get a proper night's rest. |
-| ![](relics/SmilingMask.png) | Smiling Mask | Common |  | The Merchant's card removal service now always costs #b50 #ySouls. | Mask worn by the Merchant. He must have spares... |
+| ![](relics/SmilingMask.png) | Smiling Mask | Common |  | The Merchant's card removal service now always costs #b50 #yGold. | Mask worn by the Merchant. He must have spares... |
 | ![](relics/SnakeSkull.png) | Snecko Skull | Common | Green | Whenever you apply #yPoison, apply an additional #b1 #yPoison. | A snecko skull in pristine condition. Mysteriously clean and smooth, dirt and grime fall off inexplicably. |
 | ![](relics/Strawberry.png) | Strawberry | Common |  | Upon pickup, raise your Max HP by #b7. | "Delicious! Haven't seen any of these since the blight." - Ranwid |
 | ![](relics/Boot.png) | The Boot | Common |  | Whenever you would deal #b4 or less unblocked attack damage, increase it to #b5. | When wound up, the boot grows larger in size. |
@@ -527,7 +527,7 @@
 | ![](relics/LizardTail.png) | Lizard Tail | Rare |  | When you would die, heal to #b50% of your Max HP instead (works once). | A fake tail to trick enemies during combat. |
 | ![](relics/MagicFlower.png) | Magic Flower | Rare | Red | Healing is #b50% more effective during combat. | A flower long thought extinct, somehow preserved in perfect condition. |
 | ![](relics/Mango.png) | Mango | Rare |  | Upon pickup, raise your Max HP by #b14. | The most coveted forgotten fruit. Impeccably preserved with no signs of Spireblight. |
-| ![](relics/OldCoin.png) | Old Coin | Rare |  | Upon pickup, gain #b300 #ySouls. | Unique coins are highly valued by merchants for their historical value and rare metallic composition. |
+| ![](relics/OldCoin.png) | Old Coin | Rare |  | Upon pickup, gain #b300 #yGold. | Unique coins are highly valued by merchants for their historical value and rare metallic composition. |
 | ![](relics/PeacePipe.png) | Peace Pipe | Rare |  | You can now remove cards from your deck at Rest Sites. | Clears the mind and cleanses the soul. |
 | ![](relics/Pocketwatch.png) | Pocketwatch | Rare |  | Whenever you play #b3 or less cards during your turn, draw #b3 additional cards at the start of your next turn. | The hands seem stuck on the 3 o'clock position. |
 | ![](relics/PrayerWheel.png) | Prayer Wheel | Rare |  | Normal enemies drop an additional card reward. | The wheel continues to spin, never stopping. |
@@ -542,11 +542,11 @@
 | ![](relics/Turnip.png) | Turnip | Rare |  | You can no longer become #yFrail. | Best with Ginger. |
 | ![](relics/UnceasingTop.png) | Unceasing Top | Rare |  | Whenever you have no cards in hand during your turn, draw a card. | The top continues to spin effortlessly as if you were in a dream. |
 | ![](relics/WingedGreaves.png) | Wing Boots | Rare |  | You may ignore paths when choosing the next room to travel to #b3 times. | Stylish. |
-| ![](relics/BloodyIdol.png) | Bloody Idol | Special |  | Whenever you gain #ySouls, heal #b5 HP. | The idol now weeps a constant stream of blood. |
+| ![](relics/BloodyIdol.png) | Bloody Idol | Special |  | Whenever you gain #yGold, heal #b5 HP. | The idol now weeps a constant stream of blood. |
 | ![](relics/CultistMask.png) | Cultist Headpiece | Special |  | You feel more talkative. | Part of the Flock! |
 | ![](relics/Enchiridion.png) | Enchiridion | Special |  | At the start of each combat, add a random #yPower card into your hand. It costs #b0 for that turn. | The legendary journal of an ancient lich. |
 | ![](relics/FaceOfCleric.png) | Face Of Cleric | Special |  | At the end of combat, raise your Max HP by #b1. | Everyone loves Cleric. |
-| ![](relics/GoldenIdol.png) | Golden Idol | Special |  | Enemies drop #b25% more #ySouls. | Made of solid gold, you feel richer just holding it. |
+| ![](relics/GoldenIdol.png) | Golden Idol | Special |  | Enemies drop #b25% more #yGold. | Made of solid gold, you feel richer just holding it. |
 | ![](relics/GremlinMask.png) | Gremlin Visage | Special |  | Start each combat with #b1 #yWeak. | Time to run. |
 | ![](relics/MarkoftheBloom.png) | Mark of the Bloom | Special |  | You can no longer heal. | In the Beyond, thoughts and reality are one. |
 | ![](relics/MutagenicStrength.png) | Mutagenic Strength | Special |  | Start each combat with #b3 #yStrength. At the end of your first turn, lose #b3 #yStrength. | "The results seem fleeting, triggering when the subject is in danger." - Unknown |
@@ -558,7 +558,7 @@
 | ![](relics/OddMushroom.png) | Odd Mushroom | Special |  | When #yVulnerable, take #b25% more attack damage rather than #b50%. | "After consuming trichella parastius I felt larger and less... susceptible." - Ranwid |
 | ![](relics/RedMask.png) | Red Mask | Special |  | At the start of each combat, apply #b1 #yWeak to ALL enemies. | This very stylish looking mask belongs to the leader of the Red Mask Bandits. Technically that makes you the leader now? |
 | ![](relics/SpiritPoop.png) | Spirit Poop | Special |  | It's unpleasant. | The charred remains of your offering to the spirits. |
-| ![](relics/SsserpentHead.png) | Ssserpent Head | Special |  | Whenever you enter a #y? room, gain #b50 #ySouls. | The most fulfilling of lives is that in which you can buy anything! |
+| ![](relics/SsserpentHead.png) | Ssserpent Head | Special |  | Whenever you enter a #y? room, gain #b50 #yGold. | The most fulfilling of lives is that in which you can buy anything! |
 | ![](relics/WarpedTongs.png) | Warped Tongs | Special |  | At the start of your turn, #yUpgrade a random card in your hand for the rest of combat. | The cursed tongs emit a strong desire to return to where they were stolen from. |
 | ![](relics/Astrolabe.png) | Astrolabe | Boss |  | Upon pickup, #yTransform #b3 cards, then #yUpgrade them. | A tool to glean invaluable knowledge from the stars. |
 | ![](relics/BlackBlood.png) | Black Blood | Boss | Red | Replaces #rBurning #rBlood. At the end of combat, heal #b12 HP. | The rage grows darker. |
@@ -567,7 +567,7 @@
 | ![](relics/CallingBell.png) | Calling Bell | Boss |  | Upon pickup, obtain a unique #rCurse and #b3 relics. | This dark iron bell rang 3 times when you found it, but now stays silent. |
 | ![](relics/CoffeeDripper.png) | Coffee Dripper | Boss |  | Gain [E] at the start of your turn. You can no longer #yRest at Rest Sites. | "Yes, another cup please. Back to work. Back to work!" - The Architect |
 | ![](relics/CursedKey.png) | Cursed Key | Boss |  | Gain [E] at the start of your turn. Whenever you open a non-Boss chest, obtain a #rCurse. | You can feel the malicious energy emanating from the key. Power comes at a price. |
-| ![](relics/Ectoplasm.png) | Ectoplasm | Boss |  | Gain [E] at the start of your turn. You can no longer gain #ySouls. | This blob of slime and energy seems to pulse with life. |
+| ![](relics/Ectoplasm.png) | Ectoplasm | Boss |  | Gain [E] at the start of your turn. You can no longer gain #yGold. | This blob of slime and energy seems to pulse with life. |
 | ![](relics/EmptyCage.png) | Empty Cage | Boss |  | Upon pickup, remove #b2 cards from your deck. | "How unusual to cage that which you worship." - Ranwid |
 | ![](relics/FrozenCore.png) | Frozen Core | Boss | Blue | Replaces #bCracked #bCore. If you end your turn with any empty Orb slots, #yChannel #b1 #yFrost. | The crack in your core has been filled with a pulsating cold energy. |
 | ![](relics/FusionHammer.png) | Fusion Hammer | Boss |  | Gain [E] at the start of your turn. You can no longer #ySmith at Rest Sites. | Once wielded, the owner can never let go. |
@@ -583,10 +583,10 @@
 | ![](relics/RunicDome.png) | Runic Dome | Boss |  | Gain [E] at the start of your turn. You can no longer see enemy intents. | The runes are indecipherable. |
 | ![](relics/RunicPyramid.png) | Runic Pyramid | Boss |  | At the end of your turn, you no longer discard your hand. | The runes are indecipherable. |
 | ![](relics/SacredBark.png) | Sacred Bark | Boss |  | Double the effectiveness of potions. | A bark rumored to originate from the World tree. |
-| ![](relics/SlaversCollar.png) | Slaver's Collar | Boss |  | During Merchant, Boss, and Elite combats, gain [E] at the start of your turn. | Rusty miserable chains. |
+| ![](relics/SlaversCollar.png) | Slaver's Collar | Boss |  | During Boss and Elite combats, gain [E] at the start of your turn. | Rusty miserable chains. |
 | ![](relics/SneckoEye.png) | Snecko Eye | Boss |  | At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. | An eye of a fallen snecko. Much larger than you imagined. |
 | ![](relics/Sozu.png) | Sozu | Boss |  | Gain [E] at the start of your turn. You can no longer obtain potions. | You notice that magical liquids seem to lose their properties when near this relic. |
-| ![](relics/TinyHouse.png) | Tiny House | Boss |  | Upon pickup, obtain #b1 potion. NL Gain #b50 #ySouls. NL Raise your Max HP by #b5. NL Obtain #b1 card. NL Upgrade #b1 random card. | "A near perfect implementation of miniaturization. My finest work to date, but still not adequate." - The Architect |
+| ![](relics/TinyHouse.png) | Tiny House | Boss |  | Upon pickup, obtain #b1 potion. NL Gain #b50 #yGold. NL Raise your Max HP by #b5. NL Obtain #b1 card. NL Upgrade #b1 random card. | "A near perfect implementation of miniaturization. My finest work to date, but still not adequate." - The Architect |
 | ![](relics/VelvetChoker.png) | Velvet Choker | Boss |  | Gain [E] at the start of your turn. You cannot play more than #b6 cards per turn. | "Immense power, but too limited." - Kublai the Great |
 | ![](relics/VioletLotus.png) | Violet Lotus | Boss | Purple | Whenever you exit #yCalm, gain an additional [E] . | The old texts describe that the surface of "mana pools" were littered with these flowers. |
 | ![](relics/WristBlade.png) | Wrist Blade | Boss | Green | #yAttacks that cost #b0 deal #b4 additional damage. | Handy for assassinations. |

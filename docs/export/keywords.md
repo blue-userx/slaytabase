@@ -14,7 +14,7 @@
 | Bounty | Normal Enemy: 15 gold. Elite Enemy: 40 gold. Boss: 100 gold. |
 | Brace X | Reduce the HP loss required to trigger Mode Shift by X. |
 | Bronze Slime | Attacks for 10 to ALL enemies each turn, but skips every other attack. |
-| Bruise | Bruised targets take more attack damage. Each hit, Bruise is reduced by 1. Wears off on turn end. |
+| Bruise | Bruised targets take more attack damage. Wears off on turn end. |
 | Bruiser Slime | Attacks for 5 each turn. |
 | Buffer | Prevent the next time you would lose HP. |
 | Buried | Buried cards will always be chosen last for random Exhume effects. |
@@ -44,6 +44,7 @@
 | Ghostflame Slime | Attacks for 3 and applies 5 Soulburn each turn. |
 | Gladiator | Stance. Skill Bonus: Draw a card. Finisher Bonus: Next turn, draw 1 card and gain [E] . End your turn. |
 | Goop | The next attack deals 1 more damage per Goop, removing all Goop and triggering any Consume effects. |
+| Gremlin Nob | At the start of your turn, add 1 Bellow , Skull Bash and Rush to your hand. |
 | Gremlin Wizard | After you play a skill, gain 1 Wiz. |
 | Guerilla Slime | Attacks for 3 to ALL enemies each turn. |
 | Identify | Replace an Unidentified card with its current random card permanently. |
@@ -64,7 +65,7 @@
 | Potency | Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by 1 for every 2 Potency. |
 | Reclaim | Put a card from your exhaust pile into your discard pile. |
 | Retract | Move to the previous Ghostflame. Moving onto a Ghostflame Extinguishes it. |
-| Rugged | Reduces next instance of attack damage taken to 3. |
+| Rugged | Reduces next instance of attack damage taken to 2. |
 | Seal | If all 6 Seals have been played this combat (with no redundant ones), obtain The Broken Seal and remove the Seals from your deck. |
 | Searing | Ghostflame. Ignites when 2 Attacks are played while Active. Ignition: When Ignited, apply 4 Soulburn to a random enemy. |
 | Shackled | Shackled creatures lose Strength for a turn. |
