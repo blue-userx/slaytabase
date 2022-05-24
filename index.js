@@ -105,6 +105,10 @@ async function main() {
                     character = characters[item.pool];
                     break;
 
+                case 'potions':
+                    character = characters[item.hasOwnProperty('color') ? item.color : ''];
+                    break;
+
                 case 'bosss':
                     character = Object.values(characters).find(ch => ch[0].replace('The ', '') == item.name.slice(0, item.name.indexOf(' ')));
                     break;

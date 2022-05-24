@@ -1214,6 +1214,178 @@
                 "where": {"name": "Bronze Idol"},
                 "to": {"description": "Status cards now cost [E] and may be played for useful effects.\n\nSlimed -> Lubricant: Draw 2 cards. Exhaust.\nWound -> Grievous Wound: Apply 1 Vulnerable.\nVoid -> Into the Void: Ethereal. Enemy loses 5 Strength this turn. Whenever this card is drawn, lose 1 Energy. Exhaust.\nDazed -> Daze: Ethereal. Apply 1 Weak. Exhaust.\nBurn -> Ignite: Apply 10 Soulburn. At the end of your turn, take 2 damage.\n"}
             }
+        ],
+
+        "potions": [
+            {
+                "where": {"name": "Blood Potion"},
+                "to": {"color": "Red"}
+            },
+
+            {
+                "where": {"name": "Poison Potion"},
+                "to": {"color": "Green"}
+            },
+
+            {
+                "where": {"name": "Bottled Miracle"},
+                "to": {"color": "Purple"}
+            },
+
+            {
+                "where": {"name": "Jar of Slime"},
+                "to": {"color": "Slimebound"}
+            },
+
+            {
+                "where": {"name": "Potentially Potent Potion"},
+                "to": {"color": "Snecko_cyan"}
+            },
+
+            {
+                "where": {"name": "Tonic"},
+                "to": {"color": "Hermit_yellow"}
+            },
+
+            {
+                "where": {"name": "Machine Oil"},
+                "to": {"color": "The_bronze_automaton"}
+            },
+
+            {
+                "where": {"name": "Molotov"},
+                "to": {"color": "Hexa_ghost_purple"}
+            },
+
+            {
+                "where": {"name": "Strategy Potion"},
+                "to": {"color": "The_champ_gray"}
+            },
+
+            {
+                "where": {"name": "Temporal Potion"},
+                "to": {"color": "Guardian"}
+            },
+
+            {
+                "where": {"name": "Elixir"},
+                "to": {"color": "Red"}
+            },
+
+            {
+                "where": {"name": "Cunning Potion"},
+                "to": {"color": "Green"}
+            },
+
+            {
+                "where": {"name": "Potion Of Capacity"},
+                "to": {"color": "Blue"}
+            },
+
+            {
+                "where": {"name": "Stance Potion"},
+                "to": {"color": "Purple"}
+            },
+
+            {
+                "where": {"name": "Slimy Elixir"},
+                "to": {"color": "Slimebound"}
+            },
+
+            {
+                "where": {"name": "Polishing Oil"},
+                "to": {"color": "Guardian"}
+            },
+
+            {
+                "where": {"name": "Alchyrical Elixir"},
+                "to": {"color": "The_bronze_automaton"}
+            },
+
+            {
+                "where": {"name": "Exotic Beverage"},
+                "to": {"color": "Snecko_cyan"}
+            },
+
+            {
+                "where": {"name": "Bottled Technique"},
+                "to": {"color": "The_champ_gray"}
+            },
+
+            {
+                "where": {"name": "Combustive Fluid"},
+                "to": {"color": "Hexa_ghost_purple"}
+            },
+
+            {
+                "where": {"name": "Eau de Grem"},
+                "to": {"color": "Gremlin"}
+            },
+
+            {
+                "where": {"name": "Black Bile"},
+                "to": {"color": "Hermit_yellow"}
+            },
+
+            {
+                "where": {"name": "Heart of Iron"},
+                "to": {"color": "Red"}
+            },
+
+            {
+                "where": {"name": "Ghost in a Jar"},
+                "to": {"color": "Green"}
+            },
+
+            {
+                "where": {"name": "Essence Of Darkness"},
+                "to": {"color": "Blue"}
+            },
+
+            {
+                "where": {"name": "Ambrosia"},
+                "to": {"color": "Purple"}
+            },
+
+            {
+                "where": {"name": "Liquid Void"},
+                "to": {"color": "Hermit_yellow"}
+            },
+
+            {
+                "where": {"name": "Stimpack"},
+                "to": {"color": "The_champ_gray"}
+            },
+
+            {
+                "where": {"name": "Liquid Luck"},
+                "to": {"color": "Snecko_cyan"}
+            },
+
+            {
+                "where": {"name": "Quantum Elixir"},
+                "to": {"color": "Guardian"}
+            },
+
+            {
+                "where": {"name": "Inferno Potion"},
+                "to": {"color": "Hexa_ghost_purple"}
+            },
+
+            {
+                "where": {"name": "Kio's Clever Concoction"},
+                "to": {"color": "The_bronze_automaton"}
+            },
+
+            {
+                "where": {"name": "Gremlin In A Jar"},
+                "to": {"color": "Gremlin"}
+            },
+
+            {
+                "where": {"name": "Army in a Bottle"},
+                "to": {"color": "Slimebound"}
+            }
         ]
     }
 }

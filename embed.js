@@ -45,7 +45,9 @@ async function embed(item, msg, embeds=[]) {
         case 'potion':
             e.url = `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/Potions`;
             e.thumbnail = {url: `${cfg.exportURL}/export/${item.mod}/potions/${item.name.replaceAll(' ', '')}.png`};
-            e.description = `${item.rarity}\n\n${item.description}`;
+            if (item.character[0] != 'All')
+                e.color = item.character[1];
+            e.description = `${item.rarity} Potion / ${item.character[0]}\n\n${item.description}`;
             break;
         
         case 'event':
