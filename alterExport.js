@@ -2,7 +2,7 @@ import fs from 'fs';
 import canvas from 'canvas';
 import { diffWords } from 'diff';
 
-const exportImages = true;
+const exportImages = false;
 
 const width = 678;
 const height = 874;
@@ -74,8 +74,16 @@ const height = 874;
 
     //add new data
     const extraData = JSON.parse(fs.readFileSync('extraItems.json', 'utf-8'));
-    for (let category in extraData)
-        data[category] = data.hasOwnProperty(category) ? [...data[category], ...extraData[category]] : extraData[category]; //add the extra items to the category (or create it if it doesnt exist)
+    for (let category in extraData.add)
+        data[category] = data.hasOwnProperty(category) ? [...data[category], ...extraData.add[category]] : extraData.add[category]; //add the extra items to the category (or create it if it doesnt exist)
+
+    for (let category in extraData.edit)
+        for (let editData of extraData.edit[category]) {
+            let item = data[category].find(i => Object.keys(editData.where).filter(key => i[key] != editData.where[key]).length == 0);
+            for (let i in editData.to) {
+                item[i] = editData.to[i];
+            }
+        }
     
     for (let i in data.bosss) {
         let boss = data.bosss[i];
