@@ -1,4 +1,5 @@
 import { bot, search } from './index.js';
+import fn from './fn.js';
 import embed from './embed.js';
 
 const delSearchLimit = 25;
@@ -20,6 +21,7 @@ __Commands:__
 - search query may include the following:
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
+<img [search query]> shows the full-size image from an embed
 <choose [word1 word2 word3...]> chooses one of the specified words for you at random
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
@@ -100,6 +102,17 @@ __Commands:__
         return {
             title: `"${arg}" yields:`,
             description: result.item.searchText.toLowerCase(),
+        };
+    },
+
+    'img': async (msg, arg) => {
+        let item = fn.find(arg);
+        let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+
+        return {
+            title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ` `,
+            image: itemEmbed.thumbnail,
+            color: itemEmbed.color,
         };
     },
 

@@ -7,6 +7,7 @@ import embed from './embed.js';
 import characters from './characters.js';
 import keywordify from './keywords.js';
 import cfg from './cfg.js';
+import fn from './fn.js';
 
 const bot = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES], partials: ['CHANNEL'] });
 
@@ -24,8 +25,6 @@ search.add({
 
 export {bot, search};
 
-String.prototype.unPunctuate = function() {return this.replaceAll('\n', ' ').replace(/[^\w\s?=]|_/g, "").replace(/\s+/g, " ").trim()};
-
 bot.once('ready', async () => {
     bot.user.setActivity('Downfall | <help>');
 	console.log('connected to discord. ready!');
@@ -38,10 +37,9 @@ async function getEmbeds(msg) {
             let embeds = [];
             for (let originalQuery of queries) {
                 if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery.startsWith('a:') || originalQuery.startsWith('http') || originalQuery == 'init')) {
-                    let query = originalQuery.toLowerCase().unPunctuate();
+                    let query = fn.unPunctuate(originalQuery);
                     if (query.length <= 0) continue;
-                    let results = search.search(query);
-                    let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
+                    let item = fn.find(query);
                     let cmdName = query.split(' ')[0];
                     if (commands.hasOwnProperty(cmdName))
                         item = {item: {
@@ -49,16 +47,6 @@ async function getEmbeds(msg) {
                             do: commands[cmdName],
                             itemType: 'command',
                         }};
-                    else if (item == undefined)
-                        item = {item: {
-                            itemType: 'fail',
-                            name: 'No results',
-                        }};
-                    else if (item.item.searchName != query) {
-                        let exactMatch = search._docs.find(e => e.searchName == query);
-                        if (exactMatch != undefined)
-                            item = {item: exactMatch, score: 0};
-                    }
                     console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                     let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
                     if (genEmbed != null)
@@ -127,14 +115,14 @@ async function main() {
             }
             let newItem = {
                 ...item,
-                searchName: item.name.toLowerCase().unPunctuate(),
+                searchName: fn.unPunctuate(item.name),
                 itemType: itemType.slice(0,-1),
                 mod: item.mod == '' ? 'slay-the-spire' : item.mod.toLowerCase(),
                 description: item.hasOwnProperty('description') ? keywordify(item.description, character) : null,
                 character,
             };
             newItem.character[0].replace('The ', '')
-            newItem.searchText = [
+            newItem.searchText = fn.unPunctuate([
                     'name',
                     ['character', 0],
                     'campaign',
@@ -154,7 +142,7 @@ async function main() {
                         return String(look);
                     } else if (newItem.hasOwnProperty(key)) return String(newItem[key]);
                     else return '';
-                }).join(' ').unPunctuate(),
+                }).join(' ')),
             search.add(newItem);
         }
     console.log('parsed data, connecting to discord...');
