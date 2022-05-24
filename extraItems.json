@@ -1146,5 +1146,63 @@
                 ["VICTORY", null, "A powerful fight with many rewards."]
             ]
         }
+    ],
+
+    "potions": [
+        {
+            "name": "Armorer's Tincture",
+            "rarity": "Uncommon",
+            "description": "Gain 4 Block each time you play a card this turn.",
+            "img": "/altered/img/potions/armorerstincture.png",
+            "mod": "downfall"
+        },
+        
+        {
+            "name": "Brew of Sharpness",
+            "rarity": "Common",
+            "description": "Gain 25 :Counter.",
+            "img": "/altered/img/potions/brewofsharpness.png",
+            "mod": "downfall"
+        },
+        
+        {
+            "name": "Molotov",
+            "rarity": "Common",
+            "description": "Apply 30 :Soulburn.",
+            "img": "/altered/img/potions/molotov.png",
+            "mod": "downfall"
+        },
+        
+        {
+            "name": "Ooze-Infused Drink",
+            "rarity": "Rare",
+            "description": "Add 4 random 0-cost cards to your hand.",
+            "img": "/altered/img/potions/oozeinfuseddrink.png",
+            "mod": "downfall"
+        },
+        
+        {
+            "name": "Pizazz Potion",
+            "rarity": "Common",
+            "description": "Gain 10 Vigor.",
+            "img": "/altered/img/potions/pizazz.png",
+            "mod": "downfall"
+        },
+        
+        {
+            "name": "Spiked Energy Drink",
+            "rarity": "Common",
+            "description": ":Muddle the 2 highest-cost cards in your hand. Cards :Muddled this way cannot cost 3.",
+            "img": "/altered/img/potions/spikedenergydrink.png",
+            "mod": "downfall"
+        },
+        
+        {
+            "name": "Vexing Draught",
+            "rarity": "Uncommon",
+            "description": "Gain 2 Strength and 2 Dexterity. Add two :Burn+ cards to your draw pile.",
+            "img": "/altered/img/potions/vexingdraught.png",
+            "mod": "downfall"
+        }
     ]
 }

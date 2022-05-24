@@ -20,12 +20,8 @@ async function embed(item, msg, embeds=[]) {
     e.title = `${item.name}`;
     if (!mods.hasOwnProperty(item.mod))
         item.mod = 'downfall';
-    if (item.hasOwnProperty('mod')) {
+    if (item.hasOwnProperty('mod'))
         e.url = `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/${searchize(item)}`;
-        let timesRepeated = embeds.filter(embed => embed.hasOwnProperty('url') && embed.url.startsWith(e.url));
-        if (timesRepeated.length > 0)
-            e.url += `?t=${timesRepeated.length}`;
-    }
     e.footer = {
         //iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=32`,
         text: `<${item.query}> = ${item.name == 'No results' ? '?' : item.searchName}${item.score != undefined ? ', '+String(Math.round((1 - item.score) * 100))+'% sure' : ''}`, //text: `${msg.author.username}: <${item.query}>`,
@@ -91,6 +87,11 @@ async function embed(item, msg, embeds=[]) {
             e.color = 0;
             break;
     }
+
+    e.url += `?embnum=${embeds.length}`
+    if (item.hasOwnProperty('img'))
+        item.thumbnail = {url: cfg.exportURL+item.thumbnail};
+
     return e.title == '' ? null : e;
 }
 
