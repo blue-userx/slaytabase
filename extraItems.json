@@ -1386,6 +1386,13 @@
                 "where": {"name": "Army in a Bottle"},
                 "to": {"color": "Slimebound"}
             }
+        ],
+
+        "keywords": [
+            {
+                "where": {"name": "Gremlin Nob"},
+                "to": {"description": "At the start of your turn, add the following cards with Ethereal and Exhaust to your hand:\n\nBellow (0 [E] ): Gain 2 (3) Strength for each enemy that does not intend to Attack.\nSkull Bash (1 [E] ): Deal 6 (8) damage. Apply 2 Vulnerable.\nRush (1 [E] ): Deal 14 (16) damage.\n\nYou can no longer :Swap. When you would lose all :Temporary :HP, prevent further damage and revert back."}
+            }
         ]
     }
 }
