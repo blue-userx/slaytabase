@@ -88,11 +88,10 @@ async function embed(item, msg, embeds=[]) {
             break;
     }
 
-    e.url += `?embnum=${embeds.length}`
+    if (e.hasOwnProperty('url'))
+        e.url += `?embnum=${embeds.length}`;
     if (item.hasOwnProperty('img'))
         e.thumbnail = {url: cfg.exportURL+item.img};
-    
-    console.log(item.thumbnail)
 
     return e.title == '' ? null : e;
 }
