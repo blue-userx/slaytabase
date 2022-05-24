@@ -90,7 +90,9 @@ async function embed(item, msg, embeds=[]) {
 
     e.url += `?embnum=${embeds.length}`
     if (item.hasOwnProperty('img'))
-        item.thumbnail = {url: cfg.exportURL+item.thumbnail};
+        e.thumbnail = {url: cfg.exportURL+item.img};
+    
+    console.log(item.thumbnail)
 
     return e.title == '' ? null : e;
 }
