@@ -1209,6 +1209,13 @@
     },
 
     "edit": {
+        "cards": [
+            {
+                "where": {"name": "Knowing Skull"},
+                "to": {"description": "Ethereal.\nChoose:\nSouls: Lose 3 HP. Gain 40 (50) Souls.\nSuccess: Lose 1 HP. Add a random (upgraded) Colorless card to your hand.\nA Pick Me Up: Lose 5 (2) HP. Gain a random Potion.\nExhaust."}
+            }
+        ],
+
         "relics": [
             {
                 "where": {"name": "Bronze Idol"},
@@ -1222,7 +1229,7 @@
 
             {
                 "where": {"name": "Knowing Skull"},
-                "to": {"description": "At the start of each combat, you may wish for one of the following:\nSouls: Lose 3 HP. Gain 40 Souls.\nSuccess: Lose 1 HP. Add a random Colorless card to your hand.\nA Pick Me Up: Lose 5 HP. Gain a random Potion."}
+                "to": {"description": "At the start of each combat, add a **Knowing Skull** to your hand."}
             }
         ],
 
