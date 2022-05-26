@@ -94,7 +94,7 @@
             {
                 "name": "Watcher",
                 "act": 3,
-                "buff": ["Fleeting Faith", "Watcher gains 1 Mantra whenever you play a card. Watcher loses 5 Mantra at the start of her turn. Watcher does not exit Divinity at the end of her turn."],
+                "buff": [" Fleeting Faith", "Watcher gains 1 Mantra whenever you play a card. Watcher loses 5 Mantra at the start of her turn. Watcher does not exit Divinity at the end of her turn."],
                 "cards": ["Wish -> Live Forever", "Good Instincts", "Shame", "Wave of the Hand", "Swivel", "Blind", "Signature Move", "Conjure Blade -> Expunger", "Sanctity", "Protect+", "Empty Fist(+)", "Normality", "Strike", "Devotion"],
                 "relics": ["Velvet Choker", "Torii", "Captain's Wheel", "Thread and Needle", "Damaru (A19)"]
             },
