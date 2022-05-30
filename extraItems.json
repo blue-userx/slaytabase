@@ -593,8 +593,7 @@
                 "options": [
                     ["Forge", null, "g/Upgrade a card in your deck."],
                     ["Rummage", null, "g/Obtain a special Relic. r/Become Cursed - Pain."],
-                    ["Leave", "Choose a Card to Upgrade"],
-                    ["Locked", null, "Requires: Upgradeable Cards"]
+                    ["Leave", null, ""]
                 ]
             },
     
@@ -682,7 +681,7 @@
             {
                 "name": "Duplicator",
                 "acts": [1, 2, 3],
-                "mod": "downfall",
+                "mod": "",
                 "options": [
                     ["Desecrate", "downfall only", "g/Duplicate 2 cards. r/Cursed - Random."],
                     ["Pray", null, "g/Duplicate a card in your deck."],
@@ -777,7 +776,7 @@
                 "mod": "",
                 "options": [
                     ["A Pick Me Up?", null, "g/Get a Potion. r/Lose X HP, where X = (10% of your max hp + number of times an option has been clicked)."],
-                    ["Riches?", null, "g/Gain ", " g/Gold. r/Lose X HP."],
+                    ["Riches?", null, "g/Gain 90 g/Gold. r/Lose X HP."],
                     ["Success?", null, "g/Get a Colorless Card. r/Lose X HP."],
                     ["How do I leave?", null, "Leave. r/Lose X HP."]
                 ]
@@ -887,7 +886,7 @@
                 "options": [
                     ["Recruit", "slime boss only", "r/Lose (common or uncommon relic chosen at random). Gain g/Scrap Ooze."],
                     ["Reach Inside", null, "r/Lose 3 -> 4 -> 5 a/(5 -> 6 -> 7) r/HP. g/25% -> 35% -> 45%: g/Find a Relic."],
-                    ["Reach Carefully", "gremlins only - instead of reach carefully", "r/10% -> 15% -> 20% a/(20% -> 25% -> 30%)r/: Become Cursed - Scatterbrained. g/25% -> 35% -> 45%: g/Find a Relic."],
+                    ["Reach Carefully", "gremlins only - instead of reach inside", "r/10% -> 15% -> 20% a/(20% -> 25% -> 30%)r/: Become Cursed - Scatterbrained. g/25% -> 35% -> 45%: g/Find a Relic."],
                     ["Leave", null, ""]
                 ]
             },
@@ -1109,7 +1108,7 @@
                 "mod": "",
                 "options": [
                     ["Take and Give", null, "g/Receive n/(last card stored) g/and Store a Card."],
-                    ["Ignore"]
+                    ["Ignore", null, ""]
                 ]
             },
     
@@ -1213,6 +1212,16 @@
             {
                 "where": {"name": "Knowing Skull"},
                 "to": {"description": "Ethereal.\nChoose:\nSouls: Lose 3 HP. Gain 40 (50) Souls.\nSuccess: Lose 1 HP. Add a random (upgraded) Colorless card to your hand.\nA Pick Me Up: Lose 5 (2) HP. Gain a random Potion.\nExhaust."}
+            },
+
+            {
+                "where": {"name": "Searing Blow"},
+                "to": {"description": "Deal 12 (16 (21 (27 (34 (42 (51 (61 (72 (84 (97)))))))))) damage.\nCan be Upgraded any number of times."}
+            },
+
+            {
+                "where": {"name": "Dice Boulder"},
+                "to": {"description": "Deal 1 - 31 (8 - 34 (16 - 38 (25 - 43 (35 - 49 (46 - 56 (58 - 64 (71 - 73 (85 - 83 (100 - 94 (116 - 106)))))))))) damage.\nCan be Upgraded any number of times."}
             }
         ],
 
