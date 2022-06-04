@@ -79,7 +79,8 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
             reply.delete().catch(e => {});
         else
             reply.edit({content: ' ', embeds, allowedMentions: {repliedUser: false}}).catch(e => {});
-    }
+    } else
+        bot.emit('messageCreate', newMsg);
 });
 
 bot.on('messageDelete', async msg => {

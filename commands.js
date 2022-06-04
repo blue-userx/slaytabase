@@ -12,7 +12,7 @@ If the result isn\'t what you were looking for, you can also include the followi
 
 Anything highlighted in **bold** is a searchable keyword.
 
-If you edit or delete your message containing your searches, I will edit or delete my reply to it, according to your changes.
+If you edit or delete your message, I will update my reply to it, according to your changes.
 
 __Commands:__
 <[item name]> displays info about an item
