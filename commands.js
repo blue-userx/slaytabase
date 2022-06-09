@@ -1,6 +1,7 @@
 import { bot, search } from './index.js';
 import fn from './fn.js';
 import embed from './embed.js';
+import cfg from './cfg.js';
 
 const delSearchLimit = 25;
 
@@ -17,6 +18,7 @@ If you edit or delete your message, I will update my reply to it, according to y
 __Commands:__
 <[item name]> displays info about an item
 <del> deletes your last search in this channel
+<spoiler> adds spoiler tags to my last reply to you in this channel
 <? [search query]> shows the most likely results for a search query
 - search query may include the following:
 - - page=? - specify result page
@@ -43,6 +45,32 @@ __Commands:__
                 await m.delete().catch(e => {});
                 await repliedTo.delete().catch(e => {});
                 await msg.delete().catch(e => {});
+                return;
+            }
+            if (i >= delSearchLimit) break;
+        }
+        return;
+    },
+
+    'spoiler': async msg => {
+        let messages = await msg.channel.messages.fetch();
+        messages = messages.filter(i => i.author.id == bot.user.id && i.reference != null);
+        let i = 0;
+        for (let m of messages) {
+            i++;
+            m = m[1];
+            let found = true;
+            let repliedTo = await msg.channel.messages.fetch(m.reference.messageId).catch(e => found = false);
+            if (!found) continue;
+            if (repliedTo.author.id == msg.author.id) {
+                await msg.delete().catch(e => {});
+                //spoiler hack
+                let origEmbeds = m.embeds;
+                if (origEmbeds.length > 0) {
+                    await m.edit({content: `||https://bit.ly/3aSgJDF||`, embeds: [], allowedMentions: {repliedUser: false}}).catch(e => {});
+                    await (new Promise(res => setTimeout(res, 1000)));
+                    await m.edit({content: m.content, embeds: origEmbeds, allowedMentions: {repliedUser: false}}).catch(e => {});
+                }
                 return;
             }
             if (i >= delSearchLimit) break;
@@ -124,7 +152,7 @@ __Commands:__
     },
 
     'discuss': async (msg, arg) => {
-        if (msg.channel.type == "GUILD_TEXT" && msg.member.permissions.has('MANAGE_MESSAGES')) { //has manage messages permission?
+        if (msg.channel.type == "GUILD_TEXT" && cfg.overriders.includes(msg.author.id)) { //has manage messages permission?
             msg.startThread({name: `Discussion - ${arg}`})
                 .then(thread => {
                     thread.send(`<${arg}>`).catch(e => {});
@@ -133,7 +161,7 @@ __Commands:__
         } else
             return {
                 title: 'Cannot create a discussion',
-                description: 'You must have the manage messages permission'
+                description: 'Only certain people may create discussions'
             };  
     },
 };

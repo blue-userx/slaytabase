@@ -3,7 +3,7 @@ invite the bot: https://discord.com/oauth2/authorize?client_id=96182444365357468
 
 ## setup
 1. `npm ci`
-2. create `cfg.json` and paste the following in : `export default {"token":"jsdakfhajksdfh", "exportURL": "https://oceanuwu.github.io/downfallbot"}` and set `token` as your discord bot token
+2. create `cfg.json` and paste the following in : `export default {"token":"jsdakfhajksdfh", "exportURL": "https://oceanuwu.github.io/downfallbot", "overriders": ["106068236000329728"]}` and set `token` as your discord bot token
 3. `npm start`
 
 ## updating export
