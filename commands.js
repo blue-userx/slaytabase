@@ -153,9 +153,17 @@ __Commands:__
 
     'discuss': async (msg, arg) => {
         if (msg.channel.type == "GUILD_TEXT" && cfg.overriders.includes(msg.author.id)) { //has manage messages permission?
-            msg.startThread({name: `Discussion - ${arg}`})
-                .then(thread => {
-                    thread.send(`<${arg}>`).catch(e => {});
+            msg.startThread({name: `${arg}`})
+                .then(async thread => {
+                    await thread.send(`<${arg}>`).catch(e => {});
+                    thread.awaitMessages({max: 1, time: 5000, errors: ['time']})
+                        .then(collected => {
+                            if (collected.size > 0) {
+                                collected.first().pin().catch(e => {});
+                                thread.edit({name: `${collected.first().embeds[0].title}`}).catch(e => {});
+                            }
+                        })
+                        .catch(e => {});
                 })
                 .catch(e => {});
         } else

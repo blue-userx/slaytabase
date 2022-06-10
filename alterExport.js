@@ -2,15 +2,31 @@ import fs from 'fs';
 import canvas from 'canvas';
 import { diffWords } from 'diff';
 
-const exportImages = false;
+const exportImages = process.argv.includes('-images');
 
 const width = 678;
 const height = 874;
+
+function useExtraData(data, extraData) {
+    for (let category in extraData.add)
+        data[category] = data.hasOwnProperty(category) ? [...data[category], ...extraData.add[category]] : extraData.add[category]; //add the extra items to the category (or create it if it doesnt exist)
+
+    for (let category in extraData.edit)
+        for (let editData of extraData.edit[category]) {
+            let item = data[category].find(i => Object.keys(editData.where).filter(key => i[key] != editData.where[key]).length == 0);
+            for (let i in editData.to) {
+                item[i] = editData.to[i];
+            }
+        }
+}
 
 (async () => {
     //load data
     console.log('Starting...')
     const data = JSON.parse(fs.readFileSync('docs/export/items.json', 'utf-8'));
+    let extraData = JSON.parse(fs.readFileSync('extraItems.json', 'utf-8'));
+
+    useExtraData(data, extraData.pre);
 
     //alter cards
     let cards = data.cards;
@@ -33,11 +49,12 @@ const height = 874;
         let imgPath = `docs/export/${c.mod == '' ? 'slay-the-spire' : c.mod}/card-images/${cardPath}`;
         if (exportImages) {
             ctx.drawImage(await canvas.loadImage(imgPath+'.png'), 0, 0);
-            ctx.drawImage(await canvas.loadImage(imgPath.replace('export', 'betaartexport')+(up != undefined ? 'Plus' : '')+'.png'), width, 0);
+            if (up == undefined)
+                ctx.drawImage(await canvas.loadImage(imgPath.replace('export', 'betaartexport')+'.png'), width, 0);
         }
         if (up != undefined) {
             if (exportImages)
-                ctx.drawImage(await canvas.loadImage(imgPath.replace('export', 'betaartexport')+'Plus.png'), width, 0);
+                ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? up.imgPath+'.png' : (imgPath.replace('export', 'betaartexport')+'Plus.png')), width, 0);
 
             //update card to include numbers from upgrade
             if (c.cost != up.cost) c.cost = `${c.cost} (${up.cost})`;
@@ -73,17 +90,7 @@ const height = 874;
     data.cards = newCards;
 
     //add new data
-    const extraData = JSON.parse(fs.readFileSync('extraItems.json', 'utf-8'));
-    for (let category in extraData.add)
-        data[category] = data.hasOwnProperty(category) ? [...data[category], ...extraData.add[category]] : extraData.add[category]; //add the extra items to the category (or create it if it doesnt exist)
-
-    for (let category in extraData.edit)
-        for (let editData of extraData.edit[category]) {
-            let item = data[category].find(i => Object.keys(editData.where).filter(key => i[key] != editData.where[key]).length == 0);
-            for (let i in editData.to) {
-                item[i] = editData.to[i];
-            }
-        }
+    useExtraData(data, extraData.post);
     
     for (let i in data.bosss) {
         let boss = data.bosss[i];
