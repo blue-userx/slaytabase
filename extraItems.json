@@ -1279,7 +1279,7 @@
             },
 
             {
-                "where": {"name": "Molotov"},
+                "where": {"name": "Ecto-Cooler"},
                 "to": {"color": "Hexa_ghost_purple"}
             },
 
