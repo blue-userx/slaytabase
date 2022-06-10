@@ -17,13 +17,14 @@ If you edit or delete your message, I will update my reply to it, according to y
 
 __Commands:__
 <[item name]> displays info about an item
+<~ [item name]> shows just the name and thumbnail of an item
+<img [item name]> shows the full-size image from an embed
 <del> deletes your last search in this channel
 <spoiler> adds spoiler tags to my last reply to you in this channel
 <? [search query]> shows the most likely results for a search query
 - search query may include the following:
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
-<img [search query]> shows the full-size image from an embed
 <choose [word1 word2 word3...]> chooses one of the specified words for you at random
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
@@ -141,6 +142,16 @@ __Commands:__
             title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ` `,
             image: itemEmbed.thumbnail,
             color: itemEmbed.color,
+        };
+    },
+
+    '~': async (msg, arg) => {
+        let item = fn.find(arg);
+        let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+        return {
+            ...itemEmbed,
+            footer: null,
+            description: null,
         };
     },
 

@@ -2,7 +2,7 @@
 import { search } from './index.js';
 
 
-const unPunctuate = str => str.replaceAll('\n', ' ').replace(/[^\w\s?=]|_/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+const unPunctuate = str => str.replaceAll('\n', ' ').replace(/[^\w\s?~=]|_/g, "").replace(/\s+/g, " ").trim().toLowerCase();
 
 function find(query) {
     let results = search.search(unPunctuate(query));
