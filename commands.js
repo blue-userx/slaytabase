@@ -17,11 +17,11 @@ If you edit or delete your message, I will update my reply to it, according to y
 
 __Commands:__
 <[item name]> displays info about an item
-<~ [item name]> shows just the name and thumbnail of an item
+<~[item name]> shows just the name and thumbnail of an item
 <img [item name]> shows the full-size image from an embed
 <del> deletes your last search in this channel
 <spoiler> adds spoiler tags to my last reply to you in this channel
-<? [search query]> shows the most likely results for a search query
+<?[search query]> shows the most likely results for a search query
 - search query may include the following:
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
@@ -32,7 +32,7 @@ __Commands:__
         thumbnail: {url: bot.user.avatarURL()},
     }),
 
-    del: async msg => {
+    'del': async msg => {
         let messages = await msg.channel.messages.fetch();
         messages = messages.filter(i => i.author.id == bot.user.id && i.reference != null);
         let i = 0;
@@ -124,7 +124,7 @@ __Commands:__
         url: "https://sts-downfall.fandom.com/wiki/Downfall_Wiki"
     }),
 
-    'searchtext': async (msg, arg) => {
+    'searchtext ': async (msg, arg) => {
         let results = search.search(arg);
         let result = results.length > 0 ? results[0] : null;
         if (result == null) return {title: "no result?"};
@@ -134,7 +134,7 @@ __Commands:__
         };
     },
 
-    'img': async (msg, arg) => {
+    'img ': async (msg, arg) => {
         let item = fn.find(arg);
         let itemEmbed = await embed({...item.item, score: item.score, query: arg});
 
@@ -155,14 +155,14 @@ __Commands:__
         };
     },
 
-    'choose': async (msg, arg, args) => {
+    'choose ': async (msg, arg, args) => {
         if (args.length > 0)
             return {
                 title: `I choose "${args[Math.floor(Math.random() * args.length)]}"`,
             };
     },
 
-    'discuss': async (msg, arg) => {
+    'discuss ': async (msg, arg) => {
         if (msg.channel.type == "GUILD_TEXT" && cfg.overriders.includes(msg.author.id)) { //has manage messages permission?
             msg.startThread({name: `${arg}`})
                 .then(async thread => {

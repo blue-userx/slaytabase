@@ -40,13 +40,13 @@ async function getEmbeds(msg) {
                     let query = fn.unPunctuate(originalQuery);
                     if (query.length <= 0) continue;
                     let item = fn.find(query);
-                    let cmdName = query.split(' ')[0];
-                    if (commands.hasOwnProperty(cmdName))
-                        item = {item: {
-                            name: cmdName,
-                            do: commands[cmdName],
-                            itemType: 'command',
-                        }};
+                    for (let i in commands)
+                        if (query.startsWith(i))
+                            item = {item: {
+                                name: i,
+                                do: commands[i],
+                                itemType: 'command',
+                            }};
                     console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                     let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
                     if (genEmbed != null)
