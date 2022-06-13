@@ -1219,6 +1219,14 @@
                     "description": "Gain 2 Strength and 2 Dexterity. Add two :Burn+ cards to your draw pile.",
                     "img": "/altered/img/potions/vexingdraught.png",
                     "mod": "downfall"
+                },
+                
+                {
+                    "name": "Cursed Fountain Liquid",
+                    "rarity": "Event",
+                    "description": "Apply 2 Weak, 2 Vulnerable, and reduce Strength by 2.",
+                    "img": "/altered/img/potions/fountain.png",
+                    "mod": "downfall"
                 }
             ]
         },
