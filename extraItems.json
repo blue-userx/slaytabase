@@ -1257,7 +1257,7 @@
             "relics": [
                 {
                     "where": {"name": "Bronze Idol"},
-                    "to": {"description": "Status cards now cost [E] and may be played for useful effects.\n\nSlimed -> Lubricant: Draw 2 cards. Exhaust.\nWound -> Grievous Wound: Apply 1 Vulnerable.\nVoid -> Into the Void: Ethereal. Enemy loses 5 Strength this turn. Whenever this card is drawn, lose 1 Energy. Exhaust.\nDazed -> Daze: Ethereal. Apply 1 Weak. Exhaust.\nBurn -> Ignite: Apply 10 Soulburn. At the end of your turn, take 2 damage.\n"}
+                    "to": {"description": "Status cards now cost [E] and may be played for useful effects.\n\nSlimed -> Lubricant: Draw 2 cards. Exhaust.\nWound -> Grievous Wound: Apply 1 Vulnerable.\nVoid -> Into the Void: Ethereal. Enemy loses 5 Strength this turn. Whenever this card is drawn, lose 1 Energy. Exhaust.\nDazed -> Daze: Ethereal. Apply 1 Weak. Exhaust.\nBurn -> Ignite: Apply 10 :Soulburn. At the end of your turn, take 2 damage.\n"}
                 },
     
                 {
