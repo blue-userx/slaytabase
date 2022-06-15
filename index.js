@@ -28,6 +28,11 @@ export {bot, search};
 bot.once('ready', async () => {
     bot.user.setActivity('Downfall | <help>');
 	console.log('connected to discord. ready!');
+    await bot.channels.fetch().catch(e => {});
+    bot.channels.cache.each(channel => {
+        if (channel.type == 'GUILD_TEXT')
+            channel.messages.fetch().catch(e => {});
+    });
 });
 
 async function getEmbeds(msg) {
