@@ -237,7 +237,7 @@
                     "acts": ["?"],
                     "mod": "downfall",
                     "options": [
-                        ["Destroy", null, "r/Lose 11% of your Max HP. g/Gain Sharpened Fragment."],
+                        ["Destroy", null, "r/Lose 11 Max HP. g/Gain Sharpened Fragment."],
                         ["Collect", null, "g/Gain Broken Wing Statue."],
                         ["Leave", null, ""]
                     ]
