@@ -5,7 +5,7 @@ export default {
     'Purple': ['The Watcher', 11489522, '<:e_purple:961808772127399967>', ''],
     'Colorless': ['Colorless', 8026746, '<:e_colorless:961808772609769512>', ''],
     'Curse': ['Curse', 1315860, '<:e_colorless:961808772609769512>', ''],
-    'Boss': ['Boss', 11548764, '<:e_guardian:961809971950014504>', ''],
+    'Boss': ['Boss', 11548764, '<:e_champ:961809971920633936>', ''],
     'Hexa_ghost_purple': ['The Hexaghost', 10704819, '<:e_hexa:961809972105199636>', 'hexamod-'],
     'The_bronze_automaton': ['The Automaton', 16772999, '<:e_automaton:961809971572523069>', 'bronze-'],
     'Slimebound': ['The Slime Boss', 27404, '<:e_slime:961809971840950275>', 'Slimebound-'],

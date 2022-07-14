@@ -1,4 +1,4 @@
-{
+export default {
     "pre": {
         "add": {
 
@@ -389,19 +389,6 @@
                 },
         
                 {
-                    "name": "Ominous Forge",
-                    "acts": ["?"],
-                    "mod": "downfall",
-                    "options": [
-                        ["Tinker", "automaton only", "g/Upgrade 3 Random Cards with Encode."],
-                        ["Tinker", "guardian only - have a card with sockets", "g/Add a socket to any socketed card."],
-                        ["Forge", null, "g/Upgrade a card in your deck."],
-                        ["Rummage", null, "g/Obtain Warped Tongs. r/Become Cursed - Pain."],
-                        ["Leave", null, ""]
-                    ]
-                },
-        
-                {
                     "name": "Grim Forge",
                     "acts": ["?"],
                     "mod": "downfall",
@@ -604,9 +591,11 @@
                 
                 {
                     "name": "Ominous Forge",
-                    "acts": [1],
+                    "acts": [1, 2, 3],
                     "mod": "",
                     "options": [
+                        ["Tinker", "automaton only", "g/Upgrade 3 Random Cards with Encode."],
+                        ["Tinker", "guardian only - have a card with sockets", "g/Add a socket to any socketed card."],
                         ["Forge", null, "g/Upgrade a card in your deck."],
                         ["Rummage", null, "g/Obtain a special Relic. r/Become Cursed - Pain."],
                         ["Leave", null, ""]
@@ -677,7 +666,7 @@
                     "acts": [1],
                     "mod": "",
                     "options": [
-                        ["Soul Harvest", null, "g/Find Loot. r/25% -> 50% -> 75% a/(35% -> 60% -> 85%): monster returns."],
+                        ["Soul Harvest", null, "g/Find Loot. r/25% -> 50% -> 75% a/(35% -> 60% -> 85%)r/: monster returns."],
                         ["Leave", null, ""]
                     ]
                 },
@@ -723,9 +712,9 @@
                     "mod": "",
                     "options": [
                         ["Offer", "requires golden idol", "g/Obtain a special Relic. r/Lose Golden Idol."],
-                        ["Sacrifice", null, "g/Gain 5 max HP. r/Lose HP equal to 25% a/(35%) of your max HP."],
+                        ["Sacrifice", null, "g/Gain 5 max HP. r/Lose HP equal to 25% a/(35%) r/of your max HP."],
                         ["Desecrate", "standard only", "r/Become Cursed - Decay."],
-                        ["Offer Souls", "downfall only, requires 50 souls", "r/Lose 50 Souls. g/Heal HP equal to 35% a/(45%) of your max HP."],
+                        ["Offer Souls", "downfall only, requires 50 souls", "r/Lose 50 Souls. g/Heal HP equal to 35% a/(45%) g/of your max HP."],
                         ["Leave", "downfall only", ""]
                     ]
                 },
@@ -888,8 +877,8 @@
                     "acts": [1, 2, 3],
                     "mod": "",
                     "options": [
-                        ["Desecrate", "downfall only, not guardian", "g/Remove 3 cards. r/Cursed - Random."],
-                        ["Smash", "guardian only", "g/Gain 2 Random Gems."],
+                        ["Desecrate", "downfall only", "g/Remove 3 cards. r/Cursed - Random."],
+                        ["Smash", "guardian only, instead of desecrate", "g/Gain 2 Random Gems."],
                         ["Pray", null, "g/Remove a card from your deck."],
                         ["Leave", null, ""]
                     ]
@@ -1022,8 +1011,8 @@
                     "acts": [1, 2, 3],
                     "mod": "",
                     "options": [
-                        ["Desecrate", "downfall only, not guardian", "g/Transform 3 cards. r/Cursed - Random."],
-                        ["Smash", "guardian only", "g/Gain 2 Random Gems."],
+                        ["Desecrate", "downfall only", "g/Transform 3 cards. r/Cursed - Random."],
+                        ["Smash", "guardian only, instead of desecrate", "g/Gain 2 Random Gems."],
                         ["Pray", null, "g/Transform a card."],
                         ["Leave", null, ""]
                     ]
@@ -1034,8 +1023,8 @@
                     "acts": [1, 2, 3],
                     "mod": "",
                     "options": [
-                        ["Desecrate", "downfall only, not guardian", "g/Upgrade 2 cards. r/Cursed - Random."],
-                        ["Smash", "guardian only", "g/Gain 2 Random Gems."],
+                        ["Desecrate", "downfall only", "g/Upgrade 2 cards. r/Cursed - Random."],
+                        ["Smash", "guardian only, instead of desecrate", "g/Gain 2 Random Gems."],
                         ["Pray", null, "g/Upgrade a card."],
                         ["Leave", null, ""]
                     ]
@@ -1251,6 +1240,11 @@
                 {
                     "where": {"name": "Dice Boulder"},
                     "to": {"description": "Deal 1 - 31 (8 - 34 (16 - 38 (25 - 43 (35 - 49 (46 - 56 (58 - 64 (71 - 73 (85 - 83 (100 - 94 (116 - 106)))))))))) damage.\nCan be Upgraded any number of times."}
+                },
+
+                {
+                    "where": {"name": "Whiz"},
+                    "to": {"description": desc => desc+'\n\nBang (0 [E] card): Deal 2 damage 3 (4) times. Add a Whiz(+) to your discard pile. Exhaust.'}
                 }
             ],
     
@@ -1262,12 +1256,17 @@
     
                 {
                     "where": {"name": "Supply Scroll"},
-                    "to": {"description": "At the start of your 3rd turn, gain a Supply Scroll.\nSupply Scroll (0 [E] card): Gain a random assortment of 4 (6) Shivs and Wards. Exhaust."}
+                    "to": {"description": desc => desc+"\nSupply Scroll (0 [E] card): Gain a random assortment of 4 (6) Shivs and Wards. Exhaust."}
                 },
     
                 {
                     "where": {"name": "Knowing Skull"},
                     "to": {"description": "At the start of each combat, add a **Knowing Skull** to your hand."}
+                },
+                
+                {
+                    "where": {"name": "Greed Ooze"},
+                    "to": {"description": desc => desc.replace(' (can be revived if Absorbed)', '')+'\nWhen Greed Ooze is absorbed gain Revive Greed.\nRevive Greed (2 (1) [E] ): Retain. Split into Greed Ooze. Exhaust.'}
                 }
             ],
     

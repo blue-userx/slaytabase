@@ -1,9 +1,10 @@
 const keywords = [
-    ['[R]', '<:e_red:961808772177731624>'],
-    ['[G]', '<:e_green:961808772114833428>'],
-    ['[B]', '<:e_blue:961808772244832278>'],
-    ['[W]', '<:e_purple:961808772127399967>'],
-    ['[fist_icon]', '<:finisher:961810374120849418>'],
+    ['[E]', 'Energy'],
+    ['[R]', 'Energy'],
+    ['[G]', 'Energy'],
+    ['[B]', 'Energy'],
+    ['[W]', 'Energy'],
+    ['[fist_icon]', 'finisheremoji'],
     ['champ:Combo:', 'Combo:'],
 ];
 
@@ -40,7 +41,6 @@ const directKeywords = [
 ];
 
 export default function keywordify(text, character) {
-    text = text.replaceAll('[E]', `**${character[2]}**`);
     for (let i of keywords)
         text = text.replaceAll(i[0], `**${i[1]}**`);
     for (let i of directKeywords)

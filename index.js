@@ -6,6 +6,7 @@ import commands from './commands.js';
 import embed from './embed.js';
 import characters from './characters.js';
 import keywordify from './keywords.js';
+import emojify from './emojis.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
 
@@ -152,7 +153,9 @@ async function main() {
                         return String(look);
                     } else if (newItem.hasOwnProperty(key)) return String(newItem[key]);
                     else return '';
-                }).join(' ')),
+                }).join(' '));
+            if (newItem.description != null)
+                newItem.description = emojify(newItem.description, character);
             search.add(newItem);
         }
     console.log('parsed data, connecting to discord...');
