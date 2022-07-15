@@ -1244,7 +1244,7 @@ export default {
 
                 {
                     "where": {"name": "Whiz"},
-                    "to": {"description": desc => desc+'\n\nBang (0 [E] card): Deal 2 damage 3 (4) times. Add a Whiz(+) to your discard pile. Exhaust.'}
+                    "to": {"description": desc => desc+'\n\nBang (0 [E] card): Deal 0 damage 3 (4) times. Add a Whiz(+) to your discard pile. Exhaust.'}
                 }
             ],
     
