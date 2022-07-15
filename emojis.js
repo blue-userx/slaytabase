@@ -1,5 +1,5 @@
 const emojis = [
-    ['finisheremoji', 'finisher:961810374120849418'],
+    ['finisheremoji', 'finisher:961810374120849418', true],
     ['Artifact', 'p_artifact:997273885995188335'],
     ['Block', 'p_block:997281211305181314'],
     ['Blur', 'p_blur:997273889950416908'],
@@ -31,6 +31,6 @@ const emojis = [
 export default function emojify(text, character) {
     text = text.replaceAll('Energy', `${character[2]}`);
     for (let i of emojis)
-        text = text.replaceAll(i[0], `${i[0]}<:${i[1]}>`);
+        text = text.replaceAll(i[0], i.length > 2 ? `<:${i[1]}>` : `${i[0]}<:${i[1]}>`);
     return text;
 }
