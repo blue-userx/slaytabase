@@ -35,7 +35,7 @@ async function embed(item, msg, embeds=[]) {
 
         case 'relic':
             if (item.mod == 'slay-the-spire')
-                e.thumbnail = {url: `${cfg.exportURL}/export/${item.mod}/relics/${item.character[3]}${item.name.replaceAll(' ', '').replaceAll('\'', '')}.png`};
+                e.thumbnail = {url: `${cfg.exportURL}/altered/img/relics/${item.mod}/${item.character[3]}${item.name.replaceAll(' ', '').replaceAll('\'', '')}.png`};
             else
                 e.thumbnail = {url: `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/Special:Filepath/${searchize(item)}.png`};
             e.color = item.character[1];
