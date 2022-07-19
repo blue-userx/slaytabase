@@ -31,8 +31,9 @@
 |[[Attack]]
 |0
 |Deal 5 (7) damage.
-[[bronze:Encode]]. π
-When [[bronze:Encoded]], add a copy to your discard pile.
+   
+When Encoded, add a copy to your discard pile.
+[[bronze:Encode]].
 |-
 |[[Strike]]
 |[[File:|thumb|289x289px]]
@@ -158,7 +159,7 @@ Gain 1 [E].
 |[[Attack]]
 |2
 |Deal 18 (24) damage.
-Remove the next [[bronze:Compile]] Error you would [[bronze:Encode]].
+Remove the next Compile Error you would Encode.
 |-
 |[[Piercing Shot]]
 |[[File:|thumb|289x289px]]
@@ -205,7 +206,7 @@ Add a Void into your discard pile.
 |Common
 |[[Attack]]
 |1
-|Deal 12 (17) damage. π
+|Deal 12 (17) damage.
 [[bronze:Insert]] a Wound.
 |-
 |[[Allocate]]
@@ -259,23 +260,22 @@ Add a Void into your discard pile.
 |1
 |[[Innate]].
 Deal 8 (12) damage.
-[[bronze:Encode]] a random card with [[bronze:Encode]] in your draw pile. [[Exhaust]].
+[[bronze:Encode]] a random card with Encode in your draw pile. [[Exhaust]].
 |-
 |[[Class Default]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Power]]
-|1
-|([[Retain]].)
- Add a copy of the first card in the current Sequence to the next 2 Sequences.
+|1 (0)
+|Next 2 times you create a Function, [[bronze:Encode]] a copy of the first card in it.
 |-
 |[[Constructor]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |1
-|Gain 5 (7) [[Block]]. π
-When [[bronze:Encoded]] as the first card, increase its [[Block]] by 5 (7).
+|Gain 5 (7) [[Block]].
+    When Encoded as the first card, increase its [[Block]] by 5 (7).
 [[bronze:Encode]].
 |-
 |[[Copy Paste]]
@@ -310,8 +310,8 @@ Gain 1 (2) [[Artifact]].
 |Uncommon
 |[[Attack]]
 |1
-|Deal 7 (9) damage.
-Gain 4 (6) [[Block]].
+|Gain 4 (6) [[Block]].
+Deal 7 (9) damage.
 If the last played card was a Function, play this again.
 |-
 |[[For Loop]]
@@ -344,8 +344,8 @@ Gain 12 (16) [[Block]].
 |Uncommon
 |[[Attack]]
 |1
-|Deal 4 (6) damage.
-Gain 4 (6) [[Block]].
+|Gain 4 (5) [[Block]].
+Deal 4 (5) damage.
 [[bronze:Encode]].
 |-
 |[[Get Latest]]
@@ -353,7 +353,7 @@ Gain 4 (6) [[Block]].
 |Uncommon
 |[[Skill]]
 |1 (0)
-|Gain a random card with [[bronze:Encode]]. It costs 0.
+|Gain a random card with [[bronze:Encode]], it costs 0 until played.
 [[Exhaust]].
 |-
 |[[Infinite Beams]]
@@ -369,7 +369,7 @@ Gain 4 (6) [[Block]].
 |[[Power]]
 |1
 |([[Innate]].)
- Whenever you draw a [[Curse]] or [[Status]] card, gain 1 Temporary [[Strength]] and [[Dexterity]].
+ Whenever you draw a [[Curse]] or [[Status]] card, gain 1 temporary [[Strength]] and [[Dexterity]].
 |-
 |[[Iterate]]
 |[[File:|thumb|289x289px]]
@@ -469,8 +469,8 @@ Next turn, gain [E] ([E]).
 |Uncommon
 |[[Attack]]
 |1
-|Deal 6 (8) damage. π
-When [[bronze:Encoded]] in the middle, increase its damage by 6 (8).
+|Deal 6 (8) damage.
+    When [[bronze:Encoded]] in the middle, increase its damage by 6 (8).
 [[bronze:Encode]].
 |-
 |[[Terminator]]
@@ -479,7 +479,7 @@ When [[bronze:Encoded]] in the middle, increase its damage by 6 (8).
 |[[Skill]]
 |1 (0)
 |[[bronze:Encode]].
-[[bronze:Compile]] - If this is the last card in the Sequence, Function gains 'Play this again'.
+[[bronze:Compile]] - If this is the last card of the Function, it gains 'Play this again'.
 |-
 |[[Undervolt]]
 |[[File:|thumb|289x289px]]
@@ -522,7 +522,7 @@ Gain 2 [[Burns]].
 |[[Power]]
 |1
 |([[Innate]].)
- Remove the next 3 [[bronze:Compile]] Errors you would [[bronze:Encode]].
+ Remove the next 3 Compile Errors you would Encode.
 |-
 |[[Dev Tools]]
 |[[File:|thumb|289x289px]]
@@ -592,8 +592,7 @@ Put 5 Void on top of your draw pile.
 |Rare
 |[[Power]]
 |3 (2)
-|At the start of your turn, gain a random card with [[bronze:Encode]].
-It costs 0.
+|At the start of your turn, gain a random card with [[bronze:Encode]], it costs 0 until played.
 |-
 |[[Mutator]]
 |[[File:|thumb|289x289px]]
@@ -626,7 +625,7 @@ Deals 2 (3) additional damage for ALL of your [[Status]] cards.
 |Rare
 |[[Skill]]
 |2 (1)
-|Until the Sequence is full, choose 1 of 3 random cards to [[bronze:Encode]].
+|Choose 1 of 3 random cards to [[bronze:Encode]]. Repeat until you create a Function.
 [[Exhaust]].
 |-
 |[[Summon Orb]]
@@ -652,5 +651,5 @@ Gain 1 [[guardianmod:Buffer]].
 |1
 |[[Retain]].
 Deal 5 (6) damage.
-[[Transform]] all cards in hand into Minor Beam (*Beam+).
+Transform all cards in hand into Minor Beam (*Beam+).
 |-

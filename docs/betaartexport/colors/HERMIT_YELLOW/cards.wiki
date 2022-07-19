@@ -218,7 +218,7 @@ Draw 1 (2) Attack(s).
 |Uncommon
 |[[Skill]]
 |1
-|Play one of the top 4 (6) cards in your draw pile.
+|Play one of the top 3 (5) cards in your draw pile.
 hermit:Dead_On: Also trigger its [[Dead On]] effect.
 |-
 |[[Combo]]
@@ -563,7 +563,7 @@ Deal 13 (16) damage for each [[Curse]] in hand.
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Skill]]
-|0
+|1
 |Put 2 (3) random Attacks from your discard pile into your hand. They cost 1 less this turn.
 [[Exhaust]].
 |-

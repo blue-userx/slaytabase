@@ -1211,6 +1211,14 @@ export default {
                 },
                 
                 {
+                    "name": "Boss Potion",
+                    "rarity": "Uncommon",
+                    "description": "Choose 1 of 3 random :Boss cards to add to your hand, it costs 0 this turn.",
+                    "img": "/altered/img/potions/boss.png",
+                    "mod": "downfall"
+                },
+                
+                {
                     "name": "Cursed Fountain Liquid",
                     "rarity": "Event",
                     "description": "Apply 2 Weak, 2 Vulnerable, and reduce Strength by 2.",
@@ -1239,7 +1247,7 @@ export default {
     
                 {
                     "where": {"name": "Dice Boulder"},
-                    "to": {"description": "Deal 1 - 31 (8 - 34 (16 - 38 (25 - 43 (35 - 49 (46 - 56 (58 - 64 (71 - 73 (85 - 83 (100 - 94 (116 - 106)))))))))) damage.\nCan be Upgraded any number of times."}
+                    "to": {"description": "Deal 1 - 27 (7 - 30 (14 - 34 (22 - 39 (31 - 45 (41 - 52 (52 - 60 (64 - 69 (77 - 79 (91 - 90 (106 - 102)))))))))) damage.\nCan be Upgraded any number of times."}
                 },
 
                 {

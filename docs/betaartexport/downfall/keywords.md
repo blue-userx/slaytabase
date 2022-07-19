@@ -1,9 +1,9 @@
 | Name | Description |
 | ---- | ----------- |
 | Blur | Do not lose Block at the end of the turn. |
-| Compile | An additional effect that triggers when this card, while Encoded, is combined into a Function. Can be a negative effect, which is referred to as an 'Error'. |
+| Compile | An effect that triggers when this card is merged into a Function. Can be a negative effect, which is referred to as an 'Error'. |
 | Cycle | Discard a card, drawing a new card to replace it. |
-| Encode | Add the card to the Sequence. When 3 cards are in the Sequence, their effects (other than Encode) are merged into a Function that costs 1. |
+| Encode | Encode a card. When 3 cards are Encoded, their effects (other than Encode) are merged into a Function that costs 1. |
 | Insert | Shuffle a card into your draw pile. |
 | Technique | If you are in a Stance, trigger its Skill Bonus. |
 | Finisher | Requires being in a Stance. After playing a Finisher, exit your Stance and trigger its Finisher bonus. |
@@ -76,7 +76,6 @@
 | Leeching Slime | Attacks for 1 and grants you 3 Block each turn. |
 | Lick | 0-cost cards that apply Goop with a variety of secondary effects. |
 | Mire Slime | Attacks for 2 and applies 2 Goop each turn. |
-| Morph | Replace with a random new card of your class, regardless of type. It costs 1 less. |
 | Potency | Increases the damage of ALL of your Spawned Slimes. Secondary effects increase by 1 for every 2 Potency. |
 | Spiky Slime | Attacks for 4 and grants you 4 Temporary Thorns each turn. |
 | Slow | Receives 10% more damage per card played in a turn. |

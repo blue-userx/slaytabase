@@ -1,7 +1,7 @@
 | Name | Image | Upgraded image | Rarity | Type | Cost | Description |
 | ---- | ----- | -------------- | ------ | ---- | ---- | ----------- |
 | Apparition | ![](../../slay-the-spire/small-card-images/Colorless-Apparition.png) | ![](../../slay-the-spire/small-card-images/Colorless-ApparitionPlus.png) | Special | Skill | 1 | Ethereal. (not Ethereal.) Gain 1 Intangible. Exhaust. |
-| Batch | ![](../../downfall/small-card-images/Colorless-Batch.png) | ![](../../downfall/small-card-images/Colorless-BatchPlus.png) | Special | Skill | 0 | Create a Function immediately out of the cards in the Sequence. Exhaust. (not Exhaust.) |
+| Batch | ![](../../downfall/small-card-images/Colorless-Batch.png) | ![](../../downfall/small-card-images/Colorless-BatchPlus.png) | Special | Skill | 0 | Create a Function immediately out of the cards currently Encoded. Exhaust. (not Exhaust.) |
 | Become Almighty | ![](../../slay-the-spire/small-card-images/Colorless-BecomeAlmighty.png) | ![](../../slay-the-spire/small-card-images/Colorless-BecomeAlmightyPlus.png) | Special | Power |  | Gain 3 (4) Strength. |
 | Beta | ![](../../slay-the-spire/small-card-images/Colorless-Beta.png) | ![](../../slay-the-spire/small-card-images/Colorless-BetaPlus.png) | Special | Skill | 2 (1) | Shuffle an Omega into your draw pile. Exhaust. |
 | Bite | ![](../../slay-the-spire/small-card-images/Colorless-Bite.png) | ![](../../slay-the-spire/small-card-images/Colorless-BitePlus.png) | Special | Attack | 1 | Deal 7 (8) damage. Heal 2 (3) HP. |
@@ -12,8 +12,8 @@
 | Crystal Shiv | ![](../../downfall/small-card-images/Colorless-CrystalShiv.png) | ![](../../downfall/small-card-images/Colorless-CrystalShivPlus.png) | Special | Attack | 0 | Deal 4 (6) damage. Exhaust. |
 | Crystal Ward | ![](../../downfall/small-card-images/Colorless-CrystalWard.png) | ![](../../downfall/small-card-images/Colorless-CrystalWardPlus.png) | Special | Skill | 0 | Gain 3 (5) Block. Exhaust. |
 | Darkling Duo | ![](../../downfall/small-card-images/Colorless-DarklingDuo.png) | ![](../../downfall/small-card-images/Colorless-DarklingTrioPlus.png) | Special | Skill | 1 | slimeboundmod:Split into a slimeboundmod:Darkling_Slime 2 (3) times. Exhaust. |
-| Dazing Pulse | ![](../../downfall/small-card-images/Colorless-DazingPulse.png) | ![](../../downfall/small-card-images/Colorless-DazingPulsePlus.png) | Special | Attack | 1 | Deal 7 (9) damage. Gain 7 (9) Block bronze:Encode. bronze:Compile Error - bronze:Insert 2 Dazed. |
-| Debug | ![](../../downfall/small-card-images/Colorless-Debug.png) | ![](../../downfall/small-card-images/Colorless-DebugPlus.png) | Special | Skill | 0 | Remove all bronze:Compile Error effects from Encoded cards. Exhaust. |
+| Dazing Pulse | ![](../../downfall/small-card-images/Colorless-DazingPulse.png) | ![](../../downfall/small-card-images/Colorless-DazingPulsePlus.png) | Special | Attack | 1 | Gain 7 (9) Block Deal 7 (9) damage. bronze:Encode. bronze:Compile Error - bronze:Insert 2 Dazed. |
+| Debug | ![](../../downfall/small-card-images/Colorless-Debug.png) | ![](../../downfall/small-card-images/Colorless-DebugPlus.png) | Special | Skill | 0 | Remove all Compile Error effects from Encoded cards. Exhaust. |
 | Decompile | ![](../../downfall/small-card-images/Colorless-Decompile.png) | ![](../../downfall/small-card-images/Colorless-DecompilePlus.png) | Special | Skill | 0 | (Retain.)  Exhaust all Encoded cards. Gain [E] and draw a card for each card Exhausted. Exhaust. |
 | Explode | ![](../../downfall/small-card-images/Colorless-Explode.png) | ![](../../downfall/small-card-images/Colorless-ExplodePlus.png) | Special | Skill | 1 | Apply 15 (20) hexamod:Soulburn to ALL enemies. bronze:Encode. bronze:Compile Error - bronze:Insert 2 Burn. |
 | Expunger | ![](../../slay-the-spire/small-card-images/Colorless-Expunger.png) | ![](../../slay-the-spire/small-card-images/Colorless-ExpungerPlus.png) | Special | Attack | 1 | Deal 9 (15) damage X times. |

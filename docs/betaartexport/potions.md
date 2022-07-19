@@ -16,7 +16,7 @@
 | ![](slay-the-spire/potions/FlexPotion.png) | Flex Potion | Common | Gain 5 Strength. At the end of your turn, lose 5 Strength. |
 | ![](slay-the-spire/potions/FocusPotion.png) | Focus Potion | Common | Gain 2 Focus. |
 | ![](downfall/potions/JarofSlime.png) | Jar of Slime | Common | Apply 15 Goop. |
-| ![](downfall/potions/MachineOil.png) | Machine Oil | Common | Increase all numbers on cards in the Sequence by 1. |
+| ![](downfall/potions/MachineOil.png) | Machine Oil | Common | Increase all numbers on Encoded cards by 1except cost. |
 | ![](slay-the-spire/potions/PoisonPotion.png) | Poison Potion | Common | Apply 6 Poison. |
 | ![](downfall/potions/PotentiallyPotentPotion.png) | Potentially Potent Potion | Common | Deal 1-40 damage. |
 | ![](slay-the-spire/potions/PowerPotion.png) | Power Potion | Common | Choose 1 of 3 random Power cards to add to your hand, it costs 0 this turn. |
@@ -28,7 +28,7 @@
 | ![](downfall/potions/TemporalPotion.png) | Temporal Potion | Common | Accelerate all cards in Stasis 2 times. |
 | ![](downfall/potions/Tonic.png) | Tonic | Common | Gain 1 Rugged. |
 | ![](slay-the-spire/potions/WeakPotion.png) | Weak Potion | Common | Apply 3 Weak. |
-| ![](downfall/potions/AlchyricalElixir.png) | Alchyrical Elixir | Uncommon | Remove all Compile Error effects from the next Function you create. Reduce its cost to 0 until played. |
+| ![](downfall/potions/AlchyricalElixir.png) | Alchyrical Elixir | Uncommon | Remove all Compile Error effects from the next Function you create, it costs 0 until played. |
 | ![](slay-the-spire/potions/AncientPotion.png) | Ancient Potion | Uncommon | Gain 1 Artifact. |
 | ![](downfall/potions/BlackBile.png) | Black Bile | Uncommon | Apply 6 Bruise. |
 | ![](downfall/potions/BottledTechnique.png) | Bottled Technique | Uncommon | Trigger your current Stance's Skill Bonus 5 times. |
@@ -59,7 +59,7 @@
 | ![](downfall/potions/GremlinInAJar.png) | Gremlin In A Jar | Rare | Resurrect a random Gremlin at 50% of your Max HP. |
 | ![](slay-the-spire/potions/HeartofIron.png) | Heart of Iron | Rare | Gain 6 Metallicize. |
 | ![](downfall/potions/InfernoPotion.png) | Inferno Potion | Rare | Ignite the Inferno Ghostflame. |
-| ![](downfall/potions/KiosCleverConcoction.png) | Kio's Clever Concoction | Rare | Until the Sequence is full, choose 1 of 3 random cards to Encode. |
+| ![](downfall/potions/KiosCleverConcoction.png) | Kio's Clever Concoction | Rare | Choose 1 of 3 random cards to Encode, repeat until you create a Function. |
 | ![](downfall/potions/LiquidLuck.png) | Liquid Luck | Rare | Gain Lucky for 1 turn. |
 | ![](downfall/potions/LiquidVoid.png) | Liquid Void | Rare | Put 1 card from your exhaust pile into your hand. It costs 0 this turn. |
 | ![](downfall/potions/QuantumElixir.png) | Quantum Elixir | Rare | Gain Stasis slots until you have 3. Repeat 3 times: choose 1 of 3 cards to place into Stasis. |

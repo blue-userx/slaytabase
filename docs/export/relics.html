@@ -23,7 +23,7 @@
     <td><img src="downfall/relics/bronze-BronzeCore.png" width="128" height="128"><a href="downfall/relics/popup/bronze-BronzeCore.png"><img src="downfall/relics/small-popup/bronze-BronzeCore.png" class="popup"></a></td>
     <td>Starter</td>
     <td>The_bronze_automaton</td>
-    <td>The first time you <span class="color-y">Compile</span> a <span class="color-y">Function</span> each combat, gain [E] .</td>
+    <td>The first time you create a Function each combat, gain [E] .</td>
     <td>Replace once every 50,000 years.</td>
     <td><a href="downfall/index.html">Downfall</a></td>
   </tr>
@@ -177,18 +177,6 @@ Guardian starts the run with a random common <span class="color-y">Gem.</span></
     <td>If you do not play any <span class="color-y">Attacks</span> during your turn, gain an additional [E] next turn.</td>
     <td>This ancient manuscript contains wisdom from a past age.</td>
     <td><a href="slay-the-spire/index.html"></a></td>
-  </tr>
-  
-  <tr>
-    <td><a href="downfall/relics/popup/Guardian-PocketSentry.png">Arumba's Pocket Sentry</a></td>
-    <td><img src="downfall/relics/Guardian-PocketSentry.png" width="128" height="128"><a href="downfall/relics/popup/Guardian-PocketSentry.png"><img src="downfall/relics/small-popup/Guardian-PocketSentry.png" class="popup"></a></td>
-    <td>Common</td>
-    <td></td>
-    <td>At the start of each turn, alternates between:
-Deal <span class="color-b">7</span> damage to a random enemy.
-Apply <span class="color-b">1</span> <span class="color-y">Weak</span> to ALL enemies.</td>
-    <td>Sentry Mode active. Target acquired. No hard feelings.</td>
-    <td><a href="downfall/index.html">Downfall</a></td>
   </tr>
   
   <tr>
@@ -506,7 +494,7 @@ Apply <span class="color-b">1</span> <span class="color-y">Weak</span> to ALL en
     <td><img src="downfall/relics/bronze-ProtectiveGoggles.png" width="128" height="128"><a href="downfall/relics/popup/bronze-ProtectiveGoggles.png"><img src="downfall/relics/small-popup/bronze-ProtectiveGoggles.png" class="popup"></a></td>
     <td>Common</td>
     <td>The_bronze_automaton</td>
-    <td>If you end your turn with no cards in the <span class="color-y">Sequence,</span> gain <span class="color-b">4</span> <span class="color-y">Block.</span></td>
+    <td>If you end your turn with no <span class="color-y">Encoded</span> cards, gain <span class="color-b">4</span> <span class="color-y">Block.</span></td>
     <td>Look closely.</td>
     <td><a href="downfall/index.html">Downfall</a></td>
   </tr>
@@ -556,7 +544,7 @@ Apply <span class="color-b">1</span> <span class="color-y">Weak</span> to ALL en
     <td><img src="downfall/relics/bronze-SilverBullet.png" width="128" height="128"><a href="downfall/relics/popup/bronze-SilverBullet.png"><img src="downfall/relics/small-popup/bronze-SilverBullet.png" class="popup"></a></td>
     <td>Common</td>
     <td>The_bronze_automaton</td>
-    <td>Start each combat with a <span class="color-y">Piercing</span> <span class="color-y">Shot</span> in the <span class="color-y">Sequence.</span></td>
+    <td>Start each combat with an <span class="color-y">Encoded</span> <span class="color-y">Piercing</span> <span class="color-y">Shot.</span></td>
     <td>Spirewolves are long gone.</td>
     <td><a href="downfall/index.html">Downfall</a></td>
   </tr>
@@ -692,6 +680,18 @@ Apply <span class="color-b">1</span> <span class="color-y">Weak</span> to ALL en
   </tr>
   
   <tr>
+    <td><a href="downfall/relics/popup/Guardian-PocketSentry.png">Arumba's Pocket Sentry</a></td>
+    <td><img src="downfall/relics/Guardian-PocketSentry.png" width="128" height="128"><a href="downfall/relics/popup/Guardian-PocketSentry.png"><img src="downfall/relics/small-popup/Guardian-PocketSentry.png" class="popup"></a></td>
+    <td>Uncommon</td>
+    <td></td>
+    <td>At the start of each turn, alternates between:
+Deal <span class="color-b">7</span> damage to a random enemy.
+Apply <span class="color-b">1</span> <span class="color-y">Weak</span> to ALL enemies.</td>
+    <td>Sentry Mode active. Target acquired. No hard feelings.</td>
+    <td><a href="downfall/index.html">Downfall</a></td>
+  </tr>
+  
+  <tr>
     <td><a href="slay-the-spire/relics/popup/BlueCandle.png">Blue Candle</a></td>
     <td><img src="slay-the-spire/relics/BlueCandle.png" width="128" height="128"><a href="slay-the-spire/relics/popup/BlueCandle.png"><img src="slay-the-spire/relics/small-popup/BlueCandle.png" class="popup"></a></td>
     <td>Uncommon</td>
@@ -747,7 +747,7 @@ Whenever you play a <span class="color-r">Curse,</span> lose <span class="color-
     <td><img src="downfall/relics/bronze-CableSpool.png" width="128" height="128"><a href="downfall/relics/popup/bronze-CableSpool.png"><img src="downfall/relics/small-popup/bronze-CableSpool.png" class="popup"></a></td>
     <td>Uncommon</td>
     <td>The_bronze_automaton</td>
-    <td>Add a copy of the first card you play with <span class="color-y">Encode</span> each combat to the <span class="color-y">Sequence.</span></td>
+    <td><span class="color-y">Encode</span> a copy of the first <span class="color-y">Encodable</span> card you play each combat.</td>
     <td>Tangled...</td>
     <td><a href="downfall/index.html">Downfall</a></td>
   </tr>
@@ -1374,6 +1374,16 @@ Start each combat with <span class="color-b">1</span> <span class="color-y">Stre
   </tr>
   
   <tr>
+    <td><a href="downfall/relics/popup/bronze-Timepiece.png">Frost Primer</a></td>
+    <td><img src="downfall/relics/bronze-Timepiece.png" width="128" height="128"><a href="downfall/relics/popup/bronze-Timepiece.png"><img src="downfall/relics/small-popup/bronze-Timepiece.png" class="popup"></a></td>
+    <td>Rare</td>
+    <td>The_bronze_automaton</td>
+    <td>All Functions you create gain <span class="color-y">Retain.</span></td>
+    <td>22 ounces of the chemical compound Ar22, shelf life: 22 years. Best stored in a mahogany fridge.</td>
+    <td><a href="downfall/index.html">Downfall</a></td>
+  </tr>
+  
+  <tr>
     <td><a href="slay-the-spire/relics/popup/GamblingChip.png">Gambling Chip</a></td>
     <td><img src="slay-the-spire/relics/GamblingChip.png" width="128" height="128"><a href="slay-the-spire/relics/popup/GamblingChip.png"><img src="slay-the-spire/relics/small-popup/GamblingChip.png" class="popup"></a></td>
     <td>Rare</td>
@@ -1716,16 +1726,6 @@ Start each combat with <span class="color-b">1</span> <span class="color-y">Stre
   </tr>
   
   <tr>
-    <td><a href="downfall/relics/popup/bronze-Timepiece.png">Timepiece</a></td>
-    <td><img src="downfall/relics/bronze-Timepiece.png" width="128" height="128"><a href="downfall/relics/popup/bronze-Timepiece.png"><img src="downfall/relics/small-popup/bronze-Timepiece.png" class="popup"></a></td>
-    <td>Rare</td>
-    <td>The_bronze_automaton</td>
-    <td>All <span class="color-y">Functions</span> you <span class="color-y">Compile</span> gain <span class="color-y">Retain.</span></td>
-    <td>From his collection of identical clocks.</td>
-    <td><a href="downfall/index.html">Downfall</a></td>
-  </tr>
-  
-  <tr>
     <td><a href="slay-the-spire/relics/popup/Tingsha.png">Tingsha</a></td>
     <td><img src="slay-the-spire/relics/Tingsha.png" width="128" height="128"><a href="slay-the-spire/relics/popup/Tingsha.png"><img src="slay-the-spire/relics/small-popup/Tingsha.png" class="popup"></a></td>
     <td>Rare</td>
@@ -1853,7 +1853,7 @@ Start each combat with <span class="color-b">1</span> <span class="color-y">Stre
     <td><img src="downfall/relics/bronze-BottledCode.png" width="128" height="128"><a href="downfall/relics/popup/bronze-BottledCode.png"><img src="downfall/relics/small-popup/bronze-BottledCode.png" class="popup"></a></td>
     <td>Special</td>
     <td>The_bronze_automaton</td>
-    <td>Upon pickup, choose a card with <span class="color-y">Encode.</span> Start each combat with this card in the <span class="color-y">Sequence.</span></td>
+    <td>Upon pickup, choose a card with <span class="color-y">Encode.</span> Start each combat with this card <span class="color-y">Encoded.</span></td>
     <td>Actually, I have code for that exact thing...</td>
     <td><a href="downfall/index.html">Downfall</a></td>
   </tr>
@@ -2384,7 +2384,7 @@ Whenever you <span class="color-y">slimeboundmod:Consume,</span> heal <span clas
     <td><img src="downfall/relics/bronze-ElectromagneticCoil.png" width="128" height="128"><a href="downfall/relics/popup/bronze-ElectromagneticCoil.png"><img src="downfall/relics/small-popup/bronze-ElectromagneticCoil.png" class="popup"></a></td>
     <td>Boss</td>
     <td>The_bronze_automaton</td>
-    <td><span class="color-y">Functions</span> are now made up of <span class="color-b">4</span> cards.</td>
+    <td>Functions are now made up of <span class="color-b">4</span> cards.</td>
     <td>An inefficient but entertaining power source.</td>
     <td><a href="downfall/index.html">Downfall</a></td>
   </tr>
@@ -2570,7 +2570,7 @@ The first time you shuffle your draw pile each turn, gain [E] , draw <span class
     <td>Boss</td>
     <td>The_bronze_automaton</td>
     <td>Replaces<span style="color:#d6ca9eff"> Bronze</span><span style="color:#d6ca9eff"> Core</span><span style="color:#d6ca9eff">.</span>
-The first <span class="color-b">3</span> <span class="color-y">Functions</span> you create each combat cost <span class="color-b">0</span> until played.</td>
+The first <span class="color-b">3</span> Functions you create each combat cost <span class="color-b">0</span> until played.</td>
     <td>Changelog: Improved user experience.</td>
     <td><a href="downfall/index.html">Downfall</a></td>
   </tr>
@@ -2798,7 +2798,7 @@ Gain [E] at the start of your turn.</td>
     <td><img src="downfall/relics/champ-Barbells.png" width="128" height="128"><a href="downfall/relics/popup/champ-Barbells.png"><img src="downfall/relics/small-popup/champ-Barbells.png" class="popup"></a></td>
     <td>Shop</td>
     <td></td>
-    <td>Whenever you enter a Rest Site, if you have at least <span class="color-b">10</span> non-Upgraded cards in your deck, <span class="color-y">Upgrade</span> one at random.</td>
+    <td>Whenever you enter a Rest Site, if you have at least <span class="color-b">10</span> Upgradable cards in your deck, <span class="color-y">Upgrade</span> one at random.</td>
     <td>1000 reps? Psh. I can do 1001.</td>
     <td><a href="downfall/index.html">Downfall</a></td>
   </tr>

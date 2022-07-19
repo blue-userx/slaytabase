@@ -559,10 +559,10 @@ Skip your next turn.
 |Rare
 |[[Attack]]
 |1
-|Deal 8 (10) damage.
+|Deal 5 (7) damage.
 Place this into [[guardianmod:Stasis]].
-[[guardianmod:Stasis]] lasts 4 (5) turns.
-[[guardianmod:Tick]] - Deal 8 (10) damage to a random enemy.
+[[guardianmod:Stasis]] lasts 4 turns.
+[[guardianmod:Tick]] - Deal 5 (7) damage to a random enemy.
 |-
 |[[Onyx]]
 |[[File:|thumb|289x289px]]

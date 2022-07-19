@@ -388,9 +388,9 @@ Gain a Lick.
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
-|1
+|1 (0)
 |Choose a card.
-Put (Gain) a copy on top (not on top)of your draw pile (it).
+Put a copy on top of your draw pile.
 [[Exhaust]].
 |-
 |[[Repurpose]]
@@ -495,8 +495,8 @@ The next Attack used on this enemy does not remove [[slimeboundmod:Goop]].
 |Rare
 |[[Attack]]
 |2
-|Deal 12 (18) damage.
-[[slimeboundmod:Consume]] - Heal HP equal to the enemy's [[slimeboundmod:Goop]], up to 18 (24).
+|[[Ethereal]].
+Deal 8 (10) damage. Heal HP equal to unblocked damage.
 [[Exhaust]].
 |-
 |[[Liquidate]]

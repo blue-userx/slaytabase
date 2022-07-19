@@ -1,7 +1,7 @@
 {
   "mod": {
     "name": "BaseMod",
-    "version": "5.41.0",
+    "version": "5.42.2",
     "authors": ["kiooeht","test447"],
     "credits": "t-larson: Original creator of BaseMod.\nContributors: test447, Haashi, kiooeht, Blank The Evil, robojumper, FlipskiZ, DemoXin, Skrelpoid, kobting, twanvl, Moocowsgomoo, JohnnyDevo, MichaelMayhem, admiralbolt, Celicath, Reina, fiiiiilth, Rin Camelia, JohnnyBazooka89, Alchyr, Seeonee, bugsniper, alexdriedger, Raz, erasels, LordAddy, NotInTheFace, Vex, codewarrior0, EricB, Mistress Alison, herbix, modargo, akdream",
     "description": "Unofficial modding API for Slay the Spire. Also a Dev Console.",

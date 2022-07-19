@@ -24,7 +24,7 @@ Gain 1 [[Intangible]].
 |Special
 |[[Skill]]
 |0
-|Create a Function immediately out of the cards in the Sequence.
+|Create a Function immediately out of the cards currently Encoded.
 [[Exhaust]]. (not
 Exhaust.)
 |-
@@ -114,8 +114,8 @@ They gain [[Retain]].
 |Special
 |[[Attack]]
 |1
-|Deal 7 (9) damage.
-Gain 7 (9) [[Block]]
+|Gain 7 (9) [[Block]]
+Deal 7 (9) damage.
 [[bronze:Encode]].
 [[bronze:Compile]] Error - [[bronze:Insert]] 2 Dazed.
 |-
@@ -124,7 +124,7 @@ Gain 7 (9) [[Block]]
 |Special
 |[[Skill]]
 |0
-|Remove all [[bronze:Compile]] Error effects from Encoded cards.
+|Remove all Compile Error effects from Encoded cards.
 [[Exhaust]].
 |-
 |[[Decompile]]

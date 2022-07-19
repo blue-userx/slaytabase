@@ -14,7 +14,7 @@
 |Basic
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Basic Card.
+|([[Upgraded]]) Unidentified Basic Card.
 |-
 |[[Defend]]
 |[[File:|thumb|289x289px]]
@@ -52,112 +52,112 @@ Apply 0 (1) - 2 [[Vulnerable]].
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[???]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Character Card.
+|*Unidentified (Upgraded*Unidentified) Character Card.
 |-
 |[[??? 1-Cost]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) 1 Cost Card.
+|([[Upgraded]]) Unidentified 1 Cost Card.
 |-
 |[[??? Block]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) [[Block]] Card.
+|([[Upgraded]]) Unidentified [[Block]] Card.
 |-
 |[[??? C Attack]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Attack]]
 |
-|*Unidentified ([[Upgraded]]) Common Attack Card.
+|([[Upgraded]]) Unidentified Common Attack Card.
 |-
 |[[??? C Skill]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Common Skill Card.
+|([[Upgraded]]) Unidentified Common Skill Card.
 |-
 |[[??? Draw]]
 |[[File:|thumb|289x289px]]
 |Common
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Draw Card.
+|([[Upgraded]]) Unidentified Draw Card.
 |-
 |[[Dice Block]]
 |[[File:|thumb|289x289px]]
@@ -238,91 +238,91 @@ Gain 2 (3) random [[sneckomod:Offclass]] cards.
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) 0 Cost Card.
+|([[Upgraded]]) Unidentified 0 Cost Card.
 |-
 |[[??? 2-Cost]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) 2 Cost Card.
+|([[Upgraded]]) Unidentified 2 Cost Card.
 |-
 |[[??? Colorless]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Colorless Card.
+|([[Upgraded]]) Unidentified Colorless Card.
 |-
 |[[??? Dexterity]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) [[Dexterity]] Card.
+|([[Upgraded]]) Unidentified [[Dexterity]] Card.
 |-
 |[[??? Exhaust]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) [[Exhaust]] Card.
+|([[Upgraded]]) Unidentified [[Exhaust]] Card.
 |-
 |[[??? Strength]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) [[Strength]] Card.
+|([[Upgraded]]) Unidentified [[Strength]] Card.
 |-
 |[[??? Strike]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Attack]]
 |
-|*Unidentified ([[Upgraded]]) [[Strike]] Card.
+|([[Upgraded]]) Unidentified [[Strike]] Card.
 |-
 |[[??? U Attack]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Attack]]
 |
-|*Unidentified ([[Upgraded]]) Uncommon Attack Card.
+|([[Upgraded]]) Unidentified Uncommon Attack Card.
 |-
 |[[??? U Power]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Power]]
 |
-|*Unidentified ([[Upgraded]]) Uncommon Power Card.
+|([[Upgraded]]) Unidentified Uncommon Power Card.
 |-
 |[[??? U Skill]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Uncommon Skill Card.
+|([[Upgraded]]) Unidentified Uncommon Skill Card.
 |-
 |[[??? Vulnerable]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) [[Vulnerable]] Card.
+|([[Upgraded]]) Unidentified [[Vulnerable]] Card.
 |-
 |[[??? Weak]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) [[Weak]] Card.
+|([[Upgraded]]) Unidentified [[Weak]] Card.
 |-
 |[[??? X-Cost]]
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) X Cost Card.
+|([[Upgraded]]) Unidentified X Cost Card.
 |-
 |[[Cheap Stock]]
 |[[File:|thumb|289x289px]]
@@ -343,7 +343,7 @@ Gain 2 (3) random [[sneckomod:Offclass]] cards.
 |Uncommon
 |[[Attack]]
 |2
-|Deal 1 (8) - 31 (34) damage.
+|Deal 1 (7) - 27 (30) damage.
 Can be [[Upgraded]] any number of times.
 |-
 |[[Improvised Attack]]
@@ -361,14 +361,6 @@ Gain a random [[sneckomod:Offclass]] Attack and [[sneckomod:Muddle]] it.
 |1
 |Gain 8 (11) [[Block]].
 Gain a random [[sneckomod:Offclass]] Skill and [[sneckomod:Muddle]] it.
-|-
-|[[Master Eye]]
-|[[File:|thumb|289x289px]]
-|Uncommon
-|[[Power]]
-|1
-|Become [[Confused]].
-Draw 1 (2) additional card(s) each turn.
 |-
 |[[Memorize]]
 |[[File:|thumb|289x289px]]
@@ -475,35 +467,35 @@ Exhaust.)
 |Rare
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) 3 Cost Card.
+|([[Upgraded]]) Unidentified 3 Cost Card.
 |-
 |[[??? Boss]]
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Colorless Boss card.
+|([[Upgraded]]) Unidentified Colorless Boss card.
 |-
 |[[??? R Attack]]
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Attack]]
 |
-|*Unidentified ([[Upgraded]]) Rare Attack Card.
+|([[Upgraded]]) Unidentified Rare Attack Card.
 |-
 |[[??? R Power]]
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Power]]
 |
-|*Unidentified ([[Upgraded]]) Rare Power Card.
+|([[Upgraded]]) Unidentified Rare Power Card.
 |-
 |[[??? R Skill]]
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Skill]]
 |
-|*Unidentified ([[Upgraded]]) Rare Skill Card.
+|([[Upgraded]]) Unidentified Rare Skill Card.
 |-
 |[[Danger Noodle]]
 |[[File:|thumb|289x289px]]
@@ -528,6 +520,14 @@ Repeat this for each [[sneckomod:Offclass]] card in your hand, then [[Exhaust]] 
 |[[sneckomod:Snekproof]].
 Gain -10 (0) - 30 Gold.
 [[Exhaust]].
+|-
+|[[Master Eye]]
+|[[File:|thumb|289x289px]]
+|Rare
+|[[Power]]
+|2 (1)
+|Become [[Confused]].
+Draw 2 additional cards each turn.
 |-
 |[[More Power!]]
 |[[File:|thumb|289x289px]]

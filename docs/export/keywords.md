@@ -20,7 +20,7 @@
 | Buried | Buried cards will always be chosen last for random Exhume effects. |
 | Combo | Extra effect when played in the listed Stance. |
 | Command | Your leading Slime attacks. |
-| Compile | An additional effect that triggers when this card, while Encoded, is combined into a Function. Can be a negative effect, which is referred to as an 'Error'. |
+| Compile | An effect that triggers when this card is merged into a Function. Can be a negative effect, which is referred to as an 'Error'. |
 | Concentration | The next Dead On card played while Concentrated triggers its effect regardless of position. Wears off on turn end. |
 | Consume | Bonus effect which activates when an Attack is used on an enemy who has Goop. |
 | Counter | The next time you take Attack damage, deal damage back. |
@@ -34,7 +34,7 @@
 | Defensive Mode | Stance. Gain 10 Block when entering Defensive Mode. While in Defensive Mode, you have 3 Thorns, gain 10 Block at the start of your turn, and your Block does not expire. |
 | Downgrade | Remove an upgrade from a card. |
 | Echo | Echoes are copies of cards with Ethereal and Exhaust. |
-| Encode | Add the card to the Sequence. When 3 cards are in the Sequence, their effects (other than Encode) are merged into a Function that costs 1. |
+| Encode | Encode a card. When 3 cards are Encoded, their effects (other than Encode) are merged into a Function that costs 1. |
 | Exhume | Put a card from your exhaust pile into your hand. Exhuming cards cannot cross-exhume themselves. |
 | Extinguish | Allows Ghostflame to become Ignited again, resetting its Ignition requirements. |
 | Fat Gremlin | After you play an attack, apply 1 Weak to all targets. |
@@ -58,7 +58,6 @@
 | Lucky | Cards that choose a random number as part of their card text choose the maximum possible number. (Does not affect Muddle) |
 | Mad Gremlin | Gain 2 Temporary Strength when attacked. |
 | Mire Slime | Attacks for 2 and applies 2 Goop each turn. |
-| Morph | Replace with a random new card of your class, regardless of type. It costs 1 less. |
 | Muddle | Muddling a card changes its cost this turn to between 0 and 3. |
 | Offclass | An Offclass card is any obtainable card from a class other than your own (including Colorless cards, Curses, and Statuses). |
 | Package | 0-cost Exhausting Skill that generates three cards inspired by a chosen Construct of the Spire, and reduces their cost by 1 for this combat. |

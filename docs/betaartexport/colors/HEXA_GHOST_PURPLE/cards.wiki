@@ -121,15 +121,6 @@ If the current Ghostflame is Ignited, [[hexamod:Ignite]] it again.
 |Deal 9 (12) damage.
 After [[hexamod:Soulburn]] detonates on this enemy, apply 12 (16) [[hexamod:Soulburn]].
 |-
-|[[Hexaguard]]
-|[[File:|thumb|289x289px]]
-|Common
-|[[Skill]]
-|1
-|[[Ethereal]]. [[hexamod:Afterlife]].
-Gain 7 (10) [[Block]].
-Draw 1 card.
-|-
 |[[Nightmare Guise]]
 |[[File:|thumb|289x289px]]
 |Common
@@ -340,6 +331,15 @@ Damage is increased by enemy's Soulburn.
 |[[Skill]]
 |1 (0)
 |Gain [[Block]] equal to Soulburn on ALL enemies, then remove Soulburn.
+|-
+|[[Hexaguard]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Skill]]
+|1
+|[[Ethereal]]. [[hexamod:Afterlife]].
+Gain 7 (10) [[Block]].
+Draw 1 card.
 |-
 |[[Incineration]]
 |[[File:|thumb|289x289px]]

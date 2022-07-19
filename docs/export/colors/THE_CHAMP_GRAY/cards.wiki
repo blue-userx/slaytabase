@@ -68,9 +68,9 @@ Gain 6 (9) [[Block]], increased by Vigor.
 |Common
 |[[Skill]]
 |1
-|Enter [[champ:Berserker]].
-Gain 4 (6) [[Block]].
-Gain 4 (6) [[Vigor]].
+|Gain 4 (6) [[Block]].
+Gain 4 (5) [[Vigor]].
+Enter [[champ:Berserker]].
 |-
 |[[Bring It On]]
 |[[File:|thumb|289x289px]]
@@ -176,9 +176,9 @@ Apply 2 [[Weak]].
 |Common
 |[[Attack]]
 |1
-|Deal 7 (9) damage.
-Berserker champ:Combo: Deal 7 (9) damage.
-Defensive champ:Combo: Gain 7 (9) [[Block]].
+|Deal 6 (8) damage.
+Berserker champ:Combo: Deal 6 (8) damage.
+Defensive champ:Combo: Gain 6 (8) [[Block]].
 |-
 |[[Stance Dance]]
 |[[File:|thumb|289x289px]]
@@ -209,7 +209,7 @@ Defensive champ:Combo: Gain 7 (9) [[Block]] for each enemy hit.
 |[[Skill]]
 |1
 |[[Exhaust]].
-Trigger 2 (3) times without exiting your Stance:
+Perform 2 (3) times without exiting your Stance:
 [fist_icon] [[champ:Finisher]]
 |-
 |[[Arena Preparation]]
@@ -262,7 +262,7 @@ Does not consume [[Vigor]].
 |[[Attack]]
 |2
 |Deal 15 (20) damage to ALL enemies.
-Gain 10 (15) [[Vigor]].
+Gain 8 (10) [[Vigor]].
 [[Exhaust]].
 |-
 |[[Defensive Style]]
@@ -319,7 +319,7 @@ ALL enemies gain 1 [[Strength]].
 |Uncommon
 |[[Attack]]
 |1
-|Deal 10 (15) damage.
+|Deal 8 (12) damage.
 Any Stance champ:Combo: Enter [[champ:Ultimate]] [[Stance]] for 1 turn.
 [[Exhaust]].
 |-
@@ -455,7 +455,7 @@ Defensive champ:Combo: Increase these effects by 3 (4) this combat.
 |[[Skill]]
 |1
 |Target enemy gains 1 [[Strength]].
-Gain 12 (16) [[Vigor]].
+Gain 10 (14) [[Vigor]].
 |-
 |[[Wind Up]]
 |[[File:|thumb|289x289px]]
@@ -498,14 +498,14 @@ Gain [[Block]] equal to unblocked damage dealt.
 |5
 |Deal 6 (9) damage 3 times.
 Costs 1 less [E] for each Finisher played this combat.
-[fist_icon] [[champ:Finisher]]
 |-
 |[[Enchant Crown]]
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Skill]]
 |1 (0)
-|Choose a card in hand. It costs 0 this combat.
+|Choose a card.
+It costs 0 this combat.
 [[Exhaust]].
 |-
 |[[Enchant Shield]]
@@ -513,7 +513,8 @@ Costs 1 less [E] for each Finisher played this combat.
 |Rare
 |[[Skill]]
 |1 (0)
-|Choose a card in hand. Increase its [[Block]] by 8 for this combat.
+|Choose a card.
+Increase its [[Block]] by 8 for this combat.
 [[Exhaust]].
 |-
 |[[Enchant Sword]]
@@ -521,7 +522,8 @@ Costs 1 less [E] for each Finisher played this combat.
 |Rare
 |[[Skill]]
 |1 (0)
-|Choose a card in hand. Increase its damage by 8 for this combat. [[Exhaust]].
+|Choose a card.
+Increase its damage by 8 for this combat. [[Exhaust]].
 |-
 |[[Gladiator Form]]
 |[[File:|thumb|289x289px]]

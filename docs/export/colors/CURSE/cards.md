@@ -11,7 +11,7 @@
 | Clumsy | ![](../../slay-the-spire/small-card-images/Curse-Clumsy.png) | ![]() | Curse | Curse |  | Unplayable. Ethereal. |
 | Decay | ![](../../slay-the-spire/small-card-images/Curse-Decay.png) | ![]() | Curse | Curse |  | Unplayable. At the end of your turn, take 2 damage. |
 | Doubt | ![](../../slay-the-spire/small-card-images/Curse-Doubt.png) | ![]() | Curse | Curse |  | Unplayable. At the end of your turn, gain 1 Weak. |
-| Flawed | ![](../../downfall/small-card-images/Curse-Flawed.png) | ![]() | Curse | Curse | 1 | Ethereal. At the end of your turn, transform all cards in hand into random Status cards. Exhaust. |
+| Flawed | ![](../../downfall/small-card-images/Curse-Flawed.png) | ![]() | Curse | Curse | 1 | At the end of your turn, transform all cards in hand into random Status cards. Exhaust. |
 | Haunted | ![](../../downfall/small-card-images/Curse-Haunted.png) | ![]() | Curse | Curse |  | Ethereal. Unplayable. When drawn, add Ethereal to all cards in your hand. |
 | Icky | ![](../../downfall/small-card-images/Curse-Icky.png) | ![]() | Curse | Curse | 1 | Gain a Slimed. Exhaust. |
 | Injury | ![](../../slay-the-spire/small-card-images/Curse-Injury.png) | ![]() | Curse | Curse |  | Unplayable. |
