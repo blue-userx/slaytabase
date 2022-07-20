@@ -42,7 +42,7 @@ async function getEmbeds(msg) {
         if (queries.length > 0) {
             let embeds = [];
             for (let originalQuery of queries) {
-                if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery.startsWith('a:') || originalQuery.startsWith('http') || originalQuery == 'init')) {
+                if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery.startsWith('a:') || originalQuery.startsWith('t:') || originalQuery.startsWith('http') || originalQuery == 'init')) {
                     let query = fn.unPunctuate(originalQuery);
                     if (query.length <= 0) continue;
                     let item = fn.find(query);
