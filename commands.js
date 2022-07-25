@@ -125,9 +125,8 @@ __Commands:__
     }),
 
     'searchtext ': async (msg, arg) => {
-        let results = search.search(arg);
-        let result = results.length > 0 ? results[0] : null;
-        if (result == null) return {title: "no result?"};
+        let result = fn.find(arg);
+        if (result.item.itemType == 'fail') return {title: "no result?"};
         return {
             title: `"${arg}" yields:`,
             description: result.item.searchText.toLowerCase(),
