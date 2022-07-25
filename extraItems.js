@@ -1231,6 +1231,11 @@ export default {
         "edit": {
             "cards": [
                 {
+                    "where": {"name": "Gremlin Dance"},
+                    "to": {"description": desc => desc.replace('Has a bonus effect based on which Gremlin you are.', 'If Sneaky: Draw 2 cards.\nIf Mad: Deals to ALL enemies.\nIf Shield: Gain 6 Block.\nIf Fat: Enemy loses 2 Strength this turn.\nIf Wizard: Gain 2 Wiz.')}
+                },
+
+                {
                     "where": {"name": "Darkling Duo"},
                     "to": {"name": "Darkling Duo (Trio)", "img": "/altered/img/cards/Colorless-DarklingDuo.png"}
                 },
