@@ -36,7 +36,6 @@ async function meme(arg, options) {
             color: items[0].embed.color,
         };
     } catch(e) {
-        console.log(e);
         return {title: 'failed to generate image'};
     }
 }
@@ -62,7 +61,7 @@ __Commands:__
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
 <choose [word1 word2 word3...]> chooses one of the specified words for you at random
-<megamind no [item name]> pities someone's rng
+<memes> help with the bot's meme generator
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
 `,
@@ -220,6 +219,18 @@ __Commands:__
             };  
     },
 
+    memes: () => ({
+        title: 'Meme generator',
+        description: `Some memes take more than one item, separate items with the "=" symbol.
+        
+__List of memes:__
+<megamind no [item]>
+<friendship ended [bad item]=[good item]> 
+<coolerdaniel [daniel]=[coolerdaniel]> 
+`,
+        thumbnail: {url: bot.user.avatarURL()},
+    }),
+
     'megamind no ': async (msg, arg) => await meme(arg, {
         w: 640,
         h: 640,
@@ -241,6 +252,17 @@ __Commands:__
             [0, 422, 271, 176, 177],
             ['fsecross1.png', 4, 260, 135, 184],
             ['fsecross2.png', 431, 283, 155, 149]
+        ]
+    }),
+
+    'coolerdaniel ': async (msg, arg) => await meme(arg, {
+        w: 1452,
+        h: 816,
+        bg: 'daniel.png',
+        items: 2,
+        put: [
+            [0, 229, 84, 381, 458],
+            [1, 794, 110, 341, 414],
         ]
     }),
 };
