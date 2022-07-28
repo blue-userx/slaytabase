@@ -64,6 +64,15 @@ async function getEmbeds(msg) {
     } else return null; //msg.reply("I can only take up to 10 queries at a time!").catch(e => {});
 }
 
+function getFilesFromEmbeds(embeds) {
+    let files = [];
+    for (let embed of embeds) {
+        files = [...files, ...(Array.isArray(embed.files) ? embed.files : [])];
+        delete embed.files;
+    }
+    return files;
+}
+
 bot.on('messageCreate', async msg => {
     let embeds = await getEmbeds(msg);
     if (embeds === null)
@@ -71,7 +80,7 @@ bot.on('messageCreate', async msg => {
     else if (embeds === 0)
         return;
     else
-        msg.reply({embeds, allowedMentions: {repliedUser: false}}).catch(e => {});
+        msg.reply({embeds, files: getFilesFromEmbeds(embeds), allowedMentions: {repliedUser: false}}).catch(e => {});
 });
 
 bot.on('messageUpdate', async (oldMsg, newMsg) => {
@@ -84,7 +93,7 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
         else if (embeds === 0)
             reply.delete().catch(e => {});
         else
-            reply.edit({content: ' ', embeds, allowedMentions: {repliedUser: false}}).catch(e => {});
+            reply.edit({content: ' ', embeds, files: getFilesFromEmbeds(embeds), allowedMentions: {repliedUser: false}}).catch(e => {});
     } else
         bot.emit('messageCreate', newMsg);
 });

@@ -1,4 +1,6 @@
 import { bot, search } from './index.js';
+import { createCanvas, loadImage } from 'canvas';
+import fs from 'fs';
 import fn from './fn.js';
 import embed from './embed.js';
 import cfg from './cfg.js';
@@ -26,6 +28,7 @@ __Commands:__
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
 <choose [word1 word2 word3...]> chooses one of the specified words for you at random
+<megamind no [item name]> pities someone's rng
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
 `,
@@ -138,7 +141,7 @@ __Commands:__
         let itemEmbed = await embed({...item.item, score: item.score, query: arg});
 
         return {
-            title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ` `,
+            title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
             image: itemEmbed.thumbnail,
             color: itemEmbed.color,
         };
@@ -181,5 +184,30 @@ __Commands:__
                 title: 'Cannot create a discussion',
                 description: 'Only certain people may create discussions'
             };  
+    },
+
+    'megamind no ': async (msg, arg) => {
+        let item = fn.find(arg);
+        let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+        if (itemEmbed.thumbnail == null)
+            return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
+
+        try {
+            let canvas = createCanvas(640, 640);
+            let ctx = canvas.getContext('2d');
+
+            ctx.drawImage(await loadImage('./mm.jpg'), 0, 0);
+            ctx.drawImage(await loadImage(itemEmbed.thumbnail.url), 182, 39, 354, 96);
+            let buffer = canvas.toBuffer('image/png');
+            fs.writeFileSync('./mmexport.png', buffer);
+            return {
+                title: ' ',
+                image: {url: 'attachment://mmexport.png'},
+                files: ['./mmexport.png'],
+                color: itemEmbed.color,
+            };
+        } catch(e) {
+            return {title: 'failed to generate image'};
+        }
     },
 };
