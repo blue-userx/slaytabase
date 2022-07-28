@@ -1,11 +1,14 @@
 import { bot, search } from './index.js';
 import { createCanvas, loadImage } from 'canvas';
+import drawText from 'node-canvas-text';
+import opentype from 'opentype.js';
 import fs from 'fs';
 import fn from './fn.js';
 import embed from './embed.js';
 import cfg from './cfg.js';
 
 const delSearchLimit = 25;
+const font = opentype.loadSync('./memetemplates/Kreon-Regular.ttf');
 
 async function meme(arg, options) {
     try {
@@ -26,6 +29,11 @@ async function meme(arg, options) {
         ctx.drawImage(await loadImage('./memetemplates/'+options.bg), 0, 0);
         for (let p of options.put)
             ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
+        for (let t of options.texts)
+            drawText.default(ctx, items[t[0]].item.name.toUpperCase(), font,
+                {x: t[1], y: t[2], width: t[3], height: t[4]}, 
+                {minSize: 5, maxSize: 200, vAlign: 'center', hAlign: 'center', textFillStyle: t[5], fitMethod: 'box', drawRect: false}
+            );
         
         let buffer = canvas.toBuffer('image/png');
         fs.writeFileSync('./memeexport.png', buffer);
@@ -36,6 +44,7 @@ async function meme(arg, options) {
             color: items[0].embed.color,
         };
     } catch(e) {
+        console.error(e);
         return {title: 'failed to generate image'};
     }
 }
@@ -227,6 +236,7 @@ __List of memes:__
 <megamind no [item]>
 <friendship ended [bad item]=[good item]> 
 <coolerdaniel [daniel]=[coolerdaniel]> 
+<19 dollar [fortnite card]> 
 `,
         thumbnail: {url: bot.user.avatarURL()},
     }),
@@ -245,13 +255,15 @@ __List of memes:__
         bg: 'fse.png',
         items: 2,
         put: [
-            [0, 402, 0, 170, 64],
-            [1, 235, 123, 98, 49],
             [1, 113, 66, 111, 107],
             [0, 0, 247, 143, 200],
             [0, 422, 271, 176, 177],
             ['fsecross1.png', 4, 260, 135, 184],
             ['fsecross2.png', 431, 283, 155, 149]
+        ],
+        texts: [
+            [0, 402, 0, 170, 64, 'red'],
+            [1, 235, 123, 98, 49, 'green'],
         ]
     }),
 
@@ -264,5 +276,14 @@ __List of memes:__
             [0, 229, 84, 381, 458],
             [1, 794, 110, 341, 414],
         ]
+    }),
+
+    '19 dollar ': async (msg, arg) => await meme(arg, {
+        w: 779,
+        h: 751,
+        bg: '19dollar.png',
+        items: 1,
+        put: [[0, 60, 404, 157, 229]],
+        texts: [[0, 82, 653, 622, 98, 'white']]
     }),
 };
