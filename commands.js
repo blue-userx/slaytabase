@@ -27,13 +27,15 @@ async function meme(arg, options) {
         let ctx = canvas.getContext('2d');
 
         ctx.drawImage(await loadImage('./memetemplates/'+options.bg), 0, 0);
-        for (let p of options.put)
-            ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
-        for (let t of options.texts)
-            drawText.default(ctx, items[t[0]].item.name.toUpperCase(), font,
-                {x: t[1], y: t[2], width: t[3], height: t[4]}, 
-                {minSize: 5, maxSize: 200, vAlign: 'center', hAlign: 'center', textFillStyle: t[5], fitMethod: 'box', drawRect: false}
-            );
+        if (options.hasOwnProperty('put'))
+            for (let p of options.put)
+                ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
+        if (options.hasOwnProperty('texts'))
+            for (let t of options.texts)
+                drawText.default(ctx, items[t[0]].item.name.toUpperCase(), font,
+                    {x: t[1], y: t[2], width: t[3], height: t[4]}, 
+                    {minSize: 5, maxSize: 200, vAlign: 'center', hAlign: 'center', textFillStyle: t[5], fitMethod: 'box', drawRect: false}
+                );
         
         let buffer = canvas.toBuffer('image/png');
         fs.writeFileSync('./memeexport.png', buffer);
@@ -237,6 +239,7 @@ __List of memes:__
 <friendship ended [bad item]=[good item]> 
 <coolerdaniel [daniel]=[coolerdaniel]> 
 <19 dollar [fortnite card]> 
+<distracted [gf]=[distraction]> 
 `,
         thumbnail: {url: bot.user.avatarURL()},
     }),
@@ -285,5 +288,16 @@ __List of memes:__
         items: 1,
         put: [[0, 60, 404, 157, 229]],
         texts: [[0, 82, 653, 622, 98, 'white']]
+    }),
+
+    'distracted ': async (msg, arg) => await meme(arg, {
+        w: 800,
+        h: 533,
+        bg: 'distracted.png',
+        items: 2,
+        put: [
+            [0, 598, 145, 110, 108],
+            [1, 152, 120, 158, 160]
+        ],
     }),
 };
