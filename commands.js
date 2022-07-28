@@ -7,6 +7,40 @@ import cfg from './cfg.js';
 
 const delSearchLimit = 25;
 
+async function meme(arg, options) {
+    try {
+        let args = arg.split('=');
+        if (args.length != options.items)
+            return {title: `This meme requires exactly ${options.items} item${options.items == 1 ? '' : 's'}. Separate items with the "=" symbol.`};
+        let items = args.map(a => fn.find(a));
+        for (let item of items) {
+            item.embed = await embed({...item.item, score: item.score, query: arg});
+            if (item.embed.thumbnail == null)
+                return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
+            item.image = await loadImage(item.embed.thumbnail.url);
+        }
+
+        let canvas = createCanvas(options.w, options.h);
+        let ctx = canvas.getContext('2d');
+
+        ctx.drawImage(await loadImage('./memetemplates/'+options.bg), 0, 0);
+        for (let p of options.put)
+            ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
+        
+        let buffer = canvas.toBuffer('image/png');
+        fs.writeFileSync('./memeexport.png', buffer);
+        return {
+            title: ' ',
+            image: {url: 'attachment://memeexport.png'},
+            files: ['./memeexport.png'],
+            color: items[0].embed.color,
+        };
+    } catch(e) {
+        console.log(e);
+        return {title: 'failed to generate image'};
+    }
+}
+
 export default {
     help: () => ({
         title: 'DownfallBot',
@@ -186,28 +220,27 @@ __Commands:__
             };  
     },
 
-    'megamind no ': async (msg, arg) => {
-        let item = fn.find(arg);
-        let itemEmbed = await embed({...item.item, score: item.score, query: arg});
-        if (itemEmbed.thumbnail == null)
-            return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
+    'megamind no ': async (msg, arg) => await meme(arg, {
+        w: 640,
+        h: 640,
+        bg: 'mm.jpg',
+        items: 1,
+        put: [[0, 182, 39, 354, 96]]
+    }),
 
-        try {
-            let canvas = createCanvas(640, 640);
-            let ctx = canvas.getContext('2d');
-
-            ctx.drawImage(await loadImage('./mm.jpg'), 0, 0);
-            ctx.drawImage(await loadImage(itemEmbed.thumbnail.url), 182, 39, 354, 96);
-            let buffer = canvas.toBuffer('image/png');
-            fs.writeFileSync('./mmexport.png', buffer);
-            return {
-                title: ' ',
-                image: {url: 'attachment://mmexport.png'},
-                files: ['./mmexport.png'],
-                color: itemEmbed.color,
-            };
-        } catch(e) {
-            return {title: 'failed to generate image'};
-        }
-    },
+    'friendship ended ': async (msg, arg) => await meme(arg, {
+        w: 600,
+        h: 450,
+        bg: 'fse.png',
+        items: 2,
+        put: [
+            [0, 402, 0, 170, 64],
+            [1, 235, 123, 98, 49],
+            [1, 113, 66, 111, 107],
+            [0, 0, 247, 143, 200],
+            [0, 422, 271, 176, 177],
+            ['fsecross1.png', 4, 260, 135, 184],
+            ['fsecross2.png', 431, 283, 155, 149]
+        ]
+    }),
 };
