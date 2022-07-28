@@ -75,14 +75,19 @@ function getFilesFromEmbeds(embeds) {
     return files;
 }
 
+const delfiles = files => files.forEach(file => fs.unlinkSync(file));
+
 bot.on('messageCreate', async msg => {
     let embeds = await getEmbeds(msg);
     if (embeds === null)
         msg.reply('I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.').catch(e => {});
     else if (embeds === 0)
         return;
-    else
-        msg.reply({embeds, files: getFilesFromEmbeds(embeds), allowedMentions: {repliedUser: false}}).catch(e => {});
+    else {
+        let files = getFilesFromEmbeds(embeds)
+        await msg.reply({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+        delfiles(files);
+    }
 });
 
 bot.on('messageUpdate', async (oldMsg, newMsg) => {
@@ -94,8 +99,11 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
             reply.edit({content: 'I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.', embeds: []}).catch(e => {});
         else if (embeds === 0)
             reply.delete().catch(e => {});
-        else
-            reply.edit({content: ' ', embeds, files: getFilesFromEmbeds(embeds), allowedMentions: {repliedUser: false}}).catch(e => {});
+        else {
+            let files = getFilesFromEmbeds(embeds)
+            await reply.edit({content: ' ', embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+            delfiles(files);
+        }  
     } else
         bot.emit('messageCreate', newMsg);
 });

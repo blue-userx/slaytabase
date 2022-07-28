@@ -38,11 +38,12 @@ async function meme(arg, options) {
                 );
         
         let buffer = canvas.toBuffer('image/png');
-        fs.writeFileSync('./memeexport.png', buffer);
+        let filename = `export${String(Math.random()).slice(2)}.png`
+        fs.writeFileSync(filename, buffer);
         return {
             title: ' ',
-            image: {url: 'attachment://memeexport.png'},
-            files: ['./memeexport.png'],
+            image: {url: 'attachment://'+filename},
+            files: [filename],
             color: items[0].embed.color,
         };
     } catch(e) {
