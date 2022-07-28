@@ -77,7 +77,12 @@ async function embed(item, msg, embeds=[]) {
             e.title = '';
             delete e.url;
             delete e.footer;
-            let args = item.query.slice(item.name.length).trim().split(' ');
+            let args;
+            if (item.type == 'prefix')
+                args = item.query.slice(item.name.length);
+            else if (item.type == 'suffix')
+                args = item.query.slice(0, item.query.length-item.name.length);
+            args = args.trim().split(' ');
             let result = await item.do(msg, args.join(' '), args);
             for (let i in result)
                 e[i] = result[i];

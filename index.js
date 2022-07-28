@@ -47,13 +47,15 @@ async function getEmbeds(msg) {
                 let query = fn.unPunctuate(originalQuery);
                 if (query.length <= 0) continue;
                 let item = fn.find(query);
-                for (let i in commands)
-                    if (query.startsWith(i))
-                        item = {item: {
-                            name: i,
-                            do: commands[i],
-                            itemType: 'command',
-                        }};
+                for (let type of [['prefix', 'startsWith'], ['suffix', 'endsWith']])
+                    for (let i in commands[type[0]])
+                        if (query[type[1]](i))
+                            item = {item: {
+                                name: i,
+                                type: type[0],
+                                do: commands[type[0]][i],
+                                itemType: 'command',
+                            }};
                 console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                 let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
                 if (genEmbed != null)
