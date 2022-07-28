@@ -37,27 +37,27 @@ bot.once('ready', async () => {
 });
 
 async function getEmbeds(msg) {
-    let queries = [...msg.content.matchAll(/\<(.*?)\>/g)].map(e => e[1]);
+    let queries = [...msg.content.matchAll(/\<(.*?)\>/g)]
+        .map(e => e[1])
+        .filter(q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init'));
     if (queries.length <= queryLimit) {
         if (queries.length > 0) {
             let embeds = [];
             for (let originalQuery of queries) {
-                if (!(originalQuery.startsWith('@') || originalQuery.startsWith('#') || originalQuery.startsWith(':') || originalQuery.startsWith('a:') || originalQuery.startsWith('t:') || originalQuery.startsWith('http') || originalQuery == 'init')) {
-                    let query = fn.unPunctuate(originalQuery);
-                    if (query.length <= 0) continue;
-                    let item = fn.find(query);
-                    for (let i in commands)
-                        if (query.startsWith(i))
-                            item = {item: {
-                                name: i,
-                                do: commands[i],
-                                itemType: 'command',
-                            }};
-                    console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
-                    let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
-                    if (genEmbed != null)
-                        embeds.push(genEmbed)
-                }
+                let query = fn.unPunctuate(originalQuery);
+                if (query.length <= 0) continue;
+                let item = fn.find(query);
+                for (let i in commands)
+                    if (query.startsWith(i))
+                        item = {item: {
+                            name: i,
+                            do: commands[i],
+                            itemType: 'command',
+                        }};
+                console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
+                let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
+                if (genEmbed != null)
+                    embeds.push(genEmbed)
             }
             return embeds; //
         } else return 0;
