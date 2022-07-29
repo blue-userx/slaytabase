@@ -245,7 +245,7 @@ __List of memes:__
 <[item] my beloved>
 <why cant i hold all these [item]>
 `,
-            thumbnail: {url: bot.user.avatarURL()},
+            thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
 
         'megamind no ': async (msg, arg) => await meme(arg, {
@@ -332,6 +332,17 @@ __List of memes:__
             items: 1,
             put: [[0, 103, 200, 164, 139]],
             texts: [[0, 373, 130, 202, 71, 'black']]
+        }),
+
+        ' speech bubble': async (msg, arg) => await meme(arg, {
+            w: 200,
+            h: 200,
+            bg: 'empty.png',
+            items: 1,
+            put: [
+                [0, 25, 50, 150, 150],
+                ['speechbubble.png', 0, 0, 200, 200]
+            ],
         }),
     }
 };
