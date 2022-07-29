@@ -364,23 +364,6 @@ __List of memes:__
             }
             return await meme(arg, options);
         },
-
-        'sb2 ': async (msg, arg) => await meme(arg, {
-            w: 400,
-            h: 200,
-            bg: 'empty.png',
-            items: [0, 1, 0, 1],
-            put: [
-                [0, 25, 50, 150, 150],
-                ['speechbubble2.png', 0, 0, 200, 200],
-                [2, 225, 50, 150, 150],
-                ['speechbubble2.png', 200, 0, 200, 200]
-            ],
-            texts: [
-                [1, 17, 13, 164, 31, 'black'],
-                [3, 217, 13, 164, 31, 'black'],
-            ],
-        }),
     },
 
     suffix: {
