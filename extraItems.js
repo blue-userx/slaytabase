@@ -1454,6 +1454,13 @@ export default {
                     "to": {"color": "Slimebound"}
                 }
             ],
+
+            "creatures": [
+                {
+                    "where": {"name": "Neow", type: "Boss"},
+                    "to": {"img": "/export/downfall/creatures/NeowBossFinal.png"}
+                }
+            ],
     
             "keywords": [
                 {
