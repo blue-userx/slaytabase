@@ -1463,7 +1463,7 @@ export default {
 
                 {
                     "where": {"name": "The Champ", type: "Boss"},
-                    "to": {"img": "/export/downfall/creatures/Champ.png"}
+                    "to": {"img": "/export/slay-the-spire/creatures/Champ.png"}
                 },
 
                 {
