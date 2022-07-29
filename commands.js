@@ -2,6 +2,7 @@ import { bot, search } from './index.js';
 import { createCanvas, loadImage } from 'canvas';
 import drawText from 'node-canvas-text';
 import opentype from 'opentype.js';
+import { Gif } from 'make-a-gif'
 import fs from 'fs';
 import fn from './fn.js';
 import embed from './embed.js';
@@ -41,8 +42,11 @@ async function meme(arg, options) {
                 );
         
         let buffer = canvas.toBuffer('image/png');
-        let filename = `export${String(Math.random()).slice(2)}.png`
-        fs.writeFileSync(filename, buffer);
+        let gif = new Gif(options.w, options.h, 500);
+        await gif.addFrame({src: buffer});
+        let render = await gif.encode();
+        let filename = `export${String(Math.random()).slice(2)}.gif`;
+        fs.writeFileSync(filename, render);
         return {
             title: ' ',
             image: {url: 'attachment://'+filename},
