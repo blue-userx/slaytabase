@@ -13,14 +13,17 @@ const font = opentype.loadSync('./memetemplates/Kreon-Regular.ttf');
 async function meme(arg, options) {
     try {
         let args = arg.split('=');
-        if (args.length != options.items)
-            return {title: `This meme requires exactly ${options.items} item${options.items == 1 ? '' : 's'}. Separate items with the "=" symbol.`};
-        let items = args.map(a => fn.find(a));
-        for (let item of items) {
-            item.embed = await embed({...item.item, score: item.score, query: arg});
-            if (item.embed.thumbnail == null)
-                return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
-            item.image = await loadImage(item.embed.thumbnail.url);
+        if (args.length != options.items.length)
+            return {title: `This meme requires exactly ${options.items.length} item${options.items.length == 1 ? '' : 's'}. Separate items with the "=" symbol.`};
+        let items = args.map((a, i) => options.items[i] == 1 ? a : fn.find(a));
+        for (let i in items) {
+            if (options.items[i] == 0) {
+                let item = items[i];
+                item.embed = await embed({...item.item, score: item.score, query: arg});
+                if (item.embed.thumbnail == null)
+                    return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
+                item.image = await loadImage(item.embed.thumbnail.url);
+            }
         }
 
         let canvas = createCanvas(options.w, options.h);
@@ -32,7 +35,7 @@ async function meme(arg, options) {
                 ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
         if (options.hasOwnProperty('texts'))
             for (let t of options.texts)
-                drawText.default(ctx, items[t[0]].item.name.toUpperCase(), font,
+                drawText.default(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : items[t[0]].item.name.toUpperCase(), font,
                     {x: t[1], y: t[2], width: t[3], height: t[4]}, 
                     {minSize: 5, maxSize: 200, vAlign: 'center', hAlign: 'center', textFillStyle: t[5], fitMethod: 'box', drawRect: false}
                 );
@@ -245,6 +248,7 @@ __List of memes:__
 <[item] my beloved>
 <why cant i hold all these [item]>
 <[item] speech bubble>
+<speech bubble [item]=[text in speech bubble]>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -253,7 +257,7 @@ __List of memes:__
             w: 640,
             h: 640,
             bg: 'mm.jpg',
-            items: 1,
+            items: [0],
             put: [[0, 182, 39, 354, 96]]
         }),
 
@@ -261,7 +265,7 @@ __List of memes:__
             w: 600,
             h: 450,
             bg: 'fse.png',
-            items: 2,
+            items: [0, 0],
             put: [
                 [1, 113, 66, 111, 107],
                 [0, 0, 247, 143, 200],
@@ -279,7 +283,7 @@ __List of memes:__
             w: 1452,
             h: 816,
             bg: 'daniel.png',
-            items: 2,
+            items: [0, 0],
             put: [
                 [0, 229, 84, 381, 458],
                 [1, 794, 110, 341, 414],
@@ -290,7 +294,7 @@ __List of memes:__
             w: 779,
             h: 751,
             bg: '19dollar.png',
-            items: 1,
+            items: [0],
             put: [[0, 60, 404, 157, 229]],
             texts: [[0, 82, 653, 622, 98, 'white']]
         }),
@@ -299,7 +303,7 @@ __List of memes:__
             w: 800,
             h: 533,
             bg: 'distracted.png',
-            items: 2,
+            items: [0, 0],
             put: [
                 [0, 598, 145, 110, 108],
                 [1, 152, 120, 158, 160]
@@ -310,7 +314,7 @@ __List of memes:__
             w: 450,
             h: 600,
             bg: 'hold.png',
-            items: 1,
+            items: [0],
             put: [
                 [0, 116, 439, 38, 38],
                 [0, 225, 374, 44, 40],
@@ -323,6 +327,18 @@ __List of memes:__
             ],
             texts: [[0, 276, 518, 86, 48, 'white']]
         }),
+
+        'speech bubble ': async (msg, arg) => await meme(arg, {
+            w: 200,
+            h: 200,
+            bg: 'empty.png',
+            items: [0, 1],
+            put: [
+                [0, 25, 50, 150, 150],
+                ['speechbubble2.png', 0, 0, 200, 200]
+            ],
+            texts: [[1, 17, 13, 164, 31, 'black']],
+        }),
     },
 
     suffix: {
@@ -330,7 +346,7 @@ __List of memes:__
             w: 640,
             h: 480,
             bg: 'beloved.png',
-            items: 1,
+            items: [0],
             put: [[0, 103, 200, 164, 139]],
             texts: [[0, 373, 130, 202, 71, 'black']]
         }),
@@ -339,7 +355,7 @@ __List of memes:__
             w: 200,
             h: 200,
             bg: 'empty.png',
-            items: 1,
+            items: [0],
             put: [
                 [0, 25, 50, 150, 150],
                 ['speechbubble.png', 0, 0, 200, 200]
