@@ -342,17 +342,28 @@ __List of memes:__
             texts: [[0, 276, 518, 86, 48, 'white']]
         }),
 
-        'sb ': async (msg, arg) => await meme(arg, {
-            w: 200,
-            h: 200,
-            bg: 'empty.png',
-            items: [0, 1],
-            put: [
-                [0, 25, 50, 150, 150],
-                ['speechbubble2.png', 0, 0, 200, 200]
-            ],
-            texts: [[1, 17, 13, 164, 31, 'black']],
-        }),
+        'sb ': async (msg, arg) => {
+            let numArgs = arg.split('=').length;
+            if (numArgs % 2 != 0) return {title: "The number of arguments for this must be a multiple of 2."};
+
+            let options = {
+                w: 100*numArgs,
+                h: 200,
+                bg: 'empty.png',
+                items: [],
+                put: [],
+                texts: [],
+            };
+            for (let i = 0; i < numArgs / 2; i++) {
+                let xOffset = 200*i;
+                options.items.push(0);
+                options.items.push(1);
+                options.put.push([0, 25+xOffset, 50, 150, 150]);
+                options.put.push(['speechbubble2.png', 0+xOffset, 0, 200, 200]);
+                options.texts.push([1, 17+xOffset, 13, 164, 31, 'black']);
+            }
+            return await meme(arg, options);
+        },
 
         'sb2 ': async (msg, arg) => await meme(arg, {
             w: 400,
