@@ -249,7 +249,8 @@ __List of memes:__
 <[item] my beloved>
 <why cant i hold all these [item]>
 <[item] speech bubble>
-<speech bubble [item]=[text in speech bubble]>
+<sb [item]=[text in speech bubble]>
+<sb2 [item1]=[text1]=[item2]=[text2]>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -337,7 +338,7 @@ __List of memes:__
             texts: [[0, 276, 518, 86, 48, 'white']]
         }),
 
-        'speech bubble ': async (msg, arg) => await meme(arg, {
+        'sb ': async (msg, arg) => await meme(arg, {
             w: 200,
             h: 200,
             bg: 'empty.png',
@@ -347,6 +348,23 @@ __List of memes:__
                 ['speechbubble2.png', 0, 0, 200, 200]
             ],
             texts: [[1, 17, 13, 164, 31, 'black']],
+        }),
+
+        'sb2 ': async (msg, arg) => await meme(arg, {
+            w: 400,
+            h: 200,
+            bg: 'empty.png',
+            items: [0, 1, 0, 1],
+            put: [
+                [0, 25, 50, 150, 150],
+                ['speechbubble2.png', 0, 0, 200, 200],
+                [2, 225, 50, 150, 150],
+                ['speechbubble2.png', 200, 0, 200, 200]
+            ],
+            texts: [
+                [1, 17, 13, 164, 31, 'black'],
+                [3, 217, 13, 164, 31, 'black'],
+            ],
         }),
     },
 
