@@ -244,6 +244,7 @@ __List of memes:__
 <distracted [gf]=[distraction]>
 <[item] my beloved>
 <why cant i hold all these [item]>
+<[item] speech bubble>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
