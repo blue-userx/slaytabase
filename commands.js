@@ -254,7 +254,7 @@ __List of memes:__
 <why cant i hold all these [item]>
 <[item] speech bubble>
 <sb [item]=[text in speech bubble]>
-<sb2 [item1]=[text1]=[item2]=[text2]>
+<sb [item1]=[text1]=[item2]=[text2]>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -358,9 +358,9 @@ __List of memes:__
                 let xOffset = 200*i;
                 options.items.push(0);
                 options.items.push(1);
-                options.put.push([0, 25+xOffset, 50, 150, 150]);
+                options.put.push([2*i, 25+xOffset, 50, 150, 150]);
                 options.put.push(['speechbubble2.png', 0+xOffset, 0, 200, 200]);
-                options.texts.push([1, 17+xOffset, 13, 164, 31, 'black']);
+                options.texts.push([2*i+1, 17+xOffset, 13, 164, 31, 'black']);
             }
             return await meme(arg, options);
         },
