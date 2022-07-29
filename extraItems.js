@@ -1459,6 +1459,36 @@ export default {
                 {
                     "where": {"name": "Neow", type: "Boss"},
                     "to": {"img": "/export/downfall/creatures/NeowBossFinal.png"}
+                },
+
+                {
+                    "where": {"name": "The Champ", type: "Boss"},
+                    "to": {"img": "/export/downfall/creatures/Champ.png"}
+                },
+
+                {
+                    "where": {"name": "The Ironclad", type: "Elite"},
+                    "to": {"img": "/export/downfall/creatures/GauntletIronclad.png"}
+                },
+
+                {
+                    "where": {"name": "The Silent", type: "Elite"},
+                    "to": {"img": "/export/downfall/creatures/GauntletSilent.png"}
+                },
+
+                {
+                    "where": {"name": "The Defect", type: "Elite"},
+                    "to": {"img": "/export/downfall/creatures/GauntletDefect.png"}
+                },
+
+                {
+                    "where": {"name": "The Watcher", type: "Elite"},
+                    "to": {"img": "/export/downfall/creatures/GauntletWatcher.png"}
+                },
+
+                {
+                    "where": {"name": "The Hermit", type: "Elite"},
+                    "to": {"img": "/export/downfall/creatures/GauntletHermit.png"}
                 }
             ],
     
