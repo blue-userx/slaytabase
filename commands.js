@@ -47,7 +47,7 @@ async function meme(arg, options) {
             title: ' ',
             image: {url: 'attachment://'+filename},
             files: [filename],
-            color: items[0].embed.color,
+            color: typeof items[0] == 'string' ? null : items[0].embed.color,
         };
     } catch(e) {
         console.error(e);
@@ -241,6 +241,7 @@ __Commands:__
             
 __List of memes:__
 <megamind no [item]>
+<megamind textno [text]>
 <friendship ended [bad item]=[good item]>
 <coolerdaniel [daniel]=[coolerdaniel]>
 <19 dollar [fortnite card]>
@@ -259,6 +260,14 @@ __List of memes:__
             bg: 'mm.jpg',
             items: [0],
             put: [[0, 182, 39, 354, 96]]
+        }),
+
+        'megamind textno ': async (msg, arg) => await meme(arg, {
+            w: 640,
+            h: 640,
+            bg: 'mm.jpg',
+            items: [1],
+            texts: [[0, 182, 39, 354, 96, 'white']]
         }),
 
         'friendship ended ': async (msg, arg) => await meme(arg, {
