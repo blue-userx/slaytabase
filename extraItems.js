@@ -1467,6 +1467,11 @@ export default {
                 },
 
                 {
+                    "where": {"name": "Book of Stabbing"},
+                    "to": {"img": "/export/slay-the-spire/creatures/BookOfStabbing.png"}
+                },
+
+                {
                     "where": {"name": "The Champ", type: "Boss"},
                     "to": {"img": "/export/slay-the-spire/creatures/Champ.png"}
                 },
