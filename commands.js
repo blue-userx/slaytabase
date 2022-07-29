@@ -243,6 +243,7 @@ __List of memes:__
 <19 dollar [fortnite card]>
 <distracted [gf]=[distraction]>
 <[item] my beloved>
+<why cant i hold all these [item]>
 `,
             thumbnail: {url: bot.user.avatarURL()},
         }),
@@ -302,6 +303,24 @@ __List of memes:__
                 [0, 598, 145, 110, 108],
                 [1, 152, 120, 158, 160]
             ],
+        }),
+
+        'why cant i hold all these ': async (msg, arg) => await meme(arg, {
+            w: 450,
+            h: 600,
+            bg: 'hold.png',
+            items: 1,
+            put: [
+                [0, 116, 439, 38, 38],
+                [0, 225, 374, 44, 40],
+                [0, 187, 370, 38, 38],
+                [0, 207, 390, 37, 37],
+                [0, 148, 349, 44, 43],
+                [0, 105, 367, 45, 43],
+                ['holdhand.png', 87, 351, 253, 131],
+                [0, 221, 398, 48, 45],
+            ],
+            texts: [[0, 276, 518, 86, 48, 'white']]
         }),
     },
 
