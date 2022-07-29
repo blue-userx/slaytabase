@@ -1462,6 +1462,11 @@ export default {
                 },
 
                 {
+                    "where": {"name": "Mystic"},
+                    "to": {"img": "/export/slay-the-spire/creatures/Healer.png"}
+                },
+
+                {
                     "where": {"name": "The Champ", type: "Boss"},
                     "to": {"img": "/export/slay-the-spire/creatures/Champ.png"}
                 },
