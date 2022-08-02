@@ -1580,17 +1580,17 @@ export default {
 
                 {
                     "where": {"name": "Torch Head"},
-                    "to": {"img": "/export/altered/img/creatures/Torchhead.png"}
+                    "to": {"img": "/altered/img/creatures/Torchhead.png"}
                 },
 
                 {
                     "where": {"name": "Bronze Orb"},
-                    "to": {"img": "/export/altered/img/creatures/Bronze-orb.png"}
+                    "to": {"img": "/altered/img/creatures/Bronze-orb.png"}
                 },
 
                 {
                     "where": {"name": "Spike Slime (L)"},
-                    "to": {"img": "/export/altered/img/creatures/Spike-slime-l.png"}
+                    "to": {"img": "/altered/img/creatures/Spike-slime-l.png"}
                 },
 
                 {
@@ -1620,7 +1620,7 @@ export default {
 
                 {
                     "where": {"name": "Mad Gremlin"},
-                    "to": {"img": "/export/altered/img/creatures/Mad-gremlin.png"}
+                    "to": {"img": "/altered/img/creatures/Mad-gremlin.png"}
                 },
 
                 {
