@@ -267,7 +267,7 @@ __List of memes:__
             put: [[0, 182, 39, 354, 96]]
         }),
 
-        'megamind textno ': async (msg, arg) => await meme(arg, {
+        'megamind textno ': async (msg, _, __, oa) => await meme(oa, {
             w: 640,
             h: 640,
             bg: 'mm.jpg',
@@ -342,8 +342,8 @@ __List of memes:__
             texts: [[0, 276, 518, 86, 48, 'white']]
         }),
 
-        'sb ': async (msg, arg) => {
-            let numArgs = arg.split('=').length;
+        'sb ': async (msg, _, __, oa) => {
+            let numArgs = oa.split('=').length;
             if (numArgs % 2 != 0) return {title: "The number of arguments for this must be a multiple of 2."};
 
             let options = {
@@ -362,7 +362,7 @@ __List of memes:__
                 options.put.push(['speechbubble2.png', 0+xOffset, 0, 200, 200]);
                 options.texts.push([2*i+1, 17+xOffset, 13, 164, 31, 'black']);
             }
-            return await meme(arg, options);
+            return await meme(oa, options);
         },
     },
 

@@ -55,6 +55,7 @@ async function getEmbeds(msg) {
                                 type: type[0],
                                 do: commands[type[0]][i],
                                 itemType: 'command',
+                                originalQuery,
                             }};
                 console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                 let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
