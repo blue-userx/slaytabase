@@ -1,7 +1,39 @@
 export default {
     "pre": {
         "add": {
+            "creatures": [
+                {
+                    "name": "Spike Slime (L)",
+                    "type": "Normal",
+                    "minHP": "35",
+                    "maxHP": "35",
+                    "mod": ""
+                },
 
+                {
+                    "name": "Bronze Orb",
+                    "type": "Boss",
+                    "minHP": "55",
+                    "maxHP": "55",
+                    "mod": ""
+                },
+
+                {
+                    "name": "Torch Head",
+                    "type": "Boss",
+                    "minHP": "39",
+                    "maxHP": "39",
+                    "mod": ""
+                },
+
+                {
+                    "name": "Mad Gremlin",
+                    "type": "Normal",
+                    "minHP": "22",
+                    "maxHP": "22",
+                    "mod": ""
+                },
+            ]
         },
 
         "edit": {
@@ -1499,7 +1531,152 @@ export default {
                 {
                     "where": {"name": "The Hermit", type: "Elite"},
                     "to": {"img": "/export/downfall/creatures/GauntletHermit.png"}
-                }
+                },
+
+                {
+                    "where": {"name": "The Woman in Blue"},
+                    "to": {"img": "/export/downfall/creatures/LadyInBlue.png"}
+                },
+
+                {
+                    "where": {"name": "The Maw"},
+                    "to": {"img": "/export/slay-the-spire/creatures/Maw.png"}
+                },
+
+                {
+                    "where": {"name": "Taskmaster"},
+                    "to": {"img": "/export/slay-the-spire/creatures/SlaverBoss.png"}
+                },
+
+                {
+                    "where": {"name": "Slaver", "minHP": "47"},
+                    "to": {"name": "Blue Slaver", "img": "/export/slay-the-spire/creatures/SlaverBlue.png"}
+                },
+
+                {
+                    "where": {"name": "Slaver", "minHP": "50"},
+                    "to": {"name": "Red Slaver", "img": "/export/slay-the-spire/creatures/SlaverRed.png"}
+                },
+
+                {
+                    "where": {"name": "Louse", "minHP": "13"},
+                    "to": {"name": "Green Louse", "img": "/export/slay-the-spire/creatures/FuzzyLouseDefensive.png"}
+                },
+
+                {
+                    "where": {"name": "Louse", "minHP": "11"},
+                    "to": {"name": "Red Louse", "img": "/export/slay-the-spire/creatures/FuzzyLouseNormal.png"}
+                },
+
+                {
+                    "where": {"name": "Lagavulin (Awake)"},
+                    "to": {"img": "/export/slay-the-spire/creatures/LagavulinAwake.png"}
+                },
+
+                {
+                    "where": {"name": "Spire Growth"},
+                    "to": {"img": "/export/slay-the-spire/creatures/Serpent.png"}
+                },
+
+                {
+                    "where": {"name": "Torch Head"},
+                    "to": {"img": "/export/altered/img/creatures/Torchhead.png"}
+                },
+
+                {
+                    "where": {"name": "Bronze Orb"},
+                    "to": {"img": "/export/altered/img/creatures/Bronze-orb.png"}
+                },
+
+                {
+                    "where": {"name": "Spike Slime (L)"},
+                    "to": {"img": "/export/altered/img/creatures/Spike-slime-l.png"}
+                },
+
+                {
+                    "where": {"name": "Spike Slime (M)"},
+                    "to": {"img": "/export/slay-the-spire/creatures/SpikeSlime_M.png"}
+                },
+
+                {
+                    "where": {"name": "Spike Slime (S)"},
+                    "to": {"img": "/export/slay-the-spire/creatures/SpikeSlime_S.png"}
+                },
+
+                {
+                    "where": {"name": "Acid Slime (L)"},
+                    "to": {"img": "/export/slay-the-spire/creatures/AcidSlime_L.png"}
+                },
+
+                {
+                    "where": {"name": "Acid Slime (M)"},
+                    "to": {"img": "/export/slay-the-spire/creatures/AcidSlime_M.png"}
+                },
+
+                {
+                    "where": {"name": "Acid Slime (S)"},
+                    "to": {"img": "/export/slay-the-spire/creatures/AcidSlime_S.png"}
+                },
+
+                {
+                    "where": {"name": "Mad Gremlin"},
+                    "to": {"img": "/export/altered/img/creatures/Mad-gremlin.png"}
+                },
+
+                {
+                    "where": {"name": "Sneaky Gremlin"},
+                    "to": {"img": "/export/slay-the-spire/creatures/GremlinThief.png"}
+                },
+
+                {
+                    "where": {"name": "Fat Gremlin"},
+                    "to": {"img": "/export/slay-the-spire/creatures/GremlinFat.png"}
+                },
+
+                {
+                    "where": {"name": "Shield Gremlin"},
+                    "to": {"img": "/export/slay-the-spire/creatures/GremlinTsundere.png"}
+                },
+
+                {
+                    "where": {"name": "Romeo"},
+                    "to": {"img": "/export/slay-the-spire/creatures/BanditLeader.png"}
+                },
+
+                {
+                    "where": {"name": "Bear"},
+                    "to": {"img": "/export/slay-the-spire/creatures/BanditBear.png"}
+                },
+
+                {
+                    "where": {"name": "Pointy"},
+                    "to": {"img": "/export/slay-the-spire/creatures/BanditChild.png"}
+                },
+
+                {
+                    "where": {"name": "Merchant", "type": "Normal"},
+                    "to": {"img": "/export/downfall/creatures/FleeingMerchant.png"}
+                },
+
+                {
+                    "where": {"name": "Head of Growth"},
+                    "to": {"img": "/export/downfall/creatures/GrowingTotem.png"}
+                },
+
+                {
+                    "where": {"name": "Head of Change"},
+                    "to": {"img": "/export/downfall/creatures/ChangingTotem.png"}
+                },
+
+                {
+                    "where": {"name": "Forgetful Head"},
+                    "to": {"img": "/export/downfall/creatures/ForgetfulTotem.png"}
+                },
+
+                {
+                    "where": {"name": "Byrd (Grounded)"},
+                    "to": {"img": "/export/slay-the-spire/creatures/ByrdGrounded.png"}
+                },
             ],
     
             "keywords": [
