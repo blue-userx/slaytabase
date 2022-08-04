@@ -1,4 +1,5 @@
 import { bot, search } from './index.js';
+import { User } from 'discord.js';
 import { createCanvas, loadImage } from 'canvas';
 import drawText from 'node-canvas-text';
 import opentype from 'opentype.js';
@@ -11,15 +12,31 @@ import cfg from './cfg.js';
 const delSearchLimit = 25;
 const font = opentype.loadSync('./memetemplates/Kreon-Regular.ttf');
 
-async function meme(arg, options) {
+async function meme(msg, arg, options) {
     try {
         let args = arg.split('=');
         if (args.length != options.items.length)
             return {title: `This meme requires exactly ${options.items.length} item${options.items.length == 1 ? '' : 's'}. Separate items with the "=" symbol.`};
-        let items = args.map((a, i) => options.items[i] == 1 ? a : fn.find(a));
+        let items = await Promise.all(args.map(async (a, i) => {
+            a = a.trim();
+            if (a.startsWith('user?')) {
+                let id = a.slice(5)
+                let user;
+                if (id == 'me')
+                    user = msg.author;
+                else
+                    user = await bot.users.fetch(id).catch(e => {});
+                if (user) {
+                    user.image = await loadImage(user.avatarURL().replace('webp', 'png'));
+                    return user;
+                }
+            }
+            return options.items[i] == 1 ? a : fn.find(a);
+        }));
         for (let i in items) {
             if (options.items[i] == 0) {
                 let item = items[i];
+                if (items[i] instanceof User) continue;
                 item.embed = await embed({...item.item, score: item.score, query: arg});
                 if (item.embed.thumbnail == null)
                     return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
@@ -36,7 +53,7 @@ async function meme(arg, options) {
                 ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
         if (options.hasOwnProperty('texts'))
             for (let t of options.texts)
-                drawText.default(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : items[t[0]].item.name.toUpperCase(), font,
+                drawText.default(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : (items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase()), font,
                     {x: t[1], y: t[2], width: t[3], height: t[4]}, 
                     {minSize: 5, maxSize: 200, vAlign: 'center', hAlign: 'center', textFillStyle: t[5], fitMethod: 'box', drawRect: false}
                 );
@@ -51,7 +68,7 @@ async function meme(arg, options) {
             title: ' ',
             image: {url: 'attachment://'+filename},
             files: [filename],
-            color: typeof items[0] == 'string' ? null : items[0].embed.color,
+            color: typeof items[0] == 'string' || items[0] instanceof User ? null : items[0].embed.color,
         };
     } catch(e) {
         console.error(e);
@@ -242,16 +259,18 @@ __Commands:__
         memes: () => ({
             title: 'Meme generator',
             description: `Some memes take more than one item, separate items with the "=" symbol.
+The bot can also take users as arguments, to grab their profile pictures, with <meme user?[userId]> for example: <user?${bot.user.id} my beloved>
+You can also use just "user?me" to specify yourself.
             
 __List of memes:__
 <megamind no [item]>
 <megamind textno [text]>
-<friendship ended [bad item]=[good item]>
+<friendship ended [bad item]=[good item]=[friender]>
 <coolerdaniel [daniel]=[coolerdaniel]>
 <19 dollar [fortnite card]>
-<distracted [gf]=[distraction]>
+<distracted [gf]=[distraction]=[bf]>
 <[item] my beloved>
-<why cant i hold all these [item]>
+<why cant i hold all these [item]=[holder]>
 <[item] speech bubble>
 <sb [item]=[text in speech bubble]>
 <sb [item1]=[text1]=[item2]=[text2]>
@@ -259,7 +278,7 @@ __List of memes:__
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
 
-        'megamind no ': async (msg, arg) => await meme(arg, {
+        'megamind no ': async (msg, arg) => await meme(msg, arg, {
             w: 640,
             h: 640,
             bg: 'mm.jpg',
@@ -267,7 +286,7 @@ __List of memes:__
             put: [[0, 182, 39, 354, 96]]
         }),
 
-        'megamind textno ': async (msg, _, __, oa) => await meme(oa, {
+        'megamind textno ': async (msg, _, __, oa) => await meme(msg, oa, {
             w: 640,
             h: 640,
             bg: 'mm.jpg',
@@ -275,13 +294,14 @@ __List of memes:__
             texts: [[0, 182, 39, 354, 96, 'white']]
         }),
 
-        'friendship ended ': async (msg, arg) => await meme(arg, {
+        'friendship ended ': async (msg, arg) => await meme(msg, arg, {
             w: 600,
             h: 450,
             bg: 'fse.png',
-            items: [0, 0],
+            items: [0, 0, 0],
             put: [
                 [1, 113, 66, 111, 107],
+                [2, 380, 103, 98, 127],
                 [0, 0, 247, 143, 200],
                 [0, 422, 271, 176, 177],
                 ['fsecross1.png', 4, 260, 135, 184],
@@ -293,7 +313,7 @@ __List of memes:__
             ]
         }),
 
-        'coolerdaniel ': async (msg, arg) => await meme(arg, {
+        'coolerdaniel ': async (msg, arg) => await meme(msg, arg, {
             w: 1452,
             h: 816,
             bg: 'daniel.png',
@@ -304,7 +324,7 @@ __List of memes:__
             ]
         }),
 
-        '19 dollar ': async (msg, arg) => await meme(arg, {
+        '19 dollar ': async (msg, arg) => await meme(msg, arg, {
             w: 779,
             h: 751,
             bg: '19dollar.png',
@@ -313,22 +333,23 @@ __List of memes:__
             texts: [[0, 82, 653, 622, 98, 'white']]
         }),
 
-        'distracted ': async (msg, arg) => await meme(arg, {
+        'distracted ': async (msg, arg) => await meme(msg, arg, {
             w: 800,
             h: 533,
             bg: 'distracted.png',
-            items: [0, 0],
+            items: [0, 0, 0],
             put: [
                 [0, 598, 145, 110, 108],
-                [1, 152, 120, 158, 160]
+                [1, 152, 120, 158, 160],
+                [2, 397, 88, 89, 106]
             ],
         }),
 
-        'why cant i hold all these ': async (msg, arg) => await meme(arg, {
+        'why cant i hold all these ': async (msg, arg) => await meme(msg, arg, {
             w: 450,
             h: 600,
             bg: 'hold.png',
-            items: [0],
+            items: [0, 0],
             put: [
                 [0, 116, 439, 38, 38],
                 [0, 225, 374, 44, 40],
@@ -338,6 +359,7 @@ __List of memes:__
                 [0, 105, 367, 45, 43],
                 ['holdhand.png', 87, 351, 253, 131],
                 [0, 221, 398, 48, 45],
+                [1, 139, 100, 124, 160],
             ],
             texts: [[0, 276, 518, 86, 48, 'white']]
         }),
@@ -362,12 +384,12 @@ __List of memes:__
                 options.put.push(['speechbubble2.png', 0+xOffset, 0, 200, 200]);
                 options.texts.push([2*i+1, 17+xOffset, 13, 164, 31, 'black']);
             }
-            return await meme(oa, options);
+            return await meme(msg, oa, options);
         },
     },
 
     suffix: {
-        ' my beloved': async (msg, arg) => await meme(arg, {
+        ' my beloved': async (msg, arg) => await meme(msg, arg, {
             w: 640,
             h: 480,
             bg: 'beloved.png',
@@ -376,7 +398,7 @@ __List of memes:__
             texts: [[0, 373, 130, 202, 71, 'black']]
         }),
 
-        ' speech bubble': async (msg, arg) => await meme(arg, {
+        ' speech bubble': async (msg, arg) => await meme(msg, arg, {
             w: 200,
             h: 200,
             bg: 'empty.png',
