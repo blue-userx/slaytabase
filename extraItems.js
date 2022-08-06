@@ -1484,7 +1484,22 @@ export default {
                 {
                     "where": {"name": "Army in a Bottle"},
                     "to": {"color": "Slimebound"}
-                }
+                },
+    
+                {
+                    "where": {"name": "Entropic Brew"},
+                    "to": {"img": "/altered/img/potions/entropicbrew.gif"}
+                },
+    
+                {
+                    "where": {"name": "Duplication Potion"},
+                    "to": {"img": "/altered/img/potions/dupe.gif"}
+                },
+    
+                {
+                    "where": {"name": "Distilled Chaos"},
+                    "to": {"img": "/altered/img/potions/distilledchaos.gif"}
+                },
             ],
 
             "creatures": [
