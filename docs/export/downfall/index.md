@@ -50,7 +50,7 @@
 | Hexaburn | ![](small-card-images/Boss-Hexaburn.png) | ![](small-card-images/Boss-HexaburnPlus.png) | Uncommon | Power | 2 | In 3 (2) turns, deal 6 damage to a random enemy 6 times. Scales with Strength. |
 | Invincible | ![](small-card-images/Boss-Invincible.png) | ![](small-card-images/Boss-InvinciblePlus.png) | Uncommon | Power | 2 (1) | Gain 10 expansioncontent:Invincible. If you already had expansioncontent:Invincible, it lasts another turn instead. |
 | Last Stand | ![](small-card-images/Boss-LastStand.png) | ![](small-card-images/Boss-LastStandPlus.png) | Uncommon | Power | 2 | Remove all Debuffs. Gain 1 Strength. If you are below half HP, Gain (Heal 10 and gain) 2 Strength. |
-| Prepare Crush | ![](small-card-images/Boss-PrepareCrush.png) | ![](small-card-images/Boss-PrepareCrushPlus.png) | Uncommon | Skill | 2 | Gain 10 (15) Block. Next turn, gain [E] [E] [E] and SLIME CRUSH (*CRUSH+). Exhaust. |
+| Prepare Crush | ![](small-card-images/Boss-PrepareCrush.png) | ![](small-card-images/Boss-PrepareCrushPlus.png) | Uncommon | Skill | 2 | Gain 10 (15) Block. Next turn, gain [E] [E] [E] and SLIME CRUSH. Exhaust. |
 | Shaper's Blessing | ![](small-card-images/Boss-ShapersBlessing.png) | ![](small-card-images/Boss-ShapersBlessingPlus.png) | Uncommon | Power | 2 | Choose - Gain 2 (3) Strength or 5 (8) Plated Armor. |
 | YOU ARE MINE! | ![](small-card-images/Boss-YOUAREMINE!.png) | ![](small-card-images/Boss-YOUAREMINE!Plus.png) | Uncommon | Skill | 2 | Remove Block from, and apply 3 (5) Weak and Vulnerable to, ALL enemies. Exhaust. |
 | Quick Study | ![](small-card-images/Boss-QuickStudy.png) | ![](small-card-images/Boss-QuickStudyPlus.png) | Rare | Skill | 1 | Choose 1 of 3 (Upgraded) Boss cards to gain. It costs 0 until played. Exhaust. |
@@ -133,7 +133,7 @@
 | Volcano Visage | ![](small-card-images/Hexa_ghost-VolcanoVisage.png) | ![](small-card-images/Hexa_ghost-VolcanoVisagePlus.png) | Rare | Power | 1 | Whenever you Ignite a Ghostflame, apply 4 (6) hexamod:Soulburn to ALL enemies. |
 | Defend | ![](small-card-images/The_bronze-Defend.png) | ![](small-card-images/The_bronze-DefendPlus.png) | Basic | Skill | 1 | Gain 5 (8) Block. |
 | Goto | ![](small-card-images/The_bronze-Goto.png) | ![](small-card-images/The_bronze-GotoPlus.png) | Basic | Skill | 1 | Draw 1 (2) card(s). bronze:Encode. bronze:Compile - Next turn, draw 1 (2) card(s). |
-| Replicate | ![](small-card-images/The_bronze-Replicate.png) | ![](small-card-images/The_bronze-ReplicatePlus.png) | Basic | Attack | 0 | Deal 5 (7) damage.     When Encoded, add a copy to your discard pile. bronze:Encode. |
+| Replicate | ![](small-card-images/The_bronze-Replicate.png) | ![](small-card-images/The_bronze-ReplicatePlus.png) | Basic | Attack | 0 | Deal 5 (7) damage.   When Encoded, add a copy to your discard pile. bronze:Encode. |
 | Strike | ![](small-card-images/The_bronze-Strike.png) | ![](small-card-images/The_bronze-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
 | function() | ![](small-card-images/The_bronze-function().png) | ![]() | Special | Skill | 1 |  |
 | Bit Shift | ![](small-card-images/The_bronze-BitShift.png) | ![](small-card-images/The_bronze-BitShiftPlus.png) | Common | Skill | 0 | (Retain.)  Choose an Encoded card to return to your hand. It gains Retain. Exhaust. |
@@ -162,7 +162,7 @@
 | Bronze Armor | ![](small-card-images/The_bronze-BronzeArmor.png) | ![](small-card-images/The_bronze-BronzeArmorPlus.png) | Uncommon | Skill | 0 | Gain 1 Artifact. bronze:Encode. bronze:Compile Error - ALL enemies gain 12 (8) Block. |
 | Bronze Orb | ![](small-card-images/The_bronze-BronzeOrb.png) | ![](small-card-images/The_bronze-BronzeOrbPlus.png) | Uncommon | Attack | 1 | Innate. Deal 8 (12) damage. bronze:Encode a random card with Encode in your draw pile. Exhaust. |
 | Class Default | ![](small-card-images/The_bronze-ClassDefault.png) | ![](small-card-images/The_bronze-ClassDefaultPlus.png) | Uncommon | Power | 1 (0) | Next 2 times you create a Function, bronze:Encode a copy of the first card in it. |
-| Constructor | ![](small-card-images/The_bronze-Constructor.png) | ![](small-card-images/The_bronze-ConstructorPlus.png) | Uncommon | Skill | 1 | Gain 5 (7) Block.     When Encoded as the first card, increase its Block by 5 (7). bronze:Encode. |
+| Constructor | ![](small-card-images/The_bronze-Constructor.png) | ![](small-card-images/The_bronze-ConstructorPlus.png) | Uncommon | Skill | 1 | Gain 5 (7) Block.   When Encoded as the first card, increase its Block by 5 (7). bronze:Encode. |
 | Copy Paste | ![](small-card-images/The_bronze-CopyPaste.png) | ![](small-card-images/The_bronze-CopyPastePlus.png) | Uncommon | Skill | 1 | Play a copy of each Encoded card. They do not Encode. Exhaust. (not Exhaust.) |
 | Cultist Strike | ![](small-card-images/The_bronze-CultistStrike.png) | ![](small-card-images/The_bronze-CultistStrikePlus.png) | Uncommon | Attack | 1 | Deal 6 (9) damage. bronze:Encode. bronze:Compile - Increase this card's damage by 1 permanently. |
 | Flail | ![](small-card-images/The_bronze-Flail.png) | ![](small-card-images/The_bronze-FlailPlus.png) | Uncommon | Attack | 2 | Deal 7 (8) damage to ALL enemies 2 times. Gain 1 (2) Artifact. Exhaust. |
@@ -185,7 +185,7 @@
 | Repair | ![](small-card-images/The_bronze-Repair.png) | ![](small-card-images/The_bronze-RepairPlus.png) | Uncommon | Skill | 1 | Gain 4 Block. bronze:Encode. bronze:Compile - Heal 7 (10) HP. |
 | Repulsor | ![](small-card-images/The_bronze-Repulsor.png) | ![](small-card-images/The_bronze-RepulsorPlus.png) | Uncommon | Power | 2 (1) | When you draw the first Status or Curse card each turn, Exhaust it and draw a card. |
 | Return | ![](small-card-images/The_bronze-Return.png) | ![](small-card-images/The_bronze-ReturnPlus.png) | Uncommon | Skill | 1 | Put a card from your discard pile on top of your draw pile. Next turn, gain [E] ([E]). |
-| Separator | ![](small-card-images/The_bronze-Separator.png) | ![](small-card-images/The_bronze-SeparatorPlus.png) | Uncommon | Attack | 1 | Deal 6 (8) damage.     When bronze:Encoded in the middle, increase its damage by 6 (8). bronze:Encode. |
+| Separator | ![](small-card-images/The_bronze-Separator.png) | ![](small-card-images/The_bronze-SeparatorPlus.png) | Uncommon | Attack | 1 | Deal 6 (8) damage.   When bronze:Encoded in the middle, increase its damage by 6 (8). bronze:Encode. |
 | Terminator | ![](small-card-images/The_bronze-Terminator.png) | ![](small-card-images/The_bronze-TerminatorPlus.png) | Uncommon | Skill | 1 (0) | bronze:Encode. bronze:Compile - If this is the last card of the Function, it gains 'Play this again'. |
 | Undervolt | ![](small-card-images/The_bronze-Undervolt.png) | ![](small-card-images/The_bronze-UndervoltPlus.png) | Uncommon | Skill | 1 | ALL enemies lose 2 (3) Strength. Gain 2 Burns. Exhaust. |
 | Assembly | ![](small-card-images/The_bronze-Assembly.png) | ![](small-card-images/The_bronze-AssemblyPlus.png) | Rare | Skill | 1 | Scry 5 (8). bronze:Encode all Encodable cards discarded (in selected order). Exhaust. |
@@ -363,17 +363,17 @@
 | Snek Bite | ![](small-card-images/Snecko_cya-SnekBite.png) | ![](small-card-images/Snecko_cya-SnekBitePlus.png) | Basic | Attack | 1 | Deal 7 (9) damage. sneckomod:Muddle the (2) highest-cost card(s) in your hand. |
 | Strike | ![](small-card-images/Snecko_cya-Strike.png) | ![](small-card-images/Snecko_cya-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
 | Tail Whip | ![](small-card-images/Snecko_cya-TailWhip.png) | ![](small-card-images/Snecko_cya-TailWhipPlus.png) | Basic | Attack | 2 | Deal 10 (13) damage. Apply 0 (1) - 2 Weak. Apply 0 (1) - 2 Vulnerable. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
 | ??? 1-Cost | ![](small-card-images/Snecko_cya-1-Cost.png) | ![](small-card-images/Snecko_cya-1-CostPlus.png) | Common | Skill |  | (Upgraded) Unidentified 1 Cost Card. |
 | ??? Block | ![](small-card-images/Snecko_cya-Block.png) | ![](small-card-images/Snecko_cya-BlockPlus.png) | Common | Skill |  | (Upgraded) Unidentified Block Card. |
 | ??? C Attack | ![](small-card-images/Snecko_cya-CAttack.png) | ![](small-card-images/Snecko_cya-CAttackPlus.png) | Common | Attack |  | (Upgraded) Unidentified Common Attack Card. |
@@ -588,26 +588,26 @@
 | Defend | ![](small-card-images/Hermit_yel-Defend.png) | ![](small-card-images/Hermit_yel-DefendPlus.png) | Basic | Skill | 1 | Gain 5 (8) Block. |
 | Snapshot | ![](small-card-images/Hermit_yel-Snapshot.png) | ![](small-card-images/Hermit_yel-SnapshotPlus.png) | Basic | Attack | 1 | Deal 5 (7) damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt. |
 | Strike | ![](small-card-images/Hermit_yel-Strike.png) | ![](small-card-images/Hermit_yel-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
-| Body Armor | ![](small-card-images/Hermit_yel-BodyArmor.png) | ![](small-card-images/Hermit_yel-BodyArmorPlus.png) | Common | Skill | 1 | Discard a card. Gain 6 (8) Block. If it was a non-Attack, gain 6 (8) Block again. |
+| Body Armor | ![](small-card-images/Hermit_yel-BodyArmor.png) | ![](small-card-images/Hermit_yel-BodyArmorPlus.png) | Common | Skill | 1 | Discard a card. Gain 5 (7) Block. If it was a non-Attack, gain 5 (7) Block again. |
 | Coalescence | ![](small-card-images/Hermit_yel-Coalescence.png) | ![](small-card-images/Hermit_yel-CoalescencePlus.png) | Common | Skill | 1 | Gain 6 (9) Block. Retain up to 2 (3) cards this turn. |
 | Dive | ![](small-card-images/Hermit_yel-Dive.png) | ![](small-card-images/Hermit_yel-DivePlus.png) | Common | Skill | 1 | Gain 8 (10) Block. hermit:Dead_On: Gain 1 (2) Plated Armor. |
-| Feint | ![](small-card-images/Hermit_yel-Feint.png) | ![](small-card-images/Hermit_yel-FeintPlus.png) | Common | Skill | 0 | Gain 4 (6) Block. Apply 2 (3) hermit:Bruise to ALL enemies. |
+| Feint | ![](small-card-images/Hermit_yel-Feint.png) | ![](small-card-images/Hermit_yel-FeintPlus.png) | Common | Skill | 0 | Gain 3 (5) Block. Apply 2 (3) hermit:Bruise to ALL enemies. |
 | Glare | ![](small-card-images/Hermit_yel-Glare.png) | ![](small-card-images/Hermit_yel-GlarePlus.png) | Common | Skill | 0 | (Retain.)  Apply 1 Weak and Vulnerable. |
-| Headshot | ![](small-card-images/Hermit_yel-Headshot.png) | ![](small-card-images/Hermit_yel-HeadshotPlus.png) | Common | Attack | 1 | Deal 8 (10) damage. hermit:Dead_On: Deal double damage. |
+| Headshot | ![](small-card-images/Hermit_yel-Headshot.png) | ![](small-card-images/Hermit_yel-HeadshotPlus.png) | Common | Attack | 1 | Deal 7 (9) damage. hermit:Dead_On: Deal double damage. |
 | High-Caliber | ![](small-card-images/Hermit_yel-High-Caliber.png) | ![](small-card-images/Hermit_yel-High-CaliberPlus.png) | Common | Attack | 1 | Deal 12 (15) damage. Add a Strike (*Strike+) to your hand. Exhaust. |
 | Hole Up | ![](small-card-images/Hermit_yel-HoleUp.png) | ![](small-card-images/Hermit_yel-HoleUpPlus.png) | Common | Skill | 1 | Gain 12 (16) Block. Gain 2 Weak. |
 | Itchy Trigger | ![](small-card-images/Hermit_yel-ItchyTrigger.png) | ![](small-card-images/Hermit_yel-ItchyTriggerPlus.png) | Common | Attack | 1 | Deal 7 (9) damage. hermit:Dead_On: Reduce the cost of a random card in your hand by 1 (2) this turn. |
 | Low Profile | ![](small-card-images/Hermit_yel-LowProfile.png) | ![](small-card-images/Hermit_yel-LowProfilePlus.png) | Common | Skill | 1 | Gain 7 (9) Block. Gains 4 (5) additional Block for each of your debuffs. |
 | Manifest | ![](small-card-images/Hermit_yel-Manifest.png) | ![](small-card-images/Hermit_yel-ManifestPlus.png) | Common | Skill | 2 | Gain 13 (17) Block. Draw 2 (3) Curses. |
 | Misfire | ![](small-card-images/Hermit_yel-Misfire.png) | ![](small-card-images/Hermit_yel-MisfirePlus.png) | Common | Attack | 1 | Deal 13 (17) damage to a random enemy. Shuffle a Clumsy into your draw pile. |
-| Pistol Whip | ![](small-card-images/Hermit_yel-PistolWhip.png) | ![](small-card-images/Hermit_yel-PistolWhipPlus.png) | Common | Attack | 1 | Deal 6 (8) damage. Apply 3 (5) hermit:Bruise. |
+| Pistol Whip | ![](small-card-images/Hermit_yel-PistolWhip.png) | ![](small-card-images/Hermit_yel-PistolWhipPlus.png) | Common | Attack | 1 | Deal 6 (8) damage. Apply 3 (4) hermit:Bruise. |
 | Quickdraw | ![](small-card-images/Hermit_yel-Quickdraw.png) | ![](small-card-images/Hermit_yel-QuickdrawPlus.png) | Common | Attack | 1 | Deal 9 (11) damage. Draw 2 (3) cards. Next turn, draw 1 less card. |
 | Roulette | ![](small-card-images/Hermit_yel-Roulette.png) | ![](small-card-images/Hermit_yel-RoulettePlus.png) | Common | Attack | 2 | Deal 18 (22) damage to a random enemy. Discard your hand. Draw that many cards. |
-| Spray n' Pray | ![](small-card-images/Hermit_yel-SpraynPray.png) | ![](small-card-images/Hermit_yel-SpraynPrayPlus.png) | Common | Attack | 1 | Deal 3 (4) damage to a random enemy 4 times. Shuffle a Doubt into your draw pile. |
+| Spray n' Pray | ![](small-card-images/Hermit_yel-SpraynPray.png) | ![](small-card-images/Hermit_yel-SpraynPrayPlus.png) | Common | Attack | 1 | Deal 4 (5) damage to a random enemy 3 times. Shuffle a Doubt into your draw pile. |
 | Tracking Shot | ![](small-card-images/Hermit_yel-TrackingShot.png) | ![](small-card-images/Hermit_yel-TrackingShotPlus.png) | Common | Attack | 1 | hermit:Concentrate. Deal 9 (12) damage. |
 | Vantage | ![](small-card-images/Hermit_yel-Vantage.png) | ![](small-card-images/Hermit_yel-VantagePlus.png) | Common | Skill | 1 | Gain 8 (11) Block. hermit:Dead_On: Upgrade 2 (3) random cards in your hand for the rest of combat. |
 | Wide Open | ![](small-card-images/Hermit_yel-WideOpen.png) | ![](small-card-images/Hermit_yel-WideOpenPlus.png) | Common | Attack | 1 | Deal 6 (8) damage. Apply 1 (2) Vulnerable. |
-| Brawl | ![](small-card-images/Hermit_yel-Brawl.png) | ![](small-card-images/Hermit_yel-BrawlPlus.png) | Uncommon | Power | 2 | At the start of your turn, apply 4 (6) hermit:Bruise to ALL enemies. |
+| Brawl | ![](small-card-images/Hermit_yel-Brawl.png) | ![](small-card-images/Hermit_yel-BrawlPlus.png) | Uncommon | Power | 2 | At the start of your turn, apply 3 (5) hermit:Bruise to ALL enemies. |
 | Called Shot | ![](small-card-images/Hermit_yel-CalledShot.png) | ![](small-card-images/Hermit_yel-CalledShotPlus.png) | Uncommon | Attack | 0 | Deal damage equal to your hand size. hermit:Dead_On: Draw 1 (2) Attack(s). |
 | Cheat | ![](small-card-images/Hermit_yel-Cheat.png) | ![](small-card-images/Hermit_yel-CheatPlus.png) | Uncommon | Skill | 1 | Play one of the top 3 (5) cards in your draw pile. hermit:Dead_On: Also trigger its hermit:Dead_On effect. |
 | Combo | ![](small-card-images/Hermit_yel-Combo.png) | ![](small-card-images/Hermit_yel-ComboPlus.png) | Uncommon | Power | 2 (1) | Whenever you trigger a hermit:Dead_On effect, add a random card with hermit:Dead_On to your hand. |
@@ -617,7 +617,7 @@
 | Desperado | ![](small-card-images/Hermit_yel-Desperado.png) | ![](small-card-images/Hermit_yel-DesperadoPlus.png) | Uncommon | Attack | 1 | Deal 10 (12) damage. Double this card's damage this combat. It costs 1 more. |
 | Determination | ![](small-card-images/Hermit_yel-Determination.png) | ![](small-card-images/Hermit_yel-DeterminationPlus.png) | Uncommon | Power | 1 | (Innate.)  Whenever a debuff is applied to you, gain 1 Strength. |
 | Enervate | ![](small-card-images/Hermit_yel-Enervate.png) | ![](small-card-images/Hermit_yel-EnervatePlus.png) | Uncommon | Attack | 1 | Deal 7 (10) damage. hermit:Dead_On: Gain [E] and draw a card. |
-| Eye Of The Storm | ![](small-card-images/Hermit_yel-EyeOfTheStorm.png) | ![](small-card-images/Hermit_yel-EyeOfTheStormPlus.png) | Uncommon | Skill | 0 | (Draw a card.)  hermit:Dead_On: Gain Energy up to your maximum. Exhaust. |
+| Eye Of The Storm | ![](small-card-images/Hermit_yel-EyeOfTheStorm.png) | ![](small-card-images/Hermit_yel-EyeOfTheStormPlus.png) | Uncommon | Skill | 1 (0) | Gain Energy up to your maximum. Exhaust. |
 | Flash Powder | ![](small-card-images/Hermit_yel-FlashPowder.png) | ![](small-card-images/Hermit_yel-FlashPowderPlus.png) | Uncommon | Skill | 1 | Gain 5 Block. ALL enemies lose 1 (2) Strength. Exhaust. |
 | Fully Loaded | ![](small-card-images/Hermit_yel-FullyLoaded.png) | ![](small-card-images/Hermit_yel-FullyLoadedPlus.png) | Uncommon | Skill | 0 | (Retain.)  Draw ALL your Strikes and Defends. Exhaust. |
 | Gestalt | ![](small-card-images/Hermit_yel-Gestalt.png) | ![](small-card-images/Hermit_yel-GestaltPlus.png) | Uncommon | Skill | 1 | Gain 2 hermit:Rugged. Gain 2 (1) Vulnerable. Exhaust. |
@@ -670,7 +670,7 @@
 | ![](potions/BottledDupe.png) | Bottled Dupe | Common | Swap to a random Gremlin. |
 | ![](potions/Ecto-Cooler.png) | Ecto-Cooler | Common | Choose 1 of 3 random Ethereal cards from any class to gain. It costs 0 this turn. |
 | ![](potions/JarofSlime.png) | Jar of Slime | Common | Apply 15 Goop. |
-| ![](potions/MachineOil.png) | Machine Oil | Common | Increase all numbers on Encoded cards by 1except cost. |
+| ![](potions/MachineOil.png) | Machine Oil | Common | Increase all numbers on Encoded cards by 1 except cost. |
 | ![](potions/PotentiallyPotentPotion.png) | Potentially Potent Potion | Common | Deal 1-40 damage. |
 | ![](potions/StrategyPotion.png) | Strategy Potion | Common | Choose 1 of 2 cards which Enter a Stance to gain (one for each Stance). It costs 0 this turn. |
 | ![](potions/TemporalPotion.png) | Temporal Potion | Common | Accelerate all cards in Stasis 2 times. |
@@ -716,6 +716,7 @@
 | ![](relics/champ-FightingForDummies.png) | Dolphin's Style Guide | Common | The_champ_gray | If you end your turn while in no #yStance, draw #b1 additional card next turn. | Author: Renowned explorer and pugilist Dolphin K. Mist. |
 | ![](relics/Gremlin-FragmentationGrenade.png) | Fragmentation Grenade | Common | Gremlin | Damage dealt to random enemies is increased by #b3. | Nobody dares to ask where the Gremlin got it from. |
 | ![](relics/Slimebound-AggressiveSlimeRelic.png) | Goop Dweller | Common | Slimebound | At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Bruiser #ySlime. | He followed me home. Can I keep it? |
+| ![](relics/hexamod-InflammatoryLetter.png) | Jar of TOBSCo | Common | Hexa_ghost_purple | Start each combat with #b1 #yhexamod:Intensity. | A little extra heat makes everything better. |
 | ![](relics/sneckomod-LoadedDie.png) | Loaded Die | Common | Snecko_cyan | Cards that choose random numbers have +1 minimum. | Cheese-stuffed. |
 | ![](relics/Guardian-PickAxe.png) | Pick of Rhapsody | Common | Guardian | You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites (up to #b3 times). | With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them. |
 | ![](relics/bronze-ProtectiveGoggles.png) | Protective Goggles | Common | The_bronze_automaton | If you end your turn with no #yEncoded cards, gain #b4 #yBlock. | Look closely. |
@@ -732,21 +733,19 @@
 | ![](relics/bronze-DecasWashers.png) | Deca's Washers | Uncommon |  | At the start of each combat, draw #b3 additional cards and add a #yDazed into your draw pile. | It is unclear why Deca collects these. |
 | ![](relics/Slimebound-StickyStick.png) | Gelatinous Cube | Uncommon |  | Whenever you draw a #yStatus card, draw #b1 card. | Hey, it stuck to your body. |
 | ![](relics/Gremlin-ImpeccablePecs.png) | Impeccable Pecs | Uncommon |  | Whenever you gain #yStrength, gain an equal amount of #yTemporary_HP. NL Start each combat with #b1 #yStrength. | Glorious. |
-| ![](relics/hexamod-InflammatoryLetter.png) | Jar of TOBSCo | Uncommon | Hexa_ghost_purple | Start each combat with #b1 #yhexamod:Intensity. | A little extra heat makes everything better. |
 | ![](relics/Slimebound-MaxSlimesRelic.png) | Jeremiah's Banner | Uncommon | Slimebound | At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching #ySlime and gain #b1 Slime slot. | You and ooze army. |
 | ![](relics/Gremlin-MagicalMallet.png) | Magic Mallet | Uncommon | Gremlin | Whenever you apply #yWeak, gain #b1 #yWiz, up to #b3 times per turn. | Stubs toes twice as hard. |
 | ![](relics/Guardian-StasisCodex.png) | Pilot's Codex | Uncommon | Guardian | If you end your turn with no cards in #yguardianmod:Stasis, choose #b1 of #b3 cards to place into #yguardianmod:Stasis. | Designs and diagrams of the Spire's earliest manually-driven prototypes, by Master Pilot David. |
 | ![](relics/hexamod-CandleOfCauterizing.png) | Red Candle | Uncommon |  | Whenever an #yAttack deals unblocked damage, apply #b2 #yhexamod:Soulburn. | Fire BURNS... |
 | ![](relics/sneckomod-ConfusingCodex.png) | Ring of the Snek | Uncommon | Snecko_cyan | At the start of combat, apply #b0-2 #yWeak and #yVulnerable to ALL enemies. | Illegible, unreadable, due by Thursday. |
 | ![](relics/Slimebound-PreparedRelic.png) | Slime Soup | Uncommon |  | When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0. | Tastes awful, but incredibly healthy. |
-| ![](relics/champ-SpectersHand.png) | Spectre's Hand | Uncommon | The_champ_gray | Whenever you Enter a Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust. | Some victories stay with you. |
 | ![](relics/hermit-Spyglass.png) | Spyglass | Uncommon | Hermit_yellow | If you end your turn #yhermit:Concentrated, gain an additional [E] next turn . | Property of Kestin Highfin. |
 | ![](relics/hermit-StraightRazor.png) | Straight Razor | Uncommon | Hermit_yellow | Whenever you remove a card from your deck, heal #b15 HP. | For a cleaner shave... |
 | ![](relics/sneckomod-SuperSneckoEye.png) | Super Snecko Eye | Uncommon |  | Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0. | 0121012 |
 | ![](relics/Gremlin-WizardStaff.png) | Wizard Staff | Uncommon | Gremlin | #yWiz deals #b7 additional damage. | The pride and joy of every Gremlin Wizard, this staff is a frequent target of theft by rival mobs. |
 | ![](relics/Gremlin-WoundPoker.png) | Wound Poker | Uncommon | Gremlin | At the end of each turn, deal #b6 damage to each #yWeakened enemy. | Does it hurt when I do this?. |
 | ![](relics/hermit-BlackPowder.png) | Black Powder | Rare | Hermit_yellow | At the end of your turn, deal #b2 damage to ALL enemies for each #yhermit:Dead_On effect triggered. | Handle with care. |
-| ![](relics/hermit-CharredGlove.png) | Charred Glove | Rare | Hermit_yellow | Whenever you draw a #rCurse, your next attack deals #b4 more damage. | Parts of the glove still glow with otherworldly cinders. |
+| ![](relics/hermit-CharredGlove.png) | Charred Glove | Rare | Hermit_yellow | Whenever you draw a #rCurse, your next attack deals #b3 more damage. | Parts of the glove still glow with otherworldly cinders. |
 | ![](relics/champ-DeflectingBracers.png) | Deflecting Bracers | Rare |  | At the start of your turn, gain #ychamp:Counter equal to half the amount of expired #yBlock. | If you thought blocking was good then... |
 | ![](relics/champ-DuelingGlove.png) | Dueling Glove | Rare |  | After using a single-target #yAttack, if the target has no #yVulnerable, apply #b1 #yVulnerable. | Count from ten... |
 | ![](relics/bronze-Timepiece.png) | Frost Primer | Rare | The_bronze_automaton | All Functions you create gain #yRetain. | 22 ounces of the chemical compound Ar22, shelf life: 22 years. Best stored in a mahogany fridge. |
@@ -765,6 +764,7 @@
 | ![](relics/Slimebound-SlimedSkullRelic.png) | Slimy Skull | Rare | Slimebound | Whenever you apply #yslimeboundmod:Goop, apply an additional #b1 #yslimeboundmod:Goop. | A Snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue. |
 | ![](relics/sneckomod-CleanMud.png) | Snake-Charmer's Flute | Rare | Snecko_cyan | #ysneckomod:Muddled cards can't cost #b3. | Sssssss... |
 | ![](relics/hexamod-SoulOfChaos.png) | Soul of Chaos | Rare | Hexa_ghost_purple | The fourth Ghostflame becomes a #yMayhem #yGhostflame. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition: Play the top card of your draw pile. | Mayhem, made manifest. |
+| ![](relics/champ-SpectersHand.png) | Spectre's Hand | Rare | The_champ_gray | Whenever you Enter a Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust. | Some victories stay with you. |
 | ![](relics/Slimebound-PotencyRelic.png) | Stone of Nomakk | Rare | Slimebound | At the start of combat, #ySplit into a #yslimeboundmod:Mire #ySlime and gain #b1 #yslimeboundmod:Potency. | When presented to one of your Goop Gang, it seems to make the blob dance. |
 | ![](relics/hexamod-SoulConsumer.png) | Thermal Stone | Rare | Hexa_ghost_purple | If #yhexamod:Soulburn detonates, heal #b4 HP at the end of combat. | A fire would liven this thing up! |
 | ![](relics/sneckomod-UnknownEgg.png) | Unidentified Egg | Rare | Snecko_cyan | #yIdentifying becomes a free action. NL #yUnidentified cards in card rewards are #yUpgraded. | What will hatch? Pay $1000 to see. |
@@ -810,7 +810,7 @@
 | ![](relics/champ-PowerArmor.png) | Power Armor | Boss | The_champ_gray | Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b10. | Bought used. |
 | ![](relics/Gremlin-ShortStature.png) | Short Stature | Boss | Gremlin | The first time a Gremlin would die each combat, heal it to #b75% of your Max HP instead. | It is easy to get away with mischief if you are literally beneath their notice. |
 | ![](relics/hermit-BartenderGlass.png) | Shotglass | Boss | Hermit_yellow | First #b2 times you use a potion each combat, gain a random potion. You can only use #b2 potions each combat. | Any liquid placed inside changes into something else. |
-| ![](relics/sneckomod-SuperSneckoSoul.png) | Super Snecko Soul | Boss | Snecko_cyan | Replaces [#407b93ff]Snecko[] [#407b93ff]Soul[][#407b93ff].[] NL The first time you play an #ysneckomod:Offclass each turn, gain [E] . | 3120231321230320 |
+| ![](relics/sneckomod-SuperSneckoSoul.png) | Super Snecko Soul | Boss | Snecko_cyan | Replaces [#407B93]Snecko Soul[]. NL The first time you play an #ysneckomod:Offclass each turn, gain [E] . | 3120231321230320 |
 | ![](relics/Slimebound-TarBlob.png) | Tarr Blob | Boss | Slimebound | Gain [E] at the start of your turn. At the start of combat, lose #b1 Slime slot. | The bad kind of Slime. |
 | ![](relics/expansioncontent-StudyCardRelic.png) | Tiny Bowler Hat | Boss |  | At the start of combat, add a #yStudy #ythe #ySpire card to your hand. It costs 0. | Whosoever controls the hat, controls the Spire. |
 | ![](relics/champ-ChampionCrownUpgraded.png) | Victorious Crown | Boss | The_champ_gray | Replaces #rChampion's #rCrown. NL Start each combat in #ychamp:Ultimate #yStance, which lasts for #b1 turn. | Conglaturation!! You are the greatest winner. |

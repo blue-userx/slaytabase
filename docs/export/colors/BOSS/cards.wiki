@@ -73,7 +73,7 @@ If you are below half HP, Gain (Heal 10 and gain) 2 [[Strength]].
 |[[Skill]]
 |2
 |Gain 10 (15) [[Block]].
-Next turn, gain [E] [E] [E] and SLIME CRUSH (*CRUSH+).
+Next turn, gain [E] [E] [E] and SLIME CRUSH.
 [[Exhaust]].
 |-
 |[[Shaper's Blessing]]

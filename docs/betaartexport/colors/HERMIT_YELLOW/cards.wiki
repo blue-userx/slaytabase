@@ -45,8 +45,8 @@ Discarded Curses are [[Exhausted]].
 |[[Skill]]
 |1
 |Discard a card.
-Gain 6 (8) [[Block]].
-If it was a non-Attack, gain 6 (8) [[Block]] again.
+Gain 5 (7) [[Block]].
+If it was a non-Attack, gain 5 (7) [[Block]] again.
 |-
 |[[Coalescence]]
 |[[File:|thumb|289x289px]]
@@ -70,7 +70,7 @@ Gain 1 (2) Plated Armor.
 |Common
 |[[Skill]]
 |0
-|Gain 4 (6) [[Block]].
+|Gain 3 (5) [[Block]].
 Apply 2 (3) [[hermit:Bruise]] to ALL enemies.
 |-
 |[[Glare]]
@@ -86,7 +86,7 @@ Apply 2 (3) [[hermit:Bruise]] to ALL enemies.
 |Common
 |[[Attack]]
 |1
-|Deal 8 (10) damage.
+|Deal 7 (9) damage.
 hermit:Dead_On: Deal double damage.
 |-
 |[[High-Caliber]]
@@ -144,7 +144,7 @@ Shuffle a Clumsy into your draw pile.
 |[[Attack]]
 |1
 |Deal 6 (8) damage.
-Apply 3 (5) [[hermit:Bruise]].
+Apply 3 (4) [[hermit:Bruise]].
 |-
 |[[Quickdraw]]
 |[[File:|thumb|289x289px]]
@@ -169,7 +169,7 @@ Draw that many cards.
 |Common
 |[[Attack]]
 |1
-|Deal 3 (4) damage to a random enemy 4 times.
+|Deal 4 (5) damage to a random enemy 3 times.
 Shuffle a Doubt into your draw pile.
 |-
 |[[Tracking Shot]]
@@ -202,7 +202,7 @@ Apply 1 (2) [[Vulnerable]].
 |Uncommon
 |[[Power]]
 |2
-|At the start of your turn, apply 4 (6) [[hermit:Bruise]] to ALL enemies.
+|At the start of your turn, apply 3 (5) [[hermit:Bruise]] to ALL enemies.
 |-
 |[[Called Shot]]
 |[[File:|thumb|289x289px]]
@@ -283,10 +283,8 @@ Gain [E] and draw a card.
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
-|0
-|(Draw a card.)
- hermit:Dead_On:
-Gain [[Energy]] up to your maximum.
+|1 (0)
+|Gain [[Energy]] up to your maximum.
 [[Exhaust]].
 |-
 |[[Flash Powder]]

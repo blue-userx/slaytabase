@@ -35,7 +35,7 @@
 | Downgrade | Remove an upgrade from a card. |
 | Echo | Echoes are copies of cards with Ethereal and Exhaust. |
 | Encode | Encode a card. When 3 cards are Encoded, their effects (other than Encode) are merged into a Function that costs 1. |
-| Exhume | Put a card from your exhaust pile into your hand. Exhuming cards cannot cross-exhume themselves. |
+| Exhume | Put a card from your exhaust pile into your hand. |
 | Extinguish | Allows Ghostflame to become Ignited again, resetting its Ignition requirements. |
 | Fat Gremlin | After you play an attack, apply 1 Weak to all targets. |
 | Fatigue | Lose HP. Restore Fatigued HP at the end of combat. You won't die from Fatigue . |

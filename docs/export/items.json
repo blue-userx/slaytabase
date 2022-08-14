@@ -7350,7 +7350,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "2",
-      "description": "Gain 15 Block.\nNext turn, gain [E] [E] [E] and SLIME CRUSH+.\nExhaust.",
+      "description": "Gain 15 Block.\nNext turn, gain [E] [E] [E] and SLIME CRUSH.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -8835,7 +8835,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "0",
-      "description": "Deal 5 damage.\n\u00A0 \u00A0\nWhen Encoded, add a copy to your discard pile.\nbronze:Encode.",
+      "description": "Deal 5 damage. \u202F When Encoded, add a copy to your discard pile.\nbronze:Encode.",
       "mod": "Downfall"
     },
     {
@@ -8844,7 +8844,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "0",
-      "description": "Deal 7 damage.\n\u00A0 \u00A0\nWhen Encoded, add a copy to your discard pile.\nbronze:Encode.",
+      "description": "Deal 7 damage. \u202F When Encoded, add a copy to your discard pile.\nbronze:Encode.",
       "mod": "Downfall"
     },
     {
@@ -9348,7 +9348,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 5 Block.\n\u00A0 \u00A0 When Encoded as the first card, increase its Block by 5.\nbronze:Encode.",
+      "description": "Gain 5 Block. \u202F When Encoded as the first card, increase its Block by 5.\nbronze:Encode.",
       "mod": "Downfall"
     },
     {
@@ -9357,7 +9357,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 7 Block.\n\u00A0 \u00A0 When Encoded as the first card, increase its Block by 7.\nbronze:Encode.",
+      "description": "Gain 7 Block. \u202F When Encoded as the first card, increase its Block by 7.\nbronze:Encode.",
       "mod": "Downfall"
     },
     {
@@ -9762,7 +9762,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 6 damage.\n\u00A0 \u00A0 When bronze:Encoded in the middle, increase its damage by 6.\nbronze:Encode.",
+      "description": "Deal 6 damage. \u202F When bronze:Encoded in the middle, increase its damage by 6.\nbronze:Encode.",
       "mod": "Downfall"
     },
     {
@@ -9771,7 +9771,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 8 damage.\n\u00A0 \u00A0 When bronze:Encoded in the middle, increase its damage by 8.\nbronze:Encode.",
+      "description": "Deal 8 damage. \u202F When bronze:Encoded in the middle, increase its damage by 8.\nbronze:Encode.",
       "mod": "Downfall"
     },
     {
@@ -13155,7 +13155,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13164,7 +13164,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13173,7 +13173,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13182,7 +13182,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13191,7 +13191,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13200,7 +13200,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13209,7 +13209,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13218,7 +13218,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13227,7 +13227,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13236,7 +13236,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -13245,7 +13245,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card.",
+      "description": "Upgraded Unidentified Character Card.",
       "mod": "Downfall"
     },
     {
@@ -17052,7 +17052,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Discard a card.\nGain 6 Block.\nIf it was a non-Attack, gain 6 Block again.",
+      "description": "Discard a card.\nGain 5 Block.\nIf it was a non-Attack, gain 5 Block again.",
       "mod": "Downfall"
     },
     {
@@ -17061,7 +17061,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Discard a card.\nGain 8 Block.\nIf it was a non-Attack, gain 8 Block again.",
+      "description": "Discard a card.\nGain 7 Block.\nIf it was a non-Attack, gain 7 Block again.",
       "mod": "Downfall"
     },
     {
@@ -17106,7 +17106,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "0",
-      "description": "Gain 4 Block.\nApply 2 hermit:Bruise to ALL enemies.",
+      "description": "Gain 3 Block.\nApply 2 hermit:Bruise to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -17115,7 +17115,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "0",
-      "description": "Gain 6 Block.\nApply 3 hermit:Bruise to ALL enemies.",
+      "description": "Gain 5 Block.\nApply 3 hermit:Bruise to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -17142,7 +17142,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 8 damage.\nhermit:Dead_On: Deal double damage.",
+      "description": "Deal 7 damage.\nhermit:Dead_On: Deal double damage.",
       "mod": "Downfall"
     },
     {
@@ -17151,7 +17151,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 10 damage.\nhermit:Dead_On: Deal double damage.",
+      "description": "Deal 9 damage.\nhermit:Dead_On: Deal double damage.",
       "mod": "Downfall"
     },
     {
@@ -17277,7 +17277,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 8 damage.\nApply 5 hermit:Bruise.",
+      "description": "Deal 8 damage.\nApply 4 hermit:Bruise.",
       "mod": "Downfall"
     },
     {
@@ -17322,7 +17322,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 3 damage to a random enemy 4 times.\nShuffle a Doubt into your draw pile.",
+      "description": "Deal 4 damage to a random enemy 3 times.\nShuffle a Doubt into your draw pile.",
       "mod": "Downfall"
     },
     {
@@ -17331,7 +17331,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 4 damage to a random enemy 4 times.\nShuffle a Doubt into your draw pile.",
+      "description": "Deal 5 damage to a random enemy 3 times.\nShuffle a Doubt into your draw pile.",
       "mod": "Downfall"
     },
     {
@@ -17394,7 +17394,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "2",
-      "description": "At the start of your turn, apply 4 hermit:Bruise to ALL enemies.",
+      "description": "At the start of your turn, apply 3 hermit:Bruise to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -17403,7 +17403,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "2",
-      "description": "At the start of your turn, apply 6 hermit:Bruise to ALL enemies.",
+      "description": "At the start of your turn, apply 5 hermit:Bruise to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -17573,8 +17573,8 @@
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
       "type": "Skill",
-      "cost": "0",
-      "description": "hermit:Dead_On:\nGain Energy up to your maximum.\nExhaust.",
+      "cost": "1",
+      "description": "Gain Energy up to your maximum.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -17583,7 +17583,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "0",
-      "description": "Draw a card.\nhermit:Dead_On:\nGain Energy up to your maximum.\nExhaust.",
+      "description": "Gain Energy up to your maximum.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -18599,6 +18599,14 @@
       "mod": ""
     },
     {
+      "name": "Jar of TOBSCo",
+      "tier": "Common",
+      "pool": "Hexa_ghost_purple",
+      "description": "Start each combat with 1 hexamod:Intensity.",
+      "flavorText": "A little extra heat makes everything better.",
+      "mod": "Downfall"
+    },
+    {
       "name": "Juzu Bracelet",
       "tier": "Common",
       "pool": "",
@@ -18999,14 +19007,6 @@
       "mod": ""
     },
     {
-      "name": "Jar of TOBSCo",
-      "tier": "Uncommon",
-      "pool": "Hexa_ghost_purple",
-      "description": "Start each combat with 1 hexamod:Intensity.",
-      "flavorText": "A little extra heat makes everything better.",
-      "mod": "Downfall"
-    },
-    {
       "name": "Jeremiah's Banner",
       "tier": "Uncommon",
       "pool": "Slimebound",
@@ -19191,14 +19191,6 @@
       "mod": "Downfall"
     },
     {
-      "name": "Spectre's Hand",
-      "tier": "Uncommon",
-      "pool": "The_champ_gray",
-      "description": "Whenever you Enter a Stance, gain a basic Strike or Defend. It costs 0 and has Exhaust.",
-      "flavorText": "Some victories stay with you.",
-      "mod": "Downfall"
-    },
-    {
       "name": "Spyglass",
       "tier": "Uncommon",
       "pool": "Hermit_yellow",
@@ -19346,7 +19338,7 @@
       "name": "Charred Glove",
       "tier": "Rare",
       "pool": "Hermit_yellow",
-      "description": "Whenever you draw a Curse, your next attack deals 4 more damage.",
+      "description": "Whenever you draw a Curse, your next attack deals 3 more damage.",
       "flavorText": "Parts of the glove still glow with otherworldly cinders.",
       "mod": "Downfall"
     },
@@ -19644,6 +19636,14 @@
       "pool": "Hexa_ghost_purple",
       "description": "The fourth Ghostflame becomes a Mayhem Ghostflame.\nMayhem Ghostflame activates when you end your turn on it.\nIgnition: Play the top card of your draw pile.",
       "flavorText": "Mayhem, made manifest.",
+      "mod": "Downfall"
+    },
+    {
+      "name": "Spectre's Hand",
+      "tier": "Rare",
+      "pool": "The_champ_gray",
+      "description": "Whenever you Enter a Stance, gain a basic Strike or Defend. It costs 0 and has Exhaust.",
+      "flavorText": "Some victories stay with you.",
       "mod": "Downfall"
     },
     {
@@ -20442,7 +20442,7 @@
       "name": "Super Snecko Soul",
       "tier": "Boss",
       "pool": "Snecko_cyan",
-      "description": "Replaces Snecko Soul.\nThe first time you play an sneckomod:Offclass each turn, gain [E] .",
+      "description": "Replaces Snecko Soul[].\nThe first time you play an sneckomod:Offclass each turn, gain [E] .",
       "flavorText": "3120231321230320",
       "mod": "Downfall"
     },
@@ -20891,7 +20891,7 @@
     {
       "name": "Machine Oil",
       "rarity": "Common",
-      "description": "Increase all numbers on Encoded cards by 1except cost.",
+      "description": "Increase all numbers on Encoded cards by 1 except cost.",
       "mod": "Downfall"
     },
     {
@@ -22097,7 +22097,7 @@
     },
     {
       "name": "Exhume",
-      "description": "Put a card from your exhaust pile into your hand. Exhuming cards cannot cross-exhume themselves.",
+      "description": "Put a card from your exhaust pile into your hand.",
       "names": [],
       "mod": "Downfall"
     },

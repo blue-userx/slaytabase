@@ -15,7 +15,7 @@
 | Gladiator | Stance. Skill Bonus: Draw a card. Finisher Bonus: Next turn, draw 1 card and gain [E] . End your turn. |
 | Ultimate Stance | Stance. Counts as both Defensive and Berserker Stances. If you leave this Stance before it expires, immediately re-enter it. |
 | Boss | You may only play 1 Boss card in a turn. |
-| Exhume | Put a card from your exhaust pile into your hand. Exhuming cards cannot cross-exhume themselves. |
+| Exhume | Put a card from your exhaust pile into your hand. |
 | Invincible | You cannot lose more than a given amount of HP in a single turn. At the end of any round in which Invincible prevented HP loss, remove it. |
 | Reclaim | Put a card from your exhaust pile into your discard pile. |
 | Shackled | Shackled creatures lose Strength for a turn. |

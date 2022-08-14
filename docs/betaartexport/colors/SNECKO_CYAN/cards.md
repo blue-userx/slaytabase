@@ -5,17 +5,17 @@
 | Snek Bite | ![](../../downfall/small-card-images/Snecko_cya-SnekBite.png) | ![](../../downfall/small-card-images/Snecko_cya-SnekBitePlus.png) | Basic | Attack | 1 | Deal 7 (9) damage. sneckomod:Muddle the (2) highest-cost card(s) in your hand. |
 | Strike | ![](../../downfall/small-card-images/Snecko_cya-Strike.png) | ![](../../downfall/small-card-images/Snecko_cya-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
 | Tail Whip | ![](../../downfall/small-card-images/Snecko_cya-TailWhip.png) | ![](../../downfall/small-card-images/Snecko_cya-TailWhipPlus.png) | Basic | Attack | 2 | Deal 10 (13) damage. Apply 0 (1) - 2 Weak. Apply 0 (1) - 2 Vulnerable. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](../../downfall/small-card-images/Snecko_cya-.png) | ![](../../downfall/small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
 | ??? 1-Cost | ![](../../downfall/small-card-images/Snecko_cya-1-Cost.png) | ![](../../downfall/small-card-images/Snecko_cya-1-CostPlus.png) | Common | Skill |  | (Upgraded) Unidentified 1 Cost Card. |
 | ??? Block | ![](../../downfall/small-card-images/Snecko_cya-Block.png) | ![](../../downfall/small-card-images/Snecko_cya-BlockPlus.png) | Common | Skill |  | (Upgraded) Unidentified Block Card. |
 | ??? C Attack | ![](../../downfall/small-card-images/Snecko_cya-CAttack.png) | ![](../../downfall/small-card-images/Snecko_cya-CAttackPlus.png) | Common | Attack |  | (Upgraded) Unidentified Common Attack Card. |

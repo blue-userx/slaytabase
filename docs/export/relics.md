@@ -34,6 +34,7 @@
 | ![](downfall/relics/Gremlin-FragmentationGrenade.png) | Fragmentation Grenade | Common | Gremlin | Damage dealt to random enemies is increased by #b3. | Nobody dares to ask where the Gremlin got it from. |
 | ![](downfall/relics/Slimebound-AggressiveSlimeRelic.png) | Goop Dweller | Common | Slimebound | At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Bruiser #ySlime. | He followed me home. Can I keep it? |
 | ![](slay-the-spire/relics/HappyFlower.png) | Happy Flower | Common |  | Every #b3 turns, gain [E] . | This unceasingly joyous plant is a popular novelty item among nobles. |
+| ![](downfall/relics/hexamod-InflammatoryLetter.png) | Jar of TOBSCo | Common | Hexa_ghost_purple | Start each combat with #b1 #yhexamod:Intensity. | A little extra heat makes everything better. |
 | ![](slay-the-spire/relics/JuzuBracelet.png) | Juzu Bracelet | Common |  | Normal enemy combats are no longer encountered in #y? rooms. | A ward against the unknown. |
 | ![](slay-the-spire/relics/Lantern.png) | Lantern | Common |  | Start each combat with an additional [E] . | An eerie lantern which illuminates only for the wielder. |
 | ![](downfall/relics/sneckomod-LoadedDie.png) | Loaded Die | Common | Snecko_cyan | Cards that choose random numbers have +1 minimum. | Cheese-stuffed. |
@@ -84,7 +85,6 @@
 | ![](slay-the-spire/relics/HornCleat.png) | Horn Cleat | Uncommon |  | At the start of your 2nd turn, gain #b14 #yBlock. | Pleasant to hold in the hand. What was it for? |
 | ![](downfall/relics/Gremlin-ImpeccablePecs.png) | Impeccable Pecs | Uncommon |  | Whenever you gain #yStrength, gain an equal amount of #yTemporary_HP. NL Start each combat with #b1 #yStrength. | Glorious. |
 | ![](slay-the-spire/relics/InkBottle.png) | Ink Bottle | Uncommon |  | Whenever you play #b10 cards, draw #b1 card. | Once exhausted, appears to refill itself in a different color. |
-| ![](downfall/relics/hexamod-InflammatoryLetter.png) | Jar of TOBSCo | Uncommon | Hexa_ghost_purple | Start each combat with #b1 #yhexamod:Intensity. | A little extra heat makes everything better. |
 | ![](downfall/relics/Slimebound-MaxSlimesRelic.png) | Jeremiah's Banner | Uncommon | Slimebound | At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching #ySlime and gain #b1 Slime slot. | You and ooze army. |
 | ![](slay-the-spire/relics/Kunai.png) | Kunai | Uncommon |  | Every time you play #b3 #yAttacks in a single turn, gain #b1 #yDexterity. | A blade favored by assassins for its lethality at range. |
 | ![](slay-the-spire/relics/LetterOpener.png) | Letter Opener | Uncommon |  | Every time you play #b3 #ySkills in a single turn, deal #b5 damage to ALL enemies. | Unnaturally sharp. |
@@ -108,7 +108,6 @@
 | ![](slay-the-spire/relics/Shuriken.png) | Shuriken | Uncommon |  | Every time you play #b3 #yAttacks in a single turn, gain #b1 #yStrength. | Lightweight throwing weapons. Recommend going for the eyes. |
 | ![](slay-the-spire/relics/SingingBowl.png) | Singing Bowl | Uncommon |  | When adding cards into your deck, you may raise your Max HP by #b2 instead. | This well-used artifact rings out with a beautiful melody when struck. |
 | ![](downfall/relics/Slimebound-PreparedRelic.png) | Slime Soup | Uncommon |  | When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0. | Tastes awful, but incredibly healthy. |
-| ![](downfall/relics/champ-SpectersHand.png) | Spectre's Hand | Uncommon | The_champ_gray | Whenever you Enter a Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust. | Some victories stay with you. |
 | ![](downfall/relics/hermit-Spyglass.png) | Spyglass | Uncommon | Hermit_yellow | If you end your turn #yhermit:Concentrated, gain an additional [E] next turn . | Property of Kestin Highfin. |
 | ![](downfall/relics/hermit-StraightRazor.png) | Straight Razor | Uncommon | Hermit_yellow | Whenever you remove a card from your deck, heal #b15 HP. | For a cleaner shave... |
 | ![](slay-the-spire/relics/StrikeDummy.png) | Strike Dummy | Uncommon |  | Cards containing "Strike" deal #b3 additional damage. | It's beat up. |
@@ -127,7 +126,7 @@
 | ![](slay-the-spire/relics/CaptainsWheel.png) | Captain's Wheel | Rare |  | At the start of your 3rd turn, gain #b18 #yBlock. | Wooden trinket carved with delicate precision. A name is carved into it but the language is foreign. |
 | ![](slay-the-spire/relics/ChampionBelt.png) | Champion Belt | Rare | Red | Whenever you apply #yVulnerable, apply #b1 #yWeak. | Only the greatest may wear this belt. |
 | ![](slay-the-spire/relics/CharonsAshes.png) | Charon's Ashes | Rare | Red | Whenever you #yExhaust a card, deal #b3 damage to ALL enemies. | Charon was said to be the god of rebirth, eternally dying and reviving in a burst of flame. |
-| ![](downfall/relics/hermit-CharredGlove.png) | Charred Glove | Rare | Hermit_yellow | Whenever you draw a #rCurse, your next attack deals #b4 more damage. | Parts of the glove still glow with otherworldly cinders. |
+| ![](downfall/relics/hermit-CharredGlove.png) | Charred Glove | Rare | Hermit_yellow | Whenever you draw a #rCurse, your next attack deals #b3 more damage. | Parts of the glove still glow with otherworldly cinders. |
 | ![](slay-the-spire/relics/CloakClasp.png) | Cloak Clasp | Rare | Purple | At the end of your turn, gain #b1 #yBlock for each card in your hand. | A simple but sturdy design. |
 | ![](slay-the-spire/relics/DeadBranch.png) | Dead Branch | Rare |  | Whenever you #yExhaust a card, add a random card into your hand. | The branch of a tree from a forgotten era. |
 | ![](downfall/relics/champ-DeflectingBracers.png) | Deflecting Bracers | Rare |  | At the start of your turn, gain #ychamp:Counter equal to half the amount of expired #yBlock. | If you thought blocking was good then... |
@@ -165,6 +164,7 @@
 | ![](downfall/relics/Slimebound-SlimedSkullRelic.png) | Slimy Skull | Rare | Slimebound | Whenever you apply #yslimeboundmod:Goop, apply an additional #b1 #yslimeboundmod:Goop. | A Snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue. |
 | ![](downfall/relics/sneckomod-CleanMud.png) | Snake-Charmer's Flute | Rare | Snecko_cyan | #ysneckomod:Muddled cards can't cost #b3. | Sssssss... |
 | ![](downfall/relics/hexamod-SoulOfChaos.png) | Soul of Chaos | Rare | Hexa_ghost_purple | The fourth Ghostflame becomes a #yMayhem #yGhostflame. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition: Play the top card of your draw pile. | Mayhem, made manifest. |
+| ![](downfall/relics/champ-SpectersHand.png) | Spectre's Hand | Rare | The_champ_gray | Whenever you Enter a Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust. | Some victories stay with you. |
 | ![](slay-the-spire/relics/StoneCalendar.png) | Stone Calendar | Rare |  | At the end of turn #b7, deal #b52 damage to ALL enemies. | The passage of time is imperceptible in the Spire. |
 | ![](downfall/relics/Slimebound-PotencyRelic.png) | Stone of Nomakk | Rare | Slimebound | At the start of combat, #ySplit into a #yslimeboundmod:Mire #ySlime and gain #b1 #yslimeboundmod:Potency. | When presented to one of your Goop Gang, it seems to make the blob dance. |
 | ![](slay-the-spire/relics/TheSpecimen.png) | The Specimen | Rare | Green | Whenever an enemy dies, transfer any #yPoison it has to a random enemy. | "Fascinating! I found a mutated creature demonstrating astounding toxic properties. Storing a sample for later examination." - Ranwid |
@@ -264,7 +264,7 @@
 | ![](slay-the-spire/relics/SlaversCollar.png) | Slaver's Collar | Boss |  | During Boss and Elite combats, gain [E] at the start of your turn. | Rusty miserable chains. |
 | ![](slay-the-spire/relics/SneckoEye.png) | Snecko Eye | Boss |  | At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. | An eye of a fallen snecko. Much larger than you imagined. |
 | ![](slay-the-spire/relics/Sozu.png) | Sozu | Boss |  | Gain [E] at the start of your turn. You can no longer obtain potions. | You notice that magical liquids seem to lose their properties when near this relic. |
-| ![](downfall/relics/sneckomod-SuperSneckoSoul.png) | Super Snecko Soul | Boss | Snecko_cyan | Replaces [#407b93ff]Snecko[] [#407b93ff]Soul[][#407b93ff].[] NL The first time you play an #ysneckomod:Offclass each turn, gain [E] . | 3120231321230320 |
+| ![](downfall/relics/sneckomod-SuperSneckoSoul.png) | Super Snecko Soul | Boss | Snecko_cyan | Replaces [#407B93]Snecko Soul[]. NL The first time you play an #ysneckomod:Offclass each turn, gain [E] . | 3120231321230320 |
 | ![](downfall/relics/Slimebound-TarBlob.png) | Tarr Blob | Boss | Slimebound | Gain [E] at the start of your turn. At the start of combat, lose #b1 Slime slot. | The bad kind of Slime. |
 | ![](downfall/relics/expansioncontent-StudyCardRelic.png) | Tiny Bowler Hat | Boss |  | At the start of combat, add a #yStudy #ythe #ySpire card to your hand. It costs 0. | Whosoever controls the hat, controls the Spire. |
 | ![](slay-the-spire/relics/TinyHouse.png) | Tiny House | Boss |  | Upon pickup, obtain #b1 potion. NL Gain #b50 #yGold. NL Raise your Max HP by #b5. NL Obtain #b1 card. NL Upgrade #b1 random card. | "A near perfect implementation of miniaturization. My finest work to date, but still not adequate." - The Architect |

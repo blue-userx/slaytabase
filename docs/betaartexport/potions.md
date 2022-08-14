@@ -16,7 +16,7 @@
 | ![](slay-the-spire/potions/FlexPotion.png) | Flex Potion | Common | Gain 5 Strength. At the end of your turn, lose 5 Strength. |
 | ![](slay-the-spire/potions/FocusPotion.png) | Focus Potion | Common | Gain 2 Focus. |
 | ![](downfall/potions/JarofSlime.png) | Jar of Slime | Common | Apply 15 Goop. |
-| ![](downfall/potions/MachineOil.png) | Machine Oil | Common | Increase all numbers on Encoded cards by 1except cost. |
+| ![](downfall/potions/MachineOil.png) | Machine Oil | Common | Increase all numbers on Encoded cards by 1 except cost. |
 | ![](slay-the-spire/potions/PoisonPotion.png) | Poison Potion | Common | Apply 6 Poison. |
 | ![](downfall/potions/PotentiallyPotentPotion.png) | Potentially Potent Potion | Common | Deal 1-40 damage. |
 | ![](slay-the-spire/potions/PowerPotion.png) | Power Potion | Common | Choose 1 of 3 random Power cards to add to your hand, it costs 0 this turn. |

@@ -30,9 +30,7 @@
 |Basic
 |[[Attack]]
 |0
-|Deal 5 (7) damage.
-   
-When Encoded, add a copy to your discard pile.
+|Deal 5 (7) damage.   When Encoded, add a copy to your discard pile.
 [[bronze:Encode]].
 |-
 |[[Strike]]
@@ -274,8 +272,7 @@ Deal 8 (12) damage.
 |Uncommon
 |[[Skill]]
 |1
-|Gain 5 (7) [[Block]].
-    When Encoded as the first card, increase its [[Block]] by 5 (7).
+|Gain 5 (7) [[Block]].   When Encoded as the first card, increase its [[Block]] by 5 (7).
 [[bronze:Encode]].
 |-
 |[[Copy Paste]]
@@ -469,8 +466,7 @@ Next turn, gain [E] ([E]).
 |Uncommon
 |[[Attack]]
 |1
-|Deal 6 (8) damage.
-    When [[bronze:Encoded]] in the middle, increase its damage by 6 (8).
+|Deal 6 (8) damage.   When [[bronze:Encoded]] in the middle, increase its damage by 6 (8).
 [[bronze:Encode]].
 |-
 |[[Terminator]]

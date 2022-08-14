@@ -47,7 +47,7 @@
 | Hexaburn | ![](small-card-images/Boss-Hexaburn.png) | ![](small-card-images/Boss-HexaburnPlus.png) | Uncommon | Power | 2 | In 3 (2) turns, deal 6 damage to a random enemy 6 times. Scales with Strength. |
 | Invincible | ![](small-card-images/Boss-Invincible.png) | ![](small-card-images/Boss-InvinciblePlus.png) | Uncommon | Power | 2 (1) | Gain 10 expansioncontent:Invincible. If you already had expansioncontent:Invincible, it lasts another turn instead. |
 | Last Stand | ![](small-card-images/Boss-LastStand.png) | ![](small-card-images/Boss-LastStandPlus.png) | Uncommon | Power | 2 | Remove all Debuffs. Gain 1 Strength. If you are below half HP, Gain (Heal 10 and gain) 2 Strength. |
-| Prepare Crush | ![](small-card-images/Boss-PrepareCrush.png) | ![](small-card-images/Boss-PrepareCrushPlus.png) | Uncommon | Skill | 2 | Gain 10 (15) Block. Next turn, gain [E] [E] [E] and SLIME CRUSH (*CRUSH+). Exhaust. |
+| Prepare Crush | ![](small-card-images/Boss-PrepareCrush.png) | ![](small-card-images/Boss-PrepareCrushPlus.png) | Uncommon | Skill | 2 | Gain 10 (15) Block. Next turn, gain [E] [E] [E] and SLIME CRUSH. Exhaust. |
 | Shaper's Blessing | ![](small-card-images/Boss-ShapersBlessing.png) | ![](small-card-images/Boss-ShapersBlessingPlus.png) | Uncommon | Power | 2 | Choose - Gain 2 (3) Strength or 5 (8) Plated Armor. |
 | YOU ARE MINE! | ![](small-card-images/Boss-YOUAREMINE!.png) | ![](small-card-images/Boss-YOUAREMINE!Plus.png) | Uncommon | Skill | 2 | Remove Block from, and apply 3 (5) Weak and Vulnerable to, ALL enemies. Exhaust. |
 | Quick Study | ![](small-card-images/Boss-QuickStudy.png) | ![](small-card-images/Boss-QuickStudyPlus.png) | Rare | Skill | 1 | Choose 1 of 3 (Upgraded) Boss cards to gain. It costs 0 until played. Exhaust. |
@@ -130,7 +130,7 @@
 | Volcano Visage | ![](small-card-images/Hexa_ghost-VolcanoVisage.png) | ![](small-card-images/Hexa_ghost-VolcanoVisagePlus.png) | Rare | Power | 1 | Whenever you Ignite a Ghostflame, apply 4 (6) hexamod:Soulburn to ALL enemies. |
 | Defend | ![](small-card-images/The_bronze-Defend.png) | ![](small-card-images/The_bronze-DefendPlus.png) | Basic | Skill | 1 | Gain 5 (8) Block. |
 | Goto | ![](small-card-images/The_bronze-Goto.png) | ![](small-card-images/The_bronze-GotoPlus.png) | Basic | Skill | 1 | Draw 1 (2) card(s). bronze:Encode. bronze:Compile - Next turn, draw 1 (2) card(s). |
-| Replicate | ![](small-card-images/The_bronze-Replicate.png) | ![](small-card-images/The_bronze-ReplicatePlus.png) | Basic | Attack | 0 | Deal 5 (7) damage.     When Encoded, add a copy to your discard pile. bronze:Encode. |
+| Replicate | ![](small-card-images/The_bronze-Replicate.png) | ![](small-card-images/The_bronze-ReplicatePlus.png) | Basic | Attack | 0 | Deal 5 (7) damage.   When Encoded, add a copy to your discard pile. bronze:Encode. |
 | Strike | ![](small-card-images/The_bronze-Strike.png) | ![](small-card-images/The_bronze-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
 | function() | ![](small-card-images/The_bronze-function().png) | ![]() | Special | Skill | 1 |  |
 | Bit Shift | ![](small-card-images/The_bronze-BitShift.png) | ![](small-card-images/The_bronze-BitShiftPlus.png) | Common | Skill | 0 | (Retain.)  Choose an Encoded card to return to your hand. It gains Retain. Exhaust. |
@@ -159,7 +159,7 @@
 | Bronze Armor | ![](small-card-images/The_bronze-BronzeArmor.png) | ![](small-card-images/The_bronze-BronzeArmorPlus.png) | Uncommon | Skill | 0 | Gain 1 Artifact. bronze:Encode. bronze:Compile Error - ALL enemies gain 12 (8) Block. |
 | Bronze Orb | ![](small-card-images/The_bronze-BronzeOrb.png) | ![](small-card-images/The_bronze-BronzeOrbPlus.png) | Uncommon | Attack | 1 | Innate. Deal 8 (12) damage. bronze:Encode a random card with Encode in your draw pile. Exhaust. |
 | Class Default | ![](small-card-images/The_bronze-ClassDefault.png) | ![](small-card-images/The_bronze-ClassDefaultPlus.png) | Uncommon | Power | 1 (0) | Next 2 times you create a Function, bronze:Encode a copy of the first card in it. |
-| Constructor | ![](small-card-images/The_bronze-Constructor.png) | ![](small-card-images/The_bronze-ConstructorPlus.png) | Uncommon | Skill | 1 | Gain 5 (7) Block.     When Encoded as the first card, increase its Block by 5 (7). bronze:Encode. |
+| Constructor | ![](small-card-images/The_bronze-Constructor.png) | ![](small-card-images/The_bronze-ConstructorPlus.png) | Uncommon | Skill | 1 | Gain 5 (7) Block.   When Encoded as the first card, increase its Block by 5 (7). bronze:Encode. |
 | Copy Paste | ![](small-card-images/The_bronze-CopyPaste.png) | ![](small-card-images/The_bronze-CopyPastePlus.png) | Uncommon | Skill | 1 | Play a copy of each Encoded card. They do not Encode. Exhaust. (not Exhaust.) |
 | Cultist Strike | ![](small-card-images/The_bronze-CultistStrike.png) | ![](small-card-images/The_bronze-CultistStrikePlus.png) | Uncommon | Attack | 1 | Deal 6 (9) damage. bronze:Encode. bronze:Compile - Increase this card's damage by 1 permanently. |
 | Flail | ![](small-card-images/The_bronze-Flail.png) | ![](small-card-images/The_bronze-FlailPlus.png) | Uncommon | Attack | 2 | Deal 7 (8) damage to ALL enemies 2 times. Gain 1 (2) Artifact. Exhaust. |
@@ -182,7 +182,7 @@
 | Repair | ![](small-card-images/The_bronze-Repair.png) | ![](small-card-images/The_bronze-RepairPlus.png) | Uncommon | Skill | 1 | Gain 4 Block. bronze:Encode. bronze:Compile - Heal 7 (10) HP. |
 | Repulsor | ![](small-card-images/The_bronze-Repulsor.png) | ![](small-card-images/The_bronze-RepulsorPlus.png) | Uncommon | Power | 2 (1) | When you draw the first Status or Curse card each turn, Exhaust it and draw a card. |
 | Return | ![](small-card-images/The_bronze-Return.png) | ![](small-card-images/The_bronze-ReturnPlus.png) | Uncommon | Skill | 1 | Put a card from your discard pile on top of your draw pile. Next turn, gain [E] ([E]). |
-| Separator | ![](small-card-images/The_bronze-Separator.png) | ![](small-card-images/The_bronze-SeparatorPlus.png) | Uncommon | Attack | 1 | Deal 6 (8) damage.     When bronze:Encoded in the middle, increase its damage by 6 (8). bronze:Encode. |
+| Separator | ![](small-card-images/The_bronze-Separator.png) | ![](small-card-images/The_bronze-SeparatorPlus.png) | Uncommon | Attack | 1 | Deal 6 (8) damage.   When bronze:Encoded in the middle, increase its damage by 6 (8). bronze:Encode. |
 | Terminator | ![](small-card-images/The_bronze-Terminator.png) | ![](small-card-images/The_bronze-TerminatorPlus.png) | Uncommon | Skill | 1 (0) | bronze:Encode. bronze:Compile - If this is the last card of the Function, it gains 'Play this again'. |
 | Undervolt | ![](small-card-images/The_bronze-Undervolt.png) | ![](small-card-images/The_bronze-UndervoltPlus.png) | Uncommon | Skill | 1 | ALL enemies lose 2 (3) Strength. Gain 2 Burns. Exhaust. |
 | Assembly | ![](small-card-images/The_bronze-Assembly.png) | ![](small-card-images/The_bronze-AssemblyPlus.png) | Rare | Skill | 1 | Scry 5 (8). bronze:Encode all Encodable cards discarded (in selected order). Exhaust. |
@@ -360,17 +360,17 @@
 | Snek Bite | ![](small-card-images/Snecko_cya-SnekBite.png) | ![](small-card-images/Snecko_cya-SnekBitePlus.png) | Basic | Attack | 1 | Deal 7 (9) damage. sneckomod:Muddle the (2) highest-cost card(s) in your hand. |
 | Strike | ![](small-card-images/Snecko_cya-Strike.png) | ![](small-card-images/Snecko_cya-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
 | Tail Whip | ![](small-card-images/Snecko_cya-TailWhip.png) | ![](small-card-images/Snecko_cya-TailWhipPlus.png) | Basic | Attack | 2 | Deal 10 (13) damage. Apply 0 (1) - 2 Weak. Apply 0 (1) - 2 Vulnerable. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
-| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | *Unidentified (Upgraded*Unidentified) Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
+| ??? | ![](small-card-images/Snecko_cya-.png) | ![](small-card-images/Snecko_cya-Plus.png) | Common | Skill |  | (Upgraded) Unidentified Character Card. |
 | ??? 1-Cost | ![](small-card-images/Snecko_cya-1-Cost.png) | ![](small-card-images/Snecko_cya-1-CostPlus.png) | Common | Skill |  | (Upgraded) Unidentified 1 Cost Card. |
 | ??? Block | ![](small-card-images/Snecko_cya-Block.png) | ![](small-card-images/Snecko_cya-BlockPlus.png) | Common | Skill |  | (Upgraded) Unidentified Block Card. |
 | ??? C Attack | ![](small-card-images/Snecko_cya-CAttack.png) | ![](small-card-images/Snecko_cya-CAttackPlus.png) | Common | Attack |  | (Upgraded) Unidentified Common Attack Card. |
@@ -585,26 +585,26 @@
 | Defend | ![](small-card-images/Hermit_yel-Defend.png) | ![](small-card-images/Hermit_yel-DefendPlus.png) | Basic | Skill | 1 | Gain 5 (8) Block. |
 | Snapshot | ![](small-card-images/Hermit_yel-Snapshot.png) | ![](small-card-images/Hermit_yel-SnapshotPlus.png) | Basic | Attack | 1 | Deal 5 (7) damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt. |
 | Strike | ![](small-card-images/Hermit_yel-Strike.png) | ![](small-card-images/Hermit_yel-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
-| Body Armor | ![](small-card-images/Hermit_yel-BodyArmor.png) | ![](small-card-images/Hermit_yel-BodyArmorPlus.png) | Common | Skill | 1 | Discard a card. Gain 6 (8) Block. If it was a non-Attack, gain 6 (8) Block again. |
+| Body Armor | ![](small-card-images/Hermit_yel-BodyArmor.png) | ![](small-card-images/Hermit_yel-BodyArmorPlus.png) | Common | Skill | 1 | Discard a card. Gain 5 (7) Block. If it was a non-Attack, gain 5 (7) Block again. |
 | Coalescence | ![](small-card-images/Hermit_yel-Coalescence.png) | ![](small-card-images/Hermit_yel-CoalescencePlus.png) | Common | Skill | 1 | Gain 6 (9) Block. Retain up to 2 (3) cards this turn. |
 | Dive | ![](small-card-images/Hermit_yel-Dive.png) | ![](small-card-images/Hermit_yel-DivePlus.png) | Common | Skill | 1 | Gain 8 (10) Block. hermit:Dead_On: Gain 1 (2) Plated Armor. |
-| Feint | ![](small-card-images/Hermit_yel-Feint.png) | ![](small-card-images/Hermit_yel-FeintPlus.png) | Common | Skill | 0 | Gain 4 (6) Block. Apply 2 (3) hermit:Bruise to ALL enemies. |
+| Feint | ![](small-card-images/Hermit_yel-Feint.png) | ![](small-card-images/Hermit_yel-FeintPlus.png) | Common | Skill | 0 | Gain 3 (5) Block. Apply 2 (3) hermit:Bruise to ALL enemies. |
 | Glare | ![](small-card-images/Hermit_yel-Glare.png) | ![](small-card-images/Hermit_yel-GlarePlus.png) | Common | Skill | 0 | (Retain.)  Apply 1 Weak and Vulnerable. |
-| Headshot | ![](small-card-images/Hermit_yel-Headshot.png) | ![](small-card-images/Hermit_yel-HeadshotPlus.png) | Common | Attack | 1 | Deal 8 (10) damage. hermit:Dead_On: Deal double damage. |
+| Headshot | ![](small-card-images/Hermit_yel-Headshot.png) | ![](small-card-images/Hermit_yel-HeadshotPlus.png) | Common | Attack | 1 | Deal 7 (9) damage. hermit:Dead_On: Deal double damage. |
 | High-Caliber | ![](small-card-images/Hermit_yel-High-Caliber.png) | ![](small-card-images/Hermit_yel-High-CaliberPlus.png) | Common | Attack | 1 | Deal 12 (15) damage. Add a Strike (*Strike+) to your hand. Exhaust. |
 | Hole Up | ![](small-card-images/Hermit_yel-HoleUp.png) | ![](small-card-images/Hermit_yel-HoleUpPlus.png) | Common | Skill | 1 | Gain 12 (16) Block. Gain 2 Weak. |
 | Itchy Trigger | ![](small-card-images/Hermit_yel-ItchyTrigger.png) | ![](small-card-images/Hermit_yel-ItchyTriggerPlus.png) | Common | Attack | 1 | Deal 7 (9) damage. hermit:Dead_On: Reduce the cost of a random card in your hand by 1 (2) this turn. |
 | Low Profile | ![](small-card-images/Hermit_yel-LowProfile.png) | ![](small-card-images/Hermit_yel-LowProfilePlus.png) | Common | Skill | 1 | Gain 7 (9) Block. Gains 4 (5) additional Block for each of your debuffs. |
 | Manifest | ![](small-card-images/Hermit_yel-Manifest.png) | ![](small-card-images/Hermit_yel-ManifestPlus.png) | Common | Skill | 2 | Gain 13 (17) Block. Draw 2 (3) Curses. |
 | Misfire | ![](small-card-images/Hermit_yel-Misfire.png) | ![](small-card-images/Hermit_yel-MisfirePlus.png) | Common | Attack | 1 | Deal 13 (17) damage to a random enemy. Shuffle a Clumsy into your draw pile. |
-| Pistol Whip | ![](small-card-images/Hermit_yel-PistolWhip.png) | ![](small-card-images/Hermit_yel-PistolWhipPlus.png) | Common | Attack | 1 | Deal 6 (8) damage. Apply 3 (5) hermit:Bruise. |
+| Pistol Whip | ![](small-card-images/Hermit_yel-PistolWhip.png) | ![](small-card-images/Hermit_yel-PistolWhipPlus.png) | Common | Attack | 1 | Deal 6 (8) damage. Apply 3 (4) hermit:Bruise. |
 | Quickdraw | ![](small-card-images/Hermit_yel-Quickdraw.png) | ![](small-card-images/Hermit_yel-QuickdrawPlus.png) | Common | Attack | 1 | Deal 9 (11) damage. Draw 2 (3) cards. Next turn, draw 1 less card. |
 | Roulette | ![](small-card-images/Hermit_yel-Roulette.png) | ![](small-card-images/Hermit_yel-RoulettePlus.png) | Common | Attack | 2 | Deal 18 (22) damage to a random enemy. Discard your hand. Draw that many cards. |
-| Spray n' Pray | ![](small-card-images/Hermit_yel-SpraynPray.png) | ![](small-card-images/Hermit_yel-SpraynPrayPlus.png) | Common | Attack | 1 | Deal 3 (4) damage to a random enemy 4 times. Shuffle a Doubt into your draw pile. |
+| Spray n' Pray | ![](small-card-images/Hermit_yel-SpraynPray.png) | ![](small-card-images/Hermit_yel-SpraynPrayPlus.png) | Common | Attack | 1 | Deal 4 (5) damage to a random enemy 3 times. Shuffle a Doubt into your draw pile. |
 | Tracking Shot | ![](small-card-images/Hermit_yel-TrackingShot.png) | ![](small-card-images/Hermit_yel-TrackingShotPlus.png) | Common | Attack | 1 | hermit:Concentrate. Deal 9 (12) damage. |
 | Vantage | ![](small-card-images/Hermit_yel-Vantage.png) | ![](small-card-images/Hermit_yel-VantagePlus.png) | Common | Skill | 1 | Gain 8 (11) Block. hermit:Dead_On: Upgrade 2 (3) random cards in your hand for the rest of combat. |
 | Wide Open | ![](small-card-images/Hermit_yel-WideOpen.png) | ![](small-card-images/Hermit_yel-WideOpenPlus.png) | Common | Attack | 1 | Deal 6 (8) damage. Apply 1 (2) Vulnerable. |
-| Brawl | ![](small-card-images/Hermit_yel-Brawl.png) | ![](small-card-images/Hermit_yel-BrawlPlus.png) | Uncommon | Power | 2 | At the start of your turn, apply 4 (6) hermit:Bruise to ALL enemies. |
+| Brawl | ![](small-card-images/Hermit_yel-Brawl.png) | ![](small-card-images/Hermit_yel-BrawlPlus.png) | Uncommon | Power | 2 | At the start of your turn, apply 3 (5) hermit:Bruise to ALL enemies. |
 | Called Shot | ![](small-card-images/Hermit_yel-CalledShot.png) | ![](small-card-images/Hermit_yel-CalledShotPlus.png) | Uncommon | Attack | 0 | Deal damage equal to your hand size. hermit:Dead_On: Draw 1 (2) Attack(s). |
 | Cheat | ![](small-card-images/Hermit_yel-Cheat.png) | ![](small-card-images/Hermit_yel-CheatPlus.png) | Uncommon | Skill | 1 | Play one of the top 3 (5) cards in your draw pile. hermit:Dead_On: Also trigger its hermit:Dead_On effect. |
 | Combo | ![](small-card-images/Hermit_yel-Combo.png) | ![](small-card-images/Hermit_yel-ComboPlus.png) | Uncommon | Power | 2 (1) | Whenever you trigger a hermit:Dead_On effect, add a random card with hermit:Dead_On to your hand. |
@@ -614,7 +614,7 @@
 | Desperado | ![](small-card-images/Hermit_yel-Desperado.png) | ![](small-card-images/Hermit_yel-DesperadoPlus.png) | Uncommon | Attack | 1 | Deal 10 (12) damage. Double this card's damage this combat. It costs 1 more. |
 | Determination | ![](small-card-images/Hermit_yel-Determination.png) | ![](small-card-images/Hermit_yel-DeterminationPlus.png) | Uncommon | Power | 1 | (Innate.)  Whenever a debuff is applied to you, gain 1 Strength. |
 | Enervate | ![](small-card-images/Hermit_yel-Enervate.png) | ![](small-card-images/Hermit_yel-EnervatePlus.png) | Uncommon | Attack | 1 | Deal 7 (10) damage. hermit:Dead_On: Gain [E] and draw a card. |
-| Eye Of The Storm | ![](small-card-images/Hermit_yel-EyeOfTheStorm.png) | ![](small-card-images/Hermit_yel-EyeOfTheStormPlus.png) | Uncommon | Skill | 0 | (Draw a card.)  hermit:Dead_On: Gain Energy up to your maximum. Exhaust. |
+| Eye Of The Storm | ![](small-card-images/Hermit_yel-EyeOfTheStorm.png) | ![](small-card-images/Hermit_yel-EyeOfTheStormPlus.png) | Uncommon | Skill | 1 (0) | Gain Energy up to your maximum. Exhaust. |
 | Flash Powder | ![](small-card-images/Hermit_yel-FlashPowder.png) | ![](small-card-images/Hermit_yel-FlashPowderPlus.png) | Uncommon | Skill | 1 | Gain 5 Block. ALL enemies lose 1 (2) Strength. Exhaust. |
 | Fully Loaded | ![](small-card-images/Hermit_yel-FullyLoaded.png) | ![](small-card-images/Hermit_yel-FullyLoadedPlus.png) | Uncommon | Skill | 0 | (Retain.)  Draw ALL your Strikes and Defends. Exhaust. |
 | Gestalt | ![](small-card-images/Hermit_yel-Gestalt.png) | ![](small-card-images/Hermit_yel-GestaltPlus.png) | Uncommon | Skill | 1 | Gain 2 hermit:Rugged. Gain 2 (1) Vulnerable. Exhaust. |

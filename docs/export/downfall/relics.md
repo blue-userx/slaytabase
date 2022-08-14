@@ -16,6 +16,7 @@
 | ![](relics/champ-FightingForDummies.png) | Dolphin's Style Guide | Common | The_champ_gray | If you end your turn while in no #yStance, draw #b1 additional card next turn. | Author: Renowned explorer and pugilist Dolphin K. Mist. |
 | ![](relics/Gremlin-FragmentationGrenade.png) | Fragmentation Grenade | Common | Gremlin | Damage dealt to random enemies is increased by #b3. | Nobody dares to ask where the Gremlin got it from. |
 | ![](relics/Slimebound-AggressiveSlimeRelic.png) | Goop Dweller | Common | Slimebound | At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Bruiser #ySlime. | He followed me home. Can I keep it? |
+| ![](relics/hexamod-InflammatoryLetter.png) | Jar of TOBSCo | Common | Hexa_ghost_purple | Start each combat with #b1 #yhexamod:Intensity. | A little extra heat makes everything better. |
 | ![](relics/sneckomod-LoadedDie.png) | Loaded Die | Common | Snecko_cyan | Cards that choose random numbers have +1 minimum. | Cheese-stuffed. |
 | ![](relics/Guardian-PickAxe.png) | Pick of Rhapsody | Common | Guardian | You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites (up to #b3 times). | With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them. |
 | ![](relics/bronze-ProtectiveGoggles.png) | Protective Goggles | Common | The_bronze_automaton | If you end your turn with no #yEncoded cards, gain #b4 #yBlock. | Look closely. |
@@ -32,21 +33,19 @@
 | ![](relics/bronze-DecasWashers.png) | Deca's Washers | Uncommon |  | At the start of each combat, draw #b3 additional cards and add a #yDazed into your draw pile. | It is unclear why Deca collects these. |
 | ![](relics/Slimebound-StickyStick.png) | Gelatinous Cube | Uncommon |  | Whenever you draw a #yStatus card, draw #b1 card. | Hey, it stuck to your body. |
 | ![](relics/Gremlin-ImpeccablePecs.png) | Impeccable Pecs | Uncommon |  | Whenever you gain #yStrength, gain an equal amount of #yTemporary_HP. NL Start each combat with #b1 #yStrength. | Glorious. |
-| ![](relics/hexamod-InflammatoryLetter.png) | Jar of TOBSCo | Uncommon | Hexa_ghost_purple | Start each combat with #b1 #yhexamod:Intensity. | A little extra heat makes everything better. |
 | ![](relics/Slimebound-MaxSlimesRelic.png) | Jeremiah's Banner | Uncommon | Slimebound | At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching #ySlime and gain #b1 Slime slot. | You and ooze army. |
 | ![](relics/Gremlin-MagicalMallet.png) | Magic Mallet | Uncommon | Gremlin | Whenever you apply #yWeak, gain #b1 #yWiz, up to #b3 times per turn. | Stubs toes twice as hard. |
 | ![](relics/Guardian-StasisCodex.png) | Pilot's Codex | Uncommon | Guardian | If you end your turn with no cards in #yguardianmod:Stasis, choose #b1 of #b3 cards to place into #yguardianmod:Stasis. | Designs and diagrams of the Spire's earliest manually-driven prototypes, by Master Pilot David. |
 | ![](relics/hexamod-CandleOfCauterizing.png) | Red Candle | Uncommon |  | Whenever an #yAttack deals unblocked damage, apply #b2 #yhexamod:Soulburn. | Fire BURNS... |
 | ![](relics/sneckomod-ConfusingCodex.png) | Ring of the Snek | Uncommon | Snecko_cyan | At the start of combat, apply #b0-2 #yWeak and #yVulnerable to ALL enemies. | Illegible, unreadable, due by Thursday. |
 | ![](relics/Slimebound-PreparedRelic.png) | Slime Soup | Uncommon |  | When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0. | Tastes awful, but incredibly healthy. |
-| ![](relics/champ-SpectersHand.png) | Spectre's Hand | Uncommon | The_champ_gray | Whenever you Enter a Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust. | Some victories stay with you. |
 | ![](relics/hermit-Spyglass.png) | Spyglass | Uncommon | Hermit_yellow | If you end your turn #yhermit:Concentrated, gain an additional [E] next turn . | Property of Kestin Highfin. |
 | ![](relics/hermit-StraightRazor.png) | Straight Razor | Uncommon | Hermit_yellow | Whenever you remove a card from your deck, heal #b15 HP. | For a cleaner shave... |
 | ![](relics/sneckomod-SuperSneckoEye.png) | Super Snecko Eye | Uncommon |  | Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0. | 0121012 |
 | ![](relics/Gremlin-WizardStaff.png) | Wizard Staff | Uncommon | Gremlin | #yWiz deals #b7 additional damage. | The pride and joy of every Gremlin Wizard, this staff is a frequent target of theft by rival mobs. |
 | ![](relics/Gremlin-WoundPoker.png) | Wound Poker | Uncommon | Gremlin | At the end of each turn, deal #b6 damage to each #yWeakened enemy. | Does it hurt when I do this?. |
 | ![](relics/hermit-BlackPowder.png) | Black Powder | Rare | Hermit_yellow | At the end of your turn, deal #b2 damage to ALL enemies for each #yhermit:Dead_On effect triggered. | Handle with care. |
-| ![](relics/hermit-CharredGlove.png) | Charred Glove | Rare | Hermit_yellow | Whenever you draw a #rCurse, your next attack deals #b4 more damage. | Parts of the glove still glow with otherworldly cinders. |
+| ![](relics/hermit-CharredGlove.png) | Charred Glove | Rare | Hermit_yellow | Whenever you draw a #rCurse, your next attack deals #b3 more damage. | Parts of the glove still glow with otherworldly cinders. |
 | ![](relics/champ-DeflectingBracers.png) | Deflecting Bracers | Rare |  | At the start of your turn, gain #ychamp:Counter equal to half the amount of expired #yBlock. | If you thought blocking was good then... |
 | ![](relics/champ-DuelingGlove.png) | Dueling Glove | Rare |  | After using a single-target #yAttack, if the target has no #yVulnerable, apply #b1 #yVulnerable. | Count from ten... |
 | ![](relics/bronze-Timepiece.png) | Frost Primer | Rare | The_bronze_automaton | All Functions you create gain #yRetain. | 22 ounces of the chemical compound Ar22, shelf life: 22 years. Best stored in a mahogany fridge. |
@@ -65,6 +64,7 @@
 | ![](relics/Slimebound-SlimedSkullRelic.png) | Slimy Skull | Rare | Slimebound | Whenever you apply #yslimeboundmod:Goop, apply an additional #b1 #yslimeboundmod:Goop. | A Snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue. |
 | ![](relics/sneckomod-CleanMud.png) | Snake-Charmer's Flute | Rare | Snecko_cyan | #ysneckomod:Muddled cards can't cost #b3. | Sssssss... |
 | ![](relics/hexamod-SoulOfChaos.png) | Soul of Chaos | Rare | Hexa_ghost_purple | The fourth Ghostflame becomes a #yMayhem #yGhostflame. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition: Play the top card of your draw pile. | Mayhem, made manifest. |
+| ![](relics/champ-SpectersHand.png) | Spectre's Hand | Rare | The_champ_gray | Whenever you Enter a Stance, gain a basic #yStrike or #yDefend. It costs #b0 and has #yExhaust. | Some victories stay with you. |
 | ![](relics/Slimebound-PotencyRelic.png) | Stone of Nomakk | Rare | Slimebound | At the start of combat, #ySplit into a #yslimeboundmod:Mire #ySlime and gain #b1 #yslimeboundmod:Potency. | When presented to one of your Goop Gang, it seems to make the blob dance. |
 | ![](relics/hexamod-SoulConsumer.png) | Thermal Stone | Rare | Hexa_ghost_purple | If #yhexamod:Soulburn detonates, heal #b4 HP at the end of combat. | A fire would liven this thing up! |
 | ![](relics/sneckomod-UnknownEgg.png) | Unidentified Egg | Rare | Snecko_cyan | #yIdentifying becomes a free action. NL #yUnidentified cards in card rewards are #yUpgraded. | What will hatch? Pay $1000 to see. |
@@ -110,7 +110,7 @@
 | ![](relics/champ-PowerArmor.png) | Power Armor | Boss | The_champ_gray | Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b10. | Bought used. |
 | ![](relics/Gremlin-ShortStature.png) | Short Stature | Boss | Gremlin | The first time a Gremlin would die each combat, heal it to #b75% of your Max HP instead. | It is easy to get away with mischief if you are literally beneath their notice. |
 | ![](relics/hermit-BartenderGlass.png) | Shotglass | Boss | Hermit_yellow | First #b2 times you use a potion each combat, gain a random potion. You can only use #b2 potions each combat. | Any liquid placed inside changes into something else. |
-| ![](relics/sneckomod-SuperSneckoSoul.png) | Super Snecko Soul | Boss | Snecko_cyan | Replaces [#407b93ff]Snecko[] [#407b93ff]Soul[][#407b93ff].[] NL The first time you play an #ysneckomod:Offclass each turn, gain [E] . | 3120231321230320 |
+| ![](relics/sneckomod-SuperSneckoSoul.png) | Super Snecko Soul | Boss | Snecko_cyan | Replaces [#407B93]Snecko Soul[]. NL The first time you play an #ysneckomod:Offclass each turn, gain [E] . | 3120231321230320 |
 | ![](relics/Slimebound-TarBlob.png) | Tarr Blob | Boss | Slimebound | Gain [E] at the start of your turn. At the start of combat, lose #b1 Slime slot. | The bad kind of Slime. |
 | ![](relics/expansioncontent-StudyCardRelic.png) | Tiny Bowler Hat | Boss |  | At the start of combat, add a #yStudy #ythe #ySpire card to your hand. It costs 0. | Whosoever controls the hat, controls the Spire. |
 | ![](relics/champ-ChampionCrownUpgraded.png) | Victorious Crown | Boss | The_champ_gray | Replaces #rChampion's #rCrown. NL Start each combat in #ychamp:Ultimate #yStance, which lasts for #b1 turn. | Conglaturation!! You are the greatest winner. |

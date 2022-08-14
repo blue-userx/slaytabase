@@ -3,7 +3,7 @@
 | ![](potions/BottledDupe.png) | Bottled Dupe | Common | Swap to a random Gremlin. |
 | ![](potions/Ecto-Cooler.png) | Ecto-Cooler | Common | Choose 1 of 3 random Ethereal cards from any class to gain. It costs 0 this turn. |
 | ![](potions/JarofSlime.png) | Jar of Slime | Common | Apply 15 Goop. |
-| ![](potions/MachineOil.png) | Machine Oil | Common | Increase all numbers on Encoded cards by 1except cost. |
+| ![](potions/MachineOil.png) | Machine Oil | Common | Increase all numbers on Encoded cards by 1 except cost. |
 | ![](potions/PotentiallyPotentPotion.png) | Potentially Potent Potion | Common | Deal 1-40 damage. |
 | ![](potions/StrategyPotion.png) | Strategy Potion | Common | Choose 1 of 2 cards which Enter a Stance to gain (one for each Stance). It costs 0 this turn. |
 | ![](potions/TemporalPotion.png) | Temporal Potion | Common | Accelerate all cards in Stasis 2 times. |

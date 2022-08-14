@@ -1,7 +1,7 @@
 {
   "mod": {
     "name": "Downfall",
-    "version": "4.1.17",
+    "version": "4.1.183",
     "authors": ["The Downfall Collab Team"],
     "credits": "",
     "description": "Downfall is a full-featured Expansion for Slay the Spire, including a new 5th hero, a new campaign with 7 villains to play, new relics, new cards, new potions, and more. \n \n The Heart demands that this endless cycle of slaughter be finished.  Answer the call as a Villain, and see to the defense of the Spire. \n \n This mod is a combination modpack which includes the former mods known as Slimebound Mod, Guardian Mod, and Playable Snecko, along with a ton of new content, a new character, and much more.\n \n Design and Code Credits: \n \n MichaelMayhem, Vex, kiooeht, Alchyr, erasels, The Evil Pickle, Blank the Evil, JohnnyDevo, AlexDrieger, Erim-Nelhah, Darkglade, Vaylen, SuperLuigi231, Kalene, Cheetah-shooter, arctic_mists .  Art Credits: Freshbone - Character Select and Bonfire Art, Half-GoblinHankins - Card Art, AlexMdle - Card Art, C\u00E1s de Mattos - Card Art, Rita-B - Alternate Skin Art, Casey Yano - Monster Art, Noob Cannon and the Marisa Team - Misc Card Art \n \n Art Use Credit: reddit u/justaschema, Bruce Brenneise, reddit u/Atrolux, Chronometrics, George Eracleous. \n \n Music Credit: PandorasBread \n \n Testers and Helpers: Reina, moocowgoesmoo, Jedi, Skyson, Chufmoney, zwolfiez, Tiamoko, Ashlyn/IcyColdFire, squeeny, A Cake Wearing a Hat, ServetTayberkSalads, blalo'u, ComingVirus  \n \n Localization Aid - borloch",
@@ -713,7 +713,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "2",
-      "description": "Gain 15 Block.\nNext turn, gain [E] [E] [E] and SLIME CRUSH+.\nExhaust."
+      "description": "Gain 15 Block.\nNext turn, gain [E] [E] [E] and SLIME CRUSH.\nExhaust."
     },
     {
       "name": "Shaper's Blessing",
@@ -2033,7 +2033,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "0",
-      "description": "Deal 5 damage.\n\u00A0 \u00A0\nWhen Encoded, add a copy to your discard pile.\nbronze:Encode."
+      "description": "Deal 5 damage. \u202F When Encoded, add a copy to your discard pile.\nbronze:Encode."
     },
     {
       "name": "Replicate+",
@@ -2041,7 +2041,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "0",
-      "description": "Deal 7 damage.\n\u00A0 \u00A0\nWhen Encoded, add a copy to your discard pile.\nbronze:Encode."
+      "description": "Deal 7 damage. \u202F When Encoded, add a copy to your discard pile.\nbronze:Encode."
     },
     {
       "name": "Strike",
@@ -2489,7 +2489,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 5 Block.\n\u00A0 \u00A0 When Encoded as the first card, increase its Block by 5.\nbronze:Encode."
+      "description": "Gain 5 Block. \u202F When Encoded as the first card, increase its Block by 5.\nbronze:Encode."
     },
     {
       "name": "Constructor+",
@@ -2497,7 +2497,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 7 Block.\n\u00A0 \u00A0 When Encoded as the first card, increase its Block by 7.\nbronze:Encode."
+      "description": "Gain 7 Block. \u202F When Encoded as the first card, increase its Block by 7.\nbronze:Encode."
     },
     {
       "name": "Copy Paste",
@@ -2857,7 +2857,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 6 damage.\n\u00A0 \u00A0 When bronze:Encoded in the middle, increase its damage by 6.\nbronze:Encode."
+      "description": "Deal 6 damage. \u202F When bronze:Encoded in the middle, increase its damage by 6.\nbronze:Encode."
     },
     {
       "name": "Separator+",
@@ -2865,7 +2865,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 8 damage.\n\u00A0 \u00A0 When bronze:Encoded in the middle, increase its damage by 8.\nbronze:Encode."
+      "description": "Deal 8 damage. \u202F When bronze:Encoded in the middle, increase its damage by 8.\nbronze:Encode."
     },
     {
       "name": "Terminator",
@@ -5873,7 +5873,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5881,7 +5881,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5889,7 +5889,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5897,7 +5897,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5905,7 +5905,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5913,7 +5913,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5921,7 +5921,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5929,7 +5929,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5937,7 +5937,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5945,7 +5945,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "???+",
@@ -5953,7 +5953,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "",
-      "description": "Upgraded*Unidentified Character Card."
+      "description": "Upgraded Unidentified Character Card."
     },
     {
       "name": "Dice Block",
@@ -9337,7 +9337,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Discard a card.\nGain 6 Block.\nIf it was a non-Attack, gain 6 Block again."
+      "description": "Discard a card.\nGain 5 Block.\nIf it was a non-Attack, gain 5 Block again."
     },
     {
       "name": "Body Armor+",
@@ -9345,7 +9345,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Discard a card.\nGain 8 Block.\nIf it was a non-Attack, gain 8 Block again."
+      "description": "Discard a card.\nGain 7 Block.\nIf it was a non-Attack, gain 7 Block again."
     },
     {
       "name": "Coalescence",
@@ -9385,7 +9385,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "0",
-      "description": "Gain 4 Block.\nApply 2 hermit:Bruise to ALL enemies."
+      "description": "Gain 3 Block.\nApply 2 hermit:Bruise to ALL enemies."
     },
     {
       "name": "Feint+",
@@ -9393,7 +9393,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "0",
-      "description": "Gain 6 Block.\nApply 3 hermit:Bruise to ALL enemies."
+      "description": "Gain 5 Block.\nApply 3 hermit:Bruise to ALL enemies."
     },
     {
       "name": "Glare",
@@ -9417,7 +9417,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 8 damage.\nhermit:Dead_On: Deal double damage."
+      "description": "Deal 7 damage.\nhermit:Dead_On: Deal double damage."
     },
     {
       "name": "Headshot+",
@@ -9425,7 +9425,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 10 damage.\nhermit:Dead_On: Deal double damage."
+      "description": "Deal 9 damage.\nhermit:Dead_On: Deal double damage."
     },
     {
       "name": "High-Caliber",
@@ -9537,7 +9537,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 8 damage.\nApply 5 hermit:Bruise."
+      "description": "Deal 8 damage.\nApply 4 hermit:Bruise."
     },
     {
       "name": "Quickdraw",
@@ -9577,7 +9577,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 3 damage to a random enemy 4 times.\nShuffle a Doubt into your draw pile."
+      "description": "Deal 4 damage to a random enemy 3 times.\nShuffle a Doubt into your draw pile."
     },
     {
       "name": "Spray n' Pray+",
@@ -9585,7 +9585,7 @@
       "rarity": "Common",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 4 damage to a random enemy 4 times.\nShuffle a Doubt into your draw pile."
+      "description": "Deal 5 damage to a random enemy 3 times.\nShuffle a Doubt into your draw pile."
     },
     {
       "name": "Tracking Shot",
@@ -9641,7 +9641,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "2",
-      "description": "At the start of your turn, apply 4 hermit:Bruise to ALL enemies."
+      "description": "At the start of your turn, apply 3 hermit:Bruise to ALL enemies."
     },
     {
       "name": "Brawl+",
@@ -9649,7 +9649,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "2",
-      "description": "At the start of your turn, apply 6 hermit:Bruise to ALL enemies."
+      "description": "At the start of your turn, apply 5 hermit:Bruise to ALL enemies."
     },
     {
       "name": "Called Shot",
@@ -9800,8 +9800,8 @@
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
       "type": "Skill",
-      "cost": "0",
-      "description": "hermit:Dead_On:\nGain Energy up to your maximum.\nExhaust."
+      "cost": "1",
+      "description": "Gain Energy up to your maximum.\nExhaust."
     },
     {
       "name": "Eye Of The Storm+",
@@ -9809,7 +9809,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "0",
-      "description": "Draw a card.\nhermit:Dead_On:\nGain Energy up to your maximum.\nExhaust."
+      "description": "Gain Energy up to your maximum.\nExhaust."
     },
     {
       "name": "Flash Powder",
@@ -10582,6 +10582,13 @@
       "flavorText": "He followed me home. Can I keep it?"
     },
     {
+      "name": "Jar of TOBSCo",
+      "tier": "Common",
+      "pool": "Hexa_ghost_purple",
+      "description": "Start each combat with 1 hexamod:Intensity.",
+      "flavorText": "A little extra heat makes everything better."
+    },
+    {
       "name": "Loaded Die",
       "tier": "Common",
       "pool": "Snecko_cyan",
@@ -10694,13 +10701,6 @@
       "flavorText": "Glorious."
     },
     {
-      "name": "Jar of TOBSCo",
-      "tier": "Uncommon",
-      "pool": "Hexa_ghost_purple",
-      "description": "Start each combat with 1 hexamod:Intensity.",
-      "flavorText": "A little extra heat makes everything better."
-    },
-    {
       "name": "Jeremiah's Banner",
       "tier": "Uncommon",
       "pool": "Slimebound",
@@ -10741,13 +10741,6 @@
       "pool": "",
       "description": "When you enter a Rest Site, begin the next combat with a Prepare card that costs 0.",
       "flavorText": "Tastes awful, but incredibly healthy."
-    },
-    {
-      "name": "Spectre's Hand",
-      "tier": "Uncommon",
-      "pool": "The_champ_gray",
-      "description": "Whenever you Enter a Stance, gain a basic Strike or Defend. It costs 0 and has Exhaust.",
-      "flavorText": "Some victories stay with you."
     },
     {
       "name": "Spyglass",
@@ -10795,7 +10788,7 @@
       "name": "Charred Glove",
       "tier": "Rare",
       "pool": "Hermit_yellow",
-      "description": "Whenever you draw a Curse, your next attack deals 4 more damage.",
+      "description": "Whenever you draw a Curse, your next attack deals 3 more damage.",
       "flavorText": "Parts of the glove still glow with otherworldly cinders."
     },
     {
@@ -10923,6 +10916,13 @@
       "pool": "Hexa_ghost_purple",
       "description": "The fourth Ghostflame becomes a Mayhem Ghostflame.\nMayhem Ghostflame activates when you end your turn on it.\nIgnition: Play the top card of your draw pile.",
       "flavorText": "Mayhem, made manifest."
+    },
+    {
+      "name": "Spectre's Hand",
+      "tier": "Rare",
+      "pool": "The_champ_gray",
+      "description": "Whenever you Enter a Stance, gain a basic Strike or Defend. It costs 0 and has Exhaust.",
+      "flavorText": "Some victories stay with you."
     },
     {
       "name": "Stone of Nomakk",
@@ -11243,7 +11243,7 @@
       "name": "Super Snecko Soul",
       "tier": "Boss",
       "pool": "Snecko_cyan",
-      "description": "Replaces Snecko Soul.\nThe first time you play an sneckomod:Offclass each turn, gain [E] .",
+      "description": "Replaces Snecko Soul[].\nThe first time you play an sneckomod:Offclass each turn, gain [E] .",
       "flavorText": "3120231321230320"
     },
     {
@@ -11399,7 +11399,7 @@
     {
       "name": "Machine Oil",
       "rarity": "Common",
-      "description": "Increase all numbers on Encoded cards by 1except cost."
+      "description": "Increase all numbers on Encoded cards by 1 except cost."
     },
     {
       "name": "Potentially Potent Potion",
@@ -11753,7 +11753,7 @@
     },
     {
       "name": "Exhume",
-      "description": "Put a card from your exhaust pile into your hand. Exhuming cards cannot cross-exhume themselves."
+      "description": "Put a card from your exhaust pile into your hand."
     },
     {
       "name": "Invincible",
