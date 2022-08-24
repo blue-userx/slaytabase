@@ -8592,7 +8592,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "3",
-      "description": "At the start of your turn, gain 3 hexamod:Intensity.",
+      "description": "Gain 2 hexamod:Intensity.\nAt the start of your turn, gain 2 hexamod:Intensity.",
       "mod": "Downfall"
     },
     {
@@ -10266,7 +10266,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 5 Block.\nApply 5 slimeboundmod:Goop and 1 Weak to ALL enemies.",
+      "description": "Gain 4 Block.\nApply 4 slimeboundmod:Goop and 1 Weak to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -10275,7 +10275,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 5 Block.\nApply 5 slimeboundmod:Goop and 2 Weak to ALL enemies.",
+      "description": "Gain 4 Block.\nApply 4 slimeboundmod:Goop and 2 Weak to ALL enemies.",
       "mod": "Downfall"
     },
     {
@@ -10384,24 +10384,6 @@
       "type": "Attack",
       "cost": "1",
       "description": "Deal 14 damage.\nTake 3 damage. slimeboundmod:Consume - Apply 3 Vulnerable.",
-      "mod": "Downfall"
-    },
-    {
-      "name": "Prepare",
-      "color": "Slimebound",
-      "rarity": "Common",
-      "type": "Skill",
-      "cost": "2",
-      "description": "Gain 10 Block.\nNext turn, gain [E] [E] and draw 2 cards.\nExhaust.",
-      "mod": "Downfall"
-    },
-    {
-      "name": "Prepare+",
-      "color": "Slimebound",
-      "rarity": "Common",
-      "type": "Skill",
-      "cost": "2",
-      "description": "Gain 15 Block.\nNext turn, gain [E] [E] and draw 2 cards.\nExhaust.",
       "mod": "Downfall"
     },
     {
@@ -10891,6 +10873,24 @@
       "mod": "Downfall"
     },
     {
+      "name": "Prepare",
+      "color": "Slimebound",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Gain 10 Block.\nNext turn, gain [E] and draw 2 cards.\nExhaust.",
+      "mod": "Downfall"
+    },
+    {
+      "name": "Prepare+",
+      "color": "Slimebound",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Gain 15 Block.\nNext turn, gain [E] and draw 2 cards.\nExhaust.",
+      "mod": "Downfall"
+    },
+    {
       "name": "Protect the Boss",
       "color": "Slimebound",
       "rarity": "Uncommon",
@@ -11215,6 +11215,24 @@
       "mod": "Downfall"
     },
     {
+      "name": "Glop Chop",
+      "color": "Slimebound",
+      "rarity": "Rare",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 12 damage.\nslimeboundmod:Split into a random Slime.\nslimeboundmod:Command 2 times.",
+      "mod": "Downfall"
+    },
+    {
+      "name": "Glop Chop+",
+      "color": "Slimebound",
+      "rarity": "Rare",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 12 damage.\nslimeboundmod:Split into a random slimeboundmod:Specialist.\nslimeboundmod:Command 3 times.",
+      "mod": "Downfall"
+    },
+    {
       "name": "Leech Life",
       "color": "Slimebound",
       "rarity": "Rare",
@@ -11446,24 +11464,6 @@
       "type": "Attack",
       "cost": "1",
       "description": "Deal 8 damage.\nslimeboundmod:Consume - Does not remove slimeboundmod:Goop.",
-      "mod": "Downfall"
-    },
-    {
-      "name": "Tag Team",
-      "color": "Slimebound",
-      "rarity": "Rare",
-      "type": "Attack",
-      "cost": "2",
-      "description": "Deal 12 damage.\nslimeboundmod:Split into a random Slime.\nslimeboundmod:Command 2 times.",
-      "mod": "Downfall"
-    },
-    {
-      "name": "Tag Team+",
-      "color": "Slimebound",
-      "rarity": "Rare",
-      "type": "Attack",
-      "cost": "2",
-      "description": "Deal 12 damage.\nslimeboundmod:Split into a random slimeboundmod:Specialist.\nslimeboundmod:Command 3 times.",
       "mod": "Downfall"
     },
     {
@@ -17952,7 +17952,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Draw 2 Curses.\nDeal 5 damage twice.",
+      "description": "Deal 5 damage twice.\nDraw 2 Curses.",
       "mod": "Downfall"
     },
     {
@@ -17961,7 +17961,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Draw 3 Curses.\nDeal 6 damage twice.",
+      "description": "Deal 6 damage twice.\nDraw 3 Curses.",
       "mod": "Downfall"
     },
     {
@@ -22272,7 +22272,7 @@
     {
       "name": "Rugged",
       "description": "Reduces next instance of attack damage taken to 2.",
-      "names": ["hermit:null","hermit:rugged"],
+      "names": [],
       "mod": "Downfall"
     },
     {

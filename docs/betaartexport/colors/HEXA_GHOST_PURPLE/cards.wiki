@@ -520,7 +520,8 @@ At the start of your turn, gain [E].
 |Rare
 |[[Power]]
 |3
-|At the start of your turn, gain 2 (3) [[hexamod:Intensity]].
+|(Gain 2 [[hexamod:Intensity]].)
+ At the start of your turn, gain 2 [[hexamod:Intensity]].
 |-
 |[[Instant Inferno]]
 |[[File:|thumb|289x289px]]

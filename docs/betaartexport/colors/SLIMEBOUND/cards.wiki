@@ -60,8 +60,8 @@ Gain a random ([[Upgraded]]) [[slimeboundmod:Tackle]]. It costs 0 this turn.
 |Common
 |[[Skill]]
 |1
-|Gain 5 [[Block]].
-Apply 5 [[slimeboundmod:Goop]] and 1 (2) [[Weak]] to ALL enemies.
+|Gain 4 [[Block]].
+Apply 4 [[slimeboundmod:Goop]] and 1 (2) [[Weak]] to ALL enemies.
 |-
 |[[Haunting Lick]]
 |[[File:|thumb|289x289px]]
@@ -109,15 +109,6 @@ Apply 4 (6) [[slimeboundmod:Goop]] to attackers this turn.
 |1
 |Deal 11 (14) damage.
 Take 3 damage. [[slimeboundmod:Consume]] - Apply 2 (3) [[Vulnerable]].
-|-
-|[[Prepare]]
-|[[File:|thumb|289x289px]]
-|Common
-|[[Skill]]
-|2
-|Gain 10 (15) [[Block]].
-Next turn, gain [E] [E] and draw 2 cards.
-[[Exhaust]].
 |-
 |[[Press the Attack]]
 |[[File:|thumb|289x289px]]
@@ -346,6 +337,15 @@ Gain a Lick.
 |2
 |Deal 8 damage. [[slimeboundmod:Command]] ALL slimes (twice).
 |-
+|[[Prepare]]
+|[[File:|thumb|289x289px]]
+|Uncommon
+|[[Skill]]
+|2
+|Gain 10 (15) [[Block]].
+Next turn, gain [E] and draw 2 cards.
+[[Exhaust]].
+|-
 |[[Protect the Boss]]
 |[[File:|thumb|289x289px]]
 |Uncommon
@@ -490,6 +490,15 @@ The next Attack used on this enemy does not remove [[slimeboundmod:Goop]].
 |(Gain [E] each turn.)
  The first card each turn that targets enemies is played twice.
 |-
+|[[Glop Chop]]
+|[[File:|thumb|289x289px]]
+|Rare
+|[[Attack]]
+|2
+|Deal 12 damage.
+[[slimeboundmod:Split]] into a random Slime ([[slimeboundmod:Specialist]]).
+[[slimeboundmod:Command]] 2 (3) times.
+|-
 |[[Leech Life]]
 |[[File:|thumb|289x289px]]
 |Rare
@@ -597,15 +606,6 @@ The next 2 (3) cards played this turn trigger a [[slimeboundmod:Command]].
 |2 (1)
 |Deal 8 damage.
 [[slimeboundmod:Consume]] - Does not remove [[slimeboundmod:Goop]].
-|-
-|[[Tag Team]]
-|[[File:|thumb|289x289px]]
-|Rare
-|[[Attack]]
-|2
-|Deal 12 damage.
-[[slimeboundmod:Split]] into a random Slime ([[slimeboundmod:Specialist]]).
-[[slimeboundmod:Command]] 2 (3) times.
 |-
 |[[Teamwork]]
 |[[File:|thumb|289x289px]]

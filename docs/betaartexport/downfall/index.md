@@ -119,7 +119,7 @@
 | Forked Flame | ![](small-card-images/Hexa_ghost-ForkedFlame.png) | ![](small-card-images/Hexa_ghost-ForkedFlamePlus.png) | Rare | Attack | 1 | Deal 5 (10) damage. hexamod:Ignite the previous, then the next Ghostflames. |
 | Gifts From Beyond | ![](small-card-images/Hexa_ghost-GiftsFromBeyond.png) | ![](small-card-images/Hexa_ghost-GiftsFromBeyondPlus.png) | Rare | Power | 2 (1) | At the start of your turn, expansioncontent:Reclaim a random Afterlife card. |
 | Here and Now | ![](small-card-images/Hexa_ghost-HereandNow.png) | ![](small-card-images/Hexa_ghost-HereandNowPlus.png) | Rare | Power | 1 (0) | You no longer Advance at the end of turn. At the start of your turn, gain [E] . |
-| Infernal Form | ![](small-card-images/Hexa_ghost-InfernalForm.png) | ![](small-card-images/Hexa_ghost-InfernalFormPlus.png) | Rare | Power | 3 | At the start of your turn, gain 2 (3) hexamod:Intensity. |
+| Infernal Form | ![](small-card-images/Hexa_ghost-InfernalForm.png) | ![](small-card-images/Hexa_ghost-InfernalFormPlus.png) | Rare | Power | 3 | (Gain 2 hexamod:Intensity.)  At the start of your turn, gain 2 hexamod:Intensity. |
 | Instant Inferno | ![](small-card-images/Hexa_ghost-InstantInferno.png) | ![](small-card-images/Hexa_ghost-InstantInfernoPlus.png) | Rare | Skill | 1 | Retain. hexamod:Ignite the (current, then the) Inferno Ghostflame(s). Exhaust. |
 | Poltergeist | ![](small-card-images/Hexa_ghost-Poltergeist.png) | ![](small-card-images/Hexa_ghost-PoltergeistPlus.png) | Rare | Power | 2 | Whenever you play an Afterlife card, deal 6 (9) damage to a random enemy. |
 | Searing Wound | ![](small-card-images/Hexa_ghost-SearingWound.png) | ![](small-card-images/Hexa_ghost-SearingWoundPlus.png) | Rare | Skill | 1 | ALL enemies lose HP equal to their Soulburn. Exhaust. (not Exhaust.) |
@@ -213,14 +213,13 @@
 | Strike | ![](small-card-images/Slimebound-Strike.png) | ![](small-card-images/Slimebound-StrikePlus.png) | Basic | Attack | 1 | Deal 6 (9) damage. |
 | Tackle | ![](small-card-images/Slimebound-Tackle.png) | ![](small-card-images/Slimebound-TacklePlus.png) | Basic | Attack | 1 | Deal 12 (16) damage. Take 3 damage. |
 | Combo Tackle | ![](small-card-images/Slimebound-ComboTackle.png) | ![](small-card-images/Slimebound-ComboTacklePlus.png) | Common | Attack | 2 | Deal 12 (15) damage. Take 3 damage. Gain a random (Upgraded) slimeboundmod:Tackle. It costs 0 this turn. |
-| Goop Spray | ![](small-card-images/Slimebound-GoopSpray.png) | ![](small-card-images/Slimebound-GoopSprayPlus.png) | Common | Skill | 1 | Gain 5 Block. Apply 5 slimeboundmod:Goop and 1 (2) Weak to ALL enemies. |
+| Goop Spray | ![](small-card-images/Slimebound-GoopSpray.png) | ![](small-card-images/Slimebound-GoopSprayPlus.png) | Common | Skill | 1 | Gain 4 Block. Apply 4 slimeboundmod:Goop and 1 (2) Weak to ALL enemies. |
 | Haunting Lick | ![](small-card-images/Slimebound-HauntingLick.png) | ![](small-card-images/Slimebound-HauntingLickPlus.png) | Common | Skill | 0 | Apply 1 Vulnerable and 4 slimeboundmod:Goop. (Draw a card.)  Exhaust. |
 | It Looks Tasty | ![](small-card-images/Slimebound-ItLooksTasty.png) | ![](small-card-images/Slimebound-ItLooksTastyPlus.png) | Common | Attack | 1 | Deal 8 (10) damage. slimeboundmod:Consume - Gain a Lick (*Lick+). |
 | Leech Energy | ![](small-card-images/Slimebound-LeechEnergy.png) | ![](small-card-images/Slimebound-LeechEnergyPlus.png) | Common | Attack | 1 | Deal 5 (8) damage. slimeboundmod:Consume - Gain [E] and draw 1 card. |
 | Leeching Strike | ![](small-card-images/Slimebound-LeechingStrike.png) | ![](small-card-images/Slimebound-LeechingStrikePlus.png) | Common | Attack | 1 | Deal 5 (8) damage. slimeboundmod:Consume - Gain Block equal to the enemy's slimeboundmod:Goop. |
 | Living Wall | ![](small-card-images/Slimebound-LivingWall.png) | ![](small-card-images/Slimebound-LivingWallPlus.png) | Common | Skill | 2 | Gain 12 (15) Block. Apply 4 (6) slimeboundmod:Goop to attackers this turn. |
 | Opening Tackle | ![](small-card-images/Slimebound-OpeningTackle.png) | ![](small-card-images/Slimebound-OpeningTacklePlus.png) | Common | Attack | 1 | Deal 11 (14) damage. Take 3 damage. slimeboundmod:Consume - Apply 2 (3) Vulnerable. |
-| Prepare | ![](small-card-images/Slimebound-Prepare.png) | ![](small-card-images/Slimebound-PreparePlus.png) | Common | Skill | 2 | Gain 10 (15) Block. Next turn, gain [E] [E] and draw 2 cards. Exhaust. |
 | Press the Attack | ![](small-card-images/Slimebound-PresstheAttack.png) | ![](small-card-images/Slimebound-PresstheAttackPlus.png) | Common | Attack | 1 | Deal 9 damage. slimeboundmod:Consume - slimeboundmod:Command (twice). |
 | Roll Through | ![](small-card-images/Slimebound-RollThrough.png) | ![](small-card-images/Slimebound-RollThroughPlus.png) | Common | Attack | 1 | Deal 5 (7) damage to ALL enemies. You do not take damage from the next 2 (3) slimeboundmod:Tackles. |
 | Sampling Lick | ![](small-card-images/Slimebound-SamplingLick.png) | ![](small-card-images/Slimebound-SamplingLickPlus.png) | Common | Skill | 0 | Apply 4 slimeboundmod:Goop. Gain 4 Block. (Draw a card.)  Exhaust. |
@@ -248,6 +247,7 @@
 | Mega-Lick | ![](small-card-images/Slimebound-Mega-Lick.png) | ![](small-card-images/Slimebound-Mega-LickPlus.png) | Uncommon | Skill | 0 | Apply 1 Weak and 4 slimeboundmod:Goop to ALL enemies. (Draw a card.)  Exhaust. |
 | Nibble and Lick | ![](small-card-images/Slimebound-NibbleandLick.png) | ![](small-card-images/Slimebound-NibbleandLickPlus.png) | Uncommon | Attack | 0 | Deal 1 damage. Gain a Lick. (Draw a card.)  Exhaust. |
 | Pile On! | ![](small-card-images/Slimebound-PileOn!.png) | ![](small-card-images/Slimebound-PileOn!Plus.png) | Uncommon | Attack | 2 | Deal 8 damage. slimeboundmod:Command ALL slimes (twice). |
+| Prepare | ![](small-card-images/Slimebound-Prepare.png) | ![](small-card-images/Slimebound-PreparePlus.png) | Uncommon | Skill | 2 | Gain 10 (15) Block. Next turn, gain [E] and draw 2 cards. Exhaust. |
 | Protect the Boss | ![](small-card-images/Slimebound-ProtecttheBoss.png) | ![](small-card-images/Slimebound-ProtecttheBossPlus.png) | Uncommon | Power | 1 (0) | Prevent the next time you would be damaged by an enemy attack, slimeboundmod:Absorbing your leading Slime instead. |
 | Quick Snack | ![](small-card-images/Slimebound-QuickSnack.png) | ![](small-card-images/Slimebound-QuickSnackPlus.png) | Uncommon | Skill | 0 | Draw 2 (3) cards. Exhaust a card. Gain Licks equal to its cost. Exhaust. |
 | Rain of Goop | ![](small-card-images/Slimebound-RainofGoop.png) | ![](small-card-images/Slimebound-RainofGoopPlus.png) | Uncommon | Skill | 1 | Apply 3 slimeboundmod:Goop to a random enemy 4 (6) times. |
@@ -266,6 +266,7 @@
 | Consult Playbook | ![](small-card-images/Slimebound-ConsultPlaybook.png) | ![](small-card-images/Slimebound-ConsultPlaybookPlus.png) | Rare | Skill | 2 (1) | Gain 4 random slimeboundmod:Tackles. They cost 1 less this combat. Exhaust. |
 | Douse in Slime | ![](small-card-images/Slimebound-DouseinSlime.png) | ![](small-card-images/Slimebound-DouseinSlimePlus.png) | Rare | Skill | 3 (2) | Apply 14 slimeboundmod:Goop. The next Attack used on this enemy does not remove slimeboundmod:Goop. |
 | Duplicated Form | ![](small-card-images/Slimebound-DuplicatedForm.png) | ![](small-card-images/Slimebound-DuplicatedFormPlus.png) | Rare | Power | 3 | (Gain [E] each turn.)  The first card each turn that targets enemies is played twice. |
+| Glop Chop | ![](small-card-images/Slimebound-GlopChop.png) | ![](small-card-images/Slimebound-GlopChopPlus.png) | Rare | Attack | 2 | Deal 12 damage. slimeboundmod:Split into a random Slime (slimeboundmod:Specialist). slimeboundmod:Command 2 (3) times. |
 | Leech Life | ![](small-card-images/Slimebound-LeechLife.png) | ![](small-card-images/Slimebound-LeechLifePlus.png) | Rare | Attack | 2 | Ethereal. Deal 8 (10) damage. Heal HP equal to unblocked damage. Exhaust. |
 | Liquidate | ![](small-card-images/Slimebound-Liquidate.png) | ![](small-card-images/Slimebound-LiquidatePlus.png) | Rare | Skill | 0 | Unplayable if you have negative Strength. Lose 2 Strength. Gain 2 (3) slimeboundmod:Potency. |
 | Mass Feed | ![](small-card-images/Slimebound-MassFeed.png) | ![](small-card-images/Slimebound-MassFeedPlus.png) | Rare | Attack | 2 | Deal 10 (12) damage to ALL enemies. If Fatal, raise your Max HP by 3 (4). Exhaust. |
@@ -279,7 +280,6 @@
 | Recycling | ![](small-card-images/Slimebound-Recycling.png) | ![](small-card-images/Slimebound-RecyclingPlus.png) | Rare | Power | 1 | (Innate.)  At the start of your turn, expansioncontent:Exhume a random Lick card. |
 | Reformation | ![](small-card-images/Slimebound-Reformation.png) | ![](small-card-images/Slimebound-ReformationPlus.png) | Rare | Power | 1 | Whenever you slimeboundmod:Absorb a Slime, gain 1 Strength (and 1 Dexterity). |
 | Slime Slap | ![](small-card-images/Slimebound-SlimeSlap.png) | ![](small-card-images/Slimebound-SlimeSlapPlus.png) | Rare | Attack | 2 (1) | Deal 8 damage. slimeboundmod:Consume - Does not remove slimeboundmod:Goop. |
-| Tag Team | ![](small-card-images/Slimebound-TagTeam.png) | ![](small-card-images/Slimebound-TagTeamPlus.png) | Rare | Attack | 2 | Deal 12 damage. slimeboundmod:Split into a random Slime (slimeboundmod:Specialist). slimeboundmod:Command 2 (3) times. |
 | Teamwork | ![](small-card-images/Slimebound-Teamwork.png) | ![](small-card-images/Slimebound-TeamworkPlus.png) | Rare | Skill | X | slimeboundmod:Command X (X+1) times. Gain 5 Block X (X+1) times. |
 | Waste Not | ![](small-card-images/Slimebound-WasteNot.png) | ![](small-card-images/Slimebound-WasteNotPlus.png) | Rare | Skill | 2 | expansioncontent:Exhume all Lick cards. Exhaust. (not Exhaust.) |
 | Defend | ![](small-card-images/Gremlin-Defend.png) | ![](small-card-images/Gremlin-DefendPlus.png) | Basic | Skill | 1 | Gain 5 (8) Block. |
@@ -638,7 +638,7 @@
 | Showdown | ![](small-card-images/Hermit_yel-Showdown.png) | ![](small-card-images/Hermit_yel-ShowdownPlus.png) | Uncommon | Attack | 1 | Retain. Deal 8 (13) damage. Play all Strikes in your hand. Exhaust. |
 | Smoking Barrel | ![](small-card-images/Hermit_yel-SmokingBarrel.png) | ![](small-card-images/Hermit_yel-SmokingBarrelPlus.png) | Uncommon | Power | 1 | Whenever you trigger a hermit:Dead_On effect, your next attack deals 4 (5) more damage. |
 | Snipe | ![](small-card-images/Hermit_yel-Snipe.png) | ![](small-card-images/Hermit_yel-SnipePlus.png) | Uncommon | Skill | 0 | (hermit:Concentrate.)  Your next hermit:Dead_On effect this turn triggers twice. |
-| Spite | ![](small-card-images/Hermit_yel-Spite.png) | ![](small-card-images/Hermit_yel-SpitePlus.png) | Uncommon | Attack | 1 | Draw 2 (3) Curses. Deal 5 (6) damage twice. |
+| Spite | ![](small-card-images/Hermit_yel-Spite.png) | ![](small-card-images/Hermit_yel-SpitePlus.png) | Uncommon | Attack | 1 | Deal 5 (6) damage twice. Draw 2 (3) Curses. |
 | Take Aim | ![](small-card-images/Hermit_yel-TakeAim.png) | ![](small-card-images/Hermit_yel-TakeAimPlus.png) | Uncommon | Power | 1 | (hermit:Concentrate.)  At the start of your turn, hermit:Concentrate. |
 | Take Cover | ![](small-card-images/Hermit_yel-TakeCover.png) | ![](small-card-images/Hermit_yel-TakeCoverPlus.png) | Uncommon | Skill | X | Add X Defends (*Defends+) to your hand. They cost 0 this combat. Exhaust. |
 | Virtue | ![](small-card-images/Hermit_yel-Virtue.png) | ![](small-card-images/Hermit_yel-VirtuePlus.png) | Uncommon | Skill | 0 | Retain. Reduce each of your debuffs by 1 (2). |

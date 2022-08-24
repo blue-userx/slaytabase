@@ -1,7 +1,7 @@
 {
   "mod": {
     "name": "Downfall",
-    "version": "4.1.183",
+    "version": "4.2.02",
     "authors": ["The Downfall Collab Team"],
     "credits": "",
     "description": "Downfall is a full-featured Expansion for Slay the Spire, including a new 5th hero, a new campaign with 7 villains to play, new relics, new cards, new potions, and more. \n \n The Heart demands that this endless cycle of slaughter be finished.  Answer the call as a Villain, and see to the defense of the Spire. \n \n This mod is a combination modpack which includes the former mods known as Slimebound Mod, Guardian Mod, and Playable Snecko, along with a ton of new content, a new character, and much more.\n \n Design and Code Credits: \n \n MichaelMayhem, Vex, kiooeht, Alchyr, erasels, The Evil Pickle, Blank the Evil, JohnnyDevo, AlexDrieger, Erim-Nelhah, Darkglade, Vaylen, SuperLuigi231, Kalene, Cheetah-shooter, arctic_mists .  Art Credits: Freshbone - Character Select and Bonfire Art, Half-GoblinHankins - Card Art, AlexMdle - Card Art, C\u00E1s de Mattos - Card Art, Rita-B - Alternate Skin Art, Casey Yano - Monster Art, Noob Cannon and the Marisa Team - Misc Card Art \n \n Art Use Credit: reddit u/justaschema, Bruce Brenneise, reddit u/Atrolux, Chronometrics, George Eracleous. \n \n Music Credit: PandorasBread \n \n Testers and Helpers: Reina, moocowgoesmoo, Jedi, Skyson, Chufmoney, zwolfiez, Tiamoko, Ashlyn/IcyColdFire, squeeny, A Cake Wearing a Hat, ServetTayberkSalads, blalo'u, ComingVirus  \n \n Localization Aid - borloch",
@@ -1817,7 +1817,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "3",
-      "description": "At the start of your turn, gain 3 hexamod:Intensity."
+      "description": "Gain 2 hexamod:Intensity.\nAt the start of your turn, gain 2 hexamod:Intensity."
     },
     {
       "name": "Instant Inferno",
@@ -3305,7 +3305,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 5 Block.\nApply 5 slimeboundmod:Goop and 1 Weak to ALL enemies."
+      "description": "Gain 4 Block.\nApply 4 slimeboundmod:Goop and 1 Weak to ALL enemies."
     },
     {
       "name": "Goop Spray+",
@@ -3313,7 +3313,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "1",
-      "description": "Gain 5 Block.\nApply 5 slimeboundmod:Goop and 2 Weak to ALL enemies."
+      "description": "Gain 4 Block.\nApply 4 slimeboundmod:Goop and 2 Weak to ALL enemies."
     },
     {
       "name": "Haunting Lick",
@@ -3410,22 +3410,6 @@
       "type": "Attack",
       "cost": "1",
       "description": "Deal 14 damage.\nTake 3 damage. slimeboundmod:Consume - Apply 3 Vulnerable."
-    },
-    {
-      "name": "Prepare",
-      "color": "Slimebound",
-      "rarity": "Common",
-      "type": "Skill",
-      "cost": "2",
-      "description": "Gain 10 Block.\nNext turn, gain [E] [E] and draw 2 cards.\nExhaust."
-    },
-    {
-      "name": "Prepare+",
-      "color": "Slimebound",
-      "rarity": "Common",
-      "type": "Skill",
-      "cost": "2",
-      "description": "Gain 15 Block.\nNext turn, gain [E] [E] and draw 2 cards.\nExhaust."
     },
     {
       "name": "Press the Attack",
@@ -3860,6 +3844,22 @@
       "description": "Deal 8 damage. slimeboundmod:Command ALL slimes twice."
     },
     {
+      "name": "Prepare",
+      "color": "Slimebound",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Gain 10 Block.\nNext turn, gain [E] and draw 2 cards.\nExhaust."
+    },
+    {
+      "name": "Prepare+",
+      "color": "Slimebound",
+      "rarity": "Uncommon",
+      "type": "Skill",
+      "cost": "2",
+      "description": "Gain 15 Block.\nNext turn, gain [E] and draw 2 cards.\nExhaust."
+    },
+    {
       "name": "Protect the Boss",
       "color": "Slimebound",
       "rarity": "Uncommon",
@@ -4148,6 +4148,22 @@
       "description": "Gain [E] each turn.\nThe first card each turn that targets enemies is played twice."
     },
     {
+      "name": "Glop Chop",
+      "color": "Slimebound",
+      "rarity": "Rare",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 12 damage.\nslimeboundmod:Split into a random Slime.\nslimeboundmod:Command 2 times."
+    },
+    {
+      "name": "Glop Chop+",
+      "color": "Slimebound",
+      "rarity": "Rare",
+      "type": "Attack",
+      "cost": "2",
+      "description": "Deal 12 damage.\nslimeboundmod:Split into a random slimeboundmod:Specialist.\nslimeboundmod:Command 3 times."
+    },
+    {
       "name": "Leech Life",
       "color": "Slimebound",
       "rarity": "Rare",
@@ -4354,22 +4370,6 @@
       "type": "Attack",
       "cost": "1",
       "description": "Deal 8 damage.\nslimeboundmod:Consume - Does not remove slimeboundmod:Goop."
-    },
-    {
-      "name": "Tag Team",
-      "color": "Slimebound",
-      "rarity": "Rare",
-      "type": "Attack",
-      "cost": "2",
-      "description": "Deal 12 damage.\nslimeboundmod:Split into a random Slime.\nslimeboundmod:Command 2 times."
-    },
-    {
-      "name": "Tag Team+",
-      "color": "Slimebound",
-      "rarity": "Rare",
-      "type": "Attack",
-      "cost": "2",
-      "description": "Deal 12 damage.\nslimeboundmod:Split into a random slimeboundmod:Specialist.\nslimeboundmod:Command 3 times."
     },
     {
       "name": "Teamwork",
@@ -10137,7 +10137,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Draw 2 Curses.\nDeal 5 damage twice."
+      "description": "Deal 5 damage twice.\nDraw 2 Curses."
     },
     {
       "name": "Spite+",
@@ -10145,7 +10145,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Draw 3 Curses.\nDeal 6 damage twice."
+      "description": "Deal 6 damage twice.\nDraw 3 Curses."
     },
     {
       "name": "Take Aim",

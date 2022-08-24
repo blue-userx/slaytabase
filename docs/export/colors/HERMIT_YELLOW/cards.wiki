@@ -462,8 +462,8 @@ Play all Strikes in your hand.
 |Uncommon
 |[[Attack]]
 |1
-|Draw 2 (3) Curses.
-Deal 5 (6) damage twice.
+|Deal 5 (6) damage twice.
+Draw 2 (3) Curses.
 |-
 |[[Take Aim]]
 |[[File:|thumb|289x289px]]
