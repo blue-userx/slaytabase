@@ -83,8 +83,8 @@ bot.on('messageCreate', async msg => {
     let embeds = await getEmbeds(msg);
     if (embeds === null)
         msg.reply('I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.').catch(e => {});
-    else if (embeds === 0)
-        return;
+    else if (embeds === 0) return;
+    else if (msg.content.includes('```java')) return;
     else {
         let files = getFilesFromEmbeds(embeds)
         await msg.reply({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
