@@ -364,6 +364,28 @@ __List of memes:__
             texts: [[0, 276, 518, 86, 48, 'white']]
         }),
 
+        'the floor here is made out of ': async (msg, arg) => await meme(msg, arg, {
+            w: 554,
+            h: 394,
+            bg: 'floor.png',
+            items: [0],
+            put: [
+                [0, 278, 208, 47, 50],
+                [0, 496, 208, 47, 50],
+            ],
+        }),
+        
+        'the text here is made out of ': async (msg, arg) => await meme(msg, arg, {
+            w: 554,
+            h: 394,
+            bg: 'floor.png',
+            items: [1],
+            texts: [
+                [0, 278, 208, 47, 50, 'black'],
+                [0, 496, 208, 47, 50, 'black'],
+            ],
+        }),
+
         'sb ': async (msg, _, __, oa) => {
             let numArgs = oa.split('=').length;
             if (numArgs % 2 != 0) return {title: "The number of arguments for this must be a multiple of 2."};
