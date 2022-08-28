@@ -272,6 +272,8 @@ __List of memes:__
 <[item] my beloved>
 <why cant i hold all these [item]=[holder]>
 <[item] speech bubble>
+<the floor here is made out of [item]>
+<the text here is made out of [text]>
 <sb [item]=[text in speech bubble]>
 <sb [item1]=[text1]=[item2]=[text2]>
 `,
