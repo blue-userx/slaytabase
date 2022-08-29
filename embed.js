@@ -23,11 +23,11 @@ async function embed(item, msg, embeds=[]) {
         item.mod = 'downfall';
     if (item.hasOwnProperty('mod'))
         e.url = `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/${searchize(item)}`;
-    if (!item.query.includes(fn.unPunctuate(item.name)))
-    e.footer = {
-        //iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=32`,
-        text: `<${item.query}> = ${item.name == 'No results' ? '?' : item.searchName}${item.score != undefined ? ', '+String(Math.round((1 - item.score) * 100))+'% sure' : ''}`, //text: `${msg.author.username}: <${item.query}>`,
-    };
+    if (item.hasOwnProperty('query') && !item.query.includes(fn.unPunctuate(item.name)))
+        e.footer = {
+            //iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=32`,
+            text: `<${item.query}> = ${item.name == 'No results' ? '?' : item.searchName}${item.score != undefined ? ', '+String(Math.round((1 - item.score) * 100))+'% sure' : ''}`, //text: `${msg.author.username}: <${item.query}>`,
+        };
     switch (item.itemType) {
         case 'card':
             e.thumbnail = {url: `${cfg.exportURL}/altered/img/cards/${item.color.slice(0,10)}-${item.name.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '')}.png`};
