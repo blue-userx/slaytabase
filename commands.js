@@ -8,12 +8,13 @@ import fs from 'fs';
 import fn from './fn.js';
 import embed from './embed.js';
 import cfg from './cfg.js';
-import { create } from 'domain';
 
 const delSearchLimit = 25;
 const font = opentype.loadSync('./memetemplates/Kreon-Regular.ttf');
 const masks = {};
 ['a', 's', 'p'].forEach(i => masks[i] = loadImage(`./artpreview/${i}.png`));
+const shadows = {};
+['a', 's', 'p'].forEach(i => shadows[i] = loadImage(`./artpreview/${i}s.png`));
 const cardTypes = {
     Attack: 'a',
     Power: 'p',
@@ -289,6 +290,9 @@ __Commands:__
                 let artcanvas = createCanvas(500,380);
                 let artctx = artcanvas.getContext('2d');
                 artctx.drawImage(await loadImage(art.url), 0, 0, 500, 380);
+                artctx.globalAlpha = 0.25;
+                artctx.drawImage(await shadows[cardTypes[item.item.type]], 0, 0);
+                artctx.globalAlpha = 1;
                 artctx.globalCompositeOperation = 'destination-out';
                 artctx.drawImage(await masks[cardTypes[item.item.type]], 0, 0);
 
