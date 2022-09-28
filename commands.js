@@ -8,9 +8,19 @@ import fs from 'fs';
 import fn from './fn.js';
 import embed from './embed.js';
 import cfg from './cfg.js';
+import { create } from 'domain';
 
 const delSearchLimit = 25;
 const font = opentype.loadSync('./memetemplates/Kreon-Regular.ttf');
+const masks = {};
+['a', 's', 'p'].forEach(i => masks[i] = loadImage(`./artpreview/${i}.png`));
+const cardTypes = {
+    Attack: 'a',
+    Power: 'p',
+    Skill: 's',
+    Status: 's',
+    Curse: 's'
+};
 
 async function meme(msg, arg, options) {
     try {
@@ -90,7 +100,7 @@ If you edit or delete your message, I will update my reply to it, according to y
 __Commands:__
 <[item name]> displays info about an item
 <~[item name]> shows just the name and thumbnail of an item
-<img [item name]> shows the full-size image from an embed
+<i~[item name]>, <t~[item]> and <~[item]> is the same as the above, but in different formats
 <del> deletes your last search in this channel
 <spoiler> adds spoiler tags to my last reply to you in this channel
 <?[search query]> shows the most likely results for a search query
@@ -206,13 +216,24 @@ __Commands:__
             };
         },
 
-        'img ': async (msg, arg) => {
+        'i~': async (msg, arg) => {
             let item = fn.find(arg);
             let itemEmbed = await embed({...item.item, score: item.score, query: arg});
 
             return {
                 title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
                 image: itemEmbed.thumbnail,
+                color: itemEmbed.color,
+            };
+        },
+
+        't~': async (msg, arg) => {
+            let item = fn.find(arg);
+            let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+
+            return {
+                title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
+                image: {url: itemEmbed.thumbnail.url, width: 160, height: 104},
                 color: itemEmbed.color,
             };
         },
@@ -254,6 +275,40 @@ __Commands:__
                     title: 'Cannot create a discussion',
                     description: 'Only certain people may create discussions'
                 };  
+        },
+
+        'artpreview': async (msg, arg) => {
+            try {
+                let art = msg.attachments.first();
+                if (art == undefined) return {title: 'you need to attach an image to preview!'};
+                let item = fn.find(arg);
+                if (!item.item.hasOwnProperty('itemType') || item.item.itemType != 'card')
+                    return {title: `couldnt find that card. found ${item.item.itemType} "${item.item.name}"`};
+                let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+    
+                let artcanvas = createCanvas(500,380);
+                let artctx = artcanvas.getContext('2d');
+                artctx.drawImage(await loadImage(art.url), 0, 0, 500, 380);
+                artctx.globalCompositeOperation = 'destination-out';
+                artctx.drawImage(await masks[cardTypes[item.item.type]], 0, 0);
+
+                let canvas = createCanvas(678,874);
+                let ctx = canvas.getContext('2d');
+                ctx.drawImage(await loadImage(itemEmbed.thumbnail.url), 0, 0);
+                ctx.drawImage(artcanvas, 89, 111);
+    
+                let filename = `export${String(Math.random()).slice(2)}.png`;
+                fs.writeFileSync(filename, canvas.toBuffer());
+                return {
+                    title: ' ',
+                    image: {url: 'attachment://'+filename},
+                    files: [filename],
+                    color: itemEmbed.color,
+                };
+            } catch(e) {
+                console.error(e);
+                return {title: 'failed to generate image'};
+            }
         },
 
         memes: () => ({
