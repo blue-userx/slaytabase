@@ -110,6 +110,7 @@ __Commands:__
 - - cost=? - only returns cards with specified cost
 <choose [word1 word2 word3...]> chooses one of the specified words for you at random
 <memes> help with the bot's meme generator
+<artpreview [card name]> takes your first attachment and uses it as card art for a card
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
 `,
