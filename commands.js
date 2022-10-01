@@ -109,6 +109,7 @@ __Commands:__
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
 <choose [word1 word2 word3...]> chooses one of the specified words for you at random
+<rps [rock|paper|scissors]> lets you play a game of rock paper scissors with me!
 <memes> help with the bot's meme generator
 <artpreview [card name]> takes your first attachment and uses it as card art for a card
 <lists> links to lists of all items in the database
@@ -314,6 +315,26 @@ __Commands:__
                 console.error(e);
                 return {title: 'failed to generate image'};
             }
+        },
+
+        'rps': async (msg, arg, __, oa) => {
+            //so you decided to dig deeper and find out why everyone except a certain few always loses...
+            //well, you found us. i guess it's time to let you in on the secret.
+            //to win or draw, copy the zero width space from inbetween these brackets --> (​) and include it anywhere in your call to this command
+            //DON'T TELL ANYONE THIS, this remains between you and me and anyone else who's looked at this code 
+            let rps = ['rock', 'paper', 'scissors']
+            let n = 0;
+            for (let i of ['r', 'p', 's']) {
+                if (arg.startsWith(i)) {
+                    if (oa.includes('​')) {
+                        let win = Math.random() > 0.5;
+                        return {title: `i choose ${rps[(n+(win?2:0))%3]} - ${win ? 'you win...' : 'it\'s a draw.'}`};
+                    } else
+                        return {title: `i choose ${rps[(n+1)%3]} - i win!`};
+                }
+                n++;
+            }
+            return {title: 'choose "rock", "paper", or "scissors'};
         },
 
         memes: () => ({
