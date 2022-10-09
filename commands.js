@@ -87,7 +87,7 @@ async function meme(msg, arg, options) {
     }
 }
 
-export default {
+const commands =  {
     prefix: {
         help: () => ({
             title: 'DownfallBot',
@@ -112,6 +112,7 @@ __Commands:__
 <rps [rock|paper|scissors]> lets you play a game of rock paper scissors with me!
 <memes> help with the bot's meme generator
 <artpreview [card name]> takes your first attachment and uses it as card art for a card
+<c~artpreview [card name]> compares the art preview to the current card
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
 `,
@@ -280,7 +281,7 @@ __Commands:__
                 };  
         },
 
-        'artpreview': async (msg, arg) => {
+        'c~artpreview': async (msg, arg) => {
             try {
                 let art = msg.attachments.first();
                 if (art == undefined) return {title: 'you need to attach an image to preview!'};
@@ -298,10 +299,11 @@ __Commands:__
                 artctx.globalCompositeOperation = 'destination-out';
                 artctx.drawImage(await masks[cardTypes[item.item.type]], 0, 0);
 
-                let canvas = createCanvas(678,874);
+                let canvas = createCanvas(1356,874);
                 let ctx = canvas.getContext('2d');
-                ctx.drawImage(await loadImage(itemEmbed.thumbnail.url), 0, 0);
+                ctx.drawImage(await loadImage(itemEmbed.thumbnail.url), 0, 0, 678, 874, 0, 0, 678, 874);
                 ctx.drawImage(artcanvas, 89, 123);
+                ctx.drawImage(await loadImage(itemEmbed.thumbnail.url), 678, 0);
     
                 let filename = `export${String(Math.random()).slice(2)}.png`;
                 fs.writeFileSync(filename, canvas.toBuffer());
@@ -311,6 +313,28 @@ __Commands:__
                     files: [filename],
                     color: itemEmbed.color,
                 };
+            } catch(e) {
+                console.error(e);
+                return {title: 'failed to generate image'};
+            }
+        },
+
+        'artpreview': async (msg, arg) => {
+            try {
+                let preview = await commands.prefix['c~artpreview'](msg, arg);
+                let canvas = createCanvas(678,874);
+                let ctx = canvas.getContext('2d');
+                ctx.drawImage(await loadImage(preview.files[0]), 0, 0, 678, 874, 0, 0, 678, 874);
+
+                let filename = `export${String(Math.random()).slice(2)}.png`;
+                fs.writeFileSync(filename, canvas.toBuffer());
+                fs.unlinkSync(preview.files[0]);
+                return {
+                    title: ' ',
+                    image: {url: 'attachment://'+filename},
+                    files: [filename],
+                    color: preview.color,
+                }
             } catch(e) {
                 console.error(e);
                 return {title: 'failed to generate image'};
@@ -515,3 +539,5 @@ __List of memes:__
         }),
     }
 };
+
+export default commands;
