@@ -236,7 +236,7 @@ __Commands:__
 
             return {
                 title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
-                image: {url: itemEmbed.thumbnail.url, width: 160, height: 104},
+                thumbnail: itemEmbed.thumbnail,
                 color: itemEmbed.color,
             };
         },
@@ -301,7 +301,7 @@ __Commands:__
                 let canvas = createCanvas(678,874);
                 let ctx = canvas.getContext('2d');
                 ctx.drawImage(await loadImage(itemEmbed.thumbnail.url), 0, 0);
-                ctx.drawImage(artcanvas, 89, 111);
+                ctx.drawImage(artcanvas, 89, 123);
     
                 let filename = `export${String(Math.random()).slice(2)}.png`;
                 fs.writeFileSync(filename, canvas.toBuffer());
