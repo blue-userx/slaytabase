@@ -6,6 +6,8 @@ const keywords = [
     ['[W]', 'Energy'],
     ['[fist_icon]', 'finisheremoji'],
     ['champ:Combo:', 'Combo:'],
+    ['slimeboundmod:Bruiser_Slime', 'Bru​iser Slime'],
+    ['slimeboundmod:Bruiser', 'Bru​iser'],
 ];
 
 const directKeywords = [
