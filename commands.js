@@ -41,13 +41,21 @@ async function meme(msg, arg, options) {
                     user.image = await loadImage(user.avatarURL().replace('webp', 'png'));
                     return user;
                 }
+            } else if (a.startsWith('att?')) {
+                let n = parseInt(a.slice(4));
+                let attachment = msg.attachments.at(n-1);
+                if (attachment == undefined)
+                    return {title: 'format for attachments is att?n?name where n is the number of the attachment e.g. att?1?awsom'};
+                attachment.image = await loadImage(attachment.url);
+                attachment.item = {name: a.slice(6)};
+                return attachment;
             }
             return options.items[i] == 1 ? a : fn.find(a);
         }));
         for (let i in items) {
             if (options.items[i] == 0) {
                 let item = items[i];
-                if (items[i] instanceof User) continue;
+                if (items[i] instanceof User || items[i].hasOwnProperty('ephemeral')) continue;
                 item.embed = await embed({...item.item, score: item.score, query: arg});
                 if (item.embed.thumbnail == null)
                     return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
@@ -79,7 +87,7 @@ async function meme(msg, arg, options) {
             title: ' ',
             image: {url: 'attachment://'+filename},
             files: [filename],
-            color: typeof items[0] == 'string' || items[0] instanceof User ? null : items[0].embed.color,
+            color: typeof items[0] == 'string' || items[0] instanceof User || items[0].hasOwnProperty('ephemeral') ? null : items[0].embed.color,
         };
     } catch(e) {
         console.error(e);
@@ -236,7 +244,7 @@ __Commands:__
             let itemEmbed = await embed({...item.item, score: item.score, query: arg});
 
             return {
-                title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
+                title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : '​',
                 thumbnail: itemEmbed.thumbnail,
                 color: itemEmbed.color,
             };
@@ -358,7 +366,7 @@ __Commands:__
                 }
                 n++;
             }
-            return {title: 'choose "rock", "paper", or "scissors'};
+            return {title: 'choose "rock", "paper", or "scissors"'};
         },
 
         memes: () => ({
