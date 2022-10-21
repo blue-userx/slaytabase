@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Client, Intents } from 'discord.js';
+import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType } from 'discord.js';
 import Fuse from 'fuse.js'
 import fs from 'fs';
 import commands from './commands.js';
@@ -9,8 +9,9 @@ import keywordify from './keywords.js';
 import emojify from './emojis.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
+import startDailyDiscussion from './dailyDiscussion.js';
 
-const bot = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES], partials: ['CHANNEL'] });
+const bot = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.DirectMessages], partials: ['CHANNEL'] });
 
 const search = new Fuse([], {
     includeScore: true,
@@ -35,6 +36,7 @@ bot.once('ready', async () => {
         if (channel.type == 'GUILD_TEXT')
             channel.messages.fetch().catch(e => {});
     });
+    startDailyDiscussion();
 });
 
 async function getEmbeds(msg) {
@@ -71,7 +73,7 @@ async function getEmbeds(msg) {
 function getFilesFromEmbeds(embeds) {
     let files = [];
     for (let embed of embeds) {
-        files = [...files, ...(Array.isArray(embed.files) ? embed.files : [])];
+        files = [...files, ...(Array.isArray(embed.data.files) ? embed.data.files : [])];
         delete embed.files;
     }
     return files;

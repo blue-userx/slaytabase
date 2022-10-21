@@ -57,9 +57,9 @@ async function meme(msg, arg, options) {
                 let item = items[i];
                 if (items[i] instanceof User || items[i].hasOwnProperty('ephemeral')) continue;
                 item.embed = await embed({...item.item, score: item.score, query: arg});
-                if (item.embed.thumbnail == null)
+                if (item.embed.data.thumbnail == null)
                     return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
-                item.image = await loadImage(item.embed.thumbnail.url);
+                item.image = await loadImage(item.embed.data.thumbnail.url);
             }
         }
 
@@ -203,7 +203,7 @@ __Commands:__
             return {
                 title: `Searched for "${searchQ}"`,
                 description: results.length == 0 ? 'No results.' : resultText,
-                thumbnail: firstEmbed.thumbnail,
+                thumbnail: firstEmbed.data.thumbnail,
                 footer: {text: `Page ${page+1}/${Math.ceil(totalResults/10)}`},
                 color: 14598591,
             };
@@ -233,9 +233,9 @@ __Commands:__
             let itemEmbed = await embed({...item.item, score: item.score, query: arg});
 
             return {
-                title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
-                image: itemEmbed.thumbnail,
-                color: itemEmbed.color,
+                title: itemEmbed.data.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
+                image: itemEmbed.data.thumbnail,
+                color: itemEmbed.data.color,
             };
         },
 
@@ -244,9 +244,9 @@ __Commands:__
             let itemEmbed = await embed({...item.item, score: item.score, query: arg});
 
             return {
-                title: itemEmbed.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : '​',
-                thumbnail: itemEmbed.thumbnail,
-                color: itemEmbed.color,
+                title: itemEmbed.data.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : '​',
+                thumbnail: itemEmbed.data.thumbnail,
+                color: itemEmbed.data.color,
             };
         },
 
@@ -254,7 +254,7 @@ __Commands:__
             let item = fn.find(arg);
             let itemEmbed = await embed({...item.item, score: item.score, query: arg});
             return {
-                ...itemEmbed,
+                ...itemEmbed.data,
                 footer: null,
                 description: null,
             };
@@ -265,28 +265,6 @@ __Commands:__
                 return {
                     title: `I choose "${args[Math.floor(Math.random() * args.length)]}"`,
                 };
-        },
-
-        'discuss ': async (msg, arg) => {
-            if (msg.channel.type == "GUILD_TEXT" && cfg.overriders.includes(msg.author.id)) { //has manage messages permission?
-                msg.startThread({name: `${arg}`})
-                    .then(async thread => {
-                        await thread.send(`<${arg}>`).catch(e => {});
-                        thread.awaitMessages({max: 1, time: 5000, errors: ['time']})
-                            .then(collected => {
-                                if (collected.size > 0) {
-                                    collected.first().pin().catch(e => {});
-                                    thread.edit({name: `${collected.first().embeds[0].title}`}).catch(e => {});
-                                }
-                            })
-                            .catch(e => {});
-                    })
-                    .catch(e => {});
-            } else
-                return {
-                    title: 'Cannot create a discussion',
-                    description: 'Only certain people may create discussions'
-                };  
         },
 
         'c~artpreview': async (msg, arg) => {
@@ -309,9 +287,9 @@ __Commands:__
 
                 let canvas = createCanvas(1356,874);
                 let ctx = canvas.getContext('2d');
-                ctx.drawImage(await loadImage(itemEmbed.thumbnail.url), 0, 0, 678, 874, 0, 0, 678, 874);
+                ctx.drawImage(await loadImage(itemEmbed.data.thumbnail.url), 0, 0, 678, 874, 0, 0, 678, 874);
                 ctx.drawImage(artcanvas, 89, 123);
-                ctx.drawImage(await loadImage(itemEmbed.thumbnail.url), 678, 0);
+                ctx.drawImage(await loadImage(itemEmbed.data.thumbnail.url), 678, 0);
     
                 let filename = `export${String(Math.random()).slice(2)}.png`;
                 fs.writeFileSync(filename, canvas.toBuffer());
@@ -319,7 +297,7 @@ __Commands:__
                     title: ' ',
                     image: {url: 'attachment://'+filename},
                     files: [filename],
-                    color: itemEmbed.color,
+                    color: itemEmbed.data.color,
                 };
             } catch(e) {
                 console.error(e);

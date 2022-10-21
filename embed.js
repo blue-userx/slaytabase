@@ -1,4 +1,4 @@
-import { MessageEmbed } from 'discord.js';
+import { EmbedBuilder } from 'discord.js';
 import wikiItems from './wikiItems.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
@@ -17,7 +17,7 @@ const searchize = item => {
 };
 
 async function embed(item, msg, embeds=[]) {
-    let e = new MessageEmbed();
+    let e = {};
     e.title = `${item.name}`;
     if (!mods.hasOwnProperty(item.mod))
         item.mod = 'downfall';
@@ -102,7 +102,7 @@ async function embed(item, msg, embeds=[]) {
     if (item.hasOwnProperty('img'))
         e.thumbnail = {url: cfg.exportURL+item.img};
 
-    return e.title == '' ? null : e;
+    return e.title == '' ? null : new EmbedBuilder(e);
 }
 
 export default embed;
