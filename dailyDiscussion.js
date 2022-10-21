@@ -74,11 +74,11 @@ async function startThread() {
                 content: `Vote for tomorrow's Daily Discussion here!`,
                 components: [new ActionRowBuilder().addComponents(voteItems.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(v).setStyle(ButtonStyle.Secondary)))]
             });
-            await voteMessage.pin();
+            voteMessage.pin().catch(e => {});
         }
         
         let itemMessage = await thread.send({embeds: [await embed({...item.item, score: item.score, query: fn.unPunctuate(itemName)})]}).catch(e => {});
-        await itemMessage.pin();
+        itemMessage.pin().catch(e => {});
 
         if (data.hasOwnProperty('lastVote'))
             await (await oldThread.messages.fetch(data.lastVote)).edit({
