@@ -1,5 +1,6 @@
 import { bot, search } from './index.js';
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle } from 'discord.js';
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, InteractionResponse } from 'discord.js';
+import commands from './commands.js';
 import embed from './embed.js';
 import fs from 'fs';
 import fn from './fn.js';
@@ -22,7 +23,7 @@ function start() {
                         data.votes[i] = data.votes[i].filter(u => u != interaction.user.id);
                     data.votes[num].push(interaction.user.id);
                     saveData();
-                    await interaction.update(`${interaction.message.content.split('\n')[0]}\n\n${data.options.map((o, i) => `${o}: ${data.votes[i].length}`).join('\n')}`);
+                    await interaction.update({embeds: interaction.message.embeds.map((e, i) => ({...e.data, footer: data.votes[i].length > 0 ? {text: `${data.votes[i].length} vote${data.votes[i].length == 1 ? '' : 's'}`} : {}}))});
                 }
             }
         } catch(e) {
@@ -72,17 +73,22 @@ async function startThread() {
         if (voteItems.length > 0) {
             voteMessage = await thread.send({
                 content: `Vote for tomorrow's Daily Discussion here!`,
+                embeds: await Promise.all(voteItems.map(v => embed({...fn.find(v).item, score: 1, query: fn.unPunctuate(v)}))),
                 components: [new ActionRowBuilder().addComponents(voteItems.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(v).setStyle(ButtonStyle.Secondary)))]
             });
             voteMessage.pin().catch(e => {});
         }
         
-        let itemMessage = await thread.send({embeds: [await embed({...item.item, score: item.score, query: fn.unPunctuate(itemName)})]}).catch(e => {});
+        let itemMessage = await thread.send({embeds: [
+            await commands.prefix['i~'](null, itemName),
+            await embed({...item.item, score: item.score, query: fn.unPunctuate(itemName)}),
+        ]}).catch(e => {});
         itemMessage.pin().catch(e => {});
 
         if (data.hasOwnProperty('lastVote'))
             await (await oldThread.messages.fetch(data.lastVote)).edit({
                 content: `Next Daily Discussion: <#${thread.id}>`,
+                embeds: [],
                 components: []
             });
         
