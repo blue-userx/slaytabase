@@ -91,6 +91,7 @@ async function startThread() {
                 embeds: [],
                 components: []
             });
+        await oldThread.setArchived(true).catch(e => {});
         
         data.options = voteItems;
         data.votes = voteItems.map(v => []);
