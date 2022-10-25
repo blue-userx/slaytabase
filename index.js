@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType } from 'discord.js';
+import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials } from 'discord.js';
 import Fuse from 'fuse.js'
 import fs from 'fs';
 import commands from './commands.js';
@@ -11,7 +11,7 @@ import cfg from './cfg.js';
 import fn from './fn.js';
 import startDailyDiscussion from './dailyDiscussion.js';
 
-const bot = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.DirectMessages], partials: ['CHANNEL'] });
+const bot = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.DirectMessages], partials: [Partials.Channel] });
 
 const search = new Fuse([], {
     includeScore: true,
