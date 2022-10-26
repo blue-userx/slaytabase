@@ -267,14 +267,18 @@ __Commands:__
                 };
         },
 
-        'c~artpreview': async (msg, arg) => {
+        'c~artpreview ': async (msg, arg) => {
             try {
-                let art = msg.attachments.first();
+                let args = arg.split('=');
+                let att = 0;
+                if (args.length > 1)
+                    att = parseInt(args[1])-1;
+                let art = msg.attachments.at(att);
                 if (art == undefined) return {title: 'you need to attach an image to preview!'};
-                let item = fn.find(arg);
+                let item = fn.find(args[0]);
                 if (!item.item.hasOwnProperty('itemType') || item.item.itemType != 'card')
                     return {title: `couldnt find that card. found ${item.item.itemType} "${item.item.name}"`};
-                let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+                let itemEmbed = await embed({...item.item, score: item.score, query: args[0]});
     
                 let artcanvas = createCanvas(500,380);
                 let artctx = artcanvas.getContext('2d');
@@ -305,9 +309,9 @@ __Commands:__
             }
         },
 
-        'artpreview': async (msg, arg) => {
+        'artpreview ': async (msg, arg) => {
             try {
-                let preview = await commands.prefix['c~artpreview'](msg, arg);
+                let preview = await commands.prefix['c~artpreview '](msg, arg);
                 let canvas = createCanvas(678,874);
                 let ctx = canvas.getContext('2d');
                 ctx.drawImage(await loadImage(preview.files[0]), 0, 0, 678, 874, 0, 0, 678, 874);
