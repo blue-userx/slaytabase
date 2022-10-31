@@ -125,7 +125,7 @@ async function main() {
     for (let itemType in data)
         for (let item of data[itemType]) {
             let character = characters[''];
-            if (item.type == 'Player') continue;
+            if (item.type == 'Player' && item.name != 'The Snecko') continue;
             switch(itemType) {
                 case 'cards':
                     character = characters[item.color];

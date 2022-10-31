@@ -1507,6 +1507,11 @@ export default {
                     "where": {"name": "Neow", type: "Boss"},
                     "to": {"img": "/export/downfall/creatures/NeowBossFinal.png"}
                 },
+    
+                {
+                    "where": {"name": "the Snecko"},
+                    "to": {"name": "The Snecko"}
+                },
 
                 {
                     "where": {"name": "Mystic"},

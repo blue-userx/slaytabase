@@ -87,7 +87,7 @@ async function startThread() {
 
         if (data.hasOwnProperty('lastVote'))
             await (await oldThread.messages.fetch(data.lastVote)).edit({
-                content: `Next Daily Discussion: <#${thread.id}>`,
+                content: `Next Daily Discussion: <#${thread.id}>\n\n__Votes__:\n${data.options.map((e,i) => `${e}: ${data.votes[i].length}`).join('\n')}`,
                 embeds: [],
                 components: []
             });
