@@ -2,7 +2,7 @@
 import { search } from './index.js';
 
 
-const unPunctuate = str => str.replaceAll('\n', ' ').replace(/[^\w\s?~=]|_/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+const unPunctuate = str => str.replaceAll('\n', ' ').replace(/[^\w\s?~=:]|_/g, "").replace(/\s+/g, " ").trim().toLowerCase();
 
 function find(query) {
     let results = search.search(unPunctuate(query));
@@ -14,7 +14,7 @@ function find(query) {
             name: 'No results',
         }};
     else if (item.item.searchName != query) {
-        let exactMatch = search._docs.find(e => e.searchName == query);
+        let exactMatch = search._docs.find(e => e.searchName == query || e.searchId == query);
         if (exactMatch != undefined)
             item = {item: exactMatch, score: 0};
     }

@@ -23,7 +23,7 @@ async function embed(item, msg, embeds=[]) {
         item.mod = 'downfall';
     if (item.hasOwnProperty('mod'))
         e.url = `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/${searchize(item)}`;
-    if (item.hasOwnProperty('query') && !item.query.includes(fn.unPunctuate(item.name)))
+    if (item.hasOwnProperty('query') && !item.query.includes(fn.unPunctuate(item.name)) && item.query != item.searchId)
         e.footer = {
             //iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=32`,
             text: `<${item.query}> = ${item.name == 'No results' ? '?' : item.searchName}${item.score != undefined ? ', '+String(Math.round((1 - item.score) * 100))+'% sure' : ''}`, //text: `${msg.author.username}: <${item.query}>`,

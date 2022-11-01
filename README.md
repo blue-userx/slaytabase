@@ -9,7 +9,7 @@ invite the bot: https://discord.com/oauth2/authorize?client_id=96182444365357468
 5. `npm start`
 
 ## updating export
-1. download [modded spire exporter](https://steamcommunity.com/sharedfiles/filedetails/?id=2069872611) and enable "export vanilla items"
+1. download [my version of modded spire exporter](https://github.com/OceanUwU/sts-exporter/releases/tag/v0.8.3) and enable "export vanilla items"
 2. on a profile where no beta art is enabled, create an export and move the `export` directory it creates to `docs/export` in this repo
 3. enable "Playtester Art Mode" in the slay the spire settings, then create another export and move the `export` directory it creates to `docs/betaartexport` in this repo
 4. `node alterExport.js` (use `node alterExport.js -images` if you need to export card images)

@@ -150,6 +150,7 @@ async function main() {
             let newItem = {
                 ...item,
                 searchName: fn.unPunctuate(item.name),
+                searchId: item.hasOwnProperty('id') ? fn.unPunctuate(item.id) : null,
                 itemType: itemType.slice(0,-1),
                 mod: item.mod == '' ? 'slay-the-spire' : item.mod.toLowerCase(),
                 description: item.hasOwnProperty('description') ? keywordify(item.description, character) : null,
@@ -166,6 +167,7 @@ async function main() {
                     'description',
                     'tier',
                     'rarity',
+                    'id',
                 ].map(key => {
                     if (Array.isArray(key)) {
                         let look = newItem;

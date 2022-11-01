@@ -198,7 +198,7 @@ __Commands:__
             results = results.slice(10*page, 10*(page+1));
 
             let resultText = results.map((i, index) => `${(page*10)+index+1}: ${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} **${i.item.name}** - ${String(Math.round((1 - i.score) * 100))}% sure`).join('\n');
-            let firstEmbed = results.length > 0 ? await embed(results[0].item, msg) : {thumbnail: null};
+            let firstEmbed = results.length > 0 ? await embed(results[0].item, msg) : {data: {thumbnail: null}};
 
             return {
                 title: `Searched for "${searchQ}"`,
