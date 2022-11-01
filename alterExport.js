@@ -116,5 +116,6 @@ function useExtraData(data, dataToUse) {
     
     //save new data
     fs.writeFileSync('docs/altered/items.json', JSON.stringify(data));
+    fs.writeFileSync('docs/altered/itemsFormatted.json', JSON.stringify(data, null, 4));
     console.log('\nDone!');
 })();
