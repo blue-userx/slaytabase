@@ -9,6 +9,7 @@ const filename = './dailyDiscussion.json';
 
 var data = JSON.parse(fs.readFileSync(filename));
 const saveData = () => fs.writeFileSync(filename, JSON.stringify(data));
+const itemTitle = item => `${item.name} (${item.itemType == 'boss' || item.character[0] == 'All' ? '' : item.character[0].replace('The ', '')+' '}${item.itemType})`;
 
 function start() {
     startThread();
@@ -46,17 +47,17 @@ async function startThread() {
             }
         }
 
-        let itemName = data.options[winner];
-        let item = fn.find(itemName);
-        let thread = await oldThread.parent.threads.create({name: `${itemName} - Daily Discussion ${(new Date()).getDate()} ${(new Date()).toLocaleString('default', {month: 'long'}).slice(0, 3)}`})
+        let itemId = data.options[winner];
+        let item = fn.find(itemId);
+        let thread = await oldThread.parent.threads.create({name: `${itemTitle(item.item)} - Daily Discussion ${(new Date()).getDate()} ${(new Date()).toLocaleString('default', {month: 'long'}).slice(0, 3)}`})
 
         let possibleItems = search._docs
             .filter(item => item.mod == 'downfall')
             .filter(item => ['card', 'relic', 'potion', 'event', 'boss'].includes(item.itemType))
-            .filter(item => item.rarity != 'Special')
+            .filter(item => !['Event', 'Special'].includes(item.rarity))
             .filter(item => item.tier != 'Special')
             .filter(item => !['???', 'Strike', 'Defend'].includes(item.name))
-            .map(item => `${item.name} (${item.itemType == 'boss' || item.character[0] == 'All' ? '' : item.character[0].replace('The ', '')+' '}${item.itemType})`)
+            .map(item => item.searchId)
             .filter(item => !data.past.includes(item));
 
         let voteItems = [];
@@ -74,31 +75,31 @@ async function startThread() {
             voteMessage = await thread.send({
                 content: `Vote for tomorrow's Daily Discussion here!`,
                 embeds: await Promise.all(voteItems.map(v => embed({...fn.find(v).item, score: 1, query: fn.unPunctuate(v)}))),
-                components: [new ActionRowBuilder().addComponents(voteItems.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(v).setStyle(ButtonStyle.Secondary)))]
+                components: [new ActionRowBuilder().addComponents(voteItems.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(itemTitle(fn.find(v).item)).setStyle(ButtonStyle.Secondary)))]
             });
             voteMessage.pin().catch(e => {});
         }
         
         let itemMessage = await thread.send({embeds: [
-            await commands.prefix['i~'](null, itemName),
-            await embed({...item.item, score: item.score, query: fn.unPunctuate(itemName)}),
+            await commands.prefix['i~'](null, itemId),
+            await embed({...item.item, score: item.score, query: itemId}),
         ]}).catch(e => {});
         itemMessage.pin().catch(e => {});
 
         if (data.hasOwnProperty('lastVote'))
             await (await oldThread.messages.fetch(data.lastVote)).edit({
-                content: `Next Daily Discussion: <#${thread.id}>\n\n__Votes__:\n${data.options.map((e,i) => `${e}: ${data.votes[i].length}`).join('\n')}`,
+                content: `Next Daily Discussion: <#${thread.id}>\n\n__Votes__:\n${data.options.map((e,i) => `${itemTitle(fn.find(e).item)}: ${data.votes[i].length}`).join('\n')}`,
                 embeds: [],
                 components: []
-            });
+            }).catch(e => {});
         await oldThread.setArchived(true).catch(e => {});
         
         data.options = voteItems;
         data.votes = voteItems.map(v => []);
-        data.next += 24 * 60 * 60 * 1000;
+        data.next += 1;
         data.voteChannel = thread.id;
         data.lastVote = (voteMessage == undefined ? prevMessage : voteMessage).id;
-        data.past.push(itemName);
+        data.past.push(itemId);
         saveData();
     }
 }

@@ -1187,6 +1187,7 @@ export default {
         
             "potions": [
                 {
+                    "id": "Guardian:BlockOnCardUsePotion",
                     "name": "Armorer's Tincture",
                     "rarity": "Uncommon",
                     "description": "Gain 4 Block each time you play a card this turn.",
@@ -1195,6 +1196,7 @@ export default {
                 },
                 
                 {
+                    "id": "champ:CounterPotion",
                     "name": "Brew of Sharpness",
                     "rarity": "Common",
                     "description": "Gain 25 :Counter.",
@@ -1203,6 +1205,7 @@ export default {
                 },
                 
                 {
+                    "id": "hexamod:SoulburnPotion",
                     "name": "Molotov",
                     "rarity": "Common",
                     "description": "Apply 30 :Soulburn.",
@@ -1211,6 +1214,7 @@ export default {
                 },
                 
                 {
+                    "id": "Slimebound:ThreeZeroPotion",
                     "name": "Ooze-Infused Drink",
                     "rarity": "Rare",
                     "description": "Add 4 random 0-cost cards to your hand.",
@@ -1219,6 +1223,7 @@ export default {
                 },
                 
                 {
+                    "id": "gremlin:GremlinPotion",
                     "name": "Pizazz Potion",
                     "rarity": "Common",
                     "description": "Gain 10 Vigor.",
@@ -1227,6 +1232,7 @@ export default {
                 },
                 
                 {
+                    "id": "sneckomod:MuddlingPotion",
                     "name": "Spiked Energy Drink",
                     "rarity": "Common",
                     "description": ":Muddle the 2 highest-cost cards in your hand. Cards :Muddled this way cannot cost 3.",
@@ -1235,6 +1241,7 @@ export default {
                 },
                 
                 {
+                    "id": "bronze:BurnAndBuffPotion",
                     "name": "Vexing Draught",
                     "rarity": "Uncommon",
                     "description": "Gain 2 Strength and 2 Dexterity. Add two :Burn+ cards to your draw pile.",
@@ -1243,6 +1250,7 @@ export default {
                 },
                 
                 {
+                    "id": "expansioncontent:BossPotion",
                     "name": "Boss Potion",
                     "rarity": "Uncommon",
                     "description": "Choose 1 of 3 random :Boss cards to add to your hand, it costs 0 this turn.",
@@ -1251,6 +1259,7 @@ export default {
                 },
                 
                 {
+                    "id": "downfall:CursedFountainPotion",
                     "name": "Cursed Fountain Liquid",
                     "rarity": "Event",
                     "description": "Apply 2 Weak, 2 Vulnerable, and reduce Strength by 2.",

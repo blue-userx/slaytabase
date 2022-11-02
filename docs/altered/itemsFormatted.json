@@ -13537,6 +13537,7 @@
             "color": "The_champ_gray"
         },
         {
+            "id": "Guardian:BlockOnCardUsePotion",
             "name": "Armorer's Tincture",
             "rarity": "Uncommon",
             "description": "Gain 4 Block each time you play a card this turn.",
@@ -13544,6 +13545,7 @@
             "mod": "downfall"
         },
         {
+            "id": "champ:CounterPotion",
             "name": "Brew of Sharpness",
             "rarity": "Common",
             "description": "Gain 25 :Counter.",
@@ -13551,6 +13553,7 @@
             "mod": "downfall"
         },
         {
+            "id": "hexamod:SoulburnPotion",
             "name": "Molotov",
             "rarity": "Common",
             "description": "Apply 30 :Soulburn.",
@@ -13558,6 +13561,7 @@
             "mod": "downfall"
         },
         {
+            "id": "Slimebound:ThreeZeroPotion",
             "name": "Ooze-Infused Drink",
             "rarity": "Rare",
             "description": "Add 4 random 0-cost cards to your hand.",
@@ -13565,6 +13569,7 @@
             "mod": "downfall"
         },
         {
+            "id": "gremlin:GremlinPotion",
             "name": "Pizazz Potion",
             "rarity": "Common",
             "description": "Gain 10 Vigor.",
@@ -13572,6 +13577,7 @@
             "mod": "downfall"
         },
         {
+            "id": "sneckomod:MuddlingPotion",
             "name": "Spiked Energy Drink",
             "rarity": "Common",
             "description": ":Muddle the 2 highest-cost cards in your hand. Cards :Muddled this way cannot cost 3.",
@@ -13579,6 +13585,7 @@
             "mod": "downfall"
         },
         {
+            "id": "bronze:BurnAndBuffPotion",
             "name": "Vexing Draught",
             "rarity": "Uncommon",
             "description": "Gain 2 Strength and 2 Dexterity. Add two :Burn+ cards to your draw pile.",
@@ -13586,6 +13593,7 @@
             "mod": "downfall"
         },
         {
+            "id": "expansioncontent:BossPotion",
             "name": "Boss Potion",
             "rarity": "Uncommon",
             "description": "Choose 1 of 3 random :Boss cards to add to your hand, it costs 0 this turn.",
@@ -13593,6 +13601,7 @@
             "mod": "downfall"
         },
         {
+            "id": "downfall:CursedFountainPotion",
             "name": "Cursed Fountain Liquid",
             "rarity": "Event",
             "description": "Apply 2 Weak, 2 Vulnerable, and reduce Strength by 2.",
@@ -15585,6 +15594,7 @@
                 "Champion's Belt",
                 "Orichalcum (A19)"
             ],
+            "id": "downfall:Ironclad1",
             "mod": "downfall",
             "description": "Act 1 Boss\n\n**Synchronize** - Whenever Ironclad generates a Status card, a duplicate is added into your discard pile.\n\n**Cards**: Bash, Flawed, Doubt, Reckless Charge, Wild Strike(+), Defend, Power Through, Second Wind, Seeing Red, Immolate, Icky, True Grit+, Thunderclap+, Feel No Pain\n\n**Relics**: Art of War, Champion's Belt, Orichalcum (A19)"
         },
@@ -15626,6 +15636,7 @@
                 "Vajra",
                 "Du-Vu Doll (A19)"
             ],
+            "id": "downfall:Ironclad2",
             "mod": "downfall",
             "description": "Act 2 Boss\n\n**Feeding Frenzy** - Ironclad's Reaper foes not Exhaust and targets ALL Mushrooms. When Ironclad kills a Mushroom, he gains 1 Strength.\n\n**Cards**: Twin Strike, Feed, Clothesline, Fungus Among Us, Ghostly Armor+, Hemokinesis, Reaper, Defend, Haunted, Swift Strike, Heavy Blade, Clumsy, Bloodletting, Headbutt, Flame Barrier+, Inflame(+), Strike\n\n**Relics**: Red Skull, Magic Flower, Vajra, Du-Vu Doll (A19)\n\n**Unique Cards**:\nFungus Among Us - Kill all Mushrooms. Heal HP equal to their remaining HP. Summon two Mushrooms."
         },
@@ -15657,6 +15668,7 @@
                 "Horn Cleat",
                 "Self-Forming Clay (A19)"
             ],
+            "id": "downfall:Ironclad3",
             "mod": "downfall",
             "description": "Act 3 Boss\n\n**Bastion** - Ironclad begins the fight with a Fortification, which will grant him 10 block each turn. When the Fortification has been destroyed, Ironclad loses Barricade, but gains 5 Strength at the start of each turn.\n\n**Cards**: Feel No Pain, Impervious, Intimidate, Flame Barrier(+), Body Slam, Clumsy, Entrench, Metallicize, Decay, Power Through, Second Wind, Ghostly Armor\n\n**Relics**: Odd Mushroom, Torii, Cursed Key, Horn Cleat, Self-Forming Clay (A19)"
         },
@@ -15692,6 +15704,7 @@
                 "Twisted Funnel",
                 "Lantern (A19)"
             ],
+            "id": "downfall:Silent1",
             "mod": "downfall",
             "description": "Act 1 Boss\n\n**Warning: Highly Toxic** - Poison is blockable and deals damage at end of turn. Receive an Antidote at the start of combat.\n\n**Cards**: Crippling Cloud, Survivor, Burst, Poisoned Stab, Dodge and Roll, Strike, Bane(+), Defend, Deflect, Footwork, Noxious Fumes, Deadly Poison\n\n**Relics**: Horn Cleat, Twisted Funnel, Lantern (A19)\n\n**Unique Cards**:\nAntidote - Lose all Poison."
         },
@@ -15724,6 +15737,7 @@
                 "Bag of Marbles",
                 "Oddly Smooth Stone (A19)"
             ],
+            "id": "downfall:Silent2",
             "mod": "downfall",
             "description": "Act 2 Boss\n\n**Seeing Double** - At the start of each turn, a mirror image of Silent will hide her real location. Attacking silent or the mirror removes it from combat for the turn.\n\n**Cards**: After Image+, Backstab, Doppelganger+, Nightmare, Deflect(+), J.A.X.+, Dagger Spray, Decay, Outmaneuver, Flying Knee, Blur, Footwork, Leg Sweep, Riddle with Holes\n\n**Relics**: Paper Krane, Anchor, Bag of Marbles, Oddly Smooth Stone (A19)"
         },
@@ -15760,6 +15774,7 @@
                 "Ornamental Fan",
                 "Kunai (A19)"
             ],
+            "id": "downfall:Silent3",
             "mod": "downfall",
             "description": "Act 3 Boss\n\n**Bag of Knives** - The first time you play a card that costs 2 or more each turn, Silent gains 2 Shivs.\n\n**Cards**: Predator, Flying Knee, Burst, Flechettes, Leg Sweep, Cloak and Dagger, Neutralize, Blur, Endless Agony, Finisher+, Defend, Blade Dance -> Shiv, Sucker Punch, Dagger Spray, Piercing Wail, After Image, Dash\n\n**Relics**: Mummified Hand, Fusion Hammer, Shuriken, Ornamental Fan, Kunai (A19)"
         },
@@ -15789,6 +15804,7 @@
                 "Fossilized Helix",
                 "Symbiotic Virus (A19)"
             ],
+            "id": "downfall:Defect1",
             "mod": "downfall",
             "description": "Act 1 Boss\n\n**Energy Thief** - Whenever Defect generates a Void, it goes to the top of your draw pile.\n\n**Cards**: Buffer, Doom and Gloom(+), Shame, Steam Barrier, Defend, Aged, Turbo+, Sunder, Defend, Strike, Core Surge, Equilibrium\n\n**Relics**: Clockwork souvenir, Fossilized Helix, Symbiotic Virus (A19)"
         },
@@ -15824,6 +15840,7 @@
                 "Kunai",
                 "Ginger (A19)"
             ],
+            "id": "downfall:Defect2",
             "mod": "downfall",
             "description": "Act 2 Boss\n\n**Ancient Construct** - Begins the fight with 2 Bronze Orb minions. Gains 1 Artifact at the end of its turn if it did not already have Artifact.\n\n**Cards**: Boot Sequence, Claw, Machine Learning+, Leap, Cold Snap+, Panic Button, Strike, Reprogram, Swift Strike, Rebound, Charge Battery, Genetic Algorithm+, Shame, Hyperbeam(+), Flawed, Defend, Clumsy\n\n**Relics**: Turnip, Red Mask, Kunai, Ginger (A19)"
         },
@@ -15855,6 +15872,7 @@
                 "Data Disk",
                 "Art of War (A19)"
             ],
+            "id": "downfall:Defect3",
             "mod": "downfall",
             "description": "Act 3 Boss\n\n**Unbiased Cognision** - Whenever you play a Power card, Defect gains 1 Focus.\n\n**Cards**: Rainbow, Reinforced Body, Charge Battery, Zap+, Dualcast, Multi-Cast, Cold Snap, Barrage+, Leap, Storm, Defragment(+), Blind\n\n**Relics**: Coffee Dripper, Fossilized Helix, Lantern, Data Disk, Art of War (A19)"
         },
@@ -15883,6 +15901,7 @@
                 "Cloak Clasp",
                 "Mercury Hourglass (A19)"
             ],
+            "id": "downfall:Watcher1",
             "mod": "downfall",
             "description": "Act 1 Boss\n\n**Unbridled Rage** - At the end of her turn, if Watcher is at or below 50% HP, she enters Wrath. Watcher's Wrath increases damage dealt and received by 50% instead of 100%.\n\n**Cards**: Wallop(+), Halt, Defend+, Clumsy, Sands of Time, Talk to the Hand, Crush Joints, Panacea, Fasting, Regret, Parasite\n\n**Relics**: Bag of Preparation, Cloak Clasp, Mercury Hourglass (A19)"
         },
@@ -15917,6 +15936,7 @@
                 "Oddly Smooth Stone",
                 "Enchiridion (A19)"
             ],
+            "id": "downfall:Watcher2",
             "mod": "downfall",
             "description": "Act 2 Boss\n\n**Blasphemer's Demise** - When Watcher loses 150 more HP, apply -4 Strength to her when she next enters Divinity or plays Ragnarok.\n\n**Cards**: Like Water, Defend, Ragnarok+, Strike, Follow-Up, Wave of the Hand, Defend+, Wallop+, Blasphemy+, Flying Sleeves+, Wish(+) -> Become Almighty(+), Tranquility+, Vigilance, Empty Body, Wish -> Live Forever, Consecrate+\n\n**Relics**: Incense Burner, Teardrop Locket, Oddly Smooth Stone, Enchiridion (A19)"
         },
@@ -15950,6 +15970,7 @@
                 "Thread and Needle",
                 "Damaru (A19)"
             ],
+            "id": "downfall:Watcher3",
             "mod": "downfall",
             "description": "Act 3 Boss\n\n** Fleeting Faith** - Watcher gains 1 Mantra whenever you play a card. Watcher loses 5 Mantra at the start of her turn. Watcher does not exit Divinity at the end of her turn.\n\n**Cards**: Wish -> Live Forever, Good Instincts, Shame, Wave of the Hand, Swivel, Blind, Signature Move, Conjure Blade -> Expunger, Sanctity, Protect+, Empty Fist(+), Normality, Strike, Devotion\n\n**Relics**: Velvet Choker, Torii, Captain's Wheel, Thread and Needle, Damaru (A19)"
         },
@@ -15978,6 +15999,7 @@
                 "The Abacus",
                 "Orichalcum (A19)"
             ],
+            "id": "downfall:Hermit1",
             "mod": "downfall",
             "description": "Act 1 Boss\n\n**Deadly Focus ** - Hermit has Concentration, which adds special Dead On effects to his cards. Dealing 10 unblocked damage to him breaks the concentration, causing his cards to lose their Dead On effects.\n\n**Cards**: Headshot, Defend, Injury, Itchy Trigger, Strike, Ghostly Presence, Dive(+), Lone Wolf, Roughhouse, Deadeye\n\n**Relics**: Calipers, Oddly Smooth Stone, The Abacus, Orichalcum (A19)"
         },
@@ -16008,6 +16030,7 @@
                 "Philosopher's Stone",
                 "Pen Nib"
             ],
+            "id": "downfall:Hermit2",
             "mod": "downfall",
             "description": "Act 2 Boss\n\n**Wheel of Fortune** - Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card. Every 6 times this happens, Hermit gains 1 Strength.\n\n**Cards**: Showdown+, Strike+, Strike, Defend, Desperado, Wide Open+, Hole Up, Flash Powder(+), Itchy Trigger, Hand of Greed, Virtue+, Maintenance+, Necronomicurse\n\n**Relics**: Necronomicon, Philosopher's Stone, Pen Nib"
         },
@@ -16047,6 +16070,7 @@
                 "Calling Bell",
                 "Orichalcum (A19)"
             ],
+            "id": "downfall:Hermit3",
             "mod": "downfall",
             "description": "Act 3 Boss\n\n**Doomsday** - At the start of your turn, gain an Impending Doom with Retain.\n\n**Cards**: Covet+, Defend, Pain, Clumsy, Spite, Misfire, Glare, Ghostly Presence, Master of Strategy, Bandage Up, Lone Wolf, Wide Open, Malice, Spray n' Pray, Enervate, Low Profile, Doubt, Purgatory, Grudge\n\n**Relics**: Charred Glove, Gremlin Visage, Art of War, Omamori, Calling Bell, Orichalcum (A19)"
         }
@@ -16058,6 +16082,7 @@
                 3
             ],
             "mod": "downfall",
+            "id": "downfall:Mind Bloom",
             "description": "[I am an Echo] Fight yourself. Obtain a Rare Relic.\n[I am Complete (requires all keys broken)] Upgrade all Cards. Lose Heart Blessings and 10 Max HP.\n[I am Gorged (before chest)] Gain 999 Souls Cursed - 2 Normality.\n[I am Healthy (after chest)] Heal to full HP. Cursed - Doubt.",
             "colouredDesc": "\u001b[2;37m[I am an Echo\u001b[2;37m] \u001b[2;31mFight yourself. \u001b[2;32mObtain a Rare Relic.\n\u001b[2;37m[I am Complete \u001b[0;2m(requires all keys broken)\u001b[2;37m] \u001b[2;32mUpgrade all Cards. \u001b[2;31mLose Heart Blessings \u001b[0;2mand \u001b[2;31m10 Max HP.\n\u001b[2;37m[I am Gorged \u001b[0;2m(before chest)\u001b[2;37m] \u001b[2;32mGain 999 Souls \u001b[2;31mCursed - 2 Normality.\n\u001b[2;37m[I am Healthy \u001b[0;2m(after chest)\u001b[2;37m] \u001b[2;32mHeal to full HP. \u001b[2;31mCursed - Doubt.",
             "character": "",
@@ -16069,6 +16094,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Soul Shrine",
             "description": "[Pray] Gain 100 (50) Gold.\n[Desecrate] Gain 275 Gold. Become Cursed - Regret\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Pray\u001b[2;37m] \u001b[2;32mGain 100 \u001b[2;34m(50) Gold.\n\u001b[2;37m[Desecrate\u001b[2;37m] \u001b[2;32mGain 275 Gold. \u001b[2;31mBecome Cursed - Regret\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16080,6 +16106,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:The Woman in Blue",
             "description": "[Punch] Fight. Gain a Potion Relic and 3 Potions.\n[Leave] Take damage equal to 5% of your max HP.",
             "colouredDesc": "\u001b[2;37m[Punch\u001b[2;37m] \u001b[2;31mFight. \u001b[2;32mGain a Potion Relic and 3 Potions.\n\u001b[2;37m[Leave\u001b[2;37m] \u001b[2;34mTake damage equal to 5% of your max HP.",
             "character": "",
@@ -16091,6 +16118,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:The Cursed Fountain",
             "description": "[Bottle (requires 1+ curse)] Gain Cursed Liquid Potion.\n[Consume (requires 2+ curses)] Gain 75 Souls.\n[Drink (requires 3+ curses)] Heal to full HP.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Bottle \u001b[0;2m(requires 1+ curse)\u001b[2;37m] \u001b[2;32mGain Cursed Liquid Potion.\n\u001b[2;37m[Consume \u001b[0;2m(requires 2+ curses)\u001b[2;37m] \u001b[2;32mGain 75 \u001b[2;33mSouls.\n\u001b[2;37m[Drink \u001b[0;2m(requires 3+ curses)\u001b[2;37m] \u001b[2;32mHeal to full HP.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16104,6 +16132,7 @@
                 3
             ],
             "mod": "downfall",
+            "id": "downfall:We Meet Again!",
             "description": "[Lose (relic chosen at random) (requires 1+ non-starter non-boss non-event relic)] Gain 3 Potions.\n[Lose (relic chosen at random) (requires 2+ non-starter non-boss non-event relics)] Gain 150 (75) Souls.\n[Lose (relic chosen at random) (requires 3+ non-starter non-boss non-event relics)] Gain a Rare Card.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[\u001b[2;31mLose (relic chosen at random) \u001b[0;2m(requires 1+ non-starter non-boss non-event relic)\u001b[2;37m] \u001b[2;32mGain 3 Potions.\n\u001b[2;37m[\u001b[2;31mLose (relic chosen at random) \u001b[0;2m(requires 2+ non-starter non-boss non-event relics)\u001b[2;37m] \u001b[2;32mGain 150 \u001b[2;34m(75) \u001b[2;33mSouls.\n\u001b[2;37m[\u001b[2;31mLose (relic chosen at random) \u001b[0;2m(requires 3+ non-starter non-boss non-event relics)\u001b[2;37m] \u001b[2;32mGain a \u001b[2;33mRare \u001b[2;32mCard.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16115,6 +16144,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Designer In-Spire",
             "description": "[Punch] Take damage equal to 8% (12%) of your max HP.\n[Adjustments (punch first)] Upgrade 1-2 random cards.\n[Clean Up (punch first)] Transform 1-2 random cards.\n[Full Service (punch first)] Remove a card and upgrade a random card.\n[Ignore] Leave.",
             "colouredDesc": "\u001b[2;37m[Punch\u001b[2;37m] \u001b[2;31mTake damage equal to 8% \u001b[2;34m(12%) of your max HP.\n\u001b[2;37m[Adjustments \u001b[0;2m(punch first)\u001b[2;37m] \u001b[2;32mUpgrade 1-2 random cards.\n\u001b[2;37m[Clean Up \u001b[0;2m(punch first)\u001b[2;37m] \u001b[2;32mTransform 1-2 random cards.\n\u001b[2;37m[Full Service \u001b[0;2m(punch first)\u001b[2;37m] \u001b[2;32mRemove a card and upgrade a random card.\n\u001b[2;37m[Ignore\u001b[2;37m] Leave.",
             "character": "",
@@ -16126,6 +16156,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Shining Light",
             "description": "[Enter] Upgrade 3 random cards. Become Cursed - Flawed.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Enter\u001b[2;37m] \u001b[2;32mUpgrade 3 random cards. \u001b[2;31mBecome Cursed - Flawed.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16137,6 +16168,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:World of Goop",
             "description": "[Full Harvest] Gain 450 (300) Souls. Become Cursed Thrice - Icky.\n[Drain] Gain 300 (200) Souls. Become Cursed Twice - Icky.\n[Sap] Gain 150 (100) Souls. Become Cursed - Icky.",
             "colouredDesc": "\u001b[2;37m[Full Harvest\u001b[2;37m] \u001b[2;32mGain 450 \u001b[2;34m(300) \u001b[2;33mSouls. \u001b[2;31mBecome Cursed Thrice - Icky.\n\u001b[2;37m[Drain\u001b[2;37m] \u001b[2;32mGain 300 \u001b[2;34m(200) \u001b[2;33mSouls. \u001b[2;31mBecome Cursed Twice - Icky.\n\u001b[2;37m[Sap\u001b[2;37m] \u001b[2;32mGain 150 \u001b[2;34m(100) \u001b[2;33mSouls. \u001b[2;31mBecome Cursed - Icky.",
             "character": "",
@@ -16148,6 +16180,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Wing Statue",
             "description": "[Destroy] Lose 11 Max HP. Gain Sharpened Fragment.\n[Collect] Gain Broken Wing Statue.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Destroy\u001b[2;37m] \u001b[2;31mLose 11 Max HP. \u001b[2;32mGain Sharpened Fragment.\n\u001b[2;37m[Collect\u001b[2;37m] \u001b[2;32mGain Broken Wing Statue.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16159,6 +16192,7 @@
                 1
             ],
             "mod": "downfall",
+            "id": "downfall:Golden Idol",
             "description": "[Set Trap (last time you saw this event in another run, you harvested)] Lose a Strike.\n[Harvest (last time you saw this event in another run, you set a trap)] Gain 100 Souls.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Set Trap \u001b[0;2m(last time you saw this event in another run, you harvested)\u001b[2;37m] \u001b[2;31mLose a Strike.\n\u001b[2;37m[Harvest \u001b[0;2m(last time you saw this event in another run, you set a trap)\u001b[2;37m] \u001b[2;32mGain 100 \u001b[2;33mSouls.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16170,6 +16204,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:The Cleric",
             "description": "[Punch] Gain 100 (50) Souls\n[Intimidate] Remove a card from your deck.",
             "colouredDesc": "\u001b[2;37m[Punch\u001b[2;37m] \u001b[2;32mGain 100 \u001b[2;34m(50) \u001b[2;33mSouls\n\u001b[2;37m[Intimidate\u001b[2;37m] \u001b[2;32mRemove a card from your deck.",
             "character": "",
@@ -16192,6 +16227,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Knowing Skull",
             "description": "[You.] Obtain Knowing Skull. Lose 7 (14) HP.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[You.\u001b[2;37m] \u001b[2;32mObtain Knowing Skull. \u001b[2;31mLose 7 \u001b[2;34m(14) \u001b[2;31mHP.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16203,6 +16239,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Pleading Vagrant",
             "description": "[Punch] Gain 85 Souls. Lose 11 (16) HP.\n[Rob] Obtain a Relic. Become Cursed - Pride.",
             "colouredDesc": "\u001b[2;37m[Punch\u001b[2;37m] \u001b[2;32mGain 85 Souls. \u001b[2;31mLose 11 \u001b[2;34m(16) \u001b[2;31mHP.\n\u001b[2;37m[Rob\u001b[2;37m] \u001b[2;32mObtain a Relic. \u001b[2;31mBecome Cursed - Pride.",
             "character": "",
@@ -16214,6 +16251,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Old Beggar",
             "description": "[Continue (cleric event not seen yet)] Begin cleric event\n[Fight ( intimidate option chosen in cleric event)] Fight 2 centurions. Choose: Gain 200 (100) Souls or Remove 2 cards from your deck.\n[Punch (punch option chosen in cleric event)] Gain 100 (50) Souls. Become Cursed - Pride\n[Leave (punch option chosen in cleric event)] ",
             "colouredDesc": "\u001b[2;37m[Continue \u001b[0;2m(cleric event not seen yet)\u001b[2;37m] \u001b[2;32mBegin cleric event\n\u001b[2;37m[Fight \u001b[0;2m( intimidate option chosen in cleric event)\u001b[2;37m] \u001b[2;31mFight 2 centurions. \u001b[0;2mChoose: \u001b[2;32mGain 200 \u001b[2;34m(100) \u001b[2;33mSouls \u001b[0;2mor \u001b[2;32mRemove 2 cards from your deck.\n\u001b[2;37m[Punch \u001b[0;2m(punch option chosen in cleric event)\u001b[2;37m] \u001b[2;32mGain 100 \u001b[2;34m(50) \u001b[2;33mSouls. \u001b[2;31mBecome Cursed - Pride\n\u001b[2;37m[Leave \u001b[0;2m(punch option chosen in cleric event)\u001b[2;37m] ",
             "character": "",
@@ -16225,6 +16263,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:The Nest",
             "description": "[Return Statue (requires Broken Wing Statue)] Lose Broken Wing Statue. Gain Ritual Dagger+ with 20 damage and a Cultist Potion.\n[Steal] Obtain Ritual Dagger. Lose 6 HP.\n[Accept] Gain Cultist Potion.\n[Continue] ",
             "colouredDesc": "\u001b[2;37m[Return Statue \u001b[0;2m(requires Broken Wing Statue)\u001b[2;37m] \u001b[2;31mLose Broken Wing Statue. \u001b[2;32mGain \u001b[0;2mRitual Dagger+ \u001b[2;32mwith 20 damage \u001b[0;2mand a \u001b[2;32mCultist Potion.\n\u001b[2;37m[Steal\u001b[2;37m] \u001b[2;32mObtain \u001b[0;2mRitual Dagger. \u001b[2;31mLose 6 HP.\n\u001b[2;37m[Accept\u001b[2;37m] \u001b[2;32mGain Cultist Potion.\n\u001b[2;37m[Continue\u001b[2;37m] ",
             "character": "",
@@ -16236,6 +16275,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:The Colosseum",
             "description": "[Defend Title (champ only)] Fight Black Knight. Gain many rewards.\n[Challenge] Fight Arena Champions. Gain many rewards.\n[Participate] Fight Captive Hero. Gain many rewards.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Defend Title \u001b[0;2m(champ only)\u001b[2;37m] \u001b[2;31mFight \u001b[0;2mBlack Knight. \u001b[2;32mGain many rewards.\n\u001b[2;37m[Challenge\u001b[2;37m] \u001b[2;31mFight \u001b[0;2mArena Champions. \u001b[2;32mGain many rewards.\n\u001b[2;37m[Participate\u001b[2;37m] \u001b[2;31mFight \u001b[0;2mCaptive Hero. \u001b[2;32mGain many rewards.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16247,6 +16287,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Tomb of Lord Red Mask",
             "description": "[Don the Red Mask (requires red mask and bandit contract)] Upgrade Bandit Contract.\n[Bash] Lose (attack chosen at random). Obtain Red Mask.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Don the Red Mask \u001b[0;2m(requires red mask and bandit contract)\u001b[2;37m] \u001b[2;32mUpgrade Bandit Contract.\n\u001b[2;37m[Bash\u001b[2;37m] \u001b[2;31mLose (attack chosen at random). \u001b[2;32mObtain Red Mask.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16258,6 +16299,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Winding Halls",
             "description": "[Left] Explore an Event.\n[Right] Search the Treasury for a Relic.\n[Straight] Hunt down the Merchant.",
             "colouredDesc": "\u001b[2;37m[Left\u001b[2;37m] \u001b[2;32mExplore an Event.\n\u001b[2;37m[Right\u001b[2;37m] \u001b[2;32mSearch the Treasury for a Relic.\n\u001b[2;37m[Straight\u001b[2;37m] \u001b[2;32mHunt down the Merchant.",
             "character": "",
@@ -16269,6 +16311,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:The Joust",
             "description": "[Left] 50%: Lose HP equal to 30% of your max HP. 50%: Gain 200 Souls.\n[Right] 25%: Lose HP equal to 15% of your max HP. 75%: Gain 100 Souls.",
             "colouredDesc": "\u001b[2;37m[Left\u001b[2;37m] \u001b[2;31m50%: Lose HP equal to 30% of your max HP. \u001b[2;32m50%: Gain 200 Souls.\n\u001b[2;37m[Right\u001b[2;37m] \u001b[2;31m25%: Lose HP equal to 15% of your max HP. \u001b[2;32m75%: Gain 100 Souls.",
             "character": "",
@@ -16281,6 +16324,7 @@
             ],
             "mod": "downfall",
             "character": "The_bronze_automaton",
+            "id": "downfall:The_bronze_automatonDrone Factory",
             "description": "[Fight Spiker] Gain Spike as a combat reward.\n[Fight Repulsor] Gain Dazing Pulse as a combat reward.\n[Fight Exploder] Gain Explode as a combat reward.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Fight Spiker\u001b[2;37m] \u001b[2;32mGain Spike \u001b[0;2mas a combat reward.\n\u001b[2;37m[Fight Repulsor\u001b[2;37m] \u001b[2;32mGain Dazing Pulse \u001b[0;2mas a combat reward.\n\u001b[2;37m[Fight Exploder\u001b[2;37m] \u001b[2;32mGain Explode \u001b[0;2mas a combat reward.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16292,6 +16336,7 @@
             ],
             "mod": "downfall",
             "character": "The_bronze_automaton",
+            "id": "downfall:The_bronze_automatonAncient Factory",
             "description": "[Fight Donu Prototype] Gain Proto-Beam.\n[Fight Deca Prototype] Gain Proto-Shield.\n[Fight Both] Gain Both Cards.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Fight Donu Prototype\u001b[2;37m] \u001b[2;32mGain Proto-Beam.\n\u001b[2;37m[Fight Deca Prototype\u001b[2;37m] \u001b[2;32mGain Proto-Shield.\n\u001b[2;37m[Fight Both\u001b[2;37m] \u001b[2;32mGain Both Cards.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16303,6 +16348,7 @@
             ],
             "mod": "downfall",
             "character": "The_bronze_automaton",
+            "id": "downfall:The_bronze_automatonGrim Forge",
             "description": "[Craft] Gain Bottled Code. Lose 10 Max HP.\n[Reforge (requires a rare card)] Remove a Rare Card. Gain 10 Max HP and Heal to full.\n[Transmute] Remove a Card. Gain a random Card with Encode.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Craft\u001b[2;37m] \u001b[2;32mGain Bottled Code. \u001b[2;31mLose 10 Max HP.\n\u001b[2;37m[Reforge \u001b[0;2m(requires a rare card)\u001b[2;37m] \u001b[2;31mRemove \u001b[0;2ma \u001b[2;33mRare \u001b[0;2mCard. \u001b[2;32mGain 10 Max HP and Heal to full.\n\u001b[2;37m[Transmute\u001b[2;37m] \u001b[2;31mRemove \u001b[0;2ma Card. Gain a random \u001b[2;32mCard with Encode.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16314,6 +16360,7 @@
             ],
             "mod": "downfall",
             "character": "The_champ_gray",
+            "id": "downfall:The_champ_grayTome of Technique",
             "description": "[Read] Choose an Attack to gain 'trigger Skill Bonus.' Lose 5 -> 10 -> 20 HP -> Cursed - Pride\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Read\u001b[2;37m] Choose an Attack to gain \u001b[2;33m'trigger Skill Bonus.' \u001b[2;31mLose 5 -> 10 -> 20 \u001b[2;31mHP \u001b[0;2m-> \u001b[2;31mCursed - Pride\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16325,6 +16372,7 @@
             ],
             "mod": "downfall",
             "character": "The_champ_gray",
+            "id": "downfall:The_champ_grayGymnasium",
             "description": "[Cardio] Gain 10 Max HP.\n[Spar] Choose a non-Finisher card to gain 'Enter (Chosen) Stance'.\n[Lift] Gain Inner Strength.",
             "colouredDesc": "\u001b[2;37m[Cardio\u001b[2;37m] \u001b[2;32mGain 10 Max HP.\n\u001b[2;37m[Spar\u001b[2;37m] Choose a non-Finisher card to gain 'Enter (Chosen) Stance'.\n\u001b[2;37m[Lift\u001b[2;37m] \u001b[2;32mGain Inner Strength.",
             "campaign": "downfall"
@@ -16335,6 +16383,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Minor League Arena",
             "description": "[Fight Centurion & Mystic] Gain Cloak Clasp\n[Fight Gremlin Nob] Gain Champion Belt\n[Fight Slaver Duo] Gain Wrist Blade\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Fight Centurion & Mystic\u001b[2;37m] \u001b[2;32mGain Cloak Clasp\n\u001b[2;37m[Fight Gremlin Nob\u001b[2;37m] \u001b[2;32mGain Champion Belt\n\u001b[2;37m[Fight Slaver Duo\u001b[2;37m] \u001b[2;32mGain Wrist Blade\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16346,6 +16395,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Suspicious Merchant",
             "description": "[Buy] Lose 10 (30) Gold. Obtain 1 random Colorless Card.\n[Buy] Lose 50 (70) Gold. Obtain 2 random Colorless Cards.\n[Buy] Lose 90 (110) Gold. Obtain 3 random Colorless Cards.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Buy\u001b[2;37m] \u001b[2;31mLose 10 \u001b[2;34m(30) \u001b[2;31mGold. \u001b[2;32mObtain 1 random Colorless Card.\n\u001b[2;37m[Buy\u001b[2;37m] \u001b[2;31mLose 50 \u001b[2;34m(70) \u001b[2;31mGold. \u001b[2;32mObtain 2 random Colorless Cards.\n\u001b[2;37m[Buy\u001b[2;37m] \u001b[2;31mLose 90 \u001b[2;34m(110) \u001b[2;31mGold. \u001b[2;32mObtain 3 random Colorless Cards.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16358,6 +16408,7 @@
             ],
             "mod": "downfall",
             "character": "Guardian",
+            "id": "downfall:GuardianGem Mine",
             "description": "[Rob] Fight Gremlins. Gain Pick of Rhapsody.\n[Mine with Pick (have pick of rhapsody with at least 1 charge)] Gain random Gem. Lose Pick charge.\n[Dig with Claws] Gain random Gem. Lose \n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Rob\u001b[2;37m] \u001b[2;31mFight Gremlins. \u001b[2;32mGain Pick of Rhapsody.\n\u001b[2;37m[Mine with Pick \u001b[0;2m(have pick of rhapsody with at least 1 charge)\u001b[2;37m] \u001b[2;32mGain random Gem. \u001b[2;31mLose Pick charge.\n\u001b[2;37m[Dig with Claws\u001b[2;37m] \u001b[2;32mGain random Gem. \u001b[2;31mLose \n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16369,6 +16420,7 @@
             ],
             "mod": "downfall",
             "character": "Guardian",
+            "id": "downfall:GuardianQuantum Chamber",
             "description": "[Use] Gain Quantum Chamber. Become Cursed - Aged\n[Smash] Gain max hp equal to 15% (10%) of your current max HP. Become Cursed - Pain\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Use\u001b[2;37m] \u001b[2;32mGain Quantum Chamber. \u001b[2;31mBecome Cursed - Aged\n\u001b[2;37m[Smash\u001b[2;37m] \u001b[2;32mGain max hp equal to 15% \u001b[2;34m(10%) \u001b[2;32mof your current max HP. \u001b[2;31mBecome Cursed - Pain\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16380,6 +16432,7 @@
             ],
             "mod": "downfall",
             "character": "Guardian",
+            "id": "downfall:GuardianGrim Forge",
             "description": "[Dismantle (requires card with a gem installed.)] Remove Socketed Card. Gain its Gems.\n[Pry (requires card with a gem installed.)] Destroy all Gems in a Socketed Card.\n[Transmute] Remove a Card. Gain a random Gem.\n[Enhance (requires a gem and an open socket.)] Add a Gem to a Socket.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Dismantle \u001b[0;2m(requires card with a gem installed.)\u001b[2;37m] \u001b[2;31mRemove \u001b[0;2mSocketed Card. Gain its \u001b[2;32mGems.\n\u001b[2;37m[Pry \u001b[0;2m(requires card with a gem installed.)\u001b[2;37m] \u001b[2;31mDestroy \u001b[0;2mall \u001b[2;32mGems \u001b[0;2min a Socketed Card.\n\u001b[2;37m[Transmute\u001b[2;37m] \u001b[2;31mRemove \u001b[0;2ma Card. Gain a random \u001b[2;32mGem.\n\u001b[2;37m[Enhance \u001b[0;2m(requires a gem and an open socket.)\u001b[2;37m] Add a \u001b[2;32mGem \u001b[0;2mto a \u001b[2;32mSocket.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16390,6 +16443,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Wandering Specter",
             "description": "[Left Box] Obtain a Du-Vu Doll or Darkstone Periapt. Cursed Twice - Haunted.\n[Right Box] Obtain Extra Cursed Key or Extra Cursed Bell.\n[Chase Away (no blue candle)] Obtain Blue Candle. Lose 5 HP.\n[Chase Away (have blue candle)] Leave.\n[Trade for Power (choose a box)] Gain a random Rare card. Become Cursed - Random.\n[Trade for Life (choose a box)] Gain 5 Max HP. Become Cursed - Random.\n[Trade for Souls (choose a box)] Gain 100 Souls. Become Cursed - Random.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Left Box\u001b[2;37m] \u001b[2;32mObtain a Du-Vu Doll or Darkstone Periapt. \u001b[2;31mCursed Twice - Haunted.\n\u001b[2;37m[Right Box\u001b[2;37m] \u001b[2;32mObtain \u001b[2;31mExtra \u001b[2;32mCursed Key \u001b[0;2mor \u001b[2;31mExtra \u001b[2;32mCursed Bell.\n\u001b[2;37m[Chase Away \u001b[0;2m(no blue candle)\u001b[2;37m] \u001b[2;32mObtain Blue Candle. \u001b[2;31mLose 5 HP.\n\u001b[2;37m[Chase Away \u001b[0;2m(have blue candle)\u001b[2;37m] Leave.\n\u001b[2;37m[Trade for Power \u001b[0;2m(choose a box)\u001b[2;37m] \u001b[2;32mGain \u001b[0;2ma \u001b[2;32mrandom \u001b[2;33mRare \u001b[2;32mcard. \u001b[2;31mBecome Cursed - Random.\n\u001b[2;37m[Trade for Life \u001b[0;2m(choose a box)\u001b[2;37m] \u001b[2;32mGain 5 Max HP. \u001b[2;31mBecome Cursed - Random.\n\u001b[2;37m[Trade for Souls \u001b[0;2m(choose a box)\u001b[2;37m] \u001b[2;32mGain 100 Souls. \u001b[2;31mBecome Cursed - Random.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",
@@ -16402,6 +16456,7 @@
             ],
             "mod": "downfall",
             "character": "Hexa_ghost_purple",
+            "id": "downfall:Hexa_ghost_purpleSeal Chamber",
             "description": "[Offer] Lose 7 HP. Gain First Seal.\n[Offer] Lose 10 Souls. Gain Second Seal.\n[Offer] Lose (common card chosen at random). Gain Third Seal.\n[Offer] Lose (potion chosen at random). Gain Fourth Seal.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Offer\u001b[2;37m] \u001b[2;31mLose \u001b[0;2m7 HP. \u001b[2;32mGain First Seal.\n\u001b[2;37m[Offer\u001b[2;37m] \u001b[2;31mLose \u001b[0;2m10 \u001b[2;33mSouls. \u001b[2;32mGain Second Seal.\n\u001b[2;37m[Offer\u001b[2;37m] \u001b[2;31mLose \u001b[0;2m(common card chosen at random). \u001b[2;32mGain Third Seal.\n\u001b[2;37m[Offer\u001b[2;37m] \u001b[2;31mLose \u001b[0;2m(potion chosen at random). \u001b[2;32mGain Fourth Seal.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16413,6 +16468,7 @@
             ],
             "mod": "downfall",
             "character": "Hexa_ghost_purple",
+            "id": "downfall:Hexa_ghost_purpleCouncil of Ghosts",
             "description": "[Accept] Lose 50% of your Max HP. Unlock Study and Learn options.\n[Study] Lose all Strikes. Gain 3 Council's Justice.\n[Learn] Lose all Defends. Gain 3 Apparition.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Accept\u001b[2;37m] \u001b[2;31mLose 50% of your Max HP. \u001b[0;2mUnlock Study and Learn options.\n\u001b[2;37m[Study\u001b[2;37m] \u001b[2;31mLose all Strikes. \u001b[2;32mGain 3 Council's Justice.\n\u001b[2;37m[Learn\u001b[2;37m] \u001b[2;31mLose all Defends. \u001b[2;32mGain 3 Apparition.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16424,6 +16480,7 @@
             ],
             "mod": "downfall",
             "character": "Slimebound",
+            "id": "downfall:SlimeboundWorld of Goop",
             "description": "[Gather Souls] Gain 75 Souls.\n[Recruit] Lose 75 Souls. Gain Greed Ooze.",
             "colouredDesc": "\u001b[2;37m[Gather Souls\u001b[2;37m] \u001b[2;32mGain 75 Souls.\n\u001b[2;37m[Recruit\u001b[2;37m] \u001b[2;31mLose 75 Souls. \u001b[2;32mGain \u001b[2;33mGreed Ooze.",
             "campaign": "downfall"
@@ -16434,6 +16491,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:The Art of Slime War",
             "description": "[Read] Remove all Strikes. Receive 3 Upgraded Tackles.\n[Take] Obtain Consult Playbook. Trigger a trap.\n[Leave] \n[Dive (trap triggered)] Become Cursed - Icky.\n[Be Patient (trap triggered)] Take 35% (45%) of your max HP as damage.\n[Grab and Run (trap triggered)] Lose 10% (15%) of your Max HP.",
             "colouredDesc": "\u001b[2;37m[Read\u001b[2;37m] \u001b[2;32mRemove all \u001b[0;2mStrikes. \u001b[2;32mReceive 3 Upgraded \u001b[0;2mTackles.\n\u001b[2;37m[Take\u001b[2;37m] \u001b[2;32mObtain Consult Playbook. \u001b[2;31mTrigger a trap.\n\u001b[2;37m[Leave\u001b[2;37m] \n\u001b[2;37m[Dive \u001b[0;2m(trap triggered)\u001b[2;37m] \u001b[2;31mBecome Cursed - Icky.\n\u001b[2;37m[Be Patient \u001b[0;2m(trap triggered)\u001b[2;37m] \u001b[2;31mTake 35% \u001b[2;34m(45%) \u001b[2;31mof your max HP as damage.\n\u001b[2;37m[Grab and Run \u001b[0;2m(trap triggered)\u001b[2;37m] \u001b[2;31mLose 10% \u001b[2;34m(15%) \u001b[2;31mof your Max HP.",
             "character": "",
@@ -16446,6 +16504,7 @@
             ],
             "mod": "downfall",
             "character": "Slimebound",
+            "id": "downfall:SlimeboundDarklings",
             "description": "[Fight] Fight Darklings. Gain card reward.\n[Recruit (requires a rare card)] Lose (rare card chosen at random) Obtain Darklings.",
             "colouredDesc": "\u001b[2;37m[Fight\u001b[2;37m] \u001b[2;31mFight Darklings. \u001b[2;32mGain card reward.\n\u001b[2;37m[Recruit \u001b[0;2m(requires a rare card)\u001b[2;37m] \u001b[2;31mLose \u001b[0;2m(rare card chosen at random) \u001b[2;32mObtain Darklings.",
             "campaign": "downfall"
@@ -16457,6 +16516,7 @@
             ],
             "mod": "downfall",
             "character": "Snecko_cyan",
+            "id": "downfall:Snecko_cyanMystical Octahedron",
             "description": "[Shatter] Lose 10 (15) HP. Gain 5 Unidentified Cards\n[Take (requires a card that uses a randomly chosen number)] Gain Mystical Octahedron. Cursed - Pain.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Shatter\u001b[2;37m] \u001b[2;31mLose 10 \u001b[2;34m(15) \u001b[2;31mHP. \u001b[2;32mGain 5 Unidentified Cards\n\u001b[2;37m[Take \u001b[0;2m(requires a card that uses a randomly chosen number)\u001b[2;37m] \u001b[2;32mGain Mystical Octahedron. \u001b[2;31mCursed - Pain.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "campaign": "downfall"
@@ -16467,6 +16527,7 @@
                 "?"
             ],
             "mod": "downfall",
+            "id": "downfall:Suspicious House",
             "description": "[Rescue] Gain Young Snecko. Become Cursed - Bewildered.\n[Leave] ",
             "colouredDesc": "\u001b[2;37m[Rescue\u001b[2;37m] \u001b[2;32mGain Young Snecko. \u001b[2;31mBecome Cursed - Bewildered.\n\u001b[2;37m[Leave\u001b[2;37m] ",
             "character": "",

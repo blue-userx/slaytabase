@@ -97,6 +97,7 @@ function useExtraData(data, dataToUse) {
     
     for (let i in data.bosss) {
         let boss = data.bosss[i];
+        boss.id = 'downfall:'+boss.name+boss.act;
         boss.name = boss.name+' '+boss.act;
         boss.mod = 'downfall';
         boss.description = `Act ${boss.act} Boss\n\n**${boss.buff[0]}** - ${boss.buff[1]}\n\n**Cards**: ${boss.cards.join(', ')}\n\n**Relics**: ${boss.relics.join(', ')}${boss.hasOwnProperty('customCards') ? `\n\n**Unique Cards**:\n${boss.customCards.map(c => `${c[0]} - ${c[1]}`).join('\n')}` : ''}`;
@@ -105,6 +106,8 @@ function useExtraData(data, dataToUse) {
     
     for (let i in data.events) {
         let event = data.events[i];
+        if (event.mod == 'downfall')
+            event.id = "downfall:"+(event.hasOwnProperty('character') ? event.character : '')+event.name;
         let desc = event.options.map(o =>`w/[${o[0]}${o[1] == null ? '' : ` n/(${o[1]})`}w/] ${o[2]}`).join('\n');
         event.description = desc.replaceAll('w/', '').replaceAll('g/', '').replaceAll('r/', '').replaceAll('n/', '').replaceAll('a/', '').replaceAll('y/', '');
         event.colouredDesc = desc.replaceAll('w/', '[2;37m').replaceAll('g/', '[2;32m').replaceAll('r/', '[2;31m').replaceAll('n/', '[0;2m').replaceAll('a/', '[2;34m').replaceAll('y/', '[2;33m');
