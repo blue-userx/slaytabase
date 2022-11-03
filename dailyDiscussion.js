@@ -96,7 +96,7 @@ async function startThread() {
         
         data.options = voteItems;
         data.votes = voteItems.map(v => []);
-        data.next += 1;
+        data.next += 24 * 60 * 60 * 1000;
         data.voteChannel = thread.id;
         data.lastVote = (voteMessage == undefined ? prevMessage : voteMessage).id;
         data.past.push(itemId);
