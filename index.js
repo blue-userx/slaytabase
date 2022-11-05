@@ -33,7 +33,7 @@ bot.once('ready', async () => {
     await bot.users.fetch().catch(e => {});
     await bot.channels.fetch().catch(e => {});
     bot.channels.cache.each(channel => {
-        if (channel.type == 'GUILD_TEXT')
+        if (channel.hasOwnProperty('messages'))
             channel.messages.fetch().catch(e => {});
     });
     startDailyDiscussion();
