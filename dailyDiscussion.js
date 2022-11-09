@@ -61,7 +61,7 @@ async function startThread() {
             .filter(item => !data.past.includes(item));
 
         let voteItems = [];
-        for (let i = 0; i < Math.min(possibleItems.length, 5); i++) {
+        for (let i = 0; i < Math.min(possibleItems.length, 3); i++) {
             let possVote;
             do {
                 possVote = possibleItems[Math.floor(Math.random() * possibleItems.length)];
@@ -71,14 +71,12 @@ async function startThread() {
 
         let prevMessage = await thread.send(`Previous Daily Discussion: <#${oldThread.id}>`);
         let voteMessage;
-        if (voteItems.length > 0) {
-            voteMessage = await thread.send({
-                content: `Vote for tomorrow's Daily Discussion here!`,
-                embeds: await Promise.all(voteItems.map(v => embed({...fn.find(v).item, score: 1, query: fn.unPunctuate(v)}))),
-                components: [new ActionRowBuilder().addComponents(voteItems.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(itemTitle(fn.find(v).item)).setStyle(ButtonStyle.Secondary)))]
-            });
-            voteMessage.pin().catch(e => {});
-        }
+        voteMessage = await thread.send({
+            content: voteItems.length > 0 ? `Vote for tomorrow's Daily Discussion here!` : 'No items left to vote on!',
+            embeds: await Promise.all(voteItems.map(v => embed({...fn.find(v).item, score: 1, query: fn.unPunctuate(v)}))),
+            components: [new ActionRowBuilder().addComponents(voteItems.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(itemTitle(fn.find(v).item)).setStyle(ButtonStyle.Secondary)))]
+        });
+        voteMessage.pin().catch(e => {});
         
         let itemMessage = await thread.send({embeds: [
             await commands.prefix['i~'](null, itemId),
