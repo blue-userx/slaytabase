@@ -519,7 +519,7 @@ Whenever you play a Skill, [[Exhaust]] it.
 |Rare
 |[[Skill]]
 |1
-|This turn, your next (2) Attack(s) is (are) played twice.
+|This turn, your next (!M!) Attack(s) is (are) played twice.
 |-
 |[[Exhume]]
 |[[File:|thumb|289x289px]]

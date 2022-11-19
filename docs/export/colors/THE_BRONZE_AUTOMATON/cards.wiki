@@ -70,7 +70,7 @@ The option not chosen is [[bronze:Encoded]].
 |Common
 |[[Attack]]
 |1
-|Gain 1 (2) Wound(s).
+|Gain 1 (!M!) Wound(s).
 [[bronze:Cycle]] each [[Status]], dealing 7 damage for each.
 |-
 |[[Buggy Mess]]

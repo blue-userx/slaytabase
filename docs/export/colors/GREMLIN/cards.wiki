@@ -291,7 +291,7 @@ Gain a (an [[Upgraded]]) Gremlin Offensive.
 |Uncommon
 |[[Attack]]
 |1
-|(Gain 3 [[Temporary_HP]].)
+|(Gain !M! [[Temporary_HP]].)
  Deal damage equal to your current [[Block]] and [[Temporary_HP]].
 |-
 |[[Heckle]]
@@ -330,7 +330,7 @@ This attack does not consume [[gremlin:Wiz]].
 |Uncommon
 |[[Power]]
 |1
-|(Gain 1 [[Artifact]].)
+|(Gain !M! [[Artifact]].)
  Every time you play 7 attacks, gain 1 [[Artifact]].
 |-
 |[[Mockery]]
@@ -387,7 +387,7 @@ Wards grant 2 (3) additional [[Block]].
 |Uncommon
 |[[Skill]]
 |2
-|(Gain 5 [[Block]].)
+|(Gain !B! [[Block]].)
  Double your [[Strength]].
 [[Exhaust]].
 |-

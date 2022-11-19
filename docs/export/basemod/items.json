@@ -1,12 +1,12 @@
 {
   "mod": {
     "name": "BaseMod",
-    "version": "5.44.1",
+    "version": "5.47.0",
     "authors": ["kiooeht","test447"],
-    "credits": "t-larson: Original creator of BaseMod.\nContributors: test447, Haashi, kiooeht, Blank The Evil, robojumper, FlipskiZ, DemoXin, Skrelpoid, kobting, twanvl, Moocowsgomoo, JohnnyDevo, MichaelMayhem, admiralbolt, Celicath, Reina, fiiiiilth, Rin Camelia, JohnnyBazooka89, Alchyr, Seeonee, bugsniper, alexdriedger, Raz, erasels, LordAddy, NotInTheFace, Vex, codewarrior0, EricB, Mistress Alison, herbix, modargo, akdream",
+    "credits": "t-larson: Original creator of BaseMod.\nContributors: test447, Haashi, kiooeht, Blank The Evil, robojumper, FlipskiZ, DemoXin, Skrelpoid, kobting, twanvl, Moocowsgomoo, JohnnyDevo, MichaelMayhem, admiralbolt, Celicath, Reina, fiiiiilth, Rin Camelia, JohnnyBazooka89, Alchyr, Seeonee, bugsniper, alexdriedger, Raz, erasels, LordAddy, NotInTheFace, Vex, codewarrior0, EricB, Mistress Alison, herbix, modargo, akdream, Pandemonium, Somdy",
     "description": "Unofficial modding API for Slay the Spire. Also a Dev Console.",
-    "mts_version": "3.22.0",
-    "sts_version": "03-07-2022",
+    "mts_version": "3.30.0",
+    "sts_version": "10-04-2022",
     "dependencies": [],
     "optional_dependencies": []
   },

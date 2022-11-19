@@ -23179,6 +23179,13 @@
       "mod": ""
     },
     {
+      "id": "champ:CounterPotion",
+      "name": "Brew of Sharpness",
+      "rarity": "Common",
+      "description": "Gain 25 Counter.",
+      "mod": "Downfall"
+    },
+    {
       "id": "ColorlessPotion",
       "name": "Colorless Potion",
       "rarity": "Common",
@@ -23256,6 +23263,20 @@
       "mod": "Downfall"
     },
     {
+      "id": "hexamod:SoulburnPotion",
+      "name": "Molotov",
+      "rarity": "Common",
+      "description": "Apply 30 Soulburn.",
+      "mod": "Downfall"
+    },
+    {
+      "id": "gremlin:WizPotion",
+      "name": "Pizazz Potion",
+      "rarity": "Common",
+      "description": "Gain 10 Vigor.",
+      "mod": "Downfall"
+    },
+    {
       "id": "Poison Potion",
       "name": "Poison Potion",
       "rarity": "Common",
@@ -23289,6 +23310,13 @@
       "rarity": "Common",
       "description": "Gain 5 Dexterity. At the end of your turn, lose 5 Dexterity.",
       "mod": ""
+    },
+    {
+      "id": "sneckomod:MuddlingPotion",
+      "name": "Spiked Energy Drink",
+      "rarity": "Common",
+      "description": "Muddle the 2 highest-cost cards in your hand. Cards Muddled this way cannot cost 3.",
+      "mod": "Downfall"
     },
     {
       "id": "champ:OpenerPotion",
@@ -23347,10 +23375,24 @@
       "mod": ""
     },
     {
+      "id": "Guardian:BlockOnCardUsePotion",
+      "name": "Armorer's Tincture",
+      "rarity": "Uncommon",
+      "description": "Gain 4 Block each time you play a card this turn.",
+      "mod": "Downfall"
+    },
+    {
       "id": "hermit:BlackBile",
       "name": "Black Bile",
       "rarity": "Uncommon",
       "description": "Apply 6 Bruise.",
+      "mod": "Downfall"
+    },
+    {
+      "id": "expansioncontent:BossPotion",
+      "name": "Boss Potion",
+      "rarity": "Uncommon",
+      "description": "Choose 1 of 3 random Boss cards to add to your hand, it costs 0 this turn.",
       "mod": "Downfall"
     },
     {
@@ -23473,6 +23515,13 @@
       "mod": ""
     },
     {
+      "id": "bronze:BurnAndBuffPotion",
+      "name": "Vexing Draught",
+      "rarity": "Uncommon",
+      "description": "Gain 2 Strength and 2 Dexterity.\nAdd two Burn+ cards into your discard pile.",
+      "mod": "Downfall"
+    },
+    {
       "id": "Ambrosia",
       "name": "Ambrosia",
       "rarity": "Rare",
@@ -23568,6 +23617,13 @@
       "name": "Liquid Void",
       "rarity": "Rare",
       "description": "Put 1 card from your exhaust pile into your hand. It costs 0 this turn.",
+      "mod": "Downfall"
+    },
+    {
+      "id": "Slimebound:ThreeZeroPotion",
+      "name": "Ooze-Infused Drink",
+      "rarity": "Rare",
+      "description": "Add 4 random 0-cost cards to your hand.",
       "mod": "Downfall"
     },
     {

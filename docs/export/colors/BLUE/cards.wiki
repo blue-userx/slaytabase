@@ -343,7 +343,7 @@ Gain 12 (16) [[Block]].
 |Uncommon
 |[[Power]]
 |1
-|At the start of your turn, trigger the passive ability of your next Orb (2 times).
+|At the start of your turn, trigger the passive ability of your next Orb (!M! times).
 |-
 |[[Melter]]
 |[[File:|thumb|289x289px]]
@@ -468,7 +468,7 @@ Put all cost 0 cards from your discard pile into your hand.
 |Rare
 |[[Skill]]
 |1
-|This turn, your next (2) Power card(s) is (are) played twice.
+|This turn, your next (!M!) Power card(s) is (are) played twice.
 |-
 |[[Biased Cognition]]
 |[[File:|thumb|289x289px]]
@@ -483,7 +483,7 @@ At the start of your turn, lose 1 [[Focus]].
 |Rare
 |[[Power]]
 |2
-|Prevent the next (2) time(s) you would lose HP.
+|Prevent the next (!M!) time(s) you would lose HP.
 |-
 |[[Core Surge]]
 |[[File:|thumb|289x289px]]

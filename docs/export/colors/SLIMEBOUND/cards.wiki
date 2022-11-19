@@ -302,7 +302,7 @@ Take 3 damage.
 |Uncommon
 |[[Power]]
 |1
-|The first (2) card(s) you play each turn that targets enemies also [[slimeboundmod:Commands]] ([[slimeboundmod:Command]]).
+|The first (!M!) card(s) you play each turn that targets enemies also [[slimeboundmod:Commands]] ([[slimeboundmod:Command]]).
 |-
 |[[Level Up]]
 |[[File:|thumb|289x289px]]

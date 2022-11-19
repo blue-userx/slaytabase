@@ -494,7 +494,7 @@ Draw 2 cards.
 |Rare
 |[[Skill]]
 |1
-|This turn, your next (2) Skill(s) is (are) played twice.
+|This turn, your next (!M!) Skill(s) is (are) played twice.
 |-
 |[[Corpse Explosion]]
 |[[File:|thumb|289x289px]]
