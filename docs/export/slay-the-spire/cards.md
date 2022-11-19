@@ -65,7 +65,7 @@
 | Brutality | ![](small-card-images/Red-Brutality.png) | ![](small-card-images/Red-BrutalityPlus.png) | Rare | Power | 0 | (Innate.)  At the start of your turn, lose 1 HP and draw 1 card. |
 | Corruption | ![](small-card-images/Red-Corruption.png) | ![](small-card-images/Red-CorruptionPlus.png) | Rare | Power | 3 (2) | Skills cost 0. Whenever you play a Skill, Exhaust it. |
 | Demon Form | ![](small-card-images/Red-DemonForm.png) | ![](small-card-images/Red-DemonFormPlus.png) | Rare | Power | 3 | At the start of your turn, gain 2 (3) Strength. |
-| Double Tap | ![](small-card-images/Red-DoubleTap.png) | ![](small-card-images/Red-DoubleTapPlus.png) | Rare | Skill | 1 | This turn, your next (2) Attack(s) is (are) played twice. |
+| Double Tap | ![](small-card-images/Red-DoubleTap.png) | ![](small-card-images/Red-DoubleTapPlus.png) | Rare | Skill | 1 | This turn, your next (!M!) Attack(s) is (are) played twice. |
 | Exhume | ![](small-card-images/Red-Exhume.png) | ![](small-card-images/Red-ExhumePlus.png) | Rare | Skill | 1 (0) | Put a card from your exhaust pile into your hand. Exhaust. |
 | Feed | ![](small-card-images/Red-Feed.png) | ![](small-card-images/Red-FeedPlus.png) | Rare | Attack | 1 | Deal 10 (12) damage. If Fatal, raise your Max HP by 3 (4). Exhaust. |
 | Fiend Fire | ![](small-card-images/Red-FiendFire.png) | ![](small-card-images/Red-FiendFirePlus.png) | Rare | Attack | 2 | Exhaust your hand. Deal 7 (10) damage for each card Exhausted. Exhaust. |
@@ -136,7 +136,7 @@
 | After Image | ![](small-card-images/Green-AfterImage.png) | ![](small-card-images/Green-AfterImagePlus.png) | Rare | Power | 1 | (Innate.)  Whenever you play a card, gain 1 Block. |
 | Alchemize | ![](small-card-images/Green-Alchemize.png) | ![](small-card-images/Green-AlchemizePlus.png) | Rare | Skill | 1 (0) | Obtain a random potion. Exhaust. |
 | Bullet Time | ![](small-card-images/Green-BulletTime.png) | ![](small-card-images/Green-BulletTimePlus.png) | Rare | Skill | 3 (2) | You cannot draw additional cards this turn. Reduce the cost of all cards in your hand to 0 this turn. |
-| Burst | ![](small-card-images/Green-Burst.png) | ![](small-card-images/Green-BurstPlus.png) | Rare | Skill | 1 | This turn, your next (2) Skill(s) is (are) played twice. |
+| Burst | ![](small-card-images/Green-Burst.png) | ![](small-card-images/Green-BurstPlus.png) | Rare | Skill | 1 | This turn, your next (!M!) Skill(s) is (are) played twice. |
 | Corpse Explosion | ![](small-card-images/Green-CorpseExplosion.png) | ![](small-card-images/Green-CorpseExplosionPlus.png) | Rare | Skill | 2 | Apply 6 (9) Poison. When the enemy dies, deal damage equal to its Max HP to ALL enemies. |
 | Die Die Die | ![](small-card-images/Green-DieDieDie.png) | ![](small-card-images/Green-DieDieDiePlus.png) | Rare | Attack | 1 | Deal 13 (17) damage to ALL enemies. Exhaust. |
 | Doppelganger | ![](small-card-images/Green-Doppelganger.png) | ![](small-card-images/Green-DoppelgangerPlus.png) | Rare | Skill | X | Next turn, draw X (X+1) cards and gain X (X+1) [G]. Exhaust. |
@@ -193,7 +193,7 @@
 | Glacier | ![](small-card-images/Blue-Glacier.png) | ![](small-card-images/Blue-GlacierPlus.png) | Uncommon | Skill | 2 | Gain 7 (10) Block. Channel 2 Frost. |
 | Heatsinks | ![](small-card-images/Blue-Heatsinks.png) | ![](small-card-images/Blue-HeatsinksPlus.png) | Uncommon | Power | 1 | Whenever you play a Power card, draw 1 (2) card(s). |
 | Hello World | ![](small-card-images/Blue-HelloWorld.png) | ![](small-card-images/Blue-HelloWorldPlus.png) | Uncommon | Power | 1 | (Innate.)  At the start of your turn, add a random Common card into your hand. |
-| Loop | ![](small-card-images/Blue-Loop.png) | ![](small-card-images/Blue-LoopPlus.png) | Uncommon | Power | 1 | At the start of your turn, trigger the passive ability of your next Orb (2 times). |
+| Loop | ![](small-card-images/Blue-Loop.png) | ![](small-card-images/Blue-LoopPlus.png) | Uncommon | Power | 1 | At the start of your turn, trigger the passive ability of your next Orb (!M! times). |
 | Melter | ![](small-card-images/Blue-Melter.png) | ![](small-card-images/Blue-MelterPlus.png) | Uncommon | Attack | 1 | Remove all Block from the enemy. Deal 10 (14) damage. |
 | Overclock | ![](small-card-images/Blue-Overclock.png) | ![](small-card-images/Blue-OverclockPlus.png) | Uncommon | Skill | 0 | Draw 2 (3) cards. Add a Burn into your discard pile. |
 | Recycle | ![](small-card-images/Blue-Recycle.png) | ![](small-card-images/Blue-RecyclePlus.png) | Uncommon | Skill | 1 (0) | Exhaust a card. Gain [B] equal to its cost. |
@@ -209,9 +209,9 @@
 | Tempest | ![](small-card-images/Blue-Tempest.png) | ![](small-card-images/Blue-TempestPlus.png) | Uncommon | Skill | X | Channel X (X+1) Lightning. Exhaust. |
 | White Noise | ![](small-card-images/Blue-WhiteNoise.png) | ![](small-card-images/Blue-WhiteNoisePlus.png) | Uncommon | Skill | 1 (0) | Add a random Power card into your hand. It costs 0 this turn. Exhaust. |
 | All for One | ![](small-card-images/Blue-AllforOne.png) | ![](small-card-images/Blue-AllforOnePlus.png) | Rare | Attack | 2 | Deal 10 (14) damage. Put all cost 0 cards from your discard pile into your hand. |
-| Amplify | ![](small-card-images/Blue-Amplify.png) | ![](small-card-images/Blue-AmplifyPlus.png) | Rare | Skill | 1 | This turn, your next (2) Power card(s) is (are) played twice. |
+| Amplify | ![](small-card-images/Blue-Amplify.png) | ![](small-card-images/Blue-AmplifyPlus.png) | Rare | Skill | 1 | This turn, your next (!M!) Power card(s) is (are) played twice. |
 | Biased Cognition | ![](small-card-images/Blue-BiasedCognition.png) | ![](small-card-images/Blue-BiasedCognitionPlus.png) | Rare | Power | 1 | Gain 4 (5) Focus. At the start of your turn, lose 1 Focus. |
-| Buffer | ![](small-card-images/Blue-Buffer.png) | ![](small-card-images/Blue-BufferPlus.png) | Rare | Power | 2 | Prevent the next (2) time(s) you would lose HP. |
+| Buffer | ![](small-card-images/Blue-Buffer.png) | ![](small-card-images/Blue-BufferPlus.png) | Rare | Power | 2 | Prevent the next (!M!) time(s) you would lose HP. |
 | Core Surge | ![](small-card-images/Blue-CoreSurge.png) | ![](small-card-images/Blue-CoreSurgePlus.png) | Rare | Attack | 1 | Deal 11 (15) damage. Gain 1 Artifact. Exhaust. |
 | Creative AI | ![](small-card-images/Blue-CreativeAI.png) | ![](small-card-images/Blue-CreativeAIPlus.png) | Rare | Power | 3 (2) | At the start of your turn, add a random Power card into your hand. |
 | Echo Form | ![](small-card-images/Blue-EchoForm.png) | ![](small-card-images/Blue-EchoFormPlus.png) | Rare | Power | 3 | Ethereal. (not Ethereal.) The first card you play each turn is played twice. |

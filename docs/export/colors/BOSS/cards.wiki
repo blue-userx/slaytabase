@@ -65,7 +65,7 @@ If you already had [[expansioncontent:Invincible]], it lasts another turn instea
 |2
 |Remove all Debuffs.
 Gain 1 [[Strength]].
-If you are below half HP, Gain (Heal 10 and gain) 2 [[Strength]].
+If you are below half HP, Gain (Heal !M! and gain) 2 [[Strength]].
 |-
 |[[Prepare Crush]]
 |[[File:|thumb|289x289px]]

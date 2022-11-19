@@ -370,7 +370,7 @@ Gain 1 [[Intangible]].
 |Uncommon
 |[[Skill]]
 |0
-|[[expansioncontent:Exhume]] an (2) Ethereal card(s).
+|[[expansioncontent:Exhume]] an (!M!) Ethereal card(s).
 [[Exhaust]].
 |-
 |[[Power from Beyond]]
