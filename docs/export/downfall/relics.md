@@ -9,6 +9,7 @@
 | ![](relics/sneckomod-SneckoSoul.png) | Snecko Soul | Starter | Snecko_cyan | The first time you play an #ysneckomod:Offclass card in a combat, gain [E] and draw a card. | 0...3...2...2...1 |
 | ![](relics/hexamod-SpiritBrand.png) | Spirit Brand | Starter | Hexa_ghost_purple | The first time you #yIgnite a Ghostflame each turn, gain #b4 #yBlock. | A bound protector. |
 | ![](relics/Guardian-DefensiveModeMoreBlock.png) | Baalor's Lordly Plate | Common | Guardian | Whenever you #yguardianmod:Brace, #yBrace 1 more. | One can never have enough armor. |
+| ![](relics/hermit-BlackPowder.png) | Black Powder | Common | Hermit_yellow | At the end of your turn, deal #b2 damage to ALL enemies for each #yhermit:Dead_On effect triggered. | Handle with care. |
 | ![](relics/sneckomod-BlankCard.png) | Blank Card | Common |  | At the start of each combat, add an #ygremlin:Echo of a random card from your deck to your hand. It costs #b0 . | Card Mimic. |
 | ![](relics/hermit-BrassTacks.png) | Brass Tacks | Common |  | Start each combat with #b2 #yMetallicize. | The luster on these tacks never seems to fade. |
 | ![](relics/bronze-BronzeIdol.png) | Bronze Idol | Common |  | #yStatus cards may now be played for useful effects. | An ancient, weaponised antivirus - who knows who made it, and why? |
@@ -20,7 +21,6 @@
 | ![](relics/sneckomod-LoadedDie.png) | Loaded Die | Common | Snecko_cyan | Cards that choose random numbers have +1 minimum. | Cheese-stuffed. |
 | ![](relics/Guardian-PickAxe.png) | Pick of Rhapsody | Common | Guardian | You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites (up to #b3 times). | With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them. |
 | ![](relics/bronze-ProtectiveGoggles.png) | Protective Goggles | Common | The_bronze_automaton | If you end your turn with no #yEncoded cards, gain #b4 #yBlock. | Look closely. |
-| ![](relics/hermit-RyeStalk.png) | Rye Stalk | Common | Hermit_yellow | At the end of your turn, ALL enemies lose HP equal to their #yhermit:Bruise. | Still in mint condition, despite being chewed on for so long. |
 | ![](relics/sneckomod-SneckoCommon.png) | Seal of Approval | Common | Snecko_cyan | Upon pickup, choose #b1 of #b3 #yUnidentified #yCharacter cards to add to your deck. All future #yUnidentified #yCharacter cards found will be of this character. | I'm The Ironclad and this is my favorite Relic in the Spire. -Merchant Advertising Pamphlet |
 | ![](relics/bronze-SilverBullet.png) | Silver Bullet | Common | The_bronze_automaton | At the start of each combat, add a copy of #yPiercing #yShot to your hand. It costs #b0 . | Spirewolves are long gone. |
 | ![](relics/hexamod-MatchstickCase.png) | Sneaky Teakwood Match | Common | Hexa_ghost_purple | At the start of each combat, #yhexamod:Ignite the current Ghostflame and #yhexamod:Advance. | Lights on any surface! |
@@ -44,7 +44,6 @@
 | ![](relics/sneckomod-SuperSneckoEye.png) | Super Snecko Eye | Uncommon |  | Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0. | 0121012 |
 | ![](relics/Gremlin-WizardStaff.png) | Wizard Staff | Uncommon | Gremlin | #yWiz deals #b7 additional damage. | The pride and joy of every Gremlin Wizard, this staff is a frequent target of theft by rival mobs. |
 | ![](relics/Gremlin-WoundPoker.png) | Wound Poker | Uncommon | Gremlin | At the end of each turn, deal #b6 damage to each #yWeakened enemy. | Does it hurt when I do this?. |
-| ![](relics/hermit-BlackPowder.png) | Black Powder | Rare | Hermit_yellow | At the end of your turn, deal #b2 damage to ALL enemies for each #yhermit:Dead_On effect triggered. | Handle with care. |
 | ![](relics/hermit-CharredGlove.png) | Charred Glove | Rare | Hermit_yellow | Whenever you draw a #rCurse, your next attack deals #b3 more damage. | Parts of the glove still glow with otherworldly cinders. |
 | ![](relics/champ-DeflectingBracers.png) | Deflecting Bracers | Rare |  | At the start of your turn, gain #ychamp:Counter equal to half the amount of expired #yBlock. | If you thought blocking was good then... |
 | ![](relics/champ-DuelingGlove.png) | Dueling Glove | Rare |  | After using a single-target #yAttack, if the target has no #yVulnerable, apply #b1 #yVulnerable. | Count from ten... |
@@ -57,6 +56,7 @@
 | ![](relics/bronze-Mallet.png) | Mallet | Rare | The_bronze_automaton | At the start of each combat, add #b2 copies of #yFine #yTuning+ to your hand. | That's it! I'm gettin me mallet! |
 | ![](relics/Gremlin-PricklyShields.png) | Prickly Shields | Rare |  | Whenever you gain #yBlock, deal #b2 damage to a random enemy. | Gremlins use whatever scraps they can find as weapons or armor. Some serve as both. |
 | ![](relics/hermit-RedScarf.png) | Red Scarf | Rare | Hermit_yellow | Whenever you apply a debuff to an enemy, gain #b2 #yBlock. | It's warm and fuzzy. |
+| ![](relics/hermit-RyeStalk.png) | Rye Stalk | Rare | Hermit_yellow | At the start of each combat, all enemies lose #b2 #yStrength. | Still in mint condition, despite being chewed on for so long. |
 | ![](relics/Guardian-SackOfGems.png) | Sack of Gems | Rare | Guardian | Upon pickup, add #b5 random #yguardianmod:Gems to your deck. | Ooh... shiny! |
 | ![](relics/champ-SignatureFinisher.png) | Signature Finisher | Rare | The_champ_gray | Upon pickup, choose a #yFinisher. This #yFinisher costs #b0, can be used without a #yStance, and never causes your #yStance to be exited. | And now, it's time for my ULTIMATE MOVE! |
 | ![](relics/hexamod-Sixitude.png) | Six-Point Brand | Rare |  | Whenever you play #b6 cards, deal #b6 damage to a random enemy. | Fire, fire, fire, fire, fire, FIRE! |

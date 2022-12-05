@@ -6,7 +6,6 @@
 | ![](slay-the-spire/potions/BloodPotion.png) | Blood Potion | Common | Heal for 20% of your Max HP. |
 | ![](downfall/potions/BottledDupe.png) | Bottled Dupe | Common | Swap to a random Gremlin. |
 | ![](slay-the-spire/potions/BottledMiracle.png) | Bottled Miracle | Common | Add 2 Miracles to your hand. |
-| ![](downfall/potions/BrewofSharpness.png) | Brew of Sharpness | Common | Gain 25 Counter. |
 | ![](slay-the-spire/potions/ColorlessPotion.png) | Colorless Potion | Common | Choose 1 of 3 random Colorless cards to add to your hand, it costs 0 this turn. |
 | ![](slay-the-spire/potions/DexterityPotion.png) | Dexterity Potion | Common | Gain 2 Dexterity. |
 | ![](downfall/potions/Ecto-Cooler.png) | Ecto-Cooler | Common | Choose 1 of 3 random Ethereal cards from any class to gain. It costs 0 this turn. |
@@ -18,14 +17,11 @@
 | ![](slay-the-spire/potions/FocusPotion.png) | Focus Potion | Common | Gain 2 Focus. |
 | ![](downfall/potions/JarofSlime.png) | Jar of Slime | Common | Apply 15 Goop. |
 | ![](downfall/potions/MachineOil.png) | Machine Oil | Common | Increase all numbers on Encoded cards by 1 except cost. |
-| ![](downfall/potions/Molotov.png) | Molotov | Common | Apply 30 Soulburn. |
-| ![](downfall/potions/PizazzPotion.png) | Pizazz Potion | Common | Gain 10 Vigor. |
 | ![](slay-the-spire/potions/PoisonPotion.png) | Poison Potion | Common | Apply 6 Poison. |
 | ![](downfall/potions/PotentiallyPotentPotion.png) | Potentially Potent Potion | Common | Deal 1-40 damage. |
 | ![](slay-the-spire/potions/PowerPotion.png) | Power Potion | Common | Choose 1 of 3 random Power cards to add to your hand, it costs 0 this turn. |
 | ![](slay-the-spire/potions/SkillPotion.png) | Skill Potion | Common | Choose 1 of 3 random Skill cards to add to your hand, it costs 0 this turn. |
 | ![](slay-the-spire/potions/SpeedPotion.png) | Speed Potion | Common | Gain 5 Dexterity. At the end of your turn, lose 5 Dexterity. |
-| ![](downfall/potions/SpikedEnergyDrink.png) | Spiked Energy Drink | Common | Muddle the 2 highest-cost cards in your hand. Cards Muddled this way cannot cost 3. |
 | ![](downfall/potions/StrategyPotion.png) | Strategy Potion | Common | Choose 1 of 2 cards which Enter a Stance to gain (one for each Stance). It costs 0 this turn. |
 | ![](slay-the-spire/potions/StrengthPotion.png) | Strength Potion | Common | Gain 2 Strength. |
 | ![](slay-the-spire/potions/SwiftPotion.png) | Swift Potion | Common | Draw 3 cards. |
@@ -34,9 +30,7 @@
 | ![](slay-the-spire/potions/WeakPotion.png) | Weak Potion | Common | Apply 3 Weak. |
 | ![](downfall/potions/AlchyricalElixir.png) | Alchyrical Elixir | Uncommon | Remove all Compile Error effects from the next Function you create, it costs 0 until played. |
 | ![](slay-the-spire/potions/AncientPotion.png) | Ancient Potion | Uncommon | Gain 1 Artifact. |
-| ![](downfall/potions/ArmorersTincture.png) | Armorer's Tincture | Uncommon | Gain 4 Block each time you play a card this turn. |
 | ![](downfall/potions/BlackBile.png) | Black Bile | Uncommon | Apply 6 Bruise. |
-| ![](downfall/potions/BossPotion.png) | Boss Potion | Uncommon | Choose 1 of 3 random Boss cards to add to your hand, it costs 0 this turn. |
 | ![](downfall/potions/BottledTechnique.png) | Bottled Technique | Uncommon | Trigger your current Stance's Skill Bonus 5 times. |
 | ![](downfall/potions/CombustiveFluid.png) | Combustive Fluid | Uncommon | Ignite the current Ghostflame 3 times. |
 | ![](slay-the-spire/potions/CunningPotion.png) | Cunning Potion | Uncommon | Add 3 Shiv+ to your hand. |
@@ -54,7 +48,6 @@
 | ![](slay-the-spire/potions/RegenPotion.png) | Regen Potion | Uncommon | Gain 5 Regen. |
 | ![](downfall/potions/SlimyElixir.png) | Slimy Elixir | Uncommon | Whenever an effect applies Goop this combat, apply 2 more. |
 | ![](slay-the-spire/potions/StancePotion.png) | Stance Potion | Uncommon | Enter Calm or Wrath. |
-| ![](downfall/potions/VexingDraught.png) | Vexing Draught | Uncommon | Gain 2 Strength and 2 Dexterity. Add two Burn+ cards into your discard pile. |
 | ![](slay-the-spire/potions/Ambrosia.png) | Ambrosia | Rare | Enter Divinity Stance. |
 | ![](downfall/potions/ArmyinaBottle.png) | Army in a Bottle | Rare | Spawn 3 random Slimes (Normal or Specialist). |
 | ![](slay-the-spire/potions/CultistPotion.png) | Cultist Potion | Rare | Gain 1 Ritual. |
@@ -69,7 +62,6 @@
 | ![](downfall/potions/KiosCleverConcoction.png) | Kio's Clever Concoction | Rare | Choose 1 of 3 random cards to Encode, repeat until you create a Function. |
 | ![](downfall/potions/LiquidLuck.png) | Liquid Luck | Rare | Gain Lucky for 1 turn. |
 | ![](downfall/potions/LiquidVoid.png) | Liquid Void | Rare | Put 1 card from your exhaust pile into your hand. It costs 0 this turn. |
-| ![](downfall/potions/Ooze-InfusedDrink.png) | Ooze-Infused Drink | Rare | Add 4 random 0-cost cards to your hand. |
 | ![](downfall/potions/QuantumElixir.png) | Quantum Elixir | Rare | Gain Stasis slots until you have 3. Repeat 3 times: choose 1 of 3 cards to place into Stasis. |
 | ![](slay-the-spire/potions/SmokeBomb.png) | Smoke Bomb | Rare | Escape from a non-boss combat. Receive no rewards. |
 | ![](slay-the-spire/potions/SneckoOil.png) | Snecko Oil | Rare | Draw 5 cards. Randomize the cost of cards in your hand. |

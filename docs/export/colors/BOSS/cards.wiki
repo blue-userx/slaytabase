@@ -88,7 +88,7 @@ Next turn, gain [E] [E] [E] and SLIME CRUSH.
 |Uncommon
 |[[Skill]]
 |2
-|Remove [[Block]] from, and apply 3 (5) [[Weak]] and [[Vulnerable]] to, ALL enemies.
+|Remove [[Block]] from, and apply 3 (5) [[Weak]] and [[Vulnerable]] to ALL enemies.
 [[Exhaust]].
 |-
 |[[Quick Study]]

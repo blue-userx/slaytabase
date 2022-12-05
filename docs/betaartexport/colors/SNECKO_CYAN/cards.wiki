@@ -29,7 +29,7 @@
 |[[Attack]]
 |1
 |Deal 7 (9) damage.
-[[sneckomod:Muddle]] the (2) highest-cost card(s) in your hand.
+[[sneckomod:Muddle]] the (!M!) highest-cost card(s) in your hand.
 |-
 |[[Strike]]
 |[[File:|thumb|289x289px]]
@@ -178,8 +178,8 @@ Apply 0 (1) - 2 [[Vulnerable]].
 |Common
 |[[Attack]]
 |1
-|Deal 3 (5) - 8 (10) damage.
-Gain 3 (5) - 8 (10) [[Block]].
+|Gain 3 (5) - 8 (10) [[Block]].
+Deal 3 (5) - 8 (10) damage.
 |-
 |[[Nope]]
 |[[File:|thumb|289x289px]]
@@ -196,7 +196,7 @@ Gain 3 (5) - 8 (10) [[Block]].
 |[[Skill]]
 |1
 |Gain 8 (10) [[Block]].
-[[sneckomod:Muddle]] the (2) highest-cost card(s) in your hand.
+[[sneckomod:Muddle]] the (!M!) highest-cost card(s) in your hand.
 |-
 |[[Snake Rake]]
 |[[File:|thumb|289x289px]]
@@ -394,7 +394,7 @@ Deal 5 damage 2 (3) times.
 |0
 |[[sneckomod:Snekproof]].
 Discard all [[sneckomod:Offclass]] cards.
-Draw that many cards (plus 1).
+Draw that many cards (plus !M!).
 |-
 |[[Serpent Idol]]
 |[[File:|thumb|289x289px]]
@@ -509,8 +509,10 @@ Repeat this for each [[sneckomod:Offclass]] card in your hand, then [[Exhaust]] 
 |[[File:|thumb|289x289px]]
 |Rare
 |[[Power]]
-|3 (2)
-|Whenever you play an [[sneckomod:Offclass]] card, draw 1 card.
+|3
+|[[sneckomod:Snekproof]].
+(not sneckomod:Snekproof.)
+Whenever you play an [[sneckomod:Offclass]] card, draw 1 card.
 |-
 |[[Glittering Gambit]]
 |[[File:|thumb|289x289px]]
@@ -570,7 +572,7 @@ Draw 5-10 cards.
 |[[Skill]]
 |0
 |[[sneckomod:Snekproof]].
-Draw 1 (2) card(s),
+Draw 1 (!M!) card(s),
 Choose a card, then Transform your hand to that card's class.
 |-
 |[[Transmogrify]]

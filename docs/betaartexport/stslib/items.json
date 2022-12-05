@@ -1,12 +1,12 @@
 {
   "mod": {
     "name": "StSLib",
-    "version": "2.4.1",
+    "version": "2.5.0",
     "authors": ["kiooeht"],
     "credits": "\n  Contributors: The_Evil_Pickle, Reina, Rin Camelia, erasels, EatYourBeetS, Jedi, Vex, Mistress Alison, Alchyr, Bryan \n  Translation: Jedi (Russian), Rita-B (ZHS), rainfoxest (ZHS, ZHT), Tsurumaki Maki (Korean), Celicath (Korean), Diamsword (French), red5h4d0w (French)",
     "description": "A collection of keywords and mechanics for other Slay the Spire mods to use.",
     "mts_version": "3.24.0",
-    "sts_version": "03-07-2022",
+    "sts_version": "10-04-2022",
     "dependencies": ["basemod"],
     "optional_dependencies": []
   },

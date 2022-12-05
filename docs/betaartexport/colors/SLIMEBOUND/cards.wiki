@@ -276,8 +276,8 @@ Take 3 damage.
 |Uncommon
 |[[Attack]]
 |1
-|Deal 4 (5) damage.
-Gain 4 (5) [[Block]].
+|Gain 4 (5) [[Block]].
+Deal 4 (5) damage.
 [[slimeboundmod:Consume]] - Increase this card's effects by 4 (5) this combat.
 |-
 |[[Hungry Tackle]]
@@ -302,7 +302,7 @@ Take 3 damage.
 |Uncommon
 |[[Power]]
 |1
-|The first (2) card(s) you play each turn that targets enemies also [[slimeboundmod:Commands]] ([[slimeboundmod:Command]]).
+|The first (!M!) card(s) you play each turn that targets enemies also [[slimeboundmod:Commands]] ([[slimeboundmod:Command]]).
 |-
 |[[Level Up]]
 |[[File:|thumb|289x289px]]

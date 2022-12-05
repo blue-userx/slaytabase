@@ -474,7 +474,7 @@ When this leaves [[guardianmod:Stasis]], deal 22 (30) damage to ALL enemies.
 |Rare
 |[[Power]]
 |3
-|(Gain 1 [[Artifact]].)
+|(Gain 2 [[Artifact]].)
  At the start of your turn, if you have no [[Artifact]], gain 1 [[Artifact]].
 |-
 |[[Bauble Burst]]

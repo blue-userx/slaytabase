@@ -1,0 +1,23 @@
+{
+  "mod": {
+    "name": "Unique Card Borders",
+    "version": "1.0.0",
+    "authors": ["ocean"],
+    "credits": "",
+    "description": "Basic and Special cards have different coloured borders to distinguish from common cards",
+    "mts_version": "3.23.4",
+    "sts_version": "12-22-2020",
+    "dependencies": [],
+    "optional_dependencies": []
+  },
+  "cards": [
+  ],
+  "relics": [
+  ],
+  "potions": [
+  ],
+  "creatures": [
+  ],
+  "keywords": [
+  ]
+}

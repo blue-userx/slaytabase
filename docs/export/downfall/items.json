@@ -1,7 +1,7 @@
 {
   "mod": {
     "name": "Downfall",
-    "version": "4.2.05",
+    "version": "4.2.08",
     "authors": ["The Downfall Collab Team"],
     "credits": "",
     "description": "Downfall is a full-featured Expansion for Slay the Spire, including a new 5th hero, a new campaign with 7 villains to play, new relics, new cards, new potions, and more. \n \n The Heart demands that this endless cycle of slaughter be finished.  Answer the call as a Villain, and see to the defense of the Spire. \n \n This mod is a combination modpack which includes the former mods known as Slimebound Mod, Guardian Mod, and Playable Snecko, along with a ton of new content, a new character, and much more.\n \n Design and Code Credits: \n \n MichaelMayhem, Vex, kiooeht, Alchyr, erasels, The Evil Pickle, Blank the Evil, JohnnyDevo, AlexDrieger, Erim-Nelhah, Darkglade, Vaylen, SuperLuigi231, Kalene, Cheetah-shooter, arctic_mists .  Art Credits: Freshbone - Character Select and Bonfire Art, Half-GoblinHankins - Card Art, AlexMdle - Card Art, C\u00E1s de Mattos - Card Art, Rita-B - Alternate Skin Art, Casey Yano - Monster Art, Noob Cannon and the Marisa Team - Misc Card Art \n \n Art Use Credit: reddit u/justaschema, Bruce Brenneise, reddit u/Atrolux, Chronometrics, George Eracleous. \n \n Music Credit: PandorasBread \n \n Testers and Helpers: Reina, moocowgoesmoo, Jedi, Skyson, Chufmoney, zwolfiez, Tiamoko, Ashlyn/IcyColdFire, squeeny, A Cake Wearing a Hat, ServetTayberkSalads, blalo'u, ComingVirus  \n \n Localization Aid - borloch",
@@ -828,7 +828,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "2",
-      "description": "Remove Block from, and apply 3 Weak and Vulnerable to, ALL enemies.\nExhaust."
+      "description": "Remove Block from, and apply 3 Weak and Vulnerable to ALL enemies.\nExhaust."
     },
     {
       "id": "expansioncontent:YouAreMine",
@@ -837,7 +837,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "2",
-      "description": "Remove Block from, and apply 5 Weak and Vulnerable to, ALL enemies.\nExhaust."
+      "description": "Remove Block from, and apply 5 Weak and Vulnerable to ALL enemies.\nExhaust."
     },
     {
       "id": "expansioncontent:QuickStudy",
@@ -4185,7 +4185,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 4 damage.\nGain 4 Block.\nslimeboundmod:Consume - Increase this card's effects by 4 this combat."
+      "description": "Gain 4 Block.\nDeal 4 damage.\nslimeboundmod:Consume - Increase this card's effects by 4 this combat."
     },
     {
       "id": "Slimebound:GrowthPunch",
@@ -4194,7 +4194,7 @@
       "rarity": "Uncommon",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 5 damage.\nGain 5 Block.\nslimeboundmod:Consume - Increase this card's effects by 5 this combat."
+      "description": "Gain 5 Block.\nDeal 5 damage.\nslimeboundmod:Consume - Increase this card's effects by 5 this combat."
     },
     {
       "id": "Slimebound:HungryTackle",
@@ -10116,7 +10116,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "3",
-      "description": "Gain 1 Artifact.\nAt the start of your turn, if you have no Artifact, gain 1 Artifact."
+      "description": "Gain 2 Artifact.\nAt the start of your turn, if you have no Artifact, gain 1 Artifact."
     },
     {
       "id": "Guardian:BaubleBeam",
@@ -10467,7 +10467,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 5 damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt."
+      "description": "Deal 6 damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt."
     },
     {
       "id": "hermit:Snapshot",
@@ -10476,7 +10476,7 @@
       "rarity": "Basic",
       "type": "Attack",
       "cost": "1",
-      "description": "Deal 7 damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt."
+      "description": "Deal 8 damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt."
     },
     {
       "id": "hermit:Strike_Hermit",
@@ -10683,7 +10683,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "2",
-      "description": "Gain 13 Block.\nDraw 2 Curses."
+      "description": "Gain 16 Block.\nGain a Decay."
     },
     {
       "id": "hermit:Manifest",
@@ -10692,7 +10692,7 @@
       "rarity": "Common",
       "type": "Skill",
       "cost": "2",
-      "description": "Gain 17 Block.\nDraw 3 Curses."
+      "description": "Gain 20 Block.\nGain a Decay."
     },
     {
       "id": "hermit:Misfire",
@@ -10898,8 +10898,8 @@
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
       "type": "Power",
-      "cost": "2",
-      "description": "Whenever you trigger a hermit:Dead_On effect, add a random card with hermit:Dead_On to your hand."
+      "cost": "1",
+      "description": "Put the first hermit:Dead_On card triggered each turn back into your hand."
     },
     {
       "id": "hermit:Combo",
@@ -10908,7 +10908,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "1",
-      "description": "Whenever you trigger a hermit:Dead_On effect, add a random card with hermit:Dead_On to your hand."
+      "description": "Put the first 2 hermit:Dead_On cards triggered each turn back into your hand."
     },
     {
       "id": "hermit:CursedWeapon",
@@ -11078,7 +11078,7 @@
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
       "type": "Skill",
-      "cost": "1",
+      "cost": "2",
       "description": "Gain 2 hermit:Rugged.\nGain 2 Vulnerable.\nExhaust."
     },
     {
@@ -11087,7 +11087,7 @@
       "color": "Hermit_yellow",
       "rarity": "Uncommon",
       "type": "Skill",
-      "cost": "1",
+      "cost": "2",
       "description": "Gain 2 hermit:Rugged.\nGain 1 Vulnerable.\nExhaust."
     },
     {
@@ -11313,7 +11313,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "1",
-      "description": "Whenever you draw a Curse, gain 6 Block."
+      "description": "Whenever you draw or Exhaust a Curse, gain 4 Block."
     },
     {
       "id": "hermit:ShadowCloak",
@@ -11322,7 +11322,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "1",
-      "description": "Whenever you draw a Curse, gain 9 Block."
+      "description": "Whenever you draw or Exhaust a Curse, gain 6 Block."
     },
     {
       "id": "hermit:Shortfuse",
@@ -11367,7 +11367,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "1",
-      "description": "Whenever you trigger a hermit:Dead_On effect, your next attack deals 4 more damage."
+      "description": "Whenever you trigger a hermit:Dead_On effect, your next attack deals 3 more damage."
     },
     {
       "id": "hermit:BigShot",
@@ -11376,7 +11376,7 @@
       "rarity": "Uncommon",
       "type": "Power",
       "cost": "1",
-      "description": "Whenever you trigger a hermit:Dead_On effect, your next attack deals 5 more damage."
+      "description": "Whenever you trigger a hermit:Dead_On effect, your next attack deals 4 more damage."
     },
     {
       "id": "hermit:Snipe",
@@ -11439,7 +11439,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "X",
-      "description": "Add X Defends to your hand.\nThey cost 0 this combat.\nExhaust."
+      "description": "Add a 0-cost Defend to your hand and Upgrade it X times.\nExhaust."
     },
     {
       "id": "hermit:TakeCover",
@@ -11448,7 +11448,7 @@
       "rarity": "Uncommon",
       "type": "Skill",
       "cost": "X",
-      "description": "Add X Defends+ to your hand.\nThey cost 0 this combat.\nExhaust."
+      "description": "Add a 0-cost Defend+ to your hand and Upgrade it X times.\nExhaust."
     },
     {
       "id": "hermit:Virtue",
@@ -11547,7 +11547,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "3",
-      "description": "Ethereal.\nAt the start of your turn, reduce the cost of all cards in hand by 1 this turn."
+      "description": "Ethereal.\nFirst 4 playable cards drawn at the start of each turn cost 1 less that turn."
     },
     {
       "id": "hermit:EternalForm",
@@ -11556,7 +11556,7 @@
       "rarity": "Rare",
       "type": "Power",
       "cost": "3",
-      "description": "At the start of your turn, reduce the cost of all cards in hand by 1 this turn."
+      "description": "First 4 playable cards drawn at the start of each turn cost 1 less that turn."
     },
     {
       "id": "hermit:FatalDesire",
@@ -11849,6 +11849,14 @@
       "flavorText": "One can never have enough armor."
     },
     {
+      "id": "hermit:BlackPowder",
+      "name": "Black Powder",
+      "tier": "Common",
+      "pool": "Hermit_yellow",
+      "description": "At the end of your turn, deal 2 damage to ALL enemies for each hermit:Dead_On effect triggered.",
+      "flavorText": "Handle with care."
+    },
+    {
       "id": "sneckomod:BlankCard",
       "name": "Blank Card",
       "tier": "Common",
@@ -11935,14 +11943,6 @@
       "pool": "The_bronze_automaton",
       "description": "If you end your turn with no Encoded cards, gain 4 Block.",
       "flavorText": "Look closely."
-    },
-    {
-      "id": "hermit:RyeStalk",
-      "name": "Rye Stalk",
-      "tier": "Common",
-      "pool": "Hermit_yellow",
-      "description": "At the end of your turn, ALL enemies lose HP equal to their hermit:Bruise.",
-      "flavorText": "Still in mint condition, despite being chewed on for so long."
     },
     {
       "id": "sneckomod:SneckoCommon",
@@ -12129,14 +12129,6 @@
       "flavorText": "Does it hurt when I do this?."
     },
     {
-      "id": "hermit:BlackPowder",
-      "name": "Black Powder",
-      "tier": "Rare",
-      "pool": "Hermit_yellow",
-      "description": "At the end of your turn, deal 2 damage to ALL enemies for each hermit:Dead_On effect triggered.",
-      "flavorText": "Handle with care."
-    },
-    {
       "id": "hermit:CharredGlove",
       "name": "Charred Glove",
       "tier": "Rare",
@@ -12231,6 +12223,14 @@
       "pool": "Hermit_yellow",
       "description": "Whenever you apply a debuff to an enemy, gain 2 Block.",
       "flavorText": "It's warm and fuzzy."
+    },
+    {
+      "id": "hermit:RyeStalk",
+      "name": "Rye Stalk",
+      "tier": "Rare",
+      "pool": "Hermit_yellow",
+      "description": "At the start of each combat, all enemies lose 2 Strength.",
+      "flavorText": "Still in mint condition, despite being chewed on for so long."
     },
     {
       "id": "Guardian:SackOfGems",
@@ -12825,12 +12825,6 @@
       "description": "Swap to a random Gremlin."
     },
     {
-      "id": "champ:CounterPotion",
-      "name": "Brew of Sharpness",
-      "rarity": "Common",
-      "description": "Gain 25 Counter."
-    },
-    {
       "id": "hexamod:EctoCoolerPotion",
       "name": "Ecto-Cooler",
       "rarity": "Common",
@@ -12849,28 +12843,10 @@
       "description": "Increase all numbers on Encoded cards by 1 except cost."
     },
     {
-      "id": "hexamod:SoulburnPotion",
-      "name": "Molotov",
-      "rarity": "Common",
-      "description": "Apply 30 Soulburn."
-    },
-    {
-      "id": "gremlin:WizPotion",
-      "name": "Pizazz Potion",
-      "rarity": "Common",
-      "description": "Gain 10 Vigor."
-    },
-    {
       "id": "sneckomod:DiceRollPotion",
       "name": "Potentially Potent Potion",
       "rarity": "Common",
       "description": "Deal 1-40 damage."
-    },
-    {
-      "id": "sneckomod:MuddlingPotion",
-      "name": "Spiked Energy Drink",
-      "rarity": "Common",
-      "description": "Muddle the 2 highest-cost cards in your hand. Cards Muddled this way cannot cost 3."
     },
     {
       "id": "champ:OpenerPotion",
@@ -12897,22 +12873,10 @@
       "description": "Remove all Compile Error effects from the next Function you create, it costs 0 until played."
     },
     {
-      "id": "Guardian:BlockOnCardUsePotion",
-      "name": "Armorer's Tincture",
-      "rarity": "Uncommon",
-      "description": "Gain 4 Block each time you play a card this turn."
-    },
-    {
       "id": "hermit:BlackBile",
       "name": "Black Bile",
       "rarity": "Uncommon",
       "description": "Apply 6 Bruise."
-    },
-    {
-      "id": "expansioncontent:BossPotion",
-      "name": "Boss Potion",
-      "rarity": "Uncommon",
-      "description": "Choose 1 of 3 random Boss cards to add to your hand, it costs 0 this turn."
     },
     {
       "id": "champ:TechniquePotion",
@@ -12951,12 +12915,6 @@
       "description": "Whenever an effect applies Goop this combat, apply 2 more."
     },
     {
-      "id": "bronze:BurnAndBuffPotion",
-      "name": "Vexing Draught",
-      "rarity": "Uncommon",
-      "description": "Gain 2 Strength and 2 Dexterity.\nAdd two Burn+ cards into your discard pile."
-    },
-    {
       "id": "Slimebound:SpawnSlimePotion",
       "name": "Army in a Bottle",
       "rarity": "Rare",
@@ -12991,12 +12949,6 @@
       "name": "Liquid Void",
       "rarity": "Rare",
       "description": "Put 1 card from your exhaust pile into your hand. It costs 0 this turn."
-    },
-    {
-      "id": "Slimebound:ThreeZeroPotion",
-      "name": "Ooze-Infused Drink",
-      "rarity": "Rare",
-      "description": "Add 4 random 0-cost cards to your hand."
     },
     {
       "id": "Guardian:StasisDiscoveryPotion",

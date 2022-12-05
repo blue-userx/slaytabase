@@ -19,7 +19,8 @@
 | ![](downfall/relics/Guardian-DefensiveModeMoreBlock.png) | Baalor's Lordly Plate | Common | Guardian | Whenever you #yguardianmod:Brace, #yBrace 1 more. | One can never have enough armor. |
 | ![](slay-the-spire/relics/BagofMarbles.png) | Bag of Marbles | Common |  | At the start of each combat, apply #b1 #yVulnerable to ALL enemies. | A once popular toy in the City. Useful for throwing enemies off balance. |
 | ![](slay-the-spire/relics/BagofPreparation.png) | Bag of Preparation | Common |  | At the start of each combat, draw #b2 additional cards. | Oversized adventurer's pack. Has many pockets and straps. |
-| ![](downfall/relics/sneckomod-BlankCard.png) | Blank Card | Common |  | At the start of each combat, play a copy of a random card from your deck. | Card Mimic. |
+| ![](downfall/relics/hermit-BlackPowder.png) | Black Powder | Common | Hermit_yellow | At the end of your turn, deal #b2 damage to ALL enemies for each #yhermit:Dead_On effect triggered. | Handle with care. |
+| ![](downfall/relics/sneckomod-BlankCard.png) | Blank Card | Common |  | At the start of each combat, add an #ygremlin:Echo of a random card from your deck to your hand. It costs #b0 . | Card Mimic. |
 | ![](slay-the-spire/relics/BloodVial.png) | Blood Vial | Common |  | At the start of each combat, heal #b2 HP. | A vial containing the blood of a pure and elder vampire. |
 | ![](downfall/relics/hermit-BrassTacks.png) | Brass Tacks | Common |  | Start each combat with #b2 #yMetallicize. | The luster on these tacks never seems to fade. |
 | ![](downfall/relics/bronze-BronzeIdol.png) | Bronze Idol | Common |  | #yStatus cards may now be played for useful effects. | An ancient, weaponised antivirus - who knows who made it, and why? |
@@ -51,9 +52,8 @@
 | ![](downfall/relics/bronze-ProtectiveGoggles.png) | Protective Goggles | Common | The_bronze_automaton | If you end your turn with no #yEncoded cards, gain #b4 #yBlock. | Look closely. |
 | ![](slay-the-spire/relics/RedSkull.png) | Red Skull | Common | Red | While your HP is at or below #b50%, you have #b3 additional #yStrength. | A small skull covered in ornamental paint. |
 | ![](slay-the-spire/relics/RegalPillow.png) | Regal Pillow | Common |  | Whenever you #yRest, heal an additional #b15 HP. | Now you can get a proper night's rest. |
-| ![](downfall/relics/hermit-RyeStalk.png) | Rye Stalk | Common | Hermit_yellow | At the end of your turn, ALL enemies lose HP equal to their #yhermit:Bruise. | Still in mint condition, despite being chewed on for so long. |
 | ![](downfall/relics/sneckomod-SneckoCommon.png) | Seal of Approval | Common | Snecko_cyan | Upon pickup, choose #b1 of #b3 #yUnidentified #yCharacter cards to add to your deck. All future #yUnidentified #yCharacter cards found will be of this character. | I'm The Ironclad and this is my favorite Relic in the Spire. -Merchant Advertising Pamphlet |
-| ![](downfall/relics/bronze-SilverBullet.png) | Silver Bullet | Common | The_bronze_automaton | Start each combat with an #yEncoded #yPiercing #yShot. | Spirewolves are long gone. |
+| ![](downfall/relics/bronze-SilverBullet.png) | Silver Bullet | Common | The_bronze_automaton | At the start of each combat, add a copy of #yPiercing #yShot to your hand. It costs #b0 . | Spirewolves are long gone. |
 | ![](slay-the-spire/relics/SmilingMask.png) | Smiling Mask | Common |  | The Merchant's card removal service now always costs #b50 #yGold. | Mask worn by the Merchant. He must have spares... |
 | ![](downfall/relics/hexamod-MatchstickCase.png) | Sneaky Teakwood Match | Common | Hexa_ghost_purple | At the start of each combat, #yhexamod:Ignite the current Ghostflame and #yhexamod:Advance. | Lights on any surface! |
 | ![](slay-the-spire/relics/SnakeSkull.png) | Snecko Skull | Common | Green | Whenever you apply #yPoison, apply an additional #b1 #yPoison. | A snecko skull in pristine condition. Mysteriously clean and smooth, dirt and grime fall off inexplicably. |
@@ -109,7 +109,7 @@
 | ![](slay-the-spire/relics/SingingBowl.png) | Singing Bowl | Uncommon |  | When adding cards into your deck, you may raise your Max HP by #b2 instead. | This well-used artifact rings out with a beautiful melody when struck. |
 | ![](downfall/relics/Slimebound-PreparedRelic.png) | Slime Soup | Uncommon |  | When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0. | Tastes awful, but incredibly healthy. |
 | ![](downfall/relics/hermit-Spyglass.png) | Spyglass | Uncommon | Hermit_yellow | If you end your turn #yhermit:Concentrated, gain an additional [E] next turn . | Property of Kestin Highfin. |
-| ![](downfall/relics/hermit-StraightRazor.png) | Straight Razor | Uncommon | Hermit_yellow | Whenever you remove a card from your deck, heal #b15 HP. | For a cleaner shave... |
+| ![](downfall/relics/hermit-StraightRazor.png) | Straight Razor | Uncommon | Hermit_yellow | Whenever you remove or Transform a card from your deck, heal #b15 HP. | For a cleaner shave... |
 | ![](slay-the-spire/relics/StrikeDummy.png) | Strike Dummy | Uncommon |  | Cards containing "Strike" deal #b3 additional damage. | It's beat up. |
 | ![](slay-the-spire/relics/Sundial.png) | Sundial | Uncommon |  | Every #b3 times you shuffle your draw pile, gain [E] [E] . | "Early man's foolish obsession with time caused them to look to the sky for guidance, hoping for something permanent." - Zoroth |
 | ![](downfall/relics/sneckomod-SuperSneckoEye.png) | Super Snecko Eye | Uncommon |  | Replaces #ySnecko #yEye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0. | 0121012 |
@@ -121,7 +121,6 @@
 | ![](downfall/relics/Gremlin-WizardStaff.png) | Wizard Staff | Uncommon | Gremlin | #yWiz deals #b7 additional damage. | The pride and joy of every Gremlin Wizard, this staff is a frequent target of theft by rival mobs. |
 | ![](downfall/relics/Gremlin-WoundPoker.png) | Wound Poker | Uncommon | Gremlin | At the end of each turn, deal #b6 damage to each #yWeakened enemy. | Does it hurt when I do this?. |
 | ![](slay-the-spire/relics/BirdFacedUrn.png) | Bird-Faced Urn | Rare |  | Whenever you play a #yPower card, heal #b2 HP. | This urn shows the crow god Mazaleth looking mischievous. |
-| ![](downfall/relics/hermit-BlackPowder.png) | Black Powder | Rare | Hermit_yellow | At the end of your turn, deal #b2 damage to ALL enemies for each #yhermit:Dead_On effect triggered. | Handle with care. |
 | ![](slay-the-spire/relics/Calipers.png) | Calipers | Rare |  | At the start of your turn, lose #b15 #yBlock rather than all of your #yBlock. | "Mechanical precision leads to greatness" - The Architect |
 | ![](slay-the-spire/relics/CaptainsWheel.png) | Captain's Wheel | Rare |  | At the start of your 3rd turn, gain #b18 #yBlock. | Wooden trinket carved with delicate precision. A name is carved into it but the language is foreign. |
 | ![](slay-the-spire/relics/ChampionBelt.png) | Champion Belt | Rare | Red | Whenever you apply #yVulnerable, apply #b1 #yWeak. | Only the greatest may wear this belt. |
@@ -156,6 +155,7 @@
 | ![](slay-the-spire/relics/PrayerWheel.png) | Prayer Wheel | Rare |  | Normal enemies drop an additional card reward. | The wheel continues to spin, never stopping. |
 | ![](downfall/relics/Gremlin-PricklyShields.png) | Prickly Shields | Rare |  | Whenever you gain #yBlock, deal #b2 damage to a random enemy. | Gremlins use whatever scraps they can find as weapons or armor. Some serve as both. |
 | ![](downfall/relics/hermit-RedScarf.png) | Red Scarf | Rare | Hermit_yellow | Whenever you apply a debuff to an enemy, gain #b2 #yBlock. | It's warm and fuzzy. |
+| ![](downfall/relics/hermit-RyeStalk.png) | Rye Stalk | Rare | Hermit_yellow | At the start of each combat, all enemies lose #b2 #yStrength. | Still in mint condition, despite being chewed on for so long. |
 | ![](downfall/relics/Guardian-SackOfGems.png) | Sack of Gems | Rare | Guardian | Upon pickup, add #b5 random #yguardianmod:Gems to your deck. | Ooh... shiny! |
 | ![](slay-the-spire/relics/Shovel.png) | Shovel | Rare |  | You can now #yDig for relics at Rest Sites. | The Spire houses all number of relics from past civilizations and powerful adventurers lost to time. Time to go dig them up! |
 | ![](downfall/relics/champ-SignatureFinisher.png) | Signature Finisher | Rare | The_champ_gray | Upon pickup, choose a #yFinisher. This #yFinisher costs #b0, can be used without a #yStance, and never causes your #yStance to be exited. | And now, it's time for my ULTIMATE MOVE! |

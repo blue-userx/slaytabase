@@ -4198,7 +4198,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Remove Block from, and apply 3 (5) Weak and Vulnerable to, ALL enemies.\nExhaust.",
+            "description": "Remove Block from, and apply 3 (5) Weak and Vulnerable to ALL enemies.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -6068,7 +6068,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 4 (5) damage.\nGain 4 (5) Block.\nslimeboundmod:Consume - Increase this card's effects by 4 (5) this combat.",
+            "description": "Gain 4 (5) Block.\nDeal 4 (5) damage.\nslimeboundmod:Consume - Increase this card's effects by 4 (5) this combat.",
             "mod": "Downfall"
         },
         {
@@ -9328,7 +9328,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": " (Gain 1 Artifact.)\nAt the start of your turn, if you have no Artifact, gain 1 Artifact.",
+            "description": " (Gain 2 Artifact.)\nAt the start of your turn, if you have no Artifact, gain 1 Artifact.",
             "mod": "Downfall"
         },
         {
@@ -9538,7 +9538,7 @@
             "rarity": "Basic",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 5 (7) damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt.",
+            "description": "Deal 6 (8) damage. hermit:Dead_On: Gain Block equal to the unblocked damage dealt.",
             "mod": "Downfall"
         },
         {
@@ -9658,7 +9658,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 13 (17) Block.\nDraw 2 (3) Curses.",
+            "description": "Gain 16 (20) Block.\nGain a Decay.",
             "mod": "Downfall"
         },
         {
@@ -9777,8 +9777,8 @@
             "color": "Hermit_yellow",
             "rarity": "Uncommon",
             "type": "Power",
-            "cost": "2 (1)",
-            "description": "Whenever you trigger a hermit:Dead_On effect, add a random card with hermit:Dead_On to your hand.",
+            "cost": "1",
+            "description": "Put the first  (2 ) hermit:Dead_On card (cards) triggered each turn back into your hand.",
             "mod": "Downfall"
         },
         {
@@ -9877,7 +9877,7 @@
             "color": "Hermit_yellow",
             "rarity": "Uncommon",
             "type": "Skill",
-            "cost": "1",
+            "cost": "2",
             "description": "Gain 2 hermit:Rugged.\nGain 2 (1) Vulnerable.\nExhaust.",
             "mod": "Downfall"
         },
@@ -10008,7 +10008,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "Whenever you draw a Curse, gain 6 (9) Block.",
+            "description": "Whenever you draw or Exhaust a Curse, gain 4 (6) Block.",
             "mod": "Downfall"
         },
         {
@@ -10038,7 +10038,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "Whenever you trigger a hermit:Dead_On effect, your next attack deals 4 (5) more damage.",
+            "description": "Whenever you trigger a hermit:Dead_On effect, your next attack deals 3 (4) more damage.",
             "mod": "Downfall"
         },
         {
@@ -10078,7 +10078,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "X",
-            "description": "Add X Defends (+) to your hand.\nThey cost 0 this combat.\nExhaust.",
+            "description": "Add a 0-cost Defend (+) to your hand and Upgrade it X times.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -10138,7 +10138,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "~~- Ethereal. -~~\nAt the start of your turn, reduce the cost of all cards in hand by 1 this turn.",
+            "description": "~~- Ethereal. -~~\nFirst 4 playable cards drawn at the start of each turn cost 1 less that turn.",
             "mod": "Downfall"
         },
         {
@@ -10435,6 +10435,15 @@
             "mod": ""
         },
         {
+            "id": "hermit:BlackPowder",
+            "name": "Black Powder",
+            "tier": "Common",
+            "pool": "Hermit_yellow",
+            "description": "At the end of your turn, deal 2 damage to ALL enemies for each hermit:Dead_On effect triggered.",
+            "flavorText": "Handle with care.",
+            "mod": "Downfall"
+        },
+        {
             "id": "sneckomod:BlankCard",
             "name": "Blank Card",
             "tier": "Common",
@@ -10721,15 +10730,6 @@
             "description": "Whenever you Rest, heal an additional 15 HP.",
             "flavorText": "Now you can get a proper night's rest.",
             "mod": ""
-        },
-        {
-            "id": "hermit:RyeStalk",
-            "name": "Rye Stalk",
-            "tier": "Common",
-            "pool": "Hermit_yellow",
-            "description": "At the end of your turn, ALL enemies lose HP equal to their hermit:Bruise.",
-            "flavorText": "Still in mint condition, despite being chewed on for so long.",
-            "mod": "Downfall"
         },
         {
             "id": "sneckomod:SneckoCommon",
@@ -11353,15 +11353,6 @@
             "mod": ""
         },
         {
-            "id": "hermit:BlackPowder",
-            "name": "Black Powder",
-            "tier": "Rare",
-            "pool": "Hermit_yellow",
-            "description": "At the end of your turn, deal 2 damage to ALL enemies for each hermit:Dead_On effect triggered.",
-            "flavorText": "Handle with care.",
-            "mod": "Downfall"
-        },
-        {
             "id": "Calipers",
             "name": "Calipers",
             "tier": "Rare",
@@ -11665,6 +11656,15 @@
             "pool": "Hermit_yellow",
             "description": "Whenever you apply a debuff to an enemy, gain 2 Block.",
             "flavorText": "It's warm and fuzzy.",
+            "mod": "Downfall"
+        },
+        {
+            "id": "hermit:RyeStalk",
+            "name": "Rye Stalk",
+            "tier": "Rare",
+            "pool": "Hermit_yellow",
+            "description": "At the start of each combat, all enemies lose 2 Strength.",
+            "flavorText": "Still in mint condition, despite being chewed on for so long.",
             "mod": "Downfall"
         },
         {
@@ -13082,13 +13082,6 @@
             "color": "Purple"
         },
         {
-            "id": "champ:CounterPotion",
-            "name": "Brew of Sharpness",
-            "rarity": "Common",
-            "description": "Gain 25 Counter.",
-            "mod": "Downfall"
-        },
-        {
             "id": "ColorlessPotion",
             "name": "Colorless Potion",
             "rarity": "Common",
@@ -13169,20 +13162,6 @@
             "color": "The_bronze_automaton"
         },
         {
-            "id": "hexamod:SoulburnPotion",
-            "name": "Molotov",
-            "rarity": "Common",
-            "description": "Apply 30 Soulburn.",
-            "mod": "Downfall"
-        },
-        {
-            "id": "gremlin:WizPotion",
-            "name": "Pizazz Potion",
-            "rarity": "Common",
-            "description": "Gain 10 Vigor.",
-            "mod": "Downfall"
-        },
-        {
             "id": "Poison Potion",
             "name": "Poison Potion",
             "rarity": "Common",
@@ -13218,13 +13197,6 @@
             "rarity": "Common",
             "description": "Gain 5 Dexterity. At the end of your turn, lose 5 Dexterity.",
             "mod": ""
-        },
-        {
-            "id": "sneckomod:MuddlingPotion",
-            "name": "Spiked Energy Drink",
-            "rarity": "Common",
-            "description": "Muddle the 2 highest-cost cards in your hand. Cards Muddled this way cannot cost 3.",
-            "mod": "Downfall"
         },
         {
             "id": "champ:OpenerPotion",
@@ -13287,26 +13259,12 @@
             "mod": ""
         },
         {
-            "id": "Guardian:BlockOnCardUsePotion",
-            "name": "Armorer's Tincture",
-            "rarity": "Uncommon",
-            "description": "Gain 4 Block each time you play a card this turn.",
-            "mod": "Downfall"
-        },
-        {
             "id": "hermit:BlackBile",
             "name": "Black Bile",
             "rarity": "Uncommon",
             "description": "Apply 6 Bruise.",
             "mod": "Downfall",
             "color": "Hermit_yellow"
-        },
-        {
-            "id": "expansioncontent:BossPotion",
-            "name": "Boss Potion",
-            "rarity": "Uncommon",
-            "description": "Choose 1 of 3 random Boss cards to add to your hand, it costs 0 this turn.",
-            "mod": "Downfall"
         },
         {
             "id": "champ:TechniquePotion",
@@ -13440,13 +13398,6 @@
             "color": "Purple"
         },
         {
-            "id": "bronze:BurnAndBuffPotion",
-            "name": "Vexing Draught",
-            "rarity": "Uncommon",
-            "description": "Gain 2 Strength and 2 Dexterity.\nAdd two Burn+ cards into your discard pile.",
-            "mod": "Downfall"
-        },
-        {
             "id": "Ambrosia",
             "name": "Ambrosia",
             "rarity": "Rare",
@@ -13554,13 +13505,6 @@
             "description": "Put 1 card from your exhaust pile into your hand. It costs 0 this turn.",
             "mod": "Downfall",
             "color": "Hermit_yellow"
-        },
-        {
-            "id": "Slimebound:ThreeZeroPotion",
-            "name": "Ooze-Infused Drink",
-            "rarity": "Rare",
-            "description": "Add 4 random 0-cost cards to your hand.",
-            "mod": "Downfall"
         },
         {
             "id": "Guardian:StasisDiscoveryPotion",

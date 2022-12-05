@@ -30,7 +30,7 @@ Discarded Curses are [[Exhausted]].
 |Basic
 |[[Attack]]
 |1
-|Deal 5 (7) damage. hermit:Dead_On: Gain [[Block]] equal to the unblocked damage dealt.
+|Deal 6 (8) damage. hermit:Dead_On: Gain [[Block]] equal to the unblocked damage dealt.
 |-
 |[[Strike]]
 |[[File:|thumb|289x289px]]
@@ -127,8 +127,8 @@ Gains 4 (5) additional [[Block]] for each of your debuffs.
 |Common
 |[[Skill]]
 |2
-|Gain 13 (17) [[Block]].
-Draw 2 (3) Curses.
+|Gain 16 (20) [[Block]].
+Gain a Decay.
 |-
 |[[Misfire]]
 |[[File:|thumb|289x289px]]
@@ -225,8 +225,8 @@ hermit:Dead_On: Also trigger its [[Dead On]] effect.
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Power]]
-|2 (1)
-|Whenever you trigger a [[Dead On]] effect, add a random card with [[Dead On]] to your hand.
+|1
+|Put the first (!M!) [[Dead On]] card(s) triggered each turn back into your hand.
 |-
 |[[Cursed Weapon]]
 |[[File:|thumb|289x289px]]
@@ -309,7 +309,7 @@ ALL enemies lose 1 (2) [[Strength]].
 |[[File:|thumb|289x289px]]
 |Uncommon
 |[[Skill]]
-|1
+|2
 |Gain 2 [[hermit:Rugged]].
 Gain 2 (1) [[Vulnerable]].
 [[Exhaust]].
@@ -422,7 +422,7 @@ Gain 5 (10) Gold.
 |Uncommon
 |[[Power]]
 |1
-|Whenever you draw a [[Curse]], gain 6 (9) [[Block]].
+|Whenever you draw or [[Exhaust]] a [[Curse]], gain 4 (6) [[Block]].
 |-
 |[[Short Fuse]]
 |[[File:|thumb|289x289px]]
@@ -447,7 +447,7 @@ Play all Strikes in your hand.
 |Uncommon
 |[[Power]]
 |1
-|Whenever you trigger a [[Dead On]] effect, your next attack deals 4 (5) more damage.
+|Whenever you trigger a [[Dead On]] effect, your next attack deals 3 (4) more damage.
 |-
 |[[Snipe]]
 |[[File:|thumb|289x289px]]
@@ -478,8 +478,7 @@ Draw 2 (3) Curses.
 |Uncommon
 |[[Skill]]
 |X
-|Add X Defends (*Defends+) to your hand.
-They cost 0 this combat.
+|Add a 0-cost Defend (*Defend+) to your hand and [[Upgrade]] it X times.
 [[Exhaust]].
 |-
 |[[Virtue]]
@@ -531,7 +530,7 @@ If [[Fatal]], get a [[hermit:Bounty]].
 |3
 |[[Ethereal]].
 (not Ethereal.)
-At the start of your turn, reduce the cost of all cards in hand by 1 this turn.
+First 4 playable cards drawn at the start of each turn cost 1 less that turn.
 |-
 |[[Fatal Desire]]
 |[[File:|thumb|289x289px]]
