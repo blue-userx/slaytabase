@@ -1244,7 +1244,7 @@ export default {
                     "id": "bronze:BurnAndBuffPotion",
                     "name": "Vexing Draught",
                     "rarity": "Uncommon",
-                    "description": "Gain 2 Strength and 2 Dexterity. Add two :Burn+ cards to your draw pile.",
+                    "description": "Gain 2 Strength and 2 Dexterity. Add two :Burn+ cards to your discard pile.",
                     "img": "/altered/img/potions/vexingdraught.png",
                     "mod": "downfall"
                 },

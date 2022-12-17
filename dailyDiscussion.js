@@ -49,6 +49,7 @@ async function startThread() {
 
         let itemId = data.options[winner];
         let item = fn.find(itemId);
+        data.past.push(itemId);
         let thread = await oldThread.parent.threads.create({name: `${itemTitle(item.item)} - Daily Discussion ${(new Date()).getDate()} ${(new Date()).toLocaleString('default', {month: 'long'}).slice(0, 3)}`})
 
         let possibleItems = search._docs
@@ -78,10 +79,13 @@ async function startThread() {
         });
         voteMessage.pin().catch(e => {});
         
-        let itemMessage = await thread.send({embeds: [
-            await commands.prefix['i~'](null, itemId),
-            await embed({...item.item, score: item.score, query: itemId}),
-        ]}).catch(e => {});
+        let itemMessage = await thread.send({
+            content: `Daily Discussion ${data.past.length}/${data.past.length+possibleItems.length}`,
+            embeds: [
+                await commands.prefix['i~'](null, itemId),
+                await embed({...item.item, score: item.score, query: itemId}),
+            ]
+        }).catch(e => {});
         itemMessage.pin().catch(e => {});
 
         if (data.hasOwnProperty('lastVote'))
@@ -97,7 +101,6 @@ async function startThread() {
         data.next += 24 * 60 * 60 * 1000;
         data.voteChannel = thread.id;
         data.lastVote = (voteMessage == undefined ? prevMessage : voteMessage).id;
-        data.past.push(itemId);
         saveData();
     }
 }
