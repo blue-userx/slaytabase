@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials } from 'discord.js';
+import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder } from 'discord.js';
 import Fuse from 'fuse.js'
 import fs from 'fs';
 import commands from './commands.js';
@@ -37,6 +37,17 @@ bot.once('ready', async () => {
             channel.messages.fetch().catch(e => {});
     });
     startDailyDiscussion();
+
+    await bot.application?.commands.set([
+        new SlashCommandBuilder()
+            .setName('item')
+            .setDescription('Finds an item from Slay the Spire and displays info about it.')
+            .addStringOption(option =>
+                option.setName('query')
+                .setDescription('Item name')
+                .setRequired(true)
+                .setAutocomplete(true))
+    ]);
 });
 
 async function getEmbeds(msg) {
@@ -88,7 +99,7 @@ bot.on('messageCreate', async msg => {
         msg.reply('I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.').catch(e => {});
     else if (embeds === 0) return;
     else {
-        let files = getFilesFromEmbeds(embeds)
+        let files = getFilesFromEmbeds(embeds);
         await msg.reply({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
         delfiles(files);
     }
@@ -117,6 +128,22 @@ bot.on('messageDelete', async msg => {
     let reply = messages.find(i => i.author.id == bot.user.id && i.reference != null && i.reference.messageId == msg.id);
     if (reply != undefined)
         reply.delete().catch(e => {});
+});
+
+bot.on('interactionCreate', async interaction => {
+    if (interaction.isChatInputCommand()) {
+        await interaction.deferReply();
+        let embeds = await getEmbeds({
+            content: `<${interaction.options.getString('query')}>`,
+            author: interaction.user
+        });
+        await interaction.editReply({embeds});
+    } else if (interaction.isAutocomplete()) {
+        await interaction.respond(search.search(fn.unPunctuate(interaction.options.getFocused())).slice(0,10).map(i => ({
+            name: `${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} ${i.item.name}`,
+            value: i.item.hasOwnProperty('id') ? i.item.id : i.item.name,
+        })));
+    }
 });
 
 async function main() {
