@@ -40,7 +40,7 @@ bot.once('ready', async () => {
 
     await bot.application?.commands.set([
         new SlashCommandBuilder()
-            .setName('item')
+            .setName('i')
             .setDescription('Finds an item from Slay the Spire and displays info about it.')
             .addStringOption(option =>
                 option.setName('query')
@@ -139,8 +139,8 @@ bot.on('interactionCreate', async interaction => {
         });
         await interaction.editReply({embeds});
     } else if (interaction.isAutocomplete()) {
-        await interaction.respond(search.search(fn.unPunctuate(interaction.options.getFocused())).slice(0,10).map(i => ({
-            name: `${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} ${i.item.name}`,
+        await interaction.respond(search.search(fn.unPunctuate(interaction.options.getFocused())).slice(0,25).map(i => ({
+            name: `${i.item.name} (${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '')+' ' : ''}${i.item.itemType})${i.item.originalDescription ? ` - ${i.item.originalDescription.replaceAll('\n', ' ')}` : ''}`.slice(0,94) + ` (${String(Math.round((1 - i.score) * 100))}%)`,
             value: i.item.hasOwnProperty('id') ? i.item.id : i.item.name,
         })));
     }
@@ -177,10 +177,11 @@ async function main() {
             let newItem = {
                 ...item,
                 searchName: fn.unPunctuate(item.name),
-                searchId: item.hasOwnProperty('id') ? fn.unPunctuate(item.id) : null,
+                searchId: item.hasOwnProperty('id') ? fn.unPunctuate(item.id) : undefined,
                 itemType: itemType.slice(0,-1),
                 mod: item.mod == '' ? 'slay-the-spire' : item.mod.toLowerCase(),
-                description: item.hasOwnProperty('description') ? keywordify(item.description, character) : null,
+                originalDescription: item.hasOwnProperty('description') ? item.description : undefined,
+                description: item.hasOwnProperty('description') ? keywordify(item.description, character) : undefined,
                 character,
             };
             newItem.character[0].replace('The ', '')
