@@ -15,6 +15,8 @@ const masks = {};
 ['a', 's', 'p'].forEach(i => masks[i] = loadImage(`./artpreview/${i}.png`));
 const shadows = {};
 ['a', 's', 'p'].forEach(i => shadows[i] = loadImage(`./artpreview/${i}s.png`));
+const cuts = {};
+['a', 's', 'p'].forEach(i => cuts[i] = loadImage(`./artpreview/${i}c.png`));
 const cardTypes = {
     Attack: 'a',
     Power: 'p',
@@ -120,6 +122,7 @@ __Commands:__
 <memes> help with the bot's meme generator
 <artpreview [card name]> takes your first attachment and uses it as card art for a card
 <c~artpreview [card name]> compares the art preview to the current card
+<artcut [a|p|s]> takes your first attachment and cuts it to a card frame to be used ingame
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
 `,
@@ -349,6 +352,45 @@ __Commands:__
                     files: [filename],
                     color: preview.color,
                 }
+            } catch(e) {
+                console.error(e);
+                return {title: 'failed to generate image'};
+            }
+        },
+
+        'artcut ': async (msg, arg) => {
+            try {
+                let args = arg.split('=');
+                let type = args[0][0].toLowerCase();
+                let att = 0;
+                if (args.length < 1 || !cuts.hasOwnProperty(type))
+                    return {title: 'you must provide the card type! example: <artcut a> where "a" is replaced with "a", "p", or "s" for attacks, powers, and skills respectively.'};
+                if (args.length > 1)
+                    att = parseInt(args[1])-1;
+                let art = msg.attachments.at(att);
+                if (art == undefined) return {title: 'you need to attach an image to cut!'};
+
+                let canvas = createCanvas(500,380);
+                let ctx = canvas.getContext('2d');
+                ctx.drawImage(await loadImage(art.url), 0, 0, 500, 380);
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.drawImage(await cuts[type], 0, 0);
+                let filename = `export${String(Math.random()).slice(2)}_p.png`;
+                fs.writeFileSync(filename, canvas.toBuffer());
+
+                let smallcanvas = createCanvas(250,190);
+                let smallctx = smallcanvas.getContext('2d');
+                smallctx.drawImage(canvas, 0, 0, 250, 190);
+                let filename2 = filename.replace('_p', '');
+                fs.writeFileSync(filename2, smallcanvas.toBuffer());
+
+                return {
+                    title: '500x380 →\n250x190 ↓',
+                    thumbnail: {url: 'attachment://'+filename, height: 50, width: 50},
+                    image: {url: 'attachment://'+filename2},
+                    files: [filename, filename2],
+                    color: 0,
+                };
             } catch(e) {
                 console.error(e);
                 return {title: 'failed to generate image'};
