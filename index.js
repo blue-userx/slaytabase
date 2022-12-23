@@ -141,7 +141,7 @@ bot.on('interactionCreate', async interaction => {
     } else if (interaction.isAutocomplete()) {
         await interaction.respond(search.search(fn.unPunctuate(interaction.options.getFocused())).slice(0,25).map(i => ({
             name: `${i.item.name} (${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '')+' ' : ''}${i.item.itemType})${i.item.originalDescription ? ` - ${i.item.originalDescription.replaceAll('\n', ' ')}` : ''}`.slice(0,94) + ` (${String(Math.round((1 - i.score) * 100))}%)`,
-            value: i.item.hasOwnProperty('id') ? i.item.id : i.item.name,
+            value: i.item.searchText.slice(0,100)//i.item.hasOwnProperty('id') ? i.item.id : i.item.name,
         })));
     }
 });
