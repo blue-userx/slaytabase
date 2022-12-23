@@ -133,13 +133,16 @@ bot.on('messageDelete', async msg => {
 bot.on('interactionCreate', async interaction => {
     if (interaction.isChatInputCommand()) {
         await interaction.deferReply();
-        let embeds = await getEmbeds({
-            content: `<${interaction.options.getString('query')}>`,
-            author: interaction.user
-        });
+        interaction.content = `<${interaction.options.getString('query')}>`;
+        if (fn.unPunctuate(interaction.content) == 'del' || fn.unPunctuate(interaction.content) == 'spoiler')
+            return await interaction.deleteReply();
+        interaction.author = interaction.user;
+        let embeds = await getEmbeds(interaction);
+        if (embeds.length == 0)
+            return await interaction.deleteReply();
         await interaction.editReply({embeds});
     } else if (interaction.isAutocomplete()) {
-        await interaction.respond(search.search(fn.unPunctuate(interaction.options.getFocused())).slice(0,25).map(i => ({
+        await interaction.respond(search.search(fn.unPunctuate(interaction.options.getFocused() == '' ? 'basic card' : interaction.options.getFocused())).slice(0,25).map(i => ({
             name: `${i.item.name} (${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '')+' ' : ''}${i.item.itemType})${i.item.originalDescription ? ` - ${i.item.originalDescription.replaceAll('\n', ' ')}` : ''}`.slice(0,94) + ` (${String(Math.round((1 - i.score) * 100))}%)`,
             value: i.item.searchText.slice(0,100)//i.item.hasOwnProperty('id') ? i.item.id : i.item.name,
         })));
