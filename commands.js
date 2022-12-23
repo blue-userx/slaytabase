@@ -177,6 +177,10 @@ __Commands:__
         },
 
         '?': async (msg, arg, args) => {
+            if (arg.startsWith('??')) {
+                let item = fn.find('?'+arg);
+                return (await embed({...item.item, score: item.score, query: '?'+arg})).data;
+            }
             let searchQ = args.filter(a => !a.includes("=")).join(" ");
             let results = search.search(searchQ);
             let page = 0;
