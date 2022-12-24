@@ -100,7 +100,8 @@ bot.on('messageCreate', async msg => {
     else if (embeds === 0) return;
     else {
         let files = getFilesFromEmbeds(embeds);
-        await msg.reply({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+        if (files.length > 10) await msg.reply('I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.');
+        else await msg.reply({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
         delfiles(files);
     }
 });
@@ -117,9 +118,10 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
             reply.delete().catch(e => {});
         else {
             let files = getFilesFromEmbeds(embeds)
-            await reply.edit({content: ' ', embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+            if (files.length > 10) await reply.edit({content: 'I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.', embeds: [], files: []});
+            else await reply.edit({content: ' ', embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
             delfiles(files);
-        }  
+        }
     } else
         bot.emit('messageCreate', newMsg);
 });
