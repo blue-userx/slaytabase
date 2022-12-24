@@ -122,7 +122,6 @@ __Commands:__
 <memes> help with the bot's meme generator
 <artpreview [card name]> takes your first attachment and uses it as card art for a card
 <c~artpreview [card name]> compares the art preview to the current card
-<artcut [a|p|s]> takes your first attachment and cuts it to a card frame to be used ingame
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
 `,
@@ -326,12 +325,31 @@ __Commands:__
                 ctx.drawImage(artcanvas, 89, 123);
                 ctx.drawImage(await loadImage(itemEmbed.data.thumbnail.url), 678, 0);
     
-                let filename = `export${String(Math.random()).slice(2)}.png`;
+                let filename = `${(item.item.id.includes(':') ? item.item.id.slice(item.item.id.indexOf(':')+1) : item.item.id).replaceAll(' ', '-')}_preview-${String(Math.random()).slice(10)}.png`;
                 fs.writeFileSync(filename, canvas.toBuffer());
+
+
+                let cutcanvas = createCanvas(500,380);
+                let cutctx = cutcanvas.getContext('2d');
+                cutctx.drawImage(await loadImage(art.url), 0, 0, 500, 380);
+                cutctx.globalCompositeOperation = 'destination-out';
+                cutctx.drawImage(await cuts[cardTypes[item.item.type]], 0, 0);
+                let filename2 = filename.replace('_preview-', '_p-');
+                fs.writeFileSync(filename2, cutcanvas.toBuffer());
+
+                let smallcanvas = createCanvas(250,190);
+                let smallctx = smallcanvas.getContext('2d');
+                smallctx.drawImage(cutcanvas, 0, 0, 250, 190);
+                let filename3 = filename2.replace('_p-', '-');
+                fs.writeFileSync(filename3, smallcanvas.toBuffer());
+
                 return {
-                    title: ' ',
+                    title: item.item.name,
+                    description: '250x190 →',
                     image: {url: 'attachment://'+filename},
-                    files: [filename],
+                    thumbnail: {url: 'attachment://'+filename3},
+                    footer: {iconURL: 'attachment://'+filename2, text: '← 500x380'},
+                    files: [filename, filename2, filename3],
                     color: itemEmbed.data.color,
                 };
             } catch(e) {
@@ -346,55 +364,8 @@ __Commands:__
                 let canvas = createCanvas(678,874);
                 let ctx = canvas.getContext('2d');
                 ctx.drawImage(await loadImage(preview.files[0]), 0, 0, 678, 874, 0, 0, 678, 874);
-
-                let filename = `export${String(Math.random()).slice(2)}.png`;
-                fs.writeFileSync(filename, canvas.toBuffer());
-                fs.unlinkSync(preview.files[0]);
-                return {
-                    title: ' ',
-                    image: {url: 'attachment://'+filename},
-                    files: [filename],
-                    color: preview.color,
-                }
-            } catch(e) {
-                console.error(e);
-                return {title: 'failed to generate image'};
-            }
-        },
-
-        'artcut ': async (msg, arg) => {
-            try {
-                let args = arg.split('=');
-                let type = args[0][0].toLowerCase();
-                let att = 0;
-                if (args.length < 1 || !cuts.hasOwnProperty(type))
-                    return {title: 'you must provide the card type! example: <artcut a> where "a" is replaced with "a", "p", or "s" for attacks, powers, and skills respectively.'};
-                if (args.length > 1)
-                    att = parseInt(args[1])-1;
-                let art = msg.attachments.at(att);
-                if (art == undefined) return {title: 'you need to attach an image to cut!'};
-
-                let canvas = createCanvas(500,380);
-                let ctx = canvas.getContext('2d');
-                ctx.drawImage(await loadImage(art.url), 0, 0, 500, 380);
-                ctx.globalCompositeOperation = 'destination-out';
-                ctx.drawImage(await cuts[type], 0, 0);
-                let filename = `export${String(Math.random()).slice(2)}_p.png`;
-                fs.writeFileSync(filename, canvas.toBuffer());
-
-                let smallcanvas = createCanvas(250,190);
-                let smallctx = smallcanvas.getContext('2d');
-                smallctx.drawImage(canvas, 0, 0, 250, 190);
-                let filename2 = filename.replace('_p', '');
-                fs.writeFileSync(filename2, smallcanvas.toBuffer());
-
-                return {
-                    title: '500x380 →\n250x190 ↓',
-                    thumbnail: {url: 'attachment://'+filename, height: 50, width: 50},
-                    image: {url: 'attachment://'+filename2},
-                    files: [filename, filename2],
-                    color: 0,
-                };
+                fs.writeFileSync(preview.files[0], canvas.toBuffer());
+                return preview;
             } catch(e) {
                 console.error(e);
                 return {title: 'failed to generate image'};
