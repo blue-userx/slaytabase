@@ -122,6 +122,7 @@ __Commands:__
 <memes> help with the bot's meme generator
 <artpreview [card name]> takes your first attachment and uses it as card art for a card
 <c~artpreview [card name]> compares the art preview to the current card
+<cut~artpreview [card name]>
 <lists> links to lists of all items in the database
 <wiki> links to the homepage of the wiki
 `,
@@ -365,6 +366,19 @@ __Commands:__
                 let ctx = canvas.getContext('2d');
                 ctx.drawImage(await loadImage(preview.files[0]), 0, 0, 678, 874, 0, 0, 678, 874);
                 fs.writeFileSync(preview.files[0], canvas.toBuffer());
+                return preview;
+            } catch(e) {
+                console.error(e);
+                return {title: 'failed to generate image'};
+            }
+        },
+
+        'cut~artpreview ': async (msg, arg) => {
+            try {
+                let preview = await commands.prefix['c~artpreview '](msg, arg);
+                delete preview.image;
+                fs.unlinkSync(preview.files[0]);
+                preview.files = preview.files.slice(1);
                 return preview;
             } catch(e) {
                 console.error(e);
