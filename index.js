@@ -163,6 +163,7 @@ bot.on('interactionCreate', async interaction => {
             }
         }
         if (matches.length > 0) {
+            await interaction.deferReply();
             matches = [...new Set(matches)];
             if (matches.length > 25) matches = matches.slice(0,25);
             matches = matches.reduce((acc, curr, i) => {
