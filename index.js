@@ -163,6 +163,7 @@ bot.on('interactionCreate', async interaction => {
             }
         }
         if (matches.length > 0) {
+            matches = [...new Set(matches)];
             if (matches.length > 25) matches = matches.slice(0,25);
             matches = matches.reduce((acc, curr, i) => {
                 if (!(i % 5)) acc.push(matches.slice(i, i + 5));
