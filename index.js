@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder } from 'discord.js';
+import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } from 'discord.js';
 import Fuse from 'fuse.js'
 import fs from 'fs';
 import commands from './commands.js';
@@ -46,7 +46,10 @@ bot.once('ready', async () => {
                 option.setName('query')
                 .setDescription('Item name')
                 .setRequired(true)
-                .setAutocomplete(true))
+                .setAutocomplete(true)),
+        new ContextMenuCommandBuilder()
+            .setName('find items')
+            .setType(ApplicationCommandType.Message)
     ]);
 });
 
@@ -149,6 +152,43 @@ bot.on('interactionCreate', async interaction => {
             name: `${i.item.name} (${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '')+' ' : ''}${i.item.itemType})${i.item.originalDescription ? ` - ${i.item.originalDescription.replaceAll('\n', ' ')}` : ''}`.slice(0,94) + ` (${String(Math.round((1 - i.score) * 100))}%)`,
             value: i.item.searchText.slice(0,100)//i.item.hasOwnProperty('id') ? i.item.id : i.item.name,
         })));
+    } else if (interaction.isMessageContextMenuCommand()) {
+        let words = fn.unPunctuate(interaction.targetMessage.content).split(' ');
+        let matches = [];
+        for (let i = 0; i < words.length; i++) {
+            for (let j = i; j < words.length && j < i + 3; j++) {
+                let query = words.slice(i, j+1).join(' ');
+                let exactMatch = search._docs.find(e => e.searchName == query);
+                if (exactMatch != undefined) matches.push(exactMatch.name);
+            }
+        }
+        if (matches.length > 0) {
+            if (matches.length > 25) matches = matches.slice(0,25);
+            matches = matches.reduce((acc, curr, i) => {
+                if (!(i % 5)) acc.push(matches.slice(i, i + 5));
+                return acc;
+            },[]);
+            interaction.reply({
+                content: `${interaction.targetMessage.url}\nFound the following item names on this message, click them to display info on them:`, ephemeral: true,
+                components: matches.map(row => new ActionRowBuilder().setComponents(
+                    row.map(match => new ButtonBuilder().setCustomId(`item${match.replace(/[^a-zA-Z' ']+/g, '').replaceAll(' ', '-')}`).setLabel(match).setStyle(ButtonStyle.Primary))
+                ))
+            });
+        } else {
+            interaction.reply({content: 'Couldn\'t find any item names on this message, sorry!', ephemeral: true});
+        }
+    } else if (interaction.isButton() && interaction.customId.startsWith('item')) {
+        await interaction.deferReply();
+        interaction.content = `<${interaction.customId.slice(4).replaceAll('-', ' ')}>`;
+        interaction.author = interaction.user;
+        let embeds = await getEmbeds(interaction);
+        await interaction.deleteReply();
+        if (embeds.length == 0) return;
+        await interaction.channel.send({
+            content: `${interaction.user} searched from ${interaction.message ? interaction.message.content.split('\n')[0] : '?'}`,
+            embeds,
+            allowedMentions: {users: []}
+        });
     }
 });
 
