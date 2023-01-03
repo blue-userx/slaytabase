@@ -111,7 +111,12 @@ bot.on('messageCreate', async msg => {
 });
 
 bot.on('messageUpdate', async (oldMsg, newMsg) => {
-    let messages = await newMsg.channel.messages.fetch();
+    let messages;
+    try {
+        messages = await newMsg.channel.messages.fetch();
+    } catch(e) {
+        return;
+    }
     let reply = messages.find(i => i.author.id == bot.user.id && i.reference != null && i.reference.messageId == oldMsg.id);
     if (reply != undefined) {
         if (oldMsg.attachments.size > newMsg.attachments.size) return;
@@ -212,7 +217,7 @@ bot.on('interactionCreate', async interaction => {
                     content: `${interaction.user} searched from ${interaction.message ? interaction.message.content.split('\n')[0] : '?'}`,
                     embeds,
                     allowedMentions: {users: []}
-                });
+                }).catch(e => {});
             }
         }
     } catch (e) {
