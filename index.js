@@ -164,15 +164,16 @@ bot.on('interactionCreate', async interaction => {
                 }
             }
             if (matches.length > 0) {
-                await interaction.deferReply();
+                await interaction.deferReply({ephemeral: true});
                 matches = [...new Set(matches)];
                 if (matches.length > 25) matches = matches.slice(0,25);
                 matches = matches.reduce((acc, curr, i) => {
                     if (!(i % 5)) acc.push(matches.slice(i, i + 5));
                     return acc;
                 },[]);
-                interaction.reply({
-                    content: `${interaction.targetMessage.url}\nFound the following item names on this message, click them to display info on them:`, ephemeral: true,
+                interaction.editReply({
+                    content: `${interaction.targetMessage.url}\nFound the following item names on this message, click them to display info on them:`,
+                    ephemeral: true,
                     components: matches.map(row => new ActionRowBuilder().setComponents(
                         row.map(match => new ButtonBuilder().setCustomId(`item${match.replace(/[^a-zA-Z' ']+/g, '').replaceAll(' ', '-')}`).setLabel(match).setStyle(ButtonStyle.Primary))
                     ))
