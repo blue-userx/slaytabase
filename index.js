@@ -10,6 +10,7 @@ import emojify from './emojis.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
 import startDailyDiscussion from './dailyDiscussion.js';
+import { match } from 'assert';
 
 const bot = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.DirectMessages], partials: [Partials.Channel] });
 
@@ -164,34 +165,55 @@ bot.on('interactionCreate', async interaction => {
                 }
             }
             if (matches.length > 0) {
-                await interaction.deferReply();
+                await interaction.deferReply({ephemeral: true});
                 matches = [...new Set(matches)];
-                if (matches.length > 25) matches = matches.slice(0,25);
+                if (matches.length > 20) matches = matches.slice(0,20);
+                interaction.content = matches.slice(0,10).map(m => `<d~${m}>`).join('');
+                console.log(interaction.content)
+                interaction.author = interaction.user;
+                let embeds = await getEmbeds(interaction);
                 matches = matches.reduce((acc, curr, i) => {
                     if (!(i % 5)) acc.push(matches.slice(i, i + 5));
                     return acc;
                 },[]);
-                interaction.reply({
-                    content: `${interaction.targetMessage.url}\nFound the following item names on this message, click them to display info on them:`, ephemeral: true,
-                    components: matches.map(row => new ActionRowBuilder().setComponents(
-                        row.map(match => new ButtonBuilder().setCustomId(`item${match.replace(/[^a-zA-Z' ']+/g, '').replaceAll(' ', '-')}`).setLabel(match).setStyle(ButtonStyle.Primary))
-                    ))
+                await interaction.editReply({
+                    content: `${interaction.targetMessage.url}\nFound the following item names on this message, click them to select which to send info about, then click send to send:`, ephemeral: true,
+                    ephemeral: true,
+                    embeds,
+                    components: [
+                        ...matches.map(row => new ActionRowBuilder().setComponents(
+                            row.map(match => new ButtonBuilder().setCustomId(`item${match.replace(/[^a-zA-Z' ']+/g, '').replaceAll(' ', '-')}`).setLabel(match).setStyle(ButtonStyle.Secondary))
+                        )),
+                        new ActionRowBuilder().setComponents(new ButtonBuilder().setCustomId('send').setLabel('Send').setStyle(ButtonStyle.Success))
+                    ]
                 });
             } else {
                 interaction.reply({content: 'Couldn\'t find any item names on this message, sorry!', ephemeral: true});
             }
-        } else if (interaction.isButton() && interaction.customId.startsWith('item')) {
-            await interaction.deferReply();
-            interaction.content = `<${interaction.customId.slice(4).replaceAll('-', ' ')}>`;
-            interaction.author = interaction.user;
-            let embeds = await getEmbeds(interaction);
-            await interaction.deleteReply();
-            if (embeds.length == 0) return;
-            await interaction.channel.send({
-                content: `${interaction.user} searched from ${interaction.message ? interaction.message.content.split('\n')[0] : '?'}`,
-                embeds,
-                allowedMentions: {users: []}
-            });
+        } else if (interaction.isButton()) {
+            if (interaction.customId.startsWith('item')) {
+                if (interaction.message) {
+                    await interaction.update({components: interaction.message.components.map(row => ({...row, components: row.components.map(button => {
+                        if (button.customId == interaction.customId)
+                            button.data.style = button.style == ButtonStyle.Secondary ? ButtonStyle.Primary : ButtonStyle.Secondary;
+                        return ButtonBuilder.from(button.data);
+                    })}))});
+                }
+            } else if (interaction.customId == 'send') {
+                let items = interaction.message.components.map(i => i.components).flat(1).filter(i=>i.data.style == ButtonStyle.Primary).map(i => `<${i.data.custom_id.slice(4)}>`);
+                if (items.length > 10) return await interaction.reply({content: 'Please select at most 10 items!', ephemeral: true});
+                await interaction.deferReply();
+                interaction.content = items.join('');
+                interaction.author = interaction.user;
+                let embeds = await getEmbeds(interaction);
+                await interaction.deleteReply();
+                if (embeds === 0 || embeds.length == 0) return;
+                await interaction.channel.send({
+                    content: `${interaction.user} searched from ${interaction.message ? interaction.message.content.split('\n')[0] : '?'}`,
+                    embeds,
+                    allowedMentions: {users: []}
+                });
+            }
         }
     } catch (e) {
         console.error(e)
