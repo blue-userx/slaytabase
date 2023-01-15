@@ -22,7 +22,7 @@ const copyRecursiveSync = function(src, dest) {
     }
 };
 
-const exportImages = false;//process.argv.includes('-images');
+const exportImages = true;//process.argv.includes('-images');
 
 const width = 678;
 const height = 874;
@@ -198,7 +198,7 @@ async function exportMod(modPath){
         }
     
     console.log(`Compressing images...`);
-    let imagesToCompress = []//gatherImages(path);
+    let imagesToCompress = gatherImages(path);
     let imageN = 0;
     for (let image of imagesToCompress) {
         await new Promise(res => execFile('node_modules/pngquant-bin/vendor/pngquant.exe', ['--quality=20-50', '--force', image, '-o', image], res));
