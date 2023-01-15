@@ -33,10 +33,7 @@ async function embed(item, msg, embeds=[]) {
             break;
 
         case 'relic':
-            if (item.mod == 'slay-the-spire')
-                e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.mod}/${item.character[3]}${item.name.replaceAll(' ', '').replaceAll('\'', '')}.png`};
-            else
-                e.thumbnail = {url: `https://${wikis[item.mod][1]}.fandom.com/wiki/Special:Filepath/${searchize(item)}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.character[3]}${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`};
             e.color = item.character[1];
             e.description = ` ${item.tier} Relic / ${item.character[0]} / ${item.mod}\n\n${item.description}\n*${item.flavorText}*`;
             break;
@@ -94,6 +91,10 @@ async function embed(item, msg, embeds=[]) {
             break;
     }
 
+    if (e.hasOwnProperty('thumbnail') && e.thumbnail.url)
+        e.thumbnail.url = e.thumbnail.url.replaceAll(' ', '%20')
+    if (e.hasOwnProperty('image') && e.image.url)
+        e.image.url = e.image.url.replaceAll(' ', '%20')
     if (e.hasOwnProperty('url'))
         e.url += `?embnum=${embeds.length}`;
     if (item.hasOwnProperty('img'))
