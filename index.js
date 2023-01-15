@@ -227,10 +227,11 @@ bot.on('interactionCreate', async interaction => {
 
 async function main() {
     console.log('loading and parsing data...');
-    let data = JSON.parse(fs.readFileSync('./docs/altered/items.json'));
+    let data = JSON.parse(fs.readFileSync('./docs/data.json'));
     for (let itemType in data)
         for (let item of data[itemType]) {
             let character = characters[''];
+            if (itemType == 'mods') continue;
             if (item.type == 'Player' && item.name != 'The Snecko') continue;
             switch(itemType) {
                 case 'cards':
@@ -258,7 +259,6 @@ async function main() {
                 searchName: fn.unPunctuate(item.name),
                 searchId: item.hasOwnProperty('id') ? fn.unPunctuate(item.id) : undefined,
                 itemType: itemType.slice(0,-1),
-                mod: item.mod == '' ? 'slay-the-spire' : item.mod.toLowerCase(),
                 originalDescription: item.hasOwnProperty('description') ? item.description : undefined,
                 description: item.hasOwnProperty('description') ? keywordify(item.description, character) : undefined,
                 character,

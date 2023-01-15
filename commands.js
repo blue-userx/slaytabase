@@ -217,7 +217,7 @@ __Commands:__
 
         'lists': async () => ({
             title: "lists",
-            description: "export: https://oceanuwu.github.io/downfallbot/\nmanually added items: https://github.com/OceanUwU/downfallbot/blob/main/extraItems.json",
+            description: `export: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/downfallbot/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/downfallbot/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/downfallbot/blob/main/extraItems.js`,
         }),
 
         'wiki': async () => ({

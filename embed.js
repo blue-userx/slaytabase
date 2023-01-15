@@ -3,10 +3,6 @@ import wikiItems from './wikiItems.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
 
-const mods = {
-    'slay-the-spire': ['Slay the Spire', 'slay-the-spire', 'Standard', 4608066],
-    'downfall': ['Downfall', 'sts-downfall', 'Downfall', 5177858],
-};
 const searchize = item => {
     if (!item.hasOwnProperty('name'))
         return '';
@@ -16,13 +12,14 @@ const searchize = item => {
     return name.replaceAll(' ', '_').replaceAll('+', '').replaceAll('???', 'Unidentified');
 };
 
+let wikis = {'Slay the Spire': 'slay-the-spire', 'Downfall': 'sts-downfall'}
+
 async function embed(item, msg, embeds=[]) {
     let e = {};
     e.title = `${item.name}`;
-    if (!mods.hasOwnProperty(item.mod))
-        item.mod = 'downfall';
-    if (item.hasOwnProperty('mod'))
-        e.url = `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/${searchize(item)}`;
+    let wiki = wikis.hasOwnProperty(item.mod) ? wikis[item.mod] : false;
+    if (wiki)
+        e.url = `https://${wikis[item.mod]}.fandom.com/wiki/${searchize(item)}`;
     if (item.hasOwnProperty('query') && !item.query.includes(fn.unPunctuate(item.name)) && item.query != item.searchId)
         e.footer = {
             //iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=32`,
@@ -30,48 +27,48 @@ async function embed(item, msg, embeds=[]) {
         };
     switch (item.itemType) {
         case 'card':
-            e.thumbnail = {url: `${cfg.exportURL}/altered/img/cards/${item.color.slice(0,10)}-${item.name.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/cards/${item.color.slice(0,10)}-${item.name.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '')}.png`};
             e.color = item.character[1];
-            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.description.includes('Unplayable') ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]}\n\n${item.description}`;
+            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.description.includes('Unplayable') ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.mod}\n\n${item.description}`;
             break;
 
         case 'relic':
             if (item.mod == 'slay-the-spire')
-                e.thumbnail = {url: `${cfg.exportURL}/altered/img/relics/${item.mod}/${item.character[3]}${item.name.replaceAll(' ', '').replaceAll('\'', '')}.png`};
+                e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.mod}/${item.character[3]}${item.name.replaceAll(' ', '').replaceAll('\'', '')}.png`};
             else
-                e.thumbnail = {url: `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/Special:Filepath/${searchize(item)}.png`};
+                e.thumbnail = {url: `https://${wikis[item.mod][1]}.fandom.com/wiki/Special:Filepath/${searchize(item)}.png`};
             e.color = item.character[1];
-            e.description = ` ${item.tier} Relic / ${item.character[0]}\n\n${item.description}\n*${item.flavorText}*`;
+            e.description = ` ${item.tier} Relic / ${item.character[0]} / ${item.mod}\n\n${item.description}\n*${item.flavorText}*`;
             break;
             
         case 'potion':
-            e.url = `https://${mods[item.mod.toLowerCase()][1]}.fandom.com/wiki/Potions`;
-            e.thumbnail = {url: `${cfg.exportURL}/export/${item.mod}/potions/${item.name.replaceAll(' ', '')}.png`};
+            if (wiki) e.url = `https://${wikis[item.mod]}.fandom.com/wiki/Potions`;
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.name.replaceAll(' ', '')}.png`};
             if (item.character[0] != 'All')
                 e.color = item.character[1];
-            e.description = `${item.rarity} Potion / ${item.character[0]}\n\n${item.description}`;
+            e.description = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}`;
             break;
         
         case 'event':
-            e.color = mods[item.mod.toLowerCase()][3];
-            e.thumbnail = {url: `${cfg.exportURL}/altered/img/events/${item.name.toLowerCase().replaceAll(' ', '').replaceAll('?', '').replaceAll('!', '')}.jpg`};
-            e.description = `${mods[item.mod.toLowerCase()][2]} event / Act${item.acts.length > 1 ? 's' : ''} ${item.acts.join(', ')} / ${item.character[0]}${item.character == 'All' ? ' characters' : ''}\n\`\`\`ansi\n${item.colouredDesc.replaceAll('\n', '\n``````ansi\n')}\n\`\`\``;
+            e.color = 4608066;
+            e.thumbnail = {url: `${cfg.exportURL}/extraImages/events/${item.name.toLowerCase().replaceAll(' ', '').replaceAll('?', '').replaceAll('!', '')}.jpg`};
+            e.description = `Event / Act${item.acts.length > 1 ? 's' : ''} ${item.acts.join(', ')} / ${item.character[0]}${item.character == 'All' ? ' characters' : ''} / ${item.mod}\n\`\`\`ansi\n${item.colouredDesc.replaceAll('\n', '\n``````ansi\n')}\n\`\`\``;
             break;
             
         case 'creature':
-            e.thumbnail = {url: `${cfg.exportURL}/export/${item.mod}/creatures/${item.name.replaceAll(' ', '')}.png`};
-            e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP`;
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.name.replaceAll(' ', '')}.png`};
+            e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP / ${item.mod}`;
             break;
         
         case 'boss':
-            e.thumbnail = {url: `${cfg.exportURL}/altered/img/bosses/${item.name.replaceAll(' ', '').toLowerCase()}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/extraImages/bosses/${item.name.replaceAll(' ', '').toLowerCase()}.png`};
             e.color = item.character[1];
             e.description = item.description;
-            e.url = e.url.replace('_', '_(Act_')+'_Boss)';
+            if (wiki) e.url = e.url.replace('_', '_(Act_')+'_Boss)';
             break;
         
         case 'keyword':
-            e.description = `Keyword\n\n${item.description}`;
+            e.description = `Keyword / ${item.mod}\n\n${item.description}`;
             break;
         
         case 'command':
@@ -92,7 +89,7 @@ async function embed(item, msg, embeds=[]) {
         
         case 'fail':
             delete e.url;
-            e.description = `If you think this is a mistake, contact <@106068236000329728>\n\n${Object.values(mods).map(mod => `[Search for "${item.query.replaceAll('+', '')}" on the ${mod[0]} wiki](https://${mod[1]}.fandom.com/wiki/Special:Search?query=${item.query.replaceAll('+', '').replaceAll(' ', '+')})?`).join('\n')}`;
+            e.description = `If you think this is a mistake, contact <@106068236000329728>\n\n[Search for "${item.query.replaceAll('+', '')}" on the Slay the Spire wiki](https://slay-the-spire.fandom.com/wiki/Special:Search?query=${item.query.replaceAll('+', '').replaceAll(' ', '+')})?`;
             e.color = 0;
             break;
     }
