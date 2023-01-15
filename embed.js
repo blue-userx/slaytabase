@@ -29,7 +29,7 @@ async function embed(item, msg, embeds=[]) {
         case 'card':
             e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/cards/${item.color.slice(0,10)}-${item.name.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '')}.png`};
             e.color = item.character[1];
-            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.description.includes('Unplayable') ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.mod}\n\n${item.description}`;
+            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.mod}\n\n${item.description}`;
             break;
 
         case 'relic':

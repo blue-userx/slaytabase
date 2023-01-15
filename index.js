@@ -274,6 +274,7 @@ async function main() {
                     'description',
                     'tier',
                     'rarity',
+                    'mod',
                     'id',
                 ].map(key => {
                     if (Array.isArray(key)) {
