@@ -46,6 +46,11 @@ function useExtraData(data, dataToUse) {
         }
 }
 
+canvas.loadImageOld = canvas.loadImage;
+canvas.loadImage = async path => {
+    return await canvas.loadImageOld('data:image/png;base64,'+Buffer.from(fs.readFileSync(path)).toString('base64'));
+}
+
 async function exportMod(modPath){
     //load data
     console.log(`Starting export of ${modPath}...`);

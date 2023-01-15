@@ -263,7 +263,6 @@ async function main() {
                 description: item.hasOwnProperty('description') ? keywordify(item.description, character) : undefined,
                 character,
             };
-            newItem.character[0].replace('The ', '')
             newItem.searchText = fn.unPunctuate([
                     'name',
                     ['character', 0],
