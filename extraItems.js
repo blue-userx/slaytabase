@@ -1413,7 +1413,7 @@ export default {
     
                     {
                         "where": {"name": "Darkling Duo"},
-                        "to": {"name": "Darkling Duo (Trio)", "img": "/extraImages/cards/Colorless-DarklingDuo.png"}
+                        "to": {"name": "Darkling Duo (Trio)", "img": "/Downfall/cards/Colorless-DarklingDuo.png"}
                     },
     
                     {
