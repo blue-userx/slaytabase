@@ -9,7 +9,7 @@ invite the bot: https://discord.com/oauth2/authorize?client_id=96182444365357468
 5. on a profile where no beta art is enabled, create an export and move the `export` directory it creates into `gamedata` in this repo
 6. (optional - do this if your mod has beta art for its cards) enable "Playtester Art Mode" in the slay the spire settings, then create another export and rename the `export` directory it creates to `betaartexport`, then move it into `gamedata` in this repo
 7. you may need to edit `extraItems.js` at this point
-8. (requires [node.js v16+](https://nodejs.org/en/download/)) run `npm install` then `node alterExport.js` (BE PREPARED FOR YOUR COMPUTER TO LAG FOR A MINUTE OR SO)
+8. (requires [node.js v16+](https://nodejs.org/en/download/)) run `npm install` then `node alterExport.js` (this can take a while)
 9. if the mod contains a character, add data about them to `characters.js`
 10. commit & push & make a pull request
 

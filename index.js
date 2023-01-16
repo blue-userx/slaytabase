@@ -97,7 +97,7 @@ function getFilesFromEmbeds(embeds) {
 const delfiles = files => files.forEach(file => fs.unlinkSync(file));
 
 bot.on('messageCreate', async msg => {
-    if (msg.content.includes('```java')) return;
+    if (msg.content.includes('```')) return;
     let embeds = await getEmbeds(msg);
     if (embeds === null)
         msg.reply('I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.').catch(e => {});
