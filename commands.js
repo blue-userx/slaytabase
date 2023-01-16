@@ -100,7 +100,7 @@ async function meme(msg, arg, options) {
 const commands =  {
     prefix: {
         help: () => ({
-            title: 'DownfallBot',
+            title: 'Slaytabase',
             description: `Search for an item with <item name>.
 If the result isn\'t what you were looking for, you can also include the following in your search query: character, item type (e.g. card, relic, potion), type (e.g. skill, elite), or text from its description.
 
@@ -124,7 +124,6 @@ __Commands:__
 <c~artpreview [card name]> compares the art preview to the current card
 <cut~artpreview [card name]>
 <lists> links to lists of all items in the database
-<wiki> links to the homepage of the wiki
 `,
             thumbnail: {url: bot.user.avatarURL()},
         }),
@@ -217,12 +216,7 @@ __Commands:__
 
         'lists': async () => ({
             title: "lists",
-            description: `export: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/downfallbot/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/downfallbot/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/downfallbot/blob/main/extraItems.js`,
-        }),
-
-        'wiki': async () => ({
-            title: "wiki",
-            url: "https://sts-downfall.fandom.com/wiki/Downfall_Wiki"
+            description: `export: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/slaytabase/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/slaytabase/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/slaytabase/blob/main/extraItems.js`,
         }),
 
         'searchtext ': async (msg, arg) => {

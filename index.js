@@ -29,7 +29,7 @@ search.add({
 export {bot, search};
 
 bot.once('ready', async () => {
-    bot.user.setActivity('Downfall | <help>');
+    bot.user.setActivity('Slay the Spire | <help>');
 	console.log('connected to discord. ready!');
     await bot.users.fetch().catch(e => {});
     await bot.channels.fetch().catch(e => {});
