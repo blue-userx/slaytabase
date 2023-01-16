@@ -572,6 +572,15 @@ __List of memes:__
             texts: [[0, 373, 130, 202, 71, 'black']]
         }),
 
+        ' from slay the spire': async (msg, arg) => await meme(msg, arg, {
+            w: 680,
+            h: 538,
+            bg: 'fromsts.png',
+            items: [0],
+            put: [[0, 234, 75, 137, 126]],
+            texts: [[0, 235, 352, 243, 47, 'black']]
+        }),
+
         ' speech bubble': async (msg, arg) => await meme(msg, arg, {
             w: 200,
             h: 200,
