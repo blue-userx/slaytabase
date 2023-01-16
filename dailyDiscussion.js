@@ -53,7 +53,7 @@ async function startThread() {
         let thread = await oldThread.parent.threads.create({name: `${itemTitle(item.item)} - Daily Discussion ${(new Date()).getDate()} ${(new Date()).toLocaleString('default', {month: 'long'}).slice(0, 3)}`})
 
         let possibleItems = search._docs
-            .filter(item => item.mod == 'downfall')
+            .filter(item => item.mod == 'Downfall')
             .filter(item => ['card', 'relic', 'potion', 'event', 'boss'].includes(item.itemType))
             .filter(item => !['Event', 'Special'].includes(item.rarity))
             .filter(item => item.tier != 'Special')

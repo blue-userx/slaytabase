@@ -420,6 +420,7 @@ __List of memes:__
 <the text here is made out of [text]>
 <sb [item]=[text in speech bubble]>
 <sb [item1]=[text1]=[item2]=[text2]>
+<[item] from slay the spire>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
