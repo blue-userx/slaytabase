@@ -1342,7 +1342,7 @@ export default {
                         "id": "champ:CounterPotion",
                         "name": "Brew of Sharpness",
                         "rarity": "Common",
-                        "description": "Gain 25 :Counter.",
+                        "description": "Gain 25 champ:Counter.",
                         "img": "/extraImages/potions/brewofsharpness.png"
                     },
                     
@@ -1350,7 +1350,7 @@ export default {
                         "id": "hexamod:SoulburnPotion",
                         "name": "Molotov",
                         "rarity": "Common",
-                        "description": "Apply 30 :Soulburn.",
+                        "description": "Apply 30 hexamod:Soulburn.",
                         "img": "/extraImages/potions/molotov.png"
                     },
                     
@@ -1374,7 +1374,7 @@ export default {
                         "id": "sneckomod:MuddlingPotion",
                         "name": "Spiked Energy Drink",
                         "rarity": "Common",
-                        "description": ":Muddle the 2 highest-cost cards in your hand. Cards :Muddled this way cannot cost 3.",
+                        "description": "sneckomod:Muddle the 2 highest-cost cards in your hand. Cards :Muddled this way cannot cost 3.",
                         "img": "/extraImages/potions/spikedenergydrink.png"
                     },
                     
@@ -1408,7 +1408,7 @@ export default {
                 "cards": [
                     {
                         "where": {"name": "Gremlin Dance"},
-                        "to": {"description": desc => desc.replace('Has a bonus effect based on which Gremlin you are.', 'If Sneaky: Draw 2 cards.\nIf Mad: Deals to ALL enemies.\nIf Shield: Gain 6 Block.\nIf Fat: Enemy loses 2 Strength this turn.\nIf Wizard: Gain 2 Wiz.')}
+                        "to": {"description": desc => desc.replace('Has a bonus effect based on which Gremlin you are.', 'If Sneaky: Draw 2 cards.\nIf Mad: Deals to ALL enemies.\nIf Shield: Gain 6 Block.\nIf Fat: Enemy loses 2 Strength this turn.\nIf Wizard: Gain 2 gremlin:Wiz.')}
                     },
     
                     {

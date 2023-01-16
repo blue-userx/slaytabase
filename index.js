@@ -287,7 +287,7 @@ async function main() {
                     else return '';
                 }).join(' '));
             if (newItem.description != null)
-                newItem.description = emojify(newItem.description, character);
+                newItem.description = keywordify(emojify(newItem.originalDescription, character));
             search.add(newItem);
         }
     console.log('parsed data, connecting to discord...');
