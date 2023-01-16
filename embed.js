@@ -91,9 +91,9 @@ async function embed(item, msg, embeds=[]) {
             break;
     }
 
-    if (e.hasOwnProperty('thumbnail') && e.thumbnail.url)
+    if (e.thumbnail && e.thumbnail.hasOwnProperty('url'))
         e.thumbnail.url = e.thumbnail.url.replaceAll(' ', '%20')
-    if (e.hasOwnProperty('image') && e.image.url)
+    if (e.image && e.image.url)
         e.image.url = e.image.url.replaceAll(' ', '%20')
     if (e.hasOwnProperty('url'))
         e.url += `?embnum=${embeds.length}`;
