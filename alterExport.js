@@ -166,6 +166,8 @@ async function exportMod(modPath){
             let ctx = canv.getContext('2d');
             let img = await canvas.loadImage(`${gameDataPath}relics/${imgPath}`);
             ctx.drawImage(img, (targetRelicSize-origRelicSize)/2, (targetRelicSize-origRelicSize)/2);
+            if (imgPath.includes('-'))
+                imgPath = imgPath.slice(imgPath.indexOf('-')+1);
             const out = fs.createWriteStream(`${path}relics/${imgPath}`);
             const stream = canv.createPNGStream();
             stream.pipe(out);

@@ -33,7 +33,7 @@ async function embed(item, msg, embeds=[]) {
             break;
 
         case 'relic':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.character[3]}${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`};
             e.color = item.character[1];
             e.description = ` ${item.tier} Relic / ${item.character[0]} / ${item.mod}\n\n${item.description}\n*${item.flavorText}*`;
             break;
