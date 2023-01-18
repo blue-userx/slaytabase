@@ -249,9 +249,10 @@ function gatherImages(path) {
 
 async function exportAll() {
     const isMod = n => !n.includes('.') && !['ModStSExporter', 'basemod', 'colors', 'extraImages'].includes(n);
-    for (let mod of fs.readdirSync('gamedata/export').filter(isMod)) {
-        await exportMod(mod);
-    }
+    if (!process.argv.includes('--collate'))
+        for (let mod of fs.readdirSync('gamedata/export').filter(isMod)) {
+            await exportMod(mod);
+        }
     console.log('Collating all items...');
     let fullData = {};
     let page = fs.readFileSync('gamedata/export/index.html', 'utf-8');

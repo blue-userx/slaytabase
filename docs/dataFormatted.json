@@ -2808,7 +2808,7 @@
             "rarity": "Basic",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 6 (9) damage.\nIf Sneaky: Draw 2 cards.\nIf Mad: Deals to ALL enemies.\nIf Shield: Gain 6 Block.\nIf Fat: Enemy loses 2 Strength this turn.\nIf Wizard: Gain 2 Wiz.",
+            "description": "Deal 6 (9) damage.\nIf Sneaky: Draw 2 cards.\nIf Mad: Deals to ALL enemies.\nIf Shield: Gain 6 Block.\nIf Fat: Enemy loses 2 Strength this turn.\nIf Wizard: Gain 2 gremlin:Wiz.",
             "mod": "Downfall"
         },
         {
@@ -10362,16 +10362,6 @@
             "mod": "The Unchained Mod"
         },
         {
-            "id": "theUnchainedMod:FullSwing",
-            "name": "Full Swing",
-            "color": "Unchained_orange_color",
-            "rarity": "Common",
-            "type": "Attack",
-            "cost": "1",
-            "description": "Deal 5 (6) damage. Deal 5 (6) damage to ALL enemies.",
-            "mod": "The Unchained Mod"
-        },
-        {
             "id": "theUnchainedMod:GlyphSwing",
             "name": "Glyph Swing",
             "color": "Unchained_orange_color",
@@ -10578,7 +10568,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Remove up to 12 (18) theunchainedmod:Relayed_Damage. Gain Vigor equal to the amount you removed.",
+            "description": "Gain 5 Vigor.\nRemove up to 10 (15) theunchainedmod:Relayed_Damage.\nGain Vigor equal to the amount you removed.",
             "mod": "The Unchained Mod"
         },
         {
@@ -10589,6 +10579,16 @@
             "type": "Power",
             "cost": "1",
             "description": " (Innate.)\nGain 9 theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage.",
+            "mod": "The Unchained Mod"
+        },
+        {
+            "id": "theUnchainedMod:FullSwing",
+            "name": "Full Swing",
+            "color": "Unchained_orange_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 5 (7) damage. Deal 5 (7) damage to ALL enemies.",
             "mod": "The Unchained Mod"
         },
         {
@@ -10658,7 +10658,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Gain [E] [E] ( [E]).\nGain 14 (11) theunchainedmod:Relayed_Damage.\nExhaust.",
+            "description": "Gain [E] [E] ( [E]).\nGain 14 theunchainedmod:Relayed_Damage.\nExhaust.",
             "mod": "The Unchained Mod"
         },
         {
@@ -10708,7 +10708,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 10 (15) damage. Ignores theunchainedmod:Defenses.",
+            "description": "Enemy loses 10 (15) HP.\nHP loss is affected by theunchainedmod:Damage_Modifiers.",
             "mod": "The Unchained Mod"
         },
         {
@@ -10798,7 +10798,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Enemy loses 4 (6) Strength this and next turn. Exhaust.",
+            "description": "Enemy loses 6 (8) Strength this and next turn. Exhaust.",
             "mod": "The Unchained Mod"
         },
         {
@@ -10818,7 +10818,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Apply 1 Vulnerable.\n1 Chain: Add a random  (upgraded ) common Attack to your hand.\nIt exhausts. It costs zero this turn.",
+            "description": "Apply 1 Vulnerable.\n1 Chain: Add a random  (upgraded ) common Attack to your hand.\nIt exhausts. It costs 0 this turn.",
             "mod": "The Unchained Mod"
         },
         {
@@ -10988,7 +10988,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 10 (14) theunchainedmod:Relay.\nEnemy loses HP equal to ALL damage done to HP and theunchainedmod:Relay.\nExhaust.",
+            "description": "Gain 10 (14) theunchainedmod:Relay.\nWhenever you take damage or damage is blocked by theunchainedmod:Relay, the enemy loses the same amount of HP.\nExhaust.",
             "mod": "The Unchained Mod"
         },
         {
@@ -13845,7 +13845,7 @@
             "name": "Totem Of Pain",
             "tier": "Uncommon",
             "pool": "Unchained_orange_color",
-            "description": "At the end of your turn, hit an enemy for ALL Relayed Damage you gained since last turn.",
+            "description": "At the end of your turn, hit a random enemy for ALL Relayed Damage you gained since last turn.",
             "flavorText": "When you listen close, you can hear the demon whisper: 'Sharing is caring'.",
             "mod": "The Unchained Mod"
         },
@@ -13863,7 +13863,7 @@
             "name": "Heart of the Underdog",
             "tier": "Rare",
             "pool": "Unchained_orange_color",
-            "description": "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies..",
+            "description": "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies.",
             "flavorText": "You feel it beat stronger whenever the odds are stacked against you.",
             "mod": "The Unchained Mod"
         },
@@ -13881,7 +13881,7 @@
             "name": "Polished Chains",
             "tier": "Boss",
             "pool": "Unchained_orange_color",
-            "description": "Replaces Rusted Chains. Every seventh card you play each combat costs zero.",
+            "description": "Replaces Rusted Chains. EVERY seventh card you play each combat costs zero.",
             "flavorText": "You can see your own reflection in these.",
             "mod": "The Unchained Mod"
         },
@@ -14483,7 +14483,7 @@
         },
         {
             "id": "theUnchainedMod:DancePotion",
-            "name": "Eau de Cologne",
+            "name": "Eau de Ballet",
             "rarity": "Rare",
             "description": "Add 2 Swirls into your hand.",
             "mod": "The Unchained Mod"
@@ -16194,8 +16194,8 @@
             "mod": "The Unchained Mod"
         },
         {
-            "name": "Defenses",
-            "description": "Block and ALL defensive Buffs that trigger when enemies are hit.",
+            "name": "Damage Modifiers",
+            "description": "All effects that influence Attack Damage.",
             "mod": "The Unchained Mod"
         },
         {
@@ -16210,12 +16210,12 @@
         },
         {
             "name": "Relay",
-            "description": "Prevents damage after Block.\nHalf of it is dealt to the Player in 2 turns as Relayed Damage. Relayed Damage cannot be blocked by Relay.",
+            "description": "Until next turn, prevents damage after Block.\nHalf of the damage prevented by Relay is dealt to the Player in 2 turns as Relayed Damage. Relayed Damage cannot be blocked by Relay.",
             "mod": "The Unchained Mod"
         },
         {
             "name": "Relayed Damage",
-            "description": "Damage that has been relayed. Half of it is dealt to the Player at the end of the next turn. Is not blocked by Relay.",
+            "description": "Damage that was prevented by Relay. Half of it is dealt to the Player at the end of the next turn. Is not blocked by Relay.",
             "mod": "The Unchained Mod"
         },
         {
@@ -16330,7 +16330,7 @@
                 "Champion's Belt",
                 "Orichalcum (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Ironclad1",
             "description": "Act 1 Boss\n\n**Synchronize** - Whenever Ironclad generates a Status card, a duplicate is added into your discard pile.\n\n**Cards**: Bash, Flawed, Doubt, Reckless Charge, Wild Strike(+), Defend, Power Through, Second Wind, Seeing Red, Immolate, Icky, True Grit+, Thunderclap+, Feel No Pain\n\n**Relics**: Art of War, Champion's Belt, Orichalcum (A19)"
         },
@@ -16372,7 +16372,7 @@
                 "Vajra",
                 "Du-Vu Doll (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Ironclad2",
             "description": "Act 2 Boss\n\n**Feeding Frenzy** - Ironclad's Reaper foes not Exhaust and targets ALL Mushrooms. When Ironclad kills a Mushroom, he gains 1 Strength.\n\n**Cards**: Twin Strike, Feed, Clothesline, Fungus Among Us, Ghostly Armor+, Hemokinesis, Reaper, Defend, Haunted, Swift Strike, Heavy Blade, Clumsy, Bloodletting, Headbutt, Flame Barrier+, Inflame(+), Strike\n\n**Relics**: Red Skull, Magic Flower, Vajra, Du-Vu Doll (A19)\n\n**Unique Cards**:\nFungus Among Us - Kill all Mushrooms. Heal HP equal to their remaining HP. Summon two Mushrooms."
         },
@@ -16404,7 +16404,7 @@
                 "Horn Cleat",
                 "Self-Forming Clay (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Ironclad3",
             "description": "Act 3 Boss\n\n**Bastion** - Ironclad begins the fight with a Fortification, which will grant him 10 block each turn. When the Fortification has been destroyed, Ironclad loses Barricade, but gains 5 Strength at the start of each turn.\n\n**Cards**: Feel No Pain, Impervious, Intimidate, Flame Barrier(+), Body Slam, Clumsy, Entrench, Metallicize, Decay, Power Through, Second Wind, Ghostly Armor\n\n**Relics**: Odd Mushroom, Torii, Cursed Key, Horn Cleat, Self-Forming Clay (A19)"
         },
@@ -16440,7 +16440,7 @@
                 "Twisted Funnel",
                 "Lantern (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Silent1",
             "description": "Act 1 Boss\n\n**Warning: Highly Toxic** - Poison is blockable and deals damage at end of turn. Receive an Antidote at the start of combat.\n\n**Cards**: Crippling Cloud, Survivor, Burst, Poisoned Stab, Dodge and Roll, Strike, Bane(+), Defend, Deflect, Footwork, Noxious Fumes, Deadly Poison\n\n**Relics**: Horn Cleat, Twisted Funnel, Lantern (A19)\n\n**Unique Cards**:\nAntidote - Lose all Poison."
         },
@@ -16473,7 +16473,7 @@
                 "Bag of Marbles",
                 "Oddly Smooth Stone (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Silent2",
             "description": "Act 2 Boss\n\n**Seeing Double** - At the start of each turn, a mirror image of Silent will hide her real location. Attacking silent or the mirror removes it from combat for the turn.\n\n**Cards**: After Image+, Backstab, Doppelganger+, Nightmare, Deflect(+), J.A.X.+, Dagger Spray, Decay, Outmaneuver, Flying Knee, Blur, Footwork, Leg Sweep, Riddle with Holes\n\n**Relics**: Paper Krane, Anchor, Bag of Marbles, Oddly Smooth Stone (A19)"
         },
@@ -16510,7 +16510,7 @@
                 "Ornamental Fan",
                 "Kunai (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Silent3",
             "description": "Act 3 Boss\n\n**Bag of Knives** - The first time you play a card that costs 2 or more each turn, Silent gains 2 Shivs.\n\n**Cards**: Predator, Flying Knee, Burst, Flechettes, Leg Sweep, Cloak and Dagger, Neutralize, Blur, Endless Agony, Finisher+, Defend, Blade Dance -> Shiv, Sucker Punch, Dagger Spray, Piercing Wail, After Image, Dash\n\n**Relics**: Mummified Hand, Fusion Hammer, Shuriken, Ornamental Fan, Kunai (A19)"
         },
@@ -16540,7 +16540,7 @@
                 "Fossilized Helix",
                 "Symbiotic Virus (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Defect1",
             "description": "Act 1 Boss\n\n**Energy Thief** - Whenever Defect generates a Void, it goes to the top of your draw pile.\n\n**Cards**: Buffer, Doom and Gloom(+), Shame, Steam Barrier, Defend, Aged, Turbo+, Sunder, Defend, Strike, Core Surge, Equilibrium\n\n**Relics**: Clockwork souvenir, Fossilized Helix, Symbiotic Virus (A19)"
         },
@@ -16576,7 +16576,7 @@
                 "Kunai",
                 "Ginger (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Defect2",
             "description": "Act 2 Boss\n\n**Ancient Construct** - Begins the fight with 2 Bronze Orb minions. Gains 1 Artifact at the end of its turn if it did not already have Artifact.\n\n**Cards**: Boot Sequence, Claw, Machine Learning+, Leap, Cold Snap+, Panic Button, Strike, Reprogram, Swift Strike, Rebound, Charge Battery, Genetic Algorithm+, Shame, Hyperbeam(+), Flawed, Defend, Clumsy\n\n**Relics**: Turnip, Red Mask, Kunai, Ginger (A19)"
         },
@@ -16608,7 +16608,7 @@
                 "Data Disk",
                 "Art of War (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Defect3",
             "description": "Act 3 Boss\n\n**Unbiased Cognision** - Whenever you play a Power card, Defect gains 1 Focus.\n\n**Cards**: Rainbow, Reinforced Body, Charge Battery, Zap+, Dualcast, Multi-Cast, Cold Snap, Barrage+, Leap, Storm, Defragment(+), Blind\n\n**Relics**: Coffee Dripper, Fossilized Helix, Lantern, Data Disk, Art of War (A19)"
         },
@@ -16637,7 +16637,7 @@
                 "Cloak Clasp",
                 "Mercury Hourglass (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Watcher1",
             "description": "Act 1 Boss\n\n**Unbridled Rage** - At the end of her turn, if Watcher is at or below 50% HP, she enters Wrath. Watcher's Wrath increases damage dealt and received by 50% instead of 100%.\n\n**Cards**: Wallop(+), Halt, Defend+, Clumsy, Sands of Time, Talk to the Hand, Crush Joints, Panacea, Fasting, Regret, Parasite\n\n**Relics**: Bag of Preparation, Cloak Clasp, Mercury Hourglass (A19)"
         },
@@ -16672,7 +16672,7 @@
                 "Oddly Smooth Stone",
                 "Enchiridion (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Watcher2",
             "description": "Act 2 Boss\n\n**Blasphemer's Demise** - When Watcher loses 150 more HP, apply -4 Strength to her when she next enters Divinity or plays Ragnarok.\n\n**Cards**: Like Water, Defend, Ragnarok+, Strike, Follow-Up, Wave of the Hand, Defend+, Wallop+, Blasphemy+, Flying Sleeves+, Wish(+) -> Become Almighty(+), Tranquility+, Vigilance, Empty Body, Wish -> Live Forever, Consecrate+\n\n**Relics**: Incense Burner, Teardrop Locket, Oddly Smooth Stone, Enchiridion (A19)"
         },
@@ -16706,7 +16706,7 @@
                 "Thread and Needle",
                 "Damaru (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Watcher3",
             "description": "Act 3 Boss\n\n** Fleeting Faith** - Watcher gains 1 Mantra whenever you play a card. Watcher loses 5 Mantra at the start of her turn. Watcher does not exit Divinity at the end of her turn.\n\n**Cards**: Wish -> Live Forever, Good Instincts, Shame, Wave of the Hand, Swivel, Blind, Signature Move, Conjure Blade -> Expunger, Sanctity, Protect+, Empty Fist(+), Normality, Strike, Devotion\n\n**Relics**: Velvet Choker, Torii, Captain's Wheel, Thread and Needle, Damaru (A19)"
         },
@@ -16735,7 +16735,7 @@
                 "The Abacus",
                 "Orichalcum (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Hermit1",
             "description": "Act 1 Boss\n\n**Deadly Focus ** - Hermit has Concentration, which adds special Dead On effects to his cards. Dealing 10 unblocked damage to him breaks the concentration, causing his cards to lose their Dead On effects.\n\n**Cards**: Headshot, Defend, Injury, Itchy Trigger, Strike, Ghostly Presence, Dive(+), Lone Wolf, Roughhouse, Deadeye\n\n**Relics**: Calipers, Oddly Smooth Stone, The Abacus, Orichalcum (A19)"
         },
@@ -16766,7 +16766,7 @@
                 "Philosopher's Stone",
                 "Pen Nib"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Hermit2",
             "description": "Act 2 Boss\n\n**Wheel of Fortune** - Whenever you strike Hermit with an Attack, its leftmost card is discarded and it draws a card. Every 6 times this happens, Hermit gains 1 Strength.\n\n**Cards**: Showdown+, Strike+, Strike, Defend, Desperado, Wide Open+, Hole Up, Flash Powder(+), Itchy Trigger, Hand of Greed, Virtue+, Maintenance+, Necronomicurse\n\n**Relics**: Necronomicon, Philosopher's Stone, Pen Nib"
         },
@@ -16806,7 +16806,7 @@
                 "Calling Bell",
                 "Orichalcum (A19)"
             ],
-            "mod": "downfall",
+            "mod": "Downfall",
             "id": "downfall:Hermit3",
             "description": "Act 3 Boss\n\n**Doomsday** - At the start of your turn, gain an Impending Doom with Retain.\n\n**Cards**: Covet+, Defend, Pain, Clumsy, Spite, Misfire, Glare, Ghostly Presence, Master of Strategy, Bandage Up, Lone Wolf, Wide Open, Malice, Spray n' Pray, Enervate, Low Profile, Doubt, Purgatory, Grudge\n\n**Relics**: Charred Glove, Gremlin Visage, Art of War, Omamori, Calling Bell, Orichalcum (A19)"
         }
