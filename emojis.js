@@ -1,3 +1,4 @@
+const energies = ['Energy', '[E]', '[R]', '[G]', '[B]', '[W]'];
 const emojis = [
     ['Artifact', 'p_artifact:997273885995188335'],
     ['Block', 'p_block:997281211305181314'],
@@ -37,7 +38,8 @@ const emojis = [
 ];
 
 export default function emojify(text, character) {
-    text = text.replaceAll('Energy', `${character[2]}`);
+    for (let i of energies)
+        text = text.replaceAll(i, character[2]);
     for (let i of emojis)
         text = text.replaceAll(i[0], i.length > 2 ? `<:${i[1]}>` : `${i[0]} <:${i[1]}>`);
     return text;

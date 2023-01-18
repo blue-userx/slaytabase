@@ -4,6 +4,9 @@ import { createCanvas, loadImage } from 'canvas';
 import drawText from 'node-canvas-text';
 import opentype from 'opentype.js';
 import { Gif } from 'make-a-gif'
+import { fmFunc } from 'calculator-by-str';
+import { plot } from 'plot';
+import '@plotex/render-image';
 import fs from 'fs';
 import fn from './fn.js';
 import embed from './embed.js';
@@ -99,8 +102,8 @@ async function meme(msg, arg, options) {
 
 const commands =  {
     prefix: {
-        help: () => ({
-            title: 'Slaytabase',
+        help: msg => ({
+            title: msg.client.user.username,
             description: `Search for an item with <item name>.
 If the result isn\'t what you were looking for, you can also include the following in your search query: character, item type (e.g. card, relic, potion), type (e.g. skill, elite), or text from its description.
 
@@ -117,6 +120,8 @@ __Commands:__
 - search query may include the following:
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
+<calc [equation]> https://www.npmjs.com/package/calculator-by-str
+<plot [equation] [args]> - type <plot help> for more information
 <choose [word1 word2 word3...]> chooses one of the specified words for you at random
 <rps [rock|paper|scissors]> lets you play a game of rock paper scissors with me!
 <memes> help with the bot's meme generator
@@ -560,6 +565,56 @@ __List of memes:__
                 options.texts.push([2*i+1, 17+xOffset, 13, 164, 31, 'black']);
             }
             return await meme(msg, oa, options);
+        },
+
+        'calc ': async (msg, _, __, oa) => {
+            return {
+                title: ' ',
+                description: oa.split(',').map(eq => `${eq} = ${fmFunc(eq)}`).join('\n'),
+            }
+        },
+
+        'plot ': async (msg, arg, _, oa) => {
+            if (arg == 'help') {
+                return {
+                    title: 'plot help',
+                    description: 'example: <plot y=x*(x+7)/2+12 minx=0 maxx=20 interval=1 miny=0 maxy=300> would output the following:',
+                    image: {url: 'https://media.discordapp.net/attachments/959928848076660756/1065325760254070884/graph2131404879866825.png'}
+                }
+            }
+            let attrs = {};
+            let args = oa.toLowerCase().split(' ');
+            for (let i of args.slice(1)) {
+                if (!i.includes('=')) return {title: 'invalid arguments'};
+                let parts = i.split('=');
+                attrs[parts[0]] = Number(parts[1]);
+                if (Number.isNaN(attrs[parts[1]])) return {title: 'invalid number'};
+            }
+            for (let i of ['minx', 'maxx', 'interval', 'miny', 'maxy']) if (!attrs.hasOwnProperty(i)) return {title: `missing "${i}" argument`};
+            let numPoints = (attrs.maxx-attrs.minx)/attrs.interval;
+            if (numPoints < 1 || numPoints > 1000) return {title: 'must graph at least 1 point and at most 1001 points'};
+            let filename = `graph${String(Math.random()).slice(2)}.png`;
+            let equation = args[0];
+            if (equation.includes('=')) equation = equation.slice(equation.indexOf('=')+1);
+            let points = [];
+            for (let x = attrs.minx; x <= attrs.maxx; x+=attrs.interval)
+                points.push({x: x, y: fmFunc(equation.replaceAll('x', x))});
+            await plot(points, {
+                title: {
+                    text: "y = "+equation,
+                    align: 'center',
+                    floating: true
+                },
+                y: {
+                    min: attrs.miny,
+                    max: attrs.maxy,
+                }
+            }, {x: 'x', y: 'y'}).renderImage(filename);
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename]
+            }
         },
     },
 

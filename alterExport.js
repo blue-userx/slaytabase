@@ -104,7 +104,7 @@ async function exportMod(modPath){
             canv = canvas.createCanvas(width * 2, height); //double-width canvas if there is an upgrade
             ctx = canv.getContext('2d');
         }
-        let cardPath = `${c.color.slice(0,10)}-${c.name.replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '')}`;
+        let cardPath = `${c.color.slice(0,10)}-${c.name.replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '').replaceAll('"', '')}`;
         let imgPath = `${gameDataPath}card-images/${cardPath}`;
         if (exportImages) {
             ctx.drawImage(await canvas.loadImage(imgPath+'.png'), 0, 0);
