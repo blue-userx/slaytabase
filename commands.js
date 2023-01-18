@@ -580,7 +580,7 @@ __List of memes:__
             if (arg == 'help') {
                 return {
                     title: 'plot help',
-                    description: 'example: <plot y=x*(x+7)/2+12 minx=0 maxx=20 interval=1 miny=0 maxy=300> would output the following:',
+                    description: 'example: <plot y=x*(x+7)/2+12 minx=0 maxx=20 interval=1> would output the following:',
                     image: {url: 'https://media.discordapp.net/attachments/959928848076660756/1065417596507275264/graph8854503956392445.png?width=720&height=540'}
                 }
             }
@@ -592,7 +592,7 @@ __List of memes:__
                 attrs[parts[0]] = Number(parts[1]);
                 if (Number.isNaN(attrs[parts[1]])) return {title: 'invalid number'};
             }
-            for (let i of ['minx', 'maxx', 'interval', 'miny', 'maxy']) if (!attrs.hasOwnProperty(i)) return {title: `missing "${i}" argument`};
+            for (let i of ['minx', 'maxx', 'interval']) if (!attrs.hasOwnProperty(i)) return {title: `missing "${i}" argument`};
             let numPoints = (attrs.maxx-attrs.minx)/attrs.interval;
             if (numPoints < 1 || numPoints > 1000) return {title: 'must graph at least 1 point and at most 1001 points'};
             let equation = args[0];
