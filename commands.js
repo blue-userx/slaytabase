@@ -5,6 +5,7 @@ import drawText from 'node-canvas-text';
 import opentype from 'opentype.js';
 import { Gif } from 'make-a-gif'
 import { fmFunc } from 'calculator-by-str';
+import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
 import { plot } from 'plot';
 import '@plotex/render-image';
 import fs from 'fs';
@@ -12,6 +13,7 @@ import fn from './fn.js';
 import embed from './embed.js';
 import cfg from './cfg.js';
 
+const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
 const delSearchLimit = 25;
 const font = opentype.loadSync('./memetemplates/Kreon-Regular.ttf');
 const masks = {};
@@ -579,7 +581,7 @@ __List of memes:__
                 return {
                     title: 'plot help',
                     description: 'example: <plot y=x*(x+7)/2+12 minx=0 maxx=20 interval=1 miny=0 maxy=300> would output the following:',
-                    image: {url: 'https://media.discordapp.net/attachments/959928848076660756/1065325760254070884/graph2131404879866825.png'}
+                    image: {url: 'https://media.discordapp.net/attachments/959928848076660756/1065417596507275264/graph8854503956392445.png?width=720&height=540'}
                 }
             }
             let attrs = {};
@@ -593,28 +595,29 @@ __List of memes:__
             for (let i of ['minx', 'maxx', 'interval', 'miny', 'maxy']) if (!attrs.hasOwnProperty(i)) return {title: `missing "${i}" argument`};
             let numPoints = (attrs.maxx-attrs.minx)/attrs.interval;
             if (numPoints < 1 || numPoints > 1000) return {title: 'must graph at least 1 point and at most 1001 points'};
-            let filename = `graph${String(Math.random()).slice(2)}.png`;
             let equation = args[0];
             if (equation.includes('=')) equation = equation.slice(equation.indexOf('=')+1);
             let points = [];
             for (let x = attrs.minx; x <= attrs.maxx; x+=attrs.interval)
                 points.push({x: x, y: fmFunc(equation.replaceAll('x', x))});
-            await plot(points, {
-                title: {
-                    text: "y = "+equation,
-                    align: 'center',
-                    floating: true
+            let filename = `graph${String(Math.random()).slice(2)}.png`;
+            let precision = Math.ceil(attrs.interval);
+            fs.writeFileSync(filename, await charter.renderToBuffer({
+                type: 'line',
+                data: {
+                    labels: points.map(p => Number(p.x.toPrecision(5))),
+                    datasets: [{
+                        label: "y = "+equation,
+                        data: points.map(p => p.y),
+                    }]
                 },
-                y: {
-                    min: attrs.miny,
-                    max: attrs.maxy,
-                }
-            }, {x: 'x', y: 'y'}).renderImage(filename);
+                options: {}
+            }));
             return {
                 title: ' ',
                 image: {url: 'attachment://'+filename},
                 files: [filename]
-            }
+            };
         },
     },
 
