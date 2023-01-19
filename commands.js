@@ -572,7 +572,7 @@ __List of memes:__
         'calc ': async (msg, _, __, oa) => {
             return {
                 title: ' ',
-                description: oa.split(',').map(eq => `${eq} = ${fmFunc(eq)}`).join('\n'),
+                description: oa.split(',').map(eq => `${eq.replaceAll('\\*', '*').replaceAll('*', '\\*')} = ${fmFunc(eq)}`).join('\n'),
             }
         },
 
