@@ -254,6 +254,10 @@ async function main() {
                     character = characters[item.character];
                     break;
             }
+            if (item.hasOwnProperty('altDescription')) {
+                item.description += `\n\nBranching upgrade: ${item.altDescription}`;
+                delete item.altDescription;
+            }
             let newItem = {
                 ...item,
                 searchName: fn.unPunctuate(item.name),
@@ -263,6 +267,7 @@ async function main() {
                 description: item.hasOwnProperty('description') ? keywordify(item.description, character) : undefined,
                 character,
             };
+            if (newItem.name == '') newItem.name = ' ';
             newItem.searchText = fn.unPunctuate([
                     'name',
                     ['character', 0],
@@ -275,6 +280,7 @@ async function main() {
                     'rarity',
                     'mod',
                     'id',
+                    'pack',
                 ].map(key => {
                     if (Array.isArray(key)) {
                         let look = newItem;

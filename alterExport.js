@@ -22,7 +22,7 @@ const copyRecursiveSync = function(src, dest) {
     }
 };
 
-const exportImages = true;//process.argv.includes('-images');
+const exportImages = !process.argv.includes('--no-images');
 
 const width = 678;
 const height = 874;
@@ -77,8 +77,8 @@ async function exportMod(modPath){
         for (let j of data[i])
             j.mod = mod;
     let path = `docs/${mod}/`;
-    if (fs.existsSync(path)) fs.rmSync(path, { recursive: true, force: true });
-    fs.mkdirSync(path);
+    if (exportImages && fs.existsSync(path)) fs.rmSync(path, { recursive: true, force: true });
+    if (!fs.existsSync(path)) fs.mkdirSync(path);
 
     if (extraData.hasOwnProperty(mod))
         useExtraData(data, extraData[mod].pre);
@@ -87,21 +87,23 @@ async function exportMod(modPath){
     console.log(`Combining card images...`);
     let cards = data.cards;
     let newCards = [];
-    fs.mkdirSync(`${path}cards`);
+    if (!fs.existsSync(`${path}cards`)) fs.mkdirSync(`${path}cards`);
     let n = 0;
     for (let c of cards) {
         n++;
         if (c.name.includes('+')) continue; //skip upgraded cards
+        if (c.name.endsWith('*')) continue; //skip alternate upgrades of cards
 
         let finish;
         let finished = new Promise(res => finish = res);
 
         let up = cards.find(e => e.name == c.name+'+' && e.color == c.color); //find upgraded version of card
+        let altUp = cards.find(e => e.name == c.name+'*' && e.color == c.color); //find upgraded version of card
 
         //create image of card next to its upgrade
         let canv, ctx;
         if (exportImages) {
-            canv = canvas.createCanvas(width * 2, height); //double-width canvas if there is an upgrade
+            canv = canvas.createCanvas(width * (altUp != undefined ? 3 : 2), height); //double-width canvas if there is an upgrade
             ctx = canv.getContext('2d');
         }
         let cardPath = `${c.color.slice(0,10)}-${c.name.replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '').replaceAll('"', '')}`;
@@ -135,6 +137,14 @@ async function exportMod(modPath){
             }
             c.description = c.description.replaceAll('([E]', '( [E]');
         }
+        if (altUp != undefined) {
+            if (exportImages)
+                ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? altUp.imgPath+'.png' : (imgPath.replace('export', 'betaartexport')+'Star.png')), width*2, 0);
+
+            //update card to include numbers from upgrade
+            if (c.cost != altUp.cost) c.cost += ` (alt: ${altUp.cost})`;
+            c.altDescription = altUp.description.replaceAll('([E]', '( [E]');
+        }
         if (exportImages) {
             //save image
             let out = fs.createWriteStream(`${path}cards/${cardPath}.png`);
@@ -157,7 +167,7 @@ async function exportMod(modPath){
                 j.mod = mod;
     }
 
-    if (fs.existsSync(`${gameDataPath}relics`)) {
+    if (exportImages && fs.existsSync(`${gameDataPath}relics`)) {
         console.log('\nCropping relics...');
         fs.mkdirSync(`${path}relics`);
         let relicDir = fs.readdirSync(`${gameDataPath}relics`).filter(n => n.includes('.png'));
@@ -173,11 +183,12 @@ async function exportMod(modPath){
             stream.pipe(out);
         }
     }
-
-    console.log('Copying images...');
-    for (let i of ['creatures', 'potions'])
-        if (fs.existsSync(`${gameDataPath}${i}`))
-            copyRecursiveSync(`${gameDataPath}${i}`, `${path}${i}`);
+    if (exportImages) {
+        console.log('Copying images...');
+        for (let i of ['creatures', 'potions'])
+            if (fs.existsSync(`${gameDataPath}${i}`))
+                copyRecursiveSync(`${gameDataPath}${i}`, `${path}${i}`);
+    }
     
     console.log('Formatting extra items...');
     if (data.hasOwnProperty('bosss'))
@@ -203,19 +214,17 @@ async function exportMod(modPath){
             data.events[i] = event;
         }
     
-    console.log(`Compressing images...`);
-    let imagesToCompress = gatherImages(path);
-    let imageN = 0;
-    for (let image of imagesToCompress) {
-        await new Promise(res => execFile('node_modules/pngquant-bin/vendor/pngquant.exe', ['--quality=20-50', '--force', image, '-o', image], res));
-        process.stdout.clearLine(0);
-        process.stdout.cursorTo(0);
-        process.stdout.write(`${++imageN}/${imagesToCompress.length}`);
+    if (exportImages) {
+        console.log(`Compressing images...`);
+        let imagesToCompress = gatherImages(path);
+        let imageN = 0;
+        for (let image of imagesToCompress) {
+            await new Promise(res => execFile('node_modules/pngquant-bin/vendor/pngquant.exe', ['--quality=20-50', '--force', image, '-o', image], res));
+            process.stdout.clearLine(0);
+            process.stdout.cursorTo(0);
+            process.stdout.write(`${++imageN}/${imagesToCompress.length}`);
+        }
     }
-    //await new Promise((res, rej) => compressImages(path+"**/*.png", path, {statistic: false, compress_force: true}, false, {jpg: {}}, {png: { engine: "pngquant", command: ["--quality=20-50", "--force", "-o"] }}, {svg: {}}, {gif: {}}, (error, completed, statistic) => {
-    //    if (error) rej(error);
-    //    else res(completed);
-    //},));
 
     //save new data
     console.log(`\nExporting data for ${modPath}...`);
