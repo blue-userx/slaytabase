@@ -90,7 +90,6 @@ async function getEmbeds(msg) {
                         i.data.url += '?';
                 }
             }
-            console.log(embeds);
             return embeds; //
         } else return 0;
     } else return null; //msg.reply("I can only take up to 10 queries at a time!").catch(e => {});
