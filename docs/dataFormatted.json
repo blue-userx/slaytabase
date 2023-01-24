@@ -4008,7 +4008,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 1 - 27 (7 - 30 (14 - 34 (22 - 39 (31 - 45 (41 - 52 (52 - 60 (64 - 69 (77 - 79 (91 - 90 (106 - 102)))))))))) damage.\nCan be Upgraded any number of times.",
+            "description": "Deal 1 (7) (14) (22) (31) (41) (52) (64) (77) (91) - 27 (30) (34) (39) (45) (52) (60) (69) (79) (90) damage.\nCan be Upgraded any number of times.",
             "mod": "Downfall"
         },
         {
@@ -5538,7 +5538,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 3 damage 4 times.\nCan be upgraded any number of times.",
+            "description": "Deal 3 damage 4 (5) (6) (7) (8) (9) (10) (11) (12) (13) times.\nCan be upgraded any number of times.",
             "mod": "Downfall"
         },
         {
@@ -7068,7 +7068,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 12 (16 (21 (27 (34 (42 (51 (61 (72 (84 (97)))))))))) damage.\nCan be Upgraded any number of times.",
+            "description": "Deal 12 (16) (21) (27) (34) (42) (51) (61) (72) (84) damage.\nCan be Upgraded any number of times.",
             "mod": "Slay the Spire"
         },
         {
@@ -12424,7 +12424,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 10 damage.\nCan be Upgraded any number of times.",
+            "description": "Deal 10 (13) (16) (19) (22) (25) (28) (31) (34) (37) damage.\nCan be Upgraded any number of times.",
             "pack": "Blacksmith's Pack",
             "mod": "The Packmaster"
         },
@@ -12534,7 +12534,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "0",
-            "description": "Deal 4 damage to ALL enemies.\nanniv5:Evolves when you play an Attack.",
+            "description": "Deal 4 (5) (6) damage to ALL enemies.\nanniv5:Evolves when you play an Attack.",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -13062,7 +13062,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Apply 4 Poison.\nanniv5:Evolves when you apply a debuff.",
+            "description": "Apply 4 (5) (6) Poison.\nanniv5:Evolves when you apply a debuff.",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -14448,7 +14448,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Retain.\nGain [E]. When Retained, Upgrade this.\nCan be Upgraded any number of times.\nExhaust.",
+            "description": "Retain.\nGain  (2 )  (3 )  (4 )  (5 )  (6 )  (7 )  (8 )  (9 )  (10 ) [E]. When Retained, Upgrade this.\nCan be Upgraded any number of times.\nExhaust.",
             "pack": "Blacksmith's Pack",
             "mod": "The Packmaster"
         },
@@ -14536,7 +14536,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "3",
-            "description": "Gain 14 Block.\nDeal 10 damage.\nanniv5:Evolves when you gain Block.",
+            "description": "Gain 14 (17) (20) Block.\nDeal 10 damage.\nanniv5:Evolves when you gain Block.",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -15351,7 +15351,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 8 damage.\nanniv5:Sharpen 2.\nCan be Upgraded any number of times.",
+            "description": "Deal 8 (10) (13) (17) (22) (28) (35) (43) (52) (62) damage.\nanniv5:Sharpen 2 (3) (4) (6) (8) (11) (14) (18) (22) (27).\nCan be Upgraded any number of times.",
             "pack": "Claw Pack",
             "mod": "The Packmaster"
         },
@@ -15395,7 +15395,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Retain.\nGain 10 Block.\nanniv5:Evolves when you play a card that costs at least 2 .",
+            "description": "Retain.\nGain 10 (13) (16) Block.\nanniv5:Evolves when you play a card that costs at least 2 .",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -17232,7 +17232,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "3",
-            "description": "Deal 24 damage.\nApply 2 Vulnerable.\nanniv5:Evolves when you Exhaust a card.",
+            "description": "Deal 24 (28) (32) damage.\nApply 2 Vulnerable.\nanniv5:Evolves when you Exhaust a card.",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -24678,11 +24678,11 @@
         },
         {
             "name": "StSLib",
-            "version": "2.7.1",
+            "version": "2.7.0",
             "authors": [
                 "kiooeht"
             ],
-            "credits": "\n  Contributors: The_Evil_Pickle, Reina, Rin Camelia, erasels, EatYourBeetS, Jedi, Vex, Mistress Alison, Alchyr, Bryan, Pandemonium, NellyDevo \n  Translation: Jedi (Russian), Rita-B (ZHS), rainfoxest (ZHS, ZHT), Tsurumaki Maki (Korean), Celicath (Korean), Diamsword (French), red5h4d0w (French)",
+            "credits": "\n  Contributors: The_Evil_Pickle, Reina, Rin Camelia, erasels, EatYourBeetS, Jedi, Vex, Mistress Alison, Alchyr, Bryan, Pandemonium \n  Translation: Jedi (Russian), Rita-B (ZHS), rainfoxest (ZHS, ZHT), Tsurumaki Maki (Korean), Celicath (Korean), Diamsword (French), red5h4d0w (French)",
             "description": "A collection of keywords and mechanics for other Slay the Spire mods to use.",
             "mts_version": "3.24.0",
             "sts_version": "12-18-2022",

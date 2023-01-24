@@ -84,7 +84,7 @@ async function exportMod(modPath){
         useExtraData(data, extraData[mod].pre);
 
     //alter cards
-    console.log(`Combining card images...`);
+    console.log(`Combining cards...`);
     let cards = data.cards;
     let newCards = [];
     if (!fs.existsSync(`${path}cards`)) fs.mkdirSync(`${path}cards`);
@@ -136,14 +136,47 @@ async function exportMod(modPath){
                 }
             }
             c.description = c.description.replaceAll('([E]', '( [E]');
-        }
-        if (altUp != undefined) {
-            if (exportImages)
-                ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? altUp.imgPath+'.png' : (imgPath.replace('export', 'betaartexport')+'Star.png')), width*2, 0);
-
-            //update card to include numbers from upgrade
-            if (c.cost != altUp.cost) c.cost += ` (alt: ${altUp.cost})`;
-            c.altDescription = altUp.description.replaceAll('([E]', '( [E]');
+            if (altUp != undefined) {
+                if (exportImages)
+                    ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? altUp.imgPath+'.png' : (imgPath.replace('export', 'betaartexport')+'Star.png')), width*2, 0);
+    
+                //update card to include numbers from upgrade
+                if (c.cost != altUp.cost) c.cost += ` (alt: ${altUp.cost})`;
+                c.altDescription = altUp.description.replaceAll('([E]', '( [E]');
+            }
+        } else {
+            let multiUps = cards.filter(e => c.name != '' && e.name.startsWith(c.name) && e.name != c.name && e.name.includes('+') && !e.name.endsWith('+') && e.color == c.color); //find multi upgraded versions of card
+            if (multiUps.length > 0) {
+                let i = 0;
+                let size = Math.ceil(Math.sqrt(multiUps.length));
+                if (exportImages) {
+                    ctx.clearRect(width, 0, width, height);
+                    for (let multiUp of multiUps)
+                        ctx.drawImage(await canvas.loadImage(multiUp.hasOwnProperty('imgPath') ? multiUp.imgPath+'.png' : (imgPath.replace('export', 'betaartexport')+`Plus${multiUp.name[multiUp.name.length-1]}.png`)), width+(i%size)*(width/size), Math.floor(i++/size)*(height/size), width/size, height/size);
+                }
+                let diffs = multiUps.map(multiUp => diffWords(c.description, multiUp.description));
+                let diff = diffs[0];
+                c.description = '';
+                for (let i in diff) {
+                    i = Number(i);
+                    let word = diff[i];
+                    if (!word.hasOwnProperty('added'))
+                        c.description += word.value;
+                    else if (word.added)
+                        for (let cDiff of diffs) {
+                            let cWord = cDiff[i];
+                            c.description += ` ( ${cWord.value.includes(':') ? ' ' : ''}${cWord.value.replace('\n', '')}${cWord.value.includes(':') ? ' ' : ''} )${cWord.value.includes('\n') ? '\n' : ''}${cWord.value.endsWith(' ') ? ' ' : ''}`;
+                        }
+                            
+                    else if (word.removed) {
+                        if (!diff.hasOwnProperty(i+1) || !diff[i+1].added)
+                            c.description += `${word.value.startsWith('\n') ? '\n' : ''}~~- ${word.value.replaceAll('\n', '')} -~~${word.value.endsWith('\n') ? '\n' : ' '}`;
+                        else
+                            c.description += word.value;
+                    }
+                }
+                c.description = c.description.replaceAll('( ', '(').replaceAll(' )', ')').replaceAll('([E]', '( [E]');
+            }
         }
         if (exportImages) {
             //save image

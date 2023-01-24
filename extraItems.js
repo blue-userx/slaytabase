@@ -556,14 +556,7 @@ export default {
                 ],
             },
         
-            "edit": {
-                "cards": [
-                    {
-                        "where": {"name": "Searing Blow"},
-                        "to": {"description": "Deal 12 (16 (21 (27 (34 (42 (51 (61 (72 (84 (97)))))))))) damage.\nCan be Upgraded any number of times."}
-                    },
-                ],
-        
+            "edit": {        
                 "potions": [
                     {
                         "where": {"name": "Heart of Iron"},
@@ -1419,11 +1412,6 @@ export default {
                     {
                         "where": {"name": "Knowing Skull"},
                         "to": {"description": "Ethereal.\nChoose:\nSouls: Lose 3 HP. Gain 40 (50) Souls.\nSuccess: Lose 1 HP. Add a random (upgraded) Colorless card to your hand.\nA Pick Me Up: Lose 5 (2) HP. Gain a random Potion.\nExhaust."}
-                    },
-        
-                    {
-                        "where": {"name": "Dice Boulder"},
-                        "to": {"description": "Deal 1 - 27 (7 - 30 (14 - 34 (22 - 39 (31 - 45 (41 - 52 (52 - 60 (64 - 69 (77 - 79 (91 - 90 (106 - 102)))))))))) damage.\nCan be Upgraded any number of times."}
                     },
     
                     {
