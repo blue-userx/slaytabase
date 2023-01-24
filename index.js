@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } from 'discord.js';
+import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from 'discord.js';
 import Fuse from 'fuse.js'
 import fs from 'fs';
 import commands from './commands.js';
@@ -77,9 +77,20 @@ async function getEmbeds(msg) {
                             }};
                 console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                 let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
-                if (genEmbed != null)
+                if (genEmbed != null) {
                     embeds.push(genEmbed)
+                    if (genEmbed.data.hasOwnProperty('extra_embeds'))
+                        embeds = [...embeds, ...genEmbed.data.extra_embeds.map(e => EmbedBuilder.from(e.data))];
+                }
             }
+            for (let i of embeds) {
+                while (embeds.find(e => e != i && e.data.title == i.data.title) != undefined) {
+                    i.data.title += ' ';
+                    if (i.data.hasOwnProperty('url'))
+                        i.data.url += '?';
+                }
+            }
+            console.log(embeds);
             return embeds; //
         } else return 0;
     } else return null; //msg.reply("I can only take up to 10 queries at a time!").catch(e => {});

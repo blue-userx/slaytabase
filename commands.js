@@ -221,6 +221,35 @@ __Commands:__
             };
         },
 
+        'show10 ': async (msg, arg, args) => {
+            let searchQ = args.filter(a => !a.includes("=")).join(" ");
+            let results = search.search(searchQ);
+            let page = 0;
+            for (let i of args) {
+                if (i.includes("=")) {
+                    let prop = i.slice(0, i.indexOf("="));
+                    let val = i.slice(i.indexOf("=")+1);
+                    switch (prop) {
+                        case "cost":
+                            results = results.filter(r => r.item.hasOwnProperty('cost') && r.item.cost.toLowerCase().includes(val));
+                            break;
+                        
+                        case "page":
+                            page = Math.max(0, parseInt(val)-1);
+                            if (Number.isNaN(page)) page = 0;
+                            break;
+                    }
+                }
+            }
+            results = results.slice(10*page, 10*(page+1));
+            let embeds = await Promise.all(results.map(async item => {
+                let e = await embed({...item.item, score: item.score, query: arg});
+                e.data.footer = {text: `${String(Math.round((1 - item.score) * 100))}% sure`};
+                return e;
+            }));
+            return {...embeds[0].data, extra_embeds: embeds.slice(1)};
+        },
+
         'lists': async () => ({
             title: "lists",
             description: `export: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/slaytabase/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/slaytabase/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/slaytabase/blob/main/extraItems.js`,
