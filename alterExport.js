@@ -303,7 +303,7 @@ function gatherImages(path) {
 }
 
 async function exportAll() {
-    const isMod = n => !n.includes('.') && !['SlaytabaseModStSExporter', 'basemod', 'colors', 'extraImages'].includes(n);
+    const isMod = n => !n.endsWith('.json') && !n.endsWith('.html') && !n.endsWith('.css') && !n.endsWith('.md') && !['SlaytabaseModStSExporter', 'basemod', 'colors', 'extraImages'].includes(n);
     if (!process.argv.includes('--collate'))
         for (let mod of fs.readdirSync('gamedata/export').filter(isMod)) {
             await exportMod(mod);
