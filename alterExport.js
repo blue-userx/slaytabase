@@ -92,6 +92,7 @@ async function exportMod(modPath){
     let n = 0;
     for (let c of cards) {
         n++;
+        if (newCards.find(oc => oc.id == c.id && oc.name == c.name) != undefined) continue; //skip duplicate cards (happens massively with statuses for some reason)
         if (c.name.includes('+')) continue; //skip upgraded cards
         if (c.name.endsWith('*')) continue; //skip alternate upgrades of cards
 
@@ -107,7 +108,7 @@ async function exportMod(modPath){
             canv = canvas.createCanvas(width * (altUp != undefined ? 3 : 2), height); //double-width canvas if there is an upgrade
             ctx = canv.getContext('2d');
         }
-        let cardPath = `${c.color.slice(0,10)}-${c.name.replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '').replaceAll('"', '')}`;
+        let cardPath = `${c.color.slice(0,10)}-${c.name.replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '').replaceAll('"', '').replaceAll('/', '')}`;
         let imgPath = `${gameDataPath}card-images/${cardPath}`;
         if (exportImages) {
             ctx.drawImage(await canvas.loadImage(imgPath+'.png'), 0, 0);
@@ -302,7 +303,7 @@ function gatherImages(path) {
 }
 
 async function exportAll() {
-    const isMod = n => !n.includes('.') && !['ModStSExporter', 'basemod', 'colors', 'extraImages'].includes(n);
+    const isMod = n => !n.includes('.') && !['SlaytabaseModStSExporter', 'basemod', 'colors', 'extraImages'].includes(n);
     if (!process.argv.includes('--collate'))
         for (let mod of fs.readdirSync('gamedata/export').filter(isMod)) {
             await exportMod(mod);
@@ -319,7 +320,7 @@ async function exportAll() {
             }
         }
     }
-    page = page.slice(0, page.indexOf('<ul>')+4) + fs.readdirSync('docs').filter(isMod).map(mod => `<li><a href="${mod}">${mod}</a></li>`).join('') + page.slice(page.indexOf('</ul>'));
+    page = page.slice(0, page.indexOf('<ul>')+4) + fs.readdirSync('docs').filter(isMod).map(mod => `<li><a href="${mod}">${mod}</a></li>`).join('') + "</ul>Note: If you're the author of any of these mods and don't want its data in the Slaytabase, contact Ocean on the slay the spire discord.<br>" + page.slice(page.indexOf('</ul>')+5);
     fs.writeFileSync('docs/data.json', JSON.stringify(fullData));
     fs.writeFileSync('docs/dataFormatted.json', JSON.stringify(fullData, null, 4));
     fs.writeFileSync('docs/index.html', page);
