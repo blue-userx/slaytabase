@@ -36,7 +36,7 @@ export default {
     'Axe_color': ['The Axe', 6560793, '<:e_colorless:961808772609769512>'],
     'Constructmod': ['The Construct', 13092685, '<:e_colorless:961808772609769512>'],
     'The_cursed_purple': ['The Cursed', 4077675, '<:e_colorless:961808772609769512>'],
-    'Chrono_gold': ['The Disciple', 4077675, '<:e_colorless:961808772609769512>'],
+    'Chrono_gold': ['The Disciple', 10383892, '<:e_colorless:961808772609769512>'],
     'Forsaken_gold_color': ['The Forsaken', 9996855, '<:e_colorless:961808772609769512>'],
     'The_simpleton_blue': ['The Hayseed', 12554076, '<:e_colorless:961808772609769512>'],
     'Hierophant_gold_color': ['The Hierophant', 8416256, '<:e_colorless:961808772609769512>'],
