@@ -53,7 +53,8 @@ async function embed(item, msg, embeds=[]) {
             break;
             
         case 'creature':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.name.replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`};
+            console.log(e.thumbnail)
             e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP / ${item.mod}`;
             break;
         
