@@ -23,6 +23,7 @@ const copyRecursiveSync = function(src, dest) {
 };
 
 const exportImages = !process.argv.includes('--no-images');
+const betaPath = process.argv.includes('--betaless') ? 'export' : 'betaartexport';
 
 const width = 678;
 const height = 874;
@@ -111,11 +112,11 @@ async function exportMod(modPath){
         if (exportImages) {
             ctx.drawImage(await canvas.loadImage(imgPath+'.png'), 0, 0);
             if (up == undefined)
-                ctx.drawImage(await canvas.loadImage(imgPath.replace('export', 'betaartexport')+'.png'), width, 0);
+                ctx.drawImage(await canvas.loadImage(imgPath.replace('export', betaPath)+'.png'), width, 0);
         }
         if (up != undefined) {
             if (exportImages)
-                ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? up.imgPath+'.png' : (imgPath.replace('export', 'betaartexport')+'Plus.png')), width, 0);
+                ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? up.imgPath+'.png' : (imgPath.replace('export', betaPath)+'Plus.png')), width, 0);
 
             //update card to include numbers from upgrade
             if (c.cost != up.cost) c.cost = `${c.cost} (${up.cost})`;
@@ -138,7 +139,7 @@ async function exportMod(modPath){
             c.description = c.description.replaceAll('([E]', '( [E]');
             if (altUp != undefined) {
                 if (exportImages)
-                    ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? altUp.imgPath+'.png' : (imgPath.replace('export', 'betaartexport')+'Star.png')), width*2, 0);
+                    ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? altUp.imgPath+'.png' : (imgPath.replace('export', betaPath)+'Star.png')), width*2, 0);
     
                 //update card to include numbers from upgrade
                 if (c.cost != altUp.cost) c.cost += ` (alt: ${altUp.cost})`;
@@ -152,7 +153,7 @@ async function exportMod(modPath){
                 if (exportImages) {
                     ctx.clearRect(width, 0, width, height);
                     for (let multiUp of multiUps)
-                        ctx.drawImage(await canvas.loadImage(multiUp.hasOwnProperty('imgPath') ? multiUp.imgPath+'.png' : (imgPath.replace('export', 'betaartexport')+`Plus${multiUp.name[multiUp.name.length-1]}.png`)), width+(i%size)*(width/size), Math.floor(i++/size)*(height/size), width/size, height/size);
+                        ctx.drawImage(await canvas.loadImage(multiUp.hasOwnProperty('imgPath') ? multiUp.imgPath+'.png' : (imgPath.replace('export', betaPath)+`Plus${multiUp.name[multiUp.name.length-1]}.png`)), width+(i%size)*(width/size), Math.floor(i++/size)*(height/size), width/size, height/size);
                 }
                 let diffs = multiUps.map(multiUp => diffWords(c.description, multiUp.description));
                 let diff = diffs[0];
@@ -265,15 +266,24 @@ async function exportMod(modPath){
     page = page.replace('style.css', '../style.css');
     let lines = page.split('\n');
     for (let i in lines) {
+        let line = lines[i];
         if (lines[i].includes('Upgraded image')) {
             lines[i] = '';
         }
-        if (lines[i].startsWith('    <td><a href="card-images')) {
-            lines[i] = lines[i].replace('small-card-images', 'cards').replace('card-images', 'cards');
+        if (line.startsWith('    <td><a href="card-images')) {
+            lines[i] = line.replace('small-card-images', 'cards').replace('card-images', 'cards');
             lines[Number(i)+1] = '';
+        } else if (line.startsWith('    <td><a href="relics/popup/')) {
+            lines[i] = '    <td>'+line.slice(line.indexOf('">')+2,line.indexOf('</a>'))+'</td>'
+        } else if (line.startsWith('    <td><a href="relics/popup/')) {
+            lines[i] = '    <td>'+line.slice(line.indexOf('">')+2,line.indexOf('</a>'))+'</td>'
+        } else if (line.startsWith('    <td><img src="relics/')) {
+            let relicPath = line.slice(line.indexOf('/')+1,line.indexOf('" '))
+            if (relicPath.includes('-'))
+                lines[i] = '    <td><img src="relics/'+relicPath.slice(relicPath.indexOf('-')+1)+'" width="128" height="128"></td>';
         }
     }
-    page = lines.join('\n');
+    page = lines.join(' ').replaceAll('  ', '').replaceAll('\r', '').replaceAll('> <','><').replaceAll('>  <','><');
     fs.writeFileSync(`${path}index.html`, page);
     fs.writeFileSync(`${path}data.json`, JSON.stringify(data));
     console.log(`Done exporting ${modPath}!`);
