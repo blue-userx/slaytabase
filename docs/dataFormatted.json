@@ -33482,7 +33482,7 @@
             "rarity": "Special",
             "type": "Attack",
             "cost": "0",
-            "description": "Deal 2 (3) damage.\nanniv5:Sharpen 1 (2).\nExhaust.",
+            "description": "Deal 3 (5) damage.\nanniv5:Sharpen 2.\nExhaust.",
             "pack": "Claw Pack",
             "mod": "The Packmaster"
         },
@@ -33559,7 +33559,7 @@
             "rarity": "Special",
             "type": "Attack",
             "cost": "2",
-            "description": "Ethereal.\nDeal 20 (25) damage.\nExhaust.",
+            "description": "Ethereal.\nDeal 20 (25) damage ( to ALL enemies).\nExhaust.",
             "pack": "Downfall",
             "mod": "The Packmaster"
         },
@@ -33629,6 +33629,16 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:Ward",
+            "name": "Ward",
+            "color": "Colorless",
+            "rarity": "Special",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Gain 3 Block.\nExhaust.",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Weight",
             "name": "Weight",
             "color": "Colorless",
@@ -33687,176 +33697,6 @@
             "type": "Attack",
             "cost": "1",
             "description": "Deal 6 (9) damage.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:ArtAttackText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Attack",
-            "cost": "0",
-            "description": "Deal 12 damage.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:SurprisePackText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Draw 3 cards.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:InspirationText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Draw cards equal to the number of anniv5:Art Cards in your exhaust pile.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:HazardousStrikeText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Attack",
-            "cost": "0",
-            "description": "Deal 18 Damage.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:ViciousCycleText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Attack",
-            "cost": "0",
-            "description": "Deal 6 damage.\nDeal an additional 6 damage for each card ripped this turn.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:FlimsyBashText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Attack",
-            "cost": "0",
-            "description": "Deal 8 damage.\nApply 2 Vulnerable.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:TotalWeaknessText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Gain 6 Block.\nApply 2 Weak to ALL enemies.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:FragileShrugText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Gain 7 Block.\nDraw 1 card.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:ArtAttackText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Attack",
-            "cost": "0",
-            "description": "Deal 12 damage.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:SurprisePackText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Draw 3 cards.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:InspirationText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Draw cards equal to the number of anniv5:Art Cards in your exhaust pile.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:HazardousStrikeText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Attack",
-            "cost": "0",
-            "description": "Deal 26 Damage.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:ViciousCycleText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Attack",
-            "cost": "0",
-            "description": "Deal 8 damage.\nDeal an additional 8 damage for each card ripped this turn.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:FlimsyBashText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Attack",
-            "cost": "0",
-            "description": "Deal 10 damage.\nApply 3 Vulnerable.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:TotalWeaknessText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Gain 8 Block.\nApply 3 Weak to ALL enemies.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:FragileShrugText",
-            "name": "",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Gain 10 Block.\nDraw 1 card.",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:ArtAttackArt",
-            "name": "Art Attack",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Status",
-            "cost": "1 (0)",
-            "description": " ( Deal 12 damage.The anniv5:Art Card causes the target to lose 12 HP. )\n",
             "mod": "The Packmaster"
         },
         {
@@ -33959,26 +33799,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:FlimsyBashArt",
-            "name": "Flimsy Bash",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Status",
-            "cost": "2",
-            "description": " (Deal 10 damage.Apply 3 Vulnerable.)\n",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:FragileShrugArt",
-            "name": "Fragile Shrug",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Status",
-            "cost": "1",
-            "description": " (Gain 10 Block.Draw 1 card.\nWhen ripped, draw 1 card.)\n",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:GoldenRound",
             "name": "Golden Round",
             "color": "Packmaster_rainbow",
@@ -34012,16 +33832,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:HazardousStrikeArt",
-            "name": "Hazardous Strike",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Status",
-            "cost": "3",
-            "description": " (Deal 26 Damage.When ripped, exhaust 2 cards at random.)\n",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:HyperBlaster",
             "name": "Hyper Blaster",
             "color": "Packmaster_rainbow",
@@ -34044,16 +33854,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:InspirationArt",
-            "name": "Inspiration",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Status",
-            "cost": "0",
-            "description": " ( Draw cards equal to the number of anniv5:Art and Status Cards in your exhaust pile. )",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:MagicMissile",
             "name": "Magic Missile",
             "color": "Packmaster_rainbow",
@@ -34071,7 +33871,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "1 (0)",
-            "description": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand ( and Upgrade them).\nExhaust.",
+            "description": "Discard your hand, then choose 1 of 3 Packs. Add its cards to your hand.\nExhaust.",
             "mod": "The Packmaster"
         },
         {
@@ -34174,16 +33974,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:SurprisePackArt",
-            "name": "Surprise Pack",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Status",
-            "cost": "1",
-            "description": " (Draw 3 cards.When ripped,\ngain [E] [E].)\n",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:TimepieceTiara",
             "name": "Timepiece Tiara",
             "color": "Packmaster_rainbow",
@@ -34192,26 +33982,6 @@
             "cost": "0",
             "description": " (Innate.)\nGain 3 Strength every 12 cards you play.",
             "pack": "Monster Hunter",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:TotalWeaknessArt",
-            "name": "Total Weakness",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Status",
-            "cost": "2",
-            "description": " (Gain 8 Block.Apply 3 Weak to ALL enemies.)\n",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:ViciousCycleArt",
-            "name": "Vicious Cycle",
-            "color": "Packmaster_rainbow",
-            "rarity": "Special",
-            "type": "Status",
-            "cost": "1",
-            "description": " (Deal 8 damage.Deal an additional 8 damage for each card ripped this turn.)\n",
             "mod": "The Packmaster"
         },
         {
@@ -34256,6 +34026,17 @@
             "cost": "1",
             "description": "Gain 8 (11) Block.\nApply 2 Weak to any Poisoned enemies.",
             "pack": "Dimension Gate",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:WardGem",
+            "name": "Aquamarine",
+            "color": "Packmaster_rainbow",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "0",
+            "description": "anniv5:Gem ( (2 Uses)).\n\"Gain a Ward\"",
+            "pack": "Jeweler's Pack",
             "mod": "The Packmaster"
         },
         {
@@ -34309,7 +34090,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 12 Block.\n (Your Block is not removed at the start of your next turn.)\nExhaust.",
+            "description": "Gain 12 Block.\n (Gain 6 Block next turn.)\nExhaust.",
             "pack": "Blue's Brews",
             "mod": "The Packmaster"
         },
@@ -34402,6 +34183,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:ChitteringPunt",
+            "name": "Chittering Punt",
+            "color": "Packmaster_rainbow",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 9 (12) damage.\nChannel 1 anniv5:Crescent_Moon.",
+            "pack": "Witches Strike",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Clang",
             "name": "Clang",
             "color": "Packmaster_rainbow",
@@ -34452,19 +34244,8 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Ethereal.\nWhen this card is drawn, gain 9 (12) Block.",
+            "description": "Ethereal.\nWhen this card is drawn, gain 8 (11) Block.",
             "pack": "Alignment",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:CrystalMoonlight",
-            "name": "Crystal Moonlight",
-            "color": "Packmaster_rainbow",
-            "rarity": "Common",
-            "type": "Skill",
-            "cost": "1",
-            "description": "anniv5:Manifest a random orb.\nExhaust",
-            "pack": "Witches Strike",
             "mod": "The Packmaster"
         },
         {
@@ -34584,7 +34365,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Magic.\nDeal 5 (8) damage. Reduce the cost of a random Magic card in hand by 1 this turn.",
+            "description": "*Magic.\nDeal 5 (8) damage. Reduce the cost of a random Magic card in hand by 1 this turn.",
             "pack": "Meta",
             "mod": "The Packmaster"
         },
@@ -34612,7 +34393,7 @@
         },
         {
             "id": "anniv5:EternalStrike",
-            "name": "Eternal Strike",
+            "name": "Eternal Flame",
             "color": "Packmaster_rainbow",
             "rarity": "Common",
             "type": "Attack",
@@ -34694,7 +34475,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 9 (10) damage.\nApply 2 (3) anniv5:Distortion.",
+            "description": "Deal 9 (10) damage and apply 2 (3) anniv5:Distortion to a random enemy.",
             "pack": "Eldritch Horror",
             "mod": "The Packmaster"
         },
@@ -34738,7 +34519,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 9 (12) damage.\nRoll a anniv5:D6 (D8).",
+            "description": "Deal 10 (13) damage.\nRoll a anniv5:D6.",
             "pack": "Board Games",
             "mod": "The Packmaster"
         },
@@ -34784,6 +34565,17 @@
             "cost": "1",
             "description": "Gain 7 (10) Block.\nDraw 1 card.\nWhen ripped, draw 1 card.",
             "pack": "Rip",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:ShivGem",
+            "name": "Fragmented Gem",
+            "color": "Packmaster_rainbow",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "0",
+            "description": "anniv5:Gem ( (2 Uses)).\n\"Gain a Shiv\"",
+            "pack": "Jeweler's Pack",
             "mod": "The Packmaster"
         },
         {
@@ -35145,7 +34937,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 12 damage.\nApply 3 (6) Poison and 1 (2) Vulnerable.",
+            "description": "Deal 12 damage.\nApply 5 (8) Poison and 1 (2) Vulnerable.",
             "pack": "Dimension Gate",
             "mod": "The Packmaster"
         },
@@ -35233,7 +35025,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Discover a (an)  (upgraded ) common card from other packs you've selected.",
+            "description": "Discover a (an)  (Upgraded ) common card from other Packs you've selected.",
             "pack": "Creativity",
             "mod": "The Packmaster"
         },
@@ -35309,8 +35101,8 @@
             "color": "Packmaster_rainbow",
             "rarity": "Common",
             "type": "Skill",
-            "cost": "X",
-            "description": "Retain.\nanniv5:Hoard 3: Gain 18 (24) Block.\nstslib:Persist 2 .",
+            "cost": "1",
+            "description": "Retain.\nAfter 3 more  plays, gain 18 (24) Block.\nstslib:Persist 3.",
             "pack": "For The Content",
             "mod": "The Packmaster"
         },
@@ -35321,7 +35113,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Ethereal.\nWhen this card is drawn, a random enemy loses 10 (14) HP.",
+            "description": "Ethereal.\nWhen this card is drawn, a random enemy loses 10 (13) HP.",
             "pack": "Alignment",
             "mod": "The Packmaster"
         },
@@ -35606,8 +35398,8 @@
             "color": "Packmaster_rainbow",
             "rarity": "Common",
             "type": "Skill",
-            "cost": "1 (0)",
-            "description": "Roll 2 anniv5:D6.",
+            "cost": "2",
+            "description": "Gain 10 (14) Block.\nRoll 2 anniv5:D6.",
             "pack": "Board Games",
             "mod": "The Packmaster"
         },
@@ -35631,6 +35423,17 @@
             "cost": "0",
             "description": "Deal 4 (5) (6) damage to ALL enemies.\nanniv5:Evolves when you play an Attack.",
             "pack": "Ring of Pain",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:TempStrengthGem",
+            "name": "Ruby",
+            "color": "Packmaster_rainbow",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "0",
+            "description": "anniv5:Gem ( (2 Uses)).\n\"Gain 2 Temp. Strength\"",
+            "pack": "Jeweler's Pack",
             "mod": "The Packmaster"
         },
         {
@@ -35690,7 +35493,7 @@
         },
         {
             "id": "anniv5:ShadowStrike",
-            "name": "Shadow Strike",
+            "name": "Shadow Attack",
             "color": "Packmaster_rainbow",
             "rarity": "Common",
             "type": "Attack",
@@ -35728,7 +35531,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "Unplayable. Retain.\nWhen you draw this card, upgrade another (ALL) random (cards) ~~- card  -~~ in your hand for the rest of the combat.",
+            "description": "Unplayable. Retain.\nWhen you draw this card, Upgrade another (ALL) random (cards) ~~- card  -~~ in your hand for the rest of the combat.",
             "pack": "Quiet",
             "mod": "The Packmaster"
         },
@@ -35773,7 +35576,7 @@
             "type": "Skill",
             "cost": "0",
             "description": "Next turn, draw 0 (1) to 3 additional cards.",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -35827,7 +35630,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Create an Insight, Smite or Safety in hand. It draws a card.  (Do it again.)\n",
+            "description": "Create a Smite or Safety in hand. It draws a card.  (Do it again.)\n",
             "pack": "Creativity",
             "mod": "The Packmaster"
         },
@@ -36026,7 +35829,7 @@
             "type": "Attack",
             "cost": "2",
             "description": "Deal 6 (12) to 16 (18) damage to ALL enemies.\nRandomize the cost of 2 random cards.",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -36080,7 +35883,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "X",
-            "description": "Deal 6 (8) damage to a random enemy\nX times.\nanniv5:Reroll.",
+            "description": "Deal 7 (10) damage to a random enemy\nX times.\nanniv5:Reroll.",
             "pack": "Board Games",
             "mod": "The Packmaster"
         },
@@ -36146,7 +35949,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 7 (9) damage.\nWhenever you play an Attack this turn, gain 4 (6) Block.",
+            "description": "Deal 7 (8) damage.\nWhenever you play an Attack this turn, gain 3 (5) Block.",
             "pack": "Aggression",
             "mod": "The Packmaster"
         },
@@ -36191,7 +35994,7 @@
             "type": "Attack",
             "cost": "1",
             "description": "Deal 9 (12) damage to a random enemy for each enemy in combat.",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -36338,6 +36141,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:RetainGem",
+            "name": "Amber",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "",
+            "description": "~~- Unplayable  -~~ anniv5:Gem ( (2 Uses)).\n\"Card gains Retain\"",
+            "pack": "Jeweler's Pack",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Ambition",
             "name": "Ambition",
             "color": "Packmaster_rainbow",
@@ -36415,17 +36229,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:Attach",
-            "name": "Attach",
-            "color": "Packmaster_rainbow",
-            "rarity": "Uncommon",
-            "type": "Skill",
-            "cost": "1 (0)",
-            "description": "Choose a card in hand to anniv5:Absorb into a discarded card, then anniv5:Modify that card: \"Play the Absorbed card.\".\nExhaust.",
-            "pack": "Mad Science!",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:AttackVial",
             "name": "Attack Vial",
             "color": "Packmaster_rainbow",
@@ -36476,7 +36279,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 9 (12) Block, create a (an)  (upgraded ) copy of this in hand. Exhaust.",
+            "description": "Gain 9 (12) Block, create a (an)  (Upgraded ) copy of this in hand. Exhaust.",
             "pack": "Creativity",
             "mod": "The Packmaster"
         },
@@ -36602,17 +36405,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:ChitteringPunt",
-            "name": "Chittering Punt",
-            "color": "Packmaster_rainbow",
-            "rarity": "Uncommon",
-            "type": "Attack",
-            "cost": "1",
-            "description": "anniv5:Infest.\nDeal 8 (10) damage.\nWhen this anniv5:infests anniv5:Manifest anniv5:Crescent_Moon.",
-            "pack": "Witches Strike",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:ChoiceCut",
             "name": "Choice Cut",
             "color": "Packmaster_rainbow",
@@ -36696,7 +36488,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Unstable.\nTake 4 (6) less damage from attacks this turn.\nGain 2 Weak.",
+            "description": "anniv5:Unstable.\nDraw a card.\nTake 4 (6) less damage from attacks this turn.\nGain 2 Weak.",
             "pack": "Entropy",
             "mod": "The Packmaster"
         },
@@ -36764,6 +36556,17 @@
             "cost": "0",
             "description": "anniv5:Transmute a card. Add 2 (3) additional copies of the new card to your hand.\nExhaust.",
             "pack": "Transmutation",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:CrystalMoonlight",
+            "name": "Crystal Moonlight",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "anniv5:Manifest 1 (2) random orb (orbs).\nExhaust.",
+            "pack": "Witches Strike",
             "mod": "The Packmaster"
         },
         {
@@ -37048,7 +36851,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 14 (17) damage.\nanniv5:Modify a card in hand: \"Gain 6 (8) Block.\"",
+            "description": "Deal 14 (17) damage.\nanniv5:Modify a card in hand: \"Gain 6 (8) Block\"",
             "pack": "Mad Science!",
             "mod": "The Packmaster"
         },
@@ -37116,6 +36919,17 @@
             "cost": "1",
             "description": "Draw 2 cards.\nIf you've played a anniv5:different color card this turn, draw 2 (3) more cards.",
             "pack": "Prismatic",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:Expand",
+            "name": "Expand",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1 (0)",
+            "description": "anniv5:Modify a card in hand: \"Costs 1 more [E] .\" and \"Play again, unmodified.\"\nExhaust.",
+            "pack": "Mad Science!",
             "mod": "The Packmaster"
         },
         {
@@ -37268,7 +37082,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "0",
-            "description": "Magic.\nDeal 4 (6) damage.\nIncrease the damage dealt by Magic cards by 3 (4) this turn.",
+            "description": "*Magic.\nDeal 4 (6) damage.\nIncrease the damage dealt by Magic cards by 3 (4) this turn.",
             "pack": "Warden",
             "mod": "The Packmaster"
         },
@@ -37532,7 +37346,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "3",
-            "description": "Deal 18 (26) Damage.\nWhen ripped, exhaust 2 cards at random.",
+            "description": "Deal 18 (26) Damage.\nWhen ripped, Exhaust 2 cards at random.",
             "pack": "Rip",
             "mod": "The Packmaster"
         },
@@ -37587,7 +37401,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Infest.\nGain 3 (5) block.\nWhen this anniv5:infests, Evoke your next orb 3 (4) times and lose and orb slot.",
+            "description": "anniv5:Infest.\nGain 3 (5) Block.\nWhen this anniv5:Infests, Evoke your next 2 (3) orbs and lose an Orb slot.",
             "pack": "Witches Strike",
             "mod": "The Packmaster"
         },
@@ -37686,7 +37500,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Draw 2 cards.\nanniv5:Modify a ~~- random  -~~ card in hand: \"Draw a card.\"\nExhaust.",
+            "description": "Draw 2 cards.\nanniv5:Modify a ~~- random  -~~ card in hand: \"Draw a card\"\nExhaust.",
             "pack": "Mad Science!",
             "mod": "The Packmaster"
         },
@@ -37906,7 +37720,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 9 (12) damage.\nAdd a (2) random 0-cost Attack (Attacks) from your discard pile to your hand.",
+            "description": "Deal 9 (12) damage.\nPut a (2) random 0-cost Attack (Attacks) from your discard pile into your hand.",
             "pack": "Quanta",
             "mod": "The Packmaster"
         },
@@ -37928,7 +37742,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "2",
-            "description": "Innate. Add in order (, upgraded): anniv5:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended.",
+            "description": "Innate. Add in order (, Upgraded): anniv5:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended.",
             "pack": "Pinnacle",
             "mod": "The Packmaster"
         },
@@ -38043,6 +37857,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:CleanseGem",
+            "name": "Onyx",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "anniv5:Gem ( (2 Uses)).\n\"Reduce debuffs by 1\"",
+            "pack": "Jeweler's Pack",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:OpenBracket",
             "name": "Open Bracket",
             "color": "Packmaster_rainbow",
@@ -38093,7 +37918,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "~~- Gain a Necronomicurse. -~~\nThe next attack you play that costs 2 or more is played twice.",
+            "description": "~~- Gain a Necronomicurse. -~~\nThe next Attack you play that costs 2 or more is played twice.",
             "pack": "Eldritch Horror",
             "mod": "The Packmaster"
         },
@@ -38137,7 +37962,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1 (0)",
-            "description": "At the start of your turn, roll a anniv5:D8.",
+            "description": "At the start of your turn, if you have no anniv5:Dice, roll a anniv5:D8.",
             "pack": "Board Games",
             "mod": "The Packmaster"
         },
@@ -38170,7 +37995,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "2",
-            "description": "At the end of your turn, gain 4 (6) Block if you have Plasma.\nChannel 1 Plasma.",
+            "description": "At the end of your turn, gain 2 (4) Block if you have Plasma.\nChannel 1 Plasma.",
             "pack": "Utility",
             "mod": "The Packmaster"
         },
@@ -38192,7 +38017,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "X",
-            "description": "Next turn, randomly, 2X (+2) times:\nDraw 1 card, gain [E] , gain 1 Strength or gain 3 Block.\nExhaust.",
+            "description": "Next turn, randomly, 2X (+2) times:\nDraw 1 card, gain [E] , gain 5 Vigor or gain 3 Block.\nExhaust.",
             "pack": "Pinnacle",
             "mod": "The Packmaster"
         },
@@ -38280,7 +38105,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "Choose: Gain 2 Strength,  (Gain 2 Dexterity, ) or Gain 3 (2) Focus.",
+            "description": "Choose: Gain 2 Strength,  (Gain 2 Dexterity, ) or Gain 2 Focus.",
             "pack": "Blue's Brews",
             "mod": "The Packmaster"
         },
@@ -38291,7 +38116,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Ethereal.\nWhen this card is drawn, ALL enemies lose 5 (8) Strength this turn.",
+            "description": "Ethereal.\nWhen this card is drawn, ALL enemies lose 4 (7) Strength this turn.",
             "pack": "Alignment",
             "mod": "The Packmaster"
         },
@@ -38324,7 +38149,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Magic.\nDeal 7 (10) damage.\nWhenever you play a Magic card this turn, Channel 1 Frost.",
+            "description": "*Magic.\nDeal 7 (10) damage.\nWhenever you play a Magic card this turn, Channel 1 Frost.",
             "pack": "Meta",
             "mod": "The Packmaster"
         },
@@ -38347,7 +38172,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1 (0)",
-            "description": "At the end of your turn, shuffle up to 2 cards from your hand into your draw pile.",
+            "description": "At the end of your turn, shuffle up to 1 card from your hand into your draw pile.",
             "pack": "Alignment",
             "mod": "The Packmaster"
         },
@@ -38513,7 +38338,7 @@
             "type": "Power",
             "cost": "1",
             "description": "At the start of your turn, randomize the cost of the  (2 ) highest cost card (cards) in your hand.",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -38656,7 +38481,7 @@
             "type": "Attack",
             "cost": "X",
             "description": "Deal 1 to 32 (48) damage. Roll the damage X times and take the highest result.",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -38787,7 +38612,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 6 (9) damage.\nDiscover a (an)  (upgraded ) strike. It Exhausts when played and costs 0 this turn.",
+            "description": "Deal 6 (9) damage.\nDiscover a (an)  (Upgraded ) strike. It Exhausts when played and costs 0 this turn.",
             "pack": "Creativity",
             "mod": "The Packmaster"
         },
@@ -38831,7 +38656,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 5 (6) damage.\nWhenever you attack this enemy with a Claw, gain 3 (5) Block.\nExhaust.",
+            "description": "Deal 5 (7) damage.\nWhenever you attack this enemy with a Claw, gain 3 (4) Block.\nExhaust.",
             "pack": "Claw Pack",
             "mod": "The Packmaster"
         },
@@ -38957,6 +38782,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:DiceGem",
+            "name": "Tourmaline",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "anniv5:Gem ( (2 Uses)).\n\"Roll a anniv5:D6\"",
+            "pack": "Jeweler's Pack",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:ToxicVial",
             "name": "Toxic Vial",
             "color": "Packmaster_rainbow",
@@ -39019,7 +38855,7 @@
             "type": "Skill",
             "cost": "1",
             "description": "Randomize the cost of 2 (up)  (to 3 ) cards.\nstslib:Persist 2",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -39031,6 +38867,17 @@
             "cost": "1",
             "description": "Discard all non-Attack cards in your hand.\nDeal 4 (6) damage for each card discarded.",
             "pack": "Entropy",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:VenomDip",
+            "name": "Venom Dip",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "This turn, whenever an Attack deals unblocked damage, apply 2 (3) Poison.",
+            "pack": "Toxicity",
             "mod": "The Packmaster"
         },
         {
@@ -39118,7 +38965,7 @@
             "type": "Attack",
             "cost": "2",
             "description": "Deal 8 (12) damage.\nApply 0 (1) to 3 Weak and 0 (1) to 3 Vulnerable.",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -39183,7 +39030,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "Apply 4 (6) anniv5:Penance.\nWhenever a creature is damaged by anniv5:Penance this turn apply 2 (3) Weak.",
+            "description": "Apply 5 (8) anniv5:Penance.\nWhenever a creature is damaged by anniv5:Penance this turn apply 2 Weak.",
             "pack": "Dragonwrath",
             "mod": "The Packmaster"
         },
@@ -39276,6 +39123,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:Attach",
+            "name": "Attach",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "1 (0)",
+            "description": "Choose a non-Power in hand to anniv5:Absorb into a discarded card, then anniv5:Modify it: \"Play the Absorbed card\".\nExhaust.",
+            "pack": "Mad Science!",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Aura",
             "name": "Aura",
             "color": "Packmaster_rainbow",
@@ -39359,7 +39217,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Apply Slow.\nGive enemy 3 (1) Block.\nDraw 1 (2) card.\nExhaust.",
+            "description": "Apply Slow.\nGive enemy 3 (1) Block.\nDraw 1 (2) card (cards).\nExhaust.",
             "pack": "Warrior",
             "mod": "The Packmaster"
         },
@@ -39391,8 +39249,8 @@
             "color": "Packmaster_rainbow",
             "rarity": "Rare",
             "type": "Skill",
-            "cost": "2",
-            "description": "Add a Despair to your hand. The next card (2)  (cards ) you play costs (cost) 0 and plays (play) twice.\nExhaust.",
+            "cost": "2 (1)",
+            "description": "Add a Despair to your hand. The next card you play costs 0 and plays twice.\nExhaust.",
             "pack": "RimWorld",
             "mod": "The Packmaster"
         },
@@ -39425,8 +39283,19 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1 (0)",
-            "description": "anniv5:Modify a ~~- random  -~~ card in your draw pile: \"Costs 0.\"\nanniv5:Amplify [E] : Don't Exhaust.",
+            "description": "anniv5:Modify a ~~- random  -~~ card in your draw pile: \"Costs 0\"\nanniv5:Amplify [E] : Don't Exhaust.",
             "pack": "Mad Science!",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:EnergyGem",
+            "name": "Citrine",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "0",
+            "description": "anniv5:Gem ( (2 Uses)).\n\"Gain [E] next turn\"",
+            "pack": "Jeweler's Pack",
             "mod": "The Packmaster"
         },
         {
@@ -39469,7 +39338,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "0",
-            "description": " (Innate.)\nWhenever you play a card, upgrade it and ALL copies of it.",
+            "description": " (Innate.)\nWhenever you play a card, Upgrade it and ALL copies of it.",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -39502,7 +39371,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Roll a D20 with anniv5:Advantage.\n~~- Exhaust. -~~ ",
+            "description": "Roll a D20.\n~~- Exhaust. -~~ ",
             "pack": "Board Games",
             "mod": "The Packmaster"
         },
@@ -39749,17 +39618,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:Expand",
-            "name": "Expand",
-            "color": "Packmaster_rainbow",
-            "rarity": "Rare",
-            "type": "Skill",
-            "cost": "1 (0)",
-            "description": "anniv5:Modify a card in your discard pile: \"Ethereal.\" and \"Remove Exhaust.\"\nExhaust.",
-            "pack": "Mad Science!",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:FFBlade",
             "name": "FF Blade",
             "color": "Packmaster_rainbow",
@@ -39799,7 +39657,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "At the start of your turn, add 1 (2) anniv5:different color Power card (cards) to your hand.",
+            "description": "At the start of your turn, add 1 (2) random anniv5:different color Power card (cards) to your hand.",
             "pack": "Prismatic",
             "mod": "The Packmaster"
         },
@@ -39810,7 +39668,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "At the start of your turn, Channel 1 Frost and apply 6 (9) anniv5:Frostbite to ALL enemies.",
+            "description": "At the start of your turn, Channel 1 Frost and apply 3 (5) anniv5:Frostbite to ALL enemies.",
             "pack": "For The Content",
             "mod": "The Packmaster"
         },
@@ -39845,6 +39703,17 @@
             "cost": "2",
             "description": " (Innate.)\nAt the start of your turn, draw 1 card and add 1 Fading Ember to your hand and draw pile.",
             "pack": "Shaman",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:PersistGem",
+            "name": "Garnet",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "",
+            "description": "~~- Unplayable  -~~ anniv5:Gem ( (2 Uses)).\n\"Card has (gains) stslib:Persist 2\"",
+            "pack": "Jeweler's Pack",
             "mod": "The Packmaster"
         },
         {
@@ -39909,7 +39778,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3 (2)",
-            "description": "Gain 1 Strength. Increases by 1 for each Elite and Boss enemy you've defeated.\nGain 1 (2) Dexterity.",
+            "description": "Gain 1 Strength. Increases by 1 for each Elite and Boss enemy you've defeated.",
             "pack": "Monster Hunter",
             "mod": "The Packmaster"
         },
@@ -39919,8 +39788,8 @@
             "color": "Packmaster_rainbow",
             "rarity": "Rare",
             "type": "Attack",
-            "cost": "X",
-            "description": "Retain.\nanniv5:Hoard 9 (7): Deal 100 damage to ALL enemies.\nstslib:Persist 2 .",
+            "cost": "1",
+            "description": "Retain.\nAfter 8 (6) more  plays, Deal 100 damage to ALL enemies.\nstslib:Persist 3.",
             "pack": "Dimension Gate",
             "mod": "The Packmaster"
         },
@@ -39963,9 +39832,20 @@
             "color": "Packmaster_rainbow",
             "rarity": "Rare",
             "type": "Skill",
-            "cost": "2",
-            "description": "~~- Ethereal. -~~\nChoose a card in hand to Upgrade permanently.\nExhaust.",
+            "cost": "3",
+            "description": "Ethereal (Retain).\nChoose a card in hand to Upgrade permanently.\nExhaust.",
             "pack": "Dimension Gate",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:OccultGem",
+            "name": "Lapis Lazuli",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "",
+            "description": "~~- Unplayable  -~~ anniv5:Gem ( (2 Uses)).\n\"Card gains anniv5:Occult\"",
+            "pack": "Jeweler's Pack",
             "mod": "The Packmaster"
         },
         {
@@ -40173,7 +40053,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Upgrade a card twice (3 times).\nCan upgrade cards any number of times.",
+            "description": "Upgrade a card twice (3 times).\nCan Upgrade cards any number of times.\nstslib:Exhaustive 3.",
             "pack": "Blacksmith's Pack",
             "mod": "The Packmaster"
         },
@@ -40196,7 +40076,7 @@
             "type": "Attack",
             "cost": "1",
             "description": "Deal 17 (22) damage for each energy this card costs.",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -40288,6 +40168,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:DrawGem",
+            "name": "Opal",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "0",
+            "description": "anniv5:Gem ( (2 Uses)).\n\"Draw a card\"",
+            "pack": "Jeweler's Pack",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:OverTime",
             "name": "Over Time",
             "color": "Packmaster_rainbow",
@@ -40338,7 +40229,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Discover a (an)  (upgraded ) card with selected type and cost.",
+            "description": "Discover a (an)  (Upgraded ) card with selected type and cost.",
             "pack": "Creativity",
             "mod": "The Packmaster"
         },
@@ -40371,7 +40262,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "At the start of each turn, anniv5:Modify a random card in hand: \"Gain a Cannonball. (+.)\"",
+            "description": "At the start of each turn, anniv5:Modify a random card in hand: \"Gain a Cannonball (+)\"",
             "pack": "Mad Science!",
             "mod": "The Packmaster"
         },
@@ -40481,7 +40372,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3 (2)",
-            "description": "Whenever a card is anniv5:Amplified, put a card from your Exhaust pile into your hand.",
+            "description": "The first time a card is anniv5:Amplified each turn, put a card from your Exhaust pile into your hand. It gains stslib:Purge.",
             "pack": "Cosmos Command",
             "mod": "The Packmaster"
         },
@@ -40503,7 +40394,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "3 (2)",
-            "description": "Exhaust ALL cards that have duplicates.\nDeal 7 damage for each card exhausted.\nExhaust.",
+            "description": "Exhaust ALL cards that have duplicates.\nDeal 7 damage for each card Exhausted.\nExhaust.",
             "pack": "Replicators",
             "mod": "The Packmaster"
         },
@@ -40547,7 +40438,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 150 (200) anniv5:Inspiration.\nDraw 2 cards.",
+            "description": "Gain 125 (150) anniv5:Inspiration.\nDraw 1 (2) card (cards).",
             "pack": "For The Content",
             "mod": "The Packmaster"
         },
@@ -40558,7 +40449,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 1 Strength for each pack you've played a card from this combat.\n~~- Exhaust. -~~ ",
+            "description": "Gain 1 Strength for each Pack you've played a card from this combat.\n~~- Exhaust. -~~ ",
             "pack": "Core Set",
             "mod": "The Packmaster"
         },
@@ -40624,7 +40515,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Exhaust all non-Attacks in your discard pile. Deal 6 (9) damage for each.\nExhaust.",
+            "description": "Exhaust all non-Attacks in your discard pile. Deal 7 (10) damage for each.\nExhaust.",
             "pack": "Dimension Gate",
             "mod": "The Packmaster"
         },
@@ -40657,7 +40548,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 12 (16) Block.\nEnter anniv5:Serene.",
+            "description": "Gain 10 (13) Block.\nEnter anniv5:Serene.",
             "pack": "Sentinel",
             "mod": "The Packmaster"
         },
@@ -40691,7 +40582,7 @@
             "type": "Skill",
             "cost": "0",
             "description": "Draw 1 (2) card (cards).\nRandomize the cost of all cards in your hand.\nDiscard 1 (2) card (cards).",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -40702,7 +40593,7 @@
             "type": "Power",
             "cost": "2",
             "description": "~~- Become Confused.  -~~ At the start of your turn, draw 2 cards. ( Startup: Become Confused. )\n",
-            "pack": "Snecko Pack",
+            "pack": "Snecko",
             "mod": "The Packmaster"
         },
         {
@@ -40789,7 +40680,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2 (1)",
-            "description": "Your attacks costs 0 this turn. You cannot play non-Attacks this turn.",
+            "description": "Reduce the cost of Attacks in hand to 0 this turn. You can only play Attacks this turn.",
             "pack": "Strikes? STRIKES!",
             "mod": "The Packmaster"
         },
@@ -40954,7 +40845,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "Ethereal.\nExhaust 1 card~~-  at random -~~ .\nAt the start of your turn, play and Exhaust a copy of it.",
+            "description": "Ethereal.\nExhaust 1 ~~- random  -~~ card.\nAt the start of your turn, play and Exhaust a copy of it.",
             "pack": "Oddities",
             "mod": "The Packmaster"
         },
@@ -40965,7 +40856,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2 (1)",
-            "description": "Whenever you play a Skill or Attack, draw a card of the opposite type from a different pack.",
+            "description": "Whenever you play a Skill or Attack, draw a card of the opposite type from a different Pack.",
             "pack": "Anomaly",
             "mod": "The Packmaster"
         },
@@ -41107,8 +40998,8 @@
             "color": "Packmaster_rainbow",
             "rarity": "Rare",
             "type": "Skill",
-            "cost": "3",
-            "description": "anniv5:Unstable.\nApply 30 (40) anniv5:Ruin.",
+            "cost": "2",
+            "description": "anniv5:Unstable.\nApply 25 (32) anniv5:Ruin.",
             "pack": "Entropy",
             "mod": "The Packmaster"
         },
@@ -41141,7 +41032,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "anniv5:Inscribed.\nanniv5:Modify 2 (3) random cards in your hand : anniv5:Inscribed.\nGain 1 (2) Focus.\nExhaust",
+            "description": "anniv5:Inscribed.\nanniv5:Modify 2 (3) random cards in your hand : anniv5:Inscribed.\nExhaust",
             "pack": "Witches Strike",
             "mod": "The Packmaster"
         },
@@ -54805,7 +54696,7 @@
             "name": "Banishing Decree",
             "tier": "Shop",
             "pool": "Packmaster_rainbow",
-            "description": "Upon pickup, choose one of your Packs. Cards from it will no longer appear in card rewards. Then, choose 1 of 5 new Packs to replace it with, and gain up to 3 card rewards from that pack.",
+            "description": "Upon pickup, choose one of your Packs. Cards from it will no longer appear in card rewards. Then, choose 1 of 5 new Packs to replace it with, and gain up to 3 card rewards from that Pack.",
             "flavorText": "Absorb what is useful, reject what is useless and add what is essentially your own.",
             "mod": "The Packmaster"
         },
@@ -56673,7 +56564,7 @@
             "id": "anniv5:GenerateClawsPotion",
             "name": "Bottled Claws",
             "rarity": "Placeholder",
-            "description": "Add 3 Ghost Claws to your hand.",
+            "description": "Add 3 Claws to your hand.",
             "mod": "The Packmaster"
         },
         {
@@ -56722,7 +56613,7 @@
             "id": "anniv5:SmithingOil",
             "name": "Smithing Oil",
             "rarity": "Rare",
-            "description": "Choose 1 card in your hand to upgrade permanently.",
+            "description": "Choose 1 card in your hand to Upgrade permanently.",
             "mod": "The Packmaster"
         },
         {
@@ -62061,7 +61952,7 @@
         },
         {
             "name": "Enchantment",
-            "description": "When you play a card with a different color any applicable Enchantments are copied and played onto the same target.",
+            "description": "When you play a card with a different color any applicable Enchantments are copied and played onto the same target. (A different color is any color other than your character's normal card color; different Packmaster Packs are not different colors.)",
             "mod": "The Packmaster"
         },
         {
@@ -62081,7 +61972,7 @@
         },
         {
             "name": "Inscribed",
-            "description": "When you play this card activate the passive effect of all your orbs.",
+            "description": "When you play this card activate the passive effect of your next orb.",
             "mod": "The Packmaster"
         },
         {
@@ -62096,7 +61987,7 @@
         },
         {
             "name": "Penance",
-            "description": "When a creature obtains 8 Penance, it loses 20 HP and HP loss from this effect is increased by 10 this combat.\nCreatures damaged by Penance lose 8 Penance",
+            "description": "When a creature obtains 8 Penance, it loses 20 HP and loses 8 Penance.\nHP loss from Penance is increased by 10 this combat.",
             "mod": "The Packmaster"
         },
         {
@@ -62186,12 +62077,12 @@
         },
         {
             "name": "Dice",
-            "description": "Dice increase the damage or Block of the next card you play that deals damage or Blocks.",
+            "description": "Dice increase the damage and Block of the next card you play that deals damage or Blocks.",
             "mod": "The Packmaster"
         },
         {
             "name": "Different Color",
-            "description": "Any color other than your character's normal card color.",
+            "description": "Any color other than your character's normal card color. Different Packmaster Packs are not different colors.",
             "mod": "The Packmaster"
         },
         {
@@ -62226,7 +62117,7 @@
         },
         {
             "name": "Evolve",
-            "description": "Evolving cards can be upgraded up to 3 times. They are upgraded this combat whenever the listed condition is met while the card is in your hand and gain bonus effects when fully upgraded.",
+            "description": "Evolving cards can be Upgraded up to 3 times. They are Upgraded this combat whenever the listed condition is met while the card is in your hand and gain bonus effects when fully Upgraded.",
             "mod": "The Packmaster"
         },
         {
@@ -62260,13 +62151,18 @@
             "mod": "The Packmaster"
         },
         {
+            "name": "Gem",
+            "description": "At Rest Sites, you may spend 20 Gold to socket a Gem as a free action, permanently Modifying a card in deck with 'this Gem's effects'.",
+            "mod": "The Packmaster"
+        },
+        {
             "name": "Ghostflame",
             "description": "Orb: Deals damage to ALL enemies.",
             "mod": "The Packmaster"
         },
         {
             "name": "Hoard",
-            "description": "When played, reduce Hoard by X (the card's cost). When Hoard reaches 0, its effects trigger.",
+            "description": "When played, if this card's cost is greater than 0 and lower than it's Hoard:\nReduce Hoard by the card's cost and ignore all other card effects.\nReturn the card to your hand.\nThe card Retains this turn.",
             "mod": "The Packmaster"
         },
         {
@@ -62396,7 +62292,7 @@
         },
         {
             "name": "Reroll",
-            "description": "Any Dice this card uses are rerolled instead of removed.",
+            "description": "Dice are not used up when you play this card.",
             "mod": "The Packmaster"
         },
         {
@@ -62411,7 +62307,7 @@
         },
         {
             "name": "Serene",
-            "description": "At the end of your turn, gain Block equal to 50% of your Block. Upon exiting this Stance, gain 1 Dexterity.",
+            "description": "In this Stance, Block is not removed at the start of your turn. Upon exiting this Stance, double your Block. Exit this Stance at the start of your next turn.",
             "mod": "The Packmaster"
         },
         {
@@ -62426,7 +62322,7 @@
         },
         {
             "name": "Transmute",
-            "description": "Transforms a card in combat into any card of the same rarity available to your current run. The new card deals 1 more damage and gains 1 more Block for the rest of combat. This effect stacks.",
+            "description": "Transforms a card in combat into any card of the same rarity available through current card rewards. The new card deals 1 more damage and gains 1 more Block for the rest of combat. This effect stacks.",
             "mod": "The Packmaster"
         },
         {
@@ -63598,7 +63494,7 @@
         },
         {
             "name": "The Packmaster",
-            "version": "100",
+            "version": "1.1.6",
             "authors": [
                 "Vex'd",
                 "modargo",
@@ -63632,8 +63528,8 @@
             ],
             "credits": "",
             "description": "Modding Anniversary 5: The Packmaster",
-            "mts_version": "3.18.2",
-            "sts_version": "12-22-2020",
+            "mts_version": "3.30.2",
+            "sts_version": "12-18-2022",
             "dependencies": [
                 "basemod",
                 "stslib"
