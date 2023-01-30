@@ -13202,6 +13202,7 @@
             "mod": "DregsMod"
         },
         {
+            "id": "energizedSpire:ReceptionProblems",
             "name": "Reception Problems",
             "color": "Colorless",
             "rarity": "Common",
@@ -48917,6 +48918,7 @@
             "mod": "DregsMod"
         },
         {
+            "id": "energizedSpire:BlackCloud",
             "name": "Black Cloud",
             "tier": "Boss",
             "pool": "Purple",
@@ -48925,6 +48927,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:CrystalSphere",
             "name": "Crystal Sphere",
             "tier": "Boss",
             "pool": "Purple",
@@ -48933,6 +48936,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:CursedPentagram",
             "name": "Cursed Pentagram",
             "tier": "Boss",
             "pool": "",
@@ -48941,6 +48945,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:DeadBattery",
             "name": "Dead Battery",
             "tier": "Boss",
             "pool": "",
@@ -48949,6 +48954,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:EnergizedDie",
             "name": "Energized Die",
             "tier": "Boss",
             "pool": "",
@@ -48957,6 +48963,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:HighHeels",
             "name": "High Heels",
             "tier": "Boss",
             "pool": "Green",
@@ -48965,6 +48972,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:HugeHouse",
             "name": "Huge House",
             "tier": "Boss",
             "pool": "",
@@ -48973,6 +48981,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:MagnifyingGlass",
             "name": "Magnifying Glass",
             "tier": "Boss",
             "pool": "",
@@ -48981,6 +48990,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:NeverEndingSparkler",
             "name": "Never-Ending Sparkler",
             "tier": "Boss",
             "pool": "",
@@ -48989,6 +48999,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:OgreHead",
             "name": "Ogre Head",
             "tier": "Boss",
             "pool": "",
@@ -48997,6 +49008,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:OldTV",
             "name": "Old TV",
             "tier": "Boss",
             "pool": "Blue",
@@ -49005,6 +49017,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:PogoStick",
             "name": "Pogo Stick",
             "tier": "Boss",
             "pool": "Green",
@@ -49013,6 +49026,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:RedRose",
             "name": "Red Rose",
             "tier": "Boss",
             "pool": "",
@@ -49021,6 +49035,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:RottingSkull",
             "name": "Rotting Skull",
             "tier": "Boss",
             "pool": "Red",
@@ -49029,6 +49044,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:SpiderWeb",
             "name": "Spider Web",
             "tier": "Boss",
             "pool": "",
@@ -49037,6 +49053,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:StickyHand",
             "name": "Sticky Hand",
             "tier": "Boss",
             "pool": "",
@@ -49045,6 +49062,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:TabascoSauce",
             "name": "Tabasco Sauce",
             "tier": "Boss",
             "pool": "Red",
@@ -49053,6 +49071,7 @@
             "mod": "Energized Spire"
         },
         {
+            "id": "energizedSpire:UnstableMolecules",
             "name": "Unstable Molecules",
             "tier": "Boss",
             "pool": "Blue",
