@@ -7,28 +7,32 @@ export default {
                         "name": "Spike Slime (L)",
                         "type": "Normal",
                         "minHP": "35",
-                        "maxHP": "35"
+                        "maxHP": "35",
+                        "id": "SpikeSlime_L"
                     },
     
                     {
                         "name": "Bronze Orb",
                         "type": "Boss",
                         "minHP": "55",
-                        "maxHP": "55"
+                        "maxHP": "55",
+                        "id": "BronzeOrb"
                     },
     
                     {
                         "name": "Torch Head",
                         "type": "Boss",
                         "minHP": "39",
-                        "maxHP": "39"
+                        "maxHP": "39",
+                        "id": "TorchHead"
                     },
     
                     {
                         "name": "Mad Gremlin",
                         "type": "Normal",
                         "minHP": "22",
-                        "maxHP": "22"
+                        "maxHP": "22",
+                        "id": "GremlinWarrior"
                     },
                 ]
             },
