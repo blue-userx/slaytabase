@@ -48,4 +48,5 @@ export default {
     'Blessed_templar_blue': ['The Templar', 3238794, '<:e_colorless:961808772609769512>'],
     'Vacant_color': ['The Vacant', 11569486, '<:e_colorless:961808772609769512>'],
     'Thort_gray_color': ['The Thorton', 18265, '<:e_colorless:961808772609769512>'],
+    'Marked_purple_color': ['The Marked', 5380386, '<:e_colorless:961808772609769512>'],
 };

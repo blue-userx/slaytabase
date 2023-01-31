@@ -32537,6 +32537,846 @@
             "mod": "The M10 Robot"
         },
         {
+            "id": "theMarked:AlyssasBlade",
+            "name": "Alyssa's Blade",
+            "color": "Colorless",
+            "rarity": "Special",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 10 (13) damage. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Circuit",
+            "name": "Circuit",
+            "color": "Colorless",
+            "rarity": "Special",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (10) damage.\nthemarked:Conductor.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ImprovisedWeapon",
+            "name": "Improvised Weapon",
+            "color": "Colorless",
+            "rarity": "Special",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 9 (10) damage. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Riposte",
+            "name": "Riposte",
+            "color": "Colorless",
+            "rarity": "Special",
+            "type": "Attack",
+            "cost": "0",
+            "description": "Deal 4 (7) damage.\nApply Vulnerable.\nExhaust.\nEthereal. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:SuspiciousRaven",
+            "name": "Suspicious Raven",
+            "color": "Colorless",
+            "rarity": "Special",
+            "type": "Skill",
+            "cost": "",
+            "description": "Unplayable.\nWhen you draw this card, deal 22 (27) damage to all enemies. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Tailwind",
+            "name": "Tailwind",
+            "color": "Colorless",
+            "rarity": "Special",
+            "type": "Skill",
+            "cost": "",
+            "description": "Unplayable. When drawn, draw 2 (3) cards.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Defend",
+            "name": "Defend",
+            "color": "Marked_purple_color",
+            "rarity": "Basic",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 5 (8) Block. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:SoldierOfQuellstein",
+            "name": "Soldier of Quellstein",
+            "color": "Marked_purple_color",
+            "rarity": "Basic",
+            "type": "Skill",
+            "cost": "1 (0)",
+            "description": "Gain 5 Block and themarked:Summon Alyssa's Blade.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Strike",
+            "name": "Strike",
+            "color": "Marked_purple_color",
+            "rarity": "Basic",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 6 (9) damage. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Aftermath",
+            "name": "Aftermath",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Gain 2 (3) themarked:Charge.\nGain 2 (3) themarked:Charge for each attack played this turn.\nAttacks played: 0 ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:BanishingStrike",
+            "name": "Banishing Strike",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (10) damage.\nApply 2 themarked:Banish. Deals extra damage equal to the target's themarked:Banish.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ChainLightning",
+            "name": "Chain Lightning",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 8 (10) damage to a target and 50 (75) % of this damage to other enemies.\nthemarked:Conductor. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ElectricStrings",
+            "name": "Electric Strings",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 5 (8) damage to all enemies\nApply 1 Weak to all targets next turn. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:EmpowerWeapon",
+            "name": "Empower Weapon",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "themarked:Summon Alyssa's Blade.\nIncrease it's damage by 5.~~-  Exhaust. -~~ ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Frustration",
+            "name": "Frustration",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (9) damage. If the target has themarked:Banish, deal this damage again. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:HeightenedSenses",
+            "name": "Heightened Senses",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 5 (7) Block for each enemy in combat. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Improvise",
+            "name": "Improvise",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1 (0)",
+            "description": "Exhaust a card. themarked:Summon two Improvised Weapons and reroll their effect. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Memento",
+            "name": "Memento",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Apply 3 (4) themarked:Banish.\nDraw 2 (3) cards.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Parkour",
+            "name": "Parkour",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 5 damage twice.\nDamage is increased by  (twice ) your Dexterity. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:PowerFlow",
+            "name": "Power Flow",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "0",
+            "description": "themarked:Summon a Circuit .\nIf it isn't newly created, gain 4 (6) themarked:Charge. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:RepellingDischarge",
+            "name": "Repelling Discharge",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 8 Block.\nUses up to 6 (8) themarked:Charge.\n ( themarked:Preserve.  ) ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ResourceFulStrike",
+            "name": "Resourceful Strike",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 9 (10) damage. Draw 1 (2) extra card (cards) next turn. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:SwordAndMagic",
+            "name": "Sword and Magic",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 5 (8) damage.\nApply 1 Vulnerable.\nthemarked:Summon Alyssa's Blade. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:TakeCover",
+            "name": "Take Cover",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 11 (15) Block.\nGain 2 themarked:Ignorant. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:TwofoldDefense",
+            "name": "Twofold Defense",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "2",
+            "description": "Gain 8 (10) Block twice. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:WardOff",
+            "name": "Ward off",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Apply 2 themarked:Banish.\nGain 5 (8) Block.\nGain Block equal to the targets themarked:Banish.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:WastefulAttack",
+            "name": "Wasteful Strike",
+            "color": "Marked_purple_color",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 14 (17) damage.\nBecome Weak next turn. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:AttractMetal",
+            "name": "Attract Metal",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 8 Block.\nGain (Steal) ~~- Block equal to  -~~ the target's Block. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:BanishingWave",
+            "name": "Banishing Wave",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 15 (16) damage.\nApply 4 themarked:Banish to all enemies. ~~- Exhaust. -~~ ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ChannelForce",
+            "name": "Channel Force",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Exhaust all Attacks in your hand, themarked:Summon Alyssa's Blade and increase its damage by 4 (6) for each card.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ComboAttacks",
+            "name": "Combo Attacks",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "2 (1)",
+            "description": "Whenever you play an Attack that costs at least [E] , reduce the cost of another Attack in your hand by 1. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Convert",
+            "name": "Convert",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Draw up to 5 Cards based on your themarked:Charge and consume ( themarked:preserve ) it.\nYou can no longer draw cards this turn. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:CreepingChasm",
+            "name": "Creeping Chasm",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Requires 4 themarked:Charge to play.\nApply 1 (2) Weak to all enemies.\nNext turn, deal 17 (20) damage to all enemies. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Determination",
+            "name": "Determination",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1 (0)",
+            "description": "The first time you apply themarked:Banish each turn, draw 2 cards. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Electrify",
+            "name": "Electrify",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Exhaust an attack in your hand.\n themarked:Summon 2 (3) Circuit. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Electrocute",
+            "name": "Electrocute",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 8 damage.\nThis attack uses ALL themarked:Charge and gains twice (thrice) the bonus from it. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:EnhanceMovement",
+            "name": "Enhance Movement",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Requires 2 themarked:Charge to play.\nDraw 2 (3) cards. Gain 2 (3) temporary Dexterity. Exhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ContemptForTheProud",
+            "name": "Fell the Proud",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (9) damage. Deals this damage an additional time for each positive effect on the enemy. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Friction",
+            "name": "Friction",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Draw 2 (3) cards.\nGain themarked:Charge equal to the number of cards in your hand. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Generate",
+            "name": "Generate",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain up to [E] [E] [E] based on your themarked:Charge and consume ( themarked:preserve ) it. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:GodGivenPower",
+            "name": "God-given Power",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "At the start of your turn, themarked:summon a Circuit.\n (Innate.)",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Heritage",
+            "name": "Heritage",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "Whenever you apply themarked:Banish, gain 4 (5) Block. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Indomitable",
+            "name": "Indomitable",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "2 (1)",
+            "description": "Remove all negative effects. Gain [E] for each effect removed. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:KeepCalmAndFight",
+            "name": "Keep Calm and Fight",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "3 (2)",
+            "description": "Deal 16 damage to all enemies.\nCosts [E] less for each negative effect on you. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Maelstrom",
+            "name": "Maelstrom",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 4 (6) themarked:Charge.\nAll cards themarked:preserve themarked:Charge this turn. ~~- Exhaust.  -~~ ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:MuscleMemory",
+            "name": "Muscle Memory",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "Whenever you exhaust an attack,\nthemarked:Summon Alyssa's Blade and increase its damage by 2 (3). ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:MysticalArsenal",
+            "name": "Mystical Arsenal",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "0",
+            "description": "When you play 3 attacks in the same turn, apply 2 (3) themarked:Banish to all enemies. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:OneWithTheBlade",
+            "name": "One with the Blade",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1 (0)",
+            "description": "themarked:Summon Alsssa's Blade and give it themarked:Conductor.\nGain 2 themarked:Charge.\nExhaust.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Opportunist",
+            "name": "Opportunist",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "The first time you Block at least 6 attack damage each turn, add a Riposte into your hand.  (Innate.)",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Overcharge",
+            "name": "Overcharge",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Gain 6 (10) themarked:Charge and\n[E] [E] . Gain 1 Vulnerable. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Overthink",
+            "name": "Overthink",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Add 3 Dazed into your hand.\nGain 1 Weak.\nDraw 2 (3) Cards. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Panic",
+            "name": "Panic",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "2",
+            "description": "Play the top 3 (4) Cards from your draw pile.\nExhaust.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ParalyzingBlade",
+            "name": "Paralyzing Blade",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "2",
+            "description": "themarked:Summon Alyssa's Blade and make it apply 1 (2) Weak.\nGain 9 (10) Block.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Parry",
+            "name": "Parry",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "themarked:Summon Alyssa's Blade and reduce it's attack by 20%.\nGain 8 (10) Block, based on it's new (old) damage. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:LightningStrikesTwice",
+            "name": "Perfect Storm",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 11 (14) damage.\nNext turn, deal this damage again. themarked:Conductor.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Pokerface",
+            "name": "Pokerface",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Gain 4 (6) Block.\nIf you have any negative effect, gain 4 (6) Block. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Polarize",
+            "name": "Polarize",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 2 themarked:Charge. Then double your themarked:Charge. ~~- Exhaust. -~~ ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Reabsorb",
+            "name": "Reabsorb",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "themarked:Summon and Exhaust Alssa's Blade.\nGain themarked:Charge equal to it's attack, increased by 3 for any other improvements. ~~- Exhaust. -~~ ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:RogueSparks",
+            "name": "Rogue Sparks",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "2",
+            "description": "Whenever you draw or themarked:summon an attack, deal 2 (3) damage to a random enemy and gain 1 (2) Block. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Seal",
+            "name": "Seal",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "2",
+            "description": "Apply 5 (7) themarked:Banish.\nIf it triggers, refund half of this card's energy cost and return it to your hand. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:SelfDefenseTraining",
+            "name": "Self-Defense",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 4 (5) damage. Gain 10 (11) Block.\nApply 1 (2) Weak. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ShockingTouch",
+            "name": "Shocking Touch",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "0",
+            "description": "Deal 6 (11) damage.\nApply 1 (2) Vulnerable to you AND the target.\nthemarked:Conductor. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Standoff",
+            "name": "Standoff",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "Gain 5 (7) Block.\nIf the first card played in your turn is a Skill, EVERYONE gains 5 (7) Block. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:StartUp",
+            "name": "Start Up",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 15 (16) damage.\nGain 1 (2) Dexterity.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Static",
+            "name": "Static",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Shuffle a Circuit into your draw pile.\nGain 6 (8) Block.\nGain themarked:Charge equal to half your Block. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:TheMission",
+            "name": "The Mission",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "2 (1)",
+            "description": "Gain 2 themarked:Ignorant. If you have a negative effect while applying themarked:Banish, apply 2 more. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:TunnelVision",
+            "name": "Tunnel Vision",
+            "color": "Marked_purple_color",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (9) damage twice.\nBecome themarked:Ignorant for 2 turns. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Abjuration",
+            "name": "Abjuration",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 10 damage.\nApply 3 themarked:Banish. If the target is a minion, apply 7 more. (Targets ALL Minions. )\n ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:BiggerThanFate",
+            "name": "Bigger Than Fate",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Shuffle a (an)  (upgraded ) Suspicious Raven into your discard pile.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:BindingBlade",
+            "name": "Binding Blade",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "1",
+            "description": "themarked:Summon Alyssa's Blade and make it apply 2 (3) themarked:Banish.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Challenge",
+            "name": "Challenge",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Apply 1 Strength.\nApply 2 (3) themarked:Challenge.\nExhaust.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Defy",
+            "name": "Defy",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 13 (14) damage to all enemies.\nIf you are below 50 (75)% health, deal this damage again. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:DispelDoubt",
+            "name": "Dispel Doubt ",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 20 damage (22). Exhaust all curses from your deck.\nExhaust.\n (Innate. ) ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:EternalStudent",
+            "name": "Eternal Student",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "2",
+            "description": "themarked:Summon Alyssa's Blade and increase its damage by 9.\nIncrease this number by 1 permanently. \n~~- Ethereal. -~~\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:FavorableWinds",
+            "name": "Favorable Winds",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "2",
+            "description": "Shuffle 2  (upgraded ) Tailwinds into your draw pile.\nGain 14 Block.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Levitate",
+            "name": "Levitate",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "2",
+            "description": "Draw 2 (3) Cards. Reduce the cost of Skills in your hand to 0 this turn.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:MagusForm",
+            "name": "Magus Form",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "3",
+            "description": "Whenever you play a Skill, gain 3 (4) themarked:Charge. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Snap",
+            "name": "Snap",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 6 (7) damage 4 times. Gain 99 themarked:Ignorant.\nExhaust. (Retain. )\n ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:TakeOffHeels",
+            "name": "Take Off Heels",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 2 Dexterity.\nthemarked:Summon two Improvised Weapons (,)  (upgrade them ) and reroll their effect.\nExhaust. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:ThrowWeapon",
+            "name": "Throw Weapon",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "X",
+            "description": "Exhaust an Attack and deal its damage X (+1) times. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Toughness",
+            "name": "Toughness",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "1",
+            "description": "Whenever a negative effect is applied to you, gain 1 (2) Strength. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:TurnInvisible",
+            "name": "Turn Invisible",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "1 (0)",
+            "description": "Requires 2 themarked:Charge to play.\nGain 1 Intangible and become unable to attack.\nExhaust.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:UnarmedFury",
+            "name": "Unarmed Fury",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "0",
+            "description": "Deal 6 (8) damage twice. Can only be played if Alyssa's Blade is not in play. ",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Vacuum",
+            "name": "Vacuum",
+            "color": "Marked_purple_color",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 4 (7) damage.\nApply themarked:Banish equal to half the damage dealt. ",
+            "mod": "The Marked"
+        },
+        {
             "id": "mysticmod:AcidSplash",
             "name": "Acid Splash",
             "color": "Colorless",
@@ -55452,6 +56292,105 @@
             "mod": "The M10 Robot"
         },
         {
+            "id": "theMarked:ArtifactOfAir",
+            "name": "Static Bracelet",
+            "tier": "Starter",
+            "pool": "Marked_purple_color",
+            "description": "At the start of your turn, gain 2 Charge.",
+            "flavorText": "Bestowed by the Goddess of Air.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:DemonDagger",
+            "name": "Demon Dagger",
+            "tier": "Common",
+            "pool": "Marked_purple_color",
+            "description": "The first time you apply Banish each turn, apply 2 more.",
+            "flavorText": "As used in rituals to seal away demons.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Gun",
+            "name": "Gun",
+            "tier": "Uncommon",
+            "pool": "Marked_purple_color",
+            "description": "Limits Charge consumption on attacks to 3 without effecting damage.",
+            "flavorText": "A rare and valuable weapon among the Hirudians.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:NailFile",
+            "name": "Nail File",
+            "tier": "Uncommon",
+            "pool": "Marked_purple_color",
+            "description": "Whenever Banish is lethal on a non-minion, heal 10 Health.",
+            "flavorText": "It once belonged to a dangerous beauty hailing from Schimmerklamm.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:KettuFlask",
+            "name": "Kettu Flask",
+            "tier": "Rare",
+            "pool": "Marked_purple_color",
+            "description": "When you kill a Monster, gain 13 Block.",
+            "flavorText": "Only the Kettu know how it works... Or if it works at all.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:SecretDocuments",
+            "name": "Secret Documents",
+            "tier": "Rare",
+            "pool": "Marked_purple_color",
+            "description": "Whenever you Summon, draw 1 card.",
+            "flavorText": "Sought after by those who wish to learn about Demonology.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:VonisonLock",
+            "name": "Vonison Lock",
+            "tier": "Rare",
+            "pool": "Marked_purple_color",
+            "description": "Gain 1 Dexterity at the end of the first 3 turns in combat.",
+            "flavorText": "A lock from the mane of Hirudia's noble mounts.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:BronzeBlade",
+            "name": "Bronze Blade",
+            "tier": "Boss",
+            "pool": "Marked_purple_color",
+            "description": "Replaces Static Bracelet. At the start of your turn, gain 10 Vigor.",
+            "flavorText": "A product of the finest blacksmith in Ebenerz.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Eyepatch",
+            "name": "Eyepatch",
+            "tier": "Boss",
+            "pool": "Marked_purple_color",
+            "description": "At the start of your turn, if you suffer from a negative effect, gain [E] .",
+            "flavorText": "One can only guess what hides beneath.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:SpiritSword",
+            "name": "Spirit Sword",
+            "tier": "Boss",
+            "pool": "Marked_purple_color",
+            "description": "When you summon an existing card from your deck, it costs 0 this turn.",
+            "flavorText": "The deadly familiar of a Tausrean Soldier.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:Winder",
+            "name": "Winder",
+            "tier": "Shop",
+            "pool": "Marked_purple_color",
+            "description": "When you shuffle your draw pile, gain 10 Charge.",
+            "flavorText": "Synonymous with one of Hirudia's least desirable professions.",
+            "mod": "The Marked"
+        },
+        {
             "id": "mysticmod:SpellBook",
             "name": "Spell Book",
             "tier": "Starter",
@@ -57573,6 +58512,27 @@
             "rarity": "Rare",
             "description": "Draw 1 card. All cards in your hand cost 0 until played.",
             "mod": "The M10 Robot"
+        },
+        {
+            "id": "theMarked:ChargePotion",
+            "name": "Storm Brew",
+            "rarity": "Common",
+            "description": "Gain 12 Charge.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:SummonPotion",
+            "name": "Familiar Potion",
+            "rarity": "Uncommon",
+            "description": "Summon Alyssa's Blade and increase it's damage by 8.",
+            "mod": "The Marked"
+        },
+        {
+            "id": "theMarked:HoverShot",
+            "name": "Hover Shot",
+            "rarity": "Rare",
+            "description": "Reduce the cost of all skills in your hand by 1 until played.",
+            "mod": "The Marked"
         },
         {
             "id": "mysticmod:EssenceOfMagic",
@@ -60694,6 +61654,14 @@
         },
         {
             "id": "",
+            "name": "the Marked",
+            "type": "Player",
+            "minHP": "72",
+            "maxHP": "72",
+            "mod": "The Marked"
+        },
+        {
+            "id": "",
             "name": "The Mystic",
             "type": "Player",
             "minHP": "77",
@@ -62949,6 +63917,56 @@
             "mod": "The M10 Robot"
         },
         {
+            "name": "Themarked:Banish",
+            "description": "If Banish reaches 10 or more, remove it and deal 50 damage.",
+            "mod": "The Marked"
+        },
+        {
+            "name": "Themarked:Challenge",
+            "description": "Reduces the damage of the target's attacks until the end of turn whenever they receive unblocked attack damage.",
+            "mod": "The Marked"
+        },
+        {
+            "name": "Themarked:Charge",
+            "description": "Resource for some cards. Attacks consume up to 6 Charge and increase their damage by the number consumed.",
+            "mod": "The Marked"
+        },
+        {
+            "name": "Themarked:Conductor",
+            "description": "Benefits from all stacks of Charge without consuming them.",
+            "mod": "The Marked"
+        },
+        {
+            "name": "Themarked:Ignorant",
+            "description": "No longer see enemy intents.",
+            "mod": "The Marked"
+        },
+        {
+            "name": "Multiword Keyword",
+            "description": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword.",
+            "mod": "The Marked"
+        },
+        {
+            "name": "Themarked:Preserve",
+            "description": "Stacks of Charge used by this card are not consumed.",
+            "mod": "The Marked"
+        },
+        {
+            "name": "Themarked:Resistance",
+            "description": "Increases the threshold of Banish until the end of turn.",
+            "mod": "The Marked"
+        },
+        {
+            "name": "Themarked:Summon",
+            "description": "Put this card into your hand from your draw- or discard pile. If doesn't exist or is exhausted, create a new card in your hand instead.",
+            "mod": "The Marked"
+        },
+        {
+            "name": "Themarked:keyword",
+            "description": "Whenever you play a card, gain 1 dexterity this turn only.",
+            "mod": "The Marked"
+        },
+        {
             "name": "Cantrip",
             "description": "Considered a Spell so long as you have fewer than 2 stacks of Power.",
             "mod": "The Mystic"
@@ -64397,11 +65415,11 @@
         },
         {
             "name": "StSLib",
-            "version": "2.7.1",
+            "version": "2.7.2",
             "authors": [
                 "kiooeht"
             ],
-            "credits": "\n  Contributors: The_Evil_Pickle, Reina, Rin Camelia, erasels, EatYourBeetS, Jedi, Vex, Mistress Alison, Alchyr, Bryan, Pandemonium, NellyDevo \n  Translation: Jedi (Russian), Rita-B (ZHS), rainfoxest (ZHS, ZHT), Tsurumaki Maki (Korean), Celicath (Korean), Diamsword (French), red5h4d0w (French)",
+            "credits": "\n  Contributors: The_Evil_Pickle, Reina, Rin Camelia, erasels, EatYourBeetS, Jedi, Vex, Mistress Alison, Alchyr, Bryan, Pandemonium, NellyDevo \n  Translation: Jedi (Russian), Rita-B (ZHS), rainfoxest (ZHS, ZHT), Mwalls (ZHS), Tsurumaki Maki (Korean), Celicath (Korean), Diamsword (French), red5h4d0w (French)",
             "description": "A collection of keywords and mechanics for other Slay the Spire mods to use.",
             "mts_version": "3.24.0",
             "sts_version": "12-18-2022",
@@ -64579,6 +65597,22 @@
             "description": "Adds M10 Robot from 100% Orange Juice.",
             "mts_version": "3.20.0",
             "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Marked",
+            "version": "1.2.10",
+            "authors": [
+                "Verburner"
+            ],
+            "credits": "Basemod, ModTheSpire, Julia Karamell, luke871016, #modding, further credit is given on the Workshop page",
+            "description": "Adds a new character based on a fantasy novel by Julia Karamell. ",
+            "mts_version": "3.8.0",
+            "sts_version": "01-23-2019",
             "dependencies": [
                 "basemod",
                 "stslib"
