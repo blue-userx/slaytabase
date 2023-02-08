@@ -59,7 +59,7 @@ async function embed(item, msg, embeds=[]) {
 
         case 'blight':
             if (wiki) e.url = `https://${wikis[item.mod]}.fandom.com/wiki/Blights`;
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/blight/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/blights/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`};
             e.description = `Blight / ${item.mod}\n\n${item.description}`;
             break;
         
