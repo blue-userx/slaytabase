@@ -67375,5 +67375,85 @@
             "character": "",
             "campaign": "Slay the Spire"
         }
+    ],
+    "blights": [
+        {
+            "id": "DeadlyEnemies",
+            "name": "Spear of Blight",
+            "description": "Enemies deal 100% more damage.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "ToughEnemies",
+            "name": "Shield of Blight",
+            "description": "Enemies have 50% more HP.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "TimeMaze",
+            "name": "Time Maze",
+            "description": "You cannot play more than 15 cards per turn.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "MimicInfestation",
+            "name": "Mimic Infestation",
+            "description": "Treasure rooms in future acts are replaced by Elites. Elites no longer drop relics.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "FullBelly",
+            "name": "Muzzle",
+            "description": "You can no longer increase your Max HP. All healing is halved.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "GrotesqueTrophy",
+            "name": "Grotesque Trophy",
+            "description": "Upon pickup, obtain 3 Prides.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "Accursed",
+            "name": "Accursed",
+            "description": "Whenever you defeat a Boss, obtain 2 random Curses.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "Scatterbrain",
+            "name": "Scatterbrain",
+            "description": "Draw 1 less card a turn.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "TwistingMind",
+            "name": "Twisting Mind",
+            "description": "At the end of your turn, add 1 random Status card to the top of your draw pile.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "BlightedDurian",
+            "name": "Post-Durian",
+            "description": "Lose 50% of your Max HP.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "VoidEssence",
+            "name": "Void Essence",
+            "description": "Gain 1 less [E] at the start of each turn.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "GraspOfShadows",
+            "name": "Hauntings",
+            "description": "Enemies start combat with 1 Intangible.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "MetallicRebirth",
+            "name": "Ancient Augmentation",
+            "description": "Enemies start combat with 1 Artifact, 10 Plated Armor, and 10 Regenerate.",
+            "mod": "Slay the Spire"
+        }
     ]
 }

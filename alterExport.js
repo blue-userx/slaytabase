@@ -23,6 +23,7 @@ const copyRecursiveSync = function(src, dest) {
 };
 
 const exportImages = !process.argv.includes('--no-images');
+const exportCards = exportImages && !process.argv.includes('--no-card-images');
 const betaPath = process.argv.includes('--betaless') ? 'export' : 'betaartexport';
 
 const width = 678;
@@ -104,19 +105,19 @@ async function exportMod(modPath){
 
         //create image of card next to its upgrade
         let canv, ctx;
-        if (exportImages) {
+        if (exportCards) {
             canv = canvas.createCanvas(width * (altUp != undefined ? 3 : 2), height); //double-width canvas if there is an upgrade
             ctx = canv.getContext('2d');
         }
         let cardPath = `${c.color.slice(0,10)}-${c.name.replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '').replaceAll('"', '').replaceAll('/', '')}`;
         let imgPath = `${gameDataPath}card-images/${cardPath}`;
-        if (exportImages) {
+        if (exportCards) {
             ctx.drawImage(await canvas.loadImage(imgPath+'.png'), 0, 0);
             if (up == undefined)
                 ctx.drawImage(await canvas.loadImage(imgPath.replace('export', betaPath)+'.png'), width, 0);
         }
         if (up != undefined) {
-            if (exportImages)
+            if (exportCards)
                 ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? up.imgPath+'.png' : (imgPath.replace('export', betaPath)+'Plus.png')), width, 0);
 
             //update card to include numbers from upgrade
@@ -139,7 +140,7 @@ async function exportMod(modPath){
             }
             c.description = c.description.replaceAll('([E]', '( [E]');
             if (altUp != undefined) {
-                if (exportImages)
+                if (exportCards)
                     ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? altUp.imgPath+'.png' : (imgPath.replace('export', betaPath)+'Star.png')), width*2, 0);
     
                 //update card to include numbers from upgrade
@@ -151,7 +152,7 @@ async function exportMod(modPath){
             if (multiUps.length > 0) {
                 let i = 0;
                 let size = Math.ceil(Math.sqrt(multiUps.length));
-                if (exportImages) {
+                if (exportCards) {
                     ctx.clearRect(width, 0, width, height);
                     for (let multiUp of multiUps)
                         ctx.drawImage(await canvas.loadImage(multiUp.hasOwnProperty('imgPath') ? multiUp.imgPath+'.png' : (imgPath.replace('export', betaPath)+`Plus${multiUp.name[multiUp.name.length-1]}.png`)), width+(i%size)*(width/size), Math.floor(i++/size)*(height/size), width/size, height/size);
@@ -180,7 +181,7 @@ async function exportMod(modPath){
                 c.description = c.description.replaceAll('( ', '(').replaceAll(' )', ')').replaceAll('([E]', '( [E]');
             }
         }
-        if (exportImages) {
+        if (exportCards) {
             //save image
             let out = fs.createWriteStream(`${path}cards/${cardPath}.png`);
             canv.createPNGStream().pipe(out);
@@ -214,6 +215,22 @@ async function exportMod(modPath){
             if (imgPath.includes('-'))
                 imgPath = imgPath.slice(imgPath.indexOf('-')+1);
             const out = fs.createWriteStream(`${path}relics/${imgPath}`);
+            const stream = canv.createPNGStream();
+            stream.pipe(out);
+        }
+    }
+    if (exportImages && fs.existsSync(`${gameDataPath}blights`)) {
+        console.log('\nCropping blights...');
+        fs.mkdirSync(`${path}blights`);
+        let relicDir = fs.readdirSync(`${gameDataPath}blights`).filter(n => n.includes('.png'));
+        for (let imgPath of relicDir) {
+            let canv = canvas.createCanvas(targetRelicSize, targetRelicSize);
+            let ctx = canv.getContext('2d');
+            let img = await canvas.loadImage(`${gameDataPath}blights/${imgPath}`);
+            ctx.drawImage(img, (targetRelicSize-origRelicSize)/2, (targetRelicSize-origRelicSize)/2);
+            if (imgPath.includes('-'))
+                imgPath = imgPath.slice(imgPath.indexOf('-')+1);
+            const out = fs.createWriteStream(`${path}blights/${imgPath}`);
             const stream = canv.createPNGStream();
             stream.pipe(out);
         }
