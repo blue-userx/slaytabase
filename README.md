@@ -2,7 +2,7 @@
 invite the bot: https://discord.com/oauth2/authorize?client_id=961824443653574687&permissions=0&scope=bot
 
 ## adding/updating mods
-1. download [my version of modded spire exporter](https://github.com/OceanUwU/sts-exporter/releases/tag/v0.8.3)
+1. download [my version of modded spire exporter](https://github.com/OceanUwU/sts-exporter/releases)
 2. launch mod the spire with Basemod, SpireExporter, and the mod(s) you'd like to add/update
 3. in SpireExporter's mod config, disable "export vanilla items", and enable "export images"
 4. create a directory called `gamedata` in this repo
