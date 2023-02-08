@@ -79,7 +79,9 @@ async function embed(item, msg, embeds=[]) {
             else if (item.type == 'suffix')
                 args = item.query.slice(0, item.query.length-item.name.length);
             args = args.trim().split(' ');
-            let result = await item.do(msg, args.join(' '), args, item.originalQuery.slice(item.name.length));
+            let arg = new String(args.join(' '));
+            arg.filter = item.query.filter;
+            let result = await item.do(msg, arg, args, item.originalQuery.slice(item.name.length));
             for (let i in result)
                 e[i] = result[i];
             break;

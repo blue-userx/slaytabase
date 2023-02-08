@@ -10,6 +10,7 @@ import emojify from './emojis.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
 import startDailyDiscussion from './dailyDiscussion.js';
+import db from './models/index.js';
 import { match } from 'assert';
 
 const bot = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.DirectMessages], partials: [Partials.Channel] });
@@ -20,11 +21,18 @@ const search = new Fuse([], {
     keys: ['searchText'],
     ignoreLocation: true,
 });
+search.searchFn = search.search;
+search.search = str => {
+    let results = search.searchFn(fn.unPunctuate(str));
+    if (str.filter) results = results.filter(str.filter);
+    return results;
+}
 const queryLimit = 10; //max number of embeds on a discord message
 search.add({
     name: 'help',
     itemType: 'help',
 });
+var data;
 
 export {bot, search};
 
@@ -48,6 +56,14 @@ bot.once('ready', async () => {
                 .setDescription('Item name')
                 .setRequired(true)
                 .setAutocomplete(true)),
+        new SlashCommandBuilder()
+            .setName('setservermod')
+            .setDescription('Sets the main mod of this server.')
+            .addStringOption(option =>
+                option.setName('mod')
+                .setDescription('Mod name')
+                .setRequired(true)
+                .setAutocomplete(true)),
         new ContextMenuCommandBuilder()
             .setName('find items')
             .setType(ApplicationCommandType.Message)
@@ -55,14 +71,19 @@ bot.once('ready', async () => {
 });
 
 async function getEmbeds(msg) {
-    let queries = [...msg.content.matchAll(/\<(.*?)\>/g)]
-        .map(e => e[1])
+    let queries = [...msg.content.matchAll(/(\<(.*?)\>)|(\[\[(.*?)\]\])/g)]
+    let filters = queries.map(e => e[0].startsWith('<'))
+    queries = queries.map(e => e[0].startsWith('<') ? e[2] : e[4])
         .filter(q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init'));
     if (queries.length <= queryLimit) {
         if (queries.length > 0) {
             let embeds = [];
-            for (let originalQuery of queries) {
-                let query = fn.unPunctuate(originalQuery);
+            let server = await db.ServerSettings.findOne({where: {guild: msg.guildId}});
+            let filter = server == null ? item => 'Slay the Spire' == item.item.mod : item => ['Slay the Spire', server.mod].includes(item.item.mod);
+            for (let i = 0; i < queries.length; i++) {
+                let originalQuery = queries[i];
+                let query = new String(fn.unPunctuate(originalQuery));
+                query.filter = filters[i] ? filter : false;
                 if (query.length <= 0) continue;
                 let item = fn.find(query);
                 for (let type of [['prefix', 'startsWith'], ['suffix', 'endsWith']])
@@ -155,20 +176,44 @@ bot.on('messageDelete', async msg => {
 bot.on('interactionCreate', async interaction => {
     try {
         if (interaction.isChatInputCommand()) {
-            await interaction.deferReply();
-            interaction.content = `<${interaction.options.getString('query')}>`;
-            if (fn.unPunctuate(interaction.content) == 'del' || fn.unPunctuate(interaction.content) == 'spoiler')
-                return await interaction.deleteReply();
-            interaction.author = interaction.user;
-            let embeds = await getEmbeds(interaction);
-            if (embeds.length == 0)
-                return await interaction.deleteReply();
-            await interaction.editReply({embeds});
+            switch (interaction.commandName) {
+                case 'i':
+                    await interaction.deferReply();
+                    interaction.content = `<${interaction.options.getString('query')}>`;
+                    if (fn.unPunctuate(interaction.content) == 'del' || fn.unPunctuate(interaction.content) == 'spoiler')
+                        return await interaction.deleteReply();
+                    interaction.author = interaction.user;
+                    let embeds = await getEmbeds(interaction);
+                    if (embeds.length == 0)
+                        return await interaction.deleteReply();
+                    await interaction.editReply({embeds});
+                    break;
+
+                case 'setservermod':
+                    await interaction.deferReply();
+                    let mod = interaction.options.getString('mod')
+                    if (!interaction.inGuild) return interaction.editReply('This command can only be used in servers.');
+                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
+                    if (await db.ServerSettings.count({where: {guild: interaction.guildId}}) == 0)
+                        await db.ServerSettings.create({guild: interaction.guildId, mod});
+                    else
+                        await db.ServerSettings.update({mod}, {where: {guild: interaction.guildId}});
+                    await interaction.editReply(`Set this server's main mod to \`${mod}\`.`);
+                    break;
+            }
         } else if (interaction.isAutocomplete()) {
-            await interaction.respond(search.search(fn.unPunctuate(interaction.options.getFocused() == '' ? 'basic card' : interaction.options.getFocused())).slice(0,25).map(i => ({
-                name: `${i.item.name} (${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '')+' ' : ''}${i.item.itemType})${i.item.originalDescription ? ` - ${i.item.originalDescription.replaceAll('\n', ' ')}` : ''}`.slice(0,94) + ` (${String(Math.round((1 - i.score) * 100))}%)`,
-                value: i.item.searchText.slice(0,100)//i.item.hasOwnProperty('id') ? i.item.id : i.item.name,
-            })));
+            switch (interaction.commandName) {
+                case 'i':
+                    await interaction.respond(search.search(fn.unPunctuate(interaction.options.getFocused() == '' ? 'basic card' : interaction.options.getFocused())).slice(0,25).map(i => ({
+                        name: `${i.item.name} (${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '')+' ' : ''}${i.item.itemType})${i.item.originalDescription ? ` - ${i.item.originalDescription.replaceAll('\n', ' ')}` : ''}`.slice(0,94) + ` (${String(Math.round((1 - i.score) * 100))}%)`,
+                        value: i.item.searchText.slice(0,100)//i.item.hasOwnProperty('id') ? i.item.id : i.item.name,
+                    })));
+                    break;
+
+                case 'setservermod':
+                    await interaction.respond(data.mods.filter(mod => mod.name.toLowerCase().includes(interaction.options.getFocused().toLowerCase())).slice(0,25).map(i => ({name: i.name,value: i.name})));
+                    break;
+            }
         } else if (interaction.isMessageContextMenuCommand()) {
             let words = fn.unPunctuate(interaction.targetMessage.content).split(' ');
             let matches = [];
@@ -237,7 +282,7 @@ bot.on('interactionCreate', async interaction => {
 
 async function main() {
     console.log('loading and parsing data...');
-    let data = JSON.parse(fs.readFileSync('./docs/data.json'));
+    data = JSON.parse(fs.readFileSync('./docs/data.json'));
     for (let itemType in data)
         for (let item of data[itemType]) {
             let character = characters[''];

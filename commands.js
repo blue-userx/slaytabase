@@ -36,7 +36,8 @@ async function meme(msg, arg, options) {
         if (args.length != options.items.length)
             return {title: `This meme requires exactly ${options.items.length} item${options.items.length == 1 ? '' : 's'}. Separate items with the "=" symbol.`};
         let items = await Promise.all(args.map(async (a, i) => {
-            a = a.trim();
+            a = new String(a.trim());
+            a.filter = arg.filter;
             if (a.startsWith('user?')) {
                 let id = a.slice(5)
                 let user;
@@ -113,6 +114,10 @@ Anything highlighted in **bold** is a searchable keyword.
 
 If you edit or delete your message, I will update my reply to it, according to your changes.
 
+<item> will search through items from only vanilla Slay the Spire and one mod specific to the server (can be set by server admins with /setservermod).
+You can replace <item> with [[item]] to search through ALL mods.
+You can use /i to find an item with autocomplete.
+
 __Commands:__
 <[item name]> displays info about an item
 <d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
@@ -130,6 +135,7 @@ __Commands:__
 <artpreview [card name]> takes your first attachment and uses it as card art for a card
 <c~artpreview [card name]> compares the art preview to the current card
 <cut~artpreview [card name]>
+<searchtext [item name]> shows the text the bot can use when searching for an item
 <lists> links to lists of all items in the database
 `,
             thumbnail: {url: bot.user.avatarURL()},
@@ -184,10 +190,13 @@ __Commands:__
 
         '?': async (msg, arg, args) => {
             if (arg.startsWith('??')) {
-                let item = fn.find('?'+arg);
-                return (await embed({...item.item, score: item.score, query: '?'+arg})).data;
+                let nArg = new String('?'+arg);
+                nArg.filter = arg.filter;
+                let item = fn.find(nArg);
+                return (await embed({...item.item, score: item.score, query: nArg})).data;
             }
-            let searchQ = args.filter(a => !a.includes("=")).join(" ");
+            let searchQ = new String(args.filter(a => !a.includes("=")).join(" "));
+            searchQ.filter = arg.filter;
             let results = search.search(searchQ);
             let page = 0;
             for (let i of args) {
@@ -222,7 +231,8 @@ __Commands:__
         },
 
         'show10 ': async (msg, arg, args) => {
-            let searchQ = args.filter(a => !a.includes("=")).join(" ");
+            let searchQ = new String(args.filter(a => !a.includes("=")).join(" "));
+            searchQ.filter = arg.filter;
             let results = search.search(searchQ);
             let page = 0;
             for (let i of args) {
@@ -304,7 +314,7 @@ __Commands:__
             }
             return {
                 ...itemEmbed.data,
-                title: null,
+                title: ' ',
                 thumbnail: null,
                 footer: null,
                 description: `__**${itemEmbed.data.title}**__: ${itemEmbed.data.description.split('\n').slice(2).join(' ')}`,
@@ -336,6 +346,8 @@ __Commands:__
                     att = parseInt(args[1])-1;
                 let art = msg.attachments.at(att);
                 if (art == undefined) return {title: 'you need to attach an image to preview!'};
+                args[0] = new String(args[0]);
+                args[0].filter = arg.filter;
                 let item = fn.find(args[0]);
                 if (!item.item.hasOwnProperty('itemType') || item.item.itemType != 'card')
                     return {title: `couldnt find that card. found ${item.item.itemType} "${item.item.name}"`};
@@ -570,9 +582,11 @@ __List of memes:__
         }),
         
         'randomitem': async (msg, arg) => {
-            let itemNum = Math.floor(Math.random() * search._docs.length);
-            let item = search._docs[itemNum];
-            return {...(await embed({...item, score: 0, query: fn.unPunctuate(item.name)})).data, footer: {text: `Item ${itemNum+1}/${search._docs.length}`}};
+            let items = search._docs.map(i => ({item: i}));
+            if (arg.filter) items = items.filter(arg.filter);
+            let itemNum = Math.floor(Math.random() * items.length);
+            let item = items[itemNum].item;
+            return {...(await embed({...item, score: 0, query: fn.unPunctuate(item.name)})).data, footer: {text: `Item ${itemNum+1}/${items.length}`}};
         },
 
         'sb ': async (msg, _, __, oa) => {
