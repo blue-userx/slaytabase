@@ -34,6 +34,13 @@ export default {
                         "maxHP": "22",
                         "id": "GremlinWarrior"
                     },
+                ],
+
+                "keywords": [
+                    {
+                        "name": "Ascension",
+                        "description": "1. Elites spawn more often.\n2. Normal enemies are deadlier.\n3. Elites are deadlier.\n4. Bosses are deadlier.\n5. Heal less after Boss battles.\n6. Start each run damaged.\n7. Normal enemies are tougher.\n8. Elites are tougher.\n9. Bosses are tougher.\n10. Start each run cursed.\n11. Fewer Potion Slots.\n12. Upgraded cards appear less often.\n13. Poor bosses.\n14. Lower Max HP.\n15. Unfavorable Events.\n16. Shops are more costly.\n17. Normal enemies have more challenging movesets and abilities.\n18. Elites have more challenging movesets and abilities.\n19. Bosses have more challenging movesets and abilities.\n20. (Max Level) Double Boss.\n" 
+                    }
                 ]
             },
 
