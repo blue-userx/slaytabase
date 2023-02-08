@@ -179,7 +179,7 @@ bot.on('interactionCreate', async interaction => {
             switch (interaction.commandName) {
                 case 'i':
                     await interaction.deferReply();
-                    interaction.content = `<${interaction.options.getString('query')}>`;
+                    interaction.content = `[[${interaction.options.getString('query')}]]`;
                     if (fn.unPunctuate(interaction.content) == 'del' || fn.unPunctuate(interaction.content) == 'spoiler')
                         return await interaction.deleteReply();
                     interaction.author = interaction.user;
@@ -228,7 +228,7 @@ bot.on('interactionCreate', async interaction => {
                 await interaction.deferReply({ephemeral: true});
                 matches = [...new Set(matches)];
                 if (matches.length > 20) matches = matches.slice(0,20);
-                interaction.content = matches.slice(0,10).map(m => `<d~${m}>`).join('');
+                interaction.content = matches.slice(0,10).map(m => `[[d~${m}]]`).join('');
                 console.log(interaction.content)
                 interaction.author = interaction.user;
                 let embeds = await getEmbeds(interaction);
@@ -260,7 +260,7 @@ bot.on('interactionCreate', async interaction => {
                     })}))});
                 }
             } else if (interaction.customId == 'send') {
-                let items = interaction.message.components.map(i => i.components).flat(1).filter(i=>i.data.style == ButtonStyle.Primary).map(i => `<${i.data.custom_id.slice(4)}>`);
+                let items = interaction.message.components.map(i => i.components).flat(1).filter(i=>i.data.style == ButtonStyle.Primary).map(i => `[[${i.data.custom_id.slice(4)}]]`);
                 if (items.length > 10) return await interaction.reply({content: 'Please select at most 10 items!', ephemeral: true});
                 await interaction.deferReply();
                 interaction.content = items.join('');
