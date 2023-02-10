@@ -12,6 +12,7 @@ import fs from 'fs';
 import fn from './fn.js';
 import embed from './embed.js';
 import cfg from './cfg.js';
+import fetch from 'node-fetch';
 
 const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
 const delSearchLimit = 25;
@@ -129,6 +130,7 @@ __Commands:__
 - - cost=? - only returns cards with specified cost
 <calc [equation]> https://www.npmjs.com/package/calculator-by-str
 <plot [equation] [args]> - type <plot help> for more information
+<workshop?[mod]> - searches for a slay the spire mod on the steam workshop
 <choose [word1 word2 word3...]> chooses one of the specified words for you at random
 <rps [rock|paper|scissors]> lets you play a game of rock paper scissors with me!
 <memes> help with the bot's meme generator
@@ -661,6 +663,26 @@ __List of memes:__
                 image: {url: 'attachment://'+filename},
                 files: [filename]
             };
+        },
+
+        'workshop?': async (msg, arg) => {
+            let response = await fetch(`https://steamcommunity.com/workshop/browse/?appid=646570&searchtext=${arg.replaceAll(' ', '+')}`);
+            let body = await response.text();
+            if (body.includes('class="ugc"')) {
+                body = body.split('\n');
+                let linkIndex = body.findIndex(e => e.includes('class="ugc"'));
+                let link = body[linkIndex];
+                let img = body[linkIndex+2];
+                let title = body[linkIndex+10];
+                let url = link.slice(link.indexOf('"')+1,link.indexOf('" '));
+                let imgUrl = img.slice(img.indexOf('src="')+5,img.indexOf('">'));
+                let name = title.slice(title.indexOf('s">')+3,title.indexOf('</div>'));
+                return {
+                    title: name,
+                    url,
+                    image: {url: imgUrl},
+                };
+            } else return {title: `no mod found under ${arg}`};
         },
     },
 
