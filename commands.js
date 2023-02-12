@@ -72,32 +72,36 @@ async function meme(msg, arg, options) {
             }
         }
 
-        let canvas = createCanvas(options.w, options.h);
-        let ctx = canvas.getContext('2d');
-
-        ctx.drawImage(await loadImage('./memetemplates/'+options.bg), 0, 0);
-        if (options.hasOwnProperty('put'))
-            for (let p of options.put)
-                ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
-        if (options.hasOwnProperty('texts'))
-            for (let t of options.texts)
-                drawText.default(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : (items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase()), font,
-                    {x: t[1], y: t[2], width: t[3], height: t[4]}, 
-                    {minSize: 5, maxSize: 200, vAlign: 'center', hAlign: 'center', textFillStyle: t[5], fitMethod: 'box', drawRect: false}
-                );
-        
-        let buffer = canvas.toBuffer('image/png');
-        let gif = new Gif(options.w, options.h, 500);
-        await gif.addFrame({src: buffer});
-        let render = await gif.encode();
-        let filename = `export${String(Math.random()).slice(2)}.gif`;
-        fs.writeFileSync(filename, render);
-        return {
-            title: ' ',
-            image: {url: 'attachment://'+filename},
-            files: [filename],
-            color: typeof items[0] == 'string' || items[0] instanceof User || items[0].hasOwnProperty('ephemeral') ? null : items[0].embed.color,
-        };
+        if (options.hasOwnProperty('bg')) {
+            let canvas = createCanvas(options.w, options.h);
+            let ctx = canvas.getContext('2d');
+    
+            ctx.drawImage(await loadImage('./memetemplates/'+options.bg), 0, 0);
+            if (options.hasOwnProperty('put'))
+                for (let p of options.put)
+                    ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
+            if (options.hasOwnProperty('texts'))
+                for (let t of options.texts)
+                    drawText.default(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : (items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase()), font,
+                        {x: t[1], y: t[2], width: t[3], height: t[4]}, 
+                        {minSize: 5, maxSize: 200, vAlign: 'center', hAlign: 'center', textFillStyle: t[5], fitMethod: 'box', drawRect: false}
+                    );
+            
+            let buffer = canvas.toBuffer('image/png');
+            let gif = new Gif(options.w, options.h, 500);
+            await gif.addFrame({src: buffer});
+            let render = await gif.encode();
+            let filename = `export${String(Math.random()).slice(2)}.gif`;
+            fs.writeFileSync(filename, render);
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename],
+                color: typeof items[0] == 'string' || items[0] instanceof User || items[0].hasOwnProperty('ephemeral') ? null : items[0].embed.color,
+            };
+        } else if (options.hasOwnProperty('mkswtTemplate')) {
+            
+        }
     } catch(e) {
         console.error(e);
         return {title: 'failed to generate image'};
@@ -683,6 +687,13 @@ __List of memes:__
                     image: {url: imgUrl},
                 };
             } else return {title: `no mod found under ${arg}`};
+        },
+
+        'forcestop': async (msg, arg) => {
+            if (cfg.overriders.includes(msg.author.id)) {
+                setTimeout(process.exit, 1000);
+                return {title: "stopped."};
+            } else return {title: ":/"};
         },
     },
 
