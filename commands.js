@@ -1,6 +1,6 @@
 import { bot, search } from './index.js';
 import { User } from 'discord.js';
-import { createCanvas, loadImage } from 'canvas';
+import { createCanvas, createImageData, loadImage } from 'canvas';
 import drawText from 'node-canvas-text';
 import opentype from 'opentype.js';
 import { Gif } from 'make-a-gif'
@@ -13,6 +13,7 @@ import fn from './fn.js';
 import embed from './embed.js';
 import cfg from './cfg.js';
 import fetch from 'node-fetch';
+import gm from 'gm';
 
 const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
 const delSearchLimit = 25;
@@ -355,52 +356,117 @@ __Commands:__
                 args[0] = new String(args[0]);
                 args[0].filter = arg.filter;
                 let item = fn.find(args[0]);
-                if (!item.item.hasOwnProperty('itemType') || item.item.itemType != 'card')
-                    return {title: `couldnt find that card. found ${item.item.itemType} "${item.item.name}"`};
+                if (!item.item.hasOwnProperty('itemType') || !['card', 'relic'].includes(item.item.itemType))
+                    return {title: `that item couldn\'t be previewed. found ${item.item.itemType} "${item.item.name}"`};
                 let itemEmbed = await embed({...item.item, score: item.score, query: args[0]});
-    
-                let artcanvas = createCanvas(500,380);
-                let artctx = artcanvas.getContext('2d');
-                artctx.drawImage(await loadImage(art.url), 0, 0, 500, 380);
-                artctx.globalAlpha = 0.25;
-                artctx.drawImage(await shadows[cardTypes[item.item.type]], 0, 0);
-                artctx.globalAlpha = 1;
-                artctx.globalCompositeOperation = 'destination-out';
-                artctx.drawImage(await masks[cardTypes[item.item.type]], 0, 0);
 
-                let canvas = createCanvas(1356,874);
-                let ctx = canvas.getContext('2d');
-                ctx.drawImage(await loadImage(itemEmbed.data.thumbnail.url), 0, 0, 678, 874, 0, 0, 678, 874);
-                ctx.drawImage(artcanvas, 89, 123);
-                ctx.drawImage(await loadImage(itemEmbed.data.thumbnail.url), 678, 0);
-    
-                let filename = `${(item.item.id.includes(':') ? item.item.id.slice(item.item.id.indexOf(':')+1) : item.item.id).replaceAll(' ', '-')}_preview-${String(Math.random()).slice(10)}.png`;
-                fs.writeFileSync(filename, canvas.toBuffer());
+                switch (item.item.itemType) {
+                    case 'card':
+                        let artcanvas = createCanvas(500,380);
+                        let artctx = artcanvas.getContext('2d');
+                        artctx.drawImage(await loadImage(art.url), 0, 0, 500, 380);
+                        artctx.globalAlpha = 0.25;
+                        artctx.drawImage(await shadows[cardTypes[item.item.type]], 0, 0);
+                        artctx.globalAlpha = 1;
+                        artctx.globalCompositeOperation = 'destination-out';
+                        artctx.drawImage(await masks[cardTypes[item.item.type]], 0, 0);
+        
+                        let canvas = createCanvas(1356,874);
+                        let ctx = canvas.getContext('2d');
+                        ctx.drawImage(await loadImage(itemEmbed.data.thumbnail.url), 0, 0, 678, 874, 0, 0, 678, 874);
+                        ctx.drawImage(artcanvas, 89, 123);
+                        ctx.drawImage(await loadImage(itemEmbed.data.thumbnail.url), 678, 0);
+            
+                        let filename = `${(item.item.id.includes(':') ? item.item.id.slice(item.item.id.indexOf(':')+1) : item.item.id).replaceAll(' ', '-')}_preview-${String(Math.random()).slice(10)}.png`;
+                        fs.writeFileSync(filename, canvas.toBuffer());
+        
+        
+                        let cutcanvas = createCanvas(500,380);
+                        let cutctx = cutcanvas.getContext('2d');
+                        cutctx.drawImage(await loadImage(art.url), 0, 0, 500, 380);
+                        cutctx.globalCompositeOperation = 'destination-out';
+                        cutctx.drawImage(await cuts[cardTypes[item.item.type]], 0, 0);
+                        let filename2 = filename.replace('_preview-', '_p-');
+                        fs.writeFileSync(filename2, cutcanvas.toBuffer());
+        
+                        let smallcanvas = createCanvas(250,190);
+                        let smallctx = smallcanvas.getContext('2d');
+                        smallctx.drawImage(cutcanvas, 0, 0, 250, 190);
+                        let filename3 = filename2.replace('_p-', '-');
+                        fs.writeFileSync(filename3, smallcanvas.toBuffer());
+        
+                        return {
+                            title: item.item.name,
+                            description: '250x190 →',
+                            image: {url: 'attachment://'+filename},
+                            thumbnail: {url: 'attachment://'+filename3},
+                            footer: {iconURL: 'attachment://'+filename2, text: '← 500x380'},
+                            files: [filename, filename2, filename3],
+                            color: itemEmbed.data.color,
+                        };
 
 
-                let cutcanvas = createCanvas(500,380);
-                let cutctx = cutcanvas.getContext('2d');
-                cutctx.drawImage(await loadImage(art.url), 0, 0, 500, 380);
-                cutctx.globalCompositeOperation = 'destination-out';
-                cutctx.drawImage(await cuts[cardTypes[item.item.type]], 0, 0);
-                let filename2 = filename.replace('_preview-', '_p-');
-                fs.writeFileSync(filename2, cutcanvas.toBuffer());
-
-                let smallcanvas = createCanvas(250,190);
-                let smallctx = smallcanvas.getContext('2d');
-                smallctx.drawImage(cutcanvas, 0, 0, 250, 190);
-                let filename3 = filename2.replace('_p-', '-');
-                fs.writeFileSync(filename3, smallcanvas.toBuffer());
-
-                return {
-                    title: item.item.name,
-                    description: '250x190 →',
-                    image: {url: 'attachment://'+filename},
-                    thumbnail: {url: 'attachment://'+filename3},
-                    footer: {iconURL: 'attachment://'+filename2, text: '← 500x380'},
-                    files: [filename, filename2, filename3],
-                    color: itemEmbed.data.color,
-                };
+                    case 'relic':
+                        let rFilename = `${(item.item.id.includes(':') ? item.item.id.slice(item.item.id.indexOf(':')+1) : item.item.id).replaceAll(' ', '-')}_preview-${String(Math.random()).slice(10)}.png`;
+                        let rFilename2 = rFilename.replace('_preview-', '_outline-');
+                        let rFilename3 = rFilename.replace('_preview-', '-');
+                        let relicanvas = createCanvas(256, 256);
+                        let relictx = relicanvas.getContext('2d');
+                        relictx.drawImage(await loadImage(art.url), 0, 0, 256, 256);
+                        let relicImageData = relictx.getImageData(0, 0, 256, 256)
+                        for (let i = 0; i < relicImageData.data.length; i += 4) {
+                          relicImageData.data[i] = 255;
+                          relicImageData.data[i+1] = 255;
+                          relicImageData.data[i+2] = 255;
+                        }
+                        let outlinecanvas = createCanvas(256, 256);
+                        let outlinectx = outlinecanvas.getContext('2d');
+                        outlinectx.putImageData(relicImageData,0,0);
+                        await new Promise(res => gm(outlinecanvas.toBuffer())
+                            .edge(3, 3)
+                            .write(rFilename2, err => {
+                                if (err) throw err;
+                                res();
+                            }));
+                        outlinectx.clearRect(0,0,256,256);
+                        outlinectx.drawImage(await loadImage(rFilename2),0,0);
+                        let outlineImageData = outlinectx.getImageData(0, 0, 256, 256);
+                        let outlineImageDataBlack = createImageData(256,256);
+                        for (let i = 0; i < outlineImageData.data.length; i += 4) {
+                            outlineImageData.data[i] = 255;
+                            outlineImageData.data[i+1] = 255;
+                            outlineImageData.data[i+2] = 255;
+                            outlineImageData.data[i+3] = 255-outlineImageData.data[i+3];
+                            outlineImageDataBlack.data[i] = 0;
+                            outlineImageDataBlack.data[i+1] = 0;
+                            outlineImageDataBlack.data[i+2] = 0;
+                            outlineImageDataBlack.data[i+3] = outlineImageData.data[i+3];
+                        }
+                        outlinectx.clearRect(0,0,256,256);
+                        outlinectx.putImageData(outlineImageData,0,0);
+                        fs.writeFileSync(rFilename2, outlinecanvas.toBuffer());
+                        outlinectx.putImageData(outlineImageDataBlack,0,0);
+                        let compareCanvas = createCanvas(300,150);
+                        let compareCtx = compareCanvas.getContext('2d');
+                        compareCtx.globalAlpha = 0.11;
+                        compareCtx.drawImage(outlinecanvas, -53, -53);
+                        compareCtx.globalAlpha = 1;
+                        compareCtx.drawImage(relicanvas, -53, -53);
+                        compareCtx.drawImage(await loadImage(itemEmbed.data.thumbnail.url), 150, 0);
+                        fs.writeFileSync(rFilename, compareCanvas.toBuffer());
+                        fs.writeFileSync(rFilename3, relicanvas.toBuffer());
+                        await new Promise(res => gm(rFilename2).resize(128,128).write(rFilename2, res));
+                        await new Promise(res => gm(rFilename3).resize(128,128).write(rFilename3, res));
+                        return {
+                            title: item.item.name,
+                            description: '128x128 →',
+                            image: {url: 'attachment://'+rFilename},
+                            thumbnail: {url: 'attachment://'+rFilename3},
+                            footer: {iconURL: 'attachment://'+rFilename2, text: '← outline'},
+                            files: [rFilename, rFilename2, rFilename3],
+                            color: itemEmbed.data.color,
+                        };
+                }
             } catch(e) {
                 console.error(e);
                 return {title: 'failed to generate image'};
@@ -410,9 +476,10 @@ __Commands:__
         'artpreview ': async (msg, arg) => {
             try {
                 let preview = await commands.prefix['c~artpreview '](msg, arg);
-                let canvas = createCanvas(678,874);
+                let img = await loadImage(preview.files[0]);
+                let canvas = createCanvas(img.width/2,img.height);
                 let ctx = canvas.getContext('2d');
-                ctx.drawImage(await loadImage(preview.files[0]), 0, 0, 678, 874, 0, 0, 678, 874);
+                ctx.drawImage(img, 0, 0);
                 fs.writeFileSync(preview.files[0], canvas.toBuffer());
                 return preview;
             } catch(e) {

@@ -15,6 +15,7 @@ invite the bot: https://discord.com/oauth2/authorize?client_id=96182444365357468
 
 ## setup for running the bot
 1. `npm ci`
+2. install [GraphicsMagick](http://www.graphicsmagick.org/download.html)
 2. create `cfg.js` and paste the following in: `export default {"token":"jsdakfhajksdfh", "exportURL": "https://oceanuwu.github.io/slaytabase", "overriders": ["106068236000329728"]}` and set `token` as your discord bot token
 3. create a thread in a channel where you want daily discussions to be created and copy its id.
 4. create `dailyDiscussion.json` and paste the following in: `{"next": 1666312415000, "voteChannel": "0", "options": ["slimebound:split"], "votes": [[]], "past":[]}` and set `voteChannel` as the thread id you just copied and set `next` as the current UNIX timestamp (the one with milliseconds)
