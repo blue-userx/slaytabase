@@ -60,7 +60,7 @@ async function meme(msg, arg, options) {
                 attachment.item = {name: a.slice(6)};
                 return attachment;
             }
-            return options.items[i] == 1 ? a : fn.find(a);
+            return options.items[i] == 1 ? a+"" : fn.find(a);
         }));
         for (let i in items) {
             if (options.items[i] == 0) {
