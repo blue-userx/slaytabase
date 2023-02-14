@@ -423,7 +423,7 @@ __Commands:__
                         let outlinectx = outlinecanvas.getContext('2d');
                         outlinectx.putImageData(relicImageData,0,0);
                         await new Promise(res => gm(outlinecanvas.toBuffer())
-                            .edge(3, 3)
+                            .edge(4, 4)
                             .write(rFilename2, err => {
                                 if (err) throw err;
                                 res();
