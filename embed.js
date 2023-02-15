@@ -87,7 +87,9 @@ async function embed(item, msg, embeds=[]) {
             args = args.trim().split(' ');
             let arg = new String(args.join(' '));
             arg.filter = item.query.filter;
-            let result = await item.do(msg, arg, args, item.originalQuery.slice(item.name.length));
+            let oa = new String(item.originalQuery.slice(item.name.length));
+            oa.filter = item.query.filter;
+            let result = await item.do(msg, arg, args, oa);
             for (let i in result)
                 e[i] = result[i];
             break;

@@ -58663,24 +58663,24 @@
     ],
     "creatures": [
         {
-            "id": "",
-            "name": "the Astrologer",
+            "id": "TheAstrologer",
+            "name": "The Astrologer",
             "type": "Player",
             "minHP": "70",
             "maxHP": "70",
             "mod": "Astrologer"
         },
         {
-            "id": "",
-            "name": "the Avocado",
+            "id": "TheAvocado",
+            "name": "The Avocado",
             "type": "Player",
             "minHP": "69",
             "maxHP": "69",
             "mod": "Avocado"
         },
         {
-            "id": "",
-            "name": "the Bard",
+            "id": "TheBard",
+            "name": "The Bard",
             "type": "Player",
             "minHP": "70",
             "maxHP": "70",
@@ -58999,8 +58999,8 @@
             "mod": "Battle Towers"
         },
         {
-            "id": "",
-            "name": "the Beaked",
+            "id": "TheBeaked",
+            "name": "The Beaked",
             "type": "Player",
             "minHP": "50",
             "maxHP": "50",
@@ -59223,7 +59223,7 @@
             "mod": "Corrupt the Spire"
         },
         {
-            "id": "",
+            "id": "TheGremlins",
             "name": "The Gremlins",
             "type": "Player",
             "minHP": "16",
@@ -59231,7 +59231,7 @@
             "mod": "Downfall"
         },
         {
-            "id": "",
+            "id": "TheGuardian",
             "name": "The Guardian",
             "type": "Player",
             "minHP": "80",
@@ -59239,7 +59239,7 @@
             "mod": "Downfall"
         },
         {
-            "id": "",
+            "id": "TheSlimeBoss",
             "name": "The Slime Boss",
             "type": "Player",
             "minHP": "65",
@@ -59247,39 +59247,39 @@
             "mod": "Downfall"
         },
         {
-            "id": "",
-            "name": "the Automaton",
+            "id": "TheAutomaton",
+            "name": "The Automaton",
             "type": "Player",
             "minHP": "70",
             "maxHP": "70",
             "mod": "Downfall"
         },
         {
-            "id": "",
-            "name": "the Champ",
+            "id": "TheChamp",
+            "name": "The Champ",
             "type": "Player",
             "minHP": "80",
             "maxHP": "80",
             "mod": "Downfall"
         },
         {
-            "id": "",
-            "name": "the Hermit",
+            "id": "TheHermit",
+            "name": "The Hermit",
             "type": "Player",
             "minHP": "75",
             "maxHP": "75",
             "mod": "Downfall"
         },
         {
-            "id": "",
-            "name": "the Hexaghost",
+            "id": "TheHexaghost",
+            "name": "The Hexaghost",
             "type": "Player",
             "minHP": "66",
             "maxHP": "66",
             "mod": "Downfall"
         },
         {
-            "id": "",
+            "id": "TheSnecko",
             "name": "The Snecko",
             "type": "Player",
             "minHP": "85",
@@ -59482,7 +59482,7 @@
             "img": "/Downfall/creatures/LadyInBlue.png"
         },
         {
-            "id": "",
+            "id": "Dregs",
             "name": "Dregs",
             "type": "Player",
             "minHP": "85",
@@ -59490,7 +59490,7 @@
             "mod": "DregsMod"
         },
         {
-            "id": "",
+            "id": "Ferrothorn",
             "name": "Ferrothorn",
             "type": "Player",
             "minHP": "80",
@@ -60114,7 +60114,7 @@
             "mod": "Infinite Spire"
         },
         {
-            "id": "",
+            "id": "TheOrdinaryMagician",
             "name": "The Ordinary Magician",
             "type": "Player",
             "minHP": "75",
@@ -60210,8 +60210,8 @@
             "mod": "Replay The Spire"
         },
         {
-            "id": "",
-            "name": "the Robonaut",
+            "id": "TheRobonaut",
+            "name": "The Robonaut",
             "type": "Player",
             "minHP": "75",
             "maxHP": "75",
@@ -60954,32 +60954,32 @@
             "mod": "Ruina"
         },
         {
-            "id": "",
-            "name": "the Defect",
+            "id": "TheDefect",
+            "name": "The Defect",
             "type": "Player",
             "minHP": "75",
             "maxHP": "75",
             "mod": "Slay the Spire"
         },
         {
-            "id": "",
-            "name": "the Ironclad",
+            "id": "TheIronclad",
+            "name": "The Ironclad",
             "type": "Player",
             "minHP": "80",
             "maxHP": "80",
             "mod": "Slay the Spire"
         },
         {
-            "id": "",
-            "name": "the Silent",
+            "id": "TheSilent",
+            "name": "The Silent",
             "type": "Player",
             "minHP": "70",
             "maxHP": "70",
             "mod": "Slay the Spire"
         },
         {
-            "id": "",
-            "name": "the Watcher",
+            "id": "TheWatcher",
+            "name": "The Watcher",
             "type": "Player",
             "minHP": "72",
             "maxHP": "72",
@@ -61557,47 +61557,47 @@
             "mod": "Slay the Spire"
         },
         {
-            "id": "",
-            "name": "the Somnambulant",
+            "id": "TheSomnambulant",
+            "name": "The Somnambulant",
             "type": "Player",
             "minHP": "70",
             "maxHP": "70",
             "mod": "Somnambulant"
         },
         {
-            "id": "",
-            "name": "the Adventurer",
+            "id": "TheAdventurer",
+            "name": "The Adventurer",
             "type": "Player",
             "minHP": "74",
             "maxHP": "74",
             "mod": "The Adventurer"
         },
         {
-            "id": "",
-            "name": "the Artist",
+            "id": "TheArtist",
+            "name": "The Artist",
             "type": "Player",
             "minHP": "80",
             "maxHP": "80",
             "mod": "The Artist"
         },
         {
-            "id": "",
-            "name": "the Axe",
+            "id": "TheAxe",
+            "name": "The Axe",
             "type": "Player",
             "minHP": "78",
             "maxHP": "78",
             "mod": "The Axe"
         },
         {
-            "id": "",
-            "name": "the Construct",
+            "id": "TheConstruct",
+            "name": "The Construct",
             "type": "Player",
             "minHP": "85",
             "maxHP": "85",
             "mod": "The Construct"
         },
         {
-            "id": "",
+            "id": "TheCursed",
             "name": "The Cursed",
             "type": "Player",
             "minHP": "75",
@@ -61605,7 +61605,7 @@
             "mod": "The Cursed"
         },
         {
-            "id": "",
+            "id": "TheDisciple",
             "name": "The Disciple",
             "type": "Player",
             "minHP": "65",
@@ -61613,15 +61613,15 @@
             "mod": "The Disciple"
         },
         {
-            "id": "",
-            "name": "the Forsaken",
+            "id": "TheForsaken",
+            "name": "The Forsaken",
             "type": "Player",
             "minHP": "65",
             "maxHP": "65",
             "mod": "The Forsaken"
         },
         {
-            "id": "",
+            "id": "TheHayseed",
             "name": "The Hayseed",
             "type": "Player",
             "minHP": "75",
@@ -61629,7 +61629,7 @@
             "mod": "The Hayseed"
         },
         {
-            "id": "",
+            "id": "TheHierophant",
             "name": "The Hierophant",
             "type": "Player",
             "minHP": "75",
@@ -61637,16 +61637,16 @@
             "mod": "The Hierophant"
         },
         {
-            "id": "",
-            "name": "the Human",
+            "id": "TheHuman",
+            "name": "The Human",
             "type": "Player",
             "minHP": "70",
             "maxHP": "70",
             "mod": "The Human"
         },
         {
-            "id": "",
-            "name": "the M10 Robot",
+            "id": "TheM10Robot",
+            "name": "The M10 Robot",
             "type": "Player",
             "minHP": "75",
             "maxHP": "75",
@@ -61661,7 +61661,7 @@
             "mod": "The Marked"
         },
         {
-            "id": "",
+            "id": "TheMystic",
             "name": "The Mystic",
             "type": "Player",
             "minHP": "77",
@@ -61669,23 +61669,23 @@
             "mod": "The Mystic"
         },
         {
-            "id": "",
-            "name": "the Packmaster",
+            "id": "ThePackmaster",
+            "name": "The Packmaster",
             "type": "Player",
             "minHP": "75",
             "maxHP": "75",
             "mod": "The Packmaster"
         },
         {
-            "id": "",
-            "name": "the Runesmith",
+            "id": "TheRunesmith",
+            "name": "The Runesmith",
             "type": "Player",
             "minHP": "70",
             "maxHP": "70",
             "mod": "The Runesmith"
         },
         {
-            "id": "",
+            "id": "TheServant",
             "name": "The Servant",
             "type": "Player",
             "minHP": "65",
@@ -61693,32 +61693,32 @@
             "mod": "The Servant 0.9.4"
         },
         {
-            "id": "",
-            "name": "the Templar",
+            "id": "TheTemplar",
+            "name": "The Templar",
             "type": "Player",
             "minHP": "75",
             "maxHP": "75",
             "mod": "The Templar"
         },
         {
-            "id": "",
-            "name": "the Unchained",
+            "id": "TheUnchained",
+            "name": "The Unchained",
             "type": "Player",
             "minHP": "75",
             "maxHP": "75",
             "mod": "The Unchained Mod"
         },
         {
-            "id": "",
-            "name": "the Vacant",
+            "id": "TheVacant",
+            "name": "The Vacant",
             "type": "Player",
             "minHP": "80",
             "maxHP": "80",
             "mod": "The Vacant"
         },
         {
-            "id": "",
-            "name": "the Thorton",
+            "id": "TheThorton",
+            "name": "The Thorton",
             "type": "Player",
             "minHP": "68",
             "maxHP": "68",
@@ -65420,11 +65420,11 @@
         },
         {
             "name": "StSLib",
-            "version": "2.7.2",
+            "version": "2.7.1",
             "authors": [
                 "kiooeht"
             ],
-            "credits": "\n  Contributors: The_Evil_Pickle, Reina, Rin Camelia, erasels, EatYourBeetS, Jedi, Vex, Mistress Alison, Alchyr, Bryan, Pandemonium, NellyDevo \n  Translation: Jedi (Russian), Rita-B (ZHS), rainfoxest (ZHS, ZHT), Mwalls (ZHS), Tsurumaki Maki (Korean), Celicath (Korean), Diamsword (French), red5h4d0w (French)",
+            "credits": "\n  Contributors: The_Evil_Pickle, Reina, Rin Camelia, erasels, EatYourBeetS, Jedi, Vex, Mistress Alison, Alchyr, Bryan, Pandemonium, NellyDevo \n  Translation: Jedi (Russian), Rita-B (ZHS), rainfoxest (ZHS, ZHT), Tsurumaki Maki (Korean), Celicath (Korean), Diamsword (French), red5h4d0w (French)",
             "description": "A collection of keywords and mechanics for other Slay the Spire mods to use.",
             "mts_version": "3.24.0",
             "sts_version": "12-18-2022",

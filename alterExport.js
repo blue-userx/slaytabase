@@ -266,6 +266,15 @@ async function exportMod(modPath){
             data.events[i] = event;
         }
     
+    if (data.hasOwnProperty('creatures'))
+        for (let i of data.creatures) {
+            if (i.type == 'Player') {
+                if (i.name.startsWith('the'))
+                    i.name = i.name.replace('the', 'The');
+                i.id = i.name.replaceAll(' ', '');
+            }
+        }
+    
     if (exportImages) {
         console.log(`Compressing images...`);
         let imagesToCompress = gatherImages(path);
