@@ -1645,6 +1645,38 @@ export default {
         }
     },
 
+    "The Packmaster": {
+        "pre": {
+            "add": {
+
+            },
+
+            "edit": {
+                "cards": [
+                    {
+                        "where": {"name": "9 Ball"},
+                        "to": {"name": "8 Ball+", "imgPath": "gamedata/export/anniv5/card-images/Colorless-9Ball"}
+                    }
+                ]
+            }
+        },
+
+        "post": {
+            "add": {
+
+            },
+
+            "edit": {
+                "cards": [
+                    {
+                        "where": {"name": "8 Ball"},
+                        "to": {"name": "8 (9) Ball", "img": "/The Packmaster/cards/Colorless-8Ball.png"}
+                    },
+                ]
+            }
+        }
+    },
+
     "Template": {
         "pre": {
             "add": {
