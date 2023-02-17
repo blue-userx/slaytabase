@@ -44451,7 +44451,7 @@
             "rarity": "Special",
             "type": "Attack",
             "cost": "0",
-            "description": "Retain. Gain 2 Block.\nDeal 2 damage. Double the damage and Block of ALL Swirls this turn.  ( Gain 1 theunchainedmod:Momentum.  ) Exhaust.",
+            "description": "Retain. Gain 2 Block.\nDeal 2 damage. Double the base damage and Block of ALL Swirls this turn.  ( Gain 1 theunchainedmod:Momentum.  ) Exhaust.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44515,23 +44515,13 @@
             "mod": "The Unchained Mod"
         },
         {
-            "id": "theUnchainedMod:Cripple",
-            "name": "Cripple",
-            "color": "Unchained_orange_color",
-            "rarity": "Common",
-            "type": "Skill",
-            "cost": "1",
-            "description": "Apply 4 (6) theunchainedmod:Crushed_Armor. Apply 2 (3) Weak. Exhaust.",
-            "mod": "The Unchained Mod"
-        },
-        {
             "id": "theUnchainedMod:DoubleDown",
             "name": "Double Down",
             "color": "Unchained_orange_color",
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 4 (6) Block twice.",
+            "description": "Gain 4 (6) Block twice.\nCounts as a card for any theunchainedmod:Chain.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44551,7 +44541,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 5 (7) damage. Remove up to 8 (11) theunchainedmod:Relayed_Damage and deal damage equal to the amount you removed.",
+            "description": "Deal 6 (8) damage. Remove up to 8 (12) theunchainedmod:Relayed_Damage and deal damage equal to the amount you removed.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44562,6 +44552,16 @@
             "type": "Attack",
             "cost": "1",
             "description": "Deal 9 (12) damage. Put 1 card from your draw pile on top of your draw pile.",
+            "mod": "The Unchained Mod"
+        },
+        {
+            "id": "theUnchainedMod:HeavyHitter",
+            "name": "Heavy Hitter",
+            "color": "Unchained_orange_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 3 (5) temporary Strength. Whenever you hit an enemy this turn, apply 2 (3) theunchainedmod:Crushed_Armor.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44581,7 +44581,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 15 (20) damage.\n1 theunchainedmod:Chain: Gain [E].",
+            "description": "Deal 13 (17) damage.\n1 theunchainedmod:Chain: Gain [E].",
             "mod": "The Unchained Mod"
         },
         {
@@ -44591,7 +44591,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 8 (12) Block.\nFinish ALL your active theunchainedmod:Chains.\nRemove ALL theunchainedmod:Relayed_Damage. Exhaust.",
+            "description": "Gain 7 (10) Block.\nFinish ALL your active theunchainedmod:Chains.\nRemove ALL theunchainedmod:Relayed_Damage. Exhaust.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44602,6 +44602,16 @@
             "type": "Attack",
             "cost": "1",
             "description": "Deal 7 (10) damage.\nDraw 1 card, if it is a 2-cost card play it on the same enemy if possible.",
+            "mod": "The Unchained Mod"
+        },
+        {
+            "id": "theUnchainedMod:PropheticSwing",
+            "name": "Prophetic Swing",
+            "color": "Unchained_orange_color",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 10 (13) damage to a random enemy.\nScry 3 (4).",
             "mod": "The Unchained Mod"
         },
         {
@@ -44621,7 +44631,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Gain 5 Block. Deal 5 damage.\nGain 1 (2) theunchainedmod:Momentum.",
+            "description": "Gain 5 (7) Block. Deal 5 (7) damage.\nGain 1 (2) theunchainedmod:Momentum.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44655,13 +44665,33 @@
             "mod": "The Unchained Mod"
         },
         {
+            "id": "theUnchainedMod:APlomb",
+            "name": "À Plomb",
+            "color": "Unchained_orange_color",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 6 (9) Block. Gain 1 theunchainedmod:Momentum.\nNext Turn, gain 1 theunchainedmod:Momentum.",
+            "mod": "The Unchained Mod"
+        },
+        {
+            "id": "theUnchainedMod:ArcaneTransmutation",
+            "name": "Arcane Transmutation",
+            "color": "Unchained_orange_color",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "Whenever an enemy gains Block, gain 4 (5) theunchainedmod:Relay.",
+            "mod": "The Unchained Mod"
+        },
+        {
             "id": "theUnchainedMod:Baguazhang",
             "name": "Baguazhang",
             "color": "Unchained_orange_color",
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "If the enemy intends to do less than 10 damage (per hit), gain 15 (20) Block.",
+            "description": "Gain 5 Block.\nEnemy gains 5 Block.\nIf the enemy intends to do less than 10 damage (per hit), gain 10 (15) Block.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44715,6 +44745,16 @@
             "mod": "The Unchained Mod"
         },
         {
+            "id": "theUnchainedMod:Cripple",
+            "name": "Cripple",
+            "color": "Unchained_orange_color",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Apply 4 (6) theunchainedmod:Crushed_Armor. Apply 2 (3) Weak. Apply 2 (3) Vulnerable. Exhaust.",
+            "mod": "The Unchained Mod"
+        },
+        {
             "id": "theUnchainedMod:Cruiserweight",
             "name": "Cruiserweight",
             "color": "Unchained_orange_color",
@@ -44722,16 +44762,6 @@
             "type": "Power",
             "cost": "2",
             "description": "Whenever you draw a 2-cost card, draw 1 (2) card (cards).",
-            "mod": "The Unchained Mod"
-        },
-        {
-            "id": "theUnchainedMod:CrushPlates",
-            "name": "Crush Plates",
-            "color": "Unchained_orange_color",
-            "rarity": "Uncommon",
-            "type": "Attack",
-            "cost": "2",
-            "description": "Deal 10 (15) damage. Apply theunchainedmod:Crushed_Armor for ALL damage that was blocked.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44775,16 +44805,6 @@
             "mod": "The Unchained Mod"
         },
         {
-            "id": "theUnchainedMod:Glare",
-            "name": "Glare",
-            "color": "Unchained_orange_color",
-            "rarity": "Uncommon",
-            "type": "Skill",
-            "cost": "1",
-            "description": "Gain 7 (9) Block. Apply 2 (3) Vulnerable to ALL enemies. Exhaust.",
-            "mod": "The Unchained Mod"
-        },
-        {
             "id": "theUnchainedMod:GuardedPosture",
             "name": "Guarded Posture",
             "color": "Unchained_orange_color",
@@ -44811,7 +44831,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 11 (13) Block. Whenever you are attacked this turn, the attacking enemy gains 3 (4) theunchainedmod:Crushed_Armor.",
+            "description": "Gain 11 (13) Block. Whenever you are attacked this turn, the attacking enemy gains 4 (5) theunchainedmod:Crushed_Armor.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44851,7 +44871,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 6 (8) Block.\nIf you end this turn on 0 [E] , gain\n[E] [E]  ( [E] ) next turn.",
+            "description": "Gain 6 (8) Block.\nIf you have spent ALL your [E] at the end of this turn, gain\n[E] [E]  ( [E] ) next turn.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44862,16 +44882,6 @@
             "type": "Skill",
             "cost": "2",
             "description": "Copy a card  (twice ) and put the (both) copy (copies) on top of your draw pile.\nExhaust.",
-            "mod": "The Unchained Mod"
-        },
-        {
-            "id": "theUnchainedMod:PropheticSwing",
-            "name": "Prophetic Swing",
-            "color": "Unchained_orange_color",
-            "rarity": "Uncommon",
-            "type": "Attack",
-            "cost": "1",
-            "description": "Deal 11 (14) damage to a random enemy.\nScry 3 (4).",
             "mod": "The Unchained Mod"
         },
         {
@@ -44901,7 +44911,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 10 (14) theunchainedmod:Relay.\nLose up to 10 (14) theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed.",
+            "description": "Gain 14 (18) theunchainedmod:Relay.\nLose up to 14 (18) theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44931,7 +44941,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1 (0)",
-            "description": "Add a random 2-cost card into your hand. It costs 0 this turn.\nExhaust.",
+            "description": "Add a random 2-cost card into your hand.\nIt costs 0 this turn\nand exhausts.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44941,7 +44951,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 0 damage.  (Retain.)\nDamage is equal to ALL theunchainedmod:Relayed_Damage you have gained this combat.",
+            "description": " (Retain.)\nDeal 0 damage.\nDamage is equal to ALL theunchainedmod:Relayed_Damage you have gained this combat.",
             "mod": "The Unchained Mod"
         },
         {
@@ -44950,8 +44960,8 @@
             "color": "Unchained_orange_color",
             "rarity": "Uncommon",
             "type": "Skill",
-            "cost": "1",
-            "description": "Gain 3 (4) temporary Dexterity. 1 theunchainedmod:Chain: Apply 1 (2) Weak to ALL enemies.",
+            "cost": "0",
+            "description": "Gain 2 (3) temporary Dexterity. 1 theunchainedmod:Chain: Apply 1 (2) Weak to ALL enemies.",
             "mod": "The Unchained Mod"
         },
         {
@@ -45001,17 +45011,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Apply 1 Vulnerable.\n1 Chain: Add a random  (upgraded ) common Attack to your hand.\nIt exhausts. It costs 0 this turn.",
-            "mod": "The Unchained Mod"
-        },
-        {
-            "id": "theUnchainedMod:APlomb",
-            "name": "À Plomb",
-            "color": "Unchained_orange_color",
-            "rarity": "Uncommon",
-            "type": "Skill",
-            "cost": "2",
-            "description": "Gain 10 (13) Block. Gain 1 theunchainedmod:Momentum.\nNext Turn, gain 1 theunchainedmod:Momentum.",
+            "description": "Apply 1 Vulnerable.\n1 Chain: Add a random  (upgraded ) common Attack to your hand.\nIt costs 0 this turn\nand exhausts.",
             "mod": "The Unchained Mod"
         },
         {
@@ -45091,7 +45091,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "At the start of each turn, lose 1 (2) Strength and Dexterity. Whenever you finish a theunchainedmod:Chain gain 2 (3) Strength and Dexterity.",
+            "description": "The first time you finish a theunchainedmod:Chain each turn, gain 2 (3) Strength and Dexterity. If you did not finish a theunchainedmod:Chain by the end of turn, lose 2 (3) Strength and Dexterity. You cannot lose more than the amount you gained.",
             "mod": "The Unchained Mod"
         },
         {
@@ -45101,7 +45101,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "~~- Ethereal. -~~\nGain [E] whenever you play a 2-cost card.",
+            "description": "~~- Ethereal. -~~\nWhenever you play a 2-cost card, gain [E].",
             "mod": "The Unchained Mod"
         },
         {
@@ -45121,7 +45121,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1 (0)",
-            "description": "Add a Swirl+ into your hand.\nUpgrade ALL Swirls in your hand. Exhaust.",
+            "description": "Add a Swirl into your hand.\nUpgrade ALL Swirls in your hand. Exhaust.",
             "mod": "The Unchained Mod"
         },
         {
@@ -45159,9 +45159,9 @@
             "name": "Suffocate",
             "color": "Unchained_orange_color",
             "rarity": "Rare",
-            "type": "Attack",
+            "type": "Skill",
             "cost": "1 (0)",
-            "description": "Enemy loses HP equal to double their Block.",
+            "description": "Gain Block equal to the enemies Block.\nEnemy loses HP equal to their Block.",
             "mod": "The Unchained Mod"
         },
         {
@@ -57160,12 +57160,12 @@
             "mod": "The Unchained Mod"
         },
         {
-            "id": "theUnchainedMod:Carabiner",
-            "name": "Carabiner",
+            "id": "theUnchainedMod:HeartOfTheUnderdog",
+            "name": "Heart of the Underdog",
             "tier": "Uncommon",
             "pool": "Unchained_orange_color",
-            "description": "Chains no longer wear off at the end of turn.",
-            "flavorText": "There is no better tool for connecting chains.",
+            "description": "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies combined.",
+            "flavorText": "You feel it beat stronger whenever the odds are stacked against you.",
             "mod": "The Unchained Mod"
         },
         {
@@ -57178,21 +57178,21 @@
             "mod": "The Unchained Mod"
         },
         {
+            "id": "theUnchainedMod:Carabiner",
+            "name": "Carabiner",
+            "tier": "Rare",
+            "pool": "Unchained_orange_color",
+            "description": "Chains no longer wear off at the end of turn.",
+            "flavorText": "There is no better tool for connecting chains.",
+            "mod": "The Unchained Mod"
+        },
+        {
             "id": "theUnchainedMod:Churros",
             "name": "Churros",
             "tier": "Rare",
             "pool": "Unchained_orange_color",
-            "description": "The first Chain you apply each turn, is applied twice.",
+            "description": "The first Chain you start each turn, is copied.",
             "flavorText": "These tasty treats fill you with a burst of energy.",
-            "mod": "The Unchained Mod"
-        },
-        {
-            "id": "theUnchainedMod:HeartOfTheUnderdog",
-            "name": "Heart of the Underdog",
-            "tier": "Rare",
-            "pool": "Unchained_orange_color",
-            "description": "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies.",
-            "flavorText": "You feel it beat stronger whenever the odds are stacked against you.",
             "mod": "The Unchained Mod"
         },
         {
@@ -58843,7 +58843,7 @@
             "id": "theUnchainedMod:ChainGrease",
             "name": "Chain Grease",
             "rarity": "Common",
-            "description": "Gain 8 Block. Remove ALL Relayed Damage. Finish ALL your active Chains.",
+            "description": "Gain 7 Block. Remove ALL Relayed Damage. Finish ALL your active Chains.",
             "mod": "The Unchained Mod"
         },
         {
@@ -65956,7 +65956,7 @@
         },
         {
             "name": "The Unchained Mod",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "authors": [
                 "Mezix & BigL"
             ],
