@@ -14,6 +14,8 @@ import embed from './embed.js';
 import cfg from './cfg.js';
 import fetch from 'node-fetch';
 import gm from 'gm';
+import { execFile } from 'child_process';
+import optipng from 'optipng-bin';
 
 const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
 const delSearchLimit = 25;
@@ -31,6 +33,7 @@ const cardTypes = {
     Status: 's',
     Curse: 's'
 };
+const optimise = async filename => new Promise(res => execFile(optipng, ['-out', filename, filename], res));
 
 async function meme(msg, arg, options) {
     try {
@@ -388,12 +391,14 @@ __Commands:__
                         cutctx.drawImage(await cuts[cardTypes[item.item.type]], 0, 0);
                         let filename2 = filename.replace('_preview-', '_p-');
                         fs.writeFileSync(filename2, cutcanvas.toBuffer());
+                        await optimise(filename2);
         
                         let smallcanvas = createCanvas(250,190);
                         let smallctx = smallcanvas.getContext('2d');
                         smallctx.drawImage(cutcanvas, 0, 0, 250, 190);
                         let filename3 = filename2.replace('_p-', '-');
                         fs.writeFileSync(filename3, smallcanvas.toBuffer());
+                        await optimise(filename3);
         
                         return {
                             title: item.item.name,
@@ -457,6 +462,8 @@ __Commands:__
                         fs.writeFileSync(rFilename3, relicanvas.toBuffer());
                         await new Promise(res => gm(rFilename2).resize(128,128).write(rFilename2, res));
                         await new Promise(res => gm(rFilename3).resize(128,128).write(rFilename3, res));
+                        await optimise(rFilename2);
+                        await optimise(rFilename3);
                         return {
                             title: item.item.name,
                             description: '128x128 →',
