@@ -125,7 +125,7 @@ const commands =  {
                 let repliedTo = await msg.channel.messages.fetch(m.reference.messageId).catch(e => found = false);
                 if (!found) continue;
                 if (repliedTo.author.id == msg.author.id) {
-                    await repliedTo.delete().catch(e => {});
+                    await m.delete().catch(e => {});
                     await msg.delete().catch(e => {});
                     return;
                 }
