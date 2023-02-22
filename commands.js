@@ -113,6 +113,59 @@ async function meme(msg, arg, options) {
 }
 
 const commands =  {
+    exact: {
+        'del': async msg => {
+            let messages = await msg.channel.messages.fetch();
+            messages = messages.filter(i => i.author.id == bot.user.id && i.reference != null);
+            let i = 0;
+            for (let m of messages) {
+                i++;
+                m = m[1];
+                let found = true;
+                let repliedTo = await msg.channel.messages.fetch(m.reference.messageId).catch(e => found = false);
+                if (!found) continue;
+                if (repliedTo.author.id == msg.author.id) {
+                    await repliedTo.delete().catch(e => {});
+                    await msg.delete().catch(e => {});
+                    return;
+                }
+                if (i >= delSearchLimit) break;
+            }
+            return;
+        },
+
+        'spoiler': async msg => {
+            let messages = await msg.channel.messages.fetch();
+            messages = messages.filter(i => i.author.id == bot.user.id && i.reference != null);
+            let i = 0;
+            for (let m of messages) {
+                i++;
+                m = m[1];
+                let found = true;
+                let repliedTo = await msg.channel.messages.fetch(m.reference.messageId).catch(e => found = false);
+                if (!found) continue;
+                if (repliedTo.author.id == msg.author.id) {
+                    await msg.delete().catch(e => {});
+                    //spoiler hack
+                    let origEmbeds = m.embeds;
+                    if (origEmbeds.length > 0) {
+                        await m.edit({content: `||https://bit.ly/3aSgJDF||`, embeds: [], allowedMentions: {repliedUser: false}}).catch(e => {});
+                        await (new Promise(res => setTimeout(res, 1000)));
+                        await m.edit({content: m.content, embeds: origEmbeds, allowedMentions: {repliedUser: false}}).catch(e => {});
+                    }
+                    return;
+                }
+                if (i >= delSearchLimit) break;
+            }
+            return;
+        },
+
+        'lists': async () => ({
+            title: "lists",
+            description: `export: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/slaytabase/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/slaytabase/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/slaytabase/blob/main/extraItems.js`,
+        }),
+    },
+
     prefix: {
         help: msg => ({
             title: msg.client.user.username,
@@ -150,53 +203,6 @@ __Commands:__
 `,
             thumbnail: {url: bot.user.avatarURL()},
         }),
-
-        'del': async msg => {
-            let messages = await msg.channel.messages.fetch();
-            messages = messages.filter(i => i.author.id == bot.user.id && i.reference != null);
-            let i = 0;
-            for (let m of messages) {
-                i++;
-                m = m[1];
-                let found = true;
-                let repliedTo = await msg.channel.messages.fetch(m.reference.messageId).catch(e => found = false);
-                if (!found) continue;
-                if (repliedTo.author.id == msg.author.id) {
-                    await m.delete().catch(e => {});
-                    await repliedTo.delete().catch(e => {});
-                    await msg.delete().catch(e => {});
-                    return;
-                }
-                if (i >= delSearchLimit) break;
-            }
-            return;
-        },
-
-        'spoiler': async msg => {
-            let messages = await msg.channel.messages.fetch();
-            messages = messages.filter(i => i.author.id == bot.user.id && i.reference != null);
-            let i = 0;
-            for (let m of messages) {
-                i++;
-                m = m[1];
-                let found = true;
-                let repliedTo = await msg.channel.messages.fetch(m.reference.messageId).catch(e => found = false);
-                if (!found) continue;
-                if (repliedTo.author.id == msg.author.id) {
-                    await msg.delete().catch(e => {});
-                    //spoiler hack
-                    let origEmbeds = m.embeds;
-                    if (origEmbeds.length > 0) {
-                        await m.edit({content: `||https://bit.ly/3aSgJDF||`, embeds: [], allowedMentions: {repliedUser: false}}).catch(e => {});
-                        await (new Promise(res => setTimeout(res, 1000)));
-                        await m.edit({content: m.content, embeds: origEmbeds, allowedMentions: {repliedUser: false}}).catch(e => {});
-                    }
-                    return;
-                }
-                if (i >= delSearchLimit) break;
-            }
-            return;
-        },
 
         '?': async (msg, arg, args) => {
             if (arg.startsWith('??')) {
@@ -269,11 +275,6 @@ __Commands:__
             }));
             return {...embeds[0].data, extra_embeds: embeds.slice(1)};
         },
-
-        'lists': async () => ({
-            title: "lists",
-            description: `export: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/slaytabase/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/slaytabase/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/slaytabase/blob/main/extraItems.js`,
-        }),
 
         'searchtext ': async (msg, arg) => {
             let result = fn.find(arg);

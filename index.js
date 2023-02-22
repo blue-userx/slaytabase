@@ -33,6 +33,9 @@ search.add({
     itemType: 'help',
 });
 var data;
+String.prototype.exactMatch = function compare(str) {
+    return this == str;
+}
 
 export {bot, search};
 
@@ -86,7 +89,7 @@ async function getEmbeds(msg) {
                 query.filter = filters[i] ? filter : false;
                 if (query.length <= 0) continue;
                 let item = fn.find(query);
-                for (let type of [['prefix', 'startsWith'], ['suffix', 'endsWith']])
+                for (let type of [['prefix', 'startsWith'], ['suffix', 'endsWith'], ['exact', 'exactMatch']])
                     for (let i in commands[type[0]])
                         if (query[type[1]](i))
                             item = {item: {
