@@ -49,4 +49,5 @@ export default {
     'Vacant_color': ['The Vacant', 11569486, '<:e_colorless:961808772609769512>'],
     'Thort_gray_color': ['The Thorton', 18265, '<:e_colorless:961808772609769512>'],
     'Marked_purple_color': ['The Marked', 5380386, '<:e_colorless:961808772609769512>'],
+    'Blade_gunner_color': ['The Blade Gunner', 11368728, '<:e_colorless:961808772609769512>']
 };
