@@ -218,7 +218,7 @@ bot.on('interactionCreate', async interaction => {
                         return await interaction.editReply({content: interaction.content});
                     let files = getFilesFromEmbeds(embedsR)
                     if (files.length > 10) await interaction.editReply({content: 'I can only attach 10 images per message! Edit your command so that I would use fewer than 10 images in my reply.'});
-                    else await interaction.editReply({content: interaction.content, embeds: embedsR, files});
+                    else await interaction.editReply({content: interaction.content, embeds: embedsR, files, components: [new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('sendToAll').setLabel('Send to channel').setStyle(ButtonStyle.Secondary))]});
                     delfiles(files);
                     break;
 
@@ -312,6 +312,11 @@ bot.on('interactionCreate', async interaction => {
                     embeds,
                     allowedMentions: {users: []}
                 }).catch(e => {});
+            } else if (interaction.customId == 'sendToAll') {
+                if (interaction.message && interaction.message.content) {
+                    await interaction.channel.send({content: `<@${interaction.user.id}> ran \`${interaction.message.content}\``, embeds: interaction.message.embeds, allowedMentions: {users: []}}).catch(e => {});
+                    await interaction.update({content: "Sent command to channel!", embeds: [], components: []}).catch(e => {});
+                }
             }
         }
     } catch (e) {

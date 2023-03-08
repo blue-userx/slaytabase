@@ -176,9 +176,10 @@ Anything highlighted in **bold** is a searchable keyword.
 
 If you edit or delete your message, I will update my reply to it, according to your changes.
 
-<item> will search through items from only vanilla Slay the Spire and one mod specific to the server (can be set by server admins with /setservermod).
+<item> will search through items from only vanilla Slay the Spire and one mod specific to the server (can be set by server admins with **/setservermod**).
 You can replace <item> with [[item]] to search through ALL mods.
-You can use /i to find an item with autocomplete.
+You can use **/i** to find an item with autocomplete.
+You can use **/run** to run commands without anyone else seeing your result.
 
 I'll ignore any messages which include the backtick (\`) symbol anywhere.
 
