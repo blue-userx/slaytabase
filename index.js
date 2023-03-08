@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } from 'discord.js';
+import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, Collection } from 'discord.js';
 import Fuse from 'fuse.js'
 import fs from 'fs';
 import commands from './commands.js';
@@ -61,12 +61,22 @@ bot.once('ready', async () => {
                 .setAutocomplete(true)),
         new SlashCommandBuilder()
             .setName('setservermod')
-            .setDescription('Sets the main mod of this server.')
+            .setDescription('Sets the main mod of this server or DM channel.')
             .addStringOption(option =>
                 option.setName('mod')
                 .setDescription('Mod name')
                 .setRequired(true)
                 .setAutocomplete(true)),
+        new SlashCommandBuilder()
+            .setName('run')
+            .setDescription('Simulates you sending a message and sends the result in a message only you can see.')
+            .addStringOption(option =>
+                option.setName('contents')
+                .setDescription('Write a message using bot commands as you would in a normal message here.')
+                .setRequired(true))
+            .addAttachmentOption(option => 
+                option.setName('attachment')
+                .setDescription('Simulated attachment, if needed for stuff like artpreview.')),
         new ContextMenuCommandBuilder()
             .setName('find items')
             .setType(ApplicationCommandType.Message)
@@ -74,6 +84,7 @@ bot.once('ready', async () => {
 });
 
 async function getEmbeds(msg) {
+    if (msg.content.includes('`')) return 0;
     let queries = [...msg.content.matchAll(/(\<(.*?)\>)|(\[\[(.*?)\]\])/g)]
     let filters = queries.map(e => e[0].startsWith('<'))
     queries = queries.map(e => e[0].startsWith('<') ? e[2] : e[4])
@@ -81,7 +92,7 @@ async function getEmbeds(msg) {
     if (queries.length <= queryLimit) {
         if (queries.length > 0) {
             let embeds = [];
-            let server = await db.ServerSettings.findOne({where: {guild: msg.guildId}});
+            let server = await db.ServerSettings.findOne({where: {guild: msg.inGuild() ? msg.guildId : msg.channelId}});
             let filter = server == null ? item => 'Slay the Spire' == item.item.mod : item => ['Slay the Spire', server.mod].includes(item.item.mod);
             for (let i = 0; i < queries.length; i++) {
                 let originalQuery = queries[i];
@@ -131,7 +142,6 @@ function getFilesFromEmbeds(embeds) {
 const delfiles = files => files.forEach(file => fs.unlinkSync(file));
 
 bot.on('messageCreate', async msg => {
-    if (msg.content.includes('```')) return;
     let embeds = await getEmbeds(msg);
     if (embeds === null)
         msg.reply('I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.').catch(e => {});
@@ -192,16 +202,43 @@ bot.on('interactionCreate', async interaction => {
                     await interaction.editReply({embeds});
                     break;
 
+                case 'run':
+                    await interaction.deferReply({ephemeral: true});
+                    interaction.content = interaction.options.getString('contents');
+                    let attachment = interaction.options.getAttachment('attachment');
+                    if (attachment != null)
+                        interaction.attachments = new Collection([[attachment.id, attachment]]);
+                    if (fn.unPunctuate(interaction.content) == 'del' || fn.unPunctuate(interaction.content) == 'spoiler')
+                        return await interaction.deleteReply();
+                    interaction.author = interaction.user;
+                    let embedsR = await getEmbeds(interaction);
+                    if (embedsR.length == 0)
+                        return await interaction.deleteReply();
+                    if (embedsR === 0)
+                        return await interaction.editReply({content: interaction.content});
+                    let files = getFilesFromEmbeds(embedsR)
+                    if (files.length > 10) await interaction.editReply({content: 'I can only attach 10 images per message! Edit your command so that I would use fewer than 10 images in my reply.'});
+                    else await interaction.editReply({content: interaction.content, embeds: embedsR, files});
+                    delfiles(files);
+                    break;
+
                 case 'setservermod':
                     await interaction.deferReply();
                     let mod = interaction.options.getString('mod')
-                    if (!interaction.inGuild) return interaction.editReply('This command can only be used in servers.');
-                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
-                    if (await db.ServerSettings.count({where: {guild: interaction.guildId}}) == 0)
-                        await db.ServerSettings.create({guild: interaction.guildId, mod});
-                    else
-                        await db.ServerSettings.update({mod}, {where: {guild: interaction.guildId}});
-                    await interaction.editReply(`Set this server's main mod to \`${mod}\`.`);
+                    if (interaction.inGuild()) {
+                        if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
+                        if (await db.ServerSettings.count({where: {guild: interaction.guildId}}) == 0)
+                            await db.ServerSettings.create({guild: interaction.guildId, mod});
+                        else
+                            await db.ServerSettings.update({mod}, {where: {guild: interaction.guildId}});
+                        await interaction.editReply(`Set this server's main mod to \`${mod}\`.`);
+                    } else {
+                        if (await db.ServerSettings.count({where: {guild: interaction.channelId}}) == 0)
+                            await db.ServerSettings.create({guild: interaction.channelId, mod});
+                        else
+                            await db.ServerSettings.update({mod}, {where: {guild: interaction.channelId}});
+                        await interaction.editReply(`Set this DM channel's main mod to \`${mod}\`.`);
+                    }
                     break;
             }
         } else if (interaction.isAutocomplete()) {
@@ -232,7 +269,6 @@ bot.on('interactionCreate', async interaction => {
                 matches = [...new Set(matches)];
                 if (matches.length > 20) matches = matches.slice(0,20);
                 interaction.content = matches.slice(0,10).map(m => `[[d~${m}]]`).join('');
-                console.log(interaction.content)
                 interaction.author = interaction.user;
                 let embeds = await getEmbeds(interaction);
                 matches = matches.reduce((acc, curr, i) => {

@@ -180,6 +180,8 @@ If you edit or delete your message, I will update my reply to it, according to y
 You can replace <item> with [[item]] to search through ALL mods.
 You can use /i to find an item with autocomplete.
 
+I'll ignore any messages which include the backtick (\`) symbol anywhere.
+
 __Commands:__
 <[item name]> displays info about an item
 <d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
