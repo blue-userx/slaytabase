@@ -190,6 +190,9 @@ __Commands:__
 <spoiler> adds spoiler tags to my last reply to you in this channel
 <?[search query]> shows the most likely results for a search query
 - search query may include the following:
+- - r=2 - get second result
+- - type=? - specify item type
+- - mod=? - specify mod name
 - - page=? - specify result page
 - - cost=? - only returns cards with specified cost
 <calc [equation]> https://www.npmjs.com/package/calculator-by-str
@@ -214,28 +217,10 @@ __Commands:__
                 let item = fn.find(nArg);
                 return (await embed({...item.item, score: item.score, query: nArg})).data;
             }
-            let searchQ = new String(args.filter(a => !a.includes("=")).join(" "));
-            searchQ.filter = arg.filter;
-            let results = search.search(searchQ);
-            let page = 0;
-            for (let i of args) {
-                if (i.includes("=")) {
-                    let prop = i.slice(0, i.indexOf("="));
-                    let val = i.slice(i.indexOf("=")+1);
-                    switch (prop) {
-                        case "cost":
-                            results = results.filter(r => r.item.hasOwnProperty('cost') && r.item.cost.toLowerCase().includes(val));
-                            break;
-                        
-                        case "page":
-                            page = Math.max(0, parseInt(val)-1);
-                            if (Number.isNaN(page)) page = 0;
-                            break;
-                    }
-                }
-            }
-            let totalResults = results.length;
-            results = results.slice(10*page, 10*(page+1));
+            let results = fn.findAll(arg);
+            let page = results.page;
+            let totalResults = results.total;
+            results = results.slice(0, 10);
 
             let resultText = results.map((i, index) => `${(page*10)+index+1}: ${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} **${i.item.name}** - ${String(Math.round((1 - i.score) * 100))}% sure`).join('\n');
             let firstEmbed = results.length > 0 ? await embed(results[0].item, msg) : {data: {thumbnail: null}};
@@ -250,27 +235,8 @@ __Commands:__
         },
 
         'show10 ': async (msg, arg, args) => {
-            let searchQ = new String(args.filter(a => !a.includes("=")).join(" "));
-            searchQ.filter = arg.filter;
-            let results = search.search(searchQ);
-            let page = 0;
-            for (let i of args) {
-                if (i.includes("=")) {
-                    let prop = i.slice(0, i.indexOf("="));
-                    let val = i.slice(i.indexOf("=")+1);
-                    switch (prop) {
-                        case "cost":
-                            results = results.filter(r => r.item.hasOwnProperty('cost') && r.item.cost.toLowerCase().includes(val));
-                            break;
-                        
-                        case "page":
-                            page = Math.max(0, parseInt(val)-1);
-                            if (Number.isNaN(page)) page = 0;
-                            break;
-                    }
-                }
-            }
-            results = results.slice(10*page, 10*(page+1));
+            let results = fn.findAll(arg);
+            results = results.slice(0, 10);
             let embeds = await Promise.all(results.map(async item => {
                 let e = await embed({...item.item, score: item.score, query: arg});
                 e.data.footer = {text: `${String(Math.round((1 - item.score) * 100))}% sure`};

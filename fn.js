@@ -1,12 +1,51 @@
-
 import { search } from './index.js';
-
 
 const unPunctuate = str => str.replaceAll('\n', ' ').replace(/[^\w\s?~=:]|_/g, "").replace(/\s+/g, " ").trim().toLowerCase();
 
-function find(query) {
-    let results = search.search(query);
+function findAll(query) {
+    let args = query.split(' ');
+    let results = search.search(args.filter(a => !a.includes('=')).join(' '));
     if (query.filter) results = results.filter(query.filter);
+    let page = 0;
+    for (let i of args) {
+        if (i.includes("=")) {
+            let prop = i.slice(0, i.indexOf("="));
+            let val = i.slice(i.indexOf("=")+1);
+            switch (prop) {
+                case "cost":
+                    results = results.filter(r => r.item.hasOwnProperty('cost') && r.item.cost.toLowerCase().includes(val));
+                    break;
+
+                case "type":
+                    results = results.filter(r => r.item.hasOwnProperty('itemType') && r.item.itemType.toLowerCase().includes(val));
+                    break;
+
+                case "mod":
+                    results = results.filter(r => r.item.hasOwnProperty('mod') && (r.item.mod.toLowerCase().includes(val) || val.includes(r.item.mod.toLowerCase())));
+                    break;
+                
+                case "r":
+                    let resultNum = Math.max(1, Math.min(parseInt(val), results.length)) - 1;
+                    if (Number.isNaN(resultNum)) resultNum = 0;
+                    results = results.slice(resultNum);
+                    break;
+                
+                case "page":
+                    page = Math.max(0, parseInt(val)-1);
+                    if (Number.isNaN(page)) page = 0;
+                    break;
+            }
+        }
+    }
+    let total = results.length;
+    results = results.slice(10*page);
+    results.total = total;
+    results.page = page;
+    return results;
+}
+
+function find(query) {
+    let results = findAll(query);
     let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
     if (item == undefined)
         item = {item: {
@@ -23,5 +62,6 @@ function find(query) {
 
 export default {
     unPunctuate,
+    findAll,
     find,
 };
