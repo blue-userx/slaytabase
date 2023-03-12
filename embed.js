@@ -12,7 +12,8 @@ const searchize = item => {
     return name.replaceAll(' ', '_').replaceAll('+', '').replaceAll('???', 'Unidentified');
 };
 
-let wikis = {'Slay the Spire': 'slay-the-spire', 'Downfall': 'sts-downfall'}
+let wikis = {'Slay the Spire': 'slay-the-spire', 'Downfall': 'sts-downfall'};
+let stars = n => Array(Number(n)).fill('\\⭐').join('');
 
 async function embed(item, msg, embeds=[]) {
     let e = {};
@@ -72,6 +73,12 @@ async function embed(item, msg, embeds=[]) {
         
         case 'keyword':
             e.description = `Keyword / ${item.mod}\n\n${item.description}`;
+            break;
+        
+        case 'pack':
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/packs/${item.id.indexOf(':')+1}.png`};
+            e.color = 12083229;
+            e.description = `${item.mod.replace('The ', '')} Card Pack / By ${item.author}\n\n${item.description}\nOffense: ${stars(item.offense)}\nDefense: ${stars(item.defense)}\nSupport: ${stars(item.support)}\nFrontload: ${stars(item.frontload)}\nScaling: ${stars(item.scaling)}\nTags: ${item.tags.join(', ')}\n\nCards: ${item.cards.join(', ')}${item.credits.length > 0 ? '\n\nCredits: '+item.credits : ''}`;
             break;
         
         case 'command':

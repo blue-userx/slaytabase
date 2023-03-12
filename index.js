@@ -315,7 +315,7 @@ bot.on('interactionCreate', async interaction => {
             } else if (interaction.customId == 'sendToAll') {
                 if (interaction.message && interaction.message.content) {
                     await interaction.channel.send({content: `<@${interaction.user.id}> ran \`${interaction.message.content}\``, embeds: interaction.message.embeds, allowedMentions: {users: []}}).catch(e => {});
-                    await interaction.update({content: "Sent command to channel!", embeds: [], components: []}).catch(e => {});
+                    await interaction.update({content: "Sent result to channel!", embeds: [], components: []}).catch(e => {});
                 }
             }
         }
@@ -380,6 +380,7 @@ async function main() {
                     'mod',
                     'id',
                     'pack',
+                    'author'
                 ].map(key => {
                     if (Array.isArray(key)) {
                         let look = newItem;

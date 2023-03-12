@@ -237,7 +237,7 @@ async function exportMod(modPath){
     }
     if (exportImages) {
         console.log('Copying images...');
-        for (let i of ['creatures', 'potions'])
+        for (let i of ['creatures', 'potions', 'packs'])
             if (fs.existsSync(`${gameDataPath}${i}`))
                 copyRecursiveSync(`${gameDataPath}${i}`, `${path}${i}`);
     }
