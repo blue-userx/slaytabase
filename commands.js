@@ -185,16 +185,17 @@ I'll ignore any messages which include the backtick (\`) symbol anywhere.
 
 __Commands:__
 <[item name]> displays info about an item
+- search query may include the following:
+- - cost=? - only returns cards with specified cost
+- - type=? - specify item type
+- - mod=? - specify mod name
+- - r=2 - get second result
 <d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
 <del> deletes your last search in this channel
 <spoiler> adds spoiler tags to my last reply to you in this channel
 <?[search query]> shows the most likely results for a search query
-- search query may include the following:
-- - r=2 - get second result
-- - type=? - specify item type
-- - mod=? - specify mod name
-- - page=? - specify result page
-- - cost=? - only returns cards with specified cost
+- page=? - specify result page
+<show10 [search query]> shows the full item details for the first 10 results for a search query
 <calc [equation]> https://www.npmjs.com/package/calculator-by-str
 <plot [equation] [args]> - type <plot help> for more information
 <workshop?[mod]> - searches for a slay the spire mod on the steam workshop
