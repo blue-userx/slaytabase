@@ -380,7 +380,8 @@ async function main() {
                     'mod',
                     'id',
                     'pack',
-                    'author'
+                    'author',
+                    'tags'
                 ].map(key => {
                     if (Array.isArray(key)) {
                         let look = newItem;
@@ -388,8 +389,12 @@ async function main() {
                             if (!look.hasOwnProperty(j)) return '';
                             look = look[j];
                         }
+                        if (Array.isArray(look)) return look.join(' ');
                         return String(look);
-                    } else if (newItem.hasOwnProperty(key)) return String(newItem[key]);
+                    } else if (newItem.hasOwnProperty(key)) {
+                        if (Array.isArray(newItem[key])) return newItem[key].join(' ');
+                        return String(newItem[key]);
+                    }
                     else return '';
                 }).join(' '));
             if (newItem.description != null)
