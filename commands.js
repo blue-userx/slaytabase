@@ -227,7 +227,7 @@ __Commands:__
             let firstEmbed = results.length > 0 ? await embed(results[0].item, msg) : {data: {thumbnail: null}};
 
             return {
-                title: `Searched for "${searchQ}"`,
+                title: `Searched for "${args.filter(a => !a.includes('=')).join(' ')}"`,
                 description: results.length == 0 ? 'No results.' : resultText,
                 thumbnail: firstEmbed.data.thumbnail,
                 footer: {text: `Page ${page+1}/${Math.ceil(totalResults/10)}`},
