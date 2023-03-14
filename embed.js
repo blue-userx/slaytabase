@@ -113,11 +113,13 @@ async function embed(item, msg, embeds=[]) {
     if (item.hasOwnProperty('img'))
         e.thumbnail = {url: cfg.exportURL+item.img};
     if (e.thumbnail && e.thumbnail.hasOwnProperty('url'))
-        e.thumbnail.url = e.thumbnail.url.replaceAll(' ', '%20')
+        e.thumbnail.url = encodeURI(e.thumbnail.url);
     if (e.image && e.image.url)
-        e.image.url = e.image.url.replaceAll(' ', '%20')
+        e.image.url = encodeURI(e.image.url);
     if (e.hasOwnProperty('url'))
         e.url += `?embnum=${embeds.length}`;
+
+    console.log(e)
 
     return e.title == '' ? null : new EmbedBuilder(e);
 }
