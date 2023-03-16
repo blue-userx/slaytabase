@@ -216,7 +216,7 @@ __Commands:__
                 let nArg = new String('?'+arg);
                 nArg.filter = arg.filter;
                 let item = fn.find(nArg);
-                return (await embed({...item.item, score: item.score, query: nArg})).data;
+                return (await embed({...item.item, score: item.score, query: nArg}, undefined, undefined, false)).data;
             }
             let results = fn.findAll(arg);
             let page = results.page;
@@ -224,7 +224,7 @@ __Commands:__
             results = results.slice(0, 10);
 
             let resultText = results.map((i, index) => `${(page*10)+index+1}: ${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} **${i.item.name}** - ${String(Math.round((1 - i.score) * 100))}% sure`).join('\n');
-            let firstEmbed = results.length > 0 ? await embed(results[0].item, msg) : {data: {thumbnail: null}};
+            let firstEmbed = results.length > 0 ? await embed(results[0].item, msg, undefined, false) : {data: {thumbnail: null}};
 
             return {
                 title: `Searched for "${args.filter(a => !a.includes('=')).join(' ')}"`,
@@ -238,8 +238,8 @@ __Commands:__
         'show10 ': async (msg, arg, args) => {
             let results = fn.findAll(arg);
             results = results.slice(0, 10);
-            let embeds = await Promise.all(results.map(async item => {
-                let e = await embed({...item.item, score: item.score, query: arg});
+            let embeds = await Promise.all(results.map(async (item, index) => {
+                let e = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, index == 0);
                 e.data.footer = {text: `${String(Math.round((1 - item.score) * 100))}% sure`};
                 return e;
             }));
@@ -257,7 +257,7 @@ __Commands:__
 
         'i~': async (msg, arg) => {
             let item = fn.find(arg);
-            let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+            let itemEmbed = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, false);
 
             return {
                 title: itemEmbed.data.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
@@ -268,7 +268,7 @@ __Commands:__
 
         't~': async (msg, arg) => {
             let item = fn.find(arg);
-            let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+            let itemEmbed = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, false);
 
             return {
                 title: itemEmbed.data.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : '​',
@@ -279,7 +279,7 @@ __Commands:__
 
         'd~': async (msg, arg) => {
             let item = fn.find(arg);
-            let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+            let itemEmbed = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, false);
             switch (item.item.itemType) {
                 case 'relic':
                     itemEmbed.data.description = itemEmbed.data.description.split('\n').slice(0,-1).join('\n');
@@ -304,7 +304,7 @@ __Commands:__
 
         '~': async (msg, arg) => {
             let item = fn.find(arg);
-            let itemEmbed = await embed({...item.item, score: item.score, query: arg});
+            let itemEmbed = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, false);
             return {
                 ...itemEmbed.data,
                 footer: null,
@@ -637,7 +637,7 @@ __List of memes:__
             if (arg.filter) items = items.filter(arg.filter);
             let itemNum = Math.floor(Math.random() * items.length);
             let item = items[itemNum].item;
-            return {...(await embed({...item, score: 0, query: fn.unPunctuate(item.name)})).data, footer: {text: `Item ${itemNum+1}/${items.length}`}};
+            return {...(await embed({...item, score: 0, query: fn.unPunctuate(item.name)}, undefined, undefined, false)).data, footer: {text: `Item ${itemNum+1}/${items.length}`}};
         },
 
         'sb ': async (msg, _, __, oa) => {

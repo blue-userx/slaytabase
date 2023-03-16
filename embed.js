@@ -15,7 +15,7 @@ const searchize = item => {
 let wikis = {'Slay the Spire': 'slay-the-spire', 'Downfall': 'sts-downfall'};
 let stars = n => Array(Number(n)).fill('\\⭐').join('');
 
-async function embed(item, msg, embeds=[]) {
+async function embed(item, msg, embeds=[], encode=true) {
     let e = {};
     e.title = `${item.name}`;
     let wiki = wikis.hasOwnProperty(item.mod) ? wikis[item.mod] : false;
@@ -112,14 +112,14 @@ async function embed(item, msg, embeds=[]) {
 
     if (item.hasOwnProperty('img'))
         e.thumbnail = {url: cfg.exportURL+item.img};
-    if (e.thumbnail && e.thumbnail.hasOwnProperty('url'))
-        e.thumbnail.url = encodeURI(e.thumbnail.url);
-    if (e.image && e.image.url)
-        e.image.url = encodeURI(e.image.url);
-    if (e.hasOwnProperty('url'))
-        e.url += `?embnum=${embeds.length}`;
-
-    console.log(e)
+    if (encode) {
+        if (e.thumbnail && e.thumbnail.hasOwnProperty('url'))
+            e.thumbnail.url = encodeURI(e.thumbnail.url);
+        if (e.image && e.image.url)
+            e.image.url = encodeURI(e.image.url);
+        if (e.hasOwnProperty('url'))
+            e.url += `?embnum=${embeds.length}`;
+    }
 
     return e.title == '' ? null : new EmbedBuilder(e);
 }
