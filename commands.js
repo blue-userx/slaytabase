@@ -239,8 +239,9 @@ __Commands:__
             let results = fn.findAll(arg);
             results = results.slice(0, 10);
             let embeds = await Promise.all(results.map(async (item, index) => {
-                let e = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, index == 0);
-                e.data.footer = {text: `${String(Math.round((1 - item.score) * 100))}% sure`};
+                let e = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, index != 0);
+                e.data.description = `${String(Math.round((1 - item.score) * 100))}% sure / ${e.data.description}`;
+                e.data.footer = null;//{text: `${String(Math.round((1 - item.score) * 100))}% sure`};
                 return e;
             }));
             return {...embeds[0].data, extra_embeds: embeds.slice(1)};
