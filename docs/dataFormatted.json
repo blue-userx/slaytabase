@@ -35150,6 +35150,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:Horse",
+            "name": "Horse",
+            "color": "Colorless",
+            "rarity": "Special",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Draw 2 (3) cards.\nExhaust.",
+            "pack": "Jockey",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Imp",
             "name": "Imp",
             "color": "Colorless",
@@ -35356,6 +35367,16 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:Vexed",
+            "name": "Vexed",
+            "color": "Curse",
+            "rarity": "Special",
+            "type": "Curse",
+            "cost": "",
+            "description": "Unplayable.\nCannot be removed from your deck.\nWhile in hand, Exhaust this when you play a Foil card.",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Cardistry",
             "name": "Cardistry",
             "color": "Packmaster_rainbow",
@@ -35435,7 +35456,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 15 Block.\nIf you are at 50% Health or below, remove all your debuffs and gain 2 Strength.\n~~- Exhaust. -~~ ",
+            "description": "Gain 18 Block.\nIf you are at 50% Health or below, remove all your debuffs and gain 2 Strength.\n~~- Exhaust. -~~ ",
             "pack": "Monster Hunter",
             "mod": "The Packmaster"
         },
@@ -35490,7 +35511,7 @@
             "rarity": "Special",
             "type": "Power",
             "cost": "1",
-            "description": "Gain 10 (12) Plated Armor.",
+            "description": "Gain 10 (12) anniv5:Plated_Armor.",
             "pack": "Monster Hunter",
             "mod": "The Packmaster"
         },
@@ -35545,7 +35566,7 @@
             "rarity": "Special",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 18 (22) damage.\nIf this kills an enemy, gain [E] and draw a card.",
+            "description": "Deal 22 (26) damage.\nIf this kills an enemy, gain [E] and draw a card.",
             "pack": "Monster Hunter",
             "mod": "The Packmaster"
         },
@@ -35600,7 +35621,7 @@
             "rarity": "Special",
             "type": "Power",
             "cost": "1",
-            "description": " (Innate.)\nGain 8 anniv5:Glass_Armor.",
+            "description": " (Innate.)\nGain 6 anniv5:Plated_Armor.",
             "pack": "Monster Hunter",
             "mod": "The Packmaster"
         },
@@ -35820,7 +35841,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1 (0)",
-            "description": "Add 3 random anniv5:different color cards to your hand.\nGive them Ethereal.",
+            "description": "Add 3 random anniv5:different color cards into your hand. Give them Ethereal.",
             "pack": "Pixie",
             "mod": "The Packmaster"
         },
@@ -35864,7 +35885,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 5 (8) damage. If this kills an Elite or Boss enemy, gain its weapon or armor card.\nFleeting.",
+            "description": "Deal 6 (9) damage. If this kills an Elite or Boss enemy, gain its weapon or armor card and remove this from your deck permanently.\nExhaust.",
             "pack": "Monster Hunter",
             "mod": "The Packmaster"
         },
@@ -36086,6 +36107,17 @@
             "cost": "1",
             "description": "Steal all Block from the enemy.\nDeal 9 (12) damage.",
             "pack": "Thief, the Deceiver",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:DualBlade",
+            "name": "Dual Blade",
+            "color": "Packmaster_rainbow",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (10) damage.\nEvoke your next Orb twice.",
+            "pack": "Spheres",
             "mod": "The Packmaster"
         },
         {
@@ -36755,7 +36787,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "anniv5:Infest.\nGain 8 (10) Block.\nWhen this gains [bugIcon] , ALL enemies lose 4 (6) HP.",
+            "description": "anniv5:Infest.\nGain 8 (10) Block.\nWhen this gains [bugIcon] ,\nALL enemies lose 4 (6) HP.",
             "pack": "The Swarm",
             "mod": "The Packmaster"
         },
@@ -36909,7 +36941,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 8 (11) damage.\nIf you end your turn with unused Energy, ALL enemies lose 8 (11) HP.",
+            "description": "Deal 7 (10) damage.\nDraw 1 card.\nIf you end this turn with Energy, ALL enemies lose 7 (10) HP.",
             "pack": "Energized",
             "mod": "The Packmaster"
         },
@@ -36931,7 +36963,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 4 Block.\nGain another 2 (3) whenever you play a card this turn.",
+            "description": "Gain 4 Block.\nanniv5:Flurry: Gain 2 (3) Block.",
             "pack": "Eldritch Horror",
             "mod": "The Packmaster"
         },
@@ -37030,7 +37062,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 11 damage.\nAdd a (2) random anniv5:different color card (cards) to your hand. Give it (them) Ethereal.",
+            "description": "Deal 9 (10) damage.\nAdd a (2) random anniv5:different color card (cards) into your hand. Give it (them) Ethereal.",
             "pack": "Pixie",
             "mod": "The Packmaster"
         },
@@ -37206,7 +37238,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Apply 7 (9) anniv5:Frostbite.",
+            "description": "Apply 13 anniv5:Frostbite.\n ( If the enemy already had anniv5:Frostbite, they lose HP equal to it. )\nExhaust.",
             "pack": "Biting Cold",
             "mod": "The Packmaster"
         },
@@ -37552,6 +37584,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:Sphere",
+            "name": "Sphere",
+            "color": "Packmaster_rainbow",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 5 (8) Block.\nChannel 1 anniv5:randomized Orb.",
+            "pack": "Spheres",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Stall",
             "name": "Stall",
             "color": "Packmaster_rainbow",
@@ -37569,19 +37612,19 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "0",
-            "description": "Attack anniv5:Enchantment.\nDeal 4 (6) damage.",
+            "description": "Deal 5 (7) damage to a random enemy. The next time you play a anniv5:different color Attack this turn, repeat this.",
             "pack": "Pixie",
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:StardustShield",
-            "name": "Stardust Shield",
+            "id": "anniv5:StartingGun",
+            "name": "Starting Gun",
             "color": "Packmaster_rainbow",
             "rarity": "Common",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Skill anniv5:Enchantment.\nGain 3 (4) Block.",
-            "pack": "Pixie",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 6 (9) damage to ALL enemies.\nShuffle 2 Horses into your draw pile.",
+            "pack": "Jockey",
             "mod": "The Packmaster"
         },
         {
@@ -37772,6 +37815,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:TakeTheLead",
+            "name": "Take the Lead",
+            "color": "Packmaster_rainbow",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "0",
+            "description": "Deal 5 (7) damage.\nIf you've played 5 or more cards this turn, deal 5 (7) damage again.",
+            "pack": "Jockey",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:TelephonePole",
             "name": "Telephone Pole",
             "color": "Packmaster_rainbow",
@@ -37789,7 +37843,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 8 (10) damage.\nActivate the passive effect of your next orb ( twice)",
+            "description": "Deal 8 (10) damage.\nActivate the passive effect of your next Orb ( twice).",
             "pack": "Witches Strike",
             "mod": "The Packmaster"
         },
@@ -37882,13 +37936,24 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:Trample",
+            "name": "Trample",
+            "color": "Packmaster_rainbow",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Apply 2 Weak.\nanniv5:Flurry: Enemy loses 3 (5) HP.",
+            "pack": "Jockey",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Trash",
             "name": "Trash",
             "color": "Packmaster_rainbow",
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": " (Retain.)\nExhaust 1 card at random.\nGain [E] .",
+            "description": " (Retain.)\nExhaust the leftmost card in your hand.\nGain [E] .",
             "pack": "Energized",
             "mod": "The Packmaster"
         },
@@ -38022,6 +38087,17 @@
             "cost": "2",
             "description": "Channel 3 Frost.\nanniv5:Modify 2 (3) random enemy-targeted cards in your draw pile: \"Apply 2 (3) anniv5:Frostbite\"",
             "pack": "Mad Science!",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:Winterwisp",
+            "name": "Winterwisp",
+            "color": "Packmaster_rainbow",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 8 (11) damage.\nChannel 1 anniv5:Polar.\nIf it filled an empty Orb slot, trigger its passive.",
+            "pack": "Spheres",
             "mod": "The Packmaster"
         },
         {
@@ -38306,7 +38382,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "Heal 3 (4) HP.\nGain 1 (2) Dexterity.\nPut a Trip on top of your draw pile.",
+            "description": "Heal 4 (5) HP.\nGain 1 (2) Dexterity.\nPut a Trip on top of your draw pile.",
             "pack": "Secret Level",
             "mod": "The Packmaster"
         },
@@ -38405,7 +38481,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Apply 2 (3) Weak.\nDraw 2 (3) cards.",
+            "description": "Apply 1 Weak and Vulnerable.\nDraw 2 (3) cards.",
             "pack": "The Swarm",
             "mod": "The Packmaster"
         },
@@ -38521,7 +38597,7 @@
         },
         {
             "id": "anniv5:Compoundeyes",
-            "name": "Compoundeyes",
+            "name": "Compound Eyes",
             "color": "Packmaster_rainbow",
             "rarity": "Uncommon",
             "type": "Skill",
@@ -38572,6 +38648,17 @@
             "cost": "X",
             "description": "Add a Defend (+) to your hand and anniv5:Modify it: \"Play this X times\". Refund 1. Exhaust.",
             "pack": "Basics",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:Consolidate",
+            "name": "Consolidate",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Remove your first 2 Orbs (Orb).\nGain 1 Focus.",
+            "pack": "Spheres",
             "mod": "The Packmaster"
         },
         {
@@ -38680,7 +38767,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "anniv5:Manifest 1 (2) random orb (orbs).\nExhaust.",
+            "description": "anniv5:Manifest 1 (2) random Orb (Orbs).\nExhaust.",
             "pack": "Witches Strike",
             "mod": "The Packmaster"
         },
@@ -38693,17 +38780,6 @@
             "cost": "2 (1)",
             "description": "Whenever you anniv5:Transmute, gain 1 Strength.",
             "pack": "Transmutation",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:Cuckoo",
-            "name": "Cuckoo",
-            "color": "Packmaster_rainbow",
-            "rarity": "Uncommon",
-            "type": "Power",
-            "cost": "1",
-            "description": " (Innate.)\nWhenever you draw a Curse card, deal 13 damage to a random enemy.",
-            "pack": "Bellord",
             "mod": "The Packmaster"
         },
         {
@@ -38803,6 +38879,17 @@
             "cost": "1",
             "description": "Deal 10 (13) damage.\nEnemy loses 4 (6) Strength this turn.\nExhaust.",
             "pack": "Aggression",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:Derby",
+            "name": "Derby",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "Shuffle 2 (3) Horses into your draw pile.\nAt the end of your turn, if you played 6+ cards, gain 1 Strength.",
+            "pack": "Jockey",
             "mod": "The Packmaster"
         },
         {
@@ -38960,13 +39047,13 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:BackupRift",
+            "id": "anniv5:EnchantedRift",
             "name": "Enchanted Rift",
             "color": "Packmaster_rainbow",
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 12 (15) Block.\nDraw an (2) anniv5:Enchantment card (cards).",
+            "description": "Gain 12 (15) Block.\nAdd a copy of the last anniv5:different color card played into your hand. Give it Ethereal.",
             "pack": "Pixie",
             "mod": "The Packmaster"
         },
@@ -39180,13 +39267,13 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:StarLane",
+            "id": "anniv5:Fetch",
             "name": "Fetch!",
             "color": "Packmaster_rainbow",
             "rarity": "Uncommon",
             "type": "Skill",
-            "cost": "0",
-            "description": "~~- Ethereal. -~~\nSkill anniv5:Enchantment.\nDraw a card (Card).\n~~- Exhaust. -~~ ",
+            "cost": "1",
+            "description": "Draw 2 cards.\nThe next time you play a anniv5:different color Skill this turn, repeat this.~~-  Exhaust. -~~ ",
             "pack": "Pixie",
             "mod": "The Packmaster"
         },
@@ -39254,6 +39341,17 @@
             "cost": "1",
             "description": "Gain 3 (5) Plated Armor.\nanniv5:Even: Heal 3 (5) HP.\nanniv5:Odd: Gain [E] .",
             "pack": "Even/Odd",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:Fluctuate",
+            "name": "Fluctuate",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Apply 1 Weak and Vulnerable to ALL enemies.\nIf you have 3+ unique Orbs, apply 1 (2) more.",
+            "pack": "Spheres",
             "mod": "The Packmaster"
         },
         {
@@ -39334,6 +39432,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:FrostConversion",
+            "name": "Frost Conversion",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "If you have 3+ unique Orbs, Channel 1 Frost ( and trigger its passive).\nChannel 1 Frost.",
+            "pack": "Spheres",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Frostfire",
             "name": "Frostfire",
             "color": "Packmaster_rainbow",
@@ -39397,17 +39506,6 @@
             "cost": "2 (1)",
             "description": "Whenever you Exhaust a card or Channel an Orb, apply 1 anniv5:Petra to a random enemy.",
             "pack": "Conjurer Petra",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:Glaciate",
-            "name": "Glaciate",
-            "color": "Packmaster_rainbow",
-            "rarity": "Uncommon",
-            "type": "Power",
-            "cost": "1 (0)",
-            "description": "Whenever you apply anniv5:Frostbite, gain 1 Vigor.",
-            "pack": "Biting Cold",
             "mod": "The Packmaster"
         },
         {
@@ -39598,6 +39696,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:Homestretch",
+            "name": "Homestretch",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Add a Horse into your hand.\nWhenever you draw a card this turn, ALL enemies lose 2 (3) HP.",
+            "pack": "Jockey",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:HornetWithin",
             "name": "Hornet Within",
             "color": "Packmaster_rainbow",
@@ -39653,6 +39762,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:IceShatter",
+            "name": "Ice Shatter",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 8 (11) damage.\nWhenever the enemy loses HP during their next turn, deal 8 (11) damage.",
+            "pack": "Biting Cold",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:IchorGoblet",
             "name": "Ichor Goblet",
             "color": "Packmaster_rainbow",
@@ -39675,17 +39795,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:IcicleSpear",
-            "name": "Icicle Spear",
-            "color": "Packmaster_rainbow",
-            "rarity": "Uncommon",
-            "type": "Attack",
-            "cost": "1",
-            "description": "Deal 5 (7) damage.\nApply 5 (7) anniv5:Frostbite.",
-            "pack": "Biting Cold",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:IcyFloe",
             "name": "Icy Floe",
             "color": "Packmaster_rainbow",
@@ -39694,6 +39803,17 @@
             "cost": "1",
             "description": "anniv5:Flow.\nNext turn,\ngain [E] [E] ( [E]).",
             "pack": "Go With The Flow",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:Ignition",
+            "name": "Ignition",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (10) damage to ALL enemies.\nChannel 1 anniv5:Blaze.",
+            "pack": "Spheres",
             "mod": "The Packmaster"
         },
         {
@@ -39884,6 +40004,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:LikeClockwork",
+            "name": "Like Clockwork",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "0",
+            "description": "At the end of your turn, gain 4 (6) Block for each Curse or Status card in your hand.",
+            "pack": "Bellord",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:LotsOfIronWaves",
             "name": "Lots of Iron Waves",
             "color": "Packmaster_rainbow",
@@ -39892,6 +40023,17 @@
             "cost": "4",
             "description": "Gain 22 (27) Block.\nDeal 22 (27) damage.",
             "pack": "Energized",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:LuckyHorseshoe",
+            "name": "Lucky Horseshoe",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 8 (11) damage to a random enemy.\nA random card in your draw pile costs 0 this turn.",
+            "pack": "Jockey",
             "mod": "The Packmaster"
         },
         {
@@ -39945,7 +40087,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "X",
-            "description": "Deal 5 (7) damage X times.\nShuffle a Food into your draw pile.",
+            "description": "Deal 6 (7) damage X times.\nShuffle a Food (+) into your draw pile.",
             "pack": "Energized",
             "mod": "The Packmaster"
         },
@@ -39962,12 +40104,12 @@
         },
         {
             "id": "anniv5:MegaChill",
-            "name": "MegaChill",
+            "name": "Mega Chill",
             "color": "Packmaster_rainbow",
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Channel 1 Frost for each Frozen card in hand.\nanniv5:Freeze your hand.",
+            "description": " ( anniv5:Freeze your hand. )\nChannel 1 Frost for each Frozen card in hand.\n~~- anniv5:Freeze your hand. -~~ ",
             "pack": "Frosty Fun",
             "mod": "The Packmaster"
         },
@@ -39977,7 +40119,7 @@
             "color": "Packmaster_rainbow",
             "rarity": "Uncommon",
             "type": "Power",
-            "cost": "2",
+            "cost": "1",
             "description": " (Innate.)\nWhenever you draw a Power, gain [E] .",
             "pack": "Goddess of Explosions",
             "mod": "The Packmaster"
@@ -40022,7 +40164,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "2",
-            "description": "anniv5:Inscribed.\nDeal 7 (9) damage to a random enemy for each channeled orb.",
+            "description": "anniv5:Inscribed.\nDeal 7 (9) damage to a random enemy for each channeled Orb.",
             "pack": "Witches Strike",
             "mod": "The Packmaster"
         },
@@ -40055,7 +40197,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "~~- Ethereal. -~~\nAttack anniv5:Enchantment.\nGain 2 (3) Strength\nthis turn.\n~~- Exhaust. -~~ ",
+            "description": "Gain 3 Temporary Strength.\nThe next time you play a anniv5:different color attack this turn, repeat this.~~-  Exhaust. -~~ ",
             "pack": "Pixie",
             "mod": "The Packmaster"
         },
@@ -40200,6 +40342,17 @@
             "cost": "0",
             "description": "~~- Gain a Necronomicurse. -~~\nThe next Attack you play that costs 2 or more is played twice.",
             "pack": "Eldritch Horror",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:Paintcan",
+            "name": "Paintcan",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 9 (12) damage to a random enemy.\nCards in your hand become a anniv5:different color.",
+            "pack": "Pixie",
             "mod": "The Packmaster"
         },
         {
@@ -40374,7 +40527,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "2",
-            "description": "Gain 1 (2) Orb slot (slots) and 1 Focus.\nWhenever you Channel an Orb, trigger its passive ability.",
+            "description": "Gain 1 (2) Orb slot (slots).\nGain 1 Focus.\nWhenever you Channel an Orb, trigger its passive ability.",
             "pack": "Frosty Fun",
             "mod": "The Packmaster"
         },
@@ -40479,6 +40632,17 @@
             "altDescription": "Deal 6 damage.\nDeal 12 damage to 2 random other enemies."
         },
         {
+            "id": "anniv5:ReinIn",
+            "name": "Rein In",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Draw 1 card.\nanniv5:Flurry: Gain 2 (3) Block.",
+            "pack": "Jockey",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Remember",
             "name": "Remember",
             "color": "Packmaster_rainbow",
@@ -40540,7 +40704,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "ALL enemies lose 13 (17) HP.\nanniv5:Pickup: Obtain a Curse of the Bell.",
+            "description": "ALL enemies lose 13 (17) HP.\nNext turn, draw 1 additional card.\nanniv5:Pickup: Obtain a Curse of the Bell.",
             "pack": "Bellord",
             "mod": "The Packmaster"
         },
@@ -40573,7 +40737,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "anniv5:Infest.\nGain 15 (20) Block.\nGain 1 Artifact\nfor each [bugIcon] .",
+            "description": "anniv5:Infest.\nGain 15 (20) Block.\nDraw 1 card.\nWhen this gains [bugIcon] ,\ngain 1 Artifact.",
             "pack": "The Swarm",
             "mod": "The Packmaster"
         },
@@ -40848,7 +41012,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Apply 13 (17) anniv5:Frostbite.\nThe enemy's anniv5:Frostbite is not halved this turn.\nExhaust.",
+            "description": "Apply 11 (14) anniv5:Frostbite.\nThe enemy's anniv5:Frostbite is not halved this turn.",
             "pack": "Biting Cold",
             "mod": "The Packmaster"
         },
@@ -41090,7 +41254,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Discard a card. Draw cards equal to its cost.\n~~- Exhaust. -~~ ",
+            "description": "Gain 3 Block.\nDiscard a card. Draw cards equal to its cost.\n~~- Exhaust. -~~ ",
             "pack": "Arcana",
             "mod": "The Packmaster"
         },
@@ -41301,6 +41465,17 @@
             "cost": "1",
             "description": "Draw 3 (4) cards.\nanniv5:Echo.\nExhaust.",
             "pack": "Energy & Echo",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:VoidEngine",
+            "name": "Void Engine",
+            "color": "Packmaster_rainbow",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "Gain 1 Focus.\nGain 1 Orb Slot.\nShuffle (Add) a Void into (to) your draw (discard) pile.",
+            "pack": "Spheres",
             "mod": "The Packmaster"
         },
         {
@@ -41689,6 +41864,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:ChaosGenerator",
+            "name": "Chaos Generator",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "2",
+            "description": "At the start of your turn, Channel 1 (2) random Orb (Orbs).",
+            "pack": "Spheres",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:ChaosVial",
             "name": "Chaos Vial",
             "color": "Packmaster_rainbow",
@@ -41766,6 +41952,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:CosmicConverter",
+            "name": "Cosmic Converter",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "2 (1)",
+            "description": "Ethereal.\nAt the start of your turn, add a anniv5:different color card of the same type and cost as the last card played into your hand.",
+            "pack": "Pixie",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:Crystallize",
             "name": "Crystallize",
             "color": "Packmaster_rainbow",
@@ -41774,6 +41971,17 @@
             "cost": "1",
             "description": "Gain 3 (4) Block for each [E] available.",
             "pack": "Energy & Echo",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:Cuckoo",
+            "name": "Cuckoo",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "1",
+            "description": " (Innate.)\nWhenever you draw a Curse card, deal 13 damage to a random enemy.",
+            "pack": "Bellord",
             "mod": "The Packmaster"
         },
         {
@@ -42046,8 +42254,8 @@
             "color": "Packmaster_rainbow",
             "rarity": "Rare",
             "type": "Power",
-            "cost": "3",
-            "description": "At the start of each turn ( and right now), set up The Bomb.",
+            "cost": "2",
+            "description": " (Innate.)\nYou deal 100% more non-attack damage.",
             "pack": "Goddess of Explosions",
             "mod": "The Packmaster"
         },
@@ -42058,7 +42266,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "~~- Ethereal. -~~\nYou deal 100% more non-attack damage.",
+            "description": "At the start of each turn ( and right now), set up The Bomb.",
             "pack": "Goddess of Explosions",
             "mod": "The Packmaster"
         },
@@ -42100,9 +42308,9 @@
             "name": "Fast Hands",
             "color": "Packmaster_rainbow",
             "rarity": "Rare",
-            "type": "Power",
-            "cost": "1",
-            "description": "After playing a anniv5:different color card, draw a card ( and reduce its cost by 1 this turn).",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Retain.\nPut a random anniv5:different color card from your draw pile into your hand.~~-  Exhaust. -~~ ",
             "pack": "Pixie",
             "mod": "The Packmaster"
         },
@@ -42162,6 +42370,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:FrostedEdge",
+            "name": "Frosted Edge",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "1",
+            "description": "Whenever you apply anniv5:Frostbite, gain 1 (2) Temporary Strength.",
+            "pack": "Biting Cold",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:FrozenCapsule",
             "name": "Frozen Capsule",
             "color": "Packmaster_rainbow",
@@ -42170,6 +42389,17 @@
             "cost": "1",
             "description": "anniv5:Mutable: Deal 8 damage.\nanniv5:Mutable: When anniv5:Transmuted, draw a (2) card (cards).",
             "pack": "Transmutation",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:FrozenMagma",
+            "name": "Frozen Magma",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "2",
+            "description": "Channel 1 anniv5:Polar.\nChannel 1 Frost.\nChannel 1 anniv5:Blaze.\n~~- Exhaust. -~~ ",
+            "pack": "Spheres",
             "mod": "The Packmaster"
         },
         {
@@ -42217,6 +42447,17 @@
             "mod": "The Packmaster"
         },
         {
+            "id": "anniv5:Giddyap",
+            "name": "Giddyap",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "2 (1)",
+            "description": "At the start of your turn, add a Horse into your hand.",
+            "pack": "Jockey",
+            "mod": "The Packmaster"
+        },
+        {
             "id": "anniv5:GoToJail",
             "name": "Go to Jail",
             "color": "Packmaster_rainbow",
@@ -42258,17 +42499,6 @@
             "cost": "1 (0)",
             "description": "Take 1 damage.\nReturn this from the discard pile to your hand whenever you gain anniv5:Confession.",
             "pack": "Dragonwrath",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:Horizonbound",
-            "name": "Horizonbound",
-            "color": "Packmaster_rainbow",
-            "rarity": "Rare",
-            "type": "Power",
-            "cost": "3",
-            "description": "~~- Ethereal. -~~\nanniv5:Different color cards cost 1 less for each other anniv5:different color card played this turn.",
-            "pack": "Pixie",
             "mod": "The Packmaster"
         },
         {
@@ -42390,17 +42620,6 @@
             "cost": "1",
             "description": "Gain 1 (2) anniv5:Advantage.\nRoll 2 anniv5:D6.",
             "pack": "Board Games",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:LikeClockwork",
-            "name": "Like Clockwork",
-            "color": "Packmaster_rainbow",
-            "rarity": "Rare",
-            "type": "Power",
-            "cost": "1",
-            "description": "At the end of your turn, gain 5 (7) Block for each Curse or Status card in your hand.",
-            "pack": "Bellord",
             "mod": "The Packmaster"
         },
         {
@@ -42608,7 +42827,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 12 (15) damage.\nIf this is the 12th card played this combat, deal 48 (60) damage instead.",
+            "description": "Deal 12 (15) damage.\nIf this is the 12th card played this combat, deal 36 (48) damage instead.",
             "pack": "Oddities",
             "mod": "The Packmaster"
         },
@@ -42641,7 +42860,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "Whenever you channel an orb gain 3 (4) Focus until your next turn.",
+            "description": "Whenever you channel an Orb, gain 3 (4) Focus until your next turn.",
             "pack": "Witches Strike",
             "mod": "The Packmaster"
         },
@@ -42665,6 +42884,17 @@
             "cost": "3",
             "description": "Deal 36 damage.\nApply anniv5:Rend equal to half of the unblocked damage dealt.\nApply 2 Vulnerable.",
             "pack": "Ring of Pain",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:OffToTheRaces",
+            "name": "Off to the Races",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "2",
+            "description": " (Retain.)\nGain 2 Dexterity.\nanniv5:Flurry: Gain 1 Strength.",
+            "pack": "Jockey",
             "mod": "The Packmaster"
         },
         {
@@ -42816,7 +43046,7 @@
             "color": "Packmaster_rainbow",
             "rarity": "Rare",
             "type": "Power",
-            "cost": "1",
+            "cost": "2",
             "description": " (Innate.)\nAt the start of your turn, set a random card in your hand anniv5:On_Fire.",
             "pack": "RimWorld",
             "mod": "The Packmaster"
@@ -42948,8 +43178,8 @@
             "color": "Packmaster_rainbow",
             "rarity": "Rare",
             "type": "Attack",
-            "cost": "3",
-            "description": "Deal 4 damage 5 (6) times.",
+            "cost": "2",
+            "description": "Deal 6 (8) damage to ALL enemies 2 times.\nIncrease this card's hits by 1 this combat.",
             "pack": "Biting Cold",
             "mod": "The Packmaster"
         },
@@ -43026,7 +43256,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2 (1)",
-            "description": "Retain.\nGain 1 Intangible.\nExhaust.\nanniv5:Pickup: Obtain 3 Curses of the Bell.",
+            "description": "Retain.\nGain 1 Intangible.\nExhaust.\nanniv5:Pickup: Obtain 2 Curses of the Bell.",
             "pack": "Bellord",
             "mod": "The Packmaster"
         },
@@ -43323,7 +43553,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 10 (12) damage to ALL enemies.\nIf you're having fun, play a random  (Upgraded ) Power!",
+            "description": "Deal 9 (10) damage to ALL enemies.\nIf you're having fun, play a random  (Upgraded ) Power!",
             "pack": "Secret Level",
             "mod": "The Packmaster"
         },
@@ -43358,6 +43588,17 @@
             "cost": "0",
             "description": "Draw 3 (4) cards.\nGive them Ethereal.\nExhaust.",
             "pack": "Warlock",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:TheSpin",
+            "name": "The Spin",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 4 (5) damage.\nDeals 4 (5) additional damage for each card played this turn.",
+            "pack": "Jockey",
             "mod": "The Packmaster"
         },
         {
@@ -43455,7 +43696,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "At the end of your turn Evoke your next orb 3 (4) times.",
+            "description": "At the end of your turn Evoke your next Orb 3 (4) times.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -58329,7 +58570,7 @@
             "name": "Snowglobe",
             "tier": "Common",
             "pool": "Packmaster_rainbow",
-            "description": "Enemies take 1 additional damage from anniv5:Frostbite.",
+            "description": "Whenever you apply anniv5:Frostbite by attacking an enemy, apply 1 more.",
             "flavorText": "A depiction of the Spire during snowy weather. It growls when you shake it.",
             "mod": "The Packmaster"
         },
@@ -65958,7 +66199,7 @@
         },
         {
             "name": "Crescent Moon",
-            "description": "Orb. Passive : Deals damage to a random enemy when activated by a cards effect. Evokes after activating 4 times. Evoke : Deal damage to a random enemy",
+            "description": "Orb. Passive: Deals damage to a random enemy when activated by a cards effect. Evokes after activating 4 times. Evoke: Deal damage to a random enemy.",
             "mod": "The Packmaster"
         },
         {
@@ -65977,11 +66218,6 @@
             "mod": "The Packmaster"
         },
         {
-            "name": "Enchantment",
-            "description": "When you play a card with a different color any applicable Enchantments are copied and played onto the same target. (A different color is any color other than your character's normal card color; different Packmaster Packs are not different colors.)",
-            "mod": "The Packmaster"
-        },
-        {
             "name": "Fallout",
             "description": "Whenever you play a Power, ALL creatures with Fallout take damage.",
             "mod": "The Packmaster"
@@ -65993,7 +66229,7 @@
         },
         {
             "name": "Full Moon",
-            "description": "Orb. Passive : Draw a card when activated by a cards effect. Evokes after activating 4 times. Evoke : Draw a card",
+            "description": "Orb. Passive: Draw a card when activated by a cards effect. Evokes after activating 4 times. Evoke: Draw a card.",
             "mod": "The Packmaster"
         },
         {
@@ -66003,7 +66239,7 @@
         },
         {
             "name": "Inscribed",
-            "description": "When played, activate the passive of your next orb, then of all Full and Crescent Moon orbs.",
+            "description": "When played, activate the passive of your next Orb, then of all Full and Crescent Moon Orbs.",
             "mod": "The Packmaster"
         },
         {
@@ -66024,6 +66260,11 @@
         {
             "name": "Penance",
             "description": "When a creature obtains 8 Penance, it loses 20 HP and loses 8 Penance.\nHP loss from Penance is increased by 10 this combat.",
+            "mod": "The Packmaster"
+        },
+        {
+            "name": "Plated Armor",
+            "description": "At the end of the turn, gain Block. When taking unblocked attack damage, reduce by 1.",
             "mod": "The Packmaster"
         },
         {
@@ -66099,6 +66340,11 @@
         {
             "name": "Basic",
             "description": "Basic cards are the cards that you find in decks at the start of the run. They have the same border as Common cards but cannot be obtained through normal means.",
+            "mod": "The Packmaster"
+        },
+        {
+            "name": "Blaze",
+            "description": "Orb: Increases amount every turn. When Evoked, applies Ignite to the enemy with the most HP.",
             "mod": "The Packmaster"
         },
         {
@@ -66278,7 +66524,7 @@
         },
         {
             "name": "Manifest",
-            "description": "Gain an orb slot then channel the listed orb.",
+            "description": "Gain an Orb slot then channel the listed Orb.",
             "mod": "The Packmaster"
         },
         {
@@ -66328,12 +66574,12 @@
         },
         {
             "name": "On Fire",
-            "description": "At the end of your turn, cards in your hand with Fire Counters make you take damage equal to their Fire Counter. They then increase the Fire Counter. Cards with Fire Counters play an additional copy of themselves for every Fire Counter above 1, and Exhaust.",
+            "description": "Play an additional time for each Fire Counter and Exhaust. Increase Fire Counter by 1 at the end of your turn while in your hand.",
             "mod": "The Packmaster"
         },
         {
             "name": "Petra",
-            "description": "When you attack a target with Petra, gain Block equal to 35% of damage dealt on your next turn. Reduced by 1 at the end of turn.",
+            "description": "When you attack a target with Petra, gain Block equal to 35% of unblocked damage dealt on your next turn. Reduced by 1 at the end of turn.",
             "mod": "The Packmaster"
         },
         {
@@ -66342,8 +66588,18 @@
             "mod": "The Packmaster"
         },
         {
+            "name": "Polar",
+            "description": "Orb: Applies Frostbite to random enemies. When Evoked, applies Frostbite to ALL enemies.",
+            "mod": "The Packmaster"
+        },
+        {
             "name": "Porcupine",
             "description": "Orb: Generates Quills. When Evoked, gain Thorns.",
+            "mod": "The Packmaster"
+        },
+        {
+            "name": "Randomized Orb",
+            "description": "When this card is created, the Orb it channels is randomly chosen from Lightning, Dark, Ghostflame, Blaze, and Polar.",
             "mod": "The Packmaster"
         },
         {
@@ -66423,7 +66679,7 @@
         },
         {
             "name": "Wolf",
-            "description": "Orb: Deals damage to the enemy with the least HP. Damage is increased by the number of orbs that are Channeled. When Evoked, gain an orb slot.",
+            "description": "Orb: Deals damage to the enemy with the least HP. Damage is increased by the number of orbs that are Channeled. When Evoked, gain an Orb slot.",
             "mod": "The Packmaster"
         },
         {
@@ -67286,6 +67542,19 @@
             "optional_dependencies": []
         },
         {
+            "name": "Launch Save Slot2",
+            "version": "1",
+            "authors": [
+                "ocean"
+            ],
+            "credits": "",
+            "description": "When launcing the game with this mod enabled, save slot number specified in the title will be automatically set on startup.",
+            "mts_version": "0.0.0",
+            "sts_version": "",
+            "dependencies": [],
+            "optional_dependencies": []
+        },
+        {
             "name": "Marisa（霧雨　魔理沙）",
             "version": "0.15.4",
             "authors": [
@@ -67667,7 +67936,7 @@
         },
         {
             "name": "The Packmaster",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "authors": [
                 "Vex'd",
                 "modargo",
@@ -69613,7 +69882,7 @@
             "author": "Alchyr",
             "credits": "",
             "offense": "3",
-            "defense": "2",
+            "defense": "3",
             "support": "3",
             "frontload": "3",
             "scaling": "2",
@@ -69752,17 +70021,17 @@
             "description": "Inflict enemies with anniv5:Frostbite and let them succumb to the cold.",
             "author": "Enbeon",
             "credits": "",
-            "offense": "3",
+            "offense": "4",
             "defense": "2",
             "support": "2",
             "frontload": "3",
-            "scaling": "2",
+            "scaling": "3",
             "cards": [
                 "Frigid Body",
                 "Frostburn",
-                "Glaciate",
+                "Frosted Edge",
                 "Growing Affliction",
-                "Icicle Spear",
+                "Ice Shatter",
                 "Insult to Injury",
                 "Refrigerate",
                 "Relentless Hail",
@@ -70397,7 +70666,7 @@
                 "Plunge",
                 "Cold Snap",
                 "Blizzard",
-                "MegaChill",
+                "Mega Chill",
                 "Snack",
                 "Frozen Snack",
                 "Hailstorm",
@@ -70627,7 +70896,7 @@
                 "Bug Out",
                 "Scarab Shield",
                 "Entomology",
-                "Compoundeyes",
+                "Compound Eyes",
                 "BEES!!!",
                 "Lord of the Flies"
             ],
@@ -70717,6 +70986,35 @@
             ],
             "tags": [
                 "Strength"
+            ],
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:JockeyPack",
+            "name": "Jockey",
+            "description": "Ride Horse cards to make a deadly megaturn.",
+            "author": "Vex",
+            "credits": "",
+            "offense": "3",
+            "defense": "2",
+            "support": "4",
+            "frontload": "2",
+            "scaling": "4",
+            "cards": [
+                "Horse",
+                "Starting Gun",
+                "Trample",
+                "Take the Lead",
+                "Rein In",
+                "Homestretch",
+                "Lucky Horseshoe",
+                "Derby",
+                "Giddyap",
+                "The Spin",
+                "Off to the Races"
+            ],
+            "tags": [
+                "None"
             ],
             "mod": "The Packmaster"
         },
@@ -70986,7 +71284,7 @@
             "scaling": "3",
             "cards": [
                 "Booster Pack",
-                "Stardust Shield",
+                "Paintcan",
                 "Star Shower",
                 "Portal Punch",
                 "Enchanted Rift",
@@ -70994,7 +71292,7 @@
                 "Neutron Star",
                 "Fast Hands",
                 "Dimension Breach",
-                "Horizonbound"
+                "Cosmic Converter"
             ],
             "tags": [
                 "Tokens"
@@ -71315,7 +71613,7 @@
         {
             "id": "anniv5:SerpentinePack",
             "name": "Serpentine Disciple",
-            "description": "A disciple of the Reptomancer. Uses Venemous and Cunning stances which focus on applying debuffs.",
+            "description": "A disciple of the Reptomancer. Uses Venomous and Cunning stances which focus on applying debuffs.",
             "author": "Dayvig",
             "credits": "",
             "offense": "4",
@@ -71344,7 +71642,7 @@
         {
             "id": "anniv5:ShamanPack",
             "name": "Shaman",
-            "description": "Cards from and inspired by the Shaman character mod.",
+            "description": "Cards from and inspired by the Shaman character mod. anniv5:Ignite your enemies for long-lasting damage.",
             "author": "modargo",
             "credits": "Card art from MtG",
             "offense": "4",
@@ -71423,6 +71721,35 @@
             ],
             "tags": [
                 "None"
+            ],
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:SpheresPack",
+            "name": "Spheres",
+            "description": "A flexible orb-focused pack with two new orbs that apply *Ignite and *Frostbite.",
+            "author": "modargo",
+            "credits": "Card art from MtG",
+            "offense": "4",
+            "defense": "3",
+            "support": "1",
+            "frontload": "4",
+            "scaling": "3",
+            "cards": [
+                "Ignition",
+                "Dual Blade",
+                "Sphere",
+                "Winterwisp",
+                "Frozen Magma",
+                "Consolidate",
+                "Frost Conversion",
+                "Fluctuate",
+                "Void Engine",
+                "Chaos Generator"
+            ],
+            "tags": [
+                "Orbs",
+                "Debuffs"
             ],
             "mod": "The Packmaster"
         },
