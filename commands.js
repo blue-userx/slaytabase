@@ -36,7 +36,7 @@ const cardTypes = {
 };
 const optimise = async filename => new Promise(res => execFile(optipng, ['-out', filename, filename], res));
 
-async function getMemeItems(arg, options) {
+async function getMemeItems(arg, options, msg) {
     try {
         let args = arg.split('=');
         if (args.length != options.items.length)
@@ -89,7 +89,7 @@ async function getMemeItems(arg, options) {
 
 async function meme(msg, arg, options) {
     try {
-        let items = await getMemeItems(arg, options);
+        let items = await getMemeItems(arg, options, msg);
         if (!Array.isArray(items))
             return items;
 
@@ -127,12 +127,12 @@ async function meme(msg, arg, options) {
     }
 }
 
-async function makesweetMeme(template, arg) {
+async function makesweetMeme(template, arg, msg) {
     try {
         if (cfg.mkswtKey == null)
             return {title: "This kind of gif is not currently enabled to generate."};
 
-        let items = await getMemeItems(arg, {items: [0]});
+        let items = await getMemeItems(arg, {items: [0]}, msg);
         if (!Array.isArray(items))
             return items;
         
@@ -853,10 +853,10 @@ __List of memes:__
     },
 
     suffix: {
-        ' my beloved': async (msg, arg) => await makesweetMeme('heart-locket', arg),
-        ' on a flying flag': async (msg, arg) => await makesweetMeme('flag', arg),
-        ' on a billboard': async (msg, arg) => await makesweetMeme('billboard-cityscape', arg),
-        ' on a circuit board': async (msg, arg) => await makesweetMeme('circuit-board', arg),
+        ' my beloved': async (msg, arg) => await makesweetMeme('heart-locket', arg, msg),
+        ' on a flying flag': async (msg, arg) => await makesweetMeme('flag', arg, msg),
+        ' on a billboard': async (msg, arg) => await makesweetMeme('billboard-cityscape', arg, msg),
+        ' on a circuit board': async (msg, arg) => await makesweetMeme('circuit-board', arg, msg),
 
         ' from slay the spire': async (msg, arg) => await meme(msg, arg, {
             w: 680,
