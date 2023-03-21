@@ -13,6 +13,7 @@ import fn from './fn.js';
 import embed from './embed.js';
 import cfg from './cfg.js';
 import fetch from 'node-fetch';
+import FormData from 'form-data';
 import gm from 'gm';
 import { execFile } from 'child_process';
 import optipng from 'optipng-bin';
@@ -35,7 +36,7 @@ const cardTypes = {
 };
 const optimise = async filename => new Promise(res => execFile(optipng, ['-out', filename, filename], res));
 
-async function meme(msg, arg, options) {
+async function getMemeItems(arg, options) {
     try {
         let args = arg.split('=');
         if (args.length != options.items.length)
@@ -51,7 +52,8 @@ async function meme(msg, arg, options) {
                 else
                     user = await bot.users.fetch(id).catch(e => {});
                 if (user) {
-                    user.image = await loadImage(user.avatarURL().replace('webp', 'png'));
+                    user.url = user.avatarURL().replace('webp', 'png');
+                    user.image = await loadImage(user.url);
                     return user;
                 }
             } else if (a.startsWith('att?')) {
@@ -65,6 +67,7 @@ async function meme(msg, arg, options) {
             }
             return options.items[i] == 1 ? a+"" : fn.find(a);
         }));
+
         for (let i in items) {
             if (options.items[i] == 0) {
                 let item = items[i];
@@ -72,9 +75,23 @@ async function meme(msg, arg, options) {
                 item.embed = await embed({...item.item, score: item.score, query: arg});
                 if (item.embed.data.thumbnail == null)
                     return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
-                item.image = await loadImage(item.embed.data.thumbnail.url);
+                item.url = item.embed.data.thumbnail.url
+                item.image = await loadImage(item.url);
             }
         }
+
+        return items;
+    } catch(e) {
+        console.error(e);
+        return {title: 'failed to generate image'};
+    }
+}
+
+async function meme(msg, arg, options) {
+    try {
+        let items = await getMemeItems(arg, options);
+        if (!Array.isArray(items))
+            return items;
 
         if (options.hasOwnProperty('bg')) {
             let canvas = createCanvas(options.w, options.h);
@@ -86,7 +103,7 @@ async function meme(msg, arg, options) {
                     ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
             if (options.hasOwnProperty('texts'))
                 for (let t of options.texts)
-                    drawText.default(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : (items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase()), font,
+                    drawText.default(ctx, items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase(), font,
                         {x: t[1], y: t[2], width: t[3], height: t[4]}, 
                         {minSize: 5, maxSize: 200, vAlign: 'center', hAlign: 'center', textFillStyle: t[5], fitMethod: 'box', drawRect: false}
                     );
@@ -101,14 +118,67 @@ async function meme(msg, arg, options) {
                 title: ' ',
                 image: {url: 'attachment://'+filename},
                 files: [filename],
-                color: typeof items[0] == 'string' || items[0] instanceof User || items[0].hasOwnProperty('ephemeral') ? null : items[0].embed.color,
+                color: typeof items[0] instanceof User || items[0].hasOwnProperty('ephemeral') ? null : items[0].embed.color,
             };
-        } else if (options.hasOwnProperty('mkswtTemplate')) {
-            
         }
     } catch(e) {
         console.error(e);
         return {title: 'failed to generate image'};
+    }
+}
+
+async function makesweetMeme(template, arg) {
+    try {
+        if (cfg.mkswtKey == null)
+            return {title: "This kind of gif is not currently enabled to generate."};
+
+        let items = await getMemeItems(arg, {items: [0]});
+        if (!Array.isArray(items))
+            return items;
+        
+        let filename = `export${String(Math.random()).slice(2)}.png`;
+        await new Promise(async (resolve, reject) => {
+            let stream = fs.createWriteStream(filename);
+            let res = await fetch(items[0].url);
+            res.body.pipe(stream);
+            res.body.on("error", reject);
+            stream.on("finish", resolve);
+        });
+        let img = await loadImage(filename);
+        let canvas = createCanvas(img.width,img.height);
+        canvas.getContext('2d').drawImage(img, 0, 0);
+        fs.rmSync(filename);
+        filename = filename.replace('png', 'jpg');
+        fs.writeFileSync(filename, canvas.toBuffer('image/jpeg'));
+
+        let body = new FormData();
+        body.append('images', fs.readFileSync(filename), 'file.jpg');
+        let req = await fetch(`https://api.makesweet.com/make/${template}?text=${typeof items[0] == 'string' ? items[0] : (items[0] instanceof User ? items[0].username : items[0].item.name)} my beloved`, {
+            method: 'POST',
+            headers: {'Authorization': cfg.mkswtKey},
+            body
+        });
+        if (req.status === 200) {
+            fs.rmSync(filename);
+            filename = filename.replace('jpg', 'gif');
+            await new Promise(async res => {
+                let stream = fs.createWriteStream(filename);
+                req.body.pipe(stream);
+                stream.on("finish", res);
+            });
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename],
+                color: typeof items[0] == 'string' || items[0] instanceof User || items[0].hasOwnProperty('ephemeral') ? null : items[0].embed.color,
+            };
+        } else {
+            fs.rmSync(filename);
+            return {title: `Error: ${(await req.json()).error}`};
+        }
+    } catch(e) {
+        console.error(e);
+        return {title: 'failed to generate gif'};
     }
 }
 
@@ -521,6 +591,9 @@ __List of memes:__
 <sb [item]=[text in speech bubble]>
 <sb [item1]=[text1]=[item2]=[text2]>
 <[item] from slay the spire>
+<[item] on a billboard>
+<[item] on a flying flag>
+<[item] on a circuit board>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -744,14 +817,10 @@ __List of memes:__
     },
 
     suffix: {
-        ' my beloved': async (msg, arg) => await meme(msg, arg, {
-            w: 640,
-            h: 480,
-            bg: 'beloved.png',
-            items: [0],
-            put: [[0, 103, 200, 164, 139]],
-            texts: [[0, 373, 130, 202, 71, 'black']]
-        }),
+        ' my beloved': async (msg, arg) => await makesweetMeme('heart-locket', arg),
+        ' on a flying flag': async (msg, arg) => await makesweetMeme('flag', arg),
+        ' on a billboard': async (msg, arg) => await makesweetMeme('billboard-cityscape', arg),
+        ' on a circuit board': async (msg, arg) => await makesweetMeme('circuit-board', arg),
 
         ' from slay the spire': async (msg, arg) => await meme(msg, arg, {
             w: 680,
