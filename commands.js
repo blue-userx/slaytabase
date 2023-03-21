@@ -500,6 +500,42 @@ __Commands:__
             return {title: 'choose "rock", "paper", or "scissors"'};
         },
 
+        'resize': async (msg, arg) => {
+            try {
+                let args = arg.split("=");
+                if (!args[0].includes('x'))
+                    return {title: "resolution must be in the following format: 1280x720 (where 1280 is the width and 720 is the height)"}
+                let w = parseInt(args[0].split('x')[0]);
+                let h = parseInt(args[0].split('x')[1]);
+                console.log(w, h)
+                if (w > 4000 || h > 4000 || w <= 0 || h <= 0 || isNaN(w) || isNaN(h))
+                    return {title: "please make each dimension at least 1 and at most 4000"};
+                let n = args.length > 1 ? parseInt(args[1]) : 0;
+                let attachment = msg.attachments.at(n-1);
+                if (attachment == undefined)
+                    return {title: 'format for attachments is att?n?name where n is the number of the attachment e.g. att?1?awsom'};
+                let origImg = await loadImage(attachment.url);
+                let canvas = createCanvas(origImg.width, origImg.height);
+                let ctx = canvas.getContext('2d')
+                ctx.drawImage(origImg, 0, 0);
+                let filename = `export${String(Math.random()).slice(2)}.png`;
+                let filename2 = filename.replace('export', 'resized');
+                fs.writeFileSync(filename, canvas.toBuffer());
+                await new Promise(res => gm(filename).resize(w,h,'!').write(filename2, res));
+                await optimise(filename);
+                await optimise(filename2);
+                return {
+                    title: `${w}x${h} →`,
+                    thumbnail: {url: 'attachment://'+filename2},
+                    footer: {iconURL: 'attachment://'+filename, text: `← ${origImg.width}x${origImg.height}`},
+                    files: [filename, filename2],
+                };
+            } catch (e) {
+                console.log(e);
+                return {title: "error resizing"};
+            }
+        },
+
         memes: () => ({
             title: 'Meme generator',
             description: `Some memes take more than one item, separate items with the "=" symbol.
