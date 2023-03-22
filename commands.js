@@ -617,6 +617,7 @@ __List of memes:__
 <megamind textno [text]>
 <friendship ended [bad item]=[good item]=[friender]>
 <coolerdaniel [daniel]=[coolerdaniel]>
+<5 dollar [footlong]>
 <19 dollar [fortnite card]>
 <distracted [gf]=[distraction]=[bf]>
 <[item] my beloved>
@@ -678,6 +679,15 @@ __List of memes:__
                 [0, 229, 84, 381, 458],
                 [1, 794, 110, 341, 414],
             ]
+        }),
+
+        '5 dollar ': async (msg, arg) => await meme(msg, arg, {
+            w: 757,
+            h: 607,
+            bg: 'footlong.png',
+            items: [0],
+            put: [[0, 374, 183, 165, 32]],
+            texts: [[0, 407, 16, 346, 110, 'black']]
         }),
 
         '19 dollar ': async (msg, arg) => await meme(msg, arg, {
