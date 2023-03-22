@@ -1367,7 +1367,7 @@ export default {
                     },
                     
                     {
-                        "id": "gremlin:GremlinPotion",
+                        "id": "gremlin:WizPotion",
                         "name": "Pizazz Potion",
                         "rarity": "Common",
                         "description": "Gain 10 Vigor.",
