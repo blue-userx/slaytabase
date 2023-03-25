@@ -22,8 +22,6 @@ function findAll(query) {
         results = shuffle(search._docs.map((r, i) => ({item: r, score: 0, refIndex: i})));
     else
         results = search.search(args.filter(a => !a.includes('=')).join(' '));
-    console.log(results[0]);
-    console.log(search._docs[1]);
     if (query.filter) results = results.filter(query.filter);
     let page = 0;
     for (let i of args) {
