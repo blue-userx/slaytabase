@@ -2,9 +2,28 @@ import { search } from './index.js';
 
 const unPunctuate = str => str.replaceAll('\n', ' ').replace(/[^\w\s?~=:]|_/g, "").replace(/\s+/g, " ").trim().toLowerCase();
 
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
+  
+
 function findAll(query) {
     let args = query.split(' ');
-    let results = search.search(args.filter(a => !a.includes('=')).join(' '));
+    let results;
+    if (args[0] == "randomitem")
+        results = shuffle(search._docs.map((r, i) => ({item: r, score: 0, refIndex: i})));
+    else
+        results = search.search(args.filter(a => !a.includes('=')).join(' '));
+    console.log(results[0]);
+    console.log(search._docs[1]);
     if (query.filter) results = results.filter(query.filter);
     let page = 0;
     for (let i of args) {

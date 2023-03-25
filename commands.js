@@ -751,14 +751,6 @@ __List of memes:__
                 [0, 496, 208, 47, 50, 'black'],
             ],
         }),
-        
-        'randomitem': async (msg, arg) => {
-            let items = search._docs.map(i => ({item: i}));
-            if (arg.filter) items = items.filter(arg.filter);
-            let itemNum = Math.floor(Math.random() * items.length);
-            let item = items[itemNum].item;
-            return {...(await embed({...item, score: 0, query: fn.unPunctuate(item.name)}, undefined, undefined, false)).data, footer: {text: `Item ${itemNum+1}/${items.length}`}};
-        },
 
         'sb ': async (msg, _, __, oa) => {
             let numArgs = oa.split('=').length;
