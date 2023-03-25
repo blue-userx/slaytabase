@@ -19,6 +19,7 @@ function findAll(query) {
     let args = query.split(' ');
     let results;
     args = args.map(a => a.endsWith('?left') ? a.replace('?left', '') : a);
+    args = args.map(a => a.endsWith('?right') ? a.replace('?right', '') : a);
     if (args[0] == "randomitem")
         results = shuffle(search._docs.map((r, i) => ({item: r, score: 0, refIndex: i})));
     else

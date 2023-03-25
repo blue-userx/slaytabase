@@ -77,9 +77,9 @@ async function getMemeItems(arg, options, msg) {
                     return {title: `No image for ${item.item.itemType} "${item.item.name}"`};
                 item.url = item.embed.data.thumbnail.url
                 item.image = await loadImage(item.url);
-                if (args[i].endsWith("?left")) {
+                if (args[i].endsWith("?left") || args[i].endsWith("?right")) {
                     let canvas = createCanvas(item.image.width/2,item.image.height);
-                    canvas.getContext('2d').drawImage(item.image, 0, 0);
+                    canvas.getContext('2d').drawImage(item.image, args[i].endsWith("?left") ? 0 : -item.image.width/2, 0);
                     item.image = canvas;
                 }
             }
@@ -150,8 +150,8 @@ async function makesweetMeme(template, arg, msg) {
             stream.on("finish", resolve);
         });
         let img = await loadImage(filename);
-        let canvas = createCanvas(img.width/(arg.endsWith("?left") ? 2 : 1),img.height);
-        canvas.getContext('2d').drawImage(img, 0, 0);
+        let canvas = createCanvas(img.width/(arg.endsWith("?left") || arg.endsWith("?right") ? 2 : 1),img.height);
+        canvas.getContext('2d').drawImage(img, arg.endsWith("?right") ? -img.width/2 : 0, 0);
         fs.rmSync(filename);
         filename = filename.replace('png', 'jpg');
         fs.writeFileSync(filename, canvas.toBuffer('image/jpeg'));
