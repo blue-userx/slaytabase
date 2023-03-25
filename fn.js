@@ -64,6 +64,12 @@ function findAll(query) {
 }
 
 function find(query) {
+    let filter = query.filter;
+    query = query.split(' ');
+    query = query.map(a => a.endsWith('?left') ? a.replace('?left', '') : a);
+    query = query.map(a => a.endsWith('?right') ? a.replace('?right', '') : a);
+    query = new String(query.join(' '));
+    query.filter = filter;
     let results = findAll(query);
     let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
     if (item == undefined)
