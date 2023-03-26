@@ -24,7 +24,6 @@ const copyRecursiveSync = function(src, dest) {
 
 const exportImages = !process.argv.includes('--no-images');
 const exportCards = exportImages && !process.argv.includes('--no-card-images');
-const betaPath = process.argv.includes('--betaless') ? 'export' : 'betaartexport';
 
 const width = 678;
 const height = 874;
@@ -113,12 +112,15 @@ async function exportMod(modPath){
         let imgPath = `${gameDataPath}card-images/${cardPath}`;
         if (exportCards) {
             ctx.drawImage(await canvas.loadImage(imgPath+'.png'), 0, 0);
-            if (up == undefined)
-                ctx.drawImage(await canvas.loadImage(imgPath.replace('export', betaPath)+'.png'), width, 0);
+            if (up == undefined) {
+                let betaPath = imgPath.replace('card-images', 'beta-card-images')+'.png';
+                if (fs.existsSync(betaPath))
+                    ctx.drawImage(await canvas.loadImage(betaPath), width, 0);
+            }
         }
         if (up != undefined) {
             if (exportCards)
-                ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? up.imgPath+'.png' : (imgPath.replace('export', betaPath)+'Plus.png')), width, 0);
+                ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? up.imgPath+'.png' : (imgPath+'Plus.png')), width, 0);
 
             //update card to include numbers from upgrade
             if (c.cost != up.cost) c.cost = `${c.cost} (${up.cost})`;
@@ -141,7 +143,7 @@ async function exportMod(modPath){
             c.description = c.description.replaceAll('([E]', '( [E]');
             if (altUp != undefined) {
                 if (exportCards)
-                    ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? altUp.imgPath+'.png' : (imgPath.replace('export', betaPath)+'Star.png')), width*2, 0);
+                    ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? altUp.imgPath+'.png' : (imgPath+'Star.png')), width*2, 0);
     
                 //update card to include numbers from upgrade
                 if (c.cost != altUp.cost) c.cost += ` (alt: ${altUp.cost})`;
@@ -155,7 +157,7 @@ async function exportMod(modPath){
                 if (exportCards) {
                     ctx.clearRect(width, 0, width, height);
                     for (let multiUp of multiUps)
-                        ctx.drawImage(await canvas.loadImage(multiUp.hasOwnProperty('imgPath') ? multiUp.imgPath+'.png' : (imgPath.replace('export', betaPath)+`Plus${multiUp.name[multiUp.name.length-1]}.png`)), width+(i%size)*(width/size), Math.floor(i++/size)*(height/size), width/size, height/size);
+                        ctx.drawImage(await canvas.loadImage(multiUp.hasOwnProperty('imgPath') ? multiUp.imgPath+'.png' : (`${imgPath}Plus${multiUp.name[multiUp.name.length-1]}.png`)), width+(i%size)*(width/size), Math.floor(i++/size)*(height/size), width/size, height/size);
                 }
                 let diffs = multiUps.map(multiUp => diffWords(c.description, multiUp.description));
                 let diff = diffs[0];

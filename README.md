@@ -7,11 +7,10 @@ invite the bot: https://discord.com/oauth2/authorize?client_id=96182444365357468
 3. in SpireExporter's mod config, disable "export vanilla items", and enable "export images"
 4. create a directory called `gamedata` in this repo
 5. on a profile where no beta art is enabled, create an export and move the `export` directory it creates into `gamedata` in this repo
-6. (optional - do this if your mod has beta art for its cards) enable "Playtester Art Mode" in the slay the spire settings, then create another export and rename the `export` directory it creates to `betaartexport`, then move it into `gamedata` in this repo
-7. you may need to edit `extraItems.js` at this point
-8. (requires [node.js v16+](https://nodejs.org/en/download/)) run `npm install` then `node alterExport.js` (this can take a while)
-9. if the mod contains a character, add data about them to `characters.js`
-10. commit & push & make a pull request
+6. you may need to edit `extraItems.js` at this point
+7. (requires [node.js v16+](https://nodejs.org/en/download/)) run `npm install` then `node alterExport.js` (this can take a while)
+8. if the mod contains a character, add data about them to `characters.js`
+9. commit & push & make a pull request
 
 ## setup for running the bot
 1. `npm ci`

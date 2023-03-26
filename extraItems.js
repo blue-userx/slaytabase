@@ -1333,71 +1333,7 @@ export default {
                     },
                 ],
             
-                "potions": [
-                    {
-                        "id": "Guardian:BlockOnCardUsePotion",
-                        "name": "Armorer's Tincture",
-                        "rarity": "Uncommon",
-                        "description": "Gain 4 Block each time you play a card this turn.",
-                        "img": "/extraImages/potions/armorerstincture.png"
-                    },
-                    
-                    {
-                        "id": "champ:CounterPotion",
-                        "name": "Brew of Sharpness",
-                        "rarity": "Common",
-                        "description": "Gain 25 champ:Counter.",
-                        "img": "/extraImages/potions/brewofsharpness.png"
-                    },
-                    
-                    {
-                        "id": "hexamod:SoulburnPotion",
-                        "name": "Molotov",
-                        "rarity": "Common",
-                        "description": "Apply 30 hexamod:Soulburn.",
-                        "img": "/extraImages/potions/molotov.png"
-                    },
-                    
-                    {
-                        "id": "Slimebound:ThreeZeroPotion",
-                        "name": "Ooze-Infused Drink",
-                        "rarity": "Rare",
-                        "description": "Add 4 random 0-cost cards to your hand.",
-                        "img": "/extraImages/potions/oozeinfuseddrink.png"
-                    },
-                    
-                    {
-                        "id": "gremlin:WizPotion",
-                        "name": "Pizazz Potion",
-                        "rarity": "Common",
-                        "description": "Gain 10 Vigor.",
-                        "img": "/extraImages/potions/pizazz.png"
-                    },
-                    
-                    {
-                        "id": "sneckomod:MuddlingPotion",
-                        "name": "Spiked Energy Drink",
-                        "rarity": "Common",
-                        "description": "sneckomod:Muddle the 2 highest-cost cards in your hand. Cards :Muddled this way cannot cost 3.",
-                        "img": "/extraImages/potions/spikedenergydrink.png"
-                    },
-                    
-                    {
-                        "id": "bronze:BurnAndBuffPotion",
-                        "name": "Vexing Draught",
-                        "rarity": "Uncommon",
-                        "description": "Gain 2 Strength and 2 Dexterity. Add two :Burn+ cards to your discard pile.",
-                        "img": "/extraImages/potions/vexingdraught.png"
-                    },
-                    
-                    {
-                        "id": "expansioncontent:BossPotion",
-                        "name": "Boss Potion",
-                        "rarity": "Uncommon",
-                        "description": "Choose 1 of 3 random :Boss cards to add to your hand, it costs 0 this turn.",
-                        "img": "/extraImages/potions/boss.png"
-                    },
-                    
+                "potions": [                    
                     {
                         "id": "downfall:CursedFountainPotion",
                         "name": "Cursed Fountain Liquid",
