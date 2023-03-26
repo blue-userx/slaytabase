@@ -299,8 +299,17 @@ async function exportMod(modPath){
         if (lines[i].includes('Upgraded image')) {
             lines[i] = '';
         }
-        if (line.startsWith('    <td><a href="card-images')) {
-            lines[i] = line.replace('small-card-images', 'cards').replace('card-images', 'cards');
+        if (lines[i].includes("beta-card-images")) {
+            let j = 0;
+            while (!(lines[Number(i)+(--j)].includes("  <tr>")))
+                lines[Number(i)+j] = '';
+            lines[Number(i)+j] = '';
+            j = -1;
+            while (!(lines[Number(i)+(++j)].includes("  </tr>")))
+                lines[Number(i)+j] = '';
+            lines[Number(i)+j] = '';
+        } else if (line.startsWith('    <td><a href="card-images')) {
+            lines[i] = line.replace('small-card-images', 'cards').replace('"card-images', '"cards');
             lines[Number(i)+1] = '';
         } else if (line.startsWith('    <td><a href="relics/popup/')) {
             lines[i] = '    <td>'+line.slice(line.indexOf('">')+2,line.indexOf('</a>'))+'</td>'
