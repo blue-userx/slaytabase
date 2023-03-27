@@ -42,6 +42,14 @@ function findAll(query) {
                 case "mod":
                     results = results.filter(r => r.item.hasOwnProperty('mod') && (r.item.mod.toLowerCase().includes(val) || val.includes(r.item.mod.toLowerCase())));
                     break;
+
+                case "rarity":
+                    results = results.filter(r => r.item.hasOwnProperty('rarity') && r.item.rarity.toLowerCase() == val);
+                    break;
+
+                case "ex":
+                    results = results.filter(r => !r.item.searchText.includes(val));
+                    break;
                 
                 case "r":
                     let resultNum = Math.max(1, Math.min(parseInt(val), results.length)) - 1;

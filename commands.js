@@ -264,6 +264,8 @@ __Commands:__
 - - cost=? - only returns cards with specified cost
 - - type=? - specify item type
 - - mod=? - specify mod name
+- - rarity=? - specify item rarity
+- - ex=? - no results will include the specified word
 - - r=2 - get second result
 <d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
 <del> deletes your last search in this channel
