@@ -43,6 +43,11 @@ export default (ctx, text, opts) => {
 
     ctx.textAlign = 'center';
     let centerX = opts.rect.x + opts.rect.width / 2;
-	for (let line of lines)
-		ctx.fillText(line.text.trim(), centerX, line.y);
+    if (lines.length > 1)
+        for (let line of lines)
+            ctx.fillText(line.text.trim(), centerX, line.y);
+    else {
+        ctx.textBaseline = 'middle';
+        ctx.fillText(lines[0].text.trim(), centerX, opts.rect.y + opts.rect.height / 2);
+    }
 };
