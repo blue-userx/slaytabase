@@ -195,7 +195,7 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
                     await (new Promise(res => setTimeout(res, 1000)));
                     await reply.edit({content: reply.content, embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
                 } else
-                    await reply.edit({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+                    await reply.edit({content: '', embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
             }
             delfiles(files);
         }
