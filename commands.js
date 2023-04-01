@@ -893,6 +893,20 @@ __List of memes:__
                 ['speechbubble.png', 0, 0, 200, 200]
             ],
         }),
+    },
+
+    prefixAndSuffix: {
+        'i know': [
+            ' got me',
+            async (msg, arg) => await meme(msg, arg, {
+                w: 680,
+                h: 651,
+                bg: 'gotme.png',
+                items: [0],
+                put: [[0, 429, 107, 223, 223]],
+                texts: [[0, 213, 418, 211, 92, 'black']],
+            }),
+        ]
     }
 };
 

@@ -93,6 +93,8 @@ async function embed(item, msg, embeds=[], encode=true) {
                 args = item.query.slice(0, item.query.length-item.name.length);
             else if (item.type == 'exact')
                 args = '';
+            else if (item.type == 'prefixAndSuffix')
+                args = item.query.slice(item.name.length, item.query.length-item.suffix.length);;
             args = args.trim().split(' ');
             let arg = new String(args.join(' '));
             arg.filter = item.query.filter;

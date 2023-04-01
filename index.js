@@ -110,6 +110,16 @@ async function getEmbeds(msg) {
                                 itemType: 'command',
                                 originalQuery,
                             }};
+                    for (let i in commands.prefixAndSuffix)
+                        if (query.startsWith(i) && query.endsWith(commands.prefixAndSuffix[i][0]))
+                            item = {item: {
+                                name: i,
+                                suffix: i,
+                                type: 'prefixAndSuffix',
+                                do: commands.prefixAndSuffix[i][1],
+                                itemType: 'command',
+                                originalQuery,
+                            }};
                 console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                 let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
                 if (genEmbed != null) {
