@@ -14,9 +14,11 @@ export default (ctx, text, opts) => {
             lines = [];
             let line = '';
     
+            let textWidth;
             for (let word of words) {
                 let linePlus = line + word + ' ';
-                if (ctx.measureText(linePlus).width > opts.rect.width) {
+                textWidth = ctx.measureText(linePlus).width;
+                if (textWidth > opts.rect.width) {
                     lines.push({text: line, y: y});
                     line = word + ' ';
                     y += fontSize * opts.lineHeight;
@@ -28,9 +30,9 @@ export default (ctx, text, opts) => {
             lines.push({ text: line, y: y});
     
             let max = opts.rect.y + opts.rect.height - fontSize*0.34;
-            if (y > max) {
+            if (y > max || textWidth > opts.rect.width) {
                 if (fontSize <= opts.minFontSize) break;
-                if (y - max > 3) {
+                if (y - max > 3 || textWidth - opts.rect.width > 3) {
                     opts.maxFontSize = fontSize-1;
                     carryOn = true;
                 }

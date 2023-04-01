@@ -645,6 +645,7 @@ __List of memes:__
 <[item] on a billboard>
 <[item] on a flying flag>
 <[item] on a circuit board>
+<i know [item] got me>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -903,7 +904,7 @@ __List of memes:__
                 h: 651,
                 bg: 'gotme.png',
                 items: [0],
-                put: [[0, 429, 107, 223, 223]],
+                put: [[0, 378, 107, 223, 223]],
                 texts: [[0, 213, 418, 211, 92, 'black']],
             }),
         ]
