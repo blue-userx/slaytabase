@@ -257,7 +257,7 @@ If the result isn\'t what you were looking for, you can also include the followi
 Anything highlighted in **bold** is a searchable keyword.
 
 If you edit or delete your message, I will update my reply to it, according to your changes.
-I'll spoiler tag my reply to any messages which start with "(s)".
+I'll spoiler tag my reply to any messages which include "(s)" anywhere.
 I'll ignore any messages which include the backtick (\`) symbol anywhere.
 
 <item> will search through items from only vanilla Slay the Spire and one mod specific to the server (can be set by server admins with **/setservermod**).
