@@ -190,7 +190,7 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
             let files = getFilesFromEmbeds(embeds)
             if (files.length > 10) await reply.edit({content: 'I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.', embeds: [], files: []});
             else {
-                if (msg.content.includes('(s)')) {
+                if (newMsg.content.includes('(s)')) {
                     await reply.edit({content: `||https://bit.ly/3aSgJDF||`, embeds: [], files: [], allowedMentions: {repliedUser: false}});
                     await (new Promise(res => setTimeout(res, 1000)));
                     await reply.edit({content: reply.content, embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
