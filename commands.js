@@ -1,8 +1,7 @@
 import { bot, search } from './index.js';
 import { User } from 'discord.js';
-import { createCanvas, createImageData, loadImage } from 'canvas';
-import drawText from 'node-canvas-text';
-import opentype from 'opentype.js';
+import { createCanvas, createImageData, loadImage, registerFont } from 'canvas';
+import drawMultilineText from './canvas-multiline-text.js';
 import { Gif } from 'make-a-gif'
 import { fmFunc } from 'calculator-by-str';
 import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
@@ -18,9 +17,9 @@ import gm from 'gm';
 import { execFile } from 'child_process';
 import optipng from 'optipng-bin';
 
+registerFont('./memetemplates/Kreon-Regular.ttf', {family: "Kreon"});
 const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
 const delSearchLimit = 25;
-const font = opentype.loadSync('./memetemplates/Kreon-Regular.ttf');
 const masks = {};
 ['a', 's', 'p'].forEach(i => masks[i] = loadImage(`./artpreview/${i}.png`));
 const shadows = {};
@@ -107,11 +106,19 @@ async function meme(msg, arg, options) {
                 for (let p of options.put)
                     ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
             if (options.hasOwnProperty('texts'))
-                for (let t of options.texts)
-                    drawText.default(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : (items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase()), font,
+                for (let t of options.texts) {
+                    ctx.fillStyle = t[5];
+                    drawMultilineText(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : (items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase()), {
+                        rect: {x: t[1], y: t[2], width: t[3], height: t[4]},
+                        lineHeight: 1.0,
+                        minFontSize: 1,
+                        maxFontSize: 500,
+                    });
+                    /*drawText.default(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : (items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase()), font,
                         {x: t[1], y: t[2], width: t[3], height: t[4]}, 
                         {minSize: 5, maxSize: 200, vAlign: 'center', hAlign: 'center', textFillStyle: t[5], fitMethod: 'box', drawRect: false}
-                    );
+                    );*/
+                }
             
             let buffer = canvas.toBuffer('image/png');
             let gif = new Gif(options.w, options.h, 500);
