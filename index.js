@@ -150,6 +150,7 @@ function getFilesFromEmbeds(embeds) {
 }
 
 const delfiles = files => files.forEach(file => fs.unlinkSync(file));
+const shouldSpoiler = msg => msg.content.startsWith('(s)') || msg.content.startsWith('"(s)') || msg.content.startsWith('||(s)') || msg.content.startsWith('||"(s)');
 
 bot.on('messageCreate', async msg => {
     let embeds = await getEmbeds(msg);
@@ -159,7 +160,14 @@ bot.on('messageCreate', async msg => {
     else {
         let files = getFilesFromEmbeds(embeds);
         if (files.length > 10) await msg.reply('I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.');
-        else await msg.reply({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+        else {
+            if (shouldSpoiler(msg)) {
+                let reply = await msg.reply({content: `||https://bit.ly/3aSgJDF||`, allowedMentions: {repliedUser: false}});
+                await (new Promise(res => setTimeout(res, 1000)));
+                await reply.edit({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+            } else
+                await msg.reply({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+        };
         delfiles(files);
     }
 });
@@ -182,7 +190,14 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
         else {
             let files = getFilesFromEmbeds(embeds)
             if (files.length > 10) await reply.edit({content: 'I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.', embeds: [], files: []});
-            else await reply.edit({content: ' ', embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+            else {
+                if (shouldSpoiler(newMsg)) {
+                    await reply.edit({content: `||https://bit.ly/3aSgJDF||`, embeds: [], files: [], allowedMentions: {repliedUser: false}});
+                    await (new Promise(res => setTimeout(res, 1000)));
+                    await reply.edit({content: reply.content, embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+                } else
+                    await reply.edit({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+            }
             delfiles(files);
         }
     } else

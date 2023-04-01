@@ -257,13 +257,13 @@ If the result isn\'t what you were looking for, you can also include the followi
 Anything highlighted in **bold** is a searchable keyword.
 
 If you edit or delete your message, I will update my reply to it, according to your changes.
+I'll spoiler tag my reply to any messages which start with "(s)".
+I'll ignore any messages which include the backtick (\`) symbol anywhere.
 
 <item> will search through items from only vanilla Slay the Spire and one mod specific to the server (can be set by server admins with **/setservermod**).
 You can replace <item> with [[item]] to search through ALL mods.
 You can use **/i** to find an item with autocomplete.
 You can use **/run** to run commands without anyone else seeing your result.
-
-I'll ignore any messages which include the backtick (\`) symbol anywhere.
 
 __Commands:__
 <[item name]> displays info about an item
@@ -276,7 +276,6 @@ __Commands:__
 - - r=2 - get second result
 <d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
 <del> deletes your last search in this channel
-<spoiler> adds spoiler tags to my last reply to you in this channel
 <?[search query]> shows the most likely results for a search query
 - page=? - specify result page
 <show10 [search query]> shows the full item details for the first 10 results for a search query
