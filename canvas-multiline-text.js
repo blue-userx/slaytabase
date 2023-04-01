@@ -30,7 +30,7 @@ export default (ctx, text, opts) => {
             lines.push({ text: line, y: y});
     
             let max = opts.rect.y + opts.rect.height - fontSize*0.34;
-            if (y > max || textWidth > opts.rect.width) {
+            if (y > max || words.length == 1 && textWidth > opts.rect.width + 3) {
                 if (fontSize <= opts.minFontSize) break;
                 if (y - max > 3 || textWidth - opts.rect.width > 3) {
                     opts.maxFontSize = fontSize-1;

@@ -646,6 +646,9 @@ __List of memes:__
 <[item] on a flying flag>
 <[item] on a circuit board>
 <i know [item] got me>
+<handshake [item]=[other item]=[thing they both do]>
+<i believe in [item] supremacy>
+<damn [item] got hands>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -765,6 +768,18 @@ __List of memes:__
                 [0, 278, 208, 47, 50, 'black'],
                 [0, 496, 208, 47, 50, 'black'],
             ],
+        }),
+        
+        'handshake ': async (msg, arg) => await meme(msg, arg, {
+            w: 697,
+            h: 500,
+            bg: 'handshake.png',
+            items: [0, 0, 1],
+            put: [
+                [0, 67, 234, 203, 220],
+                [1, 376, 180, 204, 205],
+            ],
+            texts: [[2, 123, 32, 293, 156, 'white']],
         }),
 
         'sb ': async (msg, _, __, oa) => {
@@ -907,7 +922,34 @@ __List of memes:__
                 put: [[0, 378, 107, 223, 223]],
                 texts: [[0, 213, 418, 211, 92, 'black']],
             }),
-        ]
+        ],
+
+        'i believe in ': [
+            ' supremacy',
+            async (msg, arg) => await meme(msg, arg, {
+                w: 502,
+                h: 497,
+                bg: 'supremacy.png',
+                items: [0],
+                put: [[0, 26, 272, 151, 192]],
+                texts: [[0, 54, 74, 408, 90, 'black']],
+            }),
+        ],
+
+        'damn ': [
+            ' got hands',
+            async (msg, arg) => await meme(msg, arg, {
+                w: 515,
+                h: 500,
+                bg: 'gothands.png',
+                items: [0],
+                put: [[0, 216, 53, 219, 205]],
+                texts: [
+                    [0, 375, 1, 137, 35, 'black'],
+                    [0, 246, 354, 91, 36, 'black']
+                ],
+            }),
+        ],
     }
 };
 

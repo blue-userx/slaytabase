@@ -114,7 +114,7 @@ async function getEmbeds(msg) {
                         if (query.startsWith(i) && query.endsWith(commands.prefixAndSuffix[i][0]))
                             item = {item: {
                                 name: i,
-                                suffix: i,
+                                suffix: commands.prefixAndSuffix[i][0],
                                 type: 'prefixAndSuffix',
                                 do: commands.prefixAndSuffix[i][1],
                                 itemType: 'command',
