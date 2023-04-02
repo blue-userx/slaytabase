@@ -47,8 +47,12 @@ function findAll(query) {
                     results = results.filter(r => r.item.hasOwnProperty('rarity') && r.item.rarity.toLowerCase() == val);
                     break;
 
+                case "in":
+                    results = results.filter(r => r.item.searchText.replaceAll(' ', '').includes(val));
+                    break;
+
                 case "ex":
-                    results = results.filter(r => !r.item.searchText.includes(val));
+                    results = results.filter(r => !r.item.searchText.replaceAll(' ', '').includes(val));
                     break;
                 
                 case "r":

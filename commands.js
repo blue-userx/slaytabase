@@ -272,7 +272,8 @@ __Commands:__
 - - type=? - specify item type
 - - mod=? - specify mod name
 - - rarity=? - specify item rarity
-- - ex=? - no results will include the specified word
+- - in=drawpile - results must include the phrase "draw pile" (ignores spaces)
+- - ex=? - no results will include the specified phrase
 - - r=2 - get second result
 <d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
 <del> deletes your last search in this channel
