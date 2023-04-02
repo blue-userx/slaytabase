@@ -12,7 +12,7 @@ const searchize = item => {
     return name.replaceAll(' ', '_').replaceAll('+', '').replaceAll('???', 'Unidentified');
 };
 
-let wikis = {'Slay the Spire': 'slay-the-spire', 'Downfall': 'sts-downfall'};
+let wikis = {'Slay the Spire': 'slay-the-spire'};
 let stars = n => Array(Number(n)).fill('\\⭐').join('');
 
 async function embed(item, msg, embeds=[], encode=true) {
