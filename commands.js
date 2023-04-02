@@ -280,6 +280,8 @@ __Commands:__
 <?[search query]> shows the most likely results for a search query
 - page=? - specify result page
 <show10 [search query]> shows the full item details for the first 10 results for a search query
+<exporttxt [search query]> exports the search details for the first 100 results for a search query formatted as a text file
+<exportjson [search query]> same as the above, but returns the raw json details
 <calc [equation]> https://www.npmjs.com/package/calculator-by-str
 <plot [equation] [args]> - type <plot help> for more information
 <workshop?[mod]> - searches for a slay the spire mod on the steam workshop
@@ -344,6 +346,29 @@ __Commands:__
             return {
                 title: `"${arg}" yields:`,
                 description: result.item.searchText.toLowerCase(),
+            };
+        },
+
+        'exportjson': async (msg, arg) => {
+            let results = fn.findAll(arg).slice(0, 100);
+            let filename = `search${String(Math.random()).slice(2)}.json`;
+            fs.writeFileSync(filename, JSON.stringify(results, null, 4));
+            return {
+                title: `JSON file for first 100 results of search for query "${arg}" attached.`,
+                files: [filename],
+            };
+        },
+
+        'exporttxt': async (msg, arg) => {
+            let results = (await Promise.all(fn.findAll(arg).slice(0, 100).map(async r => {
+                let e = await embed({...r.item, score: r.score, query: arg}, msg);
+                return `${e.data.title} / ${e.data.description}`.replace(r.item.description, r.item.originalDescription).replaceAll('\n\n', '\n').replaceAll(r.item.character[2], '⚪');
+            }))).join('\n\n');
+            let filename = `search${String(Math.random()).slice(2)}.txt`;
+            fs.writeFileSync(filename, results);
+            return {
+                title: `JSON file for first 100 results of search for query "${arg}" attached.`,
+                files: [filename],
             };
         },
 
