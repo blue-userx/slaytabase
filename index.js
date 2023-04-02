@@ -123,9 +123,9 @@ async function getEmbeds(msg) {
                 console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                 let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
                 if (genEmbed != null) {
-                    embeds.push(genEmbed)
+                    embeds.push(genEmbed);
                     if (genEmbed.data.hasOwnProperty('extra_embeds'))
-                        embeds = [...embeds, ...genEmbed.data.extra_embeds.map(e => EmbedBuilder.from(e.data))];
+                        embeds = [...embeds, ...genEmbed.data.extra_embeds.map(e => EmbedBuilder.from(e))];
                 }
             }
             for (let i of embeds) {
