@@ -319,15 +319,22 @@ __Commands:__
             };
         },
 
-        'show10 ': async (msg, arg, args) => {
-            let results = fn.findAll(arg);
-            results = results.slice(0, 10);
+        'show': async (msg, arg, args) => {
+            let num = parseInt(args[0]);
+            if (Number.isNaN(num) || num < 1 || num > 10)
+                return {title: 'number of items to show must be 1-10'};
+            let query = new String(args.slice(1).join(' '));
+            query.filter = arg.filter;
+            let results = fn.findAll(query);
+            results = results.slice(0, num);
             let embeds = await Promise.all(results.map(async (item, index) => {
-                let e = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, index != 0);
+                let e = await embed({...item.item, score: item.score, query}, undefined, undefined, index != 0);
                 e.data.description = `${String(Math.round((1 - item.score) * 100))}% sure / ${e.data.description}`;
                 e.data.footer = null;//{text: `${String(Math.round((1 - item.score) * 100))}% sure`};
                 return e;
             }));
+            if (embeds.length == 0)
+                return {title: 'no results'};
             return {...embeds[0].data, extra_embeds: embeds.slice(1)};
         },
 
