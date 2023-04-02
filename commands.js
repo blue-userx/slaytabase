@@ -367,7 +367,7 @@ __Commands:__
             let filename = `search${String(Math.random()).slice(2)}.txt`;
             fs.writeFileSync(filename, results);
             return {
-                title: `JSON file for first 100 results of search for query "${arg}" attached.`,
+                title: `Text file for first 100 results of search for query "${arg}" attached.`,
                 files: [filename],
             };
         },
