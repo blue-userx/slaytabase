@@ -140,10 +140,17 @@ async function getEmbeds(msg) {
     } else return null; //msg.reply("I can only take up to 10 queries at a time!").catch(e => {});
 }
 
-function getFilesFromEmbeds(embeds) {
+function getFilesFromEmbeds(embeds, spoiler=false) {
     let files = [];
     for (let embed of embeds) {
         files = [...files, ...(Array.isArray(embed.data.files) ? embed.data.files : [])];
+        if (spoiler)
+            files = files.map(file => {
+                let newName = `SPOILER_${file}`;
+                if (fs.existsSync(file))
+                    fs.renameSync(file, newName);
+                return newName;
+            });
         delete embed.files;
     }
     return files;
@@ -157,7 +164,7 @@ bot.on('messageCreate', async msg => {
         msg.reply('I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.').catch(e => {});
     else if (embeds === 0) return;
     else {
-        let files = getFilesFromEmbeds(embeds);
+        let files = getFilesFromEmbeds(embeds, msg.content.includes('(s)'));
         if (files.length > 10) await msg.reply('I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.');
         else {
             if (msg.content.includes('(s)')) {
@@ -187,7 +194,7 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
         else if (embeds === 0)
             reply.delete().catch(e => {});
         else {
-            let files = getFilesFromEmbeds(embeds)
+            let files = getFilesFromEmbeds(embeds, newMsg.content.includes('(s)'));
             if (files.length > 10) await reply.edit({content: 'I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.', embeds: [], files: []});
             else {
                 if (newMsg.content.includes('(s)')) {
