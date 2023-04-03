@@ -323,7 +323,12 @@ __Commands:__
 
         'show': async (msg, arg, args) => {
             let num = parseInt(args[0]);
-            if (Number.isNaN(num) || num < 1 || num > 10)
+            if (Number.isNaN(num)) {
+                let nArg = new String('show'+arg);
+                nArg.filter = arg.filter;
+                let item = fn.find(nArg);
+                return (await embed({...item.item, score: item.score, query: nArg}, undefined, undefined, false)).data;
+            } else if (num < 1 || num > 10)
                 return {title: 'number of items to show must be 1-10'};
             let query = new String(args.slice(1).join(' '));
             query.filter = arg.filter;
