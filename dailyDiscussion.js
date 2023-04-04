@@ -2,16 +2,14 @@ import { bot, search } from './index.js';
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, InteractionResponse } from 'discord.js';
 import commands from './commands.js';
 import embed from './embed.js';
-import fs from 'fs';
 import fn from './fn.js';
+import db from './models/index.js';
 
-const filename = './dailyDiscussion.json';
-
-var data = JSON.parse(fs.readFileSync(filename));
-const saveData = () => fs.writeFileSync(filename, JSON.stringify(data));
+const timeBetweenDiscussions = 24 * 60 * 60 * 1000;
+const itemsPerVote = 3;
 const itemTitle = item => `${item.name} (${item.itemType == 'boss' || item.character[0] == 'All' ? '' : item.character[0].replace('The ', '')+' '}${item.itemType})`;
 
-function start() {
+function checkForDiscussions() {
     startThread();
     setInterval(startThread, 60000);
 
@@ -19,12 +17,15 @@ function start() {
         try {
             if (interaction.isButton()) {
                 let num = Number(interaction.customId);
-                if (Number.isInteger(num) && num >= 0 && num < data.votes.length) {
-                    for (let i in data.votes)
-                        data.votes[i] = data.votes[i].filter(u => u != interaction.user.id);
-                    data.votes[num].push(interaction.user.id);
-                    saveData();
-                    await interaction.update({embeds: interaction.message.embeds.map((e, i) => ({...e.data, footer: data.votes[i].length > 0 ? {text: `${data.votes[i].length} vote${data.votes[i].length == 1 ? '' : 's'}`} : {}}))});
+                if (Number.isInteger(num) && num >= 0 && num < interaction.message.components[0].components.length) {
+                    let discussion = await db.DailyDiscussion.findOne({where: {channel: interaction.channelId}});
+                    if (discussion == null) return;
+                    await db.DiscussionVote.destroy({where: {user: interaction.user.id, discussion: discussion.id}});
+                    await db.DiscussionVote.create({user: interaction.user.id, discussion: discussion.id, vote: num});
+                    await interaction.update({embeds: await Promise.all(interaction.message.embeds.map(async (e, i) => {
+                        let votes = await db.DiscussionVote.count({where: {discussion: discussion.id, vote: i}});
+                        return {...e.data, footer: votes > 0 ? {text: `${votes} vote${votes == 1 ? '' : 's'}`} : {}};
+                    }))});
                 }
             }
         } catch(e) {
@@ -33,76 +34,124 @@ function start() {
     });
 };
 
+async function getItems(serverSettings, exclude=[]) {
+    await db.DailyDiscussion.destroy({where: {item: null}});
+    let previousItems = (await db.DailyDiscussion.findAll({
+        attributes: ['item'],
+        where: {guild: serverSettings.guild}
+    })).map(i => i.item);
+
+    let possibleItems = search._docs.filter(item =>
+        item.mod == serverSettings.mod
+        && ['card', 'relic', 'potion', 'event', 'boss'].includes(item.itemType)
+        && !['Event', 'Special'].includes(item.rarity)
+        && item.tier != 'Special'
+        && !['Strike', 'Defend'].includes(item.name)
+    )
+        .map(item => item.searchId)
+        .filter(item => !previousItems.includes(item) && !exclude.includes(item));
+    
+    let items = Array(Math.min(possibleItems.length, itemsPerVote)).fill().map(_ => possibleItems.splice(Math.floor(Math.random() * possibleItems.length), 1)[0]);
+
+    return {
+        items,
+        embeds: await Promise.all(items.map(i => embed({...fn.find(i).item, score: 1, query: fn.unPunctuate(i)}))),
+        components: items.length == 0 ? [] : [new ActionRowBuilder().addComponents(items.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(itemTitle(fn.find(v).item)).setStyle(ButtonStyle.Secondary)))],
+        discussionNum: previousItems.length+1,
+        total: previousItems.length+possibleItems.length+items.length+exclude.length,
+    };
+}
+
+async function firstDiscussion(serverSettings) {
+    let channel = await bot.channels.fetch(serverSettings.discussionChannel);
+    let thread = await channel.threads.create({name: `Daily Discussion Meta Thread`}).catch(e => {});
+    let { items, embeds, components, total } = await getItems(serverSettings);
+    if (thread == null) return;
+    let voteMessage = await thread.send({
+        content: items.length > 0 ? `Vote for the first Daily Discussion here! (${total} items to discuss in total)` : 'Error: couldn\'t find any valid items to discuss!',
+        embeds,
+        components,
+    });
+    voteMessage.pin().catch(e => {});
+            
+    db.DailyDiscussion.create({
+        guild: serverSettings.guild,
+        channel: thread.id,
+        item: null,
+        voteMessage: voteMessage.id,
+        voteOptions: JSON.stringify(items)
+    });
+};
+
 async function startThread() {
-    if (Date.now() >= data.next && data.options.length > 0) {
-        console.log('Daily Discussion time!');
-        let oldThread = await bot.channels.fetch(data.voteChannel);
+    for (let serverSettings of await db.ServerSettings.findAll()) {
+        let lastDiscussion = await db.DailyDiscussion.findOne({where: {guild: serverSettings.guild}, order: [['createdAt', 'DESC']]});
+        if (lastDiscussion != null && lastDiscussion.createdAt.getTime() + timeBetweenDiscussions < Date.now()) {
+            let oldThread = await bot.channels.fetch(lastDiscussion.channel);
+            let options = JSON.parse(lastDiscussion.voteOptions);
 
-        let winner = 0;
-        let longest = 0;
-        for (let i in data.votes) {
-            if (data.votes[i].length > longest || (data.votes[i].length == longest && Math.random() > 0.5)) {
-                winner = i;
-                longest = data.votes[i].length;
+            let votes = {};
+            let itemId;
+            if (options.length > 0) {
+                let winner = 0;
+                for (let i of (await db.DiscussionVote.findAll({attributes: ['vote'], where: {discussion: lastDiscussion.id}})).map(v => v.vote))
+                    votes[i] = votes.hasOwnProperty(i) ? votes[i] + 1 : 1;
+                if (Object.keys(votes).length > 0) {
+                    let highest = Object.keys(votes).filter(v => votes[v] == Math.max(...Object.values(votes)));
+                    winner = Number(highest[Math.floor(Math.random() * highest.length)]);
+                }
+        
+                itemId = options[winner];
+            } else {
+                let availableItems = (await getItems(serverSettings)).items;
+                if (availableItems.length == 0) continue;
+                itemId = availableItems[0];
             }
-        }
 
-        let itemId = data.options[winner];
-        let item = fn.find(itemId);
-        data.past.push(itemId);
-        let thread = await oldThread.parent.threads.create({name: `${itemTitle(item.item)} - Daily Discussion ${(new Date()).getDate()} ${(new Date()).toLocaleString('default', {month: 'long'}).slice(0, 3)}`})
-
-        let possibleItems = search._docs
-            .filter(item => item.mod == 'Downfall')
-            .filter(item => ['card', 'relic', 'potion', 'event', 'boss'].includes(item.itemType))
-            .filter(item => !['Event', 'Special'].includes(item.rarity))
-            .filter(item => item.tier != 'Special')
-            .filter(item => !['???', 'Strike', 'Defend'].includes(item.name))
-            .map(item => item.searchId)
-            .filter(item => !data.past.includes(item));
-
-        let voteItems = [];
-        for (let i = 0; i < Math.min(possibleItems.length, 3); i++) {
-            let possVote;
-            do {
-                possVote = possibleItems[Math.floor(Math.random() * possibleItems.length)];
-            } while (voteItems.includes(possVote))
-            voteItems.push(possVote);
-        }
-
-        let prevMessage = await thread.send(`Previous Daily Discussion: <#${oldThread.id}>`);
-        let voteMessage;
-        voteMessage = await thread.send({
-            content: voteItems.length > 0 ? `Vote for tomorrow's Daily Discussion here!` : 'No items left to vote on!',
-            embeds: await Promise.all(voteItems.map(v => embed({...fn.find(v).item, score: 1, query: fn.unPunctuate(v)}))),
-            components: [new ActionRowBuilder().addComponents(voteItems.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(itemTitle(fn.find(v).item)).setStyle(ButtonStyle.Secondary)))]
-        });
-        voteMessage.pin().catch(e => {});
-        
-        let itemMessage = await thread.send({
-            content: `Daily Discussion ${data.past.length}/${data.past.length+possibleItems.length}`,
-            embeds: [
-                await commands.prefix['i~'](null, itemId),
-                await embed({...item.item, score: item.score, query: itemId}),
-            ]
-        }).catch(e => {});
-        itemMessage.pin().catch(e => {});
-
-        if (data.hasOwnProperty('lastVote'))
-            await (await oldThread.messages.fetch(data.lastVote)).edit({
-                content: `Next Daily Discussion: <#${thread.id}>\n\n__Votes__:\n${data.options.map((e,i) => `${itemTitle(fn.find(e).item)}: ${data.votes[i].length}`).join('\n')}`,
-                embeds: [],
-                components: []
+            let item = fn.find(itemId);
+            let channel = await bot.channels.fetch(serverSettings.discussionChannel);
+            if (channel == null) continue;
+    
+            let { items, embeds, components, discussionNum, total } = await getItems(serverSettings, [itemId]);
+    
+            let thread = await oldThread.parent.threads.create({name: `${itemTitle(item.item)} - Daily Discussion ${(new Date()).getDate()} ${(new Date()).toLocaleString('default', {month: 'long'}).slice(0, 3)}`}).catch(e => {});
+            if (thread == null) continue;
+            await thread.send(`Previous Daily Discussion: <#${oldThread.id}>`);
+            let voteMessage = await thread.send({
+                content: items.length > 0 ? `Vote for tomorrow's Daily Discussion here!` : 'No items left to vote on!',
+                embeds,
+                components,
+            });
+            voteMessage.pin().catch(e => {});
+            
+            let daEmbed = await embed({...item.item, score: item.score, query: itemId});
+            let itemMessage = await thread.send({
+                content: `Daily Discussion ${discussionNum}/${total}`,
+                embeds: [
+                    EmbedBuilder.from({title: ' ', color: daEmbed.data.color, image: daEmbed.data.thumbnail}),
+                    daEmbed,
+                ]
             }).catch(e => {});
-        await oldThread.setArchived(true).catch(e => {});
-        
-        data.options = voteItems;
-        data.votes = voteItems.map(v => []);
-        data.next += 24 * 60 * 60 * 1000;
-        data.voteChannel = thread.id;
-        data.lastVote = (voteMessage == undefined ? prevMessage : voteMessage).id;
-        saveData();
+            itemMessage.pin().catch(e => {});
+    
+            if (lastDiscussion.voteMessage != null)
+                await (await oldThread.messages.fetch(lastDiscussion.voteMessage)).edit({
+                    content: `Next Daily Discussion: <#${thread.id}>\n\n__Votes__:\n${options.map((e,i) => `${itemTitle(fn.find(e).item)}: ${votes.hasOwnProperty(i) ? votes[i] : 0}`).join('\n')}`,
+                    embeds: [],
+                    components: []
+                }).catch(e => {});
+            await oldThread.setArchived(true).catch(e => {});
+            
+            db.DailyDiscussion.create({
+                guild: serverSettings.guild,
+                channel: thread.id,
+                item: itemId,
+                voteMessage: voteMessage.id,
+                voteOptions: JSON.stringify(items),
+            });
+        }
+
     }
 }
 
-export default start;
+export {checkForDiscussions, firstDiscussion};

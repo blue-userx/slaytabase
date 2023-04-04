@@ -3,7 +3,7 @@ export default async (sequelize, DataTypes) => {
   const {
     Model
   } = await import('sequelize');
-  class ServerSettings extends Model {
+  class DiscussionVote extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,13 +13,13 @@ export default async (sequelize, DataTypes) => {
       // define association here
     }
   }
-  ServerSettings.init({
-    guild: DataTypes.STRING,
-    mod: DataTypes.STRING,
-    discussionChannel: DataTypes.STRING
+  DiscussionVote.init({
+    discussion: DataTypes.INTEGER,
+    user: DataTypes.STRING,
+    vote: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'ServerSettings',
+    modelName: 'DiscussionVote',
   });
-  return ServerSettings;
+  return DiscussionVote;
 };

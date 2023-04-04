@@ -9,7 +9,7 @@ import keywordify from './keywords.js';
 import emojify from './emojis.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
-import startDailyDiscussion from './dailyDiscussion.js';
+import { checkForDiscussions, firstDiscussion } from './dailyDiscussion.js';
 import db from './models/index.js';
 import { match } from 'assert';
 
@@ -48,7 +48,7 @@ bot.once('ready', async () => {
         if (channel.hasOwnProperty('messages'))
             channel.messages.fetch().catch(e => {});
     });
-    startDailyDiscussion();
+    checkForDiscussions();
 
     await bot.application?.commands.set([
         new SlashCommandBuilder()
@@ -67,6 +67,13 @@ bot.once('ready', async () => {
                 .setDescription('Mod name')
                 .setRequired(true)
                 .setAutocomplete(true)),
+        new SlashCommandBuilder()
+            .setName('setdiscussionchannel')
+            .setDescription('Bot will create a thread to discuss a random item from the server\'s main mod every day.')
+            .addBooleanOption(option =>
+                option.setName('on')
+                .setDescription('Enable or disable Daily Discussions in this server?')
+                .setRequired(true)),
         new SlashCommandBuilder()
             .setName('run')
             .setDescription('Simulates you sending a message and sends the result in a message only you can see.')
@@ -271,6 +278,23 @@ bot.on('interactionCreate', async interaction => {
                         await interaction.editReply(`Set this DM channel's main mod to \`${mod}\`.`);
                     }
                     break;
+
+                case 'setdiscussionchannel':
+                    await interaction.deferReply();
+                    let on = interaction.options.getBoolean('on');
+                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
+                    let serverSettings = await db.ServerSettings.findOne({where: {guild: interaction.guildId}});
+                    if (!interaction.inGuild()) return interaction.editReply('this command is server only');
+                    if (serverSettings == null) return interaction.editReply('You must set the mod to be discussed first! (use /setservermod)');
+                    if (on) {
+                        await serverSettings.update({discussionChannel: interaction.channelId});
+                        await firstDiscussion(serverSettings);
+                        await interaction.editReply(`Daily discussions for the mod \`${serverSettings.mod}\` have been set up in this channel.\nI\'ve created a meta thread for discussing these daily discussions and for voting on what the first item discussed should be.\nThe first discussion will start later today.`);
+                    } else {
+                        await serverSettings.update({discussionChannel: null});
+                        await interaction.editReply('Disabled daily discussions for this server.');
+                    }
+                break
             }
         } else if (interaction.isAutocomplete()) {
             switch (interaction.commandName) {
