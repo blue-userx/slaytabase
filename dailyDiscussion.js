@@ -7,6 +7,7 @@ import db from './models/index.js';
 
 const timeBetweenDiscussions = 24 * 60 * 60 * 1000;
 const itemsPerVote = 3;
+
 const itemTitle = item => `${item.name} (${item.itemType == 'boss' || item.character[0] == 'All' ? '' : item.character[0].replace('The ', '')+' '}${item.itemType})`;
 
 function checkForDiscussions() {
