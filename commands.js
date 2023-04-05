@@ -17,6 +17,7 @@ import gm from 'gm';
 import { execFile } from 'child_process';
 import optipng from 'optipng-bin';
 import owofify from 'owoifyx';
+import petPetGif from 'pet-pet-gif';
 const owoify = owofify.default;
 
 registerFont('./memetemplates/Kreon-Regular.ttf', {family: "Kreon"});
@@ -688,6 +689,7 @@ __List of memes:__
 <19 dollar [fortnite card]>
 <distracted [gf]=[distraction]=[bf]>
 <[item] my beloved>
+<pet the [item]>
 <why cant i hold all these [item]=[holder]>
 <[item] speech bubble>
 <the floor here is made out of [item]>
@@ -834,6 +836,22 @@ __List of memes:__
             ],
             texts: [[2, 123, 32, 293, 156, 'white']],
         }),
+
+        'pet the ': async (msg, arg) => {
+            let items = await getMemeItems(arg, {items: [0]}, msg);
+            if (!Array.isArray(items))
+                return items;
+            console.log(items[0].image);
+            let imgUrl = items[0].image.toDataURL ? items[0].image.toDataURL('image/png') : items[0].url;
+            let gif = await petPetGif(imgUrl);
+            let filename = `petpet${String(Math.random()).slice(2)}.gif`;
+            fs.writeFileSync(filename, gif);
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename]
+            };
+        },
 
         'sb ': async (msg, _, __, oa) => {
             let numArgs = oa.split('=').length;
