@@ -284,7 +284,7 @@ __Commands:__
 <exportjson [search query]> same as the above, but returns the raw json details
 <calc [equation]> https://www.npmjs.com/package/calculator-by-str
 <plot [equation] [args]> - type <plot help> for more information
-<workshop?[mod]> - searches for a slay the spire mod on the steam workshop
+<ws?[mod]> - searches for a slay the spire mod on the steam workshop
 <choose [word1 word2 word3...]> chooses one of the specified words for you at random
 <rps [rock|paper|scissors]> lets you play a game of rock paper scissors with me!
 <memes> help with the bot's meme generator
@@ -386,6 +386,10 @@ __Commands:__
                 image: itemEmbed.data.thumbnail,
                 color: itemEmbed.data.color,
             };
+        },
+
+        'img ': async (msg, arg) => {
+            return await commands.prefix['i~'](msg, arg);
         },
 
         't~': async (msg, arg) => {
@@ -893,7 +897,7 @@ __List of memes:__
             };
         },
 
-        'workshop?': async (msg, arg) => {
+        'ws?': async (msg, arg) => {
             let response = await fetch(`https://steamcommunity.com/workshop/browse/?appid=646570&searchtext=${arg.replaceAll(' ', '+')}`);
             let body = await response.text();
             if (body.includes('class="ugc"')) {
@@ -905,12 +909,42 @@ __List of memes:__
                 let url = link.slice(link.indexOf('"')+1,link.indexOf('" '));
                 let imgUrl = img.slice(img.indexOf('src="')+5,img.indexOf('">'));
                 let name = title.slice(title.indexOf('s">')+3,title.indexOf('</div>'));
+                let description;
+                let author = {};
+                let response2 = await fetch(url);
+                let body2 = await response2.text();
+                if (body2.includes('class="stats_table"')) {
+                    body2 = body2.split('\n');
+                    let authorLine = body2.find(e => e.includes('s Workshop'));
+                    author.name = `${authorLine.slice(authorLine.indexOf('0">')+3, authorLine.indexOf('s Workshop')-1)}'s Workshop`;
+                    author.url = authorLine.slice(authorLine.indexOf("href=")+6, authorLine.indexOf('0">')+1);
+                    let response3 = await fetch(author.url);
+                    let body3 = await response3.text();
+                    if (body3.includes('playerAvatar medium')) {
+                        body3 = body3.split('\n');
+                        let avatarIndex = body3.findIndex(e => e.includes('playerAvatar medium'));
+                        let avatarLine = body3[avatarIndex+(body3[avatarIndex+1].includes('<div') ? 4 : 1)];
+                        author.iconURL = avatarLine.slice(avatarLine.indexOf('src=')+5, avatarLine.indexOf('" />'));
+                    }
+                    let tableIndex = body2.findIndex(e => e.includes('class="stats_table"'));
+                    let subs = body2[tableIndex+6].slice(body2[tableIndex+6].indexOf('<td>')+4, body2[tableIndex+6].indexOf('</td>'));
+                    let detailsIndex = body2.findIndex(e => e.includes('class="detailsStatsContainerRight"'));
+                    let date = body2[detailsIndex+2].slice(body2[detailsIndex+2].indexOf('">')+2, body2[detailsIndex+2].indexOf(' @ '));
+                    description = `${subs} Subscribers\nPosted ${date}`;
+                }
                 return {
                     title: name,
                     url,
-                    image: {url: imgUrl},
+                    author,
+                    description,
+                    color: 1779768,
+                    thumbnail: {url: imgUrl},
                 };
             } else return {title: `no mod found under ${arg}`};
+        },
+
+        'workshop?': async (msg, arg) => {
+            return await commands.prefix['ws?'](msg, arg);
         },
 
         'forcestop': async (msg, arg) => {

@@ -1374,11 +1374,6 @@ export default {
                     },
         
                     {
-                        "where": {"name": "Supply Scroll"},
-                        "to": {"description": desc => desc+"\nSupply Scroll (0 [E] card): Gain a random assortment of 4 (6) Shivs and Wards. Exhaust."}
-                    },
-        
-                    {
                         "where": {"name": "Knowing Skull"},
                         "to": {"description": "At the start of each combat, add a **Knowing Skull** to your hand."}
                     },
