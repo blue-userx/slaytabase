@@ -16,6 +16,8 @@ import FormData from 'form-data';
 import gm from 'gm';
 import { execFile } from 'child_process';
 import optipng from 'optipng-bin';
+import owofify from 'owoifyx';
+const owoify = owofify.default;
 
 registerFont('./memetemplates/Kreon-Regular.ttf', {family: "Kreon"});
 const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
@@ -436,6 +438,16 @@ __Commands:__
                 footer: null,
                 description: null,
             };
+        },
+
+        'owo~': async (msg, arg) => {
+            let item = fn.find(arg);
+            let data = (await embed({...item.item, score: item.score, query: arg}, undefined, undefined, false)).data;
+            data.title = owoify(data.title);
+            data.description = owoify(data.description)
+            if (data.footer)
+                data.footer.text = owoify(data.footer.text)
+            return data;
         },
 
         'choose ': async (msg, arg, args) => {
