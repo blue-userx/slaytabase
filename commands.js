@@ -17,8 +17,9 @@ import gm from 'gm';
 import { execFile } from 'child_process';
 import optipng from 'optipng-bin';
 import owofify from 'owoifyx';
-import petPetGif from 'pet-pet-gif';
 const owoify = owofify.default;
+import petPetGif from 'pet-pet-gif';
+import canvasGif from 'canvas-gif';
 
 registerFont('./memetemplates/Kreon-Regular.ttf', {family: "Kreon"});
 const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
@@ -704,6 +705,9 @@ __List of memes:__
 <handshake [item]=[other item]=[thing they both do]>
 <i believe in [item] supremacy>
 <damn [item] got hands>
+<spinning [item]>
+<rotating [item]>
+<squashing [item]>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -846,6 +850,80 @@ __List of memes:__
             let gif = await petPetGif(imgUrl);
             let filename = `petpet${String(Math.random()).slice(2)}.gif`;
             fs.writeFileSync(filename, gif);
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename]
+            };
+        },
+
+        'spinning ': async (msg, arg) => {
+            let items = await getMemeItems(arg, {items: [0]}, msg);
+            if (!Array.isArray(items))
+                return items;
+            let buffer = await canvasGif(
+                './memetemplates/empty60frames.gif',
+                (ctx, w, h, totalFrames, currentFrame) => {
+                    let progress = currentFrame/totalFrames*4;
+                    let phase = Math.floor(progress);
+                    progress %= 1;
+                    progress = progress < 0.5 ? 2 * progress * progress : 1 - (-2 * progress + 2) ** 2 / 2
+                    if (phase > 1) {
+                        ctx.translate(w, 0);
+                        ctx.scale(-1, 1);
+                    }
+                    if (phase%2==0)
+                        ctx.drawImage(items[0].image, w/2*(1-progress), 0, w*progress, h);
+                    else
+                        ctx.drawImage(items[0].image, w/2*(progress), 0, w*(1-progress), h);
+                },
+            );
+            let filename = `petpet${String(Math.random()).slice(2)}.gif`;
+            fs.writeFileSync(filename, buffer);
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename]
+            };
+        },
+
+        'rotating ': async (msg, arg) => {
+            let items = await getMemeItems(arg, {items: [0]}, msg);
+            if (!Array.isArray(items))
+                return items;
+            let buffer = await canvasGif(
+                './memetemplates/empty60frames.gif',
+                (ctx, w, h, totalFrames, currentFrame) => {
+                    let progress = currentFrame/totalFrames;
+                    ctx.translate(w/2, h/2);
+                    ctx.rotate(progress * Math.PI * 2);
+                    ctx.drawImage(items[0].image, -w/2, -h/2, w, h);
+                },
+            );
+            let filename = `petpet${String(Math.random()).slice(2)}.gif`;
+            fs.writeFileSync(filename, buffer);
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename]
+            };
+        },
+
+        'squashing ': async (msg, arg) => {
+            let items = await getMemeItems(arg, {items: [0]}, msg);
+            if (!Array.isArray(items))
+                return items;
+            let buffer = await canvasGif(
+                './memetemplates/empty60frames.gif',
+                (ctx, w, h, totalFrames, currentFrame) => {
+                    let progress = currentFrame/totalFrames;
+                    let imgW = w*(0.75+Math.sin(progress*Math.PI*2)*0.25);
+                    let imgH = h*(0.75+Math.cos(progress*Math.PI*2)*0.25);
+                    ctx.drawImage(items[0].image, (w-imgW)/2, h-imgH, imgW, imgH);
+                },
+            );
+            let filename = `petpet${String(Math.random()).slice(2)}.gif`;
+            fs.writeFileSync(filename, buffer);
             return {
                 title: ' ',
                 image: {url: 'attachment://'+filename},
