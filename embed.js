@@ -54,7 +54,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             break;
             
         case 'creature':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.type == 'Player' ? item.name.replace('the ', '').replace('The ', '') : item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`};
             e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP / ${item.mod}`;
             break;
 

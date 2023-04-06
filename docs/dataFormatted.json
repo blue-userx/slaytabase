@@ -51019,7 +51019,7 @@
             "name": "Supply Scroll",
             "tier": "Rare",
             "pool": "",
-            "description": "At the start of your 3rd turn, gain [E] and draw 2 cards.\nSupply Scroll (0 [E] card): Gain a random assortment of 4 (6) Shivs and Wards. Exhaust.",
+            "description": "At the start of your 3rd turn, gain [E] and draw 2 cards.",
             "flavorText": "A surprisingly detailed inventory of the mob's various bits and bobbles.",
             "mod": "Downfall"
         },
@@ -65127,6 +65127,11 @@
         {
             "name": "Regen",
             "description": "Regen heals HP at the end of your turn. Each turn, Regen is reduced by 1.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "name": "Retain",
+            "description": "Retained cards are not discarded at the end of turn.",
             "mod": "Slay the Spire"
         },
         {
