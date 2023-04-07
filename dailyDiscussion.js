@@ -5,7 +5,7 @@ import embed from './embed.js';
 import fn from './fn.js';
 import db from './models/index.js';
 
-const timeBetweenDiscussions = 24 * 60 * 60 * 1000;
+const timeBetweenDiscussions = 1//24 * 60 * 60 * 1000;
 const itemsPerVote = 3;
 
 const itemTitle = item => `${item.name} (${item.itemType == 'boss' || item.character[0] == 'All' ? '' : item.character[0].replace('The ', '')+' '}${item.itemType})`;
@@ -43,7 +43,7 @@ async function getItems(serverSettings, exclude=[]) {
     })).map(i => i.item);
 
     let possibleItems = search._docs.filter(item =>
-        item.mod == serverSettings.mod
+        JSON.parse(serverSettings.mod).includes(item.mod)
         && ['card', 'relic', 'potion', 'event', 'boss'].includes(item.itemType)
         && !['Event', 'Special'].includes(item.rarity)
         && item.tier != 'Special'
@@ -143,13 +143,18 @@ async function startThread() {
                 }).catch(e => {});
             await oldThread.setArchived(true).catch(e => {});
             
-            db.DailyDiscussion.create({
+            await db.DailyDiscussion.create({
                 guild: serverSettings.guild,
                 channel: thread.id,
                 item: itemId,
                 voteMessage: voteMessage.id,
                 voteOptions: JSON.stringify(items),
             });
+
+            let silentAddMessage = await thread.send('Adding subscribed users...');
+            for (let subscriber of await db.Subscription.findAll({where: {guild: serverSettings.guild}}))
+                await silentAddMessage.edit(`Adding subscribed users...\n<@${subscriber.user}>`);
+            await silentAddMessage.delete();
         }
 
     }

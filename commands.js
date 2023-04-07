@@ -264,7 +264,7 @@ If you edit or delete your message, I will update my reply to it, according to y
 I'll spoiler tag my reply to any messages which include "(s)" anywhere.
 I'll ignore any messages which include the backtick (\`) symbol anywhere.
 
-<item> will search through items from only vanilla Slay the Spire and one mod specific to the server (can be set by server admins with **/setservermod**).
+<item> will search through items from only vanilla Slay the Spire and mods specific to the server (can be set by server admins with **/addservermod**).
 You can replace <item> with [[item]] to search through ALL mods.
 You can use **/i** to find an item with autocomplete.
 You can use **/run** to run commands without anyone else seeing your result.

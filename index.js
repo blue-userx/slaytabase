@@ -60,8 +60,16 @@ bot.once('ready', async () => {
                 .setRequired(true)
                 .setAutocomplete(true)),
         new SlashCommandBuilder()
-            .setName('setservermod')
-            .setDescription('Sets the main mod of this server or DM channel.')
+            .setName('addservermod')
+            .setDescription('Adds a main mod to this server or DM channel.')
+            .addStringOption(option =>
+                option.setName('mod')
+                .setDescription('Mod name')
+                .setRequired(true)
+                .setAutocomplete(true)),
+        new SlashCommandBuilder()
+            .setName('removeservermod')
+            .setDescription('Removes a main mod from this server or DM channel.')
             .addStringOption(option =>
                 option.setName('mod')
                 .setDescription('Mod name')
@@ -73,6 +81,13 @@ bot.once('ready', async () => {
             .addBooleanOption(option =>
                 option.setName('on')
                 .setDescription('Enable or disable Daily Discussions in this server?')
+                .setRequired(true)),
+        new SlashCommandBuilder()
+            .setName('subscribe')
+            .setDescription('When subscribed, I will automatically add you to future daily discussions in this server.')
+            .addBooleanOption(option =>
+                option.setName('on')
+                .setDescription('Should I automatically add you to daily discussions?')
                 .setRequired(true)),
         new SlashCommandBuilder()
             .setName('run')
@@ -100,7 +115,7 @@ async function getEmbeds(msg) {
         if (queries.length > 0) {
             let embeds = [];
             let server = await db.ServerSettings.findOne({where: {guild: msg.inGuild() ? msg.guildId : msg.channelId}});
-            let filter = server == null ? item => 'Slay the Spire' == item.item.mod : item => ['Slay the Spire', server.mod].includes(item.item.mod);
+            let filter = server == null ? item => 'Slay the Spire' == item.item.mod : item => ['Slay the Spire', ...JSON.parse(server.mod)].includes(item.item.mod);
             for (let i = 0; i < queries.length; i++) {
                 let originalQuery = queries[i];
                 let query = new String(fn.unPunctuate(originalQuery));
@@ -260,23 +275,44 @@ bot.on('interactionCreate', async interaction => {
                     delfiles(files);
                     break;
 
-                case 'setservermod':
+                case 'addservermod':
                     await interaction.deferReply();
-                    let mod = interaction.options.getString('mod')
+                    let mod = interaction.options.getString('mod');
                     if (interaction.inGuild()) {
                         if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
-                        if (await db.ServerSettings.count({where: {guild: interaction.guildId}}) == 0)
-                            await db.ServerSettings.create({guild: interaction.guildId, mod});
+                        let settings = await db.ServerSettings.findOne({where: {guild: interaction.guildId}});
+                        if (settings == null)
+                            await db.ServerSettings.create({guild: interaction.guildId, mod: JSON.stringify([mod])});
                         else
-                            await db.ServerSettings.update({mod}, {where: {guild: interaction.guildId}});
-                        await interaction.editReply(`Set this server's main mod to \`${mod}\`.`);
+                            await db.ServerSettings.update({mod: JSON.stringify([...JSON.parse(settings.mod), mod])}, {where: {guild: interaction.guildId}});
+                        await interaction.editReply(`Added \`${mod}\` to this server's main mods.`);
                     } else {
-                        if (await db.ServerSettings.count({where: {guild: interaction.channelId}}) == 0)
-                            await db.ServerSettings.create({guild: interaction.channelId, mod});
+                        let settings = await db.ServerSettings.findOne({where: {guild: interaction.channelId}});
+                        if (settings == null)
+                            await db.ServerSettings.create({guild: interaction.channelId, mod: JSON.stringify([mod])});
                         else
-                            await db.ServerSettings.update({mod}, {where: {guild: interaction.channelId}});
-                        await interaction.editReply(`Set this DM channel's main mod to \`${mod}\`.`);
+                            await db.ServerSettings.update({mod: JSON.stringify([...JSON.parse(settings.mod), mod])}, {where: {guild: interaction.channelId}});
+                        await interaction.editReply(`Added \`${mod}\` to this DM channel's main mods.`);
                     }
+                    break;
+                
+                case 'removeservermod':
+                    await interaction.deferReply();
+                    let removeMod = interaction.options.getString('mod');
+                    let settings;
+                    if (interaction.inGuild()) {
+                        if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id)))
+                            return interaction.editReply('You must have the Manage Server permission to use this command.');
+                        settings = await db.ServerSettings.findOne({where: {guild: interaction.guildId}});
+                    } else
+                        settings = await db.ServerSettings.findOne({where: {guild: interaction.channelId}});
+                    if (settings == null)
+                        return interaction.editReply('Can\'t remove a server mod if you haven\'t set any yet!');
+                    await settings.update({mod: JSON.stringify(JSON.parse(settings.mod).filter(m => m != removeMod))});
+                    if (interaction.inGuild())
+                        await interaction.editReply(`Removed \`${removeMod}\` from this server\'s main mods.`);
+                    else
+                        await interaction.editReply(`Removed \`${removeMod}\` from this DM channel's main mods.`);
                     break;
 
                 case 'setdiscussionchannel':
@@ -285,16 +321,32 @@ bot.on('interactionCreate', async interaction => {
                     if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
                     let serverSettings = await db.ServerSettings.findOne({where: {guild: interaction.guildId}});
                     if (!interaction.inGuild()) return interaction.editReply('this command is server only');
-                    if (serverSettings == null) return interaction.editReply('You must set the mod to be discussed first! (use /setservermod)');
+                    if (serverSettings == null) return interaction.editReply('You must set the mods to be discussed first! (use /addservermod)');
                     if (on) {
                         await serverSettings.update({discussionChannel: interaction.channelId});
                         await firstDiscussion(serverSettings);
-                        await interaction.editReply(`Daily discussions for the mod \`${serverSettings.mod}\` have been set up in this channel.\nI\'ve created a meta thread for discussing these daily discussions and for voting on what the first item discussed should be.\nThe first discussion will start later today.`);
+                        await interaction.editReply(`Daily discussions for the mods \`${serverSettings.mod}\` have been set up in this channel.\nI\'ve created a meta thread for discussing these daily discussions and for voting on what the first item discussed should be.\nThe first discussion will start later today.`);
                     } else {
                         await serverSettings.update({discussionChannel: null});
                         await interaction.editReply('Disabled daily discussions for this server.');
                     }
-                break
+                    break;
+
+                case 'subscribe':
+                    await interaction.deferReply({ephemeral: true});
+                    if (!interaction.inGuild())
+                        return interaction.editReply('This command must be used in a server.');
+                    let subscribed = interaction.options.getBoolean('on');
+                    let queryInfo = {where: {user: interaction.user.id, guild: interaction.guildId}};
+                    if (subscribed) {
+                        if (await db.Subscription.count(queryInfo) <= 0)
+                            await db.Subscription.create(queryInfo.where);
+                        await interaction.editReply('You\'re now subscribed to daily discussions in this server.');
+                    } else {
+                        db.Subscription.destroy(queryInfo);
+                        await interaction.editReply('You\'re no longer subscribed to daily discussions in this server.');
+                    }
+                    break;
             }
         } else if (interaction.isAutocomplete()) {
             switch (interaction.commandName) {
@@ -305,8 +357,15 @@ bot.on('interactionCreate', async interaction => {
                     })));
                     break;
 
-                case 'setservermod':
+                case 'addservermod':
                     await interaction.respond(data.mods.filter(mod => mod.name.toLowerCase().includes(interaction.options.getFocused().toLowerCase())).slice(0,25).map(i => ({name: i.name,value: i.name})));
+                    break;
+
+                case 'removeservermod':
+                    let settings  = await db.ServerSettings.findOne({where: {guild: interaction.inGuild() ? interaction.guildId : interaction.channelId}});
+                    if (settings == null)
+                        return interaction.respond([]);
+                    await interaction.respond(JSON.parse(settings.mod).filter(m => m.toLowerCase().includes(interaction.options.getFocused().toLowerCase())).slice(0,25).map(i => ({name: i, value: i})));
                     break;
             }
         } else if (interaction.isMessageContextMenuCommand()) {
