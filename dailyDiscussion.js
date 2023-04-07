@@ -5,7 +5,7 @@ import embed from './embed.js';
 import fn from './fn.js';
 import db from './models/index.js';
 
-const timeBetweenDiscussions = 1//24 * 60 * 60 * 1000;
+const timeBetweenDiscussions = 24 * 60 * 60 * 1000;
 const itemsPerVote = 3;
 
 const itemTitle = item => `${item.name} (${item.itemType == 'boss' || item.character[0] == 'All' ? '' : item.character[0].replace('The ', '')+' '}${item.itemType})`;
