@@ -82,6 +82,7 @@ function find(query) {
     query = query.map(a => a.endsWith('?right') ? a.replace('?right', '') : a);
     query = new String(query.join(' '));
     query.filter = filter;
+    let actualSearch = query.split(' ').filter(w => !w.includes('=')).join(' ');
     let results = findAll(query);
     let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
     if (item == undefined)
@@ -89,8 +90,8 @@ function find(query) {
             itemType: 'fail',
             name: 'No results',
         }};
-    else if (item.item.searchName != query) {
-        let exactMatch = results.find(e => e.item.searchName == query || e.item.searchId == query);
+    else if (item.item.searchName != actualSearch) {
+        let exactMatch = results.find(e => e.item.searchName == actualSearch || e.item.searchId == actualSearch);
         if (exactMatch != undefined)
             item = exactMatch;
     }
