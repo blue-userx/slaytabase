@@ -200,7 +200,8 @@ bot.on('messageCreate', async msg => {
     }
 });
 
-bot.on('messageUpdate', async (oldMsg, newMsg) => {
+let onEdit = async (oldMsg, newMsg) => {
+    let contentBefore = newMsg.content;
     let messages;
     try {
         messages = await newMsg.channel.messages.fetch();
@@ -210,6 +211,7 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
     let reply = messages.find(i => i.author.id == bot.user.id && i.reference != null && i.reference.messageId == oldMsg.id);
     if (reply != undefined) {
         if (oldMsg.attachments.size > newMsg.attachments.size) return;
+        newMsg.content = contentBefore;
         let embeds = await getEmbeds(newMsg);
         if (embeds === null)
             reply.edit({content: 'I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.', embeds: []}).catch(e => {});
@@ -230,7 +232,8 @@ bot.on('messageUpdate', async (oldMsg, newMsg) => {
         }
     } else
         bot.emit('messageCreate', newMsg);
-});
+}
+bot.on('messageUpdate', onEdit);
 
 bot.on('messageDelete', async msg => {
     let messages = await msg.channel.messages.fetch();
@@ -258,6 +261,17 @@ bot.on('interactionCreate', async interaction => {
                 case 'run':
                     await interaction.deferReply({ephemeral: true});
                     interaction.content = interaction.options.getString('contents');
+                    if (interaction.content.startsWith('devedit') && cfg.overriders.includes(interaction.user.id)) {
+                        let args = interaction.content.split(' ');
+                        let msg;
+                        if (args.length > 1)
+                            msg = await interaction.channel.messages.fetch(args[1]);
+                        if (msg) {
+                            msg.content = interaction.content;
+                            await onEdit(msg, msg);
+                        }
+                        return await interaction.deleteReply();
+                    }
                     let attachment = interaction.options.getAttachment('attachment');
                     if (attachment != null)
                         interaction.attachments = new Collection([[attachment.id, attachment]]);
