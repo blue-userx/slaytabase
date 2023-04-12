@@ -47,7 +47,7 @@ async function getItems(serverSettings, exclude=[]) {
         && ['card', 'relic', 'potion', 'event', 'boss'].includes(item.itemType)
         && !['Event', 'Special'].includes(item.rarity)
         && item.tier != 'Special'
-        && !['Strike', 'Defend'].includes(item.name)
+        && !['???', 'Strike', 'Defend'].includes(item.name)
     )
         .map(item => item.searchId)
         .filter(item => !previousItems.includes(item) && !exclude.includes(item));
