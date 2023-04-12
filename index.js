@@ -509,6 +509,7 @@ async function main() {
                     'id',
                     'pack',
                     'author',
+                    'cards',
                     'tags'
                 ].map(key => {
                     if (Array.isArray(key)) {
@@ -520,6 +521,7 @@ async function main() {
                         if (Array.isArray(look)) return look.join(' ');
                         return String(look);
                     } else if (newItem.hasOwnProperty(key)) {
+                        if (newItem.itemType == 'boss' && key == 'cards') return '';
                         if (Array.isArray(newItem[key])) return newItem[key].join(' ');
                         return String(newItem[key]);
                     }
