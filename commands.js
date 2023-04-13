@@ -649,7 +649,6 @@ __Commands:__
                     return {title: "resolution must be in the following format: 1280x720 (where 1280 is the width and 720 is the height)"}
                 let w = parseInt(args[0].split('x')[0]);
                 let h = parseInt(args[0].split('x')[1]);
-                console.log(w, h)
                 if (w > 4000 || h > 4000 || w <= 0 || h <= 0 || isNaN(w) || isNaN(h))
                     return {title: "please make each dimension at least 1 and at most 4000"};
                 let n = args.length > 1 ? parseInt(args[1]) : 0;
@@ -848,7 +847,6 @@ __List of memes:__
             let items = await getMemeItems(arg, {items: [0]}, msg);
             if (!Array.isArray(items))
                 return items;
-            console.log(items[0].image);
             let imgUrl = items[0].image.toDataURL ? items[0].image.toDataURL('image/png') : items[0].url;
             let gif = await petPetGif(imgUrl);
             let filename = `petpet${String(Math.random()).slice(2)}.gif`;

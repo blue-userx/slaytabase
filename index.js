@@ -12,6 +12,7 @@ import fn from './fn.js';
 import { checkForDiscussions, firstDiscussion } from './dailyDiscussion.js';
 import db from './models/index.js';
 import { match } from 'assert';
+import express from 'express';
 
 const bot = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.DirectMessages], partials: [Partials.Channel] });
 
@@ -33,7 +34,23 @@ String.prototype.exactMatch = function compare(str) {
     return this == str;
 }
 
-export {bot, search};
+const oldRedirects = JSON.parse(fs.readFileSync('./oldredirects.json'));
+var website = express();
+website.use('/', (req, res, next) => {
+    if (req.originalUrl.includes('cards/') || req.originalUrl.includes('potions/')) {
+        let imageUrl;
+        if (req.originalUrl.includes('cards/'))
+            imageUrl = req.originalUrl.slice(req.originalUrl.indexOf('cards/'))
+        if (req.originalUrl.includes('potions/'))
+            imageUrl = req.originalUrl.slice(req.originalUrl.indexOf('potions/'))
+        if (oldRedirects[0].includes(imageUrl))
+            return res.redirect(req.originalUrl.replace(imageUrl, oldRedirects[1][oldRedirects[0].indexOf(imageUrl)]));
+    }
+    next();
+});
+website.use('/', express.static('./docs'));
+
+export {bot, search, website};
 
 bot.once('ready', async () => {
     bot.user.setActivity('Slay the Spire | <help>');
@@ -529,6 +546,7 @@ async function main() {
         }
     console.log('parsed data, connecting to discord...');
     bot.login(cfg.token);
+    website.listen(cfg.websitePort, () => console.log(`Site running! Test at http://localhost:${cfg.websitePort}`));
 }
 
 main();

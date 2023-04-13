@@ -28,7 +28,7 @@ async function embed(item, msg, embeds=[], encode=true) {
         };
     switch (item.itemType) {
         case 'card':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/cards/${item.color.slice(0,10)}-${item.name.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('\"', '').replaceAll('?', '').replaceAll('/', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/cards/${item.id.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('\"', '').replaceAll('?', '').replaceAll('/', '')}.png`};
             e.color = item.character[1];
             e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.hasOwnProperty('pack') ? `Pack: ${item.pack}` : item.mod}\n\n${item.description}`;
             break;
@@ -41,7 +41,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             
         case 'potion':
             if (wiki) e.url = `https://${wikis[item.mod]}.fandom.com/wiki/Potions`;
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.name.replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.id.replaceAll(' ', '')}.png`};
             if (item.character[0] != 'All')
                 e.color = item.character[1];
             e.description = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}`;
