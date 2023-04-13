@@ -200,6 +200,55 @@ async function makesweetMeme(template, arg, msg) {
 
 const commands =  {
     exact: {
+        help: msg => ({
+            title: msg.client.user.username,
+            description: `Search for an item with <item name>.
+If the result isn\'t what you were looking for, you can also include the following in your search query: character, item type (e.g. card, relic, potion), type (e.g. skill, elite), or text from its description.
+
+Anything highlighted in **bold** is a searchable keyword.
+
+If you edit or delete your message, I will update my reply to it, according to your changes.
+I'll spoiler tag my reply to any messages which include "(s)" anywhere.
+I'll ignore any messages which include the backtick (\`) symbol anywhere.
+
+<item> will search through items from only vanilla Slay the Spire and mods specific to the server (can be set by server admins with **/addservermod**).
+You can replace <item> with [[item]] to search through ALL mods.
+You can use **/i** to find an item with autocomplete.
+You can use **/run** to run commands without anyone else seeing your result.
+
+__Commands:__
+<[item name]> displays info about an item
+- search query may include the following filters:
+- - cost=? - only returns cards with specified cost
+- - type=? - specify item type
+- - mod=? - specify mod name
+- - rarity=? - specify item rarity
+- - in=drawpile - results must include the phrase "draw pile" (ignores spaces)
+- - ex=? - no results will include the specified phrase
+- - r=2 - get second result
+<d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
+<del> deletes your last search in this channel
+<?[search query]> shows the most likely results for a search query
+- page=? - specify result page
+<show10 [search query]> shows the full item details for the first 10 results for a search query
+<count?[search query]> shows the total number of results for a search query (more helpful with filters!)
+<exporttxt [search query]> exports the search details for the first 100 results for a search query formatted as a text file
+<exportjson [search query]> same as the above, but returns the raw json details
+<calc [equation]> https://www.npmjs.com/package/calculator-by-str
+<plot [equation] [args]> - type <plot help> for more information
+<ws?[mod]> - searches for a slay the spire mod on the steam workshop
+<choose [word1 word2 word3...]> chooses one of the specified words for you at random
+<rps [rock|paper|scissors]> lets you play a game of rock paper scissors with me!
+<memes> help with the bot's meme generator
+<artpreview [card name]> takes your first attachment and uses it as card art for a card
+<c~artpreview [card name]> compares the art preview to the current card
+<cut~artpreview [card name]>
+<searchtext [item name]> shows the text the bot can use when searching for an item
+<lists> links to lists of all items in the database
+`,
+            thumbnail: {url: bot.user.avatarURL()},
+        }),
+
         'del': async msg => {
             let messages = await msg.channel.messages.fetch();
             messages = messages.filter(i => i.author.id == bot.user.id && i.reference != null);
@@ -253,55 +302,6 @@ const commands =  {
     },
 
     prefix: {
-        help: msg => ({
-            title: msg.client.user.username,
-            description: `Search for an item with <item name>.
-If the result isn\'t what you were looking for, you can also include the following in your search query: character, item type (e.g. card, relic, potion), type (e.g. skill, elite), or text from its description.
-
-Anything highlighted in **bold** is a searchable keyword.
-
-If you edit or delete your message, I will update my reply to it, according to your changes.
-I'll spoiler tag my reply to any messages which include "(s)" anywhere.
-I'll ignore any messages which include the backtick (\`) symbol anywhere.
-
-<item> will search through items from only vanilla Slay the Spire and mods specific to the server (can be set by server admins with **/addservermod**).
-You can replace <item> with [[item]] to search through ALL mods.
-You can use **/i** to find an item with autocomplete.
-You can use **/run** to run commands without anyone else seeing your result.
-
-__Commands:__
-<[item name]> displays info about an item
-- search query may include the following filters:
-- - cost=? - only returns cards with specified cost
-- - type=? - specify item type
-- - mod=? - specify mod name
-- - rarity=? - specify item rarity
-- - in=drawpile - results must include the phrase "draw pile" (ignores spaces)
-- - ex=? - no results will include the specified phrase
-- - r=2 - get second result
-<d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
-<del> deletes your last search in this channel
-<?[search query]> shows the most likely results for a search query
-- page=? - specify result page
-<show10 [search query]> shows the full item details for the first 10 results for a search query
-<count?[search query]> shows the total number of results for a search query (more helpful with filters!)
-<exporttxt [search query]> exports the search details for the first 100 results for a search query formatted as a text file
-<exportjson [search query]> same as the above, but returns the raw json details
-<calc [equation]> https://www.npmjs.com/package/calculator-by-str
-<plot [equation] [args]> - type <plot help> for more information
-<ws?[mod]> - searches for a slay the spire mod on the steam workshop
-<choose [word1 word2 word3...]> chooses one of the specified words for you at random
-<rps [rock|paper|scissors]> lets you play a game of rock paper scissors with me!
-<memes> help with the bot's meme generator
-<artpreview [card name]> takes your first attachment and uses it as card art for a card
-<c~artpreview [card name]> compares the art preview to the current card
-<cut~artpreview [card name]>
-<searchtext [item name]> shows the text the bot can use when searching for an item
-<lists> links to lists of all items in the database
-`,
-            thumbnail: {url: bot.user.avatarURL()},
-        }),
-
         '?': async (msg, arg, args) => {
             if (arg.startsWith('??')) {
                 let nArg = new String('?'+arg);

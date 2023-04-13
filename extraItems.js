@@ -790,7 +790,7 @@ export default {
                 "cards": [
                     {
                         "where": {"name": "Darkling Trio+"},
-                        "to": {"name": "Darkling Duo+", "imgPath": "gamedata/export/downfall/card-images/Colorless-DarklingTrioPlus"}
+                        "to": {"name": "Darkling Duo+", "imgPath": "gamedata/export/downfall/card-images/Slimebound-DarklingsPlus"}
                     }
                 ]
             }

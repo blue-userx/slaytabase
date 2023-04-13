@@ -7067,7 +7067,7 @@
             "color": "Hexa_ghost_purple",
             "rarity": "Rare",
             "type": "Skill",
-            "cost": "5 (4)",
+            "cost": "4 (3)",
             "description": "hexamod:Ignite all Ghostflames in order.\nExhaust.",
             "mod": "Downfall"
         },
@@ -11718,7 +11718,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 12 (15) damage.\nAdd a Strike (+) to your hand.\nExhaust.",
+            "description": "Deal 6 (9) damage.\nAdd a Strike+2 (3)　 to your hand.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -11828,7 +11828,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 8 (9) Block.\nhermit:Dead_On:\nDraw 1 (2) card (cards) and Upgrade it (them) for the rest of combat.",
+            "description": "Gain 8 (9) Block.\nhermit:Dead_On: Draw and Upgrade a (2) card (cards).",
             "mod": "Downfall"
         },
         {
@@ -11877,8 +11877,8 @@
             "color": "Hermit_yellow",
             "rarity": "Uncommon",
             "type": "Attack",
-            "cost": "0",
-            "description": "Lose 2 HP.\nDeal 6 damage.\nCursed Weapons permanently deal 1 (2) more damage. Exhaust.",
+            "cost": "1 (0)",
+            "description": "Lose 2 HP.\nDeal 10 damage.\nCursed Weapons permanently deal 1 more damage. Exhaust.",
             "mod": "Downfall"
         },
         {
@@ -32659,7 +32659,7 @@
             "rarity": "Special",
             "type": "Attack",
             "cost": "0",
-            "description": "Deal 4 (6) damage to ALL enemies.\nDraw 1 card.",
+            "description": "Deal 4 (6) damage to ALL enemies.\nDraw 1 card.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -32671,7 +32671,7 @@
             "cost": "1",
             "description": "m10robot:Inert.\nDraw 1 (2) card (cards).\nm10robot:Overclock all cards in your hand 1 time.",
             "mod": "The M10 Robot",
-            "altDescription": "m10robot:Inert.\nDraw 1 card.\nm10robot:Overclock all cards in your hand 1 time."
+            "altDescription": "Retain.\nm10robot:Inert.\nDraw 1 card.\nm10robot:Overclock all cards in your hand 1 time."
         },
         {
             "id": "M10Robot:AssaultField",
@@ -32710,7 +32710,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 7 (10) Block.\nDraw 1 card.",
+            "description": "Retain.\nGain 7 (10) Block.\nDraw 1 card.",
             "mod": "The M10 Robot"
         },
         {
@@ -32771,7 +32771,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Draw 1 card.\nm10robot:Extract 1 card.",
+            "description": " (Retain.)\nDraw 1 card.\nm10robot:Extract 1 card.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -32791,7 +32791,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "m10robot:Inert.\nm10robot:Overclock the next card you play 2 times.",
+            "description": " (Retain.)\nm10robot:Inert.\nm10robot:Overclock the next card you play 2 times.",
             "mod": "The M10 Robot"
         },
         {
@@ -32913,7 +32913,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "m10robot:Inert.\nm10robot:Extract 2 cards.\nm10robot:Overclock the next 2 cards you play 2 times.",
+            "description": "m10robot:Inert.\nm10robot:Extract 2 cards.\nm10robot:Overclock the next 2 cards you play 2 times.\n~~- Exhaust. -~~ ",
             "mod": "The M10 Robot"
         },
         {
@@ -32933,7 +32933,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2 (1) (alt: 2)",
-            "description": "Channel 2 m10robot:Bombs.\nm10robot:Upgrade them 1 time.",
+            "description": "Channel 2 m10robot:Bombs.\nm10robot:Upgrade them 1 time.\nExhaust.",
             "mod": "The M10 Robot",
             "altDescription": "Channel 2 m10robot:Bombs.\nm10robot:Upgrade them 1 time."
         },
@@ -32954,7 +32954,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 7 (10) damage.\nChannel 1 m10robot:Bit for each Attack played this turn.",
+            "description": "Deal 7 (10) damage.\nChannel 1 m10robot:Bit for each Attack played this turn.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -32986,7 +32986,7 @@
             "cost": "1",
             "description": "Gain 6 (8) Block.\nYour next Attack deals 5 (7) additional damage.",
             "mod": "The M10 Robot",
-            "altDescription": "Gain 6 Block.\nYour next Attack deals 5 additional damage."
+            "altDescription": "Retain.\nGain 6 Block.\nYour next Attack deals 5 additional damage."
         },
         {
             "id": "M10Robot:Salvo",
@@ -33119,7 +33119,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 6 Block.\nChannel 1 m10robot:Searchlight for each Skill played this turn.",
+            "description": " (Retain.)\nGain 6 Block.\nChannel 1 m10robot:Searchlight for each Skill played this turn.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -33139,7 +33139,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2 (1)",
-            "description": "Channel 3 random Orbs.",
+            "description": "Innate.\nChannel 3 random Orbs.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -33190,7 +33190,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1 (0)",
-            "description": "m10robot:Inert.\nm10robot:Overclock all cards in your hand 2 times.",
+            "description": "m10robot:Inert.\nm10robot:Overclock all cards in your hand 2 times.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -33210,7 +33210,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "The first time you lose Block each turn, gain that much Block next turn.",
+            "description": " (Innate.)\nThe first time you lose Block each turn, gain that much Block next turn.",
             "mod": "The M10 Robot"
         },
         {
@@ -33291,9 +33291,9 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2 (1) (alt: 2)",
-            "description": "Channel 3 m10robot:Presents.",
+            "description": "Channel 3 m10robot:Presents.\nExhaust.",
             "mod": "The M10 Robot",
-            "altDescription": "Channel 3 m10robot:Presents.\nm10robot:Upgrade all your Orbs 1 time."
+            "altDescription": "Channel 3 m10robot:Presents.\nm10robot:Upgrade all your Orbs 1 time.\nExhaust."
         },
         {
             "id": "M10Robot:EmptyBuffer",
@@ -33302,7 +33302,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Remove (Evoke) all your Orbs.\nGain 1 Orb slot for each Orb removed (Evoked).",
+            "description": "Remove (Evoke) all your Orbs.\nGain 1 Orb slot for each Orb removed (Evoked).\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -33322,9 +33322,9 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1 (0) (alt: 1)",
-            "description": "For 1 turn, cards randomly cost 0 or 1.",
+            "description": "For 1 turn, cards randomly cost 0 or 1.\nExhaust.",
             "mod": "The M10 Robot",
-            "altDescription": "For 1 turn, cards randomly cost 0 or 1."
+            "altDescription": "Retain.\nFor 1 turn, cards randomly cost 0 or 1.\nExhaust."
         },
         {
             "id": "M10Robot:ImmovableObject",
@@ -33333,7 +33333,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "3",
-            "description": "Gain 30 (40) Block.",
+            "description": "Retain.\nGain 30 (40) Block.",
             "mod": "The M10 Robot"
         },
         {
@@ -33343,7 +33343,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 4 (5) damage to ALL enemies 3 times.",
+            "description": "Deal 4 (5) damage to ALL enemies 3 times.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -33373,7 +33373,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "1",
-            "description": "At the end of your turn, gain 7 Block if you have any unspent energy.",
+            "description": " (Innate.)\nAt the end of your turn, gain 7 Block if you have any unspent energy.",
             "mod": "The M10 Robot"
         },
         {
@@ -33383,7 +33383,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "Fully blocked attacks are reflected onto the attacker 1 time.",
+            "description": " (Innate.)\nFully blocked attacks are reflected onto the attacker 1 time.",
             "mod": "The M10 Robot"
         },
         {
@@ -33393,7 +33393,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Draw 2 (3) cards.\nCards drawn this way cost 0 this turn.",
+            "description": "Draw 2 (3) cards.\nCards drawn this way cost 0 this turn.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -33403,7 +33403,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "X",
-            "description": "Gain X  (+ 1 ) Strength.\nALL enemies lose\nX  (+ 1 ) Strength.",
+            "description": "Gain X  (+ 1 ) Strength.\nALL enemies lose\nX  (+ 1 ) Strength.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -33413,7 +33413,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "3",
-            "description": "m10robot:Inert.\nLose 5 HP.\nm10robot:Stun the enemy.\nDeal 20 (28) damage to ALL enemies.",
+            "description": "m10robot:Inert.\nLose 5 HP.\nm10robot:Stun the enemy.\nDeal 20 (28) damage to ALL enemies.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -33423,7 +33423,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 1 Intangible.",
+            "description": " (Retain.)\nGain 1 Intangible.\nExhaust.",
             "mod": "The M10 Robot"
         },
         {
@@ -51367,15 +51367,6 @@
             "mod": "Downfall"
         },
         {
-            "id": "sneckomod:BlankCard",
-            "name": "Blank Card",
-            "tier": "Common",
-            "pool": "",
-            "description": "At the start of each combat, add an gremlin:Echo of a random card from your deck to your hand. It costs 0 .",
-            "flavorText": "Card Mimic.",
-            "mod": "Downfall"
-        },
-        {
             "id": "hermit:BrassTacks",
             "name": "Brass Tacks",
             "tier": "Common",
@@ -51517,6 +51508,15 @@
             "pool": "",
             "description": "Every 3 turns, apply 1 Weak to ALL enemies.",
             "flavorText": "Sentry Mode active. Target acquired. No hard feelings.",
+            "mod": "Downfall"
+        },
+        {
+            "id": "sneckomod:BlankCard",
+            "name": "Blank Card",
+            "tier": "Uncommon",
+            "pool": "",
+            "description": "At the start of each combat, add an gremlin:Echo of a random card from your deck to your hand. It costs 0 .",
+            "flavorText": "Card Mimic.",
             "mod": "Downfall"
         },
         {
@@ -60517,13 +60517,6 @@
             "mod": "Downfall"
         },
         {
-            "id": "champ:CounterPotion",
-            "name": "Brew of Sharpness",
-            "rarity": "Common",
-            "description": "Gain 25 Counter.",
-            "mod": "Downfall"
-        },
-        {
             "id": "hexamod:EctoCoolerPotion",
             "name": "Ecto-Cooler",
             "rarity": "Common",
@@ -60548,33 +60541,12 @@
             "color": "The_bronze_automaton"
         },
         {
-            "id": "hexamod:SoulburnPotion",
-            "name": "Molotov",
-            "rarity": "Common",
-            "description": "Apply 30 Soulburn.",
-            "mod": "Downfall"
-        },
-        {
-            "id": "gremlin:WizPotion",
-            "name": "Pizazz Potion",
-            "rarity": "Common",
-            "description": "Gain 10 Vigor.",
-            "mod": "Downfall"
-        },
-        {
             "id": "sneckomod:DiceRollPotion",
             "name": "Potentially Potent Potion",
             "rarity": "Common",
             "description": "Deal 1-40 damage.",
             "mod": "Downfall",
             "color": "Snecko_cyan"
-        },
-        {
-            "id": "sneckomod:MuddlingPotion",
-            "name": "Spiked Energy Drink",
-            "rarity": "Common",
-            "description": "Muddle the 2 highest-cost cards in your hand. Cards Muddled this way cannot cost 3.",
-            "mod": "Downfall"
         },
         {
             "id": "champ:OpenerPotion",
@@ -60609,26 +60581,12 @@
             "color": "The_bronze_automaton"
         },
         {
-            "id": "Guardian:BlockOnCardUsePotion",
-            "name": "Armorer's Tincture",
-            "rarity": "Uncommon",
-            "description": "Gain 4 Block each time you play a card this turn.",
-            "mod": "Downfall"
-        },
-        {
             "id": "hermit:BlackBile",
             "name": "Black Bile",
             "rarity": "Uncommon",
             "description": "Apply 6 Bruise.",
             "mod": "Downfall",
             "color": "Hermit_yellow"
-        },
-        {
-            "id": "expansioncontent:BossPotion",
-            "name": "Boss Potion",
-            "rarity": "Uncommon",
-            "description": "Choose 1 of 3 random Boss cards to add to your hand, it costs 0 this turn.",
-            "mod": "Downfall"
         },
         {
             "id": "champ:TechniquePotion",
@@ -60679,13 +60637,6 @@
             "color": "Slimebound"
         },
         {
-            "id": "bronze:BurnAndBuffPotion",
-            "name": "Vexing Draught",
-            "rarity": "Uncommon",
-            "description": "Gain 2 Strength and 2 Dexterity.\nAdd two Burn+ cards into your discard pile.",
-            "mod": "Downfall"
-        },
-        {
             "id": "Slimebound:SpawnSlimePotion",
             "name": "Army in a Bottle",
             "rarity": "Rare",
@@ -60732,13 +60683,6 @@
             "description": "Put 1 card from your exhaust pile into your hand. It costs 0 this turn.",
             "mod": "Downfall",
             "color": "Hermit_yellow"
-        },
-        {
-            "id": "Slimebound:ThreeZeroPotion",
-            "name": "Ooze-Infused Drink",
-            "rarity": "Rare",
-            "description": "Add 4 random 0-cost cards to your hand.",
-            "mod": "Downfall"
         },
         {
             "id": "Guardian:StasisDiscoveryPotion",
@@ -62062,7 +62006,7 @@
             "mod": "Corrupt the Spire"
         },
         {
-            "id": "TheGremlins",
+            "id": "GremlinCharacter",
             "name": "The Gremlins",
             "type": "Player",
             "minHP": "16",
@@ -62070,7 +62014,7 @@
             "mod": "Downfall"
         },
         {
-            "id": "TheGuardian",
+            "id": "GuardianCharacter",
             "name": "The Guardian",
             "type": "Player",
             "minHP": "80",
@@ -62078,7 +62022,7 @@
             "mod": "Downfall"
         },
         {
-            "id": "TheSlimeBoss",
+            "id": "SlimeboundCharacter",
             "name": "The Slime Boss",
             "type": "Player",
             "minHP": "65",
@@ -62086,7 +62030,7 @@
             "mod": "Downfall"
         },
         {
-            "id": "TheAutomaton",
+            "id": "AutomatonChar",
             "name": "The Automaton",
             "type": "Player",
             "minHP": "70",
@@ -62094,7 +62038,7 @@
             "mod": "Downfall"
         },
         {
-            "id": "TheChamp",
+            "id": "ChampChar",
             "name": "The Champ",
             "type": "Player",
             "minHP": "80",
@@ -62102,7 +62046,7 @@
             "mod": "Downfall"
         },
         {
-            "id": "TheHermit",
+            "id": "hermit",
             "name": "The Hermit",
             "type": "Player",
             "minHP": "75",
@@ -64492,7 +64436,7 @@
             "mod": "The Human"
         },
         {
-            "id": "TheM10Robot",
+            "id": "M10Robot",
             "name": "The M10 Robot",
             "type": "Player",
             "minHP": "75",
@@ -68465,7 +68409,7 @@
         },
         {
             "name": "Downfall",
-            "version": "4.3.0",
+            "version": "4.3.2",
             "authors": [
                 "The Downfall Collab Team"
             ],

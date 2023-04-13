@@ -108,7 +108,7 @@ async function exportMod(modPath){
             canv = canvas.createCanvas(width * (altUp != undefined ? 3 : 2), height); //double-width canvas if there is an upgrade
             ctx = canv.getContext('2d');
         }
-        let cardPath = `${c.color.slice(0,10)}-${c.name.replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '').replaceAll('"', '').replaceAll('/', '')}`;
+        let cardPath = `${c.id.replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('?', '').replaceAll('"', '').replaceAll('/', '')}`;
         let imgPath = `${gameDataPath}card-images/${cardPath}`;
         if (exportCards) {
             ctx.drawImage(await canvas.loadImage(imgPath+'.png'), 0, 0);
@@ -269,13 +269,9 @@ async function exportMod(modPath){
         }
     
     if (data.hasOwnProperty('creatures'))
-        for (let i of data.creatures) {
-            if (i.type == 'Player') {
-                if (i.name.startsWith('the'))
+        for (let i of data.creatures)
+            if (i.type == 'Player' && i.name.startsWith('the'))
                     i.name = i.name.replace('the', 'The');
-                i.id = i.name.replaceAll(' ', '');
-            }
-        }
     
     if (exportImages) {
         console.log(`Compressing images...`);
@@ -340,7 +336,7 @@ function gatherImages(path) {
 }
 
 async function exportAll() {
-    const isMod = n => !n.endsWith('.json') && !n.endsWith('.html') && !n.endsWith('.css') && !n.endsWith('.md') && !n.endsWith('.txt') && !['ModStSExporter', 'SlaytabaseModStSExporter', 'basemod', 'colors', 'extraImages'].includes(n);
+    const isMod = n => !n.endsWith('.json') && !n.endsWith('.html') && !n.endsWith('.css') && !n.endsWith('.md') && !n.endsWith('.txt') && !['ModStSExporter', 'SlaytabaseModStSExporter', 'basemod', 'colors', 'extraImages', 'CNAME'].includes(n);
     if (!process.argv.includes('--collate'))
         for (let mod of fs.readdirSync('gamedata/export').filter(isMod)) {
             await exportMod(mod);
