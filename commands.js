@@ -271,7 +271,7 @@ You can use **/run** to run commands without anyone else seeing your result.
 
 __Commands:__
 <[item name]> displays info about an item
-- search query may include the following:
+- search query may include the following filters:
 - - cost=? - only returns cards with specified cost
 - - type=? - specify item type
 - - mod=? - specify mod name
@@ -284,6 +284,7 @@ __Commands:__
 <?[search query]> shows the most likely results for a search query
 - page=? - specify result page
 <show10 [search query]> shows the full item details for the first 10 results for a search query
+<count?[search query]> shows the total number of results for a search query (more helpful with filters!)
 <exporttxt [search query]> exports the search details for the first 100 results for a search query formatted as a text file
 <exportjson [search query]> same as the above, but returns the raw json details
 <calc [equation]> https://www.npmjs.com/package/calculator-by-str
@@ -324,6 +325,8 @@ __Commands:__
                 color: 14598591,
             };
         },
+
+        'count?': (msg, arg) => ({title: `Found ${fn.findAll(arg).total} results for "${arg}"`}),
 
         'show': async (msg, arg, args) => {
             let num = parseInt(args[0]);

@@ -28,10 +28,6 @@ search.search = str => {
     return results;
 }
 const queryLimit = 10; //max number of embeds on a discord message
-search.add({
-    name: 'help',
-    itemType: 'help',
-});
 var data;
 String.prototype.exactMatch = function compare(str) {
     return this == str;

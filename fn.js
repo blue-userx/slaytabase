@@ -17,13 +17,16 @@ function shuffle(array) {
 
 function findAll(query) {
     let args = query.split(' ');
+    let actualSearch = args.filter(w => !w.includes('=')).join(' ');
     let results;
     args = args.map(a => a.endsWith('?left') ? a.replace('?left', '') : a);
     args = args.map(a => a.endsWith('?right') ? a.replace('?right', '') : a);
     if (args[0] == "randomitem")
         results = shuffle(search._docs.map((r, i) => ({item: r, score: 0, refIndex: i})));
+    else if (actualSearch == "")
+        results = search._docs.map((r, i) => ({item: r, score: 0, refIndex: i}));
     else
-        results = search.search(args.filter(a => !a.includes('=')).join(' '));
+        results = search.search(actualSearch);
     if (query.filter) results = results.filter(query.filter);
     let page = 0;
     for (let i of args) {
