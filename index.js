@@ -36,7 +36,8 @@ String.prototype.exactMatch = function compare(str) {
 
 const oldRedirects = JSON.parse(fs.readFileSync('./oldredirects.json'));
 var website = express();
-website.use('/', (req, res, next) => {
+var router = express.Router({caseSensitive: true});
+router.use('/', (req, res, next) => {
     if (req.originalUrl.includes('cards/') || req.originalUrl.includes('potions/')) {
         let imageUrl;
         if (req.originalUrl.includes('cards/'))
@@ -52,7 +53,8 @@ website.use('/', (req, res, next) => {
     }
     next();
 });
-website.use('/', express.static('./docs'));
+router.use('/', express.static('./docs'));
+website.use(router);
 
 export {bot, search, website};
 
