@@ -28,20 +28,20 @@ async function embed(item, msg, embeds=[], encode=true) {
         };
     switch (item.itemType) {
         case 'card':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/cards/${item.id.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('\"', '').replaceAll('?', '').replaceAll('/', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/cards/${item.id.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('\"', '').replaceAll('?', '').replaceAll('/', '')}.png`.toLowerCase()};
             e.color = item.character[1];
             e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.hasOwnProperty('pack') ? `Pack: ${item.pack}` : item.mod}\n\n${item.description}`;
             break;
 
         case 'relic':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`.toLowerCase()};
             e.color = item.character[1];
             e.description = ` ${item.tier} Relic / ${item.character[0]} / ${item.mod}\n\n${item.description}\n*${item.flavorText}*`;
             break;
             
         case 'potion':
             if (wiki) e.url = `https://${wikis[item.mod]}.fandom.com/wiki/Potions`;
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.id.replaceAll(' ', '').replaceAll(':','-')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.id.replaceAll(' ', '').replaceAll(':','-')}.png`.toLowerCase()};
             if (item.character[0] != 'All')
                 e.color = item.character[1];
             e.description = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}`;
@@ -49,23 +49,23 @@ async function embed(item, msg, embeds=[], encode=true) {
         
         case 'event':
             e.color = 4608066;
-            e.thumbnail = {url: `${cfg.exportURL}/extraImages/events/${item.name.toLowerCase().replaceAll(' ', '').replaceAll('?', '').replaceAll('!', '')}.jpg`};
+            e.thumbnail = {url: `${cfg.exportURL}/extraImages/events/${item.name.toLowerCase().replaceAll(' ', '').replaceAll('?', '').replaceAll('!', '')}.jpg`.toLowerCase()};
             e.description = `Event / Act${item.acts.length > 1 ? 's' : ''} ${item.acts.join(', ')} / ${item.character[0]}${item.character == 'All' ? ' characters' : ''} / ${item.mod}\n\`\`\`ansi\n${item.colouredDesc.replaceAll('\n', '\n``````ansi\n')}\n\`\`\``;
             break;
             
         case 'creature':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.type == 'Player' ? item.name.replace('the ', '').replace('The ', '') : item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.type == 'Player' ? item.name.replace('the ', '').replace('The ', '') : item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`.toLowerCase()};
             e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP / ${item.mod}`;
             break;
 
         case 'blight':
             if (wiki) e.url = `https://${wikis[item.mod]}.fandom.com/wiki/Blights`;
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/blights/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/blights/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`.toLowerCase()};
             e.description = `Blight / ${item.mod}\n\n${item.description}`;
             break;
         
         case 'boss':
-            e.thumbnail = {url: `${cfg.exportURL}/extraImages/bosses/${item.name.replaceAll(' ', '').toLowerCase()}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/extraImages/bosses/${item.name.replaceAll(' ', '')}.png`.toLowerCase()};
             e.color = item.character[1];
             e.description = item.description;
             if (wiki) e.url = e.url.replace('_', '_(Act_')+'_Boss)';
@@ -76,7 +76,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             break;
         
         case 'pack':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/packs/${item.id.slice(item.id.indexOf(':')+1)}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/packs/${item.id.slice(item.id.indexOf(':')+1)}.png`.toLowerCase()};
             e.color = 12083229;
             e.description = `${item.mod.replace('The ', '')} Card Pack / By ${item.author}\n\n${item.description}\nOffense: ${stars(item.offense)}\nDefense: ${stars(item.defense)}\nSupport: ${stars(item.support)}\nFrontload: ${stars(item.frontload)}\nScaling: ${stars(item.scaling)}\nTags: ${item.tags.join(', ')}\n\nCards: ${item.cards.join(', ')}${item.credits.length > 0 ? '\n\nCredits: '+item.credits : ''}`;
             break;
