@@ -41,7 +41,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             
         case 'potion':
             if (wiki) e.url = `https://${wikis[item.mod]}.fandom.com/wiki/Potions`;
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.id.replaceAll(' ', '')}.png`};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.id.replaceAll(' ', ''.replaceAll(':','-'))}.png`};
             if (item.character[0] != 'All')
                 e.color = item.character[1];
             e.description = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}`;

@@ -43,8 +43,12 @@ website.use('/', (req, res, next) => {
             imageUrl = req.originalUrl.slice(req.originalUrl.indexOf('cards/'))
         if (req.originalUrl.includes('potions/'))
             imageUrl = req.originalUrl.slice(req.originalUrl.indexOf('potions/'))
-        if (oldRedirects[0].includes(imageUrl))
-            return res.redirect(req.originalUrl.replace(imageUrl, oldRedirects[1][oldRedirects[0].indexOf(imageUrl)]));
+        if (oldRedirects[0].includes(imageUrl)) {
+            let index = oldRedirects[0].indexOf(imageUrl);
+            if (oldRedirects[0][index] == oldRedirects[1][index])
+                return next();
+            return res.redirect(req.originalUrl.replace(imageUrl, oldRedirects[1][index]));
+        }
     }
     next();
 });
