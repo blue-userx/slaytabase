@@ -51,6 +51,8 @@ router.use('/', (req, res, next) => {
             return res.redirect(req.originalUrl.replace(imageUrl, oldRedirects[1][index]));
         }
     }
+    if (req.originalUrl != req.originalUrl.toLowerCase())
+        return res.redirect(req.originalUrl.toLowerCase());
     next();
 });
 router.use('/', express.static('./docs'));

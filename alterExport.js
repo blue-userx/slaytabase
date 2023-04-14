@@ -77,7 +77,7 @@ async function exportMod(modPath){
     for (let i of Object.keys(data).filter(n => n != 'mods'))
         for (let j of data[i])
             j.mod = mod;
-    let path = `docs/${mod}/`;
+    let path = `docs/${mod}/`.toLowerCase();
     if (exportImages && fs.existsSync(path)) fs.rmSync(path, { recursive: true, force: true });
     if (!fs.existsSync(path)) fs.mkdirSync(path);
 
@@ -336,11 +336,22 @@ function gatherImages(path) {
 }
 
 async function exportAll() {
-    const isMod = n => !n.endsWith('.json') && !n.endsWith('.html') && !n.endsWith('.css') && !n.endsWith('.md') && !n.endsWith('.txt') && !['ModStSExporter', 'SlaytabaseModStSExporter', 'basemod', 'colors', 'extraImages', 'CNAME'].includes(n);
+    const isMod = n => !n.endsWith('.json') && !n.endsWith('.html') && !n.endsWith('.css') && !n.endsWith('.md') && !n.endsWith('.txt') && !['ModStSExporter', 'SlaytabaseModStSExporter', 'basemod', 'colors', 'extraimages'].includes(n);
     if (!process.argv.includes('--collate'))
         for (let mod of fs.readdirSync('gamedata/export').filter(isMod)) {
             await exportMod(mod);
         }
+    console.log('Lowercasing paths...');
+    let lowercasify = path => {
+        for (let file of fs.readdirSync(path)) {
+            let filePath = `${path}/${file}`;
+            if (filePath != filePath.toLowerCase())
+                fs.renameSync(filePath, filePath.toLowerCase());
+            if (fs.lstatSync(filePath).isDirectory())
+                lowercasify(filePath.toLowerCase())
+        }
+    }
+    lowercasify('docs');
     console.log('Collating all items...');
     let fullData = {};
     let page = fs.readFileSync('gamedata/export/index.html', 'utf-8');
@@ -353,7 +364,7 @@ async function exportAll() {
             }
         }
     }
-    page = page.slice(0, page.indexOf('<ul>')+4) + fs.readdirSync('docs').filter(isMod).map(mod => `<li><a href="${mod}">${mod}</a></li>`).join('') + "</ul>Note: If you're the author of any of these mods and don't want its data in the Slaytabase, contact Ocean on the slay the spire discord.<br>" + page.slice(page.indexOf('</ul>')+5);
+    page = page.slice(0, page.indexOf('<ul>')+4) + fs.readdirSync('docs').filter(isMod).map(mod => `<li><a href="${mod}">${JSON.parse(fs.readFileSync(`docs/${mod}/data.json`)).mods[0].name}</a></li>`).join('') + "</ul>Note: If you're the author of any of these mods and don't want its data in the Slaytabase, contact Ocean on the slay the spire discord.<br>" + page.slice(page.indexOf('</ul>')+5);
     fs.writeFileSync('docs/data.json', JSON.stringify(fullData));
     fs.writeFileSync('docs/dataFormatted.json', JSON.stringify(fullData, null, 4));
     fs.writeFileSync('docs/index.html', page);
