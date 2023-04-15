@@ -123,6 +123,14 @@ function addItems(items) {
         let content = info.childNodes[1];
         content.innerHTML = block.content
             .replaceAll('\n', '<br>')
+            .replaceAll('```ansi', '')
+            .replaceAll('```', '')
+            .replaceAll('[2;37m', '')
+            .replaceAll('[2;31m', '')
+            .replaceAll('[2;32m', '')
+            .replaceAll('[0;2m', '')
+            .replaceAll('[2;34m', '')
+            .replaceAll('[2;33m', '')
             .replace(/\*\*(.*?)\*\*/gm, '<b>$1</b>')
             .replace(/\*(.*?)\*/gm, '<i>$1</i>')
             .replace(/~~(.*?)~~/gm, '<s>$1</s>')
