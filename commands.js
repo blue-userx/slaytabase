@@ -215,6 +215,7 @@ I'll ignore any messages which include the backtick (\`) symbol anywhere.
 You can replace <item> with [[item]] to search through ALL mods.
 You can use **/i** to find an item with autocomplete.
 You can use **/run** to run commands without anyone else seeing your result.
+You can also search online at ${cfg.exportURL}/search
 
 __Commands:__
 <[item name]> displays info about an item

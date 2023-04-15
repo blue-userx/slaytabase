@@ -19,7 +19,7 @@ html
                     p.text-light content
                     p.text-light.small footer
                 span.result-thumbnail
-                    img(onclick="previewImage(this)")
+                    img(loading="lazy" onclick="previewImage(this)")
             hr.text-secondary
             a(href="https://discord.com/api/oauth2/authorize?client_id=961824443653574687&permissions=0&scope=applications.commands%20bot").btn.btn-secondary.btn-sm Add the bot to your Discord server!
             #popup(style="display: none")
