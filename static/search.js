@@ -13,6 +13,8 @@ imagePopup.onclick = () => {
     setTimeout(() => imagePopup.style.display = 'none', POPUP_SHOW_TIME-10);
 }
 
+let resultNum = 1;
+
 searchBar.value = window.location.search.length > 1 ? decodeURIComponent(window.location.search.slice(1)) : '';
 if (searchBar.value.length > 0)
     (async () => addItems(await getResults(searchBar.value)))();
@@ -24,6 +26,7 @@ searchBar.onkeyup = () => {
         if (query == queryBefore) {
             if (window.history.replaceState)
                 window.history.replaceState({}, null, `?${encodeURIComponent(queryBefore)}`);
+            resultNum = 1
             let results = await getResults(query);
             resultsBox.innerHTML = '';
             addItems(results);
@@ -45,7 +48,8 @@ function getResults(query) {
 
 loadMoreButton.onclick = async () => {
     resultsBox.removeChild(loadMoreButton);
-    addItems(await getResults(`${searchBar.value} r=${ITEMS_RETURNED+1}`));
+    resultNum += ITEMS_RETURNED;
+    addItems(await getResults(`${searchBar.value} r=${resultNum}`));
 };
 
 const stars = n => Array(Number(n)).fill('⭐').join('');
