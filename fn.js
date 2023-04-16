@@ -39,11 +39,15 @@ function findAll(query) {
                     break;
 
                 case "type":
-                    results = results.filter(r => r.item.hasOwnProperty('itemType') && r.item.itemType.toLowerCase().includes(val));
+                    results = results.filter(r => (r.item.hasOwnProperty('itemType') && r.item.itemType.toLowerCase().includes(val)) || (r.item.hasOwnProperty('type') && r.item.type.toLowerCase().includes(val)));
                     break;
 
                 case "mod":
-                    results = results.filter(r => r.item.hasOwnProperty('mod') && (r.item.mod.toLowerCase().includes(val) || val.includes(r.item.mod.toLowerCase())));
+                    results = results.filter(r => {
+                        if (!r.item.hasOwnProperty('mod')) return false;
+                        let mod = fn.unPunctuate(r.item.mod.replaceAll(' ', ''));
+                        return mod.includes(val) || val.includes(mod);
+                    });
                     break;
 
                 case "rarity":

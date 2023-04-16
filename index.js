@@ -57,6 +57,8 @@ router.use('/', (req, res, next) => {
         return res.redirect(req.originalUrl.toLowerCase());
     next();
 });
+router.get('/', (req, res) => res.render('home'));
+router.get('/exports', (req, res) => res.sendFile('./docs/index.html', {root: '.'}));
 router.get('/search', (req, res) => res.render('search'));
 router.get('/s', (req, res) => {
     if (req.originalUrl.length > 3)

@@ -221,7 +221,7 @@ __Commands:__
 <[item name]> displays info about an item
 - search query may include the following filters:
 - - cost=? - only returns cards with specified cost
-- - type=? - specify item type
+- - type=? - specify item type (e.g. relic, card, attack)
 - - mod=? - specify mod name
 - - rarity=? - specify item rarity
 - - in=drawpile - results must include the phrase "draw pile" (ignores spaces)
@@ -233,19 +233,18 @@ __Commands:__
 - page=? - specify result page
 <show10 [search query]> shows the full item details for the first 10 results for a search query
 <count?[search query]> shows the total number of results for a search query (more helpful with filters!)
-<exporttxt [search query]> exports the search details for the first 100 results for a search query formatted as a text file
-<exportjson [search query]> same as the above, but returns the raw json details
-<calc [equation]> https://www.npmjs.com/package/calculator-by-str
-<plot [equation] [args]> - type <plot help> for more information
 <ws?[mod]> - searches for a slay the spire mod on the steam workshop
-<choose [word1 word2 word3...]> chooses one of the specified words for you at random
-<rps [rock|paper|scissors]> lets you play a game of rock paper scissors with me!
 <memes> help with the bot's meme generator
 <artpreview [card name]> takes your first attachment and uses it as card art for a card
 <c~artpreview [card name]> compares the art preview to the current card
 <cut~artpreview [card name]>
 <searchtext [item name]> shows the text the bot can use when searching for an item
-<lists> links to lists of all items in the database
+<choose [word1 word2 word3...]> chooses one of the specified words for you at random
+<exporttxt [search query]> exports the search details for the first 100 results for a search query formatted as a text file
+<exportjson [search query]> same as the above, but returns the raw json details
+<calc [equation]> https://www.npmjs.com/package/calculator-by-str
+<plot [equation] [args]> - type <plot help> for more information
+<lists> links to the bot's data
 `,
             thumbnail: {url: bot.user.avatarURL()},
         }),
@@ -298,7 +297,7 @@ __Commands:__
 
         'lists': async () => ({
             title: "lists",
-            description: `export: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/slaytabase/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/slaytabase/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/slaytabase/blob/main/extraItems.js`,
+            description: `web search: ${cfg.exportURL}/search\nexport: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/slaytabase/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/slaytabase/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/slaytabase/blob/main/extraItems.js`,
         }),
     },
 
@@ -622,26 +621,6 @@ __Commands:__
                 console.error(e);
                 return {title: 'failed to generate image'};
             }
-        },
-
-        'rps': async (msg, arg, __, oa) => {
-            //so you decided to dig deeper and find out why everyone except a certain few always loses...
-            //well, you found us. i guess it's time to let you in on the secret.
-            //to win or draw, copy the zero width space from inbetween these brackets --> (​) and include it anywhere in your call to this command
-            //DON'T TELL ANYONE THIS, this remains between you and me and anyone else who's looked at this code 
-            let rps = ['rock', 'paper', 'scissors']
-            let n = 0;
-            for (let i of ['r', 'p', 's']) {
-                if (arg.startsWith(i)) {
-                    if (oa.includes('​')) {
-                        let win = Math.random() > 0.5;
-                        return {title: `i choose ${rps[(n+(win?2:0))%3]} - ${win ? 'you win...' : 'it\'s a draw.'}`};
-                    } else
-                        return {title: `i choose ${rps[(n+1)%3]} - i win!`};
-                }
-                n++;
-            }
-            return {title: 'choose "rock", "paper", or "scissors"'};
         },
 
         'resize': async (msg, arg) => {
