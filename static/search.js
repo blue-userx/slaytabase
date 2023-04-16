@@ -15,7 +15,10 @@ imagePopup.onclick = () => {
 
 let resultNum = 1;
 
-searchBar.value = window.location.search.length > 1 ? decodeURIComponent(window.location.search.slice(1)) : '';
+let firstQuery = decodeURIComponent(window.location.search.slice(1));
+if (firstQuery.includes('?embnum=0'))
+    firstQuery = firstQuery.slice(0, firstQuery.indexOf('?embnum=0'));
+searchBar.value = window.location.search.length > 1 ? firstQuery : '';
 if (searchBar.value.length > 0)
     (async () => addItems(await getResults(searchBar.value)))();
 

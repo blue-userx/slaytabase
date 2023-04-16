@@ -320,6 +320,7 @@ __Commands:__
 
             return {
                 title: `Searched for "${args.filter(a => !a.includes('=')).join(' ')}"`,
+                url: `${cfg.exportURL}/search?${encodeURIComponent(arg)}`,
                 description: results.length == 0 ? 'No results.' : resultText,
                 thumbnail: firstEmbed.data.thumbnail,
                 footer: {text: `Page ${page+1}/${Math.ceil(totalResults/10)}`},
