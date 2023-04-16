@@ -45,7 +45,7 @@ function findAll(query) {
                 case "mod":
                     results = results.filter(r => {
                         if (!r.item.hasOwnProperty('mod')) return false;
-                        let mod = fn.unPunctuate(r.item.mod.replaceAll(' ', ''));
+                        let mod = unPunctuate(r.item.mod.replaceAll(' ', ''));
                         return mod.includes(val) || val.includes(mod);
                     });
                     break;
