@@ -52,6 +52,28 @@ canvas.loadImage = async path => {
     return await canvas.loadImageOld('data:image/png;base64,'+Buffer.from(fs.readFileSync(path)).toString('base64'));
 }
 
+function stringDifference(originalString, newString) {
+    let diff = diffWords(originalString, newString);
+    let str = '';
+
+    for (let i in diff) {
+        i = Number(i);
+        let word = diff[i];
+        if (!word.hasOwnProperty('added'))
+            str += word.value;
+        else if (word.added)
+            str += ` (${word.value.includes(':') ? ' ' : ''}${word.value.replace('\n', '')}${word.value.includes(':') ? ' ' : ''})${word.value.includes('\n') ? '\n' : ''}${word.value.endsWith(' ') ? ' ' : ''}`;
+        else if (word.removed) {
+            if (!diff.hasOwnProperty(i+1) || !diff[i+1].added)
+                str += `${word.value.startsWith('\n') ? '\n' : ''}~~- ${word.value.replaceAll('\n', '')} -~~${word.value.endsWith('\n') ? '\n' : ' '}`;
+            else
+                str += word.value;
+        }
+    }
+
+    return str.replaceAll('( ', '(').replaceAll(' )', ')');
+}
+
 async function exportMod(modPath){
     //load data
     console.log(`Starting export of ${modPath}...`);
@@ -93,14 +115,19 @@ async function exportMod(modPath){
     for (let c of cards) {
         n++;
         if (newCards.find(oc => oc.id == c.id && oc.name == c.name) != undefined) continue; //skip duplicate cards (happens massively with statuses for some reason)
-        if (c.name.includes('+')) continue; //skip upgraded cards
+        if (c.upgrades != 0) continue; //skip upgraded cards
         if (c.name.endsWith('*')) continue; //skip alternate upgrades of cards
+        delete c.upgrades;
 
         let finish;
         let finished = new Promise(res => finish = res);
 
         let up = cards.find(e => e.name == c.name+'+' && e.color == c.color); //find upgraded version of card
         let altUp = cards.find(e => e.name == c.name+'*' && e.color == c.color); //find upgraded version of card
+        let noUpgradeWithSameName = up == undefined;
+        if (noUpgradeWithSameName)
+            up = cards.find(e => e.id == c.id && e.upgrades == "1" && isNaN(e.name.slice(-1))) //cards which change their name on upgrade
+        let multiUps = cards.filter(e => c.id == e.id && e.upgrades > 0).sort((a, b) => a.upgrades > b.upgrades ? 1 : -1);
 
         //create image of card next to its upgrade
         let canv, ctx;
@@ -118,29 +145,14 @@ async function exportMod(modPath){
                     ctx.drawImage(await canvas.loadImage(betaPath), width, 0);
             }
         }
-        if (up != undefined) {
+        if (up != undefined && (altUp != undefined || multiUps.length < 2)) {
             if (exportCards)
-                ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? up.imgPath+'.png' : (imgPath+'Plus.png')), width, 0);
+                ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? up.imgPath+'.png' : (imgPath+'Plus1.png')), width, 0);
 
             //update card to include numbers from upgrade
             if (c.cost != up.cost) c.cost = `${c.cost} (${up.cost})`;
-            let diff = diffWords(c.description, up.description);
-            c.description = '';
-            for (let i in diff) {
-                i = Number(i);
-                let word = diff[i];
-                if (!word.hasOwnProperty('added'))
-                    c.description += word.value;
-                else if (word.added)
-                    c.description += ` (${word.value.includes(':') ? ' ' : ''}${word.value.replace('\n', '')}${word.value.includes(':') ? ' ' : ''})${word.value.includes('\n') ? '\n' : ''}${word.value.endsWith(' ') ? ' ' : ''}`;
-                else if (word.removed) {
-                    if (!diff.hasOwnProperty(i+1) || !diff[i+1].added)
-                        c.description += `${word.value.startsWith('\n') ? '\n' : ''}~~- ${word.value.replaceAll('\n', '')} -~~${word.value.endsWith('\n') ? '\n' : ' '}`;
-                    else
-                        c.description += word.value;
-                }
-            }
-            c.description = c.description.replaceAll('([E]', '( [E]');
+            if (noUpgradeWithSameName) c.name = stringDifference(c.name, up.name);
+            c.description = stringDifference(c.description, up.description).replaceAll('([E]', '( [E]');
             if (altUp != undefined) {
                 if (exportCards)
                     ctx.drawImage(await canvas.loadImage(up.hasOwnProperty('imgPath') ? altUp.imgPath+'.png' : (imgPath+'Star.png')), width*2, 0);
@@ -150,18 +162,18 @@ async function exportMod(modPath){
                 c.altDescription = altUp.description.replaceAll('([E]', '( [E]');
             }
         } else {
-            let multiUps = cards.filter(e => c.name != '' && e.name.startsWith(c.name) && e.name != c.name && e.name.includes('+') && !e.name.endsWith('+') && e.color == c.color); //find multi upgraded versions of card
             if (multiUps.length > 0) {
                 let i = 0;
                 let size = Math.ceil(Math.sqrt(multiUps.length));
                 if (exportCards) {
                     ctx.clearRect(width, 0, width, height);
                     for (let multiUp of multiUps)
-                        ctx.drawImage(await canvas.loadImage(multiUp.hasOwnProperty('imgPath') ? multiUp.imgPath+'.png' : (`${imgPath}Plus${multiUp.name[multiUp.name.length-1]}.png`)), width+(i%size)*(width/size), Math.floor(i++/size)*(height/size), width/size, height/size);
+                        ctx.drawImage(await canvas.loadImage(multiUp.hasOwnProperty('imgPath') ? multiUp.imgPath+'.png' : `${imgPath}Plus${multiUp.upgrades}.png`), width+(i%size)*(width/size), Math.floor(i++/size)*(height/size), width/size, height/size);
                 }
                 let diffs = multiUps.map(multiUp => diffWords(c.description, multiUp.description));
                 let diff = diffs[0];
                 c.description = '';
+                console.log(diffs)
                 for (let i in diff) {
                     i = Number(i);
                     let word = diff[i];
@@ -170,7 +182,8 @@ async function exportMod(modPath){
                     else if (word.added)
                         for (let cDiff of diffs) {
                             let cWord = cDiff[i];
-                            c.description += ` ( ${cWord.value.includes(':') ? ' ' : ''}${cWord.value.replace('\n', '')}${cWord.value.includes(':') ? ' ' : ''} )${cWord.value.includes('\n') ? '\n' : ''}${cWord.value.endsWith(' ') ? ' ' : ''}`;
+                            if (cWord)
+                                c.description += ` ( ${cWord.value.includes(':') ? ' ' : ''}${cWord.value.replace('\n', '')}${cWord.value.includes(':') ? ' ' : ''} )${cWord.value.includes('\n') ? '\n' : ''}${cWord.value.endsWith(' ') ? ' ' : ''}`;
                         }
                             
                     else if (word.removed) {

@@ -781,21 +781,6 @@ export default {
     },
 
     "Downfall": {
-        "pre": {
-            "add": {
-
-            },
-    
-            "edit": {
-                "cards": [
-                    {
-                        "where": {"name": "Darkling Trio+"},
-                        "to": {"name": "Darkling Duo+", "imgPath": "gamedata/export/downfall/card-images/Slimebound-DarklingsPlus"}
-                    }
-                ]
-            }
-        },
-
         "post": {
             "add": {
                 "bosss": [
@@ -1308,7 +1293,7 @@ export default {
                         "character": "Slimebound",
                         "options": [
                             ["Fight", null, "r/Fight Darklings. g/Gain card reward."],
-                            ["Recruit", "requires a rare card", "r/Lose n/(rare card chosen at random) g/Obtain Darklings."]
+                            ["Recruit", "requires a rare card", "r/Lose n/(rare card chosen at random) g/Obtain Darkling Duo."]
                         ]
                     },
             
@@ -1349,11 +1334,6 @@ export default {
                     {
                         "where": {"name": "Gremlin Dance"},
                         "to": {"description": desc => desc.replace('Has a bonus effect based on which Gremlin you are.', 'If Sneaky: Draw 2 cards.\nIf Mad: Deals to ALL enemies.\nIf Shield: Gain 6 Block.\nIf Fat: Enemy loses 2 Strength this turn.\nIf Wizard: Gain 2 gremlin:Wiz.')}
-                    },
-    
-                    {
-                        "where": {"name": "Darkling Duo"},
-                        "to": {"name": "Darkling Duo (Trio)", "img": "/Downfall/cards/Colorless-DarklingDuo.png"}
                     },
     
                     {
@@ -1572,38 +1552,6 @@ export default {
                         "to": {"description": "At the start of your turn, add the following cards with Ethereal and Exhaust to your hand:\n\nBellow (0 [E] ): Gain 2 (3) Strength for each enemy that does not intend to Attack.\nSkull Bash (1 [E] ): Deal 6 (8) damage. Apply 2 Vulnerable.\nRush (1 [E] ): Deal 14 (16) damage.\n\nYou can no longer :Swap. When you would lose all :Temporary :HP, prevent further damage and revert back."}
                     }
                 ],
-            }
-        }
-    },
-
-    "The Packmaster": {
-        "pre": {
-            "add": {
-
-            },
-
-            "edit": {
-                "cards": [
-                    {
-                        "where": {"name": "9 Ball"},
-                        "to": {"name": "8 Ball+", "imgPath": "gamedata/export/anniv5/card-images/Colorless-9Ball"}
-                    }
-                ]
-            }
-        },
-
-        "post": {
-            "add": {
-
-            },
-
-            "edit": {
-                "cards": [
-                    {
-                        "where": {"name": "8 Ball"},
-                        "to": {"name": "8 (9) Ball", "img": "/The Packmaster/cards/Colorless-8Ball.png"}
-                    },
-                ]
             }
         }
     },

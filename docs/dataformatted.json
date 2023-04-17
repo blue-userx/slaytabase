@@ -3542,22 +3542,12 @@
         },
         {
             "id": "bard:SixFourTime",
-            "name": "6/4 Time",
+            "name": "6 (8)/4 Time",
             "color": "Bard_color",
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "You can bard:Queue 2 additional bard:Notes.",
-            "mod": "Bard"
-        },
-        {
-            "id": "bard:SixFourTime",
-            "name": "8/4 Time",
-            "color": "Bard_color",
-            "rarity": "Uncommon",
-            "type": "Power",
-            "cost": "1",
-            "description": "You can bard:Queue 4 additional bard:Notes.",
+            "description": "You can bard:Queue 2 (4) additional bard:Notes.",
             "mod": "Bard"
         },
         {
@@ -3642,22 +3632,12 @@
         },
         {
             "id": "bard:Doot",
-            "name": "Doot",
+            "name": "Doot (Doot)",
             "color": "Bard_color",
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Choose a bard:Note to bard:Queue.",
-            "mod": "Bard"
-        },
-        {
-            "id": "bard:Doot",
-            "name": "Doot Doot",
-            "color": "Bard_color",
-            "rarity": "Uncommon",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Choose 2 bard:Notes to bard:Queue.",
+            "description": "Choose a (2) bard:Note (Notes) to bard:Queue.",
             "mod": "Bard"
         },
         {
@@ -3857,7 +3837,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Enemy cannot  (buff itself or ) debuff you for 3 turns.\nExhaust.",
+            "description": "Enemy cannot  (buff itself or) debuff you for 3 turns.\nExhaust.",
             "mod": "Bard"
         },
         {
@@ -3917,7 +3897,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Your next  (2 ) bard:Melody (Melodies) is (are) performed twice.",
+            "description": "Your next  (2) bard:Melody (Melodies) is (are) performed twice.",
             "mod": "Bard"
         },
         {
@@ -3927,7 +3907,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal damage equal to twice your Temporary_HP ( to ALL enemies).",
+            "description": "Deal damage equal to twice your Temporary_HP (to ALL enemies).",
             "mod": "Bard"
         },
         {
@@ -3938,16 +3918,6 @@
             "type": "Skill",
             "cost": "X",
             "description": "Gain bard:Inspiration X00. (Refund 1.)\n",
-            "mod": "Bard"
-        },
-        {
-            "id": "bard:Invisibility",
-            "name": "Greater Invisibility",
-            "color": "Bard_color",
-            "rarity": "Rare",
-            "type": "Skill",
-            "cost": "2",
-            "description": "Gain 1 Intangible.\nDraw 2 more cards next turn.\nExhaust.",
             "mod": "Bard"
         },
         {
@@ -3972,12 +3942,12 @@
         },
         {
             "id": "bard:Invisibility",
-            "name": "Invisibility",
+            "name": " (Greater) Invisibility",
             "color": "Bard_color",
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 1 Intangible.\nDraw 1 more card next turn.\nExhaust.",
+            "description": "Gain 1 Intangible.\nDraw 1 (2) more card (cards) next turn.\nExhaust.",
             "mod": "Bard"
         },
         {
@@ -4027,7 +3997,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": " ( Choose a bard:Note to bard:Queue. )\nPerform any bard:Melody you have the bard:Notes for, regardless of their order.",
+            "description": " (Choose a bard:Note to bard:Queue.)\nPerform any bard:Melody you have the bard:Notes for, regardless of their order.",
             "mod": "Bard"
         },
         {
@@ -14858,7 +14828,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "1",
-            "description": "The next attack (2)  (attacks ) you play stuns (stun) any enemy it (they) hits (hit) for 1 turn.\nExhaust.",
+            "description": "The next attack (2)  (attacks) you play stuns (stun) any enemy it (they) hits (hit) for 1 turn.\nExhaust.",
             "mod": "Infinite Spire"
         },
         {
@@ -14893,12 +14863,12 @@
         },
         {
             "id": "infinitespire:SevenWalls",
-            "name": "Seven Walls",
+            "name": "Seven (Unstable) Walls (Space-Time)",
             "color": "Infinite_black",
             "rarity": "Special",
             "type": "Attack",
             "cost": "2",
-            "description": "Gain 15 Block.\nDeal 15 damage.",
+            "description": "Gain 15 (20)  (Temporary_HP (Effected by) Block (modifiers)).\nDeal 15 (20) damage.",
             "mod": "Infinite Spire"
         },
         {
@@ -14929,16 +14899,6 @@
             "type": "Power",
             "cost": "5",
             "description": "Gain 2 (3) Strength and Dexterity each turn.\nIf you have orb slots gain 2 (3) Focus each turn.",
-            "mod": "Infinite Spire"
-        },
-        {
-            "id": "infinitespire:SevenWalls",
-            "name": "Unstable Space-Time",
-            "color": "Infinite_black",
-            "rarity": "Special",
-            "type": "Attack",
-            "cost": "2",
-            "description": "Gain 20 Temporary_HP (Effected by Block modifiers).\nDeal 20 damage.",
             "mod": "Infinite Spire"
         },
         {
@@ -16538,7 +16498,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 8 damage.\nIf this card is Exhausted, increase its damage by 4 and place it back into your hand. ( It costs 0 until played.)",
+            "description": "Deal 8 damage.\nIf this card is Exhausted, increase its damage by 4 and place it back into your hand. (It costs 0 until played.)",
             "mod": "Replay The Spire"
         },
         {
@@ -16658,7 +16618,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "X",
-            "description": "Upgrade a Skill or Attack in your hand X (+)  (1 ) times.\nRefund 1.\nExhaust.",
+            "description": "Upgrade a Skill or Attack in your hand X (+)  (1) times.\nRefund 1.\nExhaust.",
             "mod": "Replay The Spire"
         },
         {
@@ -16748,7 +16708,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "Each time you discard a card during your turn, add 1  (Upgraded ) Shiv to your hand.",
+            "description": "Each time you discard a card during your turn, add 1  (Upgraded) Shiv to your hand.",
             "mod": "Replay The Spire"
         },
         {
@@ -16808,7 +16768,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 2 (4) Block.\nAt the start of your next turn, Stun a random enemy ( and draw 1 card).\nExhaust.",
+            "description": "Gain 2 (4) Block.\nAt the start of your next turn, Stun a random enemy (and draw 1 card).\nExhaust.",
             "mod": "Replay The Spire"
         },
         {
@@ -16848,7 +16808,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "Convert (Enemy)  (loses ) all Poison (.) on (Apply) all (Necrotic) enemies (Poison)  (equal ) to Necrotic (the) Poison (amount lost to ALL enemies).\nExhaust.",
+            "description": "Convert (Enemy)  (loses) all Poison (.) on (Apply) all (Necrotic) enemies (Poison)  (equal) to Necrotic (the) Poison (amount lost to ALL enemies).\nExhaust.",
             "mod": "Replay The Spire"
         },
         {
@@ -16888,7 +16848,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Gain 1 Focus.\nAdd (Exhaustive)  ( 3.Startup: add  )\n 1 Dazed to your discard pile.\n~~- Exhaustive 2. -~~ ",
+            "description": "Gain 1 Focus.\nAdd (Exhaustive)  (3.Startup: add )\n 1 Dazed to your discard pile.\n~~- Exhaustive 2. -~~ ",
             "mod": "Replay The Spire"
         },
         {
@@ -17368,7 +17328,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Exhaust any number of cards in your hand.\nAdd a random  (Upgraded ) Rare card to your hand for each.\nExhaust.",
+            "description": "Exhaust any number of cards in your hand.\nAdd a random  (Upgraded) Rare card to your hand for each.\nExhaust.",
             "mod": "Replay The Spire"
         },
         {
@@ -17378,7 +17338,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "0",
-            "description": "Deal damage equal to the number of cards you've Exhausted this combat ( to ALL enemies).\nGrave.",
+            "description": "Deal damage equal to the number of cards you've Exhausted this combat (to ALL enemies).\nGrave.",
             "mod": "Replay The Spire"
         },
         {
@@ -17398,7 +17358,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "4",
-            "description": "Gain 1 (2) Artifact.\nGain 1 (2) Dexterity.\nGain  (1 Intangible.Gain )\n 5 Plated Armor.\nGain 5 (8) Shielding.",
+            "description": "Gain 1 (2) Artifact.\nGain 1 (2) Dexterity.\nGain  (1 Intangible.Gain)\n 5 Plated Armor.\nGain 5 (8) Shielding.",
             "mod": "Replay The Spire"
         },
         {
@@ -17463,12 +17423,12 @@
         },
         {
             "id": "ReplayTheSpireMod:Faulty Equipment",
-            "name": "Faulty Equipment",
+            "name": "Faulty (Untested) Equipment (Repairs)",
             "color": "Curse",
             "rarity": "Curse",
             "type": "Curse",
-            "cost": "",
-            "description": "Unplayable.\nSoulbound.",
+            "cost": " (0)",
+            "description": "Unplayable (Fleeting).\n~~- Soulbound. -~~ ",
             "mod": "Replay The Spire"
         },
         {
@@ -17559,16 +17519,6 @@
             "type": "Curse",
             "cost": "",
             "description": "Unplayable.\nAt the end of your turn, duplicate all other Status and Curse cards in your hand.",
-            "mod": "Replay The Spire"
-        },
-        {
-            "id": "ReplayTheSpireMod:Faulty Equipment",
-            "name": "Untested Repairs",
-            "color": "Curse",
-            "rarity": "Curse",
-            "type": "Curse",
-            "cost": "0",
-            "description": "Fleeting.",
             "mod": "Replay The Spire"
         },
         {
@@ -18368,7 +18318,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Gain 3 (4) Strength.\nLose 10 HP. At the end of combat, heal the HP lost by this card.",
+            "description": "Ethereal.\nInnate.\nGain 3 (4) Strength.\nLose 10 HP. At the end of combat, heal the HP lost by this card.",
             "mod": "Ruina"
         },
         {
@@ -18378,7 +18328,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "1",
-            "description": "At the start of your turn, reduce the cost of the highest cost card in your hand to 0 this combat and give it Exhaust.",
+            "description": " (Innate.)\nAt the start of your turn, reduce the cost of the highest cost card in your hand to 0 this combat and give it Exhaust.",
             "mod": "Ruina"
         },
         {
@@ -18408,7 +18358,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "1",
-            "description": "Whenever you play 5 Attacks, deal 20 damage to ALL enemies.",
+            "description": " (Innate.)\nWhenever you play 5 Attacks, deal 20 damage to ALL enemies.",
             "mod": "Ruina"
         },
         {
@@ -18428,7 +18378,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 8 damage to ALL enemies.\nUpgrade this card permanently.\nCan be Upgraded 5 times.",
+            "description": "Deal 8 (10) (13) (17) (22) (8) damage to ALL enemies.\nUpgrade this card permanently.\nCan be Upgraded 5 times.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18438,7 +18388,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "4 (3)",
-            "description": "Deal 20 damage.\nTake an extra turn after this one.\nIf this card killed an enemy, gain [E] [E] next turn.",
+            "description": "Deal 20 damage.\nTake an extra turn after this one.\nIf this card killed an enemy, gain [E] [E] next turn.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18448,7 +18398,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Choose one:\nDraw 1 card for every enemy in combat.\nDraw 2 (3) cards and Exhaust.",
+            "description": " (Innate.)\nChoose one:\nDraw 1 card for every enemy in combat.\nDraw 2 (3) cards and Exhaust.",
             "mod": "Ruina"
         },
         {
@@ -18458,7 +18408,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "Whenever you deal unblocked attack damage to an enemy, it loses that much HP.",
+            "description": " (Retain.)\nWhenever you deal unblocked attack damage to an enemy, it loses that much HP.",
             "mod": "Ruina"
         },
         {
@@ -18468,27 +18418,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Next turn, put ALL non-Status non-Curse cards from your exhaust pile into your hand and give them Ethereal.",
-            "mod": "Ruina"
-        },
-        {
-            "id": "ruina:DaCapo",
-            "name": "Finale",
-            "color": "Ego",
-            "rarity": "Rare",
-            "type": "Attack",
-            "cost": "1",
-            "description": "Deal 28 damage and apply 2 Vulnerable to ALL enemies.",
-            "mod": "Ruina"
-        },
-        {
-            "id": "ruina:DaCapo",
-            "name": "First Movement",
-            "color": "Ego",
-            "rarity": "Rare",
-            "type": "Attack",
-            "cost": "1",
-            "description": "Deal 10 damage to ALL enemies.\nUpgrade this card permanently.\nCan be Upgraded 5 times.",
+            "description": " (Retain.)\nNext turn, put ALL non-Status non-Curse cards from your exhaust pile into your hand and give them Ethereal.\nPurge.",
             "mod": "Ruina"
         },
         {
@@ -18502,23 +18432,13 @@
             "mod": "Ruina"
         },
         {
-            "id": "ruina:DaCapo",
-            "name": "Fourth Movement",
-            "color": "Ego",
-            "rarity": "Rare",
-            "type": "Attack",
-            "cost": "1",
-            "description": "Deal 22 damage to ALL enemies.\nUpgrade this card permanently.\nCan be Upgraded 5 times.",
-            "mod": "Ruina"
-        },
-        {
             "id": "ruina:Fragments",
             "name": "Fragments from Somewhere",
             "color": "Ego",
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Steal the enemy's Block.\nDeal 17 (20) damage.\nApply 1 (2) Weak.",
+            "description": "Retain.\nSteal the enemy's Block.\nDeal 17 (20) damage.\nApply 1 (2) Weak.",
             "mod": "Ruina"
         },
         {
@@ -18528,7 +18448,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "0",
-            "description": "At the start of your turn, gain [E] , draw 1 card, and ruina:Freeze 1 card.",
+            "description": " (Innate.)\nAt the start of your turn, gain [E] , draw 1 card, and ruina:Freeze 1 card.",
             "mod": "Ruina"
         },
         {
@@ -18558,7 +18478,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "0",
-            "description": "The first time you deal 15 unblocked attack damage each turn, gain [E] next turn.",
+            "description": " (Innate.)\nThe first time you deal 15 unblocked attack damage each turn, gain [E] next turn.",
             "mod": "Ruina"
         },
         {
@@ -18568,7 +18488,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 11 (16) damage.\nGain 1 Strength.\nIf Fatal, permanantly increase this card's Strength gain by 1.",
+            "description": "Innate.\nDeal 11 (16) damage.\nGain 1 Strength.\nIf Fatal, permanantly increase this card's Strength gain by 1.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18628,7 +18548,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "If the enemy's HP is at or below 30%, kill it.\nEnemy loses 11 HP.",
+            "description": "~~- Ethereal. -~~\nIf the enemy's HP is at or below 30%, kill it.\nEnemy loses 11 HP.",
             "mod": "Ruina"
         },
         {
@@ -18638,7 +18558,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "The first 0 or 1 cost card you play each turn is played twice.",
+            "description": " (Retain.)\nThe first 0 or 1 cost card you play each turn is played twice.",
             "mod": "Ruina"
         },
         {
@@ -18658,7 +18578,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 10 damage.\nExhaust up to 2 cards. For each Attack Exhausted, add its base damage to this card's damage.\nShuffle this card into your draw pile.",
+            "description": " (Retain.)\nDeal 10 damage.\nExhaust up to 2 cards. For each Attack Exhausted, add its base damage to this card's damage.\nShuffle this card into your draw pile.",
             "mod": "Ruina"
         },
         {
@@ -18668,7 +18588,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Enemy receives double damage from attacks this turn. (Gain 2 Strength this turn.)\n",
+            "description": "Retain.\nEnemy receives double damage from attacks this turn. (Gain 2 Strength this turn.)\n",
             "mod": "Ruina"
         },
         {
@@ -18678,7 +18598,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "0",
-            "description": "Deal 8 damage.\nDraw 2 cards.\nIncrease this card's cost by 1 this combat.",
+            "description": " (Retain.)\nDeal 8 damage.\nDraw 2 cards.\nIncrease this card's cost by 1 this combat.",
             "mod": "Ruina",
             "altDescription": "Deal 8 damage.\nDraw 2 cards.\nIncrease this card's cost and draw by 1 this combat."
         },
@@ -18689,7 +18609,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "3",
-            "description": "Deal 13 (16) damage. Heal HP equal to unblocked damage.",
+            "description": "Deal 13 (16) damage. Heal HP equal to unblocked damage.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18699,7 +18619,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "ALL enemies lose 2 (3) Strength.\nIf you have no cards in hand, this effect is doubled.",
+            "description": "ALL enemies lose 2 (3) Strength.\nIf you have no cards in hand, this effect is doubled.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18709,7 +18629,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "ruina:Manifest.\nGain 5 (7) Block.\nGain 3 (4) Regen.\nGain Artifact equal to the [E] paid for by ruina:Manifest.",
+            "description": "ruina:Manifest.\nGain 5 (7) Block.\nGain 3 (4) Regen.\nGain Artifact equal to the [E] paid for by ruina:Manifest.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18729,7 +18649,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1 (0)",
-            "description": "Heal 8 HP.\nRemove all of your debuffs.",
+            "description": "Heal 8 HP.\nRemove all of your debuffs.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18759,7 +18679,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 13 (16) damage.\nDeal 13 (16) damage again for each Status and Curse in your hand.",
+            "description": "Retain.\nDeal 13 (16) damage.\nDeal 13 (16) damage again for each Status and Curse in your hand.",
             "mod": "Ruina"
         },
         {
@@ -18769,7 +18689,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "4",
-            "description": "ruina:Manifest.\nDeal 25 damage.\nApply 3 Weak and Vulnerable.",
+            "description": " (Retain.)\nruina:Manifest.\nDeal 25 damage.\nApply 3 Weak and Vulnerable.",
             "mod": "Ruina"
         },
         {
@@ -18783,23 +18703,13 @@
             "mod": "Ruina"
         },
         {
-            "id": "ruina:DaCapo",
-            "name": "Second Movement",
-            "color": "Ego",
-            "rarity": "Rare",
-            "type": "Attack",
-            "cost": "1",
-            "description": "Deal 13 damage to ALL enemies.\nUpgrade this card permanently.\nCan be Upgraded 5 times.",
-            "mod": "Ruina"
-        },
-        {
             "id": "ruina:Smile",
             "name": "Smile",
             "color": "Ego",
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 16 (20) damage and apply 2 (3) Weak and Vulnerable to ALL enemies.",
+            "description": "Innate.\nDeal 16 (20) damage and apply 2 (3) Weak and Vulnerable to ALL enemies.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18809,7 +18719,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "3 (2)",
-            "description": "ruina:Manifest.\nGain 1 Intangible.\nIf this card's cost was only paid by ruina:Manifest, add a copy of it into your discard pile.",
+            "description": "Ethereal.\nruina:Manifest.\nGain 1 Intangible.\nIf this card's cost was only paid by ruina:Manifest, add a copy of it into your discard pile.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18819,7 +18729,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "3 (2)",
-            "description": "Deal 10 damage to ALL enemies.\nThis card's damage is increased by the amount of Block you've gained this combat.",
+            "description": "Deal 10 damage to ALL enemies.\nThis card's damage is increased by the amount of Block you've gained this combat.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18843,23 +18753,13 @@
             "mod": "Ruina"
         },
         {
-            "id": "ruina:DaCapo",
-            "name": "Third Movement",
-            "color": "Ego",
-            "rarity": "Rare",
-            "type": "Attack",
-            "cost": "1",
-            "description": "Deal 17 damage to ALL enemies.\nUpgrade this card permanently.\nCan be Upgraded 5 times.",
-            "mod": "Ruina"
-        },
-        {
             "id": "ruina:Thirst",
             "name": "Thirst",
             "color": "Ego",
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Apply 6 ruina:Bleed.\nThis turn, whenever you attack an enemy with ruina:Bleed, gain 1 Strength.",
+            "description": " (Retain.)\nApply 6 ruina:Bleed.\nThis turn, whenever you attack an enemy with ruina:Bleed, gain 1 Strength.",
             "mod": "Ruina"
         },
         {
@@ -18889,7 +18789,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "X",
-            "description": "Exhaust up to X cards.\nHeal HP and gain Dexterity equal to their combined costs.",
+            "description": " (Retain.)\nExhaust up to X cards.\nHeal HP and gain Dexterity equal to their combined costs.\nExhaust.",
             "mod": "Ruina"
         },
         {
@@ -18899,7 +18799,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Gain [E] [E] .\nAdd 1 Wound with Retain to your hand.",
+            "description": " (Retain.)\nGain [E] [E] .\nAdd 1 Wound with Retain to your hand.",
             "mod": "Ruina"
         },
         {
@@ -24253,16 +24153,6 @@
             "mod": "The Adventurer"
         },
         {
-            "id": "fishing:FullHouse",
-            "name": "Four of a Kind",
-            "color": "Fishing_color",
-            "rarity": "Rare",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Choose a card in your draw pile.\nShuffle 3 fishing:Foil copies into your draw pile.\nExhaust.",
-            "mod": "The Adventurer"
-        },
-        {
             "id": "fishing:GoneFishing",
             "name": "Gone Fishing",
             "color": "Fishing_color",
@@ -24344,12 +24234,12 @@
         },
         {
             "id": "fishing:FullHouse",
-            "name": "Three of a Kind",
+            "name": "Three (Four) of a Kind",
             "color": "Fishing_color",
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Choose a card in your draw pile.\nShuffle 2 fishing:Foil copies into your draw pile.\nExhaust.",
+            "description": "Choose a card in your draw pile.\nShuffle 2 (3) fishing:Foil copies into your draw pile.\nExhaust.",
             "mod": "The Adventurer"
         },
         {
@@ -31659,7 +31549,7 @@
             "rarity": "Curse",
             "type": "Curse",
             "cost": "",
-            "description": "Unplayable.\nWhen this is drawn, shuffle a Doubt, Regret and Shame into your draw pile.",
+            "description": "Ethereal.\nUnplayable.\nWhen this is drawn, shuffle a Doubt, Regret and Shame into your draw pile.",
             "mod": "The Human"
         },
         {
@@ -31669,7 +31559,7 @@
             "rarity": "Curse",
             "type": "Curse",
             "cost": "",
-            "description": "Unplayable.\nWhen you draw this, lose 3 Health.",
+            "description": "Ethereal.\nUnplayable.\nWhen you draw this, lose 3 Health.",
             "mod": "The Human"
         },
         {
@@ -31679,7 +31569,7 @@
             "rarity": "Curse",
             "type": "Curse",
             "cost": "",
-            "description": "When drawn, Exhaust a random card in your hand.",
+            "description": "Ethereal.\nWhen drawn, Exhaust a random card in your hand.",
             "mod": "The Human"
         },
         {
@@ -31699,7 +31589,7 @@
             "rarity": "Basic",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 6 damage. ( Apply 1 thehuman:Injured. )\n",
+            "description": "Deal 6 damage. (Apply 1 thehuman:Injured.)\n",
             "mod": "The Human"
         },
         {
@@ -31709,7 +31599,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 6 (9) damage and apply 2 thehuman:Injured to an enemy.\nIf this card is discarded, deal 6 (9) damage to ALL enemies.",
+            "description": " (Retain.)\nDeal 6 (9) damage and apply 2 thehuman:Injured to an enemy.\nIf this card is discarded, deal 6 (9) damage to ALL enemies.",
             "mod": "The Human"
         },
         {
@@ -31719,7 +31609,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "thehuman:Uncover 2 cards.",
+            "description": " (Retain.)\nthehuman:Uncover 2 cards.",
             "mod": "The Human"
         },
         {
@@ -31729,7 +31619,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "thehuman:Shoot (11 (14) (17) (20) (23) (26) (29) x 1, 10 (12) (14) (16) (18) (20) (22) %) an enemy.\nMastery 7.\nthehuman:Inventory.",
+            "description": "Retain.\nthehuman:Shoot (11 (14) (17) (20) (23) (26) (29) (32) (35) (38) x 1, 10 (12) (14) (16) (18) (20) (22) (24) (26) (28) %) an enemy.\nMastery 7.\nthehuman:Inventory.",
             "mod": "The Human"
         },
         {
@@ -31743,23 +31633,13 @@
             "mod": "The Human"
         },
         {
-            "id": "theHuman:Berreta92",
-            "name": "Codename: \"Fearless\"",
-            "color": "Human_color",
-            "rarity": "Common",
-            "type": "Attack",
-            "cost": "1",
-            "description": "thehuman:Shoot ( 32 x 1, 24 % ) an enemy.\nObtain a random Positive Effect twice.\nthehuman:Inventory.",
-            "mod": "The Human"
-        },
-        {
             "id": "theHuman:Confused",
             "name": "Confused",
             "color": "Human_color",
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Discard 2 cards.\nSet the cost of a random card in your hand to 0 this turn.",
+            "description": "Discard 2 cards.\nSet the cost of a random card in your hand to 0 this turn.\n~~- Exhaust. -~~ ",
             "mod": "The Human"
         },
         {
@@ -31799,7 +31679,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 1  (Regen and ) Dexterity.\nRestore 1 Health.\nLifestyle: Draw a card next turn.",
+            "description": "Gain 1  (Regen and) Dexterity.\nRestore 1 Health.\nLifestyle: Draw a card next turn.",
             "mod": "The Human"
         },
         {
@@ -31819,7 +31699,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Gain 1 Strength.\nDeal 3 (6) damage and apply 1 thehuman:Injured to an enemy.",
+            "description": "Gain 1 Strength.\nDeal 3 (6) damage and apply 1 thehuman:Injured to an enemy.\n~~- Exhaust. -~~ ",
             "mod": "The Human"
         },
         {
@@ -31869,7 +31749,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "0",
-            "description": "Deal 2 (4) damage.\nDraw a card.\nTechnique: Deal 2 (4) additional damage.",
+            "description": "Deal 2 (4) damage.\nDraw a card.\nTechnique: Deal 2 (4) additional damage.\n~~- Exhaust. -~~ ",
             "mod": "The Human"
         },
         {
@@ -31899,7 +31779,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "2",
-            "description": "Apply 2 Weak, Frail and Vulnerable to an enemy.\nPacifist: Apply 99 Weak, Frail and Vulnerable instead.",
+            "description": " (Retain.)\nApply 2 Weak, Frail and Vulnerable to an enemy.\nPacifist: Apply 99 Weak, Frail and Vulnerable instead.",
             "mod": "The Human"
         },
         {
@@ -31909,7 +31789,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Find 1 thehuman:Junk.\nGain 10 (16) Gold.",
+            "description": "Find 1 thehuman:Junk.\nGain 10 (16) Gold.\nExhaust.",
             "mod": "The Human"
         },
         {
@@ -31939,7 +31819,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Draw a thehuman:Weapon. ( thehuman:Shoot ( 1 x 6, 4 % ) a random enemy. )\n",
+            "description": "Draw a thehuman:Weapon.\nExhaust (thehuman:Shoot (1 x 6, 4 %) a random enemy).",
             "mod": "The Human"
         },
         {
@@ -31949,7 +31829,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Draw a card.\nIf this card is discarded, draw 3 (4) cards and restore 3 (4) Health.",
+            "description": " (Retain.)\nDraw a card.\nIf this card is discarded, draw 3 (4) cards and restore 3 (4) Health.",
             "mod": "The Human"
         },
         {
@@ -31989,7 +31869,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2 (1)",
-            "description": "Apply 1 Ageing to all enemies.\nPacifist: Gain 10 Block.",
+            "description": "Innate.\nApply 1 Ageing to all enemies.\nPacifist: Gain 10 Block.\nExhaust.",
             "mod": "The Human"
         },
         {
@@ -31999,7 +31879,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "2 (1)",
-            "description": "At the start of your turn, gain 1 Strength and discard 1 card.",
+            "description": " (Innate.)\nAt the start of your turn, gain 1 Strength and discard 1 card.",
             "mod": "The Human"
         },
         {
@@ -32009,7 +31889,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Discard any number of cards from your hand.\nFor each card discarded, gain 1 Temporary Strength.",
+            "description": " (Retain.)\nDiscard any number of cards from your hand.\nFor each card discarded, gain 1 Temporary Strength.",
             "mod": "The Human"
         },
         {
@@ -32029,7 +31909,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "2 (1)",
-            "description": "At the start of your turn, add a random thehuman:Weapon to your hand.\nIt Purges when used and at the end of your turn.",
+            "description": " (Innate.)\nAt the start of your turn, add a random thehuman:Weapon to your hand.\nIt Purges when used and at the end of your turn.",
             "mod": "The Human"
         },
         {
@@ -32039,7 +31919,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Apply 1 Ageing and 2 thehuman:Injured to ALL enemies.",
+            "description": "Apply 1 Ageing and 2 thehuman:Injured to ALL enemies.\n~~- Exhaust. -~~ ",
             "mod": "The Human"
         },
         {
@@ -32049,17 +31929,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "3 (2)",
-            "description": "Gain 10 (15) Block.\nAt the start of your turn, draw a card and gain 1 energy.",
-            "mod": "The Human"
-        },
-        {
-            "id": "theHuman:Glock17",
-            "name": "Codename: \"Ghost\"",
-            "color": "Human_color",
-            "rarity": "Uncommon",
-            "type": "Attack",
-            "cost": "1",
-            "description": "thehuman:Shoot ( 34 x 1, 31 % ) an enemy.\nthehuman:Shoot ( 10 x 1, 100 % ) 3 random enemies with Unblockable bullets.\nthehuman:Inventory.",
+            "description": " (Retain.)\nGain 10 (15) Block.\nAt the start of your turn, draw a card and gain 1 energy.",
             "mod": "The Human"
         },
         {
@@ -32069,7 +31939,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Add a Pocket Pistol to your hand.",
+            "description": " (Retain.)\nAdd a Pocket Pistol to your hand.",
             "mod": "The Human"
         },
         {
@@ -32079,7 +31949,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "2",
-            "description": "Gain 4 (5) thehuman:Healthiness.",
+            "description": " (Innate.)\nGain 4 (5) thehuman:Healthiness.",
             "mod": "The Human"
         },
         {
@@ -32089,7 +31959,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Apply 3 Weak to an enemy.\nPacifist: Also remove all its buffs.",
+            "description": " (Retain.)\nApply 3 Weak to an enemy.\nPacifist: Also remove all its buffs.",
             "mod": "The Human"
         },
         {
@@ -32104,12 +31974,12 @@
         },
         {
             "id": "theHuman:DoubleTap",
-            "name": "Double Tap",
+            "name": "Double (Triple) Tap (+)",
             "color": "Human_color",
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "The next time you thehuman:Shoot an enemy, thehuman:Shoot them again with the same thehuman:Weapon.",
+            "description": " (Retain.)\nThe next time you thehuman:Shoot an enemy, thehuman:Shoot them again with the same thehuman:Weapon (2 times).",
             "mod": "The Human"
         },
         {
@@ -32119,7 +31989,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "If you have more than 18 (15) thehuman:Healthiness, take another turn after this one.\nDraw a card.\nExhaustive 2.",
+            "description": " (Retain.)\nIf you have more than 18 (15) thehuman:Healthiness, take another turn after this one.\nDraw a card.\nExhaustive 2.",
             "mod": "The Human"
         },
         {
@@ -32139,7 +32009,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "thehuman:Shoot (10 (13) (16) (19) (22) (25) (28) (31) x 1, 15 (17) (19) (21) (23) (25) (27) (29) %) an enemy.\nMastery 8.\nthehuman:Inventory.",
+            "description": "Retain.\nthehuman:Shoot (10 (13) (16) (19) (22) (25) (28) (31) (34) (37) x 1, 15 (17) (19) (21) (23) (25) (27) (29) (31) (33) %) an enemy.\nMastery 8.\nthehuman:Inventory.",
             "mod": "The Human"
         },
         {
@@ -32159,7 +32029,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Draw 2 cards.\nIf your hand has no duplicates, draw triple this amount instead ( and gain 1 energy).",
+            "description": "Draw 2 cards.\nIf your hand has no duplicates, draw triple this amount instead (and gain 1 energy).",
             "mod": "The Human"
         },
         {
@@ -32169,7 +32039,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Remove all Attacks and this card from your deck permanently.\nDraw a card.\nPacifist: Draw 5 cards instead.",
+            "description": "Remove all Attacks and this card from your deck permanently.\nDraw a card.\nPacifist: Draw 5 cards instead.\nPurge.",
             "mod": "The Human"
         },
         {
@@ -32189,7 +32059,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2 (1)",
-            "description": "Gain 2 thehuman:Healthiness. Find 2 thehuman:Junk.",
+            "description": " (Retain.)\nGain 2 thehuman:Healthiness. Find 2 thehuman:Junk.",
             "mod": "The Human"
         },
         {
@@ -32199,7 +32069,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "3 (2)",
-            "description": "Put an enemy to sleep for 2 turns.\nPacifist: Restore 5 Health.",
+            "description": "Put an enemy to sleep for 2 turns.\nPacifist: Restore 5 Health.\nExhaust.",
             "mod": "The Human"
         },
         {
@@ -32209,7 +32079,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 5 (7) damage and apply 5 Poison and 2 Weak to ALL enemies.\nAdd a Tired to your draw pile.\nLifestyle: Gain 1 Thorns.",
+            "description": " (Retain.)\nDeal 5 (7) damage and apply 5 Poison and 2 Weak to ALL enemies.\nAdd a Tired to your draw pile.\nLifestyle: Gain 1 Thorns.",
             "mod": "The Human"
         },
         {
@@ -32249,7 +32119,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "At the start of your turn, choose 1 card from the discard pile and return it to your hand.",
+            "description": " (Innate.)\nAt the start of your turn, choose 1 card from the discard pile and return it to your hand.",
             "mod": "The Human"
         },
         {
@@ -32259,7 +32129,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2 (1)",
-            "description": "Add 1 Revolver, 1 Pepper Spray, 1 Kung Fu! and 1 Defend to your hand.",
+            "description": " (Retain.)\nAdd 1 Revolver, 1 Pepper Spray, 1 Kung Fu! and 1 Defend to your hand.\nExhaust.",
             "mod": "The Human"
         },
         {
@@ -32269,7 +32139,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "While this is in your hand, whenever you thehuman:Shoot a thehuman:Weapon, thehuman:Shoot (4 x 2, 10% ) a random enemy.\nExhaust ALL Empty Cartridges in your draw pile.",
+            "description": " (Retain.)\nWhile this is in your hand, whenever you thehuman:Shoot a thehuman:Weapon, thehuman:Shoot (4 x 2, 10%) a random enemy.\nExhaust ALL Empty Cartridges in your draw pile.",
             "mod": "The Human"
         },
         {
@@ -32319,7 +32189,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "0",
-            "description": "When drawn, deal 4 damage to a random enemy.\nDeal 6 (9) thehuman:Unblockable damage to an enemy.\nDraw a card.",
+            "description": "Ethereal.\nWhen drawn, deal 4 damage to a random enemy.\nDeal 6 (9) thehuman:Unblockable damage to an enemy.\nDraw a card.\nExhaust.",
             "mod": "The Human"
         },
         {
@@ -32339,7 +32209,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "thehuman:Shoot (6 (7) (8) (9) (10) (11) (12) (13) (14) (15) x 4, 11 (12) (13) (14) (15) (16) (17) (18) (19) (20) %) an enemy.\nMastery 12.\nthehuman:Inventory.",
+            "description": "Retain.\nthehuman:Shoot (6 (7) (8) (9) (10) (11) (12) (13) (14) (15) x 4, 11 (12) (13) (14) (15) (16) (17) (18) (19) (20) %) an enemy.\nMastery 12.\nthehuman:Inventory.",
             "mod": "The Human"
         },
         {
@@ -32349,7 +32219,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "thehuman:Shoot (40 (44) (48) (52) (56) (60) (64) (68) (72) (76) x 1, 68 (71) (74) (77) (80) (83) (86) (89) (92) (95) %) an enemy.\nNext turn, deal 10 damage to the same enemy.\nMastery 10.\nthehuman:Inventory.",
+            "description": "Retain.\nthehuman:Shoot (40 (44) (48) (52) (56) (60) (64) (68) (72) (76) x 1, 68 (71) (74) (77) (80) (83) (86) (89) (92) (95) %) an enemy.\nNext turn, deal 10 damage to the same enemy.\nMastery 10.\nthehuman:Inventory.",
             "mod": "The Human"
         },
         {
@@ -32359,17 +32229,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "Add 2 Birthday Presents to your hand.",
-            "mod": "The Human"
-        },
-        {
-            "id": "theHuman:DesertEagle",
-            "name": "Codename: \"Guardian\"",
-            "color": "Human_color",
-            "rarity": "Rare",
-            "type": "Attack",
-            "cost": "1",
-            "description": "thehuman:Shoot ( 48 x 1, 69 % ) an enemy.\nExhaust ALL other cards in your hand.\nRestore 1000 Health.\nthehuman:Inventory.",
+            "description": " (Retain.)\nAdd 2 Birthday Presents to your hand.",
             "mod": "The Human"
         },
         {
@@ -32379,7 +32239,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3 (2)",
-            "description": "Whenever you play an Attack, find 1 thehuman:Junk.",
+            "description": " (Innate.)\nWhenever you play an Attack, find 1 thehuman:Junk.",
             "mod": "The Human"
         },
         {
@@ -32389,7 +32249,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "For each Attack played this combat, deal 8 (12) damage to an enemy.\nTechnique: Deal this damage to ALL enemies instead.",
+            "description": "For each Attack played this combat, deal 8 (12) damage to an enemy.\nTechnique: Deal this damage to ALL enemies instead.\n~~- Exhaust. -~~ ",
             "mod": "The Human"
         },
         {
@@ -32399,7 +32259,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "1",
-            "description": "thehuman:Shoot (12 (16) (20) (24) (28) (32) (36) (40) (44) x 1, 33 (37) (41) (45) (49) (53) (57) (61) (65) %) an enemy.\nMastery 9.\nthehuman:Inventory.",
+            "description": "Retain.\nthehuman:Shoot (12 (16) (20) (24) (28) (32) (36) (40) (44) (48) x 1, 33 (37) (41) (45) (49) (53) (57) (61) (65) (69) %) an enemy.\nMastery 9.\nthehuman:Inventory.",
             "mod": "The Human"
         },
         {
@@ -32419,7 +32279,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "Whenever you thehuman:Shoot a thehuman:Weapon, thehuman:Shoot another random thehuman:Weapon in your draw pile.",
+            "description": " (Innate.)\nWhenever you thehuman:Shoot a thehuman:Weapon, thehuman:Shoot another random thehuman:Weapon in your draw pile.",
             "mod": "The Human"
         },
         {
@@ -32439,7 +32299,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3 (2)",
-            "description": "At the start of your turn, Fetch 1.",
+            "description": " (Innate.)\nAt the start of your turn, Fetch 1.",
             "mod": "The Human"
         },
         {
@@ -32449,7 +32309,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": " (Draw a card with \"Slap\" in its name.)\nWhenever you play a card with \"Slap\" in its name, play it again with random targets ( and draw a card).",
+            "description": " (Retain.Draw a card with \"Slap\" in its name.\n)\nWhenever you play a card with \"Slap\" in its name, play it again with random targets (and draw a card).",
             "mod": "The Human"
         },
         {
@@ -32459,7 +32319,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "Whenever you play a thehuman:Junk card, thehuman:Uncover a card.",
+            "description": " (Innate.)\nWhenever you play a thehuman:Junk card, thehuman:Uncover a card.",
             "mod": "The Human"
         },
         {
@@ -32479,7 +32339,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "thehuman:Uncover 3 (4) cards.\nLifestyle: Uncover a card.",
+            "description": "Retain.\nthehuman:Uncover 3 (4) cards.\nLifestyle: Uncover a card.\n~~- Exhaust. -~~ ",
             "mod": "The Human"
         },
         {
@@ -32489,7 +32349,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "5 (4)",
-            "description": "Fetch 1 (2) card (cards) from your draw pile.\nReduce the cost of ALL cards to 0 this turn.",
+            "description": "Retain.\nFetch 1 (2) card (cards) from your draw pile.\nReduce the cost of ALL cards to 0 this turn.\nExhaust.",
             "mod": "The Human"
         },
         {
@@ -32519,7 +32379,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "Gain 2 (3) thehuman:Healthiness.\nWhenever you play a card that costs 2 or more, add a Deep (Big) Thought (Brain) to your hand.",
+            "description": " (Innate.)\nGain 2 (3) thehuman:Healthiness.\nWhenever you play a card that costs 2 or more, add a Deep (Big) Thought (Brain) to your hand.",
             "mod": "The Human"
         },
         {
@@ -32529,7 +32389,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Discard your hand.\nDraw 10 cards.\nDiscard your hand.\nDraw 5 cards.",
+            "description": " (Retain.Innate.\n)\nDiscard your hand.\nDraw 10 cards.\nDiscard your hand.\nDraw 5 cards.",
             "mod": "The Human"
         },
         {
@@ -32539,7 +32399,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3 (2)",
-            "description": "At the start of your turn, thehuman:Uncover a card.",
+            "description": " (Innate.)\nAt the start of your turn, thehuman:Uncover a card.",
             "mod": "The Human"
         },
         {
@@ -32549,7 +32409,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "3 (2)",
-            "description": "Replay all cards that you have Exhausted this combat.",
+            "description": "Replay all cards that you have Exhausted this combat.\nPurge.",
             "mod": "The Human"
         },
         {
@@ -32569,7 +32429,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "3",
-            "description": "Deal 8 (10) damage.\nApply 2 thehuman:Injured to ALL enemies.\nReplay all Slaps played this combat.",
+            "description": "Deal 8 (10) damage.\nApply 2 thehuman:Injured to ALL enemies.\nReplay all Slaps played this combat.\nExhaust.",
             "mod": "The Human"
         },
         {
@@ -32579,7 +32439,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "Gain 10 (14) Block.\nWhenever you discard a card, gain 1 thehuman:Peaceful (  and thehuman:Healthiness ).",
+            "description": "Gain 10 (14) Block.\nWhenever you discard a card, gain 1 thehuman:Peaceful ( and thehuman:Healthiness).",
             "mod": "The Human"
         },
         {
@@ -32609,7 +32469,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "At the start of your turn, find 1 thehuman:Junk.\nWhenever you play 3 (2) thehuman:Junk, deal 5 damage to a random enemy, then gain 1 Strength and Dexterity.",
+            "description": " (Innate.)\nAt the start of your turn, find 1 thehuman:Junk.\nWhenever you play 3 (2) thehuman:Junk, deal 5 damage to a random enemy, then gain 1 Strength and Dexterity.",
             "mod": "The Human"
         },
         {
@@ -34638,22 +34498,12 @@
         },
         {
             "id": "mysticmod:CureLightWounds",
-            "name": "Cure Light Wounds",
+            "name": "Cure Light (Moderate) Wounds",
             "color": "Mystic_purple",
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Gain 2 Regen.\nExhaust.",
-            "mod": "The Mystic"
-        },
-        {
-            "id": "mysticmod:CureLightWounds",
-            "name": "Cure Moderate Wounds",
-            "color": "Mystic_purple",
-            "rarity": "Uncommon",
-            "type": "Skill",
-            "cost": "0",
-            "description": "Gain 3 Regen.\nExhaust.",
+            "description": "Gain 2 (3) Regen.\nExhaust.",
             "mod": "The Mystic"
         },
         {
@@ -34693,7 +34543,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Poised: Add a random  (Upgraded ) mysticmod:Cantrip to your draw pile for each stack of Poise.\nExhaust.",
+            "description": "Poised: Add a random  (Upgraded) mysticmod:Cantrip to your draw pile for each stack of Poise.\nExhaust.",
             "mod": "The Mystic"
         },
         {
@@ -34703,7 +34553,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 6 (8) damage. Add a random  (Upgraded ) mysticmod:Cantrip to your draw pile.",
+            "description": "Deal 6 (8) damage. Add a random  (Upgraded) mysticmod:Cantrip to your draw pile.",
             "mod": "The Mystic"
         },
         {
@@ -34963,7 +34813,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "This turn, your next Spell (two) is (Spells)  (are ) played twice.",
+            "description": "This turn, your next Spell (two) is (Spells)  (are) played twice.",
             "mod": "The Mystic"
         },
         {
@@ -35115,8 +34965,7 @@
             "cost": "1",
             "description": "Deal 22 (28) damage.",
             "pack": "Oddities",
-            "mod": "The Packmaster",
-            "img": "/The Packmaster/cards/Colorless-8Ball.png"
+            "mod": "The Packmaster"
         },
         {
             "id": "anniv5:Cannonball",
@@ -35344,7 +35193,7 @@
             "rarity": "Special",
             "type": "Attack",
             "cost": "2",
-            "description": "Ethereal.\nDeal 20 (25) damage ( to ALL enemies).\nExhaust.",
+            "description": "Ethereal.\nDeal 20 (25) damage (to ALL enemies).\nExhaust.",
             "pack": "Downfall",
             "mod": "The Packmaster"
         },
@@ -35523,7 +35372,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Gem ( (2 Uses)).\n\"Gain a Ward\"",
+            "description": "anniv5:Gem ((2 Uses)).\n\"Gain a Ward\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -35578,7 +35427,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "1",
-            "description": "Apply 2 Weak and Vulnerable ( to ALL enemies).\nAdd a Core Blaster (+) to your draw pile.\nExhaust.",
+            "description": "Apply 2 Weak and Vulnerable (to ALL enemies).\nAdd a Core Blaster (+) to your draw pile.\nExhaust.",
             "pack": "Monster Hunter",
             "mod": "The Packmaster"
         },
@@ -35644,7 +35493,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Gem ( (2 Uses)).\n\"Gain a Shiv\"",
+            "description": "anniv5:Gem ((2 Uses)).\n\"Gain a Shiv\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -35699,7 +35548,7 @@
             "rarity": "Special",
             "type": "Attack",
             "cost": "6",
-            "description": " (Innate. ) Retain.\nDeal 6 damage 6 times and set this card's cost to 6.\nWhen Retained, reduce this card's cost by 1.",
+            "description": " (Innate.) Retain.\nDeal 6 damage 6 times and set this card's cost to 6.\nWhen Retained, reduce this card's cost by 1.",
             "pack": "Monster Hunter",
             "mod": "The Packmaster"
         },
@@ -35875,7 +35724,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 9 (12) Block, create a (an)  (Upgraded ) copy of this in hand.\nExhaust.",
+            "description": "Gain 9 (12) Block, create a (an)  (Upgraded) copy of this in hand.\nExhaust.",
             "pack": "Creativity",
             "mod": "The Packmaster"
         },
@@ -36161,7 +36010,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Apply 4 (6) anniv5:Distortion to ALL enemies.\nExhaust.",
+            "description": "Apply 5 (6) anniv5:Distortion to ALL enemies.\nExhaust.",
             "pack": "Distortion",
             "mod": "The Packmaster"
         },
@@ -36194,7 +36043,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Put a (any) card (number)  (of cards ) from your hand onto the bottom of your draw pile.\nDraw 3 cards.",
+            "description": "Put a (any) card (number)  (of cards) from your hand onto the bottom of your draw pile.\nDraw 3 cards.",
             "pack": "Alignment",
             "mod": "The Packmaster"
         },
@@ -36326,7 +36175,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 10 damage  ( and apply 2 anniv5:Ignite  ) to ALL enemies.\nExhaust.",
+            "description": "Deal 10 damage  (and apply 2 anniv5:Ignite ) to ALL enemies.\nExhaust.",
             "pack": "Blue's Brews",
             "mod": "The Packmaster"
         },
@@ -36359,7 +36208,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 20 damage (  and apply 4 anniv5:Ignite ).\nExhaust.",
+            "description": "Deal 20 damage ( and apply 4 anniv5:Ignite).\nExhaust.",
             "pack": "Blue's Brews",
             "mod": "The Packmaster"
         },
@@ -36370,7 +36219,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 9 (10) damage and apply 2 (3) anniv5:Distortion to a random enemy.",
+            "description": "Deal 9 (10) damage and apply 3 (4) anniv5:Distortion to a random enemy.",
             "pack": "Eldritch Horror",
             "mod": "The Packmaster"
         },
@@ -36727,17 +36576,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:Hound",
-            "name": "Huge Rot Hound",
-            "color": "Packmaster_rainbow",
-            "rarity": "Common",
-            "type": "Attack",
-            "cost": "0",
-            "description": "Deal 7 damage and apply 1 Weak to ALL enemies.",
-            "pack": "Ring of Pain",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:HuntingStrike",
             "name": "Hunting Strike",
             "color": "Packmaster_rainbow",
@@ -36755,7 +36593,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "If you receive no unblocked attack damage this turn, gain [E]  ( [E] ) and draw 1 card next turn.",
+            "description": "If you receive no unblocked attack damage this turn, gain [E]  ( [E]) and draw 1 card next turn.",
             "pack": "For The Content",
             "mod": "The Packmaster"
         },
@@ -36832,7 +36670,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 6 (9) Block.\nChannel a anniv5:Leprechaun.",
+            "description": "Gain 6 (9) Block.\nChannel 1 anniv5:Leprechaun.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -36986,7 +36824,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Discover a (an)  (Upgraded ) common card from other Packs you've selected.",
+            "description": "Discover a (an)  (Upgraded) common card from other Packs you've selected.",
             "pack": "Creativity",
             "mod": "The Packmaster"
         },
@@ -37151,7 +36989,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Channel a anniv5:Porcupine.\nAdd 2 (3) Quills into your hand.",
+            "description": "Channel 1 anniv5:Porcupine.\nAdd 2 (3) Quills into your hand.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -37338,7 +37176,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Apply 13 anniv5:Frostbite.\n ( If the enemy already had anniv5:Frostbite, they lose HP equal to it. )\nExhaust.",
+            "description": "Apply 13 anniv5:Frostbite.\n (If the enemy already had anniv5:Frostbite, they lose HP equal to it.)\nExhaust.",
             "pack": "Biting Cold",
             "mod": "The Packmaster"
         },
@@ -37426,7 +37264,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "0",
-            "description": "Deal 4 (5) (6) damage to ALL enemies.\nanniv5:Evolves when you play an Attack.",
+            "description": "Deal 4 (5) (6) (7) damage to ALL enemies.\nanniv5:Evolves when you play an Attack.",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -37437,7 +37275,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Gem ( (2 Uses)).\n\"Gain 2 Temp. Strength\"",
+            "description": "anniv5:Gem ((2 Uses)).\n\"Gain 2 Temp. Strength\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -37459,7 +37297,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 7 (9) damage.\nApply 2 (3) anniv5:Distortion.",
+            "description": "Deal 7 (10) damage.\nApply 3 anniv5:Distortion.",
             "pack": "Distortion",
             "mod": "The Packmaster"
         },
@@ -37525,7 +37363,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 7 (10) damage.\nDraw 1 card each if you hold a anniv5:Mundane (,)  (uncommon ) or uncommon (rare) card.",
+            "description": "Deal 7 (10) damage.\nDraw 1 card each if you hold a anniv5:Mundane (,)  (uncommon) or uncommon (rare) card.",
             "pack": "Intrigue",
             "mod": "The Packmaster"
         },
@@ -37591,7 +37429,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Draw a anniv5:Basic card and Upgrade it ( 2 times). This can Upgrade it any number of times.",
+            "description": "Draw a anniv5:Basic card and Upgrade it (2 times). This can Upgrade it any number of times.",
             "pack": "Basics",
             "mod": "The Packmaster"
         },
@@ -37833,7 +37671,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 5 (8) damage to ALL enemies.\nChannel a anniv5:Swarm of Bees.",
+            "description": "Deal 5 (8) damage to ALL enemies.\nChannel 1 anniv5:Swarm of Bees.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -37943,7 +37781,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 8 (10) damage.\nActivate the passive effect of your next Orb ( twice).",
+            "description": "Deal 8 (10) damage.\nActivate the passive effect of your next Orb (twice).",
             "pack": "Witches Strike",
             "mod": "The Packmaster"
         },
@@ -38009,7 +37847,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Gem ( (2 Uses)).\n\"Roll a anniv5:D6\"",
+            "description": "anniv5:Gem ((2 Uses)).\n\"Roll a anniv5:D6\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -38108,18 +37946,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Apply 4 (5) (6) Poison.\nanniv5:Evolves when you apply a debuff.",
-            "pack": "Ring of Pain",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:Slime",
-            "name": "Viscid Twins",
-            "color": "Packmaster_rainbow",
-            "rarity": "Common",
-            "type": "Skill",
-            "cost": "1",
-            "description": "Apply 7 Poison.\nEnemy loses HP equal to its Poison.",
+            "description": "Apply 4 (5) (6) (7) Poison.\nanniv5:Evolves when you apply a debuff.",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -38207,7 +38034,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 4 damage.\nApply 5 anniv5:Ruin ( to ALL enemies).",
+            "description": "Deal 4 damage.\nApply 5 anniv5:Ruin (to ALL enemies).",
             "pack": "Entropy",
             "mod": "The Packmaster"
         },
@@ -38229,7 +38056,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 7 (10) damage.\nChannel a anniv5:Wolf.",
+            "description": "Deal 7 (10) damage.\nChannel 1 anniv5:Wolf.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -38251,7 +38078,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Apply 2 Vulnerable and  (2 Weak, and ) remove the target's Block.\nExhaust.",
+            "description": "Apply 2 Vulnerable and  (2 Weak, and) remove the target's Block.\nExhaust.",
             "pack": "Downfall",
             "mod": "The Packmaster"
         },
@@ -38317,7 +38144,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "~~- Unplayable  -~~ anniv5:Gem ( (2 Uses)).\n\"Card gains Retain\"",
+            "description": "~~- Unplayable  -~~ anniv5:Gem ((2 Uses)).\n\"Card gains Retain\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -38330,17 +38157,6 @@
             "cost": "1",
             "description": " (Innate.)\nPut a random Power from your draw pile into your hand and copy it.\nExhaust.",
             "pack": "Meta",
-            "mod": "The Packmaster"
-        },
-        {
-            "id": "anniv5:IceBeast",
-            "name": "Ancient Ice Beast",
-            "color": "Packmaster_rainbow",
-            "rarity": "Uncommon",
-            "type": "Attack",
-            "cost": "3",
-            "description": "Gain 20 Block.\nDeal 20 damage.\nChannel 1 Frost.",
-            "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
         {
@@ -38372,7 +38188,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Gem ( (2 Uses)).\n\"Channel (Gain) a Frost (Ward)\"",
+            "description": "anniv5:Gem ((2 Uses)).\n\"Channel (Gain) 1 (a) Frost (Ward)\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -38427,7 +38243,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Apply 2 (3) anniv5:Distortion to ALL enemies.\nanniv5:Amplify [E] : Exhaust a card.",
+            "description": "Apply 3 (4) anniv5:Distortion to ALL enemies.\nanniv5:Amplify [E] : Exhaust a card.",
             "pack": "Cosmos Command",
             "mod": "The Packmaster"
         },
@@ -38438,7 +38254,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Choose 1 of 3 Attacks to gain. It costs 0 until played.\nExhaust ( stslib:Exhaustive 2 ).",
+            "description": "Choose 1 of 3 Attacks to gain. It costs 0 until played.\nExhaust (stslib:Exhaustive 2).",
             "pack": "Blue's Brews",
             "mod": "The Packmaster"
         },
@@ -38669,7 +38485,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Gem ( (2 Uses)).\n\"Gain [E] next turn\"",
+            "description": "anniv5:Gem ((2 Uses)).\n\"Gain [E] next turn\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -39230,7 +39046,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 3 Shivs ( and 1 rare Shiv). They have Retain.\nExhaust.",
+            "description": "Gain 3 Shivs (and 1 rare Shiv). They have Retain.\nExhaust.",
             "pack": "Intrigue",
             "mod": "The Packmaster"
         },
@@ -39395,7 +39211,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 10 (14) Block.\nChannel a anniv5:Fire Spirit.",
+            "description": "Gain 9 (13) Block.\nChannel 1 anniv5:Fire Spirit.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -39483,7 +39299,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Gem ( (2 Uses)).\n\"Channel (Gain) a Lightning (Shiv)\"",
+            "description": "anniv5:Gem ((2 Uses)).\n\"Channel (Gain) 1 (a) Lightning (Shiv)\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -39538,7 +39354,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "If you have 3+ unique Orbs, Channel 1 Frost ( and trigger its passive).\nChannel 1 Frost.",
+            "description": "If you have 3+ unique Orbs, Channel 1 Frost (and trigger its passive).\nChannel 1 Frost.",
             "pack": "Spheres",
             "mod": "The Packmaster"
         },
@@ -39818,17 +39634,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:Shackles",
-            "name": "Huge Shackles",
-            "color": "Packmaster_rainbow",
-            "rarity": "Uncommon",
-            "type": "Skill",
-            "cost": "2",
-            "description": "Retain.\nGain 20 Block.\nBlock is not removed at the start of your next turn.",
-            "pack": "Ring of Pain",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:HuntingInstincts",
             "name": "Hunter's Instincts",
             "color": "Packmaster_rainbow",
@@ -39857,7 +39662,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "3",
-            "description": "Gain 14 (17) (20) Block.\nDeal 10 damage.\nanniv5:Evolves when you gain Block.",
+            "description": "Gain 14 (17) (20) (20) Block.\nDeal 10 damage.\nanniv5:Evolves when you gain Block.",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -40209,7 +40014,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": " ( anniv5:Freeze your hand. )\nChannel 1 Frost for each Frozen card in hand.\n~~- anniv5:Freeze your hand. -~~ ",
+            "description": " (anniv5:Freeze your hand.)\nChannel 1 Frost for each Frozen card in hand.\n~~- anniv5:Freeze your hand. -~~ ",
             "pack": "Frosty Fun",
             "mod": "The Packmaster"
         },
@@ -40374,7 +40179,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Gem ( (2 Uses)).\n\"Reduce debuffs by 1\"",
+            "description": "anniv5:Gem ((2 Uses)).\n\"Reduce debuffs by 1\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -40660,7 +40465,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "Choose: Gain 2 Strength,  (Gain 2 Dexterity, ) or Gain 2 Focus.",
+            "description": "Choose: Gain 2 Strength,  (Gain 2 Dexterity,) or Gain 2 Focus.",
             "pack": "Blue's Brews",
             "mod": "The Packmaster"
         },
@@ -40681,8 +40486,8 @@
             "color": "Packmaster_rainbow",
             "rarity": "Uncommon",
             "type": "Power",
-            "cost": "1",
-            "description": " (Innate.)\nThe first time you play each color of card this combat, gain 1 Strength and 1 Dexterity.",
+            "cost": "2 (1)",
+            "description": "The first time you play each color of card this combat, gain 1 Strength and 1 Dexterity.",
             "pack": "Prismatic",
             "mod": "The Packmaster"
         },
@@ -40693,7 +40498,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Channel a anniv5:Rainbow Louse. (Draw 1 card.)\n",
+            "description": "Channel 1 anniv5:Rainbow Louse. (Draw 1 card.)\n",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -40903,7 +40708,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Retain.\nGain 10 (13) (16) Block.\nanniv5:Evolves when you play a card that costs at least 2 .",
+            "description": "Retain.\nGain 10 (13) (16) (20) Block.\nanniv5:Evolves when you play a card that costs at least 2 .",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -40914,7 +40719,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Ethereal.\nGain 7 Block ( and 2 Plated Armor).\nEnter anniv5:Ancient.",
+            "description": "Ethereal.\nGain 7 Block (and 2 Plated Armor).\nEnter anniv5:Ancient.",
             "pack": "Downfall",
             "mod": "The Packmaster"
         },
@@ -40925,7 +40730,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "At the start of your turn, randomize the cost of the  (2 ) highest cost card (cards) in your hand.",
+            "description": "At the start of your turn, randomize the cost of the  (2) highest cost card (cards) in your hand.",
             "pack": "Snecko",
             "mod": "The Packmaster"
         },
@@ -41145,7 +40950,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Exhaust (Add)  (3 Dazed to ) your hand ( then Exhaust it).\nDeal damage equal to the number of cards Exhausted this combat.",
+            "description": "Exhaust (Add)  (3 Dazed to) your hand (then Exhaust it).\nDeal damage equal to the number of cards Exhausted this combat.",
             "pack": "Graveyard",
             "mod": "The Packmaster"
         },
@@ -41156,7 +40961,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Add a anniv5:Mundane  (or uncommon ) card from your draw pile to your hand and anniv5:Promote it.",
+            "description": "Add a anniv5:Mundane  (or uncommon) card from your draw pile to your hand and anniv5:Promote it.",
             "pack": "Intrigue",
             "mod": "The Packmaster"
         },
@@ -41255,7 +41060,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 6 (9) damage.\nDiscover a (an)  (Upgraded ) strike. It Exhausts when played and costs 0 this turn.",
+            "description": "Deal 6 (9) damage.\nDiscover a (an)  (Upgraded) strike. It Exhausts when played and costs 0 this turn.",
             "pack": "Creativity",
             "mod": "The Packmaster"
         },
@@ -41288,7 +41093,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "ALL enemies lose HP equal to  (2 times ) their anniv5:Distortion.\nExhaust.",
+            "description": "ALL enemies lose HP equal to  (2 times) their anniv5:Distortion.\nExhaust.",
             "pack": "Cosmos Command",
             "mod": "The Packmaster"
         },
@@ -41431,7 +41236,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Choose: Apply 3  (Vulnerable, Apply 3 ) Weak, or Apply 8 Poison.\nExhaust.",
+            "description": "Choose: Apply 3  (Vulnerable, Apply 3) Weak, or Apply 8 Poison.\nExhaust.",
             "pack": "Blue's Brews",
             "mod": "The Packmaster"
         },
@@ -41442,7 +41247,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Enter anniv5:Venomous and draw 2 (3) cards.\nIf you are in anniv5:Venomous, exit it and gain [E]  ( [E] ) instead.",
+            "description": "Enter anniv5:Venomous and draw 2 (3) cards.\nIf you are in anniv5:Venomous, exit it and gain [E]  ( [E]) instead.",
             "pack": "Serpentine Disciple",
             "mod": "The Packmaster"
         },
@@ -41497,7 +41302,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Randomize the cost of 2 (up)  (to 3 ) cards.\nstslib:Persist 2.",
+            "description": "Randomize the cost of 2 (up)  (to 3) cards.\nstslib:Persist 2.",
             "pack": "Snecko",
             "mod": "The Packmaster"
         },
@@ -41585,7 +41390,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": " ( anniv5:Inscribed. )\nGain 6 Block.\nChannel a anniv5:Wanderbot.",
+            "description": " (anniv5:Inscribed.)\nGain 6 Block.\nChannel 1 anniv5:Wanderbot.",
             "pack": "For The Content",
             "mod": "The Packmaster"
         },
@@ -41750,7 +41555,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": " (Innate.)\nWhenever you Channel an Orb, Evoke it without removing it.",
+            "description": "~~- Ethereal. -~~\nWhenever you Channel an Orb, Evoke it without removing it.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -42124,7 +41929,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Your next card (two)  (cards ) that Exhausts (Exhaust) this turn is (are) played twice.",
+            "description": "Your next card (two)  (cards) that Exhausts (Exhaust) this turn is (are) played twice.",
             "pack": "Graveyard",
             "mod": "The Packmaster"
         },
@@ -42179,7 +41984,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 6 (9) damage.\nExhaust a card. Gain a random  (Upgraded ) Strike that costs 1 less and Exhausts.",
+            "description": "Deal 6 (9) damage.\nExhaust a card. Gain a random  (Upgraded) Strike that costs 1 less and Exhausts.",
             "pack": "Strikes? STRIKES!",
             "mod": "The Packmaster"
         },
@@ -42300,7 +42105,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "1",
-            "description": " (Gain 2 Focus.)\nAt end of turn, Channel a Dark for each [E] unspent.",
+            "description": " (Gain 2 Focus.)\nAt end of turn, Channel 1 Dark for each [E] unspent.",
             "pack": "Eldritch Horror",
             "mod": "The Packmaster"
         },
@@ -42366,7 +42171,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "At the start of each turn ( and right now), set up The Bomb.",
+            "description": "At the start of each turn (and right now), set up The Bomb.",
             "pack": "Goddess of Explosions",
             "mod": "The Packmaster"
         },
@@ -42531,7 +42336,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "",
-            "description": "~~- Unplayable  -~~ anniv5:Gem ( (2 Uses)).\n\"Card has (gains) stslib:Persist 2\"",
+            "description": "~~- Unplayable  -~~ anniv5:Gem ((2 Uses)).\n\"Card has (gains) stslib:Persist 2\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -42674,7 +42479,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "",
-            "description": "~~- Unplayable  -~~ anniv5:Gem ( (2 Uses)).\n\"Card gains anniv5:Occult\"",
+            "description": "~~- Unplayable  -~~ anniv5:Gem ((2 Uses)).\n\"Card gains anniv5:Occult\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -42696,7 +42501,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": " ( anniv5:Unnate. )\nExhaust ALL your anniv5:Art and Status cards. Gain 1 Strength for each card Exhausted.",
+            "description": " (anniv5:Unnate.)\nExhaust ALL your anniv5:Art and Status cards. Gain 1 Strength for each card Exhausted.",
             "pack": "Rip",
             "mod": "The Packmaster"
         },
@@ -42916,7 +42721,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Choose: Gain 4 Plated Armor, Gain 3 Thorns, or Gain 2 Artifact.\nExhaust ( stslib:Exhaustive 2 ).",
+            "description": "Choose: Gain 4 Plated Armor, Gain 3 Thorns, or Gain 2 Artifact.\nExhaust (stslib:Exhaustive 2).",
             "pack": "Blue's Brews",
             "mod": "The Packmaster"
         },
@@ -42976,17 +42781,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:Owl",
-            "name": "Nightmare Owl",
-            "color": "Packmaster_rainbow",
-            "rarity": "Rare",
-            "type": "Attack",
-            "cost": "3",
-            "description": "Deal 36 damage.\nApply anniv5:Rend equal to half of the unblocked damage dealt.\nApply 2 Vulnerable.",
-            "pack": "Ring of Pain",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:OffToTheRaces",
             "name": "Off to the Races",
             "color": "Packmaster_rainbow",
@@ -43004,7 +42798,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Gem ( (2 Uses)).\n\"Draw a card\"",
+            "description": "anniv5:Gem ((2 Uses)).\n\"Draw a card\"",
             "pack": "Jeweler's Kit",
             "mod": "The Packmaster"
         },
@@ -43048,7 +42842,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "3",
-            "description": "Deal 24 (28) (32) damage.\nApply 2 Vulnerable.\nanniv5:Evolves when you Exhaust a card.",
+            "description": "Deal 24 (28) (32) (36) damage.\nApply 2 Vulnerable.\nanniv5:Evolves when you Exhaust a card.",
             "pack": "Ring of Pain",
             "mod": "The Packmaster"
         },
@@ -43169,7 +42963,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "Heal 8 HP.\nEnemy loses twice (three)  (times ) the amount of HP gained.\nExhaust.",
+            "description": "Heal 8 HP.\nEnemy loses twice (three)  (times) the amount of HP gained.\nExhaust.",
             "pack": "Gate 3: Life & Death",
             "mod": "The Packmaster"
         },
@@ -43433,7 +43227,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": " ( anniv5:Unnate. )\nDeal damage equal to 3 times the number of anniv5:Basic cards played this combat.",
+            "description": " (anniv5:Unnate.)\nDeal damage equal to 3 times the number of anniv5:Basic cards played this combat.",
             "pack": "Basics",
             "mod": "The Packmaster"
         },
@@ -43466,7 +43260,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "~~- Become Confused.  -~~ At the start of your turn, draw 2 cards. ( Startup: Become Confused. )\n",
+            "description": "~~- Become Confused.  -~~ At the start of your turn, draw 2 cards. (Startup: Become Confused.)\n",
             "pack": "Snecko",
             "mod": "The Packmaster"
         },
@@ -43479,6 +43273,17 @@
             "cost": "1",
             "description": "Gain 1 Strength.\nDouble this to a max of 10 after play if you've played 3 or more card types this turn.\nExhaustive 3 (4).",
             "pack": "Farmer",
+            "mod": "The Packmaster"
+        },
+        {
+            "id": "anniv5:Specialist",
+            "name": "Specialist",
+            "color": "Packmaster_rainbow",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "0",
+            "description": "Gain 2 (3) Focus.\nLose 1 Strength and Dexterity.",
+            "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
         {
@@ -43499,7 +43304,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "3",
-            "description": "Deal 13 (16) damage twice.\nHeal 6 (9) HP.\nChannel a Plasma.\nExhaust.",
+            "description": "Deal 13 (16) damage twice.\nHeal 6 (9) HP.\nChannel 1 Plasma.\nExhaust.",
             "pack": "Eldritch Horror",
             "mod": "The Packmaster"
         },
@@ -43521,7 +43326,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "At the start of your turn, gain [E] [E]  ( [E] ) .",
+            "description": "At the start of your turn, gain [E] [E]  ( [E]) .",
             "pack": "Energized",
             "mod": "The Packmaster"
         },
@@ -43653,7 +43458,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 9 (10) damage to ALL enemies.\nIf you're having fun, play a random  (Upgraded ) Power!",
+            "description": "Deal 9 (10) damage to ALL enemies.\nIf you're having fun, play a random  (Upgraded) Power!",
             "pack": "Secret Level",
             "mod": "The Packmaster"
         },
@@ -43790,17 +43595,6 @@
             "mod": "The Packmaster"
         },
         {
-            "id": "anniv5:Training",
-            "name": "Training",
-            "color": "Packmaster_rainbow",
-            "rarity": "Rare",
-            "type": "Power",
-            "cost": "2",
-            "description": "At the end of your turn Evoke your next Orb 3 (4) times.",
-            "pack": "Summoner's Menagerie",
-            "mod": "The Packmaster"
-        },
-        {
             "id": "anniv5:TranqBomb",
             "name": "Tranquilizer Bomb",
             "color": "Packmaster_rainbow",
@@ -43851,7 +43645,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E]  ( [E] ) .",
+            "description": "Once per turn, when you reach 2 or fewer cards in hand, draw 2 cards and gain [E]  ( [E]) .",
             "pack": "Core Set",
             "mod": "The Packmaster"
         },
@@ -43862,7 +43656,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "Choose a card in your discard pile and return it to your hand. It costs 0 until played.\nExhaust ( stslib:Exhaustive 2 ).",
+            "description": "Choose a card in your discard pile and return it to your hand. It costs 0 until played.\nExhaust (stslib:Exhaustive 2).",
             "pack": "Blue's Brews",
             "mod": "The Packmaster"
         },
@@ -54116,7 +53910,7 @@
             "name": "Magic Flask",
             "tier": "Rare",
             "pool": "",
-            "description": "At campfires, the rest option may now be taken for free. This consumes 1 use.\nStarts with 3 uses. Kill bosses to gain 2 more uses.\n\nSynergy: Bottled Heart",
+            "description": "At campfires, the rest option may now be taken for free. This consumes 1 use.\nStarts with 3 uses. Kill bosses to gain 2 more uses.",
             "flavorText": "The flames feel warmer...",
             "mod": "Infinite Spire"
         },
@@ -55217,15 +55011,6 @@
             "description": "Whenever you start your turn with Block, you and ALL enemies gain 1 Strength.",
             "flavorText": "GONG.",
             "mod": "Reliquary"
-        },
-        {
-            "id": "m_BookOfShivs",
-            "name": "Book of the Snake",
-            "tier": "Starter",
-            "pool": "Mystic_purple",
-            "description": "Shuffle 2 random Cantrips into your draw pile at the start of combat.\nCertain Green cards can now be obtained.",
-            "flavorText": "It's written in a strange language. When read out loud, only hissing can be heard.",
-            "mod": "Replay The Spire"
         },
         {
             "id": "Iron Core",
@@ -60025,6 +59810,86 @@
             "mod": "thorton"
         }
     ],
+    "blights": [
+        {
+            "id": "DeadlyEnemies",
+            "name": "Spear of Blight",
+            "description": "Enemies deal 100% more damage.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "ToughEnemies",
+            "name": "Shield of Blight",
+            "description": "Enemies have 50% more HP.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "TimeMaze",
+            "name": "Time Maze",
+            "description": "You cannot play more than 15 cards per turn.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "MimicInfestation",
+            "name": "Mimic Infestation",
+            "description": "Treasure rooms in future acts are replaced by Elites. Elites no longer drop relics.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "FullBelly",
+            "name": "Muzzle",
+            "description": "You can no longer increase your Max HP. All healing is halved.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "GrotesqueTrophy",
+            "name": "Grotesque Trophy",
+            "description": "Upon pickup, obtain 3 Prides.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "Accursed",
+            "name": "Accursed",
+            "description": "Whenever you defeat a Boss, obtain 2 random Curses.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "Scatterbrain",
+            "name": "Scatterbrain",
+            "description": "Draw 1 less card a turn.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "TwistingMind",
+            "name": "Twisting Mind",
+            "description": "At the end of your turn, add 1 random Status card to the top of your draw pile.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "BlightedDurian",
+            "name": "Post-Durian",
+            "description": "Lose 50% of your Max HP.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "VoidEssence",
+            "name": "Void Essence",
+            "description": "Gain 1 less [E] at the start of each turn.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "GraspOfShadows",
+            "name": "Hauntings",
+            "description": "Enemies start combat with 1 Intangible.",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "MetallicRebirth",
+            "name": "Ancient Augmentation",
+            "description": "Enemies start combat with 1 Artifact, 10 Plated Armor, and 10 Regenerate.",
+            "mod": "Slay the Spire"
+        }
+    ],
     "potions": [
         {
             "id": "bad_spire:modern",
@@ -60053,13 +59918,6 @@
             "rarity": "Crafted",
             "description": "Draw 3 cards.",
             "mod": "Bad Spire"
-        },
-        {
-            "id": "bard:BottledSong",
-            "name": "Bottled Song",
-            "rarity": "Placeholder",
-            "description": "Queue the following Notes:\n[DebuffNote] [DebuffNote]",
-            "mod": "Bard"
         },
         {
             "id": "bard:InspiredBrew",
@@ -61462,7 +61320,7 @@
             "mod": "Avocado"
         },
         {
-            "id": "TheBard",
+            "id": "Bard",
             "name": "The Bard",
             "type": "Player",
             "minHP": "70",
@@ -62892,8 +62750,8 @@
             "id": "infinitespire:Voidling",
             "name": "Voidling",
             "type": "Normal",
-            "minHP": "51",
-            "maxHP": "51",
+            "minHP": "56",
+            "maxHP": "56",
             "mod": "Infinite Spire"
         },
         {
@@ -63004,16 +62862,16 @@
             "id": "ruina:AllAroundHelper",
             "name": "All-Around Helper",
             "type": "Elite",
-            "minHP": "50",
-            "maxHP": "50",
+            "minHP": "51",
+            "maxHP": "51",
             "mod": "Ruina"
         },
         {
             "id": "ruina:Alriune",
             "name": "Alriune",
             "type": "Elite",
-            "minHP": "80",
-            "maxHP": "80",
+            "minHP": "81",
+            "maxHP": "81",
             "mod": "Ruina"
         },
         {
@@ -63052,8 +62910,8 @@
             "id": "ruina:BadWolf",
             "name": "Big and Will Be Bad Wolf",
             "type": "Normal",
-            "minHP": "83",
-            "maxHP": "83",
+            "minHP": "82",
+            "maxHP": "82",
             "mod": "Ruina"
         },
         {
@@ -63068,8 +62926,8 @@
             "id": "ruina:Bloodbath",
             "name": "Bloodbath",
             "type": "Normal",
-            "minHP": "88",
-            "maxHP": "88",
+            "minHP": "92",
+            "maxHP": "92",
             "mod": "Ruina"
         },
         {
@@ -63084,8 +62942,8 @@
             "id": "ruina:Butterflies",
             "name": "Butterflies",
             "type": "Normal",
-            "minHP": "15",
-            "maxHP": "15",
+            "minHP": "14",
+            "maxHP": "14",
             "mod": "Ruina"
         },
         {
@@ -63148,8 +63006,8 @@
             "id": "ruina:EyeballChick",
             "name": "Eyeball Chick",
             "type": "Normal",
-            "minHP": "44",
-            "maxHP": "44",
+            "minHP": "46",
+            "maxHP": "46",
             "mod": "Ruina"
         },
         {
@@ -63172,24 +63030,24 @@
             "id": "ruina:ForsakenMurderer",
             "name": "Forsaken Murderer",
             "type": "Normal",
-            "minHP": "45",
-            "maxHP": "45",
+            "minHP": "47",
+            "maxHP": "47",
             "mod": "Ruina"
         },
         {
             "id": "ruina:Fragment",
             "name": "Fragment of the Universe",
             "type": "Normal",
-            "minHP": "47",
-            "maxHP": "47",
+            "minHP": "46",
+            "maxHP": "46",
             "mod": "Ruina"
         },
         {
             "id": "ruina:GalaxyFriend",
             "name": "Friend to the Galaxy",
             "type": "Normal",
-            "minHP": "31",
-            "maxHP": "31",
+            "minHP": "30",
+            "maxHP": "30",
             "mod": "Ruina"
         },
         {
@@ -63212,24 +63070,24 @@
             "id": "ruina:TeddyBear",
             "name": "Happy Teddy Bear",
             "type": "Normal",
-            "minHP": "59",
-            "maxHP": "59",
+            "minHP": "58",
+            "maxHP": "58",
             "mod": "Ruina"
         },
         {
             "id": "ruina:HeartOfAspiration",
             "name": "Heart of Aspiration",
             "type": "Normal",
-            "minHP": "49",
-            "maxHP": "49",
+            "minHP": "54",
+            "maxHP": "54",
             "mod": "Ruina"
         },
         {
             "id": "ruina:Hermit",
             "name": "Hermit of the Azure Forest",
             "type": "Elite",
-            "minHP": "192",
-            "maxHP": "192",
+            "minHP": "193",
+            "maxHP": "193",
             "mod": "Ruina"
         },
         {
@@ -63284,8 +63142,8 @@
             "id": "ruina:KingOfGreed",
             "name": "King of Greed",
             "type": "Normal",
-            "minHP": "120",
-            "maxHP": "120",
+            "minHP": "122",
+            "maxHP": "122",
             "mod": "Ruina"
         },
         {
@@ -63308,8 +63166,8 @@
             "id": "ruina:LeftShoe",
             "name": "Left Shoe",
             "type": "Normal",
-            "minHP": "22",
-            "maxHP": "22",
+            "minHP": "23",
+            "maxHP": "23",
             "mod": "Ruina"
         },
         {
@@ -63332,8 +63190,8 @@
             "id": "ruina:LungsOfCraving",
             "name": "Lungs of Craving",
             "type": "Normal",
-            "minHP": "45",
-            "maxHP": "45",
+            "minHP": "43",
+            "maxHP": "43",
             "mod": "Ruina"
         },
         {
@@ -63348,8 +63206,8 @@
             "id": "ruina:MatchFlame",
             "name": "Match Flame",
             "type": "Normal",
-            "minHP": "13",
-            "maxHP": "13",
+            "minHP": "14",
+            "maxHP": "14",
             "mod": "Ruina"
         },
         {
@@ -63380,8 +63238,8 @@
             "id": "ruina:Nosferatu",
             "name": "Nosferatu",
             "type": "Normal",
-            "minHP": "88",
-            "maxHP": "88",
+            "minHP": "89",
+            "maxHP": "89",
             "mod": "Ruina"
         },
         {
@@ -63436,16 +63294,16 @@
             "id": "ruina:Porccubus",
             "name": "Porccubus",
             "type": "Normal",
-            "minHP": "48",
-            "maxHP": "48",
+            "minHP": "47",
+            "maxHP": "47",
             "mod": "Ruina"
         },
         {
             "id": "ruina:PriceOfSilence",
             "name": "Price of Silence",
             "type": "Normal",
-            "minHP": "88",
-            "maxHP": "88",
+            "minHP": "83",
+            "maxHP": "83",
             "mod": "Ruina"
         },
         {
@@ -63468,24 +63326,24 @@
             "id": "ruina:QueenBee",
             "name": "Queen Bee",
             "type": "Normal",
-            "minHP": "33",
-            "maxHP": "33",
+            "minHP": "32",
+            "maxHP": "32",
             "mod": "Ruina"
         },
         {
             "id": "ruina:QueenOfHate",
             "name": "Queen of Hatred",
             "type": "Normal",
-            "minHP": "107",
-            "maxHP": "107",
+            "minHP": "102",
+            "maxHP": "102",
             "mod": "Ruina"
         },
         {
             "id": "ruina:RemnantOfTime",
             "name": "Remnant of Time",
             "type": "Normal",
-            "minHP": "84",
-            "maxHP": "84",
+            "minHP": "82",
+            "maxHP": "82",
             "mod": "Ruina"
         },
         {
@@ -63524,8 +63382,8 @@
             "id": "ruina:RunawayBird",
             "name": "Runaway Bird",
             "type": "Normal",
-            "minHP": "37",
-            "maxHP": "37",
+            "minHP": "41",
+            "maxHP": "41",
             "mod": "Ruina"
         },
         {
@@ -63540,16 +63398,16 @@
             "id": "ruina:SanguineBat",
             "name": "Sanguine Bat",
             "type": "Normal",
-            "minHP": "34",
-            "maxHP": "34",
+            "minHP": "32",
+            "maxHP": "32",
             "mod": "Ruina"
         },
         {
             "id": "ruina:Scarecrow",
             "name": "Scarecrow",
             "type": "Normal",
-            "minHP": "51",
-            "maxHP": "51",
+            "minHP": "52",
+            "maxHP": "52",
             "mod": "Ruina"
         },
         {
@@ -63564,8 +63422,8 @@
             "id": "ruina:ScorchedGirl",
             "name": "Scorched Girl",
             "type": "Normal",
-            "minHP": "35",
-            "maxHP": "35",
+            "minHP": "36",
+            "maxHP": "36",
             "mod": "Ruina"
         },
         {
@@ -63612,8 +63470,8 @@
             "id": "ruina:SpiderBud",
             "name": "Spider Bud",
             "type": "Normal",
-            "minHP": "36",
-            "maxHP": "36",
+            "minHP": "38",
+            "maxHP": "38",
             "mod": "Ruina"
         },
         {
@@ -63676,8 +63534,8 @@
             "id": "ruina:ShyLook",
             "name": "Today's Shy Look",
             "type": "Normal",
-            "minHP": "68",
-            "maxHP": "68",
+            "minHP": "70",
+            "maxHP": "70",
             "mod": "Ruina"
         },
         {
@@ -63700,8 +63558,8 @@
             "id": "ruina:Woodsman",
             "name": "Warm-Hearted Woodsman",
             "type": "Normal",
-            "minHP": "144",
-            "maxHP": "144",
+            "minHP": "146",
+            "maxHP": "146",
             "mod": "Ruina"
         },
         {
@@ -63716,8 +63574,8 @@
             "id": "ruina:WorkerBee",
             "name": "Worker Bee",
             "type": "Normal",
-            "minHP": "46",
-            "maxHP": "46",
+            "minHP": "45",
+            "maxHP": "45",
             "mod": "Ruina"
         },
         {
@@ -64348,7 +64206,7 @@
             "mod": "Somnambulant"
         },
         {
-            "id": "TheAdventurer",
+            "id": "TheFishing",
             "name": "The Adventurer",
             "type": "Player",
             "minHP": "74",
@@ -64452,7 +64310,7 @@
             "mod": "The Marked"
         },
         {
-            "id": "TheMystic",
+            "id": "MysticCharacter",
             "name": "The Mystic",
             "type": "Player",
             "minHP": "77",
@@ -67399,7 +67257,7 @@
         },
         {
             "name": "Distortion",
-            "description": "Creatures with Distortion lose HP whenever a card is Exhausted.",
+            "description": "Creatures with Distortion lose HP whenever a card is Exhausted, then lose 1 Distortion.",
             "mod": "The Packmaster"
         },
         {
@@ -68121,1066 +67979,6 @@
             "name": "Sync Boons",
             "description": "Sync Boons activate your Destiny Reactors when Ingested and supply a passive effect to your Pyro Buddies.",
             "mod": "thorton"
-        }
-    ],
-    "mods": [
-        {
-            "name": "Aspiration",
-            "version": "1.9.4",
-            "authors": [
-                "erasels"
-            ],
-            "credits": "",
-            "description": "A mod adding relics, cards and events with varying themes. There's no real end goal behind it, just me implementing neat ideas that come my way via reddit, Discord, other games or even my imagination.\n\n For a full list of everything added and an up to date look at what I'm working on, you can take a look at my Github Repository here: https://github.com/erasels/Aspiration-StS/ \n\nLet me know if you have questions, suggestions or found an error.",
-            "mts_version": "3.15.0",
-            "sts_version": "14-01-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Astrologer",
-            "version": "1.4.5",
-            "authors": [
-                "Alchyr"
-            ],
-            "credits": "",
-            "description": "Astrologer.\nCredits: https://freesound.org/people/acclivity/sounds/32304/\nhttps://freesound.org/people/Timbre/sounds/221683/\nhttp://www.stephanie-davidson.com/\nzhs (simplified chinese) translation: thanks to 小萝卜跳 and CaptainSnafu\njapanese translation: thanks to vanadi910 and Gravitii\nkorean translation: thanks to zerosiki__",
-            "mts_version": "3.18.0",
-            "sts_version": "11-30-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Avocado",
-            "version": "0.1.2",
-            "authors": [
-                "Paparatto"
-            ],
-            "credits": "",
-            "description": "the avocado",
-            "mts_version": "3.4.0",
-            "sts_version": "10-18-2018",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bad Defect (Remade)",
-            "version": "0.3.4",
-            "authors": [
-                "Jerry"
-            ],
-            "credits": "",
-            "description": "This is the new rewritten version of Bad Defect as an effort to 'manually' recover its source code. This version could be less stable and have more crashes, be sure to report them at the workshop!",
-            "mts_version": "3.19.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bad Ironclad",
-            "version": "0.1.5",
-            "authors": [
-                "Jerry"
-            ],
-            "credits": "",
-            "description": "Coming from the creator of Bad Silent, a mod disappointing you beyond your imagination.",
-            "mts_version": "3.19.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bad Silent",
-            "version": "0.1.11",
-            "authors": [
-                "Jerry"
-            ],
-            "credits": "",
-            "description": "Adds ridiculous silent cards. ",
-            "mts_version": "3.19.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bad Spire",
-            "version": "0.2.3",
-            "authors": [
-                "Jerry"
-            ],
-            "credits": "",
-            "description": "",
-            "mts_version": "3.19.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bad Watcher",
-            "version": "0.2.5",
-            "authors": [
-                "Jerry"
-            ],
-            "credits": "",
-            "description": "You know that you are a mistake of a mod when your core mechanic is killing yourself repeatedly. ",
-            "mts_version": "3.19.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bard",
-            "version": "1.11.0",
-            "authors": [
-                "kiooeht"
-            ],
-            "credits": "Testing: Reina, Gremious, Blank The Evil, and Skyson",
-            "description": "Adds a new playable character: The Bard.",
-            "mts_version": "3.18.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Battle Towers",
-            "version": "1.0.10",
-            "authors": [
-                "erasels"
-            ],
-            "credits": "",
-            "description": "4th MtS Anniversary Mod! Adds a new node to act 2 that makes you decide between a series of perilous fights with amazing rewards or a chest.",
-            "mts_version": "3.8.0",
-            "sts_version": "01-23-2019",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Beaked The Cultist",
-            "version": "0.7.3",
-            "authors": [
-                "EARL",
-                "fiiiiilth",
-                "Moocowsgomoo",
-                "TemmieAnimations",
-                "BlueKnight",
-                "Giuseppe",
-                "MagicHampster",
-                "Ashe",
-                "MunderW",
-                "Midn8",
-                "kiooeht",
-                "Reina",
-                "Rhapsody and community",
-                "i like trains",
-                "Kaamalauppias",
-                "Vanadi910"
-            ],
-            "credits": "",
-            "description": "Adds Beaked the Cultist as a new playable character.\nBEAKED REQUIRES THE STSLIB MOD!\n\n0.7.3\n- Updated JPN translation (vanadi910)\n- Fix game not running with ZHS language selected.\n\n0.7.2\n- JPN translation by vanadi910!\n- Wither cards you own (not created in combat) glow purple.\n- Wither cards glow green when you have negation.\n- Ritual Plumage now highlights the end turn button.\n- Stick Smack+ now correctly previews a Stick+.\n- Added Watcher cards to Sacred Deck.\n- Fixed Sacred Deck crash with other mods. (thanks Aphid)\n- Removed Beta, Omega, Expunger from Sacred Deck. (thanks iruleatgames)\n- Sacred Deck and Crazy Rituals no longer treat Watcher's individual Wish options as separate cards.\n- Cultist Mask easter egg now only works on Beaked.\n- Keyworded Plated Armor & fixed Depleted description not showing up sometimes.\n- More wording updates & reverted some for clarity.\n\n0.7.1\n- New art! Thanks to i like trains and Kaamalauppias!\n\nIf you contributed and don't see your name in the credits, please let us know!",
-            "mts_version": "3.6.0",
-            "sts_version": "01-27-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bundle Of Bundles",
-            "version": "2.0.3",
-            "authors": [
-                "Sandtag"
-            ],
-            "credits": "",
-            "description": "Contains all of the config options and compatibility support for bundles.",
-            "mts_version": "3.29.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bundle Of Food",
-            "version": "2.0.7",
-            "authors": [
-                "SandTag"
-            ],
-            "credits": "Mistress Alison - Very helpful :) \nPandemonium - Very helpful :)",
-            "description": "A collection of 38 food related relics. \n Contains a variety of food types, all giving Max HP and a benefit.",
-            "mts_version": "3.29.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib",
-                "bundlecore"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bundle Of Peglin",
-            "version": "2.6.1",
-            "authors": [
-                "SandTag"
-            ],
-            "credits": "",
-            "description": "Adds 25 events found in peglin to slay the spire! \n Also includes 8 orbs and 47 relics!",
-            "mts_version": "3.29.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib",
-                "bundlecore"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Bundle Of Potions",
-            "version": "2.2.2",
-            "authors": [
-                "SandTag"
-            ],
-            "credits": "",
-            "description": "A collection of 54 potions! \n Features 15+ for each rarity.",
-            "mts_version": "3.29.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib",
-                "bundlecore"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Conspire",
-            "version": "1.7.0",
-            "authors": [
-                "twanvl"
-            ],
-            "credits": "translation: Rita-B",
-            "description": "Adds new monsters, elites, bosses, relics, cards, potions and events.",
-            "mts_version": "3.0.0",
-            "sts_version": "01-16-2020",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Corrupt the Spire",
-            "version": "1.3.2",
-            "authors": [
-                "modargo"
-            ],
-            "credits": "",
-            "description": "Adds corrupted rooms to the Spire, which have increased rewards and new encounters, at the cost of increasing the corruption of the Spire and making all enemies more dangerous.",
-            "mts_version": "3.15.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Downfall",
-            "version": "4.3.2",
-            "authors": [
-                "The Downfall Collab Team"
-            ],
-            "credits": "",
-            "description": "Downfall is a full-featured Expansion for Slay the Spire, including a new 5th hero, a new campaign with 7 villains to play, new relics, new cards, new potions, and more. \n \n Artist Credits: Opal, Cartesian Canvas, TheLethargicWeirdo, AlexMdle, HermitFan69, MagerBlutooth, claude27a, ez, Zhen, and the dozens and dozens of community Beta Art contributors (join the Discord to join them and see the full list of artists!)\n \n Design and Code Credits: \n \n MichaelMayhem, Vex, kiooeht, Alchyr, erasels, The Evil Pickle, Blank the Evil, JohnnyDevo, AlexDrieger, Erim-Nelhah, Darkglade, Vaylen, SuperLuigi231, Kalene, Cheetah-shooter, arctic_mists, Stanek, mwalls, AlexMdle and many more.  Art Credits: Freshbone - Character Select and Bonfire Art, Half-GoblinHankins - Card Art, Cás de Mattos - Card Art, Rita-B - Alternate Skin Art, Casey Yano - Monster Art, Noob Cannon and the Marisa Team - Misc Card Art \n \n Art Use Credit: reddit u/justaschema, Bruce Brenneise, reddit u/Atrolux, Chronometrics, George Eracleous. \n \n Music Credit: PandorasBread  \n \n Localization Aid - borloch",
-            "mts_version": "3.8.0",
-            "sts_version": "2.0",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "downfall mod where everything is the same but hermit's hat has ear holes",
-            "version": "1.0.1",
-            "authors": [
-                "ocean"
-            ],
-            "credits": "",
-            "description": "hermit reskin",
-            "mts_version": "3.23.4",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "downfall"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Dream Cards",
-            "version": "1.01",
-            "authors": [
-                "you!"
-            ],
-            "credits": "",
-            "description": "Adds a new card for Ironclad, Silent, and Defect.",
-            "mts_version": "3.18.2",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "DregsMod",
-            "version": "0.0.2",
-            "authors": [
-                "NotInTheFace"
-            ],
-            "credits": "Chinese translation by CaptainSnafu",
-            "description": "Adds the Dregs.\n        - Cleanse curses to collect cards from other classes\n        - Curse your enemies\n        - Try not to die",
-            "mts_version": "3.15.0",
-            "sts_version": "07-30-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Energized Spire",
-            "version": "1.10.0",
-            "authors": [
-                "JohnnyBazooka89"
-            ],
-            "credits": "旅渚 - Simplified Chinese localization",
-            "description": "This mod adds a lot of new Energy relics to the boss relic pool!\n\nMore info: https://steamcommunity.com/sharedfiles/filedetails/?id=1639939942\n\nGitHub: https://github.com/JohnnyBazooka89/StSModEnergizedSpire",
-            "mts_version": "3.18.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Ferrothorn",
-            "version": "1.0",
-            "authors": [
-                "Diamsword"
-            ],
-            "credits": "Basemod, ModTheSpire, StS Discord",
-            "description": "A fan mod inspired by the Pokemon Ferrothorn.",
-            "mts_version": "3.8.0",
-            "sts_version": "01-23-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Halation",
-            "version": "0.0.18",
-            "authors": [
-                "Reina",
-                "RedDyeNo5"
-            ],
-            "credits": "",
-            "description": "Content mod that adds relics, events and monsters.",
-            "mts_version": "3.6.3",
-            "sts_version": "01-03-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Hallownest",
-            "version": "1.0.2",
-            "authors": [
-                "VenIM"
-            ],
-            "credits": "",
-            "description": "3 New Acts adapting the world of Hollow Knight by Team Cherry into the Spire. Seriously, if you haven't played Hollow Knight you are missing out.",
-            "mts_version": "3.8.0",
-            "sts_version": "01-27-2020",
-            "dependencies": [
-                "basemod",
-                "stslib",
-                "actlikeit"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Hubris",
-            "version": "0.24.9",
-            "authors": [
-                "kiooeht"
-            ],
-            "credits": "",
-            "description": "Content expansion mod. Adds new cards, relics, events, and monsters.",
-            "mts_version": "3.11.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Infinite Spire",
-            "version": "0.23.0",
-            "authors": [
-                "Blank The Evil"
-            ],
-            "credits": "Contributors: The_Evil_Pickle, RedDyeNo5, Gremious, Len (for French translation)",
-            "description": "Adds a new way to climb the spire forever, complete quests along the way, but be careful, the spire will not be kind to those who do not give up.\n\nAlso thanks to kiooeht, test477, The_Evil_Pickle, Moocowsgomoo, fiiiiilth, JohnnyDevo, Chronometrics, MichaelMayhem and Reina for helping me learn more about programming. \n\n Shoutouts to Fairy, gkjzhgffjh, Nafen, Jedi and JohnnyBazooka for being awesome members of the modding community.",
-            "mts_version": "3.18.1",
-            "sts_version": "11-30-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Launch Save Slot2",
-            "version": "1",
-            "authors": [
-                "ocean"
-            ],
-            "credits": "",
-            "description": "When launcing the game with this mod enabled, save slot number specified in the title will be automatically set on startup.",
-            "mts_version": "0.0.0",
-            "sts_version": "",
-            "dependencies": [],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Marisa（霧雨　魔理沙）",
-            "version": "0.15.4",
-            "authors": [
-                "Flynn",
-                "Hell",
-                "Hohner257",
-                "Samsara"
-            ],
-            "credits": "",
-            "description": "Adds Marisa（霧雨　魔理沙） from Touhou Project as a new playable character.",
-            "mts_version": "0.0.0",
-            "sts_version": "01-14-2020",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Pan's Trinkets",
-            "version": "1.0.0",
-            "authors": [
-                "Pandemonium"
-            ],
-            "credits": "",
-            "description": "Adds trinkets, a new kind of rewards.",
-            "mts_version": "3.8.0",
-            "sts_version": "01-23-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Reliquary",
-            "version": "0.5",
-            "authors": [
-                "Tom Quinn"
-            ],
-            "credits": "Check out my other stuff at thquinn.github.io!",
-            "description": "A collection of relics.",
-            "mts_version": "2.6.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Replay The Spire",
-            "version": "1.6.7",
-            "authors": [
-                "The_Evil_Pickle"
-            ],
-            "credits": "Artists: Victorformat_cn, Bakuhaku, Stewartisme, Lyman, RedDyeNo5, Apinanaivot. \n OST: Slimer509. \n Translators: PJJLegend, TheGrobber, Rita-Bernstein, Rincewind. \n Also helped: DecadeDecaf, Reina, Blank the Evil.",
-            "description": "Huge content expansion mod. Adds new cards, relics, potions, events, monsters, and shenanigans.",
-            "mts_version": "3.15.0",
-            "sts_version": "01-14-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Robot Space Explorer",
-            "version": "1.0.9",
-            "authors": [
-                "ResponsibleAlex"
-            ],
-            "credits": "Basemod, ModTheSpire\nSimplified Chinese: CaptainSnafu\nKorean: zerosiki__",
-            "description": "A collaboration with my 7-year-old son.\n\nHe created about 20 of the card designs and/or names, and about half of the card art.\n\nI built the rest of the character around his work.",
-            "mts_version": "3.8.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Ruina",
-            "version": "3.7.0",
-            "authors": [
-                "Darkglade, squeeny"
-            ],
-            "credits": "",
-            "description": "An alternate Act mod based on Library of Ruina.",
-            "mts_version": "3.18.2",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod",
-                "stslib",
-                "actlikeit"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Shop Mod",
-            "version": "1.1.2",
-            "authors": [
-                "twanvl"
-            ],
-            "credits": "translation: Rita-B",
-            "description": "Modifies the merchant's shop, allowing you to buy more items.",
-            "mts_version": "3.0.0",
-            "sts_version": "07-01-2019",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Slay the Spire",
-            "version": "2.3.4",
-            "authors": [
-                "Mega Crit"
-            ],
-            "credits": "",
-            "description": "",
-            "mts_version": "3.15.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [],
-            "optional_dependencies": []
-        },
-        {
-            "name": "Somnambulant",
-            "version": "1.10",
-            "authors": [
-                "Frugi Lentesco"
-            ],
-            "credits": "",
-            "description": "This mod adds a new character to the game, the Somnambulant. They dream, and their dreams are the stuff of nightmares. \n \n The Somnambulant has many ways of manipulating their deck, which can change drastically in the course of combat. Cards can be generated and exhausted en masse. It is up to the player to reshape their decks in beneficial ways. \n The most common way of changing the deck comes in the form of two special cards, both of which can only be created during combat. \n The card Dream will create new cards until your hand is full, all of which cost 0 energy this turn. The class of the cards generated depends on the intent of the enemy you are dreaming about: an attacking enemy will provide you with Ironclad cards, a buffing enemy with Defect cards, and a debuffing enemy with Silent cards. Dreams are powerful, but, since they are generated in your discard pile, will often take a while to get drawn. \n The card Nightmare does very little on its own. It is practically a curse, allowing you to apply 1 measly poison to an enemy, for the ungainly cost of 1 energy. They stay in your hand at the end of your turn, so at least you only have to draw them once. However, fill up your hand with too many Nightmares and there will be little space for those Dreams to pay off. Mostly, Nightmares are a drawback to an otherwise powerful effect. There are cards, however, that let you benefit from those Nightmares in your hand. \n \n The rest is up to you to discover.",
-            "mts_version": "3.8.0",
-            "sts_version": "01-23-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "StSLib",
-            "version": "2.9.0",
-            "authors": [
-                "kiooeht"
-            ],
-            "credits": "\n  Contributors: The_Evil_Pickle, Reina, Rin Camelia, erasels, EatYourBeetS, Jedi, Vex, Mistress Alison, Alchyr, Bryan, Pandemonium, NellyDevo \n  Translation: Jedi (Russian), Rita-B (ZHS), rainfoxest (ZHS, ZHT), Mwalls (ZHS), Tsurumaki Maki (Korean), Celicath (Korean), Diamsword (French), red5h4d0w (French)",
-            "description": "A collection of keywords and mechanics for other Slay the Spire mods to use.",
-            "mts_version": "3.24.0",
-            "sts_version": "12-18-2022",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Adventurer",
-            "version": "2.5",
-            "authors": [
-                "Vex'd"
-            ],
-            "credits": "",
-            "description": "Adds a new playable character: The Adventurer.",
-            "mts_version": "3.18.2",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Artist",
-            "version": "0.2.0",
-            "authors": [
-                "Diamsword",
-                "Vex'd"
-            ],
-            "credits": "",
-            "description": "An artist!",
-            "mts_version": "3.8.0",
-            "sts_version": "2.0",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Axe",
-            "version": "0.3.0",
-            "authors": [
-                "Axelrod777"
-            ],
-            "credits": "",
-            "description": "Adds Axe from Dota 2 as a playable character.\n- Features 75 new cards with unique art, including custom-made art and art from Dota.\n\n- Accumulate Spin to retaliate against groups of enemies.\n- Stack Bloodlust on the enemy to wear them down until they damage you.\n- Collect Item cards, which provide passive benefit in the hand.\n\nCredits:\n- Mod designed and programmed by Axelrod777. Discord: Axelrod#5084.\n- Featuring character and card art by jdeg.jpg on Instagram. Discord: JDegs#9781.\n- Featuring other art by Jangirl#3025 on Discord.\n- Credit to Jalcober, propen, and burga boy for some Steam Workshop art.\n- Special thanks to the Slay The Spire Discord's modding channel for all their help.\n- Axe, Dota, Artifact, and Underlords belong to Valve Corporation.\n\nComing soon: More potions, more custom art, and balance updates.\nPlaytesting build. Not intended for public release.\nSend balance and feature suggestions to Axelrod#5084 on Discord.",
-            "mts_version": "3.25.2",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Blade Gunner",
-            "version": "1.5.1",
-            "authors": [
-                "Chaofan"
-            ],
-            "credits": "BaseMod, ModTheSpire: Kiooeht and other contributors.\nSpire Exporter: twanvl.\nEnglish translation refine: Stanek.",
-            "description": "Add new character blade gunner to Slay the Spire.",
-            "mts_version": "3.8.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Construct",
-            "version": "1.1.0",
-            "authors": [
-                "Moocowsgomoo, Spike Berd, Wilde, Rita-B"
-            ],
-            "credits": "",
-            "description": "New character - The Construct! \n\nRECENT CHANGES:\n1.1.0\n- Updated for StS 2.0.\n\nv1.0.6\n- ZHS localization update for Rocket Booster (Rita-B)\n\nv1.0.5\n- Localization for KOR (Wilde) and ZHS (Rita-B).\n- Fixed crash with Long-Range Lance.\n- Fixed rare crash with Overheat effects.\n- Probably some other minor bugfixes. \n\nv1.0.4\n- Shift Guard/Strike no longer Cycle in Challenge Mode.\n\nv1.0.3\n- Added Challenge Mode (1) to char select.\n- Fix Save State not triggering Bunker.\n- Power Up now deals more damage and Exhausts.\n- Wedding Ring description now saves.\n- Changed Challenge 3 (config options).\n\n\nThanks for playing the Construct! Please let Moocowsgomoo know on Steam, Discord, or GitHub if you have any feedback or bug reports!",
-            "mts_version": "3.4.0",
-            "sts_version": "01-27-2020",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Cursed",
-            "version": "1.1.10",
-            "authors": [
-                "jhp109"
-            ],
-            "credits": "",
-            "description": "A new character who uses curse and magic circle to fight against enemies.  \n \nThe Cursed adds 75 cards (plus 1 extra card), 11 new character-specific relics, and 1 new potion. \nAlso Constructed Theme Deck option is available in its config.",
-            "mts_version": "3.8.3",
-            "sts_version": "07-30-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Disciple",
-            "version": "2.0",
-            "authors": [
-                "Chronometrics"
-            ],
-            "credits": "Special Thanks to: \nRocketPad - for various character artwork. \nFormalFighting - for design assistance and early playtesting. \nSkylawinters - First alpha player. \nLyman - three card portraits. \n RedDyeNo5 - Hanging Clock relic image. \nZandorum - Chronometer, Chronograph, Metronome relic image improvements. \nBD - Tiring Slam code fix. \nKullwarrior, KongMD, xcalibre0 - consistent bug reporters.",
-            "description": "The Disciple is a custom Slay the Spire character themed after the Time Eater. The deck is designed around choosing the correct time for cards to be played to gain max value, and has four central themes: Card Retention, Intent Shifting, Card Transforming, and Temporary Relic Cycling.",
-            "mts_version": "3.4.0",
-            "sts_version": "10-18-2018",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Forsaken",
-            "version": "1.0.0",
-            "authors": [
-                "NotInTheFace"
-            ],
-            "credits": "Chinese translation by CaptainSnafu",
-            "description": "Custom character centered around self buffs.",
-            "mts_version": "3.8.0",
-            "sts_version": "07-17-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Hayseed",
-            "version": "0.9.9",
-            "authors": [
-                "jwoolley"
-            ],
-            "credits": "Thanks to: \n\nSpleen — for amazing card and relic art. \n\nsolderist.park — whose Cursed mod source code I used to get started (use Default Mod!) \n\nCaptainSnafu — for an excellent Chinese translation! \n\nRucodeby — for the Russion translation!  \n\nHarryWardp, Basilisk, Greuben, CannonballFun, and Toddells — for invaluable playtesting and feedback.",
-            "description": "A simple farmer with a head like a pinewood block.",
-            "mts_version": "3.11.0",
-            "sts_version": "01-20-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Hierophant",
-            "version": "2.0.0",
-            "authors": [
-                "Corax"
-            ],
-            "credits": "",
-            "description": "A holy creature of grand aspirations, tested by greed. Converts its enemies through benevolence or bribery.",
-            "mts_version": "3.8.0",
-            "sts_version": "01-23-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Human",
-            "version": "3.5.0",
-            "authors": [
-                "complex"
-            ],
-            "credits": "Basemod, ModTheSpire",
-            "description": "Adds Harold the Human as a playable character.",
-            "mts_version": "3.8.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The M10 Robot",
-            "version": "1.1.1",
-            "authors": [
-                "Mistress Alison"
-            ],
-            "credits": "Art Assets - 100% Orange Juice (sprites, cards)\nBaseMod, ModTheSpire, and StSLib - Bug Kiooeht\nBeta Testing - Spookalon\nKorean Translation - Saki\nSimplified Chinese Translation - Leaf_Fallen\nRussian Translation - Rucodeby",
-            "description": "Adds M10 Robot from 100% Orange Juice.",
-            "mts_version": "3.20.0",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Marked",
-            "version": "1.2.10",
-            "authors": [
-                "Verburner"
-            ],
-            "credits": "Basemod, ModTheSpire, Julia Karamell, luke871016, #modding, further credit is given on the Workshop page",
-            "description": "Adds a new character based on a fantasy novel by Julia Karamell. ",
-            "mts_version": "3.8.0",
-            "sts_version": "01-23-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Mystic",
-            "version": "0.19.0",
-            "authors": [
-                "Johnny Devo"
-            ],
-            "credits": "Artists: \n  RedDyeNo5 (https://twitter.com/RedDyeNo5/media) for 6 relics: Spellbook, Blessed Book, Crystal Ball, Training Manual, Rabbit's Foot, and Bent Spoon. \n Translators: \n IrisRaphael(猫妖爱丽丝拉斐尔) and Orakur(昂拉克) for translation to Chinese(simplified) \n Rastaban81 for translation to Russian \n /u/Specialist-Fix2185 for translation to Korean",
-            "description": "v0.19.0, introduces new Korean translation. Many thanks to the translator, /u/Specialist-Fix2185",
-            "mts_version": "3.28.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Packmaster",
-            "version": "1.6.0",
-            "authors": [
-                "Vex'd",
-                "modargo",
-                "(Gk) erasels",
-                "Michael Mayhem",
-                "DJGames",
-                "Alchyr",
-                "NellyDevo",
-                "Bryan",
-                "Enbeon",
-                "Silver",
-                "Diamsword",
-                "AlexMdle",
-                "Pandemonium",
-                "Laugic",
-                "Pina Colada",
-                "FieryChocobo",
-                "Dayvig",
-                "Darkglade",
-                "Kiooeht",
-                "JohnnyBazooka",
-                "EricB",
-                "Celicath",
-                "PureQuestion",
-                "SandTag",
-                "Charlie",
-                "Mindbomber",
-                "Jack Renoson",
-                "lobbien",
-                "Jedi",
-                "Mwalls"
-            ],
-            "credits": "",
-            "description": "Modding Anniversary 5: The Packmaster",
-            "mts_version": "3.30.2",
-            "sts_version": "12-18-2022",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Runesmith",
-            "version": "1.0.8",
-            "authors": [
-                "Blizzarre",
-                "PureStream"
-            ],
-            "credits": "\nBDWSSBB - Card descriptions wording improvements.\nDalamzi - Korean translation.\nRita-Bernstein - Chinese translation.\nSlathos - Polish translation.",
-            "description": "Add a new class called the Runesmith",
-            "mts_version": "3.11.0",
-            "sts_version": "07-17-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Servant 0.9.4",
-            "version": "0.9.4",
-            "authors": [
-                "BlackRuse, Kuzomari, Dimlight"
-            ],
-            "credits": "",
-            "description": "Adds The Servant as a new playable character. She has a full set of 75 cards, 8 new mechanics and 11 exclusive relics.",
-            "mts_version": "3.15.0",
-            "sts_version": "01-21-2020",
-            "dependencies": [
-                "basemod"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Templar",
-            "version": "1.0.6",
-            "authors": [
-                "ResponsibleAlex"
-            ],
-            "credits": "searcian",
-            "description": "Sworn to his liege, champion of the Five Ideals, the Templar quests to cleanse the Spire of corruption.",
-            "mts_version": "3.8.0",
-            "sts_version": "03-07-2022",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Unchained Mod",
-            "version": "1.0.4",
-            "authors": [
-                "Mezix & BigL"
-            ],
-            "credits": "The Default Modbase, STSLib, Sounds by: Kinaticc & Plusma",
-            "description": "A new Character with 75+ new cards, 10 new Relics, 3 new Potions and 4 distinct archetypes you can play around with and have a lot of fun!",
-            "mts_version": "3.8.0",
-            "sts_version": "12-18-2022",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "The Vacant",
-            "version": "1.0.1",
-            "authors": [
-                "Laugic"
-            ],
-            "credits": "",
-            "description": "A lost soul, bound to an artifact, is doomed to climb the Spire.",
-            "mts_version": "3.18.2",
-            "sts_version": "12-22-2020",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        },
-        {
-            "name": "thorton",
-            "version": "105",
-            "authors": [
-                "Vex'd"
-            ],
-            "credits": "",
-            "description": "A very regular man.",
-            "mts_version": "3.8.0",
-            "sts_version": "01-23-2019",
-            "dependencies": [
-                "basemod",
-                "stslib"
-            ],
-            "optional_dependencies": []
-        }
-    ],
-    "blights": [
-        {
-            "id": "DeadlyEnemies",
-            "name": "Spear of Blight",
-            "description": "Enemies deal 100% more damage.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "ToughEnemies",
-            "name": "Shield of Blight",
-            "description": "Enemies have 50% more HP.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "TimeMaze",
-            "name": "Time Maze",
-            "description": "You cannot play more than 15 cards per turn.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "MimicInfestation",
-            "name": "Mimic Infestation",
-            "description": "Treasure rooms in future acts are replaced by Elites. Elites no longer drop relics.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "FullBelly",
-            "name": "Muzzle",
-            "description": "You can no longer increase your Max HP. All healing is halved.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "GrotesqueTrophy",
-            "name": "Grotesque Trophy",
-            "description": "Upon pickup, obtain 3 Prides.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "Accursed",
-            "name": "Accursed",
-            "description": "Whenever you defeat a Boss, obtain 2 random Curses.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "Scatterbrain",
-            "name": "Scatterbrain",
-            "description": "Draw 1 less card a turn.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "TwistingMind",
-            "name": "Twisting Mind",
-            "description": "At the end of your turn, add 1 random Status card to the top of your draw pile.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "BlightedDurian",
-            "name": "Post-Durian",
-            "description": "Lose 50% of your Max HP.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "VoidEssence",
-            "name": "Void Essence",
-            "description": "Gain 1 less [E] at the start of each turn.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "GraspOfShadows",
-            "name": "Hauntings",
-            "description": "Enemies start combat with 1 Intangible.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "id": "MetallicRebirth",
-            "name": "Ancient Augmentation",
-            "description": "Enemies start combat with 1 Artifact, 10 Plated Armor, and 10 Regenerate.",
-            "mod": "Slay the Spire"
         }
     ],
     "packs": [
@@ -71259,7 +70057,7 @@
                 "Swarm of Bees",
                 "Ambush",
                 "Pandas",
-                "Training",
+                "Specialist",
                 "Quill"
             ],
             "tags": [
@@ -71355,7 +70153,7 @@
         {
             "id": "anniv5:WardenPack",
             "name": "Warden",
-            "description": "Manipulate the power of foresight, think ahead, bend the unknown into your favor.",
+            "description": "Manipulate the power of foresight, think ahead, bend the unknown into your favor.",
             "author": "AlexMdle",
             "credits": "Pack art by StardustSwirl",
             "offense": "3",
@@ -71552,6 +70350,1001 @@
                 "Exhaust"
             ],
             "mod": "The Packmaster"
+        }
+    ],
+    "mods": [
+        {
+            "name": "Act Like it!",
+            "version": "1.2.7",
+            "authors": [
+                "Razash"
+            ],
+            "credits": "",
+            "description": "Rudimentary framework for creating acts.",
+            "mts_version": "3.8.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Aspiration",
+            "version": "1.9.4",
+            "authors": [
+                "erasels"
+            ],
+            "credits": "",
+            "description": "A mod adding relics, cards and events with varying themes. There's no real end goal behind it, just me implementing neat ideas that come my way via reddit, Discord, other games or even my imagination.\n\n For a full list of everything added and an up to date look at what I'm working on, you can take a look at my Github Repository here: https://github.com/erasels/Aspiration-StS/ \n\nLet me know if you have questions, suggestions or found an error.",
+            "mts_version": "3.15.0",
+            "sts_version": "14-01-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Astrologer",
+            "version": "1.4.5",
+            "authors": [
+                "Alchyr"
+            ],
+            "credits": "",
+            "description": "Astrologer.\nCredits: https://freesound.org/people/acclivity/sounds/32304/\nhttps://freesound.org/people/Timbre/sounds/221683/\nhttp://www.stephanie-davidson.com/\nzhs (simplified chinese) translation: thanks to 小萝卜跳 and CaptainSnafu\njapanese translation: thanks to vanadi910 and Gravitii\nkorean translation: thanks to zerosiki__",
+            "mts_version": "3.18.0",
+            "sts_version": "11-30-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Avocado",
+            "version": "0.1.2",
+            "authors": [
+                "Paparatto"
+            ],
+            "credits": "",
+            "description": "the avocado",
+            "mts_version": "3.4.0",
+            "sts_version": "10-18-2018",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bad Defect (Remade)",
+            "version": "0.3.4",
+            "authors": [
+                "Jerry"
+            ],
+            "credits": "",
+            "description": "This is the new rewritten version of Bad Defect as an effort to 'manually' recover its source code. This version could be less stable and have more crashes, be sure to report them at the workshop!",
+            "mts_version": "3.19.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bad Ironclad",
+            "version": "0.1.5",
+            "authors": [
+                "Jerry"
+            ],
+            "credits": "",
+            "description": "Coming from the creator of Bad Silent, a mod disappointing you beyond your imagination.",
+            "mts_version": "3.19.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bad Silent",
+            "version": "0.1.11",
+            "authors": [
+                "Jerry"
+            ],
+            "credits": "",
+            "description": "Adds ridiculous silent cards. ",
+            "mts_version": "3.19.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bad Spire",
+            "version": "0.2.3",
+            "authors": [
+                "Jerry"
+            ],
+            "credits": "",
+            "description": "",
+            "mts_version": "3.19.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bad Watcher",
+            "version": "0.2.5",
+            "authors": [
+                "Jerry"
+            ],
+            "credits": "",
+            "description": "You know that you are a mistake of a mod when your core mechanic is killing yourself repeatedly. ",
+            "mts_version": "3.19.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bard",
+            "version": "1.11.0",
+            "authors": [
+                "kiooeht"
+            ],
+            "credits": "Testing: Reina, Gremious, Blank The Evil, and Skyson",
+            "description": "Adds a new playable character: The Bard.",
+            "mts_version": "3.18.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Battle Towers",
+            "version": "1.0.10",
+            "authors": [
+                "erasels"
+            ],
+            "credits": "",
+            "description": "4th MtS Anniversary Mod! Adds a new node to act 2 that makes you decide between a series of perilous fights with amazing rewards or a chest.",
+            "mts_version": "3.8.0",
+            "sts_version": "01-23-2019",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Beaked The Cultist",
+            "version": "0.7.3",
+            "authors": [
+                "EARL",
+                "fiiiiilth",
+                "Moocowsgomoo",
+                "TemmieAnimations",
+                "BlueKnight",
+                "Giuseppe",
+                "MagicHampster",
+                "Ashe",
+                "MunderW",
+                "Midn8",
+                "kiooeht",
+                "Reina",
+                "Rhapsody and community",
+                "i like trains",
+                "Kaamalauppias",
+                "Vanadi910"
+            ],
+            "credits": "",
+            "description": "Adds Beaked the Cultist as a new playable character.\nBEAKED REQUIRES THE STSLIB MOD!\n\n0.7.3\n- Updated JPN translation (vanadi910)\n- Fix game not running with ZHS language selected.\n\n0.7.2\n- JPN translation by vanadi910!\n- Wither cards you own (not created in combat) glow purple.\n- Wither cards glow green when you have negation.\n- Ritual Plumage now highlights the end turn button.\n- Stick Smack+ now correctly previews a Stick+.\n- Added Watcher cards to Sacred Deck.\n- Fixed Sacred Deck crash with other mods. (thanks Aphid)\n- Removed Beta, Omega, Expunger from Sacred Deck. (thanks iruleatgames)\n- Sacred Deck and Crazy Rituals no longer treat Watcher's individual Wish options as separate cards.\n- Cultist Mask easter egg now only works on Beaked.\n- Keyworded Plated Armor & fixed Depleted description not showing up sometimes.\n- More wording updates & reverted some for clarity.\n\n0.7.1\n- New art! Thanks to i like trains and Kaamalauppias!\n\nIf you contributed and don't see your name in the credits, please let us know!",
+            "mts_version": "3.6.0",
+            "sts_version": "01-27-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bundle Of Bundles",
+            "version": "2.0.3",
+            "authors": [
+                "Sandtag"
+            ],
+            "credits": "",
+            "description": "Contains all of the config options and compatibility support for bundles.",
+            "mts_version": "3.29.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bundle Of Food",
+            "version": "2.0.7",
+            "authors": [
+                "SandTag"
+            ],
+            "credits": "Mistress Alison - Very helpful :) \nPandemonium - Very helpful :)",
+            "description": "A collection of 38 food related relics. \n Contains a variety of food types, all giving Max HP and a benefit.",
+            "mts_version": "3.29.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib",
+                "bundlecore"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bundle Of Peglin",
+            "version": "2.6.1",
+            "authors": [
+                "SandTag"
+            ],
+            "credits": "",
+            "description": "Adds 25 events found in peglin to slay the spire! \n Also includes 8 orbs and 47 relics!",
+            "mts_version": "3.29.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib",
+                "bundlecore"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Bundle Of Potions",
+            "version": "2.2.2",
+            "authors": [
+                "SandTag"
+            ],
+            "credits": "",
+            "description": "A collection of 54 potions! \n Features 15+ for each rarity.",
+            "mts_version": "3.29.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib",
+                "bundlecore"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Conspire",
+            "version": "1.7.0",
+            "authors": [
+                "twanvl"
+            ],
+            "credits": "translation: Rita-B",
+            "description": "Adds new monsters, elites, bosses, relics, cards, potions and events.",
+            "mts_version": "3.0.0",
+            "sts_version": "01-16-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Corrupt the Spire",
+            "version": "1.3.2",
+            "authors": [
+                "modargo"
+            ],
+            "credits": "",
+            "description": "Adds corrupted rooms to the Spire, which have increased rewards and new encounters, at the cost of increasing the corruption of the Spire and making all enemies more dangerous.",
+            "mts_version": "3.15.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Downfall",
+            "version": "4.3.2",
+            "authors": [
+                "The Downfall Collab Team"
+            ],
+            "credits": "",
+            "description": "Downfall is a full-featured Expansion for Slay the Spire, including a new 5th hero, a new campaign with 7 villains to play, new relics, new cards, new potions, and more. \n \n Artist Credits: Opal, Cartesian Canvas, TheLethargicWeirdo, AlexMdle, HermitFan69, MagerBlutooth, claude27a, ez, Zhen, and the dozens and dozens of community Beta Art contributors (join the Discord to join them and see the full list of artists!)\n \n Design and Code Credits: \n \n MichaelMayhem, Vex, kiooeht, Alchyr, erasels, The Evil Pickle, Blank the Evil, JohnnyDevo, AlexDrieger, Erim-Nelhah, Darkglade, Vaylen, SuperLuigi231, Kalene, Cheetah-shooter, arctic_mists, Stanek, mwalls, AlexMdle and many more.  Art Credits: Freshbone - Character Select and Bonfire Art, Half-GoblinHankins - Card Art, Cás de Mattos - Card Art, Rita-B - Alternate Skin Art, Casey Yano - Monster Art, Noob Cannon and the Marisa Team - Misc Card Art \n \n Art Use Credit: reddit u/justaschema, Bruce Brenneise, reddit u/Atrolux, Chronometrics, George Eracleous. \n \n Music Credit: PandorasBread  \n \n Localization Aid - borloch",
+            "mts_version": "3.8.0",
+            "sts_version": "2.0",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "downfall mod where everything is the same but hermit's hat has ear holes",
+            "version": "1.0.1",
+            "authors": [
+                "ocean"
+            ],
+            "credits": "",
+            "description": "hermit reskin",
+            "mts_version": "3.23.4",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "downfall"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Dream Cards",
+            "version": "1.01",
+            "authors": [
+                "you!"
+            ],
+            "credits": "",
+            "description": "Adds a new card for Ironclad, Silent, and Defect.",
+            "mts_version": "3.18.2",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "DregsMod",
+            "version": "0.0.2",
+            "authors": [
+                "NotInTheFace"
+            ],
+            "credits": "Chinese translation by CaptainSnafu",
+            "description": "Adds the Dregs.\n        - Cleanse curses to collect cards from other classes\n        - Curse your enemies\n        - Try not to die",
+            "mts_version": "3.15.0",
+            "sts_version": "07-30-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Energized Spire",
+            "version": "1.10.0",
+            "authors": [
+                "JohnnyBazooka89"
+            ],
+            "credits": "旅渚 - Simplified Chinese localization",
+            "description": "This mod adds a lot of new Energy relics to the boss relic pool!\n\nMore info: https://steamcommunity.com/sharedfiles/filedetails/?id=1639939942\n\nGitHub: https://github.com/JohnnyBazooka89/StSModEnergizedSpire",
+            "mts_version": "3.18.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Ferrothorn",
+            "version": "1.0",
+            "authors": [
+                "Diamsword"
+            ],
+            "credits": "Basemod, ModTheSpire, StS Discord",
+            "description": "A fan mod inspired by the Pokemon Ferrothorn.",
+            "mts_version": "3.8.0",
+            "sts_version": "01-23-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Halation",
+            "version": "0.0.18",
+            "authors": [
+                "Reina",
+                "RedDyeNo5"
+            ],
+            "credits": "",
+            "description": "Content mod that adds relics, events and monsters.",
+            "mts_version": "3.6.3",
+            "sts_version": "01-03-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Hallownest",
+            "version": "1.0.2",
+            "authors": [
+                "VenIM"
+            ],
+            "credits": "",
+            "description": "3 New Acts adapting the world of Hollow Knight by Team Cherry into the Spire. Seriously, if you haven't played Hollow Knight you are missing out.",
+            "mts_version": "3.8.0",
+            "sts_version": "01-27-2020",
+            "dependencies": [
+                "basemod",
+                "stslib",
+                "actlikeit"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Hubris",
+            "version": "0.24.9",
+            "authors": [
+                "kiooeht"
+            ],
+            "credits": "",
+            "description": "Content expansion mod. Adds new cards, relics, events, and monsters.",
+            "mts_version": "3.11.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Infinite Spire",
+            "version": "0.23.0",
+            "authors": [
+                "Blank The Evil"
+            ],
+            "credits": "Contributors: The_Evil_Pickle, RedDyeNo5, Gremious, Len (for French translation)",
+            "description": "Adds a new way to climb the spire forever, complete quests along the way, but be careful, the spire will not be kind to those who do not give up.\n\nAlso thanks to kiooeht, test477, The_Evil_Pickle, Moocowsgomoo, fiiiiilth, JohnnyDevo, Chronometrics, MichaelMayhem and Reina for helping me learn more about programming. \n\n Shoutouts to Fairy, gkjzhgffjh, Nafen, Jedi and JohnnyBazooka for being awesome members of the modding community.",
+            "mts_version": "3.18.1",
+            "sts_version": "11-30-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Launch Save Slot2",
+            "version": "1",
+            "authors": [
+                "ocean"
+            ],
+            "credits": "",
+            "description": "When launcing the game with this mod enabled, save slot number specified in the title will be automatically set on startup.",
+            "mts_version": "0.0.0",
+            "sts_version": "",
+            "dependencies": [],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Marisa（霧雨　魔理沙）",
+            "version": "0.15.4",
+            "authors": [
+                "Flynn",
+                "Hell",
+                "Hohner257",
+                "Samsara"
+            ],
+            "credits": "",
+            "description": "Adds Marisa（霧雨　魔理沙） from Touhou Project as a new playable character.",
+            "mts_version": "0.0.0",
+            "sts_version": "01-14-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Pan's Trinkets",
+            "version": "1.0.0",
+            "authors": [
+                "Pandemonium"
+            ],
+            "credits": "",
+            "description": "Adds trinkets, a new kind of rewards.",
+            "mts_version": "3.8.0",
+            "sts_version": "01-23-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Reliquary",
+            "version": "0.5",
+            "authors": [
+                "Tom Quinn"
+            ],
+            "credits": "Check out my other stuff at thquinn.github.io!",
+            "description": "A collection of relics.",
+            "mts_version": "2.6.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Replay The Spire",
+            "version": "1.6.7",
+            "authors": [
+                "The_Evil_Pickle"
+            ],
+            "credits": "Artists: Victorformat_cn, Bakuhaku, Stewartisme, Lyman, RedDyeNo5, Apinanaivot. \n OST: Slimer509. \n Translators: PJJLegend, TheGrobber, Rita-Bernstein, Rincewind. \n Also helped: DecadeDecaf, Reina, Blank the Evil.",
+            "description": "Huge content expansion mod. Adds new cards, relics, potions, events, monsters, and shenanigans.",
+            "mts_version": "3.15.0",
+            "sts_version": "01-14-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Robot Space Explorer",
+            "version": "1.0.9",
+            "authors": [
+                "ResponsibleAlex"
+            ],
+            "credits": "Basemod, ModTheSpire\nSimplified Chinese: CaptainSnafu\nKorean: zerosiki__",
+            "description": "A collaboration with my 7-year-old son.\n\nHe created about 20 of the card designs and/or names, and about half of the card art.\n\nI built the rest of the character around his work.",
+            "mts_version": "3.8.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Ruina",
+            "version": "3.7.0",
+            "authors": [
+                "Darkglade, squeeny"
+            ],
+            "credits": "",
+            "description": "An alternate Act mod based on Library of Ruina.",
+            "mts_version": "3.18.2",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib",
+                "actlikeit"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Shop Mod",
+            "version": "1.1.2",
+            "authors": [
+                "twanvl"
+            ],
+            "credits": "translation: Rita-B",
+            "description": "Modifies the merchant's shop, allowing you to buy more items.",
+            "mts_version": "3.0.0",
+            "sts_version": "07-01-2019",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Slay the Spire",
+            "version": "2.3.4",
+            "authors": [
+                "Mega Crit"
+            ],
+            "credits": "",
+            "description": "",
+            "mts_version": "3.15.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [],
+            "optional_dependencies": []
+        },
+        {
+            "name": "Somnambulant",
+            "version": "1.10",
+            "authors": [
+                "Frugi Lentesco"
+            ],
+            "credits": "",
+            "description": "This mod adds a new character to the game, the Somnambulant. They dream, and their dreams are the stuff of nightmares. \n \n The Somnambulant has many ways of manipulating their deck, which can change drastically in the course of combat. Cards can be generated and exhausted en masse. It is up to the player to reshape their decks in beneficial ways. \n The most common way of changing the deck comes in the form of two special cards, both of which can only be created during combat. \n The card Dream will create new cards until your hand is full, all of which cost 0 energy this turn. The class of the cards generated depends on the intent of the enemy you are dreaming about: an attacking enemy will provide you with Ironclad cards, a buffing enemy with Defect cards, and a debuffing enemy with Silent cards. Dreams are powerful, but, since they are generated in your discard pile, will often take a while to get drawn. \n The card Nightmare does very little on its own. It is practically a curse, allowing you to apply 1 measly poison to an enemy, for the ungainly cost of 1 energy. They stay in your hand at the end of your turn, so at least you only have to draw them once. However, fill up your hand with too many Nightmares and there will be little space for those Dreams to pay off. Mostly, Nightmares are a drawback to an otherwise powerful effect. There are cards, however, that let you benefit from those Nightmares in your hand. \n \n The rest is up to you to discover.",
+            "mts_version": "3.8.0",
+            "sts_version": "01-23-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "StSLib",
+            "version": "2.9.0",
+            "authors": [
+                "kiooeht"
+            ],
+            "credits": "\n  Contributors: The_Evil_Pickle, Reina, Rin Camelia, erasels, EatYourBeetS, Jedi, Vex, Mistress Alison, Alchyr, Bryan, Pandemonium, NellyDevo \n  Translation: Jedi (Russian), Rita-B (ZHS), rainfoxest (ZHS, ZHT), Mwalls (ZHS), Tsurumaki Maki (Korean), Celicath (Korean), Diamsword (French), red5h4d0w (French)",
+            "description": "A collection of keywords and mechanics for other Slay the Spire mods to use.",
+            "mts_version": "3.24.0",
+            "sts_version": "12-18-2022",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Adventurer",
+            "version": "2.5",
+            "authors": [
+                "Vex'd"
+            ],
+            "credits": "",
+            "description": "Adds a new playable character: The Adventurer.",
+            "mts_version": "3.18.2",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Artist",
+            "version": "0.2.0",
+            "authors": [
+                "Diamsword",
+                "Vex'd"
+            ],
+            "credits": "",
+            "description": "An artist!",
+            "mts_version": "3.8.0",
+            "sts_version": "2.0",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Axe",
+            "version": "0.3.0",
+            "authors": [
+                "Axelrod777"
+            ],
+            "credits": "",
+            "description": "Adds Axe from Dota 2 as a playable character.\n- Features 75 new cards with unique art, including custom-made art and art from Dota.\n\n- Accumulate Spin to retaliate against groups of enemies.\n- Stack Bloodlust on the enemy to wear them down until they damage you.\n- Collect Item cards, which provide passive benefit in the hand.\n\nCredits:\n- Mod designed and programmed by Axelrod777. Discord: Axelrod#5084.\n- Featuring character and card art by jdeg.jpg on Instagram. Discord: JDegs#9781.\n- Featuring other art by Jangirl#3025 on Discord.\n- Credit to Jalcober, propen, and burga boy for some Steam Workshop art.\n- Special thanks to the Slay The Spire Discord's modding channel for all their help.\n- Axe, Dota, Artifact, and Underlords belong to Valve Corporation.\n\nComing soon: More potions, more custom art, and balance updates.\nPlaytesting build. Not intended for public release.\nSend balance and feature suggestions to Axelrod#5084 on Discord.",
+            "mts_version": "3.25.2",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Blade Gunner",
+            "version": "1.5.1",
+            "authors": [
+                "Chaofan"
+            ],
+            "credits": "BaseMod, ModTheSpire: Kiooeht and other contributors.\nSpire Exporter: twanvl.\nEnglish translation refine: Stanek.",
+            "description": "Add new character blade gunner to Slay the Spire.",
+            "mts_version": "3.8.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Construct",
+            "version": "1.1.0",
+            "authors": [
+                "Moocowsgomoo, Spike Berd, Wilde, Rita-B"
+            ],
+            "credits": "",
+            "description": "New character - The Construct! \n\nRECENT CHANGES:\n1.1.0\n- Updated for StS 2.0.\n\nv1.0.6\n- ZHS localization update for Rocket Booster (Rita-B)\n\nv1.0.5\n- Localization for KOR (Wilde) and ZHS (Rita-B).\n- Fixed crash with Long-Range Lance.\n- Fixed rare crash with Overheat effects.\n- Probably some other minor bugfixes. \n\nv1.0.4\n- Shift Guard/Strike no longer Cycle in Challenge Mode.\n\nv1.0.3\n- Added Challenge Mode (1) to char select.\n- Fix Save State not triggering Bunker.\n- Power Up now deals more damage and Exhausts.\n- Wedding Ring description now saves.\n- Changed Challenge 3 (config options).\n\n\nThanks for playing the Construct! Please let Moocowsgomoo know on Steam, Discord, or GitHub if you have any feedback or bug reports!",
+            "mts_version": "3.4.0",
+            "sts_version": "01-27-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Cursed",
+            "version": "1.1.10",
+            "authors": [
+                "jhp109"
+            ],
+            "credits": "",
+            "description": "A new character who uses curse and magic circle to fight against enemies.  \n \nThe Cursed adds 75 cards (plus 1 extra card), 11 new character-specific relics, and 1 new potion. \nAlso Constructed Theme Deck option is available in its config.",
+            "mts_version": "3.8.3",
+            "sts_version": "07-30-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Disciple",
+            "version": "2.0",
+            "authors": [
+                "Chronometrics"
+            ],
+            "credits": "Special Thanks to: \nRocketPad - for various character artwork. \nFormalFighting - for design assistance and early playtesting. \nSkylawinters - First alpha player. \nLyman - three card portraits. \n RedDyeNo5 - Hanging Clock relic image. \nZandorum - Chronometer, Chronograph, Metronome relic image improvements. \nBD - Tiring Slam code fix. \nKullwarrior, KongMD, xcalibre0 - consistent bug reporters.",
+            "description": "The Disciple is a custom Slay the Spire character themed after the Time Eater. The deck is designed around choosing the correct time for cards to be played to gain max value, and has four central themes: Card Retention, Intent Shifting, Card Transforming, and Temporary Relic Cycling.",
+            "mts_version": "3.4.0",
+            "sts_version": "10-18-2018",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Forsaken",
+            "version": "1.0.0",
+            "authors": [
+                "NotInTheFace"
+            ],
+            "credits": "Chinese translation by CaptainSnafu",
+            "description": "Custom character centered around self buffs.",
+            "mts_version": "3.8.0",
+            "sts_version": "07-17-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Hayseed",
+            "version": "0.9.9",
+            "authors": [
+                "jwoolley"
+            ],
+            "credits": "Thanks to: \n\nSpleen — for amazing card and relic art. \n\nsolderist.park — whose Cursed mod source code I used to get started (use Default Mod!) \n\nCaptainSnafu — for an excellent Chinese translation! \n\nRucodeby — for the Russion translation!  \n\nHarryWardp, Basilisk, Greuben, CannonballFun, and Toddells — for invaluable playtesting and feedback.",
+            "description": "A simple farmer with a head like a pinewood block.",
+            "mts_version": "3.11.0",
+            "sts_version": "01-20-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Hierophant",
+            "version": "2.0.0",
+            "authors": [
+                "Corax"
+            ],
+            "credits": "",
+            "description": "A holy creature of grand aspirations, tested by greed. Converts its enemies through benevolence or bribery.",
+            "mts_version": "3.8.0",
+            "sts_version": "01-23-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Human",
+            "version": "3.5.1",
+            "authors": [
+                "complex"
+            ],
+            "credits": "Basemod, ModTheSpire",
+            "description": "Adds Harold the Human as a playable character.",
+            "mts_version": "3.8.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The M10 Robot",
+            "version": "1.1.1",
+            "authors": [
+                "Mistress Alison"
+            ],
+            "credits": "Art Assets - 100% Orange Juice (sprites, cards)\nBaseMod, ModTheSpire, and StSLib - Bug Kiooeht\nBeta Testing - Spookalon\nKorean Translation - Saki\nSimplified Chinese Translation - Leaf_Fallen\nRussian Translation - Rucodeby",
+            "description": "Adds M10 Robot from 100% Orange Juice.",
+            "mts_version": "3.20.0",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Marked",
+            "version": "1.2.10",
+            "authors": [
+                "Verburner"
+            ],
+            "credits": "Basemod, ModTheSpire, Julia Karamell, luke871016, #modding, further credit is given on the Workshop page",
+            "description": "Adds a new character based on a fantasy novel by Julia Karamell. ",
+            "mts_version": "3.8.0",
+            "sts_version": "01-23-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Mystic",
+            "version": "0.19.0",
+            "authors": [
+                "Johnny Devo"
+            ],
+            "credits": "Artists: \n  RedDyeNo5 (https://twitter.com/RedDyeNo5/media) for 6 relics: Spellbook, Blessed Book, Crystal Ball, Training Manual, Rabbit's Foot, and Bent Spoon. \n Translators: \n IrisRaphael(猫妖爱丽丝拉斐尔) and Orakur(昂拉克) for translation to Chinese(simplified) \n Rastaban81 for translation to Russian \n /u/Specialist-Fix2185 for translation to Korean",
+            "description": "v0.19.0, introduces new Korean translation. Many thanks to the translator, /u/Specialist-Fix2185",
+            "mts_version": "3.28.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Packmaster",
+            "version": "1.6.1",
+            "authors": [
+                "Vex'd",
+                "modargo",
+                "(Gk) erasels",
+                "Michael Mayhem",
+                "DJGames",
+                "Alchyr",
+                "NellyDevo",
+                "Bryan",
+                "Enbeon",
+                "Silver",
+                "Diamsword",
+                "AlexMdle",
+                "Pandemonium",
+                "Laugic",
+                "Pina Colada",
+                "FieryChocobo",
+                "Dayvig",
+                "Darkglade",
+                "Kiooeht",
+                "JohnnyBazooka",
+                "EricB",
+                "Celicath",
+                "PureQuestion",
+                "SandTag",
+                "Charlie",
+                "Mindbomber",
+                "Jack Renoson",
+                "lobbien",
+                "Jedi",
+                "Mwalls"
+            ],
+            "credits": "",
+            "description": "Modding Anniversary 5: The Packmaster",
+            "mts_version": "3.30.2",
+            "sts_version": "12-18-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Runesmith",
+            "version": "1.0.8",
+            "authors": [
+                "Blizzarre",
+                "PureStream"
+            ],
+            "credits": "\nBDWSSBB - Card descriptions wording improvements.\nDalamzi - Korean translation.\nRita-Bernstein - Chinese translation.\nSlathos - Polish translation.",
+            "description": "Add a new class called the Runesmith",
+            "mts_version": "3.11.0",
+            "sts_version": "07-17-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Servant 0.9.4",
+            "version": "0.9.4",
+            "authors": [
+                "BlackRuse, Kuzomari, Dimlight"
+            ],
+            "credits": "",
+            "description": "Adds The Servant as a new playable character. She has a full set of 75 cards, 8 new mechanics and 11 exclusive relics.",
+            "mts_version": "3.15.0",
+            "sts_version": "01-21-2020",
+            "dependencies": [
+                "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Templar",
+            "version": "1.0.6",
+            "authors": [
+                "ResponsibleAlex"
+            ],
+            "credits": "searcian",
+            "description": "Sworn to his liege, champion of the Five Ideals, the Templar quests to cleanse the Spire of corruption.",
+            "mts_version": "3.8.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Unchained Mod",
+            "version": "1.0.4",
+            "authors": [
+                "Mezix & BigL"
+            ],
+            "credits": "The Default Modbase, STSLib, Sounds by: Kinaticc & Plusma",
+            "description": "A new Character with 75+ new cards, 10 new Relics, 3 new Potions and 4 distinct archetypes you can play around with and have a lot of fun!",
+            "mts_version": "3.8.0",
+            "sts_version": "12-18-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Vacant",
+            "version": "1.0.1",
+            "authors": [
+                "Laugic"
+            ],
+            "credits": "",
+            "description": "A lost soul, bound to an artifact, is doomed to climb the Spire.",
+            "mts_version": "3.18.2",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "thorton",
+            "version": "105",
+            "authors": [
+                "Vex'd"
+            ],
+            "credits": "",
+            "description": "A very regular man.",
+            "mts_version": "3.8.0",
+            "sts_version": "01-23-2019",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
         }
     ],
     "bosss": [
