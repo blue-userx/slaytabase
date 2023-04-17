@@ -1001,6 +1001,7 @@ __List of memes:__
                 let name = title.slice(title.indexOf('s">')+3,title.indexOf('</div>'));
                 let description;
                 let author = {};
+                let footer;
                 let response2 = await fetch(url);
                 let body2 = await response2.text();
                 if (body2.includes('class="stats_table"')) {
@@ -1021,12 +1022,20 @@ __List of memes:__
                     let detailsIndex = body2.findIndex(e => e.includes('class="detailsStatsContainerRight"'));
                     let date = body2[detailsIndex+2].slice(body2[detailsIndex+2].indexOf('">')+2, body2[detailsIndex+2].indexOf(' @ '));
                     description = `${subs} Subscribers\nPosted ${date}`;
+                    let commentIndex = body2.findIndex(e => e.includes('commentthread'));
+                    if (commentIndex != -1) body2 = body2.slice(0, commentIndex);
+                    let githubLine = body2.find(e => e.includes('/linkfilter/?url=https://github.com'));
+                    if (githubLine != undefined) {
+                        githubLine = githubLine.slice(githubLine.indexOf('/linkfilter/?url=https://github.com')+17);
+                        description += `\n${githubLine.slice(0, githubLine.indexOf('"'))}`;
+                    }
                 }
                 return {
                     title: name,
                     url,
                     author,
                     description,
+                    footer,
                     color: 1779768,
                     thumbnail: {url: imgUrl},
                 };
