@@ -266,13 +266,7 @@ let onEdit = async (oldMsg, newMsg) => {
         bot.emit('messageCreate', newMsg);
 }
 bot.on('messageUpdate', onEdit);
-
-bot.on('messageDelete', async msg => {
-    let messages = await msg.channel.messages.fetch();
-    let reply = messages.find(i => i.author.id == bot.user.id && i.reference != null && i.reference.messageId == msg.id);
-    if (reply != undefined)
-        reply.delete().catch(e => {});
-});
+bot.on('messageDelete', async msg => (await msg.channel.messages.fetch()).filter(i => i.author.id == bot.user.id && i.reference != null && i.reference.messageId == msg.id).forEach(m => m.delete().catch(e => {})));
 
 bot.on('interactionCreate', async interaction => {
     try {
