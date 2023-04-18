@@ -173,7 +173,6 @@ async function exportMod(modPath){
                 let diffs = multiUps.map(multiUp => diffWords(c.description, multiUp.description));
                 let diff = diffs[0];
                 c.description = '';
-                console.log(diffs)
                 for (let i in diff) {
                     i = Number(i);
                     let word = diff[i];

@@ -232,6 +232,26 @@ bot.on('messageCreate', async msg => {
     }
 });
 
+let edit = async (editing, from) => {
+    let embeds = await getEmbeds(from);
+    if (embeds === null)
+        editing.edit({content: 'I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.', embeds: []}).catch(e => {});
+    else if (embeds === 0)
+        editing.delete().catch(e => {});
+    else {
+        let files = getFilesFromEmbeds(embeds, from.content.includes('(s)'));
+        if (files.length > 10) await editing.edit({content: 'I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.', embeds: [], files: []});
+        else {
+            if (from.content.includes('(s)')) {
+                await editing.edit({content: `||https://bit.ly/3aSgJDF||`, embeds: [], files: [], allowedMentions: {repliedUser: false}});
+                await (new Promise(res => setTimeout(res, 1000)));
+                await editing.edit({content: editing.content, embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+            } else
+                await editing.edit({content: '', embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+        }
+        delfiles(files);
+    }
+}
 let onEdit = async (oldMsg, newMsg) => {
     let contentBefore = newMsg.content;
     let messages;
@@ -244,24 +264,7 @@ let onEdit = async (oldMsg, newMsg) => {
     if (reply != undefined) {
         if (oldMsg.attachments.size > newMsg.attachments.size) return;
         newMsg.content = contentBefore;
-        let embeds = await getEmbeds(newMsg);
-        if (embeds === null)
-            reply.edit({content: 'I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.', embeds: []}).catch(e => {});
-        else if (embeds === 0)
-            reply.delete().catch(e => {});
-        else {
-            let files = getFilesFromEmbeds(embeds, newMsg.content.includes('(s)'));
-            if (files.length > 10) await reply.edit({content: 'I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.', embeds: [], files: []});
-            else {
-                if (newMsg.content.includes('(s)')) {
-                    await reply.edit({content: `||https://bit.ly/3aSgJDF||`, embeds: [], files: [], allowedMentions: {repliedUser: false}});
-                    await (new Promise(res => setTimeout(res, 1000)));
-                    await reply.edit({content: reply.content, embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
-                } else
-                    await reply.edit({content: '', embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
-            }
-            delfiles(files);
-        }
+        await edit(reply, newMsg);
     } else
         bot.emit('messageCreate', newMsg);
 }
@@ -294,7 +297,10 @@ bot.on('interactionCreate', async interaction => {
                             msg = await interaction.channel.messages.fetch(args[1]);
                         if (msg) {
                             msg.content = interaction.content;
-                            await onEdit(msg, msg);
+                            if (msg.author.id == bot.user.id)
+                                await edit(msg, msg);
+                            else
+                                await onEdit(msg, msg);
                         }
                         return await interaction.deleteReply();
                     }

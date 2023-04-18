@@ -5832,14 +5832,13 @@
         },
         {
             "id": "Slimebound:Darklings",
-            "name": "Darkling Duo (Trio)",
+            "name": "Darkling Duo (Trio+)",
             "color": "Colorless",
             "rarity": "Special",
             "type": "Skill",
             "cost": "1",
             "description": "slimeboundmod:Split into a slimeboundmod:Darkling_Slime 2 (3) times.\nExhaust.",
-            "mod": "Downfall",
-            "img": "/Downfall/cards/Colorless-DarklingDuo.png"
+            "mod": "Downfall"
         },
         {
             "id": "bronze:DazingPulse",
@@ -6038,7 +6037,7 @@
             "rarity": "Special",
             "type": "Attack",
             "cost": "4",
-            "description": "Ethereal.\nDeal 35 (40) damage ( to ALL enemies).\nExhaust.",
+            "description": "Ethereal.\nDeal 35 (40) damage (to ALL enemies).\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -6048,7 +6047,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "0",
-            "description": "Apply 1 Weak.\n ( guardianmod:Brace 2. )\nPlace a Sentry Blast (+) into guardianmod:Stasis.\nExhaust.",
+            "description": "Apply 1 Weak.\n (guardianmod:Brace 2.)\nPlace a Sentry Blast (+) into guardianmod:Stasis.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -6198,7 +6197,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "2",
-            "description": "Gain 2 Strength (.)\n (Gain 2 Strength ) for every 12th card you play.",
+            "description": "Gain 2 Strength (.)\n (Gain 2 Strength) for every 12th card you play.",
             "mod": "Downfall"
         },
         {
@@ -6238,7 +6237,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "2",
-            "description": "Remove all Debuffs.\nGain 1 Strength.\nIf you are below half HP, Gain (Heal)  (10 and gain ) 2 Strength.",
+            "description": "Remove all Debuffs.\nGain 1 Strength.\nIf you are below half HP, Gain (Heal)  (10 and gain) 2 Strength.",
             "mod": "Downfall"
         },
         {
@@ -6278,7 +6277,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Choose 1 of 3  (Upgraded ) Boss cards to gain.\nIt costs 0 until played.\nExhaust.",
+            "description": "Choose 1 of 3  (Upgraded) Boss cards to gain.\nIt costs 0 until played.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -6288,7 +6287,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "Gain a random  (Upgraded ) Boss ~~- card  -~~ at the start of your next 3 turns. They cost 0.",
+            "description": "Gain a random  (Upgraded) Boss ~~- card  -~~ at the start of your next 3 turns. They cost 0.",
             "mod": "Downfall"
         },
         {
@@ -6298,7 +6297,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 10 (12) damage.\nGain a random  (Upgraded ) Boss card. It costs 0 until played.\nExhaust.",
+            "description": "Deal 10 (12) damage.\nGain a random  (Upgraded) Boss card. It costs 0 until played.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -6318,7 +6317,7 @@
             "rarity": "Basic",
             "type": "Skill",
             "cost": "0",
-            "description": "Draw a card.\n (You may choose to)\nhexamod: ( Retract or hexamod: )Advance.",
+            "description": "Draw a card.\n (You may choose to)\nhexamod: (Retract or hexamod:)Advance.",
             "mod": "Downfall"
         },
         {
@@ -6328,7 +6327,7 @@
             "rarity": "Basic",
             "type": "Skill",
             "cost": "1",
-            "description": "If ( hexamod:Ignite ) the current Ghostflame~~-  is not Ignited, hexamod:Ignite it -~~ .",
+            "description": "If (hexamod:Ignite) the current Ghostflame~~-  is not Ignited, hexamod:Ignite it -~~ .",
             "mod": "Downfall"
         },
         {
@@ -6858,7 +6857,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Exhaust a card.\nIf it was Attack or Skill, gain a random card of the opposite type. ( It costs 1 less.)",
+            "description": "Exhaust a card.\nIf it was Attack or Skill, gain a random card of the opposite type. (It costs 1 less.)",
             "mod": "Downfall"
         },
         {
@@ -6888,7 +6887,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "0",
-            "description": "The next time all (at) 6 (least)  (5 ) Ghostflames are Ignited, take an extra turn.",
+            "description": "The next time all (at) 6 (least)  (5) Ghostflames are Ignited, take an extra turn.",
             "mod": "Downfall"
         },
         {
@@ -6948,7 +6947,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": " ( Gain 2 hexamod:Intensity. )\nAt the start of your turn, gain 2 hexamod:Intensity.",
+            "description": " (Gain 2 hexamod:Intensity.)\nAt the start of your turn, gain 2 hexamod:Intensity.",
             "mod": "Downfall"
         },
         {
@@ -6958,7 +6957,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "Retain.\nhexamod:Ignite the  (current, then the ) Inferno Ghostflame (Ghostflames).\nExhaust.",
+            "description": "Retain.\nhexamod:Ignite the  (current, then the) Inferno Ghostflame (Ghostflames).\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -7308,7 +7307,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 1 bronze:Blur.\nbronze:Encode. ( bronze:Compile - Gain 1 bronze:Blur. )\n",
+            "description": "Gain 1 bronze:Blur.\nbronze:Encode. (bronze:Compile - Gain 1 bronze:Blur.)\n",
             "mod": "Downfall"
         },
         {
@@ -7938,7 +7937,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 9 damage. slimeboundmod:Consume - slimeboundmod:Command ( twice).",
+            "description": "Deal 9 damage. slimeboundmod:Consume - slimeboundmod:Command (twice).",
             "mod": "Downfall"
         },
         {
@@ -8168,7 +8167,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "The first card (2)  (cards ) you play each turn that targets enemies also slimeboundmod:Commands (Command).",
+            "description": "The first card (2)  (cards) you play each turn that targets enemies also slimeboundmod:Commands (Command).",
             "mod": "Downfall"
         },
         {
@@ -8208,7 +8207,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 8 damage. slimeboundmod:Command ALL slimes ( twice).",
+            "description": "Deal 8 damage. slimeboundmod:Command ALL slimes (twice).",
             "mod": "Downfall"
         },
         {
@@ -8288,7 +8287,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist.\n ( slimeboundmod:Command. )\nExhaust.",
+            "description": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist.\n (slimeboundmod:Command.)\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -8318,7 +8317,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "slimeboundmod:Absorb - Gain [E]  ( [E] ) and draw 2 cards.\nExhaust.",
+            "description": "slimeboundmod:Absorb - Gain [E]  ( [E]) and draw 2 cards.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -8328,7 +8327,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Choose 1 of 3 slimeboundmod:Specialist to slimeboundmod:Split into.\n ( slimeboundmod:Command. )\nExhaust.",
+            "description": "Choose 1 of 3 slimeboundmod:Specialist to slimeboundmod:Split into.\n (slimeboundmod:Command.)\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -8398,7 +8397,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 12 damage.\nslimeboundmod:Split into a random Slime ( slimeboundmod:Specialist ).\nslimeboundmod:Command 2 (3) times.",
+            "description": "Deal 12 damage.\nslimeboundmod:Split into a random Slime (slimeboundmod:Specialist).\nslimeboundmod:Command 2 (3) times.",
             "mod": "Downfall"
         },
         {
@@ -8438,7 +8437,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "slimeboundmod:Absorb ALL Slimes. Split into a random slimeboundmod:Specialist for each.  ( slimeboundmod:Command them. )\nExhaust.",
+            "description": "slimeboundmod:Absorb ALL Slimes. Split into a random slimeboundmod:Specialist for each.  (slimeboundmod:Command them.)\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -8458,7 +8457,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "0",
-            "description": "Deal 3 damage.\n ( slimeboundmod:Command. )\nWhen you slimeboundmod:Split, return this from the discard pile to your hand.",
+            "description": "Deal 3 damage.\n (slimeboundmod:Command.)\nWhen you slimeboundmod:Split, return this from the discard pile to your hand.",
             "mod": "Downfall"
         },
         {
@@ -8478,7 +8477,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "1",
-            "description": "Gain 4 slimeboundmod:Potency.\n ( slimeboundmod:Command twice. )\n2 turns from now, slimeboundmod:Absorb all Slimes.",
+            "description": "Gain 4 slimeboundmod:Potency.\n (slimeboundmod:Command twice.)\n2 turns from now, slimeboundmod:Absorb all Slimes.",
             "mod": "Downfall"
         },
         {
@@ -8488,7 +8487,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "Next turn, gain SLIME CRUSH, (+,) [E] [E] [E]  ( [E] ) and 3 Strength.\nExhaust.",
+            "description": "Next turn, gain SLIME CRUSH, (+,) [E] [E] [E]  ( [E]) and 3 Strength.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -8658,7 +8657,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 1 (2) damage.\nGain 2  (Upgraded ) Wards.",
+            "description": "Deal 1 (2) damage.\nGain 2  (Upgraded) Wards.",
             "mod": "Downfall"
         },
         {
@@ -8668,7 +8667,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 2  (Upgraded ) Wards.\ngremlin:Swap to gremlin:Shield_Gremlin.",
+            "description": "Gain 2  (Upgraded) Wards.\ngremlin:Swap to gremlin:Shield_Gremlin.",
             "mod": "Downfall"
         },
         {
@@ -8718,7 +8717,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "0",
-            "description": " ( When drawn, gain an gremlin:Echo of this. )\nDeal 1 damage.\nDraw a card.\nExhaust.",
+            "description": " (When drawn, gain an gremlin:Echo of this.)\nDeal 1 damage.\nDraw a card.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -8788,7 +8787,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 6 (7) damage.\nGain 1  (Upgraded ) Shiv.",
+            "description": "Deal 6 (7) damage.\nGain 1  (Upgraded) Shiv.",
             "mod": "Downfall"
         },
         {
@@ -8818,7 +8817,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Gain 3 (5) Block.\nIf you have 3 or more gremlin:Wiz, gain 2  (Upgraded ) Wards.",
+            "description": "Gain 3 (5) Block.\nIf you have 3 or more gremlin:Wiz, gain 2  (Upgraded) Wards.",
             "mod": "Downfall"
         },
         {
@@ -8838,7 +8837,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 8 (10) damage. If the enemy intends to attack, gain 2  (Upgraded ) Wards.",
+            "description": "Deal 8 (10) damage. If the enemy intends to attack, gain 2  (Upgraded) Wards.",
             "mod": "Downfall"
         },
         {
@@ -8908,7 +8907,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 6 (9) damage.\nGain a (an)  (Upgraded ) Gremlin Offensive.\nExhaust.",
+            "description": "Deal 6 (9) damage.\nGain a (an)  (Upgraded) Gremlin Offensive.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -9008,7 +9007,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 8 (10) damage.\nbronze:Insert 2  (Upgraded ) Pinpricks.\nExhaust.",
+            "description": "Deal 8 (10) damage.\nbronze:Insert 2  (Upgraded) Pinpricks.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -9118,7 +9117,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 4 (5) damage.\nGain 1  (Upgraded ) Shiv for each stack of gremlin:Wiz you have.",
+            "description": "Deal 4 (5) damage.\nGain 1  (Upgraded) Shiv for each stack of gremlin:Wiz you have.",
             "mod": "Downfall"
         },
         {
@@ -9138,7 +9137,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 1 (2) gremlin:Wiz. Next turn, gain a (an)  (Upgraded ) Bang.\nExhaust.\n\nBang (0 [E] card): Deal 0 damage 3 (4) times. Add a Whiz(+) to your discard pile. Exhaust.",
+            "description": "Gain 1 (2) gremlin:Wiz. Next turn, gain a (an)  (Upgraded) Bang.\nExhaust.\n\nBang (0 [E] card): Deal 0 damage 3 (4) times. Add a Whiz(+) to your discard pile. Exhaust.",
             "mod": "Downfall"
         },
         {
@@ -9268,7 +9267,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 6 damage. Gain a (an)  (Upgraded ) Shiv for each card played this turn.",
+            "description": "Deal 6 damage. Gain a (an)  (Upgraded) Shiv for each card played this turn.",
             "mod": "Downfall"
         },
         {
@@ -9318,7 +9317,7 @@
             "rarity": "Basic",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Basic Card.",
+            "description": "* (Upgraded) Unidentified Basic Card.",
             "mod": "Downfall"
         },
         {
@@ -9338,7 +9337,7 @@
             "rarity": "Basic",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 7 (9) damage.\nsneckomod:Muddle the  (2 ) highest-cost card (cards) in your hand.",
+            "description": "Deal 7 (9) damage.\nsneckomod:Muddle the  (2) highest-cost card (cards) in your hand.",
             "mod": "Downfall"
         },
         {
@@ -9368,7 +9367,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9378,7 +9377,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9388,7 +9387,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9398,7 +9397,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9408,7 +9407,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9418,7 +9417,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9428,7 +9427,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9438,7 +9437,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9448,7 +9447,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9458,7 +9457,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9468,7 +9467,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Character Card.",
+            "description": "* (Upgraded) Unidentified Character Card.",
             "mod": "Downfall"
         },
         {
@@ -9478,7 +9477,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified 1 Cost Card.",
+            "description": "* (Upgraded) Unidentified 1 Cost Card.",
             "mod": "Downfall"
         },
         {
@@ -9488,7 +9487,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Block Card.",
+            "description": "* (Upgraded) Unidentified Block Card.",
             "mod": "Downfall"
         },
         {
@@ -9498,7 +9497,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Common Attack Card.",
+            "description": "* (Upgraded) Unidentified Common Attack Card.",
             "mod": "Downfall"
         },
         {
@@ -9508,7 +9507,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Common Skill Card.",
+            "description": "* (Upgraded) Unidentified Common Skill Card.",
             "mod": "Downfall"
         },
         {
@@ -9518,7 +9517,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Draw Card.",
+            "description": "* (Upgraded) Unidentified Draw Card.",
             "mod": "Downfall"
         },
         {
@@ -9568,7 +9567,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 8 (10) Block.\nsneckomod:Muddle the  (2 ) highest-cost card (cards) in your hand.",
+            "description": "Gain 8 (10) Block.\nsneckomod:Muddle the  (2) highest-cost card (cards) in your hand.",
             "mod": "Downfall"
         },
         {
@@ -9618,7 +9617,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified 0 Cost Card.",
+            "description": "* (Upgraded) Unidentified 0 Cost Card.",
             "mod": "Downfall"
         },
         {
@@ -9628,7 +9627,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified 2 Cost Card.",
+            "description": "* (Upgraded) Unidentified 2 Cost Card.",
             "mod": "Downfall"
         },
         {
@@ -9638,7 +9637,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Colorless Card.",
+            "description": "* (Upgraded) Unidentified Colorless Card.",
             "mod": "Downfall"
         },
         {
@@ -9648,7 +9647,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Dexterity Card.",
+            "description": "* (Upgraded) Unidentified Dexterity Card.",
             "mod": "Downfall"
         },
         {
@@ -9658,7 +9657,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Exhaust Card.",
+            "description": "* (Upgraded) Unidentified Exhaust Card.",
             "mod": "Downfall"
         },
         {
@@ -9668,7 +9667,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Strength Card.",
+            "description": "* (Upgraded) Unidentified Strength Card.",
             "mod": "Downfall"
         },
         {
@@ -9678,7 +9677,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Strike Card.",
+            "description": "* (Upgraded) Unidentified Strike Card.",
             "mod": "Downfall"
         },
         {
@@ -9688,7 +9687,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Uncommon Attack Card.",
+            "description": "* (Upgraded) Unidentified Uncommon Attack Card.",
             "mod": "Downfall"
         },
         {
@@ -9698,7 +9697,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Uncommon Power Card.",
+            "description": "* (Upgraded) Unidentified Uncommon Power Card.",
             "mod": "Downfall"
         },
         {
@@ -9708,7 +9707,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Uncommon Skill Card.",
+            "description": "* (Upgraded) Unidentified Uncommon Skill Card.",
             "mod": "Downfall"
         },
         {
@@ -9718,7 +9717,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Vulnerable Card.",
+            "description": "* (Upgraded) Unidentified Vulnerable Card.",
             "mod": "Downfall"
         },
         {
@@ -9728,7 +9727,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Weak Card.",
+            "description": "* (Upgraded) Unidentified Weak Card.",
             "mod": "Downfall"
         },
         {
@@ -9738,7 +9737,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified X Cost Card.",
+            "description": "* (Upgraded) Unidentified X Cost Card.",
             "mod": "Downfall"
         },
         {
@@ -9828,7 +9827,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "sneckomod:Snekproof.\nDiscard all sneckomod:Offclass cards.\nDraw that many cards ( plus 1).",
+            "description": "sneckomod:Snekproof.\nDiscard all sneckomod:Offclass cards.\nDraw that many cards (plus 1).",
             "mod": "Downfall"
         },
         {
@@ -9908,7 +9907,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified 3 Cost Card.",
+            "description": "* (Upgraded) Unidentified 3 Cost Card.",
             "mod": "Downfall"
         },
         {
@@ -9918,7 +9917,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Colorless Boss card.",
+            "description": "* (Upgraded) Unidentified Colorless Boss card.",
             "mod": "Downfall"
         },
         {
@@ -9928,7 +9927,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Rare Attack Card.",
+            "description": "* (Upgraded) Unidentified Rare Attack Card.",
             "mod": "Downfall"
         },
         {
@@ -9938,7 +9937,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Rare Power Card.",
+            "description": "* (Upgraded) Unidentified Rare Power Card.",
             "mod": "Downfall"
         },
         {
@@ -9948,7 +9947,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "",
-            "description": "* (Upgraded ) Unidentified Rare Skill Card.",
+            "description": "* (Upgraded) Unidentified Rare Skill Card.",
             "mod": "Downfall"
         },
         {
@@ -10298,7 +10297,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Apply 1 Weak and 1 Vulnerable ( to ALL enemies).",
+            "description": "Apply 1 Weak and 1 Vulnerable (to ALL enemies).",
             "mod": "Downfall"
         },
         {
@@ -10518,7 +10517,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "*Berserker champ:Combo: Gain [E] [E]  ( [E] ) , then Exhaust this.\nDefensive champ:Combo: Draw 3 (4) cards.",
+            "description": "*Berserker champ:Combo: Gain [E] [E]  ( [E]) , then Exhaust this.\nDefensive champ:Combo: Draw 3 (4) cards.",
             "mod": "Downfall"
         },
         {
@@ -10548,7 +10547,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "2",
-            "description": "Gain 12 Block.\nNext turn, gain [E]  ( [E] ) and draw 2 cards.\n[fist_icon]   champ:Finisher",
+            "description": "Gain 12 Block.\nNext turn, gain [E]  ( [E]) and draw 2 cards.\n[fist_icon]   champ:Finisher",
             "mod": "Downfall"
         },
         {
@@ -10568,7 +10567,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "1",
-            "description": "Remove the enemy's Block ( and Artifact).\nDeal 10 (12) damage.",
+            "description": "Remove the enemy's Block (and Artifact).\nDeal 10 (12) damage.",
             "mod": "Downfall"
         },
         {
@@ -10748,7 +10747,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 10 (13) damage.\nGain a random  (Upgraded ) Skill.\nIt costs 0.",
+            "description": "Deal 10 (13) damage.\nGain a random  (Upgraded) Skill.\nIt costs 0.",
             "mod": "Downfall"
         },
         {
@@ -10788,7 +10787,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "At the start of your turn, gain a random  (Upgraded ) \"Strike\".\nIt costs 0 until played and gains Exhaust.",
+            "description": "At the start of your turn, gain a random  (Upgraded) \"Strike\".\nIt costs 0 until played and gains Exhaust.",
             "mod": "Downfall"
         },
         {
@@ -10808,7 +10807,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 6 (9) damage.\nGain 2  (Upgraded ) Strikes. They cost 0 and trigger Skill Bonuses. Exhaust.",
+            "description": "Deal 6 (9) damage.\nGain 2  (Upgraded) Strikes. They cost 0 and trigger Skill Bonuses. Exhaust.",
             "mod": "Downfall"
         },
         {
@@ -10858,7 +10857,7 @@
             "rarity": "Basic",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 5 (7) damage.\nGain a Second Slam. (+.)\n[ guardianmod:Socket ] ( [ guardianmod:Socket ] )\n",
+            "description": "Deal 5 (7) damage.\nGain a Second Slam. (+.)\n[ guardianmod:Socket ] ([ guardianmod:Socket ])\n",
             "mod": "Downfall"
         },
         {
@@ -10908,7 +10907,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 9 (10) damage.\nguardianmod:Accelerate ( twice).\n[ guardianmod:Socket ]",
+            "description": "Deal 9 (10) damage.\nguardianmod:Accelerate (twice).\n[ guardianmod:Socket ]",
             "mod": "Downfall"
         },
         {
@@ -10928,7 +10927,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Place the top 2 cards of your draw pile into guardianmod:Stasis.\n[ guardianmod:Socket ] ( [ guardianmod:Socket ] )\n",
+            "description": "Place the top 2 cards of your draw pile into guardianmod:Stasis.\n[ guardianmod:Socket ] ([ guardianmod:Socket ])\n",
             "mod": "Downfall"
         },
         {
@@ -11118,7 +11117,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Choose a card.\nPlace a copy of that card into guardianmod:Stasis.\n ( guardianmod:Accelerate. )\nExhaust.",
+            "description": "Choose a card.\nPlace a copy of that card into guardianmod:Stasis.\n (guardianmod:Accelerate.)\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -11398,7 +11397,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 10 damage.\nPerform 3 times:\n[ guardianmod:Socket ] ( [ guardianmod:Socket ] )\n",
+            "description": "Deal 10 damage.\nPerform 3 times:\n[ guardianmod:Socket ] ([ guardianmod:Socket ])\n",
             "mod": "Downfall"
         },
         {
@@ -11428,7 +11427,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Choose one of three  (Upgraded ) guardianmod:Packages to gain.\nExhaust.",
+            "description": "Choose one of three  (Upgraded) guardianmod:Packages to gain.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -11448,7 +11447,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Draw a card.\n[ guardianmod:Socket ]\n[ guardianmod:Socket ] ( [ guardianmod:Socket ] )\n",
+            "description": "Draw a card.\n[ guardianmod:Socket ]\n[ guardianmod:Socket ] ([ guardianmod:Socket ])\n",
             "mod": "Downfall"
         },
         {
@@ -11838,7 +11837,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "Put the first  (2 ) hermit:Dead_On card (cards) triggered each turn back into your hand.",
+            "description": "Put the first  (2) hermit:Dead_On card (cards) triggered each turn back into your hand.",
             "mod": "Downfall"
         },
         {
@@ -12108,7 +12107,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": " ( hermit:Concentrate. )\nYour next hermit:Dead_On effect this turn triggers twice.\nExhaust.",
+            "description": " (hermit:Concentrate.)\nYour next hermit:Dead_On effect this turn triggers twice.\nExhaust.",
             "mod": "Downfall"
         },
         {
@@ -12128,7 +12127,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": " ( hermit:Concentrate. )\nAt the start of your turn, hermit:Concentrate.",
+            "description": " (hermit:Concentrate.)\nAt the start of your turn, hermit:Concentrate.",
             "mod": "Downfall"
         },
         {
@@ -60375,6 +60374,13 @@
             "mod": "Downfall"
         },
         {
+            "id": "champ:CounterPotion",
+            "name": "Brew of Sharpness",
+            "rarity": "Common",
+            "description": "Gain 25 Counter.",
+            "mod": "Downfall"
+        },
+        {
             "id": "hexamod:EctoCoolerPotion",
             "name": "Ecto-Cooler",
             "rarity": "Common",
@@ -60399,12 +60405,33 @@
             "color": "The_bronze_automaton"
         },
         {
+            "id": "hexamod:SoulburnPotion",
+            "name": "Molotov",
+            "rarity": "Common",
+            "description": "Apply 30 Soulburn.",
+            "mod": "Downfall"
+        },
+        {
+            "id": "gremlin:WizPotion",
+            "name": "Pizazz Potion",
+            "rarity": "Common",
+            "description": "Gain 10 Vigor.",
+            "mod": "Downfall"
+        },
+        {
             "id": "sneckomod:DiceRollPotion",
             "name": "Potentially Potent Potion",
             "rarity": "Common",
             "description": "Deal 1-40 damage.",
             "mod": "Downfall",
             "color": "Snecko_cyan"
+        },
+        {
+            "id": "sneckomod:MuddlingPotion",
+            "name": "Spiked Energy Drink",
+            "rarity": "Common",
+            "description": "Muddle the 2 highest-cost cards in your hand. Cards Muddled this way cannot cost 3.",
+            "mod": "Downfall"
         },
         {
             "id": "champ:OpenerPotion",
@@ -60439,12 +60466,26 @@
             "color": "The_bronze_automaton"
         },
         {
+            "id": "Guardian:BlockOnCardUsePotion",
+            "name": "Armorer's Tincture",
+            "rarity": "Uncommon",
+            "description": "Gain 4 Block each time you play a card this turn.",
+            "mod": "Downfall"
+        },
+        {
             "id": "hermit:BlackBile",
             "name": "Black Bile",
             "rarity": "Uncommon",
             "description": "Apply 6 Bruise.",
             "mod": "Downfall",
             "color": "Hermit_yellow"
+        },
+        {
+            "id": "expansioncontent:BossPotion",
+            "name": "Boss Potion",
+            "rarity": "Uncommon",
+            "description": "Choose 1 of 3 random Boss cards to add to your hand, it costs 0 this turn.",
+            "mod": "Downfall"
         },
         {
             "id": "champ:TechniquePotion",
@@ -60495,6 +60536,13 @@
             "color": "Slimebound"
         },
         {
+            "id": "bronze:BurnAndBuffPotion",
+            "name": "Vexing Draught",
+            "rarity": "Uncommon",
+            "description": "Gain 2 Strength and 2 Dexterity.\nAdd two Burn+ cards into your discard pile.",
+            "mod": "Downfall"
+        },
+        {
             "id": "Slimebound:SpawnSlimePotion",
             "name": "Army in a Bottle",
             "rarity": "Rare",
@@ -60541,6 +60589,13 @@
             "description": "Put 1 card from your exhaust pile into your hand. It costs 0 this turn.",
             "mod": "Downfall",
             "color": "Hermit_yellow"
+        },
+        {
+            "id": "Slimebound:ThreeZeroPotion",
+            "name": "Ooze-Infused Drink",
+            "rarity": "Rare",
+            "description": "Add 4 random 0-cost cards to your hand.",
+            "mod": "Downfall"
         },
         {
             "id": "Guardian:StasisDiscoveryPotion",
@@ -72288,8 +72343,8 @@
             "character": "Slimebound",
             "mod": "Downfall",
             "id": "downfall:SlimeboundDarklings",
-            "description": "[Fight] Fight Darklings. Gain card reward.\n[Recruit (requires a rare card)] Lose (rare card chosen at random) Obtain Darklings.",
-            "colouredDesc": "\u001b[2;37m[Fight\u001b[2;37m] \u001b[2;31mFight Darklings. \u001b[2;32mGain card reward.\n\u001b[2;37m[Recruit \u001b[0;2m(requires a rare card)\u001b[2;37m] \u001b[2;31mLose \u001b[0;2m(rare card chosen at random) \u001b[2;32mObtain Darklings.",
+            "description": "[Fight] Fight Darklings. Gain card reward.\n[Recruit (requires a rare card)] Lose (rare card chosen at random) Obtain Darkling Duo.",
+            "colouredDesc": "\u001b[2;37m[Fight\u001b[2;37m] \u001b[2;31mFight Darklings. \u001b[2;32mGain card reward.\n\u001b[2;37m[Recruit \u001b[0;2m(requires a rare card)\u001b[2;37m] \u001b[2;31mLose \u001b[0;2m(rare card chosen at random) \u001b[2;32mObtain Darkling Duo.",
             "campaign": "Downfall"
         },
         {

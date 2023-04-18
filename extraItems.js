@@ -781,6 +781,16 @@ export default {
     },
 
     "Downfall": {
+        "pre": {
+            "add": {
+
+            },
+
+            "edit": {
+
+            }
+        },
+
         "post": {
             "add": {
                 "bosss": [
