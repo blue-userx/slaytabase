@@ -29232,6 +29232,776 @@
             "mod": "The Disciple"
         },
         {
+            "id": "theEphemeral:Defend",
+            "name": "Defend",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Basic",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 5 (8) Block.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:ReadTheStars",
+            "name": "Read the Stars",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Basic",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 7 (10) Block.\nGain 2 theephemeral:Augury.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Strike",
+            "name": "Strike",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Basic",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 6 (9) damage.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:ThroughTheVeil",
+            "name": "Through the Veil",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Basic",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 8 (10) damage.\ntheephemeral:Fated: add 1 (2) theephemeral:Fleeting_Dodge to your hand.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:BlindSwipe",
+            "name": "Blind Swipe",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 9 (13) damage.\nShuffle your discard pile into your draw pile.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:BlindingBlock",
+            "name": "Blinding Block",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Shuffle your discard pile into your draw pile, then gain 7 (10) Block.\ntheephemeral:Fated: gained Block is increased by 5.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:ChillingTouch",
+            "name": "Chilling Touch",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (10) damage.\nApply 1 Weak for each theephemeral:Revealed Attack.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Delay",
+            "name": "Delay",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 8 (11) Block.\nPut a card from your hand on top of your draw pile.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Discord",
+            "name": "Discord",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "0",
+            "description": "Deal 5 (7) damage.\ntheephemeral:Entropy.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Fade",
+            "name": "Fade",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 6 (9) Block.\ntheephemeral:Entropy.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Omen",
+            "name": "Omen",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 6 (8) damage.\ntheephemeral:Fated: apply 2 (3) Vulnerable.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Pirouette",
+            "name": "Pirouette",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1 (0)",
+            "description": "Gain 3 Block.\nAdd 2 theephemeral:Fleeting_Dodge to your hand.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Portent",
+            "name": "Portent",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Gain 1 (2) theephemeral:Augury.\ntheephemeral:Fated: draw 2 cards.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:PsychicStrike",
+            "name": "Psychic Strike",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 9 (10) damage.\ntheephemeral:Fated: add 1 (2) theephemeral:Fleeting_Thought to your hand.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Remembrance",
+            "name": "Remembrance",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 7 (10) Block.\nPut a card from your discard pile on top of your draw pile.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Silhouette",
+            "name": "Silhouette",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 8 damage.\nAdd 1 (2) theephemeral:Fleeting_Strike to your hand.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:SpectralGrasp",
+            "name": "Spectral Grasp",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 16 (24) damage.\ntheephemeral:Vanishing 4.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:SpiritGuide",
+            "name": "Spirit Guide",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 7 (10) Block.\nDraw 1 card.\nDiscard 1 card.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:StranglingMist",
+            "name": "Strangling Mist",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Ethereal.\nDeal 13 (18) damage.\nShuffle a Dazed into to your draw pile.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:ThrowBones",
+            "name": "Throw Bones",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (10) damage to ALL enemies.\nGain 1 theephemeral:Augury.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:TimeSkip",
+            "name": "Time Skip",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Play the top card of your draw pile.\n~~- Exhaust. -~~\ntheephemeral:Fated: gain [E].",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:VeiledEdge",
+            "name": "Veiled Edge",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Common",
+            "type": "Attack",
+            "cost": "0",
+            "description": "Can only be played if you have an Ethereal card theephemeral:Revealed or in your hand.\nDeal 10 (14) damage.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Ambush",
+            "name": "Ambush",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 8 (11) damage.\ntheephemeral:Fated: deals double damage.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:BlindFaith",
+            "name": "Blind Faith",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Shuffle your discard pile into your draw pile, then add 2 (3) theephemeral:Fleeting_Thought to your hand.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:BlindFury",
+            "name": "Blind Fury",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 12 (16) damage.\nShuffle your discard pile into your draw pile, then play a random Attack from your draw pile.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:BoonOfTheAlloter",
+            "name": "Boon of the Alloter",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Draw 1 card.\nDiscard 1 card.\nIf this card is discarded from anywhere, draw 1 (2) card (cards).",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:BoonOfTheInflexible",
+            "name": "Boon of the Inflexible",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Draw 1 card.\nDiscard 1 card.\nIf this card is discarded from anywhere, ALL enemies lose 2 (3) Strength this turn.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:BoonOfTheSpinner",
+            "name": "Boon of the Spinner",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Draw 1 card.\nDiscard 1 card.\nIf this card is discarded from anywhere, gain [E] ( [E]).",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Cartomancy",
+            "name": "Cartomancy",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Choose 1 of 3 random cards to add to the top of your draw pile.\n (It costs 0 this combat.)\nExhaust.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:CastStones",
+            "name": "Cast Stones",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 7 (10) damage.\nGain 1 theephemeral:Augury.\nIf the top card of your draw pile is an Attack, play it.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Cataclysm",
+            "name": "Cataclysm",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "3",
+            "description": "Deal 26 (34) damage.\nDiscard the top 3 cards of your draw pile.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Clairvoyance",
+            "name": "Clairvoyance",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "At (Now)  (and at) the start of your turn, add a theephemeral:Fleeting_Thought to your hand.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Degeneration",
+            "name": "Degeneration",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 5 (7) damage twice.\ntheephemeral:Entropy.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Dowse",
+            "name": "Dowse",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 2 theephemeral:Augury.\nAdd 1 (2) theephemeral:Fleeting_Thought to your hand.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:DrainSoul",
+            "name": "Drain Soul",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 6 damage to ALL enemies.\nUpgrade ALL cards that are theephemeral:Revealed  (and in your hand) for the rest of combat.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:FortuneForetold",
+            "name": "Fortune Foretold",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1 (0)",
+            "description": "Gain [E] equal to your theephemeral:Augury.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:FrigidAura",
+            "name": "Frigid Aura",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "2",
+            "description": "Gain 12 (16) Block.\ntheephemeral:Fated: apply 2 (3) Weak to ALL enemies.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Image",
+            "name": "Image",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 5 (8) damage.\nIf you have triggered theephemeral:Fated this turn, gain [E] and draw a card.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:ImpendingDoom",
+            "name": "Impending Doom",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "At (Now)  (and at) the end of your turn, deal damage to ALL enemies equal to your theephemeral:Augury.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Kismet",
+            "name": "Kismet",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "Whenever you shuffle your draw pile, draw a card and gain 4 (6) Block.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:LostToAges",
+            "name": "Lost to Ages",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Draw 1 (2) card (cards).\nExhaust a card in your hand.\nAdd a copy of this to your discard pile.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Maelstrom",
+            "name": "Maelstrom",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "2 (1)",
+            "description": "Every time you play 5 cards in a single turn, apply 1 Weak and 1 Vulnerable to ALL enemies.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Murmuration",
+            "name": "Murmuration",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "At (Now)  (and at) the start of your turn, gain 1 theephemeral:Augury.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:PeerThroughMists",
+            "name": "Peer Through Mists",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Exhaust all Status and Curse cards that are theephemeral:Revealed or in your hand. Gain 4 (6) Block for each card Exhausted.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Phantaplasm",
+            "name": "Phantaplasm",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Ethereal.\nDeal 9 (12) damage to ALL enemies.\ntheephemeral:Entropy.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:PhantomWings",
+            "name": "Phantom Wings",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "At (Now)  (and at) the end of your turn, gain Block equal to your theephemeral:Augury.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:PiercingMist",
+            "name": "Piercing Mist",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Ethereal.\nDeal 8 (10) damage twice.\nAdd 2 Dazed to your discard pile.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Premonition",
+            "name": "Premonition",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 8 (11) Block.\nGain 1 theephemeral:Augury.\ntheephemeral:Fated: gain [E].",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:RecurringNightmare",
+            "name": "Recurring Nightmare",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "2 (1)",
+            "description": "Choose a card in your discard pile and play it.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Revelation",
+            "name": "Revelation",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "3",
+            "description": "Gain [E] [E].\nDraw 3 (4) cards.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:SpectralBinding",
+            "name": "Spectral Binding",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Enemy loses 2 (4) Strength.\nApply 2 (4) Weak and Vulnerable.\ntheephemeral:Vanishing 3.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:SpectralForge",
+            "name": "Spectral Forge",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": " (Innate.)\nUpgrade ALL your cards for the rest of combat.\ntheephemeral:Vanishing 2 (3).",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:SpectralPhalanx",
+            "name": "Spectral Phalanx",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "Gain 3 (5) Strength and 3 (5) Dexterity.\ntheephemeral:Vanishing 3.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:SpectralThief",
+            "name": "Spectral Thief",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 10 (15) damage to a random target 2 times.\nIf Fatal, gain 35 (45) Gold.\ntheephemeral:Vanishing 4.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:SpectralWall",
+            "name": "Spectral Wall",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Gain 30 (40) Block.\ntheephemeral:Vanishing 3.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:StrengthFromBeyond",
+            "name": "Strength from Beyond",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "1",
+            "description": "Add 2 theephemeral:Fleeting_Strike to your hand.\nGain 2 (4) Temporary Strength.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:SwirlingMists",
+            "name": "Swirling Mists",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Power",
+            "cost": "1",
+            "description": "Whenever you draw or Exhaust an Ethereal card, gain 2 (3) Block.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Tasseomancy",
+            "name": "Tasseomancy",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Uncommon",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Gain 2 (4) theephemeral:Augury.\nIf the top card of your draw pile is a Skill, play it.\nExhaust.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Bladestorm",
+            "name": "Bladestorm",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 5 (7) damage to ALL enemies twice.\ntheephemeral:Fated: deals damage two additional times.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:BrokenMirror",
+            "name": "Broken Mirror",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Choose a theephemeral:Revealed card. Add a copy of that card into your hand.\n~~- Exhaust. -~~ ",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:BurningVengeance",
+            "name": "Burning Vengeance",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "5",
+            "description": "Deal 40 (50) damage to ALL enemies.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:ChaosRift",
+            "name": "Chaos Rift",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "1",
+            "description": "Increase the theephemeral:Entropy bonus by 1 (2).",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:DarkContract",
+            "name": "Dark Contract",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "2 (1)",
+            "description": "Whenever you gain theephemeral:Augury, gain [E] and lose 1 life.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Disaster",
+            "name": "Disaster",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "2",
+            "description": "Deal 13 (17) damage.\nIf you have 7 theephemeral:Augury, deals triple damage.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Dissipate",
+            "name": "Dissipate",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "3 (2)",
+            "description": "Gain 24 Block.\ntheephemeral:Fated: Gain 1 Intangible and Exhaust.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:GrimResolve",
+            "name": "Grim Resolve",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "1",
+            "description": "Whenever you would lose life, lose 1 (2) less.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:HarbingerForm",
+            "name": "Harbinger Form",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "3",
+            "description": "~~- Ethereal. -~~\nAt the end of each turn, play the top card of your draw pile. Any damage dealt or Block gained is doubled.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Numerology",
+            "name": "Numerology",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "X",
+            "description": "Draw X (+1) cards.\nThey cost X less this turn.\nExhaust.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:RealityFracture",
+            "name": "Reality Fracture",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "X",
+            "description": "Deal 4 damage X+1 (2) times.\ntheephemeral:Entropy.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:ReflectingPool",
+            "name": "Reflecting Pool",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "2 (1)",
+            "description": "Whenever you play an attack without Exhaust, add a theephemeral:Fleeting_Strike to your hand.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:ReturnToAether",
+            "name": "Return to Aether",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "1",
+            "description": " (Innate.)\nAt the end of your turn, Exhaust ALL cards in your hand.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Soothsayer",
+            "name": "Soothsayer",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Power",
+            "cost": "2 (1)",
+            "description": "theephemeral:Fated effects are twice as strong and may trigger an additional time each turn.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:SpiritStrike",
+            "name": "Spirit Strike",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 4 damage 3 (4) times.\nDraw 1 card.\nDiscard 1 card.\nIf this card is discarded from anywhere, gain 2 (3) Strength.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Subsume",
+            "name": "Subsume",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Attack",
+            "cost": "1",
+            "description": "Deal 12 (16) damage.\nIf Fatal, gain 4 (6) health.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:TemporalSurge",
+            "name": "Temporal Surge",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "3 (2)",
+            "description": "Play all theephemeral:Revealed Attacks and Skills.\nExhaust.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:TemptFate",
+            "name": "Tempt Fate",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "0",
+            "description": "Shuffle your discard pile into your draw pile, then draw 3 (4) cards.\nExhaust.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Wasting",
+            "name": "Wasting",
+            "color": "Color_ephemeral_purple",
+            "rarity": "Rare",
+            "type": "Skill",
+            "cost": "2",
+            "description": " (Innate.)\nEnemy loses Strength equal to your theephemeral:Augury.\nExhaust.",
+            "mod": "The Ephemeral"
+        },
+        {
             "id": "theForsaken:Recompense",
             "name": "Recompense",
             "color": "Colorless",
@@ -59174,6 +59944,105 @@
             "mod": "The Disciple"
         },
         {
+            "id": "theEphemeral:Laurel",
+            "name": "Laurel",
+            "tier": "Starter",
+            "pool": "Color_ephemeral_purple",
+            "description": "Gain 2 theephemeral:Augury at the start of combat.",
+            "flavorText": "A bay laurel used in prophetic rituals.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Pincushion",
+            "name": "Pincushion",
+            "tier": "Common",
+            "pool": "Color_ephemeral_purple",
+            "description": "Add a theephemeral:Fleeting_Thought to your hand at the start of combat.",
+            "flavorText": "A strangely cathartic sewing notion.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:RitualAsh",
+            "name": "Ritual Ash",
+            "tier": "Common",
+            "pool": "Color_ephemeral_purple",
+            "description": "Whenever you Exhaust an Ethereal card, deal 3 damage to a random enemy.",
+            "flavorText": "The remains of a burnt offering used to anoint a seer.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:GlowingFeather",
+            "name": "Glowing Feather",
+            "tier": "Uncommon",
+            "pool": "Color_ephemeral_purple",
+            "description": "The first Power card you play each combat costs 0.",
+            "flavorText": "A feather that glows with an eerie light.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:LinenVeil",
+            "name": "Linen Veil",
+            "tier": "Uncommon",
+            "pool": "Color_ephemeral_purple",
+            "description": "While the top card of your draw pile is an Attack, gain 2 Strength. While the top card of your draw pile is a Skill, gain 2 Dexterity.",
+            "flavorText": "The diaphanous weave would be almost see-through... if you had sight.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:CuriousTalon",
+            "name": "Curious Talon",
+            "tier": "Rare",
+            "pool": "Color_ephemeral_purple",
+            "description": "Whenever you play a Power card, gain 1 Strength.",
+            "flavorText": "The presence of this broken claw fills you with an indescribable rage.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:HookAndYarn",
+            "name": "Hook and Yarn",
+            "tier": "Rare",
+            "pool": "Color_ephemeral_purple",
+            "description": "Whenever you trigger theephemeral:Fated, gain 2 Metallicize.",
+            "flavorText": "The magic of this yarn knits a mystical barrier around you.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:AncientScroll",
+            "name": "Ancient Scroll",
+            "tier": "Boss",
+            "pool": "Color_ephemeral_purple",
+            "description": "Gain [E] at the start of your turn. Upon pickup, obtain 2 Writhe Curses.",
+            "flavorText": "The runes inscribed here curse you without even being read.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Basin",
+            "name": "Basin",
+            "tier": "Boss",
+            "pool": "Color_ephemeral_purple",
+            "description": "Replaces Laurel. Gain 2 theephemeral:Augury each turn.",
+            "flavorText": "The pure water contained in this basin leaves you feeling cleansed, inside and out.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:Pomegranate",
+            "name": "Pomegranate",
+            "tier": "Boss",
+            "pool": "Color_ephemeral_purple",
+            "description": "Upon pickup, raise your Max HP by 21.",
+            "flavorText": "The fruit of the ancient gods and goddesses, fresh and juicy.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:StoneTablet",
+            "name": "Stone Tablet",
+            "tier": "Shop",
+            "pool": "Color_ephemeral_purple",
+            "description": "Whenever you shuffle your draw pile, deal 6 damage to ALL enemies.",
+            "flavorText": "The tally marks scratched into the surface indicate this tablet was used for some sort of accounting.",
+            "mod": "The Ephemeral"
+        },
+        {
             "id": "theForsaken:JudgementScales",
             "name": "Judgement Scales",
             "tier": "Starter",
@@ -61742,6 +62611,27 @@
             "rarity": "Uncommon",
             "description": "Gain Haste.",
             "mod": "The Disciple"
+        },
+        {
+            "id": "theEphemeral:PotionOfProphecy",
+            "name": "Potion of Prophecy",
+            "rarity": "Common",
+            "description": "Gain 4 Augury.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:ElysianNectar",
+            "name": "Elysian Nectar",
+            "rarity": "Uncommon",
+            "description": "This turn, whenever you play a card, draw a card.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "id": "theEphemeral:TemporalTonic",
+            "name": "Temporal Tonic",
+            "rarity": "Rare",
+            "description": "Play the top card of your draw pile 3 times.",
+            "mod": "The Ephemeral"
         },
         {
             "id": "theForsaken:FearPotion",
@@ -64879,6 +65769,14 @@
             "mod": "The Disciple"
         },
         {
+            "id": "TheEphemeral",
+            "name": "The Ephemeral",
+            "type": "Player",
+            "minHP": "70",
+            "maxHP": "70",
+            "mod": "The Ephemeral"
+        },
+        {
             "id": "TheForsaken",
             "name": "The Forsaken",
             "type": "Player",
@@ -67301,6 +68199,46 @@
             "name": "Ward",
             "description": "Wards are 0 cost Block cards which Exhaust.",
             "mod": "The Disciple"
+        },
+        {
+            "name": "Augury",
+            "description": "This number of cards from the top of your draw pile are revealed, maximum of 7.\nLose 1 Augury at the start of each turn.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "name": "Entropy",
+            "description": "When played, ALL cards with Entropy will deal 1 additional damage or gain 1 additional Block for the rest of combat.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "name": "Fated",
+            "description": "Gain the additional effect if this is the first Fated card you play in a turn.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "name": "Revealed",
+            "description": "Cards from the top of your draw pile that are displayed by Augury.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "name": "Vanishing",
+            "description": "Exhausts when played and the value is reduced by 1. When this reaches 0, remove it from your deck completely.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "name": "Fleeting Dodge",
+            "description": "A small misdirection of fate.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "name": "Fleeting Strike",
+            "description": "A small misdirection of fate.",
+            "mod": "The Ephemeral"
+        },
+        {
+            "name": "Fleeting Thought",
+            "description": "A small misdirection of fate.",
+            "mod": "The Ephemeral"
         },
         {
             "name": "Theforsaken:Fear",
@@ -71865,6 +72803,22 @@
             "sts_version": "10-18-2018",
             "dependencies": [
                 "basemod"
+            ],
+            "optional_dependencies": []
+        },
+        {
+            "name": "The Ephemeral",
+            "version": "1.0.5",
+            "authors": [
+                "ResponsibleAlex"
+            ],
+            "credits": "Basemod, ModTheSpire, searcian",
+            "description": "A blind oracle betrayed by a cult long ago. A specter that now haunts the Spire, seeking vengeance.\n\nMods -> The Ephemeral -> Config for settings to:\n * Re-enable viewing Draw and Discard piles\n * Reverse display order of Previewed cards",
+            "mts_version": "3.8.0",
+            "sts_version": "03-07-2022",
+            "dependencies": [
+                "basemod",
+                "stslib"
             ],
             "optional_dependencies": []
         },
