@@ -1048,7 +1048,10 @@ __List of memes:__
 
         'forcestop': async (msg, arg) => {
             if (cfg.overriders.includes(msg.author.id)) {
-                setTimeout(process.exit, 1000);
+                setTimeout(() => {
+                    bot.destroy();
+                    process.exit();
+                }, 1000);
                 return {title: "stopped."};
             } else return {title: ":/"};
         },
