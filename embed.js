@@ -34,7 +34,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             break;
 
         case 'relic':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`.toLowerCase()};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '').replaceAll('?', '')}.png`.toLowerCase()};
             e.color = item.character[1];
             e.description = ` ${item.tier} Relic / ${item.character[0]} / ${item.mod}\n\n${item.description}\n*${item.flavorText}*`;
             break;
@@ -54,7 +54,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             break;
             
         case 'creature':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.type == 'Player' ? item.name.replace('the ', '').replace('The ', '') : item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`.toLowerCase()};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`.toLowerCase()};
             e.description = `${item.type} / ${item.minHP}-${item.maxHP} HP / ${item.mod}`;
             break;
 

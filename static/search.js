@@ -74,7 +74,7 @@ function addItems(items) {
                 break;
 
             case 'relic':
-                block.thumbnail = `/${item.mod}/relics/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`.toLowerCase();
+                block.thumbnail = `/${item.mod}/relics/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '').replaceAll('?', '')}.png`.toLowerCase();
                 block.content = ` ${item.tier} Relic / ${item.character[0]} / ${item.mod}\n\n${item.description}\n*${item.flavorText}*`;
                 break;
                 
@@ -90,7 +90,7 @@ function addItems(items) {
                 break;
                 
             case 'creature':
-                block.thumbnail = `/${item.mod}/creatures/${item.type == 'Player' ? item.name.replace('the ', '').replace('The ', '') : item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`.toLowerCase();
+                block.thumbnail = `/${item.mod}/creatures/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`.toLowerCase();
                 block.content = `${item.type} / ${item.minHP}-${item.maxHP} HP / ${item.mod}`;
                 break;
 
