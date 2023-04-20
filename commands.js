@@ -218,6 +218,8 @@ You can use **/i** to find an item with autocomplete.
 You can use **/run** to run commands without anyone else seeing your result.
 You can also search online at ${cfg.exportURL}/search
 
+Server admins can add custom commands with **/customcommands**
+
 __Commands:__
 <[item name]> displays info about an item
 - search query may include the following filters:
@@ -229,6 +231,7 @@ __Commands:__
 - - ex=? - no results will include the specified phrase
 - - r=2 - get second result
 <d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
+<customcommands> - lists the server's custom commands
 <del> deletes your last search in this channel
 <?[search query]> shows the most likely results for a search query
 - page=? - specify result page
@@ -245,7 +248,7 @@ __Commands:__
 <exportjson [search query]> same as the above, but returns the raw json details
 <calc [equation]> https://www.npmjs.com/package/calculator-by-str
 <plot [equation] [args]> - type <plot help> for more information
-<remindme [time]> - links you to a message in a certain amount of time (e.g. 10m, 5h, 30d) 
+<remindme [time]> - links you to a message in a certain amount of time (e.g. 10m, 5h, 30d)
 <lists> links to the bot's data
 `,
             thumbnail: {url: bot.user.avatarURL()},
@@ -301,6 +304,22 @@ __Commands:__
             title: "lists",
             description: `web search: ${cfg.exportURL}/search\nexport: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/slaytabase/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/slaytabase/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/slaytabase/blob/main/extraItems.js`,
         }),
+
+        'customcommands': async msg => {
+            if (!msg.inGuild()) return {title: "You must be in a server to use custom commands."};
+            let commands = await db.CustomCommand.findAll({where: {guild: msg.guildId}});
+            return {title: `Custom commands in the \`${msg.guild.name}\` server:`, description: commands.map(c => `<${c.call}>`).join(', ')};
+        },
+
+        'forcestop': async (msg, arg) => {
+            if (cfg.overriders.includes(msg.author.id)) {
+                setTimeout(() => {
+                    bot.destroy();
+                    process.exit();
+                }, 1000);
+                return {title: "stopped."};
+            } else return {title: ":/"};
+        },
     },
 
     prefix: {
@@ -1075,16 +1094,6 @@ __List of memes:__
                 message: msg.url
             });
             return {title: `Got it. I'll remind you <t:${Math.round(time/1000)}:R>.`};
-        },
-
-        'forcestop': async (msg, arg) => {
-            if (cfg.overriders.includes(msg.author.id)) {
-                setTimeout(() => {
-                    bot.destroy();
-                    process.exit();
-                }, 1000);
-                return {title: "stopped."};
-            } else return {title: ":/"};
         },
     },
 

@@ -105,6 +105,13 @@ async function embed(item, msg, embeds=[], encode=true) {
                 e[i] = result[i];
             break;
         
+        case 'custom':
+            e.color = 8224125;
+            e.description = item.command.description;
+            e.thumbnail = {url: decodeURI(item.command.image)};
+            delete e.footer;
+            break;
+        
         case 'fail':
             delete e.url;
             e.description = `If you think this is a mistake, contact <@106068236000329728>\n\n[Search for "${item.query.replaceAll('+', '')}" on the Slay the Spire wiki](https://slay-the-spire.fandom.com/wiki/Special:Search?query=${item.query.replaceAll('+', '').replaceAll(' ', '+')})?`;

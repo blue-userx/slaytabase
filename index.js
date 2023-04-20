@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, Collection } from 'discord.js';
+import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, Collection, TextInputBuilder, TextInputStyle, ModalBuilder } from 'discord.js';
 import Fuse from 'fuse.js'
 import fs from 'fs';
 import commands from './commands.js';
@@ -131,6 +131,9 @@ bot.once('ready', async () => {
             .addAttachmentOption(option => 
                 option.setName('attachment')
                 .setDescription('Simulated attachment, if needed for stuff like artpreview.')),
+        new SlashCommandBuilder()
+            .setName('customcommands')
+            .setDescription('Manage this server\'s custom commands.'),
         new ContextMenuCommandBuilder()
             .setName('find items')
             .setType(ApplicationCommandType.Message)
@@ -154,6 +157,16 @@ async function getEmbeds(msg) {
                 query.filter = filters[i] ? filter : false;
                 if (query.length <= 0) continue;
                 let item = fn.find(query);
+                if (msg.inGuild()) {
+                    let customCommand = await db.CustomCommand.findOne({where: {guild: msg.guildId, call: query}});
+                    if (customCommand != null)
+                        item = {item: {
+                            name: customCommand.title,
+                            command: customCommand,
+                            itemType: 'custom',
+                            originalQuery,
+                        }};
+                }
                 for (let type of [['prefix', 'startsWith'], ['suffix', 'endsWith'], ['exact', 'exactMatch']])
                     for (let i in commands[type[0]])
                         if (query[type[1]](i))
@@ -366,7 +379,7 @@ bot.on('interactionCreate', async interaction => {
                     let on = interaction.options.getBoolean('on');
                     if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
                     let serverSettings = await db.ServerSettings.findOne({where: {guild: interaction.guildId}});
-                    if (!interaction.inGuild()) return interaction.editReply('this command is server only');
+                    if (!interaction.inGuild()) return interaction.editReply('This is a server-only command.');
                     if (serverSettings == null) return interaction.editReply('You must set the mods to be discussed first! (use /addservermod)');
                     if (on) {
                         await serverSettings.update({discussionChannel: interaction.channelId});
@@ -392,6 +405,19 @@ bot.on('interactionCreate', async interaction => {
                         db.Subscription.destroy(queryInfo);
                         await interaction.editReply('You\'re no longer subscribed to daily discussions in this server.');
                     }
+                    break;
+                
+                case 'customcommands':
+                    await interaction.deferReply({ephemeral: true});
+                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
+                    if (!interaction.inGuild()) return interaction.editReply('This is a server-only command.');
+                    await interaction.editReply({
+                        content: `This server's custom commands: \n\n<${(await db.CustomCommand.findAll({where: {guild: interaction.guildId}})).map(c => c.call).join('>, <')}>`,
+                        components: [new ActionRowBuilder().addComponents(
+                            new ButtonBuilder().setCustomId('addcustom').setLabel('New').setStyle(ButtonStyle.Primary),
+                            new ButtonBuilder().setCustomId('delcustom').setLabel('Delete').setStyle(ButtonStyle.Danger)
+                        )]
+                    });
                     break;
             }
         } else if (interaction.isAutocomplete()) {
@@ -458,25 +484,87 @@ bot.on('interactionCreate', async interaction => {
                         return ButtonBuilder.from(button.data);
                     })}))});
                 }
-            } else if (interaction.customId == 'send') {
-                let items = interaction.message.components.map(i => i.components).flat(1).filter(i=>i.data.style == ButtonStyle.Primary).map(i => `[[${i.data.custom_id.slice(4)}]]`);
-                if (items.length > 10) return await interaction.reply({content: 'Please select at most 10 items!', ephemeral: true});
-                await interaction.deferReply();
-                interaction.content = items.join('');
-                interaction.author = interaction.user;
-                let embeds = await getEmbeds(interaction);
-                await interaction.deleteReply();
-                if (embeds === 0 || embeds.length == 0) return;
-                await interaction.channel.send({
-                    content: `${interaction.user} searched from ${interaction.message ? interaction.message.content.split('\n')[0] : '?'}`,
-                    embeds,
-                    allowedMentions: {users: []}
-                }).catch(e => {});
-            } else if (interaction.customId == 'sendToAll') {
-                if (interaction.message && interaction.message.content) {
-                    await interaction.channel.send({content: `<@${interaction.user.id}> ran \`${interaction.message.content}\``, embeds: interaction.message.embeds, allowedMentions: {users: []}}).catch(e => {});
-                    await interaction.update({content: "Sent result to channel!", embeds: [], components: []}).catch(e => {});
+            } else {
+                switch (interaction.customId) {
+                    case 'send':
+                        let items = interaction.message.components.map(i => i.components).flat(1).filter(i=>i.data.style == ButtonStyle.Primary).map(i => `[[${i.data.custom_id.slice(4)}]]`);
+                        if (items.length > 10) return await interaction.reply({content: 'Please select at most 10 items!', ephemeral: true});
+                        await interaction.deferReply();
+                        interaction.content = items.join('');
+                        interaction.author = interaction.user;
+                        let embeds = await getEmbeds(interaction);
+                        await interaction.deleteReply();
+                        if (embeds === 0 || embeds.length == 0) return;
+                        await interaction.channel.send({
+                            content: `${interaction.user} searched from ${interaction.message ? interaction.message.content.split('\n')[0] : '?'}`,
+                            embeds,
+                            allowedMentions: {users: []}
+                        }).catch(e => {});
+                        break;
+
+                    case 'sendToAll':
+                        if (interaction.message && interaction.message.content) {
+                            await interaction.channel.send({content: `<@${interaction.user.id}> ran \`${interaction.message.content}\``, embeds: interaction.message.embeds, allowedMentions: {users: []}}).catch(e => {});
+                            await interaction.update({content: "Sent result to channel!", embeds: [], components: []}).catch(e => {});
+                        }
+                        break;
+                    
+                    case 'addcustom':
+                        if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id)) || !interaction.inGuild()) return;
+                        await interaction.showModal(new ModalBuilder()
+                            .setCustomId('customcommand')
+                            .setTitle('Add Custom Command')
+                            .addComponents(
+                                new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('call').setLabel('Command name - call it with <name>').setStyle(TextInputStyle.Short).setMaxLength(20)),
+                                new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('title').setLabel('Title of the returned embed').setStyle(TextInputStyle.Short).setMaxLength(100)),
+                                new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('desc').setLabel('Description of the returned embed').setStyle(TextInputStyle.Paragraph).setMaxLength(1000).setRequired(false)),
+                                new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('image').setLabel('Image URL for a thumbnail').setStyle(TextInputStyle.Short).setMaxLength(100).setRequired(false)),
+                            ));
+                        interaction.message.delete().catch(e => {});
+                        break;
+
+                    case 'delcustom':
+                        if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id)) || !interaction.inGuild()) return;
+                        await interaction.showModal(new ModalBuilder()
+                            .setCustomId('delcustom')
+                            .setTitle('Delete Custom Command')
+                            .addComponents(
+                                new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('call').setLabel('Command name').setStyle(TextInputStyle.Short)),
+                            ));
+                        interaction.message.delete().catch(e => {});
+                        break;
                 }
+            }
+        } else if (interaction.isModalSubmit()) {
+            switch (interaction.customId) {
+                case 'customcommand':
+                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id)) || !interaction.inGuild()) return;
+                    let call = fn.unPunctuate(interaction.fields.getField('call').value);
+                    let title = interaction.fields.getField('title').value;
+                    let description = interaction.fields.getField('desc').value;
+                    let image = interaction.fields.getField('image').value;
+                    if (call.length > 0) {
+                        if (await db.CustomCommand.count({where: {guild: interaction.guildId, call}}) > 0)
+                            return await interaction.reply({ephemeral: true, content: 'There already exists a custom command in this server with that name! Delete that one first.'});
+                        else {
+                            await db.CustomCommand.create({guild: interaction.guildId, call, title, description, image});
+                            return await interaction.update({ephemeral: true, content: `Successfully created the <${call}> command`, components: []}).catch(e => {});
+                        }
+                    }
+                    break;
+
+                case 'delcustom':
+                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id)) || !interaction.inGuild()) return;
+                    let delcall = fn.unPunctuate(interaction.fields.getField('call').value);
+                    if (delcall.length > 0) {
+                        if (await db.CustomCommand.count({where: {guild: interaction.guildId, call: delcall}}) <= 0)
+                            return await interaction.reply({ephemeral: true, content: 'Delete failed. There are no custom commands in this server with that name.'});
+                        else {
+                            await db.CustomCommand.destroy({where: {guild: interaction.guildId, call: delcall}});
+                            return await interaction.update({ephemeral: true, content: `Successfully deleted the <${delcall}> command`, components: []}).catch(e => {});
+                        }
+                    }
+                    break;
             }
         }
     } catch (e) {
