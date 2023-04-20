@@ -142,7 +142,7 @@ async function getEmbeds(msg) {
     let queries = [...msg.content.matchAll(/(\<(.*?)\>)|(\[\[(.*?)\]\])/g)]
     let filters = queries.map(e => e[0].startsWith('<'))
     queries = queries.map(e => e[0].startsWith('<') ? e[2] : e[4])
-        .filter(q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init'));
+        .filter(q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init'));
     if (queries.length <= queryLimit) {
         if (queries.length > 0) {
             let embeds = [];
