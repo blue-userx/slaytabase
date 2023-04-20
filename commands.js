@@ -1,4 +1,5 @@
 import { bot, search } from './index.js';
+import db from './models/index.js';
 import { User } from 'discord.js';
 import { createCanvas, createImageData, loadImage, registerFont } from 'canvas';
 import drawMultilineText from './canvas-multiline-text.js';
@@ -244,6 +245,7 @@ __Commands:__
 <exportjson [search query]> same as the above, but returns the raw json details
 <calc [equation]> https://www.npmjs.com/package/calculator-by-str
 <plot [equation] [args]> - type <plot help> for more information
+<remindme [time]> - links you to a message in a certain amount of time (e.g. 10m, 5h, 30d) 
 <lists> links to the bot's data
 `,
             thumbnail: {url: bot.user.avatarURL()},
@@ -1044,6 +1046,35 @@ __List of memes:__
 
         'workshop?': async (msg, arg) => {
             return await commands.prefix['ws?'](msg, arg);
+        },
+
+        'remindme ': async (msg, arg, args) => {
+            let reqTime = Number(args[0].slice(0, -1));
+            let time = reqTime;
+            let timeunit = args[0].slice(-1);
+            switch (timeunit) {
+                case 'd':
+                    time *= 24;
+                case 'h':
+                    time *= 60;
+                case 'm':
+                    time *= 60;
+                case 's':
+                    time *= 1000;
+                    break;
+                default:
+                    time = NaN;
+            }
+            if (Number.isNaN(time))
+                return {title: 'Usage: `<remindme 5m> fix that one bug`'};
+            time += Date.now();
+            db.Reminder.create({
+                user: msg.author.id,
+                at: time,
+                contents: msg.content,
+                message: msg.url
+            });
+            return {title: `Got it. I'll remind you <t:${Math.round(time/1000)}:R>.`};
         },
 
         'forcestop': async (msg, arg) => {

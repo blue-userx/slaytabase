@@ -1,5 +1,6 @@
 import { bot, search } from './index.js';
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, InteractionResponse } from 'discord.js';
+import { Op } from 'sequelize';
 import commands from './commands.js';
 import embed from './embed.js';
 import fn from './fn.js';
@@ -156,7 +157,14 @@ async function startThread() {
                 await silentAddMessage.edit(`Adding subscribed users...\n<@${subscriber.user}>`);
             await silentAddMessage.delete();
         }
+    }
 
+    for (let reminder of await db.Reminder.findAll({where: {at: {[Op.lt]: Date.now()}}})) {
+        let user = await bot.users.fetch(reminder.user);
+        console.log(reminder);
+        if (user)
+            await user.send({embeds: [EmbedBuilder.from({title: reminder.contents, description: reminder.message})]});
+        reminder.destroy();
     }
 }
 
