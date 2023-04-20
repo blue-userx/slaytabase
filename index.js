@@ -518,7 +518,7 @@ bot.on('interactionCreate', async interaction => {
                                 new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('call').setLabel('Command name - call it with <name>').setStyle(TextInputStyle.Short).setMaxLength(20)),
                                 new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('title').setLabel('Title of the returned embed').setStyle(TextInputStyle.Short).setMaxLength(100)),
                                 new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('desc').setLabel('Description of the returned embed').setStyle(TextInputStyle.Paragraph).setMaxLength(1000).setRequired(false)),
-                                new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('image').setLabel('Image URL for a thumbnail').setStyle(TextInputStyle.Short).setMaxLength(100).setRequired(false)),
+                                new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('image').setLabel('Image URL for a thumbnail').setStyle(TextInputStyle.Short).setMaxLength(200).setRequired(false)),
                             ));
                         interaction.message.delete().catch(e => {});
                         break;
