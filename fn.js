@@ -51,7 +51,7 @@ function findAll(query) {
                     break;
 
                 case "rarity":
-                    results = results.filter(r => r.item.hasOwnProperty('rarity') && r.item.rarity.toLowerCase() == val);
+                    results = results.filter(r => (r.item.hasOwnProperty('rarity') && r.item.rarity.toLowerCase() == val) || (r.item.hasOwnProperty('tier') && r.item.tier.toLowerCase() == val));
                     break;
 
                 case "in":
