@@ -45,6 +45,14 @@
     font-size: .6em;
 }
 
+.result-details a {
+    color: rgb(157, 183, 255);
+}
+
+.result-title button {
+    margin-left: 8px;
+}
+
 .result-thumbnail {
     width: 100px;
     min-width: 100px;

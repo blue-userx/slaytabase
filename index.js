@@ -59,11 +59,29 @@ router.use('/', (req, res, next) => {
 });
 router.get('/', (req, res) => res.render('home'));
 router.get('/exports', (req, res) => res.sendFile('./docs/index.html', {root: '.'}));
-router.get('/search', (req, res) => res.render('search'));
+router.get('/search', async (req, res) => res.render('search', {
+    results: req.originalUrl.length > 8 ? fn.findAll(decodeURIComponent(req.originalUrl.slice(8))).slice(0, 10) : [],
+    firstEmbed: req.originalUrl.length > 8 ? await embed({...(fn.find(decodeURIComponent(req.originalUrl.slice(8))).item), score: 0, query: ''}) : {},
+    query: req.originalUrl.length > 8 ? fn.unPunctuate(decodeURIComponent(req.originalUrl.slice(8))) : ''
+}));
 router.get('/s', (req, res) => {
     if (req.originalUrl.length > 3)
         return res.json(fn.findAll(decodeURIComponent(req.originalUrl.slice(3))).slice(0, 50));
     else return res.json([]);
+});
+router.get('/e', async (req, res) => {
+    if (req.originalUrl.length > 3) {
+        let e = (await embed({...(fn.find(decodeURIComponent(req.originalUrl.slice(3)))).item, score: 0, query: ''})).data;
+        return res.send(`<html><head>
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="${e.title.replaceAll('"', '&quot;')}">
+            <meta property="og:description" content="${e.description.replaceAll('*', '').replaceAll('"', '&quot;').replace(/\<\:e_(.*?)\:(.*?)\>/gm, '⚪').replaceAll('\\⭐', '⭐').replace(/\<\:(.*?)\:(.*?)\>/gm, '')}">
+            ${e.hasOwnProperty('thumbnail') && e.thumbnail.url ? `<meta property="og:image" content="${e.thumbnail.url}">` : ''}
+            ${e.hasOwnProperty('color') ? `<meta name="theme-color" content="#${e.color.toString(16)}">` : ''}
+            <meta http-equiv="refresh" content="0; url=${req.originalUrl.replace('/e', '/search').replaceAll('"', '&quot;')}">
+        </head></html>`);
+    }
+    else return res.send('');
 });
 router.use('/', express.static('./static'));
 router.use('/', express.static('./docs'));
