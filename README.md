@@ -1,21 +1,31 @@
-# slaytabase
+# ![](static/favicon.ico) slaytabase
 invite the bot: https://discord.com/oauth2/authorize?client_id=961824443653574687&permissions=0&scope=bot
 
-## adding/updating mods
-1. download [my version of modded spire exporter](https://github.com/OceanUwU/sts-exporter/releases)
-2. launch mod the spire with Basemod, SpireExporter, and the mod(s) you'd like to add/update
-3. in SpireExporter's mod config, disable "export vanilla items", and enable "export images"
-4. create a directory called `gamedata` in this repo
-5. on a profile where no beta art is enabled, create an export and move the `export` directory it creates into `gamedata` in this repo
-6. you may need to edit `extraItems.js` at this point
-7. (requires [node.js v16+](https://nodejs.org/en/download/)) run `npm install` then `node alterExport.js` (this can take a while)
-8. if the mod contains a character, add data about them to `characters.js`
-9. commit & push & make a pull request
+## steps for adding/updating mods
+1. first time? clone this repo with `git clone https://github.com/OceanUwU/slaytabase --depth=1` (so that you don't download the entire commit history). otherwise just `git pull`
+2. download the latest version of [my fork of modded spire exporter](https://github.com/OceanUwU/sts-exporter/releases)
+3. launch ModTheSpire with BaseMod, my SpireExporter, and the mod(s) you'd like to add/update
+4. in SpireExporter's mod config, disable "export vanilla items", and enable "export images"
+5. create a directory called `gamedata` in this repo
+6. on a profile where no beta art is enabled, create an export and move the `export` directory it creates into `gamedata` in this repo (delete/rename the old `export` if there's already an existing one)
+7. if you want to add additional information that's not directly found in item descriptions you may add it to `extraItems.js` (there is a template at the bottom, copy and paste that)
+8. (requires [node.js v16+](https://nodejs.org/en/download/)) run `npm install` then `node alterExport.js` (this can take a while depending on how many files there are)
+9. if you want your custom keywords to have emoji icons, add them to `emojis.js`
+10. if the mod contains a character or a custom card colour, add data about them to `characters.js` (the number is a hex code converted to decimal)
+11. make a pull request (make sure you aren't editing any of files of any other mods)
 
-## setup for running the bot
+#### requirements for a mod being on the bot:
+one of the following must be true:
+- it's on the steam workshop
+- you are the mod's author
+- you have permission from the mod's author for it to be on slaytabase
+
+also, all of the following must be true:
+- the mod's author hasn't said something along the lines of "dont put my mod on there please"
+- no extreme nsfw
+
+## setup for running/developing the bot
 1. `npm ci`
 2. install [GraphicsMagick](http://www.graphicsmagick.org/download.html)
-2. create `cfg.js` and paste the following in: `export default {"token":"jsdakfhajksdfh", "exportURL": "https://slay.ocean.lol", websitePort: 8622, "overriders": ["106068236000329728"], "mkswtKey": null}` and set `token` as your discord bot token
-3. create a thread in a channel where you want daily discussions to be created and copy its id.
-4. create `dailyDiscussion.json` and paste the following in: `{"next": 1666312415000, "voteChannel": "0", "options": ["slimebound:split"], "votes": [[]], "past":[]}` and set `voteChannel` as the thread id you just copied and set `next` as the current UNIX timestamp (the one with milliseconds)
-5. `npm start`
+3. create `cfg.js` and paste the following in: `export default {"token":"jsdakfhajksdfh", "exportURL": "https://slay.ocean.lol", websitePort: 8622, "overriders": ["106068236000329728"], "mkswtKey": null}` and set `token` as your discord bot token
+4. `npm start`
