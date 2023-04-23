@@ -714,6 +714,7 @@ __List of memes:__
 <rotating [item]>
 <squashing [item]>
 <live [name]=[item] reaction>
+<same picture [item]=[other item]>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -845,6 +846,18 @@ __List of memes:__
                 [1, 376, 180, 204, 205],
             ],
             texts: [[2, 123, 32, 293, 156, 'white']],
+        }),
+        
+        'same picture ': async (msg, arg) => await meme(msg, arg, {
+            w: 500,
+            h: 559,
+            bg: 'samepicture.png',
+            items: [0, 0],
+            put: [
+                [0, 71, 24, 132, 154],
+                [1, 310, 55, 166, 157],
+            ],
+            texts: [],
         }),
 
         'pet the ': async (msg, arg) => {
