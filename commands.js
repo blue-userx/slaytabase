@@ -685,6 +685,7 @@ __Commands:__
             description: `Some memes take more than one item, separate items with the "=" symbol.
 The bot can also take users as arguments, to grab their profile pictures, with <meme user?[userId]> for example: <user?${bot.user.id} my beloved>
 You can also use just "user?me" to specify yourself.
+Add '?left' or '?right' after an item name to just take half of its image e.g. <strike?left my beloved>
             
 __List of memes:__
 <megamind no [item]>
