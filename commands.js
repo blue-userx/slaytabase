@@ -716,6 +716,7 @@ __List of memes:__
 <squashing [item]>
 <live [name]=[item] reaction>
 <same picture [item]=[other item]>
+<trade offer [item]=[other item]>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -857,6 +858,18 @@ __List of memes:__
             put: [
                 [0, 71, 24, 132, 154],
                 [1, 310, 55, 166, 157],
+            ],
+            texts: [],
+        }),
+        
+        'trade offer ': async (msg, arg) => await meme(msg, arg, {
+            w: 607,
+            h: 794,
+            bg: 'tradeoffer.png',
+            items: [0, 0],
+            put: [
+                [0, 34, 182, 187, 177],
+                [1, 346, 181, 194, 176],
             ],
             texts: [],
         }),
