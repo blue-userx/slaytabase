@@ -263,7 +263,7 @@ bot.on('messageCreate', async msg => {
     }
 });
 
-let edit = async (editing, from) => {
+let edit = async (editing, from, managed=false) => {
     let embeds = await getEmbeds(from);
     if (embeds === null)
         editing.edit({content: 'I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.', embeds: []}).catch(e => {});
@@ -273,17 +273,18 @@ let edit = async (editing, from) => {
         let files = getFilesFromEmbeds(embeds, from.content.includes('(s)'));
         if (files.length > 10) await editing.edit({content: 'I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.', embeds: [], files: []});
         else {
+            let pre = managed ? '(edited by a bot manager) ' : '';
             if (from.content.includes('(s)')) {
-                await editing.edit({content: `||https://bit.ly/3aSgJDF||`, embeds: [], files: [], allowedMentions: {repliedUser: false}});
+                await editing.edit({content: pre+'||https://bit.ly/3aSgJDF||', embeds: [], files: [], allowedMentions: {repliedUser: false}});
                 await (new Promise(res => setTimeout(res, 1000)));
                 await editing.edit({content: editing.content, embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
             } else
-                await editing.edit({content: '', embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+                await editing.edit({content: pre, embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
         }
         delfiles(files);
     }
 }
-let onEdit = async (oldMsg, newMsg) => {
+let onEdit = async (oldMsg, newMsg, managed=false) => {
     let contentBefore = newMsg.content;
     let messages;
     try {
@@ -295,7 +296,7 @@ let onEdit = async (oldMsg, newMsg) => {
     if (reply != undefined) {
         if (oldMsg.attachments.size > newMsg.attachments.size) return;
         newMsg.content = contentBefore;
-        await edit(reply, newMsg);
+        await edit(reply, newMsg, managed);
     } else
         bot.emit('messageCreate', newMsg);
 }
@@ -329,9 +330,9 @@ bot.on('interactionCreate', async interaction => {
                         if (msg) {
                             msg.content = interaction.content;
                             if (msg.author.id == bot.user.id)
-                                await edit(msg, msg);
+                                await edit(msg, msg, true);
                             else
-                                await onEdit(msg, msg);
+                                await onEdit(msg, msg, true);
                         }
                         return await interaction.deleteReply();
                     }
@@ -427,8 +428,8 @@ bot.on('interactionCreate', async interaction => {
                 
                 case 'customcommands':
                     await interaction.deferReply({ephemeral: true});
-                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
                     if (!interaction.inGuild()) return interaction.editReply('This is a server-only command.');
+                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
                     await interaction.editReply({
                         content: `This server's custom commands: \n\n<${(await db.CustomCommand.findAll({where: {guild: interaction.guildId}})).map(c => c.call).join('>, <')}>`,
                         components: [new ActionRowBuilder().addComponents(
@@ -528,7 +529,7 @@ bot.on('interactionCreate', async interaction => {
                         break;
                     
                     case 'addcustom':
-                        if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id)) || !interaction.inGuild()) return;
+                        if (!interaction.inGuild() || !(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return;
                         await interaction.showModal(new ModalBuilder()
                             .setCustomId('customcommand')
                             .setTitle('Add Custom Command')
@@ -542,7 +543,7 @@ bot.on('interactionCreate', async interaction => {
                         break;
 
                     case 'delcustom':
-                        if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id)) || !interaction.inGuild()) return;
+                        if (!interaction.inGuild() || !(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return;
                         await interaction.showModal(new ModalBuilder()
                             .setCustomId('delcustom')
                             .setTitle('Delete Custom Command')
@@ -556,7 +557,7 @@ bot.on('interactionCreate', async interaction => {
         } else if (interaction.isModalSubmit()) {
             switch (interaction.customId) {
                 case 'customcommand':
-                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id)) || !interaction.inGuild()) return;
+                    if (!interaction.inGuild() || !(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return;
                     let call = fn.unPunctuate(interaction.fields.getField('call').value);
                     let title = interaction.fields.getField('title').value;
                     let description = interaction.fields.getField('desc').value;
@@ -572,7 +573,7 @@ bot.on('interactionCreate', async interaction => {
                     break;
 
                 case 'delcustom':
-                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id)) || !interaction.inGuild()) return;
+                    if (!interaction.inGuild() || !(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return;
                     let delcall = fn.unPunctuate(interaction.fields.getField('call').value);
                     if (delcall.length > 0) {
                         if (await db.CustomCommand.count({where: {guild: interaction.guildId, call: delcall}}) <= 0)
