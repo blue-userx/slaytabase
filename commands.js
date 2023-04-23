@@ -113,7 +113,8 @@ async function meme(msg, arg, options) {
             if (options.hasOwnProperty('texts'))
                 for (let t of options.texts) {
                     ctx.fillStyle = t[5];
-                    drawMultilineText(ctx, typeof items[t[0]] == 'string' ? items[t[0]] : (items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase()), {
+                    let text = typeof items[t[0]] == 'string' ? items[t[0]] : (items[t[0]] instanceof User ? items[t[0]].username : items[t[0]].item.name.toUpperCase());
+                    drawMultilineText(ctx, options.upper ? text.toUpperCase() : text, {
                         rect: {x: t[1], y: t[2], width: t[3], height: t[4]},
                         lineHeight: 1.0,
                         minFontSize: 1,
@@ -712,6 +713,7 @@ __List of memes:__
 <spinning [item]>
 <rotating [item]>
 <squashing [item]>
+<live [name]=[item] reaction>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -1163,6 +1165,22 @@ __List of memes:__
                 ],
             }),
         ],
+
+        'live ': [
+            ' reaction',
+            async (msg, arg) => await meme(msg, arg, {
+                w: 196,
+                h: 145,
+                bg: 'livereaction1.png',
+                items: [1, 0],
+                upper: true,
+                put: [
+                    [1, 23, 48, 145, 145],
+                    ['livereaction2.png', 0, 0, 196, 145],
+                ],
+                texts: [[0, 42, 6, 65, 22, 'white']]
+            }),
+        ] 
     }
 };
 
