@@ -98,7 +98,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             args = args.trim().split(' ');
             let arg = new String(args.join(' '));
             arg.filter = item.query.filter;
-            let oa = new String(item.originalQuery.slice(item.name.length));
+            let oa = new String(item.type == 'prefix' ? item.originalQuery.slice(item.name.length) : item.originalQuery.slice(0, -item.name.length));
             oa.filter = item.query.filter;
             let result = await item.do(msg, arg, args, oa);
             for (let i in result)

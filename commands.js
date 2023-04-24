@@ -717,6 +717,7 @@ __List of memes:__
 <live [name]=[item] reaction>
 <same picture [item]=[other item]>
 <trade offer [item]=[other item]>
+<[name] is typing>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -910,7 +911,7 @@ __List of memes:__
                         ctx.drawImage(items[0].image, w/2*(progress), 0, w*(1-progress), h);
                 },
             );
-            let filename = `petpet${String(Math.random()).slice(2)}.gif`;
+            let filename = `export${String(Math.random()).slice(2)}.gif`;
             fs.writeFileSync(filename, buffer);
             return {
                 title: ' ',
@@ -932,7 +933,7 @@ __List of memes:__
                     ctx.drawImage(items[0].image, -w/2, -h/2, w, h);
                 },
             );
-            let filename = `petpet${String(Math.random()).slice(2)}.gif`;
+            let filename = `export${String(Math.random()).slice(2)}.gif`;
             fs.writeFileSync(filename, buffer);
             return {
                 title: ' ',
@@ -954,7 +955,7 @@ __List of memes:__
                     ctx.drawImage(items[0].image, (w-imgW)/2, h-imgH, imgW, imgH);
                 },
             );
-            let filename = `petpet${String(Math.random()).slice(2)}.gif`;
+            let filename = `export${String(Math.random()).slice(2)}.gif`;
             fs.writeFileSync(filename, buffer);
             return {
                 title: ' ',
@@ -1151,6 +1152,29 @@ __List of memes:__
                 ['speechbubble.png', 0, 0, 200, 200]
             ],
         }),
+
+        ' is typing': async (msg, arg, args, oa) => {
+            let buffer = await canvasGif(
+                './memetemplates/typing.gif',
+                (ctx, w, h, totalFrames, currentFrame) => {
+                    ctx.fillStyle = 'white';
+                    drawMultilineText(ctx, oa, {
+                        rect: {x: 87, y: 3, width: 194, height: 48},
+                        lineHeight: 1.0,
+                        minFontSize: 1,
+                        maxFontSize: 500,
+                    });
+                },
+                {fps: 12}
+            );
+            let filename = `export${String(Math.random()).slice(2)}.gif`;
+            fs.writeFileSync(filename, buffer);
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename]
+            };
+        },
     },
 
     prefixAndSuffix: {
