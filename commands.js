@@ -1080,6 +1080,12 @@ __List of memes:__
                     if (githubLine != undefined) {
                         githubLine = githubLine.slice(githubLine.indexOf('/linkfilter/?url=https://github.com')+17);
                         description += `\n${githubLine.slice(0, githubLine.indexOf('"'))}`;
+                    } else {
+                        githubLine = body2.find(e => e.includes('/linkfilter/?url=http://github.com'));
+                        if (githubLine != undefined) {
+                            githubLine = githubLine.slice(githubLine.indexOf('/linkfilter/?url=http://github.com')+17);
+                            description += `\n${githubLine.slice(0, githubLine.indexOf('"'))}`;
+                        }
                     }
                 }
                 return {
