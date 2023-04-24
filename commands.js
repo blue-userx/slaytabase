@@ -21,6 +21,7 @@ import owofify from 'owoifyx';
 const owoify = owofify.default;
 import petPetGif from 'pet-pet-gif';
 import canvasGif from 'canvas-gif';
+import { JSDOM } from 'jsdom';
 
 registerFont('./memetemplates/Kreon-Regular.ttf', {family: "Kreon"});
 const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
@@ -1102,6 +1103,22 @@ __List of memes:__
 
         'workshop?': async (msg, arg) => {
             return await commands.prefix['ws?'](msg, arg);
+        },
+
+        'github?': async (msg, arg) => {
+            let url = `https://github.com/search?q=${arg.replaceAll(' ', '+')}`;
+            let response = await fetch(url);
+            let body = await response.text();
+            if (body.includes('repo-list-item')) {
+                let dom = new JSDOM(body);
+                let results = Array.from(dom.window.document.getElementsByClassName('repo-list-item')).map((e, i) => `${i+1}, https://github.com/${e.children[1].children[0].children[0].children[0].innerHTML.replaceAll('<em>', '').replaceAll('</em>', '')}`);
+                
+                return {
+                    title: `Searched GitHub for \"${arg}\"`,
+                    url,
+                    description: results.join('\n')
+                };
+            } else return {title: `No results on GitHub for "${arg}"`};
         },
 
         'remindme ': async (msg, arg, args) => {
