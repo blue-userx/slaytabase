@@ -718,6 +718,7 @@ __List of memes:__
 <same picture [item]=[other item]>
 <trade offer [item]=[other item]>
 <[name] is typing>
+<image of [item] is typing>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -1231,7 +1232,31 @@ __List of memes:__
                 ],
                 texts: [[0, 42, 6, 65, 22, 'white']]
             }),
-        ] 
+        ],
+
+        'image of ': [
+            ' is typing',
+            async (msg, arg, args, oa) => {
+                let items = await getMemeItems(arg, {items: [0]}, msg);
+                if (!Array.isArray(items))
+                    return items;
+                let buffer = await canvasGif(
+                    './memetemplates/typing.gif',
+                    (ctx, w, h, totalFrames, currentFrame) => {
+                        ctx.fillStyle = 'white';
+                        ctx.drawImage(items[0].image, 87, 3, 194, 48);
+                    },
+                    {fps: 12}
+                );
+                let filename = `export${String(Math.random()).slice(2)}.gif`;
+                fs.writeFileSync(filename, buffer);
+                return {
+                    title: ' ',
+                    image: {url: 'attachment://'+filename},
+                    files: [filename]
+                };
+            },
+        ]
     }
 };
 
