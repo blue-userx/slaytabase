@@ -130,7 +130,6 @@ async function embed(item, msg, embeds=[], encode=true) {
             for (let i = 0; i < embeds.length; i++)
                 e.url = ' ' + e.url;
     }
-    console.log(e.url)
 
     return e.title == '' ? null : new EmbedBuilder(e);
 }
