@@ -19728,7 +19728,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Lose 3 HP.\nGain [R] [R] ( [R]).",
+            "description": "Lose 3 HP.\nGain [R] [R] ([R]).",
             "mod": "Slay the Spire"
         },
         {
@@ -20008,7 +20008,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 5 (8) Block.\nIf this card is Exhausted,\ngain [R] [R] ( [R]).",
+            "description": "Gain 5 (8) Block.\nIf this card is Exhausted,\ngain [R] [R] ([R]).",
             "mod": "Slay the Spire"
         },
         {
@@ -20128,7 +20128,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "This turn, your next Attack (2) is (Attacks)  (are ) played twice.",
+            "description": "This turn, your next Attack (2) is (Attacks)  (are) played twice.",
             "mod": "Slay the Spire"
         },
         {
@@ -20378,7 +20378,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Next turn,\ngain [G] [G] ( [G]).",
+            "description": "Next turn,\ngain [G] [G] ([G]).",
             "mod": "Slay the Spire"
         },
         {
@@ -20758,7 +20758,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "",
-            "description": "Unplayable.\nIf this card is discarded from your hand, gain [G] ( [G]).",
+            "description": "Unplayable.\nIf this card is discarded from your hand, gain [G] ([G]).",
             "mod": "Slay the Spire"
         },
         {
@@ -20798,7 +20798,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "0",
-            "description": "Gain [G] ( [G]).\nDraw 2 cards.\nExhaust.",
+            "description": "Gain [G] ([G]).\nDraw 2 cards.\nExhaust.",
             "mod": "Slay the Spire"
         },
         {
@@ -20838,7 +20838,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "This turn, your next Skill (2) is (Skills)  (are ) played twice.",
+            "description": "This turn, your next Skill (2) is (Skills)  (are) played twice.",
             "mod": "Slay the Spire"
         },
         {
@@ -21148,7 +21148,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain Block equal to the number of cards in your discard pile ( +3).",
+            "description": "Gain Block equal to the number of cards in your discard pile (+3).",
             "mod": "Slay the Spire"
         },
         {
@@ -21188,7 +21188,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Gain [B] [B] ( [B]).\nAdd a Void into your discard pile.",
+            "description": "Gain [B] [B] ([B]).\nAdd a Void into your discard pile.",
             "mod": "Slay the Spire"
         },
         {
@@ -21408,7 +21408,7 @@
             "rarity": "Uncommon",
             "type": "Power",
             "cost": "1",
-            "description": "At the start of your turn, trigger the passive ability of your next Orb ( 2 times).",
+            "description": "At the start of your turn, trigger the passive ability of your next Orb (2 times).",
             "mod": "Slay the Spire"
         },
         {
@@ -21568,7 +21568,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "1",
-            "description": "This turn, your next  (2 ) Power card (cards) is (are) played twice.",
+            "description": "This turn, your next  (2) Power card (cards) is (are) played twice.",
             "mod": "Slay the Spire"
         },
         {
@@ -21588,7 +21588,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "2",
-            "description": "Prevent the next time (2)  (times ) you would lose HP.",
+            "description": "Prevent the next time (2)  (times) you would lose HP.",
             "mod": "Slay the Spire"
         },
         {
@@ -22338,7 +22338,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "X",
-            "description": "Shuffle an Expunger  (with X+1 ) into your draw pile.\nExhaust.",
+            "description": "Shuffle an Expunger  (with X+1) into your draw pile.\nExhaust.",
             "mod": "Slay the Spire"
         },
         {
@@ -22568,7 +22568,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "0",
-            "description": "Retain.\nGain [W] ( [W]).\nExhaust.",
+            "description": "Retain.\nGain [W] ([W]).\nExhaust.",
             "mod": "Slay the Spire"
         },
         {
@@ -22698,7 +22698,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Apply 2 Weak ( to ALL enemies).",
+            "description": "Apply 2 Weak (to ALL enemies).",
             "mod": "Slay the Spire"
         },
         {
@@ -22778,7 +22778,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Put a (any) card (number)  (of cards ) from your hand to the bottom of your draw pile. It (They) costs (cost) 0 until played.",
+            "description": "Put a (any) card (number)  (of cards) from your hand to the bottom of your draw pile. It (They) costs (cost) 0 until played.",
             "mod": "Slay the Spire"
         },
         {
@@ -22878,7 +22878,7 @@
             "rarity": "Uncommon",
             "type": "Skill",
             "cost": "0",
-            "description": "Apply 2 Vulnerable ( to ALL enemies).",
+            "description": "Apply 2 Vulnerable (to ALL enemies).",
             "mod": "Slay the Spire"
         },
         {
@@ -23018,7 +23018,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "X",
-            "description": "Add X random  (Upgraded ) Colorless cards into your hand. They cost 0 this turn.\nExhaust.",
+            "description": "Add X random  (Upgraded) Colorless cards into your hand. They cost 0 this turn.\nExhaust.",
             "mod": "Slay the Spire"
         },
         {
@@ -59642,6 +59642,15 @@
             "mod": "Slay the Spire"
         },
         {
+            "id": "Circlet",
+            "name": "Circlet",
+            "tier": "Special",
+            "pool": "",
+            "description": "Collect as many as you can.",
+            "flavorText": "You ran out of relics to find. Impressive!",
+            "mod": "Slay the Spire"
+        },
+        {
             "id": "CultistMask",
             "name": "Cultist Headpiece",
             "tier": "Special",
@@ -59756,6 +59765,15 @@
             "pool": "",
             "description": "When Vulnerable, take 25% more attack damage rather than 50%.",
             "flavorText": "\"After consuming trichella parastius I felt larger and less... susceptible.\" - Ranwid",
+            "mod": "Slay the Spire"
+        },
+        {
+            "id": "Red Circlet",
+            "name": "Red Circlet",
+            "tier": "Special",
+            "pool": "",
+            "description": "Looks very pretty.",
+            "flavorText": "You ran out of relics. Impressive!",
             "mod": "Slay the Spire"
         },
         {
@@ -66373,7 +66391,7 @@
             "mod": "Ruina"
         },
         {
-            "id": "TheDefect",
+            "id": "Defect",
             "name": "The Defect",
             "type": "Player",
             "minHP": "75",
@@ -66381,7 +66399,7 @@
             "mod": "Slay the Spire"
         },
         {
-            "id": "TheIronclad",
+            "id": "Ironclad",
             "name": "The Ironclad",
             "type": "Player",
             "minHP": "80",
@@ -66397,7 +66415,7 @@
             "mod": "Slay the Spire"
         },
         {
-            "id": "TheWatcher",
+            "id": "Watcher",
             "name": "The Watcher",
             "type": "Player",
             "minHP": "72",
@@ -68869,11 +68887,6 @@
         {
             "name": "Regen",
             "description": "Regen heals HP at the end of your turn. Each turn, Regen is reduced by 1.",
-            "mod": "Slay the Spire"
-        },
-        {
-            "name": "Retain",
-            "description": "Retained cards are not discarded at the end of turn.",
             "mod": "Slay the Spire"
         },
         {

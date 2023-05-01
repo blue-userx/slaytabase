@@ -203,20 +203,33 @@ async function makesweetMeme(template, arg, msg) {
 
 const commands =  {
     exact: {
-        help: msg => ({
-            title: msg.client.user.username,
+        'help': () => ({
+            title: bot.user.username,
+            description: `Search for items from Slay the Spire with <item>.
+Search for items from mods with [[item]].
+You can use up to 10 commands in a message.
+If you edit or delete your message, I will update my reply to it, according to your changes.
+Use **/i** to use autocomplete to find an item.
+
+Type <fullhelp> for information on all of the bot's commands.`,
+            thumbnail: {url: bot.user.avatarURL()},
+        }),
+
+        'fullhelp': () => ({
+            title: bot.user.username,
             description: `Search for an item with <item name>.
 If the result isn\'t what you were looking for, you can also include the following in your search query: character, item type (e.g. card, relic, potion), type (e.g. skill, elite), or text from its description.
 
 Anything highlighted in **bold** is a searchable keyword.
 
+You can use up to 10 commands in a message.
 If you edit or delete your message, I will update my reply to it, according to your changes.
 I'll spoiler tag my reply to any messages which include "(s)" anywhere.
 I'll ignore any messages which include the backtick (\`) symbol anywhere.
 
 <item> will search through items from only vanilla Slay the Spire and mods specific to the server (can be set by server admins with **/addservermod**).
 You can replace <item> with [[item]] to search through ALL mods.
-You can use **/i** to find an item with autocomplete.
+You can use **/i** to use autocomplete to find an item.
 You can use **/run** to run commands without anyone else seeing your result.
 You can also search online at ${cfg.exportURL}/search
 
@@ -232,7 +245,7 @@ __Commands:__
 - - in=drawpile - results must include the phrase "draw pile" (ignores spaces)
 - - ex=? - no results will include the specified phrase
 - - r=2 - get second result
-<d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
+<s~item>, <d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
 <customcommands> - lists the server's custom commands
 <del> deletes your last search in this channel
 <?[search query]> shows the most likely results for a search query
@@ -466,6 +479,23 @@ __Commands:__
                 ...itemEmbed.data,
                 footer: null,
                 description: null,
+            };
+        },
+
+        's~': async (msg, arg) => {
+            let item = fn.find(arg);
+            let itemEmbed = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, false);
+            switch (item.item.itemType) {
+                case 'event':
+                    itemEmbed.data.description = `\n\n${item.item.description.replace('\n', ' ')}`;
+                    break;
+            }
+            return {
+                ...itemEmbed.data,
+                title: ' ',
+                description: `**${itemEmbed.data.title}** - ${itemEmbed.data.description.replace('\n\n', '$$$$$').replaceAll('\n', ' ').replace('$$$', '\n')}`,
+                thumbnail: null,
+                footer: null,
             };
         },
 

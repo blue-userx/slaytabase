@@ -38,6 +38,7 @@ const emojis = [
 ];
 
 export default function emojify(text, character) {
+    text = text.replaceAll('([', '( [');
     for (let i of energies)
         text = text.replaceAll(i, character[2]);
     for (let i of emojis)
