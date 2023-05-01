@@ -128,6 +128,7 @@ bot.once('ready', async () => {
         new SlashCommandBuilder()
             .setName('setdiscussionchannel')
             .setDescription('Bot will create a thread to discuss a random item from the server\'s main mod every day.')
+            .setDMPermission(false)
             .addBooleanOption(option =>
                 option.setName('on')
                 .setDescription('Enable or disable Daily Discussions in this server?')
@@ -135,6 +136,7 @@ bot.once('ready', async () => {
         new SlashCommandBuilder()
             .setName('subscribe')
             .setDescription('When subscribed, I will automatically add you to future daily discussions in this server.')
+            .setDMPermission(false)
             .addBooleanOption(option =>
                 option.setName('on')
                 .setDescription('Should I automatically add you to daily discussions?')
@@ -151,6 +153,7 @@ bot.once('ready', async () => {
                 .setDescription('Simulated attachment, if needed for stuff like artpreview.')),
         new SlashCommandBuilder()
             .setName('customcommands')
+            .setDMPermission(false)
             .setDescription('Manage this server\'s custom commands.'),
         new ContextMenuCommandBuilder()
             .setName('find items')
