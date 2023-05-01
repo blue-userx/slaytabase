@@ -271,15 +271,16 @@ __Commands:__
 
         'del': async msg => {
             let messages = await msg.channel.messages.fetch();
-            messages = messages.filter(i => i.author.id == bot.user.id && i.reference != null);
+            messages = messages.filter(i => i.author.id == bot.user.id);
             let i = 0;
             for (let m of messages) {
                 i++;
                 m = m[1];
                 let found = true;
-                let repliedTo = await msg.channel.messages.fetch(m.reference.messageId).catch(e => found = false);
-                if (!found) continue;
-                if (repliedTo.author.id == msg.author.id) {
+                let repliedTo;
+                if (m.reference)
+                    repliedTo = await msg.channel.messages.fetch(m.reference.messageId).catch(()=>{});
+                if (m.content.includes(msg.author.id) || (repliedTo != null && repliedTo.author.id == msg.author.id)) {
                     await m.delete().catch(e => {});
                     await msg.delete().catch(e => {});
                     return;

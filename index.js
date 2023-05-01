@@ -154,6 +154,9 @@ bot.once('ready', async () => {
             .setDescription('Manage this server\'s custom commands.'),
         new ContextMenuCommandBuilder()
             .setName('find items')
+            .setType(ApplicationCommandType.Message),
+        new ContextMenuCommandBuilder()
+            .setName('delete')
             .setType(ApplicationCommandType.Message)
     ]);
 });
@@ -460,39 +463,51 @@ bot.on('interactionCreate', async interaction => {
                     break;
             }
         } else if (interaction.isMessageContextMenuCommand()) {
-            let words = fn.unPunctuate(interaction.targetMessage.content).split(' ');
-            let matches = [];
-            for (let i = 0; i < words.length; i++) {
-                for (let j = i; j < words.length && j < i + 3; j++) {
-                    let query = words.slice(i, j+1).join(' ');
-                    let exactMatch = search._docs.find(e => e.searchName == query);
-                    if (exactMatch != undefined) matches.push(exactMatch.name);
-                }
-            }
-            if (matches.length > 0) {
-                await interaction.deferReply({ephemeral: true});
-                matches = [...new Set(matches)];
-                if (matches.length > 20) matches = matches.slice(0,20);
-                interaction.content = matches.slice(0,10).map(m => `[[d~${m}]]`).join('');
-                interaction.author = interaction.user;
-                let embeds = await getEmbeds(interaction);
-                matches = matches.reduce((acc, curr, i) => {
-                    if (!(i % 5)) acc.push(matches.slice(i, i + 5));
-                    return acc;
-                },[]);
-                await interaction.editReply({
-                    content: `${interaction.targetMessage.url}\nFound the following item names on this message, click them to select which to send info about, then click send to send:`, ephemeral: true,
-                    ephemeral: true,
-                    embeds,
-                    components: [
-                        ...matches.map(row => new ActionRowBuilder().setComponents(
-                            row.map(match => new ButtonBuilder().setCustomId(`item${match.replace(/[^a-zA-Z' ']+/g, '').replaceAll(' ', '-')}`).setLabel(match).setStyle(ButtonStyle.Secondary))
-                        )),
-                        new ActionRowBuilder().setComponents(new ButtonBuilder().setCustomId('send').setLabel('Send').setStyle(ButtonStyle.Success))
-                    ]
-                });
-            } else {
-                interaction.reply({content: 'Couldn\'t find any item names on this message, sorry!', ephemeral: true});
+            switch (interaction.commandName) {
+                case 'find items':
+                    let words = fn.unPunctuate(interaction.targetMessage.content).split(' ');
+                    let matches = [];
+                    for (let i = 0; i < words.length; i++) {
+                        for (let j = i; j < words.length && j < i + 3; j++) {
+                            let query = words.slice(i, j+1).join(' ');
+                            let exactMatch = search._docs.find(e => e.searchName == query);
+                            if (exactMatch != undefined) matches.push(exactMatch.name);
+                        }
+                    }
+                    if (matches.length > 0) {
+                        await interaction.deferReply({ephemeral: true});
+                        matches = [...new Set(matches)];
+                        if (matches.length > 20) matches = matches.slice(0,20);
+                        interaction.content = matches.slice(0,10).map(m => `[[d~${m}]]`).join('');
+                        interaction.author = interaction.user;
+                        let embeds = await getEmbeds(interaction);
+                        matches = matches.reduce((acc, curr, i) => {
+                            if (!(i % 5)) acc.push(matches.slice(i, i + 5));
+                            return acc;
+                        },[]);
+                        await interaction.editReply({
+                            content: `${interaction.targetMessage.url}\nFound the following item names on this message, click them to select which to send info about, then click send to send:`, ephemeral: true,
+                            ephemeral: true,
+                            embeds,
+                            components: [
+                                ...matches.map(row => new ActionRowBuilder().setComponents(
+                                    row.map(match => new ButtonBuilder().setCustomId(`item${match.replace(/[^a-zA-Z' ']+/g, '').replaceAll(' ', '-')}`).setLabel(match).setStyle(ButtonStyle.Secondary))
+                                )),
+                                new ActionRowBuilder().setComponents(new ButtonBuilder().setCustomId('send').setLabel('Send').setStyle(ButtonStyle.Success))
+                            ]
+                        });
+                    } else {
+                        interaction.reply({content: 'Couldn\'t find any item names on this message, sorry!', ephemeral: true});
+                    }
+                    break;
+                
+                case 'delete':
+                    await interaction.deferReply({ephemeral: true});
+                    if (interaction.targetMessage.author.id != bot.user.id) return interaction.editReply('I can only delete messages sent by myself!');
+                    if (!(cfg.overriders.includes(interaction.user.id) || (interaction.targetMessage.reference != null && interaction.targetMessage.author.id == interaction.user.id) || interaction.targetMessage.content.includes(interaction.user.id))) return interaction.editReply('You can only delete my messages when I\'m replying to you!');
+                    interaction.targetMessage.delete().catch(()=>{});
+                    interaction.deleteReply();
+                    break;
             }
         } else if (interaction.isButton()) {
             if (interaction.customId.startsWith('item')) {
