@@ -355,7 +355,7 @@ bot.on('interactionCreate', async interaction => {
                         return await interaction.editReply({content: interaction.content});
                     let files = getFilesFromEmbeds(embedsR)
                     if (files.length > 10) await interaction.editReply({content: 'I can only attach 10 images per message! Edit your command so that I would use fewer than 10 images in my reply.'});
-                    else await interaction.editReply({content: interaction.content, embeds: embedsR, files, components: [new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('sendToAll').setLabel('Send to channel').setStyle(ButtonStyle.Secondary))]});
+                    else await interaction.editReply({content: `\`${interaction.content}\``, embeds: embedsR, files, components: [new ActionRowBuilder().addComponents(new ButtonBuilder().setCustomId('sendToAll').setLabel('Send to channel').setStyle(ButtonStyle.Secondary))]});
                     delfiles(files);
                     break;
 
@@ -437,7 +437,7 @@ bot.on('interactionCreate', async interaction => {
                     if (!interaction.inGuild()) return interaction.editReply('This is a server-only command.');
                     if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
                     await interaction.editReply({
-                        content: `This server's custom commands: \n\n<${(await db.CustomCommand.findAll({where: {guild: interaction.guildId}})).map(c => c.call).join('>, <')}>`,
+                        content: `\`This server's custom commands: \n\n<${(await db.CustomCommand.findAll({where: {guild: interaction.guildId}})).map(c => c.call).join('>, <')}>`,
                         components: [new ActionRowBuilder().addComponents(
                             new ButtonBuilder().setCustomId('addcustom').setLabel('New').setStyle(ButtonStyle.Primary),
                             new ButtonBuilder().setCustomId('delcustom').setLabel('Delete').setStyle(ButtonStyle.Danger)
@@ -541,7 +541,7 @@ bot.on('interactionCreate', async interaction => {
 
                     case 'sendToAll':
                         if (interaction.message && interaction.message.content) {
-                            await interaction.channel.send({content: `<@${interaction.user.id}> ran \`${interaction.message.content}\``, embeds: interaction.message.embeds, allowedMentions: {users: []}}).catch(e => {});
+                            await interaction.channel.send({content: `<@${interaction.user.id}> ran ${interaction.message.content}`, embeds: interaction.message.embeds, allowedMentions: {users: []}}).catch(e => {});
                             await interaction.update({content: "Sent result to channel!", embeds: [], components: []}).catch(e => {});
                         }
                         break;
@@ -585,7 +585,7 @@ bot.on('interactionCreate', async interaction => {
                             return await interaction.reply({ephemeral: true, content: 'There already exists a custom command in this server with that name! Delete that one first.'});
                         else {
                             await db.CustomCommand.create({guild: interaction.guildId, call, title, description, image});
-                            return await interaction.update({ephemeral: true, content: `Successfully created the <${call}> command`, components: []}).catch(e => {});
+                            return await interaction.update({ephemeral: true, content: `Successfully created the \`<${call}>\` command`, components: []}).catch(e => {});
                         }
                     }
                     break;
@@ -598,7 +598,7 @@ bot.on('interactionCreate', async interaction => {
                             return await interaction.reply({ephemeral: true, content: 'Delete failed. There are no custom commands in this server with that name.'});
                         else {
                             await db.CustomCommand.destroy({where: {guild: interaction.guildId, call: delcall}});
-                            return await interaction.update({ephemeral: true, content: `Successfully deleted the <${delcall}> command`, components: []}).catch(e => {});
+                            return await interaction.update({ephemeral: true, content: `Successfully deleted the \`<${delcall}>\` command`, components: []}).catch(e => {});
                         }
                     }
                     break;
