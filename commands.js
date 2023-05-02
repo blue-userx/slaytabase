@@ -1,6 +1,6 @@
 import { bot, search } from './index.js';
 import db from './models/index.js';
-import { User } from 'discord.js';
+import { User, EmbedBuilder } from 'discord.js';
 import { createCanvas, createImageData, loadImage, registerFont } from 'canvas';
 import drawMultilineText from './canvas-multiline-text.js';
 import { Gif } from 'make-a-gif'
@@ -263,7 +263,8 @@ __Commands:__
 <exportjson [search query]> same as the above, but returns the raw json details
 <calc [equation]> https://www.npmjs.com/package/calculator-by-str
 <plot [equation] [args]> - type <plot help> for more information
-<remindme [time]> - links you to a message in a certain amount of time (e.g. 10m, 5h, 30d)
+<remindme [time]> links you to a message in a certain amount of time (e.g. 10m, 5h, 30d)
+<feedback?[message]> sends a message to a channel seen only by the bot author
 <lists> links to the bot's data
 `,
             thumbnail: {url: bot.user.avatarURL()},
@@ -1179,6 +1180,23 @@ __List of memes:__
                 message: msg.url
             });
             return {title: `Got it. I'll remind you <t:${Math.round(time/1000)}:R>.`};
+        },
+
+        'feedback?': async (msg, _, __, oa) => {
+            let num = JSON.parse(fs.readFileSync('feedbacknum.txt'));
+            let channel = await bot.channels.fetch(cfg.feedbackChannel);
+            if (channel) {
+                channel.send({embeds: [EmbedBuilder.from({
+                    author: {
+                        name: msg.author.tag,
+                        iconURL: msg.author.avatarURL()
+                    },
+                    description: `#${++num}${msg.inGuild ? `: ${msg.url}` : ''}`,
+                    title: oa.toString(),
+                })]});
+            }
+            fs.writeFileSync('feedbacknum.txt', num.toString());
+            return {title: `Sent feedback #${num}.`};
         },
     },
 

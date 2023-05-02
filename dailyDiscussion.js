@@ -161,7 +161,6 @@ async function startThread() {
 
     for (let reminder of await db.Reminder.findAll({where: {at: {[Op.lt]: Date.now()}}})) {
         let user = await bot.users.fetch(reminder.user);
-        console.log(reminder);
         if (user)
             await user.send({embeds: [EmbedBuilder.from({title: reminder.contents, description: reminder.message})]});
         reminder.destroy();
