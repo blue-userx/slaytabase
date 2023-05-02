@@ -1191,7 +1191,7 @@ __List of memes:__
                         name: msg.author.tag,
                         iconURL: msg.author.avatarURL()
                     },
-                    description: `#${++num}${msg.inGuild ? `: ${msg.url}` : ''}`,
+                    description: `#${++num}${msg.inGuild() ? `: ${msg.url}` : ''}`,
                     title: oa.toString(),
                 })]});
             }
