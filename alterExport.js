@@ -110,7 +110,7 @@ async function exportMod(modPath){
     console.log(`Combining cards...`);
     let cards = data.cards;
     let newCards = [];
-    if (!fs.existsSync(`${path}cards`)) fs.mkdirSync(`${path}cards`);
+    if (exportImages && !fs.existsSync(`${path}cards`)) fs.mkdirSync(`${path}cards`);
     let n = 0;
     for (let c of cards) {
         n++;

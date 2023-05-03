@@ -50,5 +50,9 @@ export default {
     'Thort_gray_color': ['The Thorton', 18265, '<:e_colorless:961808772609769512>'],
     'Marked_purple_color': ['The Marked', 5380386, '<:e_colorless:961808772609769512>'],
     'Blade_gunner_color': ['The Blade Gunner', 11368728, '<:e_colorless:961808772609769512>'],
-    'Color_ephemeral_purple': ['The Ephemeral', 12798719, '<:e_colorless:961808772609769512>']
+    'Color_ephemeral_purple': ['The Ephemeral', 12798719, '<:e_colorless:961808772609769512>'],
+    'Blackbeard_black': ['The Blackbeard', 16355071, '<:e_colorless:961808772609769512>'],
+    'Rainbow_color': ['The Rainbow', 7563086, '<:e_colorless:961808772609769512>'],
+    'Librarian': ['The Librarian', 1315859, '<:e_colorless:961808772609769512>'],
+    'Dio_gold_color': ['The Dio', 10519113, '<:e_colorless:961808772609769512>']
 };
