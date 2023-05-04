@@ -106,6 +106,7 @@ function find(query) {
 }
 
 export default {
+    shuffle,
     unPunctuate,
     findAll,
     find,
