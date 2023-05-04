@@ -1069,7 +1069,8 @@ __List of memes:__
         },
 
         'sb ': async (msg, _, __, oa) => {
-            let numArgs = oa.split('=').length;
+            let args = oa.split('=');
+            let numArgs = args.length;
             if (numArgs % 2 != 0) return {title: "The number of arguments for this must be a multiple of 2."};
 
             let options = {
@@ -1085,7 +1086,8 @@ __List of memes:__
                 options.items.push(0);
                 options.items.push(1);
                 options.put.push([2*i, 25+xOffset, 50, 150, 150]);
-                options.put.push(['speechbubble2.png', 0+xOffset, 0, 200, 200]);
+                if (args[i*2+1] != '')
+                    options.put.push(['speechbubble2.png', 0+xOffset, 0, 200, 200]);
                 options.texts.push([2*i+1, 17+xOffset, 13, 164, 31, 'black']);
             }
             return await meme(msg, oa, options);
