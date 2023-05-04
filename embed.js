@@ -126,9 +126,6 @@ async function embed(item, msg, embeds=[], encode=true) {
             e.thumbnail.url = encodeURI(e.thumbnail.url);
         if (e.image && e.image.url)
             e.image.url = encodeURI(e.image.url);
-        if (e.hasOwnProperty('url'))
-            for (let i = 0; i < embeds.length; i++)
-                e.url = ' ' + e.url;
     }
 
     return e.title == '' ? null : new EmbedBuilder(e);

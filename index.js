@@ -220,11 +220,10 @@ async function getEmbeds(msg) {
                 }
             }
             for (let i of embeds) {
-                while (embeds.find(e => e != i && e.data.title == i.data.title) != undefined) {
+                while (embeds.find(e => e != i && e.data.title == i.data.title) != undefined)
                     i.data.title += ' ';
-                    if (i.data.hasOwnProperty('url'))
-                        i.data.url += '?';
-                }
+                while (i.data.hasOwnProperty('url') && embeds.find(e => e != i && e.data.hasOwnProperty('url') && e.data.url == i.data.url) != undefined)
+                    i.data.url += '?';
             }
             return embeds; //
         } else return 0;
