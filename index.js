@@ -175,9 +175,10 @@ async function getEmbeds(msg, edit=true) {
             let embeds = [];
             let server = await db.ServerSettings.findOne({where: {guild: msg.inGuild() ? msg.guildId : msg.channelId}});
             let filter = server == null ? item => 'Slay the Spire' == item.item.mod : item => ['Slay the Spire', ...JSON.parse(server.mod)].includes(item.item.mod);
+            let typing;
             for (let i = 0; i < queries.length; i++) {
                 if (!edit)
-                    msg.channel.sendTyping();
+                    typing = msg.channel.sendTyping();
                 let originalQuery = queries[i];
                 let query = new String(fn.unPunctuate(originalQuery));
                 query.filter = filters[i] ? filter : false;
@@ -227,6 +228,7 @@ async function getEmbeds(msg, edit=true) {
                 while (i.data.hasOwnProperty('url') && embeds.find(e => e != i && e.data.hasOwnProperty('url') && e.data.url == i.data.url) != undefined)
                     i.data.url += '?';
             }
+            await typing;
             return embeds; //
         } else return 0;
     } else return null; //msg.reply("I can only take up to 10 queries at a time!").catch(e => {});
