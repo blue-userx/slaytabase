@@ -164,7 +164,7 @@ bot.once('ready', async () => {
     ]);
 });
 
-async function getEmbeds(msg) {
+async function getEmbeds(msg, edit=true) {
     if (msg.content.includes('`')) return 0;
     let queries = [...msg.content.matchAll(/(\<(.*?)\>)|(\[\[(.*?)\]\])/g)]
     let filters = queries.map(e => e[0].startsWith('<'))
@@ -176,6 +176,8 @@ async function getEmbeds(msg) {
             let server = await db.ServerSettings.findOne({where: {guild: msg.inGuild() ? msg.guildId : msg.channelId}});
             let filter = server == null ? item => 'Slay the Spire' == item.item.mod : item => ['Slay the Spire', ...JSON.parse(server.mod)].includes(item.item.mod);
             for (let i = 0; i < queries.length; i++) {
+                if (!edit)
+                    msg.channel.sendTyping();
                 let originalQuery = queries[i];
                 let query = new String(fn.unPunctuate(originalQuery));
                 query.filter = filters[i] ? filter : false;
@@ -249,7 +251,7 @@ function getFilesFromEmbeds(embeds, spoiler=false) {
 const delfiles = files => files.forEach(file => fs.unlinkSync(file));
 
 bot.on('messageCreate', async msg => {
-    let embeds = await getEmbeds(msg);
+    let embeds = await getEmbeds(msg, false);
     if (embeds === null)
         msg.reply('I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.').catch(e => {});
     else if (embeds === 0) return;
