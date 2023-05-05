@@ -75,6 +75,11 @@ async function embed(item, msg, embeds=[], encode=true) {
             e.description = `Keyword / ${item.mod}\n\n${item.description}`;
             break;
         
+        case 'mod':
+            e.description = `Mod / By ${item.authors.join(', ')} / ${item.version} / [Export](${cfg.exportURL}/${encodeURIComponent(item.name.toLowerCase())}) / [Search](${cfg.exportURL}/search?mod%3D${fn.unPunctuate(item.name.replaceAll(' ',''))})${item.credits.length > 0 ? `\nCredits: ${item.credits}` : ''}\n\n${item.originalDescription}`;
+            e.url = `https://steamcommunity.com/workshop/browse/?appid=646570&searchtext=${item.name.replaceAll(' ', '+')}`;
+            break;
+        
         case 'pack':
             e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/packs/${item.id.slice(item.id.indexOf(':')+1)}.png`.toLowerCase()};
             e.color = 12083229;

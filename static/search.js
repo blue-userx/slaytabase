@@ -107,6 +107,10 @@ function addItems(items) {
             case 'keyword':
                 block.content = `Keyword / ${item.mod}\n\n${item.description}`;
                 break;
+        
+            case 'mod':
+                block.content = `Mod by ${item.authors.join(', ')}\nVersion on bot: ${item.version}${item.credits.length > 0 ? `\nCredits: ${item.credits}` : ''}\n\n${item.originalDescription}`;
+                break;
             
             case 'pack':
                 block.thumbnail = `/${item.mod}/packs/${item.id.slice(item.id.indexOf(':')+1)}.png`.toLowerCase();
