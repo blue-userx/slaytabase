@@ -11,6 +11,8 @@ const itemsPerVote = 3;
 
 const itemTitle = item => `${item.name} (${item.itemType == 'boss' || item.character[0] == 'All' ? '' : item.character[0].replace('The ', '')+' '}${item.itemType})`;
 
+var off = {off: false};
+
 function checkForDiscussions() {
     startThread();
     setInterval(startThread, 60000);
@@ -165,6 +167,11 @@ async function startThread() {
             await user.send({embeds: [EmbedBuilder.from({title: reminder.contents, description: reminder.message})]});
         reminder.destroy();
     }
+
+    if (off.off) {
+        bot.destroy();
+        process.exit();
+    }
 }
 
-export {checkForDiscussions, firstDiscussion};
+export {checkForDiscussions, firstDiscussion, off};

@@ -22,6 +22,7 @@ const owoify = owofify.default;
 import petPetGif from 'pet-pet-gif';
 import canvasGif from 'canvas-gif';
 import { JSDOM } from 'jsdom';
+import { off } from './dailyDiscussion.js';
 
 registerFont('./memetemplates/Kreon-Regular.ttf', {family: "Kreon"});
 const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
@@ -331,12 +332,9 @@ __Commands:__
 
         'forcestop': async (msg, arg) => {
             if (cfg.overriders.includes(msg.author.id)) {
-                setTimeout(() => {
-                    bot.destroy();
-                    process.exit();
-                }, 1000);
-                return {title: "stopped."};
-            } else return {title: ":/"};
+                off.off = true;
+                return {title: "stopping soon."};
+            } else return {title: "...nice try"};
         },
     },
 
