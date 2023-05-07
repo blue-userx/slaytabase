@@ -266,6 +266,7 @@ __Commands:__
 <remindme [time]> links you to a message in a certain amount of time (e.g. 10m, 5h, 30d)
 <feedback?[message]> sends a message to a channel seen only by the bot author
 <lists> links to the bot's data
+<wiki?[search]> searches certain modding-related github repos for wiki pages
 `,
             thumbnail: {url: bot.user.avatarURL()},
         }),
@@ -1223,6 +1224,26 @@ __List of memes:__
                     description: results.join('\n')
                 };
             } else return {title: `No results on GitHub for "${arg}"`};
+        },
+
+        'wiki?': async (msg, arg) => {
+            let url = `https://github.com/search?type=wikis&q=repo%3Akiooeht%2FModTheSpire+repo%3Adaviscook477%2FBaseMod+repo%3Akiooeht%2FStSLib+repo%3AAlchyr%2FBasicMod+${arg.replaceAll(' ', '+')}`;
+            let response = await fetch(url);
+            let body = await response.text();
+            if (body.includes('hx_hit-wiki')) {
+                let dom = new JSDOM(body);
+                let result = dom.window.document.getElementsByClassName('hx_hit-wiki')[0];
+                return {
+                    author: {
+                        name: `${result.children[0].innerHTML} - Wiki`,
+                        iconURL: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
+                    },
+                    title: result.children[1].children[0].innerHTML.replaceAll('<em>', '**').replaceAll('</em>', '**'),
+                    url: `https://github.com${result.children[1].children[0].href}`,
+                    description: result.children[2].innerHTML.replaceAll('<em>', '**').replaceAll('</em>', '**'),
+                    footer: {text: `Last updated ${result.children[3].children[0].innerHTML}`}
+                };
+            } else return {title: `No GitHub wiki result for "${arg}"`, url};
         },
 
         'remindme ': async (msg, arg, args) => {
