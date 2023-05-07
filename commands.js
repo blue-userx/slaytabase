@@ -1276,6 +1276,8 @@ __List of memes:__
         },
 
         'feedback?': async (msg, _, __, oa) => {
+            if (!fs.existsSync('feedbacknum.txt'))
+                fs.writeFileSync('feedbacknum.txt', '0');
             let num = JSON.parse(fs.readFileSync('feedbacknum.txt'));
             let channel = await bot.channels.fetch(cfg.feedbackChannel);
             if (channel) {
