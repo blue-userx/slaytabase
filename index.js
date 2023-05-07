@@ -172,10 +172,11 @@ async function getEmbeds(msg, edit=true) {
         .filter(q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init'));
     if (queries.length <= queryLimit) {
         if (queries.length > 0) {
+            let typing;
+            if (!edit) typing = msg.channel.sendTyping();
             let embeds = [];
             let server = await db.ServerSettings.findOne({where: {guild: msg.inGuild() ? msg.guildId : msg.channelId}});
             let filter = server == null ? item => 'Slay the Spire' == item.item.mod : item => ['Slay the Spire', ...JSON.parse(server.mod)].includes(item.item.mod);
-            let typing;
             for (let i = 0; i < queries.length; i++) {
                 if (!edit)
                     typing = msg.channel.sendTyping();
