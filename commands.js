@@ -752,6 +752,7 @@ __List of memes:__
 <trade offer [item]=[other item]>
 <[name] is typing>
 <image of [item] is typing>
+<another one [item]>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -1057,6 +1058,33 @@ __List of memes:__
                     }
                     ctx.putImageData(image, 0, 0);
                 },
+            );
+            let filename = `export${String(Math.random()).slice(2)}.gif`;
+            fs.writeFileSync(filename, buffer);
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename]
+            };
+        },
+
+        'another one ': async (msg, arg) => {
+            let items = await getMemeItems(arg, {items: [0]}, msg);
+            if (!Array.isArray(items))
+                return items;
+            let buffer = await canvasGif(
+                './memetemplates/anotherone.gif',
+                (ctx, w, h, totalFrames, currentFrame) => {
+                    if ([[0, 11], [21, 28], [38, 45], [59, 67], [83, 92], [102, 111], [127, 133]].some(e => e[0] <= currentFrame-1 && e[1] >= currentFrame-1)) {
+                        ctx.fillStyle = 'white';
+                        ctx.fillRect(131, 57, 45, 40);
+                        ctx.drawImage(items[0].image, 131, 57, 45, 40);
+                    }
+                },
+                {
+                    coalesce: true,
+                    fps: 12
+                }
             );
             let filename = `export${String(Math.random()).slice(2)}.gif`;
             fs.writeFileSync(filename, buffer);
