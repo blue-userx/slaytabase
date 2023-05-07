@@ -6,6 +6,7 @@
 /gamedata/
 /docsold/
 /data.db
+/databackup.db
 /companion
 target/
 /feedbacknum.txt

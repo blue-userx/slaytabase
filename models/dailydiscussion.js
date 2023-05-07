@@ -18,7 +18,8 @@ export default async (sequelize, DataTypes) => {
     channel: DataTypes.STRING,
     item: DataTypes.STRING,
     voteMessage: DataTypes.STRING,
-    voteOptions: DataTypes.STRING
+    voteOptions: DataTypes.STRING,
+    next: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'DailyDiscussion',

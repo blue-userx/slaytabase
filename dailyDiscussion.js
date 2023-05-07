@@ -59,20 +59,21 @@ async function getItems(serverSettings, exclude=[]) {
 
     return {
         items,
-        embeds: await Promise.all(items.map(i => embed({...fn.find(i).item, score: 1, query: fn.unPunctuate(i)}))),
-        components: items.length == 0 ? [] : [new ActionRowBuilder().addComponents(items.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(itemTitle(fn.find(v).item)).setStyle(ButtonStyle.Secondary)))],
+        embeds: await Promise.all(items.map(i => embed({...search._docs.find(e => e.searchId == i), score: 1, query: fn.unPunctuate(i)}))),
+        components: items.length == 0 ? [] : [new ActionRowBuilder().addComponents(items.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(itemTitle(search._docs.find(e => e.searchId == v))).setStyle(ButtonStyle.Secondary)))],
         discussionNum: previousItems.length+1,
         total: previousItems.length+possibleItems.length+items.length+exclude.length,
     };
 }
 
 async function firstDiscussion(serverSettings) {
+    let next = Date.now() + timeBetweenDiscussions;
     let channel = await bot.channels.fetch(serverSettings.discussionChannel);
     let thread = await channel.threads.create({name: `Daily Discussion Meta Thread`}).catch(e => {});
     let { items, embeds, components, total } = await getItems(serverSettings);
     if (thread == null) return;
     let voteMessage = await thread.send({
-        content: items.length > 0 ? `Vote for the first Daily Discussion here! (${total} items to discuss in total)` : 'Error: couldn\'t find any valid items to discuss!',
+        content: items.length > 0 ? `Vote for the first Daily Discussion here! (Starting <t:${~~(next/1000)}:R> - ${total} items to discuss in total)` : 'Error: couldn\'t find any valid items to discuss!',
         embeds,
         components,
     });
@@ -82,15 +83,17 @@ async function firstDiscussion(serverSettings) {
         guild: serverSettings.guild,
         channel: thread.id,
         item: null,
+        next,
         voteMessage: voteMessage.id,
         voteOptions: JSON.stringify(items)
     });
 };
 
 async function startThread() {
-    for (let serverSettings of await db.ServerSettings.findAll()) {
+    await Promise.all((await db.ServerSettings.findAll()).map(async serverSettings => {
+        if (serverSettings.discussionChannel == null) return;
         let lastDiscussion = await db.DailyDiscussion.findOne({where: {guild: serverSettings.guild}, order: [['createdAt', 'DESC']]});
-        if (lastDiscussion != null && lastDiscussion.createdAt.getTime() + timeBetweenDiscussions < Date.now()) {
+        if (lastDiscussion != null && lastDiscussion.next < Date.now()) {
             let oldThread = await bot.channels.fetch(lastDiscussion.channel);
             let options = JSON.parse(lastDiscussion.voteOptions);
 
@@ -108,21 +111,24 @@ async function startThread() {
                 itemId = options[winner];
             } else {
                 let availableItems = (await getItems(serverSettings)).items;
-                if (availableItems.length == 0) continue;
+                if (availableItems.length == 0) {
+                    lastDiscussion.update({next: lastDiscussion.next + timeBetweenDiscussions});
+                    return;
+                };
                 itemId = availableItems[0];
             }
 
             let item = fn.find(itemId);
             let channel = await bot.channels.fetch(serverSettings.discussionChannel);
-            if (channel == null) continue;
+            if (channel == null) return;
     
             let { items, embeds, components, discussionNum, total } = await getItems(serverSettings, [itemId]);
     
             let thread = await oldThread.parent.threads.create({name: `${itemTitle(item.item)} - Daily Discussion ${(new Date()).getDate()} ${(new Date()).toLocaleString('default', {month: 'long'}).slice(0, 3)}`}).catch(e => {});
-            if (thread == null) continue;
+            if (thread == null) return;
             await thread.send(`Previous Daily Discussion: <#${oldThread.id}>`);
             let voteMessage = await thread.send({
-                content: items.length > 0 ? `Vote for tomorrow's Daily Discussion here!` : 'No items left to vote on!',
+                content: items.length > 0 ? `Vote for tomorrow's Daily Discussion (<t:${~~((lastDiscussion.next + timeBetweenDiscussions)/1000)}:R>) here!` : 'No items left to vote on!',
                 embeds,
                 components,
             });
@@ -137,36 +143,38 @@ async function startThread() {
                 ]
             }).catch(e => {});
             itemMessage.pin().catch(e => {});
-    
-            if (lastDiscussion.voteMessage != null)
-                await (await oldThread.messages.fetch(lastDiscussion.voteMessage)).edit({
-                    content: `Next Daily Discussion: <#${thread.id}>\n\n__Votes__:\n${options.map((e,i) => `${itemTitle(fn.find(e).item)}: ${votes.hasOwnProperty(i) ? votes[i] : 0}`).join('\n')}`,
-                    embeds: [],
-                    components: []
-                }).catch(e => {});
-            await oldThread.setArchived(true).catch(e => {});
             
             await db.DailyDiscussion.create({
                 guild: serverSettings.guild,
                 channel: thread.id,
                 item: itemId,
+                next: lastDiscussion.next + timeBetweenDiscussions,
                 voteMessage: voteMessage.id,
                 voteOptions: JSON.stringify(items),
             });
+    
+            if (lastDiscussion.voteMessage != null)
+                await (await oldThread.messages.fetch(lastDiscussion.voteMessage).catch(e => {}))?.edit({
+                    content: `Next Daily Discussion: <#${thread.id}>\n\n__Votes__:\n${options.map((e,i) => `${itemTitle(fn.find(e).item)}: ${votes.hasOwnProperty(i) ? votes[i] : 0}`).join('\n')}`,
+                    embeds: [],
+                    components: []
+                }).catch(e => {});
+            await oldThread.setArchived(true).catch(e => {});
 
             let silentAddMessage = await thread.send('Adding subscribed users...');
             for (let subscriber of await db.Subscription.findAll({where: {guild: serverSettings.guild}}))
                 await silentAddMessage.edit(`Adding subscribed users...\n<@${subscriber.user}>`);
             await silentAddMessage.delete();
+            return;
         }
-    }
+    }));
 
-    for (let reminder of await db.Reminder.findAll({where: {at: {[Op.lt]: Date.now()}}})) {
+    await Promise.all((await db.Reminder.findAll({where: {at: {[Op.lt]: Date.now()}}})).map(async reminder => {
         let user = await bot.users.fetch(reminder.user);
         if (user)
             await user.send({embeds: [EmbedBuilder.from({title: reminder.contents, description: reminder.message})]});
         reminder.destroy();
-    }
+    }));
 
     if (off.off) {
         bot.destroy();

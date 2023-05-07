@@ -15,7 +15,7 @@ export default {
     'The_champ_gray': ['The Champ', 2242624, '<:e_champ:961809971920633936>'],
     'Guardian': ['The Guardian', 10721357, '<:e_guardian:961809971950014504>'],
     'Hermit_yellow': ['The Hermit', 10049803, '<:e_hermit:962318671164870706>'],
-    'Unchained_orange_color': ['The Unchained', 5722128, '<:UnchainedEnergy:1064527209471156274>'],
+    'Unchained_orange_color': ['The Unchained', 8013057, '<:UnchainedEnergy:1064527209471156274>'],
     'Packmaster_rainbow': ['The Packmaster', 11375735, '<:e_colorless:961808772609769512>'],
     'Astrologer': ['The Astrologer', 723723, '<:e_colorless:961808772609769512>'],
     'Avocado_green': ['The Avocado', 6517821, '<:e_colorless:961808772609769512>'],
