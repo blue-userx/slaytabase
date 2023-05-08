@@ -1019,49 +1019,39 @@ __List of memes:__
                 f: Math.random()
             }));
             let started = [];
-            let buffer = await canvasGif(
-                './memetemplates/empty60frames.gif',
-                (ctx, w, h, totalFrames, currentFrame) => {
-                    let progress = currentFrame/totalFrames;
-                    if (progress > 0.25) {
-                        fn.shuffle(pixels);
-                        for (let i = 0; i < w * h / totalFrames * 4; i++) {
-                            if (pixels.length == 0) break;
-                            started.push(pixels.pop());
-                        }
+            return await gifMeme(msg, arg, './memetemplates/empty60frames.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
+                let progress = currentFrame/totalFrames;
+                if (progress > 0.25) {
+                    fn.shuffle(pixels);
+                    for (let i = 0; i < w * h / totalFrames * 4; i++) {
+                        if (pixels.length == 0) break;
+                        started.push(pixels.pop());
                     }
-                    let image = croppedCtx.getImageData(0, 0, 250, 250);
-                    let data = image.data;
-                    for (let p of started) {
-                        let index = (w * p.oY + p.oX) * 4;
-                        data[index] = 0;
-                        data[index+1] = 0;
-                        data[index+2] = 0;
-                    }
-                    let progressAdd = 4/totalFrames;
-                    for (let p of started) {
-                        p.p += progressAdd;
-                        if (p.p >= 1 || p.a == 0 || p.r + p.b + p.g == 0) continue;
-                        p.x += 3 * p.d;
-                        p.y -= 8 * p.f * p.p;
-                        if (p.x < 0 || p.x >= 250 || p.y < 0 || p.y >= 250) continue;
-                        let index = (w * ~~p.y + ~~p.x) * 4;
-                        let a = (p.a * (1 - p.p)) / 255;
-                        let bA = 1 - a;
-                        data[index] = ~~(p.r * a + data[index] * bA);
-                        data[index+1] = ~~(p.g * a + data[index+1] * bA);
-                        data[index+2] = ~~(p.b * a + data[index+2] * bA);
-                    }
-                    ctx.putImageData(image, 0, 0);
-                },
-            );
-            let filename = `export${String(Math.random()).slice(2)}.gif`;
-            fs.writeFileSync(filename, buffer);
-            return {
-                title: ' ',
-                image: {url: 'attachment://'+filename},
-                files: [filename]
-            };
+                }
+                let image = croppedCtx.getImageData(0, 0, 250, 250);
+                let data = image.data;
+                for (let p of started) {
+                    let index = (w * p.oY + p.oX) * 4;
+                    data[index] = 0;
+                    data[index+1] = 0;
+                    data[index+2] = 0;
+                }
+                let progressAdd = 4/totalFrames;
+                for (let p of started) {
+                    p.p += progressAdd;
+                    if (p.p >= 1 || p.a == 0 || p.r + p.b + p.g == 0) continue;
+                    p.x += 3 * p.d;
+                    p.y -= 8 * p.f * p.p;
+                    if (p.x < 0 || p.x >= 250 || p.y < 0 || p.y >= 250) continue;
+                    let index = (w * ~~p.y + ~~p.x) * 4;
+                    let a = (p.a * (1 - p.p)) / 255;
+                    let bA = 1 - a;
+                    data[index] = ~~(p.r * a + data[index] * bA);
+                    data[index+1] = ~~(p.g * a + data[index+1] * bA);
+                    data[index+2] = ~~(p.b * a + data[index+2] * bA);
+                }
+                ctx.putImageData(image, 0, 0);
+            });
         },
 
         'another one ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
