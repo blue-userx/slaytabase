@@ -21,6 +21,7 @@ import owofify from 'owoifyx';
 const owoify = owofify.default;
 import petPetGif from 'pet-pet-gif';
 import canvasGif from 'canvas-gif';
+import googleIt from 'google-it';
 import { JSDOM } from 'jsdom';
 import { off } from './dailyDiscussion.js';
 
@@ -1204,6 +1205,28 @@ __List of memes:__
 
         'workshop?': async (msg, arg) => {
             return await commands.prefix['ws?'](msg, arg);
+        },
+
+        'google?': async (msg, _, __, oa) => {
+            try {
+                let results = await googleIt({query: oa.toString(), disableConsole: true, limit: 1});
+                if (results.length > 0) {
+                    let result = results[0];
+                    let site = result.link.slice(result.link.indexOf('://')+3)
+                    site = site.slice(0, site.indexOf('/'));
+                    return {
+                        author: {
+                            name: site,
+                        },
+                        title: result.title,
+                        url: result.link,
+                        description: result.snippet
+                    };
+                } else return {title: "No results."}
+            } catch (e) {
+                console.error(e);
+                return {title: 'error'};
+            }
         },
 
         'github?': async (msg, arg) => {
