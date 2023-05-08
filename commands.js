@@ -138,12 +138,32 @@ async function meme(msg, arg, options) {
                 title: ' ',
                 image: {url: 'attachment://'+filename},
                 files: [filename],
-                color: typeof items[0] == 'string' || items[0] instanceof User || items[0].hasOwnProperty('ephemeral') ? null : items[0].embed.color,
+                color: typeof items[0] == 'string' || items[0] instanceof User || items[0].hasOwnProperty('ephemeral') ? null : items[0].embed.data.color,
             };
         }
     } catch(e) {
         console.error(e);
         return {title: 'failed to generate image'};
+    }
+}
+
+async function gifMeme(msg, arg, bg, fn, options={}) {
+    try {
+        let items = await getMemeItems(arg, {items: [0]}, msg);
+        if (!Array.isArray(items))
+            return items;
+        let buffer = await canvasGif(bg, fn, options);
+        let filename = `export${String(Math.random()).slice(2)}.gif`;
+        fs.writeFileSync(filename, buffer);
+        return {
+            title: ' ',
+            image: {url: 'attachment://'+filename},
+            files: [filename],
+            color: typeof items[0] == 'string' || items[0] instanceof User || items[0].hasOwnProperty('ephemeral') ? null : items[0].embed.data.color,
+        };
+    } catch (e) {
+        console.error(e);
+        return {title: 'failed to generate gif'};
     }
 }
 
@@ -925,79 +945,34 @@ __List of memes:__
             };
         },
 
-        'spinning ': async (msg, arg) => {
-            let items = await getMemeItems(arg, {items: [0]}, msg);
-            if (!Array.isArray(items))
-                return items;
-            let buffer = await canvasGif(
-                './memetemplates/empty60frames.gif',
-                (ctx, w, h, totalFrames, currentFrame) => {
-                    let progress = currentFrame/totalFrames*4;
-                    let phase = Math.floor(progress);
-                    progress %= 1;
-                    progress = progress < 0.5 ? 2 * progress * progress : 1 - (-2 * progress + 2) ** 2 / 2
-                    if (phase > 1) {
-                        ctx.translate(w, 0);
-                        ctx.scale(-1, 1);
-                    }
-                    if (phase%2==0)
-                        ctx.drawImage(items[0].image, w/2*(1-progress), 0, w*progress, h);
-                    else
-                        ctx.drawImage(items[0].image, w/2*(progress), 0, w*(1-progress), h);
-                },
-            );
-            let filename = `export${String(Math.random()).slice(2)}.gif`;
-            fs.writeFileSync(filename, buffer);
-            return {
-                title: ' ',
-                image: {url: 'attachment://'+filename},
-                files: [filename]
-            };
-        },
+        'spinning ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame) => {
+            let progress = currentFrame/totalFrames*4;
+            let phase = Math.floor(progress);
+            progress %= 1;
+            progress = progress < 0.5 ? 2 * progress * progress : 1 - (-2 * progress + 2) ** 2 / 2
+            if (phase > 1) {
+                ctx.translate(w, 0);
+                ctx.scale(-1, 1);
+            }
+            if (phase%2==0)
+                ctx.drawImage(items[0].image, w/2*(1-progress), 0, w*progress, h);
+            else
+                ctx.drawImage(items[0].image, w/2*(progress), 0, w*(1-progress), h);
+        }),
 
-        'rotating ': async (msg, arg) => {
-            let items = await getMemeItems(arg, {items: [0]}, msg);
-            if (!Array.isArray(items))
-                return items;
-            let buffer = await canvasGif(
-                './memetemplates/empty60frames.gif',
-                (ctx, w, h, totalFrames, currentFrame) => {
-                    let progress = currentFrame/totalFrames;
-                    ctx.translate(w/2, h/2);
-                    ctx.rotate(progress * Math.PI * 2);
-                    ctx.drawImage(items[0].image, -w/2, -h/2, w, h);
-                },
-            );
-            let filename = `export${String(Math.random()).slice(2)}.gif`;
-            fs.writeFileSync(filename, buffer);
-            return {
-                title: ' ',
-                image: {url: 'attachment://'+filename},
-                files: [filename]
-            };
-        },
+        'rotating ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame) => {
+            let progress = currentFrame/totalFrames;
+            ctx.translate(w/2, h/2);
+            ctx.rotate(progress * Math.PI * 2);
+            ctx.drawImage(items[0].image, -w/2, -h/2, w, h);
+        }),
 
-        'squashing ': async (msg, arg) => {
-            let items = await getMemeItems(arg, {items: [0]}, msg);
-            if (!Array.isArray(items))
-                return items;
-            let buffer = await canvasGif(
-                './memetemplates/empty60frames.gif',
-                (ctx, w, h, totalFrames, currentFrame) => {
-                    let progress = currentFrame/totalFrames;
-                    let imgW = w*(0.75+Math.sin(progress*Math.PI*2)*0.25);
-                    let imgH = h*(0.75+Math.cos(progress*Math.PI*2)*0.25);
-                    ctx.drawImage(items[0].image, (w-imgW)/2, h-imgH, imgW, imgH);
-                },
-            );
-            let filename = `export${String(Math.random()).slice(2)}.gif`;
-            fs.writeFileSync(filename, buffer);
-            return {
-                title: ' ',
-                image: {url: 'attachment://'+filename},
-                files: [filename]
-            };
-        },
+        'squashing ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame) => {
+            let progress = currentFrame/totalFrames;
+            let imgW = w*(0.75+Math.sin(progress*Math.PI*2)*0.25);
+            let imgH = h*(0.75+Math.cos(progress*Math.PI*2)*0.25);
+            ctx.drawImage(items[0].image, (w-imgW)/2, h-imgH, imgW, imgH);
+        }),
 
         'dissolving ': async (msg, arg) => {
             let items = await getMemeItems(arg, {items: [0]}, msg);
@@ -1068,32 +1043,16 @@ __List of memes:__
             };
         },
 
-        'another one ': async (msg, arg) => {
-            let items = await getMemeItems(arg, {items: [0]}, msg);
-            if (!Array.isArray(items))
-                return items;
-            let buffer = await canvasGif(
-                './memetemplates/anotherone.gif',
-                (ctx, w, h, totalFrames, currentFrame) => {
-                    if ([[0, 11], [21, 28], [38, 45], [59, 67], [83, 92], [102, 111], [127, 133]].some(e => e[0] <= currentFrame-1 && e[1] >= currentFrame-1)) {
-                        ctx.fillStyle = 'white';
-                        ctx.fillRect(131, 57, 45, 40);
-                        ctx.drawImage(items[0].image, 131, 57, 45, 40);
-                    }
-                },
-                {
-                    coalesce: true,
-                    fps: 12
-                }
-            );
-            let filename = `export${String(Math.random()).slice(2)}.gif`;
-            fs.writeFileSync(filename, buffer);
-            return {
-                title: ' ',
-                image: {url: 'attachment://'+filename},
-                files: [filename]
-            };
-        },
+        'another one ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame) => {
+            if ([[0, 11], [21, 28], [38, 45], [59, 67], [83, 92], [102, 111], [127, 133]].some(e => e[0] <= currentFrame-1 && e[1] >= currentFrame-1)) {
+                ctx.fillStyle = 'white';
+                ctx.fillRect(131, 57, 45, 40);
+                ctx.drawImage(items[0].image, 131, 57, 45, 40);
+            }
+        }, {
+            coalesce: true,
+            fps: 12
+        }),
 
         'sb ': async (msg, _, __, oa) => {
             let args = oa.split('=');
