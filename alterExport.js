@@ -297,6 +297,10 @@ async function exportMod(modPath){
         }
     }
 
+    for (let i in data)
+        if (Array.isArray(data[i]) && data[i].length == 0)
+            delete data[i];
+
     //save new data
     console.log(`\nExporting data for ${modPath}...`);
     let page = fs.readFileSync(`${gameDataPath}index.html`, 'utf-8');
