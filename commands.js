@@ -152,7 +152,7 @@ async function gifMeme(msg, arg, bg, fn, options={}) {
         let items = await getMemeItems(arg, {items: [0]}, msg);
         if (!Array.isArray(items))
             return items;
-        let buffer = await canvasGif(bg, fn, options);
+        let buffer = await canvasGif(bg, (ctx, w, h, totalFrames, currentFrame) => fn(ctx, w, h, totalFrames, currentFrame, items), options);
         let filename = `export${String(Math.random()).slice(2)}.gif`;
         fs.writeFileSync(filename, buffer);
         return {
@@ -966,7 +966,7 @@ __List of memes:__
             };
         },
 
-        'spinning ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame) => {
+        'spinning ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
             let progress = currentFrame/totalFrames*4;
             let phase = Math.floor(progress);
             progress %= 1;
@@ -981,14 +981,14 @@ __List of memes:__
                 ctx.drawImage(items[0].image, w/2*(progress), 0, w*(1-progress), h);
         }),
 
-        'rotating ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame) => {
+        'rotating ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
             let progress = currentFrame/totalFrames;
             ctx.translate(w/2, h/2);
             ctx.rotate(progress * Math.PI * 2);
             ctx.drawImage(items[0].image, -w/2, -h/2, w, h);
         }),
 
-        'squashing ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame) => {
+        'squashing ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
             let progress = currentFrame/totalFrames;
             let imgW = w*(0.75+Math.sin(progress*Math.PI*2)*0.25);
             let imgH = h*(0.75+Math.cos(progress*Math.PI*2)*0.25);
@@ -1064,7 +1064,7 @@ __List of memes:__
             };
         },
 
-        'another one ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame) => {
+        'another one ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/anotherone.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
             if ([[0, 11], [21, 28], [38, 45], [59, 67], [83, 92], [102, 111], [127, 133]].some(e => e[0] <= currentFrame-1 && e[1] >= currentFrame-1)) {
                 ctx.fillStyle = 'white';
                 ctx.fillRect(131, 57, 45, 40);
