@@ -445,10 +445,31 @@ __Commands:__
         'i~': async (msg, arg) => {
             let item = fn.find(arg);
             let itemEmbed = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, false);
+            let image = itemEmbed.data.thumbnail;
+
+            if (arg.endsWith('?left') || arg.endsWith('?right')) {
+                try {
+                    if (image && image.hasOwnProperty('url')) {
+                        let img = await loadImage(image.url);
+                        let canvas = createCanvas(img.width/2,img.height);
+                        canvas.getContext('2d').drawImage(img, arg.endsWith("?left") ? 0 : -img.width/2, 0);
+                        let filename = `export${String(Math.random()).slice(2)}.gif`;
+                        fs.writeFileSync(filename, canvas.toBuffer());
+                        return {
+                            title: ' ',
+                            image: {url: 'attachment://'+filename},
+                            files: [filename],
+                            color: itemEmbed.data.color,
+                        };
+                    }
+                } catch (e) {
+                    return {title: 'error cropping'};
+                }
+            }
 
             return {
-                title: itemEmbed.data.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
-                image: itemEmbed.data.thumbnail,
+                title: image == null ? `No image for ${item.item.itemType} "${item.item.name}"` : ' ',
+                image: image,
                 color: itemEmbed.data.color,
             };
         },
