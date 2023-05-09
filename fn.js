@@ -29,6 +29,7 @@ function findAll(query) {
         results = search.search(actualSearch);
     if (query.filter) results = results.filter(query.filter);
     let page = 0;
+    let mods = [];
     for (let i of args) {
         if (i.includes("=")) {
             let prop = i.slice(0, i.indexOf("="));
@@ -43,11 +44,7 @@ function findAll(query) {
                     break;
 
                 case "mod":
-                    results = results.filter(r => {
-                        if (!r.item.hasOwnProperty('mod')) return false;
-                        let mod = unPunctuate(r.item.mod.replaceAll(' ', ''));
-                        return mod.includes(val) || val.includes(mod);
-                    });
+                    mods.push(val);
                     break;
 
                 case "rarity":
@@ -74,6 +71,13 @@ function findAll(query) {
                     break;
             }
         }
+    }
+    if (mods.length > 0) {
+        results = results.filter(r => {
+            if (!r.item.hasOwnProperty('mod')) return false;
+            let mod = unPunctuate(r.item.mod.replaceAll(' ', ''));
+            return mods.some(m => mod.includes(m) || m.includes(mod));
+        });
     }
     let total = results.length;
     results = results.slice(10*page);
