@@ -22,6 +22,7 @@ const owoify = owofify.default;
 import petPetGif from 'pet-pet-gif';
 import canvasGif from 'canvas-gif';
 import googleIt from 'google-it';
+import Perspective from './perspectivejs.js';
 import { JSDOM } from 'jsdom';
 import { off } from './dailyDiscussion.js';
 
@@ -111,8 +112,10 @@ async function meme(msg, arg, options) {
     
             ctx.drawImage(await loadImage('./memetemplates/'+options.bg), 0, 0);
             if (options.hasOwnProperty('put'))
-                for (let p of options.put)
-                    ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
+                for (let p of options.put) {
+                    if (Array.isArray(p[1])) (new Perspective(ctx, items[p[0]].image)).draw(p[1]);
+                    else ctx.drawImage(typeof p[0] == 'number' ? items[p[0]].image : await loadImage('./memetemplates/'+p[0]), p[1], p[2], p[3], p[4]);
+                }
             if (options.hasOwnProperty('texts'))
                 for (let t of options.texts) {
                     ctx.fillStyle = t[5];
@@ -934,8 +937,8 @@ __List of memes:__
             bg: 'samepicture.png',
             items: [0, 0],
             put: [
-                [0, 71, 24, 132, 154],
-                [1, 310, 55, 166, 157],
+                [0, [[77, 16], [263, 32], [201, 198], [8, 163]]],
+                [1, [[315, 41], [561, 77], [480, 242], [233, 200]]],
             ],
             texts: [],
         }),
