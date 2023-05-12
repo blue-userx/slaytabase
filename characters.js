@@ -54,5 +54,12 @@ export default {
     'Blackbeard_black': ['The Blackbeard', 7563086, '<:colorless_energy:382625433016991745>'],
     'Rainbow_color': ['The Rainbow', 16721652, '<:colorless_energy:382625433016991745>'],
     'Librarian': ['The Librarian', 1315859, '<:colorless_energy:382625433016991745>'],
-    'Dio_gold_color': ['The Dio', 10519113, '<:colorless_energy:382625433016991745>']
+    'Dio_gold_color': ['The Dio', 10519113, '<:colorless_energy:382625433016991745>'],
+    'White_ice_color': ['The Star Breaker', 3357235, '<:colorless_energy:382625433016991745>'],
+    'Cull_red_color': ['The CULL', 4985876, '<:colorless_energy:382625433016991745>'],
+    'Wanderer_gray_color': ['The Wanderer', 2374238, '<:colorless_energy:382625433016991745>'],
+    'Brewer_cyan_color': ['Potionbrewer', 1273476, '<:colorless_energy:382625433016991745>'],
+    'Pirate_purple_color': ['The Abyssal', 3487288, '<:colorless_energy:382625433016991745>'],
+    'Aquatic': ['The Aquatic', 44152, '<:colorless_energy:382625433016991745>'],
+    'Bugknight_gray_color': ['The Bug Knight', 3223857, '<:colorless_energy:382625433016991745>'],
 };

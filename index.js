@@ -166,8 +166,8 @@ bot.once('ready', async () => {
 
 async function getEmbeds(msg, edit=true) {
     if (msg.content.includes('`')) return 0;
-    let queries = [...msg.content.matchAll(/(\<(.*?)\>)|(\[\[(.*?)\]\])/g)]
-    let filters = queries.map(e => e[0].startsWith('<'))
+    let queries = [...msg.content.matchAll(/(\<(.*?)\>)|(\[\[(.*?)\]\])/g)];
+    let filters = queries.map(e => e[0].startsWith('<'));
     queries = queries.map(e => e[0].startsWith('<') ? e[2] : e[4])
         .filter(q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init'));
     if (queries.length <= queryLimit) {
