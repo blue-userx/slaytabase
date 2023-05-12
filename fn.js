@@ -30,6 +30,7 @@ function findAll(query) {
     if (query.filter) results = results.filter(query.filter);
     let page = 0;
     let mods = [];
+    let result = 0;
     for (let i of args) {
         if (i.includes("=")) {
             let prop = i.slice(0, i.indexOf("="));
@@ -61,8 +62,7 @@ function findAll(query) {
                 
                 case "r":
                     let resultNum = Math.max(1, Math.min(parseInt(val), results.length)) - 1;
-                    if (Number.isNaN(resultNum)) resultNum = 0;
-                    results = results.slice(resultNum);
+                    if (!Number.isNaN(resultNum)) result += resultNum;
                     break;
                 
                 case "page":
@@ -81,6 +81,7 @@ function findAll(query) {
     }
     let total = results.length;
     results = results.slice(10*page);
+    results = results.slice(result);
     results.total = total;
     results.page = page;
     return results;

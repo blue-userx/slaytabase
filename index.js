@@ -671,7 +671,8 @@ async function main() {
                     'author',
                     'authors',
                     'cards',
-                    'tags'
+                    'tags',
+                    'rooms',
                 ].map(key => {
                     if (Array.isArray(key)) {
                         let look = newItem;

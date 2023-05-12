@@ -115,6 +115,11 @@ function addItems(items) {
             case 'augment':
                 block.content = `${item.rarity} Augment / ${item.mod}\n\n${item.description}`;
                 break;
+        
+            case 'nodemodifier':
+                block.content = `${item.type} Node Modifier / ${item.mod}\n\n${item.description}\n*Appears on ${item.rooms.length > 1 ? `${item.rooms.slice(0, -1).join(', ')} and ${item.rooms.slice(-1)}` : item.rooms.join(', ')}*.`;
+                block.thumbnail = `/${item.mod}/nodemodifiers/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`.toLowerCase();
+                break;
             
             case 'pack':
                 block.thumbnail = `/${item.mod}/packs/${item.id.slice(item.id.indexOf(':')+1)}.png`.toLowerCase();

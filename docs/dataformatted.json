@@ -77751,6 +77751,15 @@
             "mod": "Somnambulant"
         },
         {
+            "id": "spirelocations:Removal",
+            "name": "Cleansing Water Drop",
+            "tier": "Special",
+            "pool": "",
+            "description": "Upon pickup, remove a card from your deck.",
+            "flavorText": "A drop of water from a mystical fountain, that is said to remove curses from those who drink from it.",
+            "mod": "SpireLocations"
+        },
+        {
             "id": "subterfuge:LethalShivRelic",
             "name": "Lethal Shivs",
             "tier": "Uncommon",
@@ -92691,6 +92700,22 @@
             "optional_dependencies": []
         },
         {
+            "name": "SpireLocations",
+            "version": "1.1.1",
+            "authors": [
+                "Pandemonium"
+            ],
+            "credits": "",
+            "description": "Adds modifiers to nodes, with various effects.",
+            "mts_version": "3.18.2",
+            "sts_version": "12-22-2020",
+            "dependencies": [
+                "basemod",
+                "stslib"
+            ],
+            "optional_dependencies": []
+        },
+        {
             "name": "StSLib",
             "version": "2.10.0",
             "authors": [
@@ -97404,6 +97429,390 @@
             "colouredDesc": "\u001b[2;37m[Fight \u001b[0;2m(forced)\u001b[2;37m] \u001b[2;31mFight Blue Slaver and Red Slaver. Gain no rewards.\n\u001b[2;37m[COWARDICE\u001b[2;37m] Escape.\n\u001b[2;37m[VICTORY\u001b[2;37m] A powerful fight with many rewards.",
             "character": "",
             "campaign": "Slay the Spire"
+        }
+    ],
+    "nodemodifiers": [
+        {
+            "id": "spirelocations:CampfireCardReward",
+            "name": "Forgotten Equipment",
+            "type": "Bonus",
+            "description": "Upon entering, you may add 1 card to your deck.",
+            "rooms": [
+                "campfires"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:ChooseOneEvent",
+            "name": "Crossroads",
+            "type": "Bonus",
+            "description": "Choose between two events.",
+            "rooms": [
+                "question marks"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Dexterity",
+            "name": "Defensible Position",
+            "type": "Bonus",
+            "description": "Start this combat with 2 Dexterity.",
+            "rooms": [
+                "fights"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:FirstTurnDraw",
+            "name": "Element of Surprise",
+            "type": "Bonus",
+            "description": "At the start of combat, draw 2 additional cards.",
+            "rooms": [
+                "elites",
+                "fights"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Gold",
+            "name": "Wealthy",
+            "type": "Bonus",
+            "description": "This room contains additional Gold.",
+            "rooms": [
+                "fights",
+                "elites",
+                "chests"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Heal",
+            "name": "Ideal Rest Site",
+            "type": "Bonus",
+            "description": "Heal 15% of your Max HP upon entering this room.",
+            "rooms": [
+                "shops",
+                "chests",
+                "campfires"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Sales",
+            "name": "Special Promotion: SALES",
+            "type": "Bonus",
+            "description": "In this shop, everything is 30% off!",
+            "rooms": [
+                "shops"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:ShopRelicChest",
+            "name": "Merchant's Stash",
+            "type": "Bonus",
+            "description": "This chest contains a shop relic. Don't tell the merchant.",
+            "rooms": [
+                "chests"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:ShopUpgrade",
+            "name": "Special Promotion: Upgrade",
+            "type": "Bonus",
+            "description": "Buying a card removal from this merchant also Upgrades a random card in your deck.",
+            "rooms": [
+                "shops"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:SpecificEvent",
+            "name": "Useful Map",
+            "type": "Bonus",
+            "description": "Your map says this room contains a random event.",
+            "rooms": [
+                "question marks"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Constrict",
+            "name": "Corrupted Growth",
+            "type": "Challenge",
+            "description": "At the start of combat, gain 0 Constricted, dealing damage to you at the end of your turn.",
+            "rooms": [
+                "fights",
+                "elites"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:CurrentHealthCost",
+            "name": "Blood Seal",
+            "type": "Challenge",
+            "description": "Opening this chest costs 20% of your current health.",
+            "rooms": [
+                "chests"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:CursedChestEvent",
+            "name": "Cursed Treasure",
+            "type": "Challenge",
+            "description": "This room contains a chest that curses you when opened.",
+            "rooms": [
+                "question marks"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Gremlin",
+            "name": "Gremlin Caves",
+            "type": "Challenge",
+            "description": "This room contains 0 additional small gremlins.",
+            "rooms": [
+                "fights",
+                "elites"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:HideIntents",
+            "name": "Dark Fog",
+            "type": "Challenge",
+            "description": "Enemy intents are hidden.",
+            "rooms": [
+                "fights",
+                "elites"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:MaxHPLossChest",
+            "name": "Draining Seal",
+            "type": "Challenge",
+            "description": "Opening this chest reduces your Max HP by 7.",
+            "rooms": [
+                "chests"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:ReduceHandSize",
+            "name": "Tight Corridor",
+            "type": "Challenge",
+            "description": "For this combat, your max hand size is reduced by 3.",
+            "rooms": [
+                "elites",
+                "fights"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Slimed",
+            "name": "Slimy Swamp",
+            "type": "Challenge",
+            "description": "At the start of combat, add 3 Slimed to your draw pile.",
+            "rooms": [
+                "fights"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:StrongEnemies",
+            "name": "Dark Influence",
+            "type": "Challenge",
+            "description": "Enemies start this combat with 0 Strength.",
+            "rooms": [
+                "fights"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:TimeWarp",
+            "name": "Time Distortion",
+            "type": "Challenge",
+            "description": "At the start of combat, a random enemy gains Time Warp.",
+            "rooms": [
+                "fights"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:ChestRandomUpgrade",
+            "name": "Blacksmith's Cache",
+            "type": "Reward",
+            "description": "Upon opening this chest, Upgrade 2 random cards from your deck.",
+            "rooms": [
+                "chests"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:ElitesMultipleCardRewards",
+            "name": "Hoarder",
+            "type": "Reward",
+            "description": "Rewards include 3 additional card rewards.",
+            "rooms": [
+                "elites"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:ElitesRemoval",
+            "name": "Cleanse",
+            "type": "Reward",
+            "description": "Rewards include a card removal.",
+            "rooms": [
+                "elites"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:RareCardReward",
+            "name": "Collector",
+            "type": "Reward",
+            "description": "Rewards include an additional rare card reward.",
+            "rooms": [
+                "elites"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:RareRelicChest",
+            "name": "Precious Antique",
+            "type": "Reward",
+            "description": "This chest contains a Rare relic.",
+            "rooms": [
+                "chests"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:SecondCardReward",
+            "name": "Plentiful",
+            "type": "Reward",
+            "description": "Rewards include an additional card reward.",
+            "rooms": [
+                "fights"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Strawberry",
+            "name": "Old Garden",
+            "type": "Reward",
+            "description": "Rewards include an additional Strawberry, increasing your Max HP by 7.",
+            "rooms": [
+                "elites"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:UpgradedRewards",
+            "name": "High Quality",
+            "type": "Reward",
+            "description": "Cards rewards from this combat are Upgraded.",
+            "rooms": [
+                "fights"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Artefact",
+            "name": "Ancient Ruins",
+            "type": "Special",
+            "description": "At the start of battle, you and all enemies gain 2 Artifact.",
+            "rooms": [
+                "fights",
+                "elites"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:CampfireDig",
+            "name": "Dig Site",
+            "type": "Special",
+            "description": "At this rest site, the option to rest is replaced with the option to dig.",
+            "rooms": [
+                "campfires"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:CampfireToke",
+            "name": "Relaxing Fumes",
+            "type": "Special",
+            "description": "At this rest site, you can remove a card from your deck instead of upgrading a card.",
+            "rooms": [
+                "campfires"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Flying",
+            "name": "Spatial Fracture",
+            "type": "Special",
+            "description": "You can access any room in the next floor from here.",
+            "rooms": [
+                "question marks"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:FromAnywhere",
+            "name": "Spatial Keystone",
+            "type": "Special",
+            "description": "You can access this room from anywhere in the floor below it.",
+            "rooms": [
+                "question marks"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:OtherColor",
+            "name": "Colorful",
+            "type": "Special",
+            "description": "This room's card reward contains curse cards.",
+            "rooms": [
+                "fights"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:RoughTerrain",
+            "name": "Rough Terrain",
+            "type": "Special",
+            "description": "In this room, draw 1 more card each turn, but discard 2 cards at the start of your turn.",
+            "rooms": [
+                "fights",
+                "elites"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:ShopTransform",
+            "name": "Experimental",
+            "type": "Special",
+            "description": "This merchant offers a card transformation service instead of a card removal service.",
+            "rooms": [
+                "shops"
+            ],
+            "mod": "SpireLocations"
+        },
+        {
+            "id": "spirelocations:Snecko",
+            "name": "Snecko Temple",
+            "type": "Special",
+            "description": "Draw 1 additional card each turn. Start the combat Confused.",
+            "rooms": [
+                "fights",
+                "elites"
+            ],
+            "mod": "SpireLocations"
         }
     ]
 }
