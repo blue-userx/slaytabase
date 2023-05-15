@@ -1383,17 +1383,34 @@ __List of memes:__
         
         'i have ': [
             ' in my hand',
-            async (msg, arg) => await meme(msg, arg, {
-                w: 500,
-                h: 340,
-                bg: 'hand.png',
-                items: [0],
-                put: [
-                    [0, [[49, 56], [225, -11], [325, 209], [153, 293]]],
-                    ['handoverlay.png', 0, 0, 500, 340]
-                ],
-                texts: [],
-            }),
+            async (msg, arg) => {
+                if (arg.includes('='))
+                    return await meme(msg, arg, {
+                        w: 500,
+                        h: 340,
+                        bg: 'hand2.png',
+                        items: [0,0],
+                        put: [
+                            [1, [[341, 34], [474, 144], [321, 318], [189, 202]]],
+                            ['handoverlay2.png', 0, 0, 500, 340],
+                            [0, [[49, 56], [225, -11], [325, 209], [153, 293]]],
+                            ['handoverlay.png', 0, 0, 500, 340]
+                        ],
+                        texts: [],
+                    });
+                else
+                    return await meme(msg, arg, {
+                        w: 500,
+                        h: 340,
+                        bg: 'hand.png',
+                        items: [0],
+                        put: [
+                            [0, [[49, 56], [225, -11], [325, 209], [153, 293]]],
+                            ['handoverlay.png', 0, 0, 500, 340]
+                        ],
+                        texts: [],
+                    });
+            }
         ],
 
         'i believe in ': [
