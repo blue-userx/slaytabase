@@ -511,7 +511,7 @@ bot.on('interactionCreate', async interaction => {
                 case 'delete':
                     await interaction.deferReply({ephemeral: true});
                     if (interaction.targetMessage.author.id != bot.user.id) return interaction.editReply('I can only delete messages sent by myself!');
-                    if (!(cfg.overriders.includes(interaction.user.id) || (interaction.targetMessage.reference != null && interaction.targetMessage.author.id == interaction.user.id) || interaction.targetMessage.content.includes(interaction.user.id))) return interaction.editReply('You can only delete my messages when I\'m replying to you!');
+                    if (!(cfg.overriders.includes(interaction.user.id) || (interaction.targetMessage.reference != null && interaction.targetMessage.author.id == interaction.user.id) || interaction.targetMessage.content.includes(interaction.user.id))) return interaction.editReply('You can only delete messages that I\'ve sent in reply to yours.');
                     interaction.targetMessage.delete().catch(()=>{});
                     interaction.deleteReply();
                     break;

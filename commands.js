@@ -798,6 +798,7 @@ __List of memes:__
 <[name] is typing>
 <image of [item] is typing>
 <another one [item]>
+<i have [card]?left in my hand>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -1377,6 +1378,21 @@ __List of memes:__
                 items: [0],
                 put: [[0, 378, 107, 223, 223]],
                 texts: [[0, 213, 418, 211, 92, 'black']],
+            }),
+        ],
+        
+        'i have ': [
+            ' in my hand',
+            async (msg, arg) => await meme(msg, arg, {
+                w: 500,
+                h: 340,
+                bg: 'hand.png',
+                items: [0],
+                put: [
+                    [0, [[49, 56], [225, -11], [325, 209], [153, 293]]],
+                    ['handoverlay.png', 0, 0, 500, 340]
+                ],
+                texts: [],
             }),
         ],
 
