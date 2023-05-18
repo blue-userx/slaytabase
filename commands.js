@@ -417,13 +417,30 @@ __Commands:__
         'searchtext ': async (msg, arg) => {
             let result = fn.find(arg);
             if (result.item.itemType == 'fail') return {title: "no result?"};
-            let highlight = (value, indices=[], i=1, last=Infinity) => {
-                let pair = indices[indices.length - i];
-                return (pair && pair[1] < last) ? `${highlight(value.slice(0, pair[0]), indices, i+1, pair[1])}__${value.slice(pair[0], pair[1]+1)}__${value.slice(pair[1]+1)}` : value;
-            };
+            let chars = [];
+            for (let i of result.matches[0].indices)
+                for (let j = i[0]; j <= i[1]; j++)
+                    chars.push(j);
+            chars = [...new Set(chars)];
+            chars.sort((a,b)=>a-b);
+            let val = result.matches[0].value;
+            let last = -Infinity;
+            let highlighted = '';
+            for (let i = 0; i < val.length; i++) {
+                if (chars.includes(i)) {
+                    if (i - last > 1)
+                        highlighted += '__';
+                    last = i;
+                } else if (i - last == 1) {
+                    highlighted += '__';
+                }
+                highlighted += val[i];
+            }
+            if (last == val.length-1)
+                highlighted += '__';
             return {
                 title: `"${arg}" yields:`,
-                description: highlight(result.matches[0].value, result.matches[0].indices),
+                description: highlighted,
             };
         },
 
