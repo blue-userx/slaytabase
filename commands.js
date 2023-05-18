@@ -417,14 +417,19 @@ __Commands:__
         'searchtext ': async (msg, arg) => {
             let result = fn.find(arg);
             if (result.item.itemType == 'fail') return {title: "no result?"};
+            let highlight = (value, indices=[], i=1, last=Infinity) => {
+                let pair = indices[indices.length - i];
+                return (pair && pair[1] < last) ? `${highlight(value.slice(0, pair[0]), indices, i+1, pair[1])}__${value.slice(pair[0], pair[1]+1)}__${value.slice(pair[1]+1)}` : value;
+            };
             return {
                 title: `"${arg}" yields:`,
-                description: result.item.searchText.toLowerCase(),
+                description: highlight(result.matches[0].value, result.matches[0].indices),
             };
         },
 
         'exportjson': async (msg, arg) => {
             let results = fn.findAll(arg).slice(0, 100);
+            results.forEach(r => delete r.matches);
             let filename = `search${String(Math.random()).slice(2)}.json`;
             fs.writeFileSync(filename, JSON.stringify(results, null, 4));
             return {

@@ -18,6 +18,7 @@ const bot = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.G
 
 const search = new Fuse([], {
     includeScore: true,
+    includeMatches: true,
     useExtendedSearch: true,
     keys: ['searchText'],
     ignoreLocation: true,
