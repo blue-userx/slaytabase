@@ -59,6 +59,7 @@ router.use('/', (req, res, next) => {
 });
 router.get('/', (req, res) => res.render('home'));
 router.get('/exports', (req, res) => res.sendFile('./docs/index.html', {root: '.'}));
+router.get('/redirect/*', (req, res) => res.redirect(decodeURIComponent(req.originalUrl.slice('/redirect/'.length))));
 router.get('/search', async (req, res) => res.render('search', {
     results: req.originalUrl.length > 8 ? fn.findAll(decodeURIComponent(req.originalUrl.slice(8))).slice(0, 10) : [],
     firstEmbed: req.originalUrl.length > 8 ? await embed({...(fn.find(decodeURIComponent(req.originalUrl.slice(8))).item), score: 0, query: ''}) : {},
@@ -223,12 +224,19 @@ async function getEmbeds(msg, edit=true) {
                         embeds = [...embeds, ...genEmbed.data.extra_embeds.map(e => EmbedBuilder.from(e))];
                 }
             }
+            let components = [];
             for (let i of embeds) {
                 while (embeds.find(e => e != i && e.data.title == i.data.title) != undefined)
                     i.data.title += ' ';
                 while (i.data.hasOwnProperty('url') && embeds.find(e => e != i && e.data.hasOwnProperty('url') && e.data.url == i.data.url) != undefined)
                     i.data.url += '?';
+                if (i.data.hasOwnProperty('components'))
+                    components = [...components, ...i.data.components];
             }
+            components = components.slice(0, 25);
+            embeds.components = [];
+            for (let i = 0; i < embeds.components; i += 5)
+                embeds.components.push(new ActionRowBuilder.addComponents(embeds.components.slice(i, i + 5)));
             await typing;
             return embeds; //
         } else return 0;
@@ -265,9 +273,9 @@ bot.on('messageCreate', async msg => {
             if (msg.content.includes('(s)')) {
                 let reply = await msg.reply({content: `||https://bit.ly/3aSgJDF||`, allowedMentions: {repliedUser: false}});
                 await (new Promise(res => setTimeout(res, 1000)));
-                await reply.edit({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+                await reply.edit({embeds,components: embeds.components, files, allowedMentions: {repliedUser: false}}).catch(e => {});
             } else
-                await msg.reply({embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+                await msg.reply({embeds, components: embeds.components, files, allowedMentions: {repliedUser: false}}).catch(e => {});
         };
         delfiles(files);
     }
@@ -287,9 +295,9 @@ let edit = async (editing, from, managed=false) => {
             if (from.content.includes('(s)')) {
                 await editing.edit({content: pre+'||https://bit.ly/3aSgJDF||', embeds: [], files: [], allowedMentions: {repliedUser: false}});
                 await (new Promise(res => setTimeout(res, 1000)));
-                await editing.edit({content: editing.content, embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+                await editing.edit({content: editing.content, embeds, components: embeds.components, files, allowedMentions: {repliedUser: false}}).catch(e => {});
             } else
-                await editing.edit({content: pre, embeds, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+                await editing.edit({content: pre, embeds, components: embeds.components, files, allowedMentions: {repliedUser: false}}).catch(e => {});
         }
         delfiles(files);
     }
@@ -326,7 +334,7 @@ bot.on('interactionCreate', async interaction => {
                     let embeds = await getEmbeds(interaction);
                     if (embeds.length == 0)
                         return await interaction.deleteReply();
-                    await interaction.editReply({embeds});
+                    await interaction.editReply({embeds, components: embeds.components});
                     break;
 
                 case 'run':

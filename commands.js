@@ -1180,18 +1180,18 @@ __List of memes:__
                     let subs = body2[tableIndex+6].slice(body2[tableIndex+6].indexOf('<td>')+4, body2[tableIndex+6].indexOf('</td>'));
                     let detailsIndex = body2.findIndex(e => e.includes('class="detailsStatsContainerRight"'));
                     let date = body2[detailsIndex+2].slice(body2[detailsIndex+2].indexOf('">')+2, body2[detailsIndex+2].indexOf(' @ '));
-                    description = `${subs} Subscribers\nPosted ${date}`;
+                    description = `[Open in Steam](${cfg.exportURL}/redirect/${encodeURIComponent(`steam://url/CommunityFilePage/${url.slice(url.indexOf('=')+1, url.indexOf('&'))})`)}\n${subs} Subscribers / Posted ${date}`;
                     let commentIndex = body2.findIndex(e => e.includes('commentthread'));
                     if (commentIndex != -1) body2 = body2.slice(0, commentIndex);
                     let githubLine = body2.find(e => e.includes('/linkfilter/?url=https://github.com'));
                     if (githubLine != undefined) {
                         githubLine = githubLine.slice(githubLine.indexOf('/linkfilter/?url=https://github.com')+17);
-                        description += `\n${githubLine.slice(0, githubLine.indexOf('"'))}`;
+                        description += ` / [GitHub](${githubLine.slice(0, githubLine.indexOf('"'))})`;
                     } else {
                         githubLine = body2.find(e => e.includes('/linkfilter/?url=http://github.com'));
                         if (githubLine != undefined) {
                             githubLine = githubLine.slice(githubLine.indexOf('/linkfilter/?url=http://github.com')+17);
-                            description += `\n${githubLine.slice(0, githubLine.indexOf('"'))}`;
+                            description += ` / [GitHub](${githubLine.slice(0, githubLine.indexOf('"'))})`;
                         }
                     }
                 }
