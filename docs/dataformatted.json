@@ -48741,7 +48741,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Croquette.\nApply 2 (3) Weak.\nExhaust.",
+            "description": "anniv5:Croquette.\nApply 2 (4) Weak.\nExhaust.",
             "pack": "Pinnacle",
             "mod": "The Packmaster"
         },
@@ -48774,7 +48774,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "0",
-            "description": "anniv5:Croquette.\nGain 6 (9) Block, Exhaust.\nWhen Retained, increase its Block by 2 (3) this combat.",
+            "description": "anniv5:Croquette.\nGain 6 (12) Block, Exhaust.\nWhen Retained, increase its Block by 2 (4) this combat.",
             "pack": "Pinnacle",
             "mod": "The Packmaster"
         },
@@ -48862,7 +48862,7 @@
             "rarity": "Special",
             "type": "Skill",
             "cost": "0",
-            "description": "Reduce the cost of a random card in your hand to 0 until played.\n~~- Lose 1 HP and 1 anniv5:Sanity. -~~\nExhaust.",
+            "description": "Reduce the cost of a random card in your hand to 0 this turn.\nLose 1 ~~- HP and 1  -~~ anniv5:Sanity.\nExhaust.",
             "pack": "Eldritch Horror",
             "mod": "The Packmaster"
         },
@@ -48884,7 +48884,7 @@
             "rarity": "Special",
             "type": "Power",
             "cost": "0",
-            "description": "anniv5:Croquette.\nGain 3 (5) Strength.",
+            "description": "anniv5:Croquette.\nGain 3 (6) Strength.",
             "pack": "Pinnacle",
             "mod": "The Packmaster"
         },
@@ -48918,6 +48918,7 @@
             "type": "Attack",
             "cost": "0",
             "description": "Deal 3 (6) damage.\nExhaust.",
+            "flavor": "Poke.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -48950,7 +48951,7 @@
             "rarity": "Special",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 8 (9) damage.\nAfter playing 3 Shards, shuffle The Prism (+) into your draw pile.\nExhaust.",
+            "description": "Deal 8 (9) damage.\nAfter playing 3 Shards, add (shuffle) The Prism (+) into your hand (draw pile).\nExhaust.",
             "pack": "Vexation",
             "mod": "The Packmaster"
         },
@@ -50230,7 +50231,7 @@
             "rarity": "Common",
             "type": "Attack",
             "cost": "1",
-            "description": "Deal 10 (13) damage.\nWhenever you apply a debuff, return this from the discard pile to your hand.",
+            "description": "Deal 10 (13) damage.\nWhenever you apply a debuff, return this from the discard pile to your hand and set its cost to 1.",
             "pack": "Biting Cold",
             "mod": "The Packmaster"
         },
@@ -50440,6 +50441,7 @@
             "type": "Skill",
             "cost": "1",
             "description": "Gain 6 (9) Block.\nChannel 1 anniv5:Leprechaun.",
+            "flavor": "Praise RNGesus.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -50527,7 +50529,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "0",
-            "description": "Add a Rummage (+) to your hand. Increase the number of cards drawn by your Rummages by 1 this combat.\nExhaust.",
+            "description": "Add a Rummage (+) to your hand. Increase the number of cards drawn by your ~~- existing  -~~ Rummages by 1 this combat.\nExhaust.",
             "pack": "Basics",
             "mod": "The Packmaster"
         },
@@ -50714,7 +50716,7 @@
             "rarity": "Common",
             "type": "Skill",
             "cost": "1",
-            "description": "Gain 5 Block.\nanniv5:Flurry: Gain 1 (2) Temporary_HP.",
+            "description": "Gain 5 (8) Block.\nanniv5:Flurry: Gain 1 Temporary_HP.",
             "pack": "Eldritch Horror",
             "mod": "The Packmaster"
         },
@@ -50825,6 +50827,7 @@
             "type": "Skill",
             "cost": "1",
             "description": "Channel 1 anniv5:Porcupine.\nAdd 2 (3) Quills into your hand.",
+            "flavor": "The Silent in animal form.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -51529,6 +51532,7 @@
             "type": "Attack",
             "cost": "1",
             "description": "Deal 5 (8) damage to ALL enemies.\nChannel 1 anniv5:Swarm of Bees.",
+            "flavor": "Absolutely terrifying.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -51914,6 +51918,7 @@
             "type": "Attack",
             "cost": "1",
             "description": "Deal 7 (10) damage.\nChannel 1 anniv5:Wolf.",
+            "flavor": "Pack animals for the Packmaster.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -52882,6 +52887,7 @@
             "type": "Attack",
             "cost": "1",
             "description": "Deal 15 (20) damage to ALL enemies.\nTake 4 damage.",
+            "flavor": "This is my favorite card. I hope you like it.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -53157,6 +53163,7 @@
             "type": "Skill",
             "cost": "2",
             "description": "Gain 9 (13) Block.\nChannel 1 anniv5:Fire Spirit.",
+            "flavor": "Burninating the Spire.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -53222,7 +53229,7 @@
             "rarity": "Uncommon",
             "type": "Attack",
             "cost": "0",
-            "description": "*Magic.\nDeal 4 (6) damage.\nIncrease the damage dealt by Magic cards by 3 (4) this turn.",
+            "description": "Deal 5 (7) damage.\nApply 1 (2) Vulnerable.",
             "pack": "Warden",
             "mod": "The Packmaster"
         },
@@ -54013,7 +54020,7 @@
             "color": "Packmaster_rainbow",
             "rarity": "Uncommon",
             "type": "Power",
-            "cost": "2",
+            "cost": "2 (3)",
             "description": "Innate. Add in order (, Upgraded): anniv5:Croquettes that provide Block, Weak, Strength and Vulnerable to your hand. Once per turn ended.",
             "pack": "Pinnacle",
             "mod": "The Packmaster"
@@ -54301,6 +54308,7 @@
             "type": "Skill",
             "cost": "X",
             "description": "Channel X (+1) anniv5:Pandas.",
+            "flavor": "Pandamonium.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -54521,6 +54529,7 @@
             "type": "Skill",
             "cost": "1",
             "description": "Channel 1 anniv5:Rainbow Louse. (Draw 1 card.)\n",
+            "flavor": "The result of an unwise magic experiment.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -55633,6 +55642,7 @@
             "type": "Power",
             "cost": "2",
             "description": "~~- Ethereal. -~~\nWhenever you Channel an Orb, Evoke it without removing it.",
+            "flavor": "I couldn't find good ambush art so have a pun.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -55951,7 +55961,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "",
-            "description": "Unplayable.\nWhenever you play an adjacent card, play it twice and Exhaust (discard) this.",
+            "description": "Unplayable.\nWhenever you play an adjacent card, play it twice, Exhaust it and Exhaust (discard) this.",
             "pack": "Artificer",
             "mod": "The Packmaster"
         },
@@ -56226,7 +56236,7 @@
             "rarity": "Rare",
             "type": "Power",
             "cost": "3",
-            "description": "Whenever you gain Block, deal 8 (11) damage to a random enemy.",
+            "description": "Whenever you gain Block, deal 9 (13) damage to a random enemy.",
             "pack": "Pinnacle",
             "mod": "The Packmaster"
         },
@@ -56930,7 +56940,7 @@
             "rarity": "Rare",
             "type": "Attack",
             "cost": "2",
-            "description": "Deal 7 (9) damage.\nanniv5:Modify adjacent cards: \"Play a copy of Mirror's Curse.\"\nExhaust.",
+            "description": "Deal 7 (9) damage.\nanniv5:Modify adjacent cards: \"Play a copy of this Mirror's Curse.\"\nExhaust.",
             "pack": "Artificer",
             "mod": "The Packmaster"
         },
@@ -57150,7 +57160,7 @@
             "rarity": "Rare",
             "type": "Skill",
             "cost": "2",
-            "description": "End your turn.\nNext turn, gain 15 (20) Temporary_HP, gain\n[E] [E] [E] , and enter anniv5:Nightmare. Exhaust.",
+            "description": "End your turn.\nNext turn, gain 10 (15) Temporary_HP, gain\n[E] [E] [E] , and enter anniv5:Nightmare. Exhaust.",
             "pack": "Eldritch Horror",
             "mod": "The Packmaster"
         },
@@ -57481,6 +57491,7 @@
             "type": "Power",
             "cost": "0",
             "description": "Gain 2 (3) Focus.\nLose 1 Strength and Dexterity.",
+            "flavor": "I skip leg day.",
             "pack": "Summoner's Menagerie",
             "mod": "The Packmaster"
         },
@@ -64746,30 +64757,12 @@
             "mod": "Beaked The Cultist"
         },
         {
-            "id": "bundlecore:FanMailCommon",
-            "name": "Fan Mail",
-            "tier": "Common",
-            "pool": "",
-            "description": "After playing 137 cards with bundlecore:Cardmod destroy this relic and obtain a random rare relic.\nIf you get lucky you might find something special instead.",
-            "flavorText": "We just got a letter...",
-            "mod": "Bundle Of Bundles"
-        },
-        {
             "id": "bundlecore:LoaderQueDynamic",
             "name": "Goldloader",
-            "tier": "Common",
+            "tier": "Deprecated",
             "pool": "",
-            "description": "Upon pickup, obtain 88 gold.\nYour mod list is quite average.",
+            "description": "Upon pickup, obtain 2 gold. Your mod list is so small this relic feels insulted and will not appear.",
             "flavorText": "Mods = $$$",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:ModificationKitCommon",
-            "name": "Modification Kit",
-            "tier": "Common",
-            "pool": "",
-            "description": "Attack cards with a bundlecore:Cardmod have 1 more damage.\nAfter playing a Skill with a bundlecore:Cardmod gain 1 Block.",
-            "flavorText": "With the correct tools, no job is too tough for a spire climber!",
             "mod": "Bundle Of Bundles"
         },
         {
@@ -64779,15 +64772,6 @@
             "pool": "",
             "description": "Upon pickup, gain 3 Max HP.\nAt the start of your turn, gain 1 bundlecore:Fire_Breathing.",
             "flavorText": "A very spicy and meaty eat that is great for getting over bumps and bruises.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:BottledModsUncommon",
-            "name": "Concentrated Bottled Force",
-            "tier": "Uncommon",
-            "pool": "",
-            "description": "Upon pickup, chose a card.\nThis card gains Retain, bundlecore:Quickdraw and Exhaustive 2.",
-            "flavorText": "A bottle filled with distilled force brew, it seems to have a more reliable effect... thankfully...",
             "mod": "Bundle Of Bundles"
         },
         {
@@ -64836,30 +64820,12 @@
             "mod": "Bundle Of Bundles"
         },
         {
-            "id": "bundlecore:CursedMirrorRare",
-            "name": "Cursed Mirror",
-            "tier": "Rare",
-            "pool": "",
-            "description": "The first time you play a card with a bundlecore:Cardmod each turn, add a duplicate of the card to the bottom of your draw pile.",
-            "flavorText": "I can see the better half of... me?",
-            "mod": "Bundle Of Bundles"
-        },
-        {
             "id": "bundlecore:DragonkinsHexBoss",
             "name": "Dragonkin's Hex",
             "tier": "Rare",
             "pool": "",
             "description": "When you deal unblocked Attack damage, reduce the targets Strength by 1 for one turn.",
             "flavorText": "An almighty curse that deprives the enemy of their power for quite some time.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:DualityDraughtRare",
-            "name": "Draught of Duality",
-            "tier": "Rare",
-            "pool": "",
-            "description": "Every 10 times you play a card with a bundlecore:Cardmod, draw 1 card and gain [E].",
-            "flavorText": "Greater than the sum of its parts.",
             "mod": "Bundle Of Bundles"
         },
         {
@@ -64917,15 +64883,6 @@
             "mod": "Bundle Of Bundles"
         },
         {
-            "id": "bundlecore:BifurkiteBoss",
-            "name": "Bifurkite",
-            "tier": "Boss",
-            "pool": "",
-            "description": "The first time you play a card with a bundlecore:Cardmod each turn, gain [E].",
-            "flavorText": "This is getting out of hand, now there are two of them!",
-            "mod": "Bundle Of Bundles"
-        },
-        {
             "id": "bundlecore:GiantBoulderBoss",
             "name": "Big Boulder",
             "tier": "Boss",
@@ -64941,15 +64898,6 @@
             "pool": "",
             "description": "Before the start of combat, gain 1 Weak, Vulnerable and Frail.\nAt the start of your turn, gain [E].\nbundlecore:Quest - Collector bundlecore:Destiny.\nbundlecore:Keybane - Wound.",
             "flavorText": "The collector is rumoured to be the buyer of the stolen potion schematics, with this brand you can find her hideout...",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:UpdateBoss",
-            "name": "Card Update",
-            "tier": "Boss",
-            "pool": "",
-            "description": "Permanently apply a special upgrade, bundlecore:MK2, to ALL non Status, non Curse cards.",
-            "flavorText": "Hello this flavour text panel has been trying to reach you about your mod's extended update schedule...",
             "mod": "Bundle Of Bundles"
         },
         {
@@ -65061,24 +65009,6 @@
             "mod": "Bundle Of Bundles"
         },
         {
-            "id": "bundlecore:ModSoupBoss",
-            "name": "Mod Soup",
-            "tier": "Boss",
-            "pool": "",
-            "description": "At the start of your turn, gain [E] and Force a card in your hand to become bundlecore:Soupy.",
-            "flavorText": "Too many chefs added to the broth, i mean who let them cook like this.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:ChimericGemstoneBoss",
-            "name": "Philosuppliers Stone",
-            "tier": "Boss",
-            "pool": "",
-            "description": "ALL cards gain bundlecore:Supplier.\nAt the start of combat, gain [E].\nAt the start of turn 2 and onwards, lose [E] and increase this loss by 1.",
-            "flavorText": "A truly energetic and radiant artefact that helps you outmaneuver your enemies!",
-            "mod": "Bundle Of Bundles"
-        },
-        {
             "id": "bundlecore:PumpkinPieBoss",
             "name": "Pumpkin Pie",
             "tier": "Boss",
@@ -65121,15 +65051,6 @@
             "pool": "",
             "description": "When you gain Strength, double it.\nWhen you would lose Strength, gain it.\nAt the start of combat, gain 2 Strength.\nIf you have 250 or more Strength, your next attack will have Truest Power.",
             "flavorText": "Wiz.atb(new YeetPlayerAction());",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:SingularityBoss",
-            "name": "Singularity",
-            "tier": "Boss",
-            "pool": "",
-            "description": "bundlecore:Rare\nCards are 65% stronger, which can round up, but Exhaust.",
-            "flavorText": "The end is nigh...",
             "mod": "Bundle Of Bundles"
         },
         {
@@ -65184,15 +65105,6 @@
             "pool": "",
             "description": "Before the start of combat:\nLose 3 Strength and gain 2 Dexterity,\n3 Metallicize and 4 Thorns.",
             "flavorText": "Defense mode activated.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:JarOfMarmaladeShop",
-            "name": "Pot of Marmalade Tea",
-            "tier": "Shop",
-            "pool": "",
-            "description": "Heal 6 HP and gain 1 Max HP on pickup.\nAt the start of your turn, a random card in hand is Forced to gain bundlecore:Supplier.",
-            "flavorText": "Sweet yet astringent, it can take a while to get past the strong taste.",
             "mod": "Bundle Of Bundles"
         },
         {
@@ -80545,30 +80457,10 @@
             "mod": "Beaked The Cultist"
         },
         {
-            "id": "bundlecore:LavaPotionForbidden",
-            "name": "Lava Potion",
-            "rarity": "Placeholder",
-            "description": "Deal 20 damage and apply 4 On Fire to the target.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:PotionFireForbidden",
-            "name": "Potion Fire",
-            "rarity": "Placeholder",
-            "description": "deal 2 Damage.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundle_of_potions:Test448",
-            "name": "Test 448",
-            "rarity": "Placeholder",
-            "description": "'Potion 0 bundle_of_potions:Test448\nGain 21 Dexterity.\nSo powerful its banned in most places.",
-            "mod": "Bundle Of Potions"
-        },
-        {
             "id": "bundle_of_potions:AngryTankardCommon",
             "name": "Angry Tankard",
             "rarity": "Common",
+            "flavor": "Fedup of clam? Try Wrath.",
             "description": "Draw 3 cards. Enter Wrath.",
             "mod": "Bundle Of Potions"
         },
@@ -80576,6 +80468,7 @@
             "id": "bundle_of_potions:AssemblyJarUncommon",
             "name": "Assembly Jar",
             "rarity": "Common",
+            "flavor": "With a better grasp of how tools work with the wisdom provided in this potion, you can create better weapons.",
             "description": "Gain Master Reality and 1 Cloak and Dagger+.",
             "mod": "Bundle Of Potions"
         },
@@ -80583,6 +80476,7 @@
             "id": "bundle_of_potions:BasicStatPotionCommon",
             "name": "Basic Stat Potion",
             "rarity": "Common",
+            "flavor": "Cant decide between a Strength or Dexterity potion?\nWhy not both?",
             "description": "Gain 1 Strength and Dexterity.",
             "mod": "Bundle Of Potions"
         },
@@ -80590,6 +80484,7 @@
             "id": "bundle_of_potions:BerryJuiceCommon",
             "name": "Berry Juice",
             "rarity": "Common",
+            "flavor": "Not made with real strawberries.",
             "description": "Gain 2 Max HP.",
             "mod": "Bundle Of Potions"
         },
@@ -80597,6 +80492,7 @@
             "id": "bundle_of_potions:CloudyPotionCommon",
             "name": "Blurry Potion",
             "rarity": "Common",
+            "flavor": "Like a fine mist swirling around, with it you too can swirl around the room.",
             "description": "Gain 2 Blur.",
             "mod": "Bundle Of Potions"
         },
@@ -80604,6 +80500,7 @@
             "id": "bundle_of_potions:MementoinaBottleCommon",
             "name": "Bottled Memento",
             "rarity": "Common",
+            "flavor": " Now with more O.B.T",
             "description": "ALL combatants gain 1 Vulnerable.\nEven you!",
             "mod": "Bundle Of Potions"
         },
@@ -80611,6 +80508,7 @@
             "id": "bundle_of_potions:BucklerInABottleCommon",
             "name": "Buckler in a Bottle",
             "rarity": "Common",
+            "flavor": "Made with real Iron, drinking it makes you FEel stronger.",
             "description": "Gain Block equal to 35% of current incoming damage, then next turn gain 35% of this amount.",
             "mod": "Bundle Of Potions"
         },
@@ -80618,6 +80516,7 @@
             "id": "bundle_of_potions:CawingFlaskCommon",
             "name": "Cawing Flask",
             "rarity": "Common",
+            "flavor": "Provides the consumer an almost feral tendency to gash nearby creatures.",
             "description": "Add 2 Claw+ to your hand.",
             "mod": "Bundle Of Potions"
         },
@@ -80625,6 +80524,7 @@
             "id": "bundle_of_potions:SpicyPotionCommon",
             "name": "Chilli Sauce",
             "rarity": "Common",
+            "flavor": "Where is the dog?",
             "description": "Gain 5 Fire Breathing.",
             "mod": "Bundle Of Potions"
         },
@@ -80632,6 +80532,7 @@
             "id": "bundle_of_potions:ChiselingChocolateCommon",
             "name": "Chiseling Chocolate",
             "rarity": "Common",
+            "flavor": "Chips away at them like you chip away at the delicious chocolate inside.",
             "description": "Always heal 2 HP, then make ALL enemies lose 5 HP.",
             "mod": "Bundle Of Potions"
         },
@@ -80639,6 +80540,7 @@
             "id": "bundle_of_potions:FoulBrewCommon",
             "name": "Foul-smelling Brew",
             "rarity": "Common",
+            "flavor": "An extract from the less scary Mustelid in the spire, this pungent potion will make your enemies wish they were in a different floor.",
             "description": "Gain 3 Noxious Fumes.",
             "mod": "Bundle Of Potions"
         },
@@ -80646,6 +80548,7 @@
             "id": "bundle_of_potions:GarlicBottleCommon",
             "name": "Garlic Bottle",
             "rarity": "Common",
+            "flavor": "It's full of garlic lmao.",
             "description": "Apply 2 Weak to ALL enemies.",
             "mod": "Bundle Of Potions"
         },
@@ -80653,6 +80556,7 @@
             "id": "bundle_of_potions:HoneyExtractUncommon",
             "name": "Honey Extract",
             "rarity": "Common",
+            "flavor": "An extract from a Mustelid, but also the most dangerous creature in the spire.\nRumor has it if you try to harm children in the spire the creature will hunt you down.",
             "description": "Gain 4 Sadistic and\n1 Noxious.",
             "mod": "Bundle Of Potions"
         },
@@ -80660,6 +80564,7 @@
             "id": "bundle_of_potions:HypnoticBottleCommon",
             "name": "Hypnotic Bottle",
             "rarity": "Common",
+            "flavor": "Leaves the drinker in a loose trance.",
             "description": "Draw 4 cards. You cannot draw additional cards this turn.",
             "mod": "Bundle Of Potions"
         },
@@ -80667,6 +80572,7 @@
             "id": "bundle_of_potions:SnakeTCommon",
             "name": "Snake™",
             "rarity": "Common",
+            "flavor": "The city's favourite nutty tea brand, albeit its high price means it is only for elites nowadays.",
             "description": "Gain 4 Malleable and 1 Blur.",
             "mod": "Bundle Of Potions"
         },
@@ -80674,6 +80580,7 @@
             "id": "bundle_of_potions:SneckoSaladCreamCommon",
             "name": "Snecko's Salad Cream",
             "rarity": "Common",
+            "flavor": "Notably it does not actually taste like the sauce on the Slaver Sliders... Odd...",
             "description": "Remove ALL Plated Armor, Metallicize, Thorns, Malleable, Buffer, Artifact, Regenerate and Barricade from ALL enemies. If you do: Heal 7 HP.",
             "mod": "Bundle Of Potions"
         },
@@ -80681,6 +80588,7 @@
             "id": "bundle_of_potions:StorminaJarCommon",
             "name": "Storm in a Jar",
             "rarity": "Common",
+            "flavor": "I AM THE STORM THAT IS APPROACHING",
             "description": "Gain 1 Storm.",
             "mod": "Bundle Of Potions"
         },
@@ -80688,6 +80596,7 @@
             "id": "bundle_of_potions:SuctionPotionCommon",
             "name": "Succ Potion",
             "rarity": "Common",
+            "flavor": "The tiny gritty grains in this potion help cut through the flesh of the target. Inspired by avocados.",
             "description": "Enemy loses up to 6 HP and heal equal to HP the enemy lost.",
             "mod": "Bundle Of Potions"
         },
@@ -80695,6 +80604,7 @@
             "id": "bundle_of_potions:ThonkerbottleCommon",
             "name": "Thonkerbottle",
             "rarity": "Common",
+            "flavor": "Awakened One's favourite nightcap.",
             "description": "Gain 1 Curiosity.",
             "mod": "Bundle Of Potions"
         },
@@ -80702,6 +80612,7 @@
             "id": "bundle_of_potions:VialOfBalmCommon",
             "name": "Vial of Concentrated Soothing Balm",
             "rarity": "Common",
+            "flavor": "Also available in trinket form.",
             "description": "Exhaust ALL Status and Curse cards.",
             "mod": "Bundle Of Potions"
         },
@@ -80709,6 +80620,7 @@
             "id": "bundle_of_potions:AdvancedStatPotionUncommon",
             "name": "Advanced Stat Potion",
             "rarity": "Uncommon",
+            "flavor": "Now with 4 flavours.",
             "description": "Gain 2 Strength, Dexterity, Plated Armor and Thorns.",
             "mod": "Bundle Of Potions"
         },
@@ -80716,6 +80628,7 @@
             "id": "bundle_of_potions:AftershockPotionUncommon",
             "name": "Aftershock Potion",
             "rarity": "Uncommon",
+            "flavor": "Anotha one and anotha one... And anotha one...",
             "description": "Deal 3 damage and apply 1 Weak to ALL enemies 3 times.",
             "mod": "Bundle Of Potions"
         },
@@ -80723,6 +80636,7 @@
             "id": "bundle_of_potions:BamboozlingBrewUncommon",
             "name": "Bamboozling Brew",
             "rarity": "Uncommon",
+            "flavor": "Might even be a potions?!",
             "description": "Add 1 Safety+ and Smite+ to your hand.",
             "mod": "Bundle Of Potions"
         },
@@ -80730,20 +80644,15 @@
             "id": "bundle_of_potions:CleanBottleUncommon",
             "name": "Clean Bottle",
             "rarity": "Uncommon",
+            "flavor": "A nice bottle to put your potions in. - Grandma",
             "description": "Permanently gain 1 potion slot.",
-            "mod": "Bundle Of Potions"
-        },
-        {
-            "id": "bundle_of_potions:FORCEJARUncommon",
-            "name": "Forceful Jar",
-            "rarity": "Uncommon",
-            "description": "Permanently FORCE a modifier onto 1 Card in your hand. This effect could be Negative, Neutral or Positive at 40%:#y20%:#g40% respectively.",
             "mod": "Bundle Of Potions"
         },
         {
             "id": "bundle_of_potions:FoxyShotUncommon",
             "name": "Foxy Shot",
             "rarity": "Uncommon",
+            "flavor": "Touch Fluffy Tail.",
             "description": "Gain 1 After Image, Blur and Dexterity.",
             "mod": "Bundle Of Potions"
         },
@@ -80751,6 +80660,7 @@
             "id": "bundle_of_potions:FungiinaBottleUncommon",
             "name": "Fungi in a Bottle",
             "rarity": "Uncommon",
+            "flavor": "Excluded from most bars and restaurants in the city, when brewed at an insufficient temperature the ephemeral fungi will cause the drinker to violently explode",
             "description": "Target explodes in 4 turns, instantly dying and dealing 30 damage to you.",
             "mod": "Bundle Of Potions"
         },
@@ -80758,6 +80668,7 @@
             "id": "bundle_of_potions:ImmovablePotionUncommon",
             "name": "Immovable Vessel",
             "rarity": "Uncommon",
+            "flavor": "Made with real compacted robots!",
             "description": "Gain 24 Block and 1 Entangled.",
             "mod": "Bundle Of Potions"
         },
@@ -80765,6 +80676,7 @@
             "id": "bundle_of_potions:JudgementFlaskUncommon",
             "name": "Judgement Flask",
             "rarity": "Uncommon",
+            "flavor": "Some call it judgment, judgment+ even.",
             "description": "Instantly kill the targeted Monster if it has less than 30 HP.",
             "mod": "Bundle Of Potions"
         },
@@ -80772,6 +80684,7 @@
             "id": "bundle_of_potions:PickleJuiceUncommon",
             "name": "Pickle Juice",
             "rarity": "Uncommon",
+            "flavor": "Not recommended for enemies with unintuitive powers.",
             "description": "Targeted enemy ALWAYS loses 3 Strength.\nSome enemies are allergic to pickles.",
             "mod": "Bundle Of Potions"
         },
@@ -80779,6 +80692,7 @@
             "id": "bundle_of_potions:RainbowBottleUncommon",
             "name": "Rainbow Bottle",
             "rarity": "Uncommon",
+            "flavor": "Like the card, but more inclusive.",
             "description": "Channel 1 of each vanilla Orb.",
             "mod": "Bundle Of Potions"
         },
@@ -80786,6 +80700,7 @@
             "id": "bundle_of_potions:SappingPotionCommon",
             "name": "Sapping Potion",
             "rarity": "Uncommon",
+            "flavor": "Sometimes offered as a nightime sleeping aid, it drains the current energy of its consumer.",
             "description": "Enemy gains Weak and loses Strength equal to your current energy multiplied by 1.",
             "mod": "Bundle Of Potions"
         },
@@ -80793,6 +80708,7 @@
             "id": "bundle_of_potions:SmashingTankardUncommon",
             "name": "Smashing Tankard",
             "rarity": "Uncommon",
+            "flavor": "Gives the drinker an immense and unexpected burst of energy.",
             "description": "Add 1 Bludgeon+ to your hand and gain 1 free attack.",
             "mod": "Bundle Of Potions"
         },
@@ -80800,6 +80716,7 @@
             "id": "bundle_of_potions:SpringPotionUncommon",
             "name": "Springy Potion",
             "rarity": "Uncommon",
+            "flavor": "Puts a spring in your step.",
             "description": "Draw 2 cards and discard 2 cards then gain 2 Accuracy and add 2 Shiv+ to your hand",
             "mod": "Bundle Of Potions"
         },
@@ -80807,6 +80724,7 @@
             "id": "bundle_of_potions:StickyTarJarUncommon",
             "name": "Sticky Tar Jar",
             "rarity": "Uncommon",
+            "flavor": "Wont add a curse to your master deck, because the creature it was extracted from died on turn 1.",
             "description": "Apply 1 Slow.",
             "mod": "Bundle Of Potions"
         },
@@ -80814,6 +80732,7 @@
             "id": "bundle_of_potions:TossableSmokeBombUncommon",
             "name": "Tossable Smoke Bomb",
             "rarity": "Uncommon",
+            "flavor": "Oh? Now you don't like hiding in a semi tangible state?",
             "description": "If the target is Intangible it dies instantly.\nDeals immense damage to targets with Invincible or similar powers. Also applies 9 Poison and removes all block from the target.",
             "mod": "Bundle Of Potions"
         },
@@ -80821,6 +80740,7 @@
             "id": "bundle_of_potions:TowerShieldInABottleUncommon",
             "name": "Tower Shield in a Bottle",
             "rarity": "Uncommon",
+            "flavor": "Made with real Cobalt. Best served COld.",
             "description": "Gain Block equal to 70% of current incoming damage, then next turn gain 70% of this amount.",
             "mod": "Bundle Of Potions"
         },
@@ -80828,6 +80748,7 @@
             "id": "bundle_of_potions:TumericBottleUncommon",
             "name": "Turmeric Bottle",
             "rarity": "Uncommon",
+            "flavor": "It's full of turmeric XD.",
             "description": "Apply 3 Weak and Vulnerable to ALL enemies.",
             "mod": "Bundle Of Potions"
         },
@@ -80835,6 +80756,7 @@
             "id": "bundle_of_potions:WeaponCoatingUncommon",
             "name": "Weapon Coating",
             "rarity": "Uncommon",
+            "flavor": "Because drinking the vial of concentrated acid will totally coat your swords!",
             "description": "Gain 1 Envenom and Strength.",
             "mod": "Bundle Of Potions"
         },
@@ -80842,6 +80764,7 @@
             "id": "bundle_of_potions:OnehundredPctGrapefruitJuiceRare",
             "name": "100% Grapefruit Juice",
             "rarity": "Rare",
+            "flavor": "Norma-ly its a bad idea to drink off coloured liquids you find laying around, this one is no exception.",
             "description": "Add 1 Burn+ to all active piles and gain a 27 damage Combust.\nTastes almost as good as orange juice.",
             "mod": "Bundle Of Potions"
         },
@@ -80849,6 +80772,7 @@
             "id": "bundle_of_potions:BunkerinaBottleRare",
             "name": "Bunker in a Bottle",
             "rarity": "Rare",
+            "flavor": "Made with real crayons. Best served to Marines.",
             "description": "Gain Block equal to 100% of current incoming damage, then next turn gain 100% of this amount.",
             "mod": "Bundle Of Potions"
         },
@@ -80856,6 +80780,7 @@
             "id": "bundle_of_potions:CreationTinctureRare",
             "name": "Creative Tincture",
             "rarity": "Rare",
+            "flavor": "A potion fizzing with miasmic energy, it makes the user more willing to try new techniques.",
             "description": "Gain 1 Creative, Infinite Blades and Battle Hymn.",
             "mod": "Bundle Of Potions"
         },
@@ -80863,6 +80788,7 @@
             "id": "bundle_of_potions:CrippingPoisonRare",
             "name": "Crippling Potion",
             "rarity": "Rare",
+            "flavor": "A bottle of horrid, paralysing fluid.",
             "description": "Enemy loses 1 Strength each turn, is given 2 Weak and 6 Poison.",
             "mod": "Bundle Of Potions"
         },
@@ -80870,6 +80796,7 @@
             "id": "bundle_of_potions:DesignersAftershaveRare",
             "name": "Designer's Aftershave",
             "rarity": "Rare",
+            "flavor": "This very overpriced bottle of perfume wards away stubborn spirits, apparently the smell is too boutique for them.",
             "description": "Cannot be used in combat.\n\nRemove ALL status and curse cards, then randomly upgrade 1 card.",
             "mod": "Bundle Of Potions"
         },
@@ -80877,6 +80804,7 @@
             "id": "bundle_of_potions:DragonfruitDropsRare",
             "name": "Dragonfruit Drops",
             "rarity": "Rare",
+            "flavor": "No, there will not be another one liner where we comment on the fact this made with real Dragonfruit...",
             "description": "Gain 20 Vigor.",
             "mod": "Bundle Of Potions"
         },
@@ -80884,6 +80812,7 @@
             "id": "bundle_of_potions:FabricateOilsRare",
             "name": "Fabricate Oils",
             "rarity": "Rare",
+            "flavor": "Fleeting",
             "description": "On use obtain 1 War Paint.",
             "mod": "Bundle Of Potions"
         },
@@ -80891,6 +80820,7 @@
             "id": "bundle_of_potions:ImposterExtractRare",
             "name": "Imposter Extract",
             "rarity": "Rare",
+            "flavor": "Not recommended for Crewmates with nice statistics.",
             "description": "Gain 1 Intangible and 1 Phantasmal.\nWhen the potion is sus?!",
             "mod": "Bundle Of Potions"
         },
@@ -80898,6 +80828,7 @@
             "id": "bundle_of_potions:PiggyBankRare",
             "name": "Lost Piggy Bank",
             "rarity": "Rare",
+            "flavor": "The merchant cant open it because it has to be thrown.",
             "description": "Can be thrown in any combat room to gain 125 Gold.",
             "mod": "Bundle Of Potions"
         },
@@ -80905,6 +80836,7 @@
             "id": "bundle_of_potions:NukeinaBottleRare",
             "name": "Mini-Nuke in a Bottle",
             "rarity": "Rare",
+            "flavor": "Well isn't that a rad idea!",
             "description": "Deal 30 damage and apply 9 Poison to ALL enemies.",
             "mod": "Bundle Of Potions"
         },
@@ -80912,6 +80844,7 @@
             "id": "bundle_of_potions:OmegaExtractRare",
             "name": "Omega Extract",
             "rarity": "Rare",
+            "flavor": "A -> B -> O -> W",
             "description": "Gain 29 Omega.",
             "mod": "Bundle Of Potions"
         },
@@ -80919,6 +80852,7 @@
             "id": "bundle_of_potions:ReaperBottleRare",
             "name": "Reaper Bottle",
             "rarity": "Rare",
+            "flavor": "It's full of Spicy Death :O.",
             "description": "Apply 1 Suffocation and 4 Weak, Vulnerable and Frail to ALL enemies.",
             "mod": "Bundle Of Potions"
         },
@@ -80926,20 +80860,15 @@
             "id": "bundle_of_potions:SakeRare",
             "name": "Sake",
             "rarity": "Rare",
+            "flavor": "Brought into the spire by a foreign gang, this drink is popular in the red-mask district.",
             "description": "On use gain 12 Strength and lose 3 Dexterity.",
-            "mod": "Bundle Of Potions"
-        },
-        {
-            "id": "bundle_of_potions:SealedLemonFloatRare",
-            "name": "Sealed Lemon Float",
-            "rarity": "Rare",
-            "description": "Permanently obtain 1 copy of the common Relic,\nLemon Float.",
             "mod": "Bundle Of Potions"
         },
         {
             "id": "bundle_of_potions:SmashPotionRare",
             "name": "Smash Potion",
             "rarity": "Rare",
+            "flavor": "Made from shape extracts like Spiker, Deca and Spheres.",
             "description": "Gain the effect of 1 random vanilla form card, hated by a certain orange creature.",
             "mod": "Bundle Of Potions"
         },
@@ -80947,6 +80876,7 @@
             "id": "bundle_of_potions:StrategyinaBottleRare",
             "name": "Strategy in a Bottle",
             "rarity": "Rare",
+            "flavor": "Now with more screens!",
             "description": "At the end of your turn retain up to 2 cards and at the start of your turn draw and discard 1 cards.",
             "mod": "Bundle Of Potions"
         },
@@ -80954,6 +80884,7 @@
             "id": "bundle_of_potions:SuperStatPotionRare",
             "name": "Super Stat Potion",
             "rarity": "Rare",
+            "flavor": "This is to go... Even further beyond!",
             "description": "Gain 3 Strength, Dexterity, Metallicize, Thorns and Omega.",
             "mod": "Bundle Of Potions"
         },
@@ -80961,6 +80892,7 @@
             "id": "bundle_of_potions:VolcanicOfferingRare",
             "name": "Volcanic Offering",
             "rarity": "Rare",
+            "flavor": "Prepared from the fruit of cursed walnuts, this potion consumes its users vitality and transforms it into usable mana. The afterburn can be quite painful.",
             "description": "Lose 6 HP and gain 2 Demon Form, 1 Dark Embrace, 5 Fire Breathing and 1 Combust.",
             "mod": "Bundle Of Potions"
         },
@@ -90178,7 +90110,7 @@
         },
         {
             "name": "Nightmare",
-            "description": "Stance: While in Nightmare Stance, lose 1 Sanity when you play a card, and draw 2 cards when you play a Lunacy.\nExit Nightmare Stance at the end of your turn.",
+            "description": "In this Stance, lose 1 Sanity whenever you play a card, and draw 2 cards when you play a Lunacy.\nExit this Stance at the end of your turn.",
             "mod": "The Packmaster"
         },
         {
@@ -90814,181 +90746,6 @@
             "rarity": "Rare",
             "description": "Converts the card into a Memory when played.",
             "mod": "100% Spire Juice"
-        },
-        {
-            "id": "bundlecore:NormalisedModifier",
-            "name": "Normal",
-            "rarity": "Uncommon",
-            "description": "Card values +#b35%.\nCard can only be played if less than 2(#b3+) other cards have been played this turn.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:RepulsiveModifier",
-            "name": "Forbidden",
-            "rarity": "Uncommon",
-            "description": "Card values increased by 35%. Card gains Purge.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:BongModifier",
-            "name": "Ringing",
-            "rarity": "Rare",
-            "description": "All values multiplied by 2.\nA Curse of the Bell is added to the draw pile at the start of combat.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:PerformingModifier",
-            "name": "Performance of",
-            "rarity": "Uncommon",
-            "description": "Card values +#b50%.\nCard gains Opener.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:FlashbangModifier",
-            "name": "'s Flashbang",
-            "rarity": "Rare",
-            "description": "Cost increased by 1.\nCard applies Stun to the target for 1 turn but gains Purge.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:BreweryModifier",
-            "name": "'s Crackhouse",
-            "rarity": "Rare",
-            "description": "Sponsored by Frost Prime Industries.\nCard gives a potion on use but makes you lose 8(#r5)HP when played.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:UnstableModifier",
-            "name": "Unstable",
-            "rarity": "Special",
-            "description": "Values increased by attached relic (#b1.65x) but this modifier will persist if the relic is lost.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:OverextendedModifier",
-            "name": "Overextended",
-            "rarity": "Rare",
-            "description": "Values are multiplied by 3.\nOn play gives 99(#b3) Weak, Frail and Vulnerable.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:FractalModifier",
-            "name": "Fractalus",
-            "rarity": "Rare",
-            "description": "Card values -#b20%.\nOn play an ethereal copy without this Cardmod is added to your hand.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:CantrippedModifier",
-            "name": "'s Cantrip",
-            "rarity": "Rare",
-            "description": "Draws 1(#b2) cards on play but has Exhaustive 3.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:VenomousModifier",
-            "name": "Venomous",
-            "rarity": "Uncommon",
-            "description": "Damage -#b50%.\nApplies Choke equal to unblocked damage.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:FartModifier",
-            "name": "'s Fart",
-            "rarity": "Uncommon",
-            "description": "Card gains Exhaust.\nApplies 1(#b2) poison at the start of turn to ALL enemies after being played.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:SoupModifier",
-            "name": "Soupy",
-            "rarity": "Rare",
-            "description": "Card applies 1 modifier to every card in hand.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:OrbModifier",
-            "name": "Orby",
-            "rarity": "Common",
-            "description": "This card is considered an Orb.\nCard gains a Crit effect of gaining [E][E] and drawing 4 cards.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:ChokingModifier",
-            "name": "Choking",
-            "rarity": "Rare",
-            "description": "Cost increased by 1.\nCard makes enemies take 6(#b8+) more damage when you play a card this turn.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:BootyModifier",
-            "name": "'s Booty",
-            "rarity": "Uncommon",
-            "description": "Cost increases by 1.\nGain 10(#b15) gold at the start of combat.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:PainfulModifier",
-            "name": "Painful",
-            "rarity": "Common",
-            "description": "Cost -#b1.\nAdds an Wound to the draw pile.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:ScreensModifier",
-            "name": "'s Screens?!",
-            "rarity": "Rare",
-            "description": "Card gains Ethereal.\nCard will Scry 1(#b2), draw and discard 1(#b2) and return 1 card from the discard pile on play.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:FoxyModifier",
-            "name": "Foxy",
-            "rarity": "Uncommon",
-            "description": "Cost +#b1.\nCard gives 2(#b3+) Dexterity on play but Exhausts.\nModders love foxes.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:FriedChickenModifier",
-            "name": "'s Fried Chicken",
-            "rarity": "Uncommon",
-            "description": "Cost increases by 1.\nCard gives 4(#b6)HP when played and Exhausts.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:ScaldingModifier",
-            "name": "Scalding",
-            "rarity": "Uncommon",
-            "description": "Cost -#b1.\nAdds a Burn to the discard pile.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:SlimyModifier",
-            "name": "Slimy",
-            "rarity": "Uncommon",
-            "description": "Cost decreased by 1.\nAdds a Slimed to the discard pile on play.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:ChaoticOrbsModifier",
-            "name": "Chaotic Capacitor",
-            "rarity": "Rare",
-            "description": "Card gives 1 Orb slot and its filled with a random orb. Card now Exhausts.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:BottledMod",
-            "name": "Bottled",
-            "rarity": "Special",
-            "description": "Card gains Quickdraw, Retain and Exhaustive 2.",
-            "mod": "Bundle Of Bundles"
-        },
-        {
-            "id": "bundlecore:ShoppingModifier",
-            "name": "'s Shopping",
-            "rarity": "Rare",
-            "description": "Card gives 1HP and 1(#b3) gold when played.",
-            "mod": "Bundle Of Bundles"
         },
         {
             "id": "CardAugments:FollowUpMod",
@@ -93065,7 +92822,7 @@
         },
         {
             "name": "The Packmaster",
-            "version": "10.0.0",
+            "version": "1.7.2",
             "authors": [
                 "Vex'd",
                 "modargo",
@@ -93100,7 +92857,7 @@
             ],
             "credits": "",
             "description": "Modding Anniversary 5: The Packmaster",
-            "mts_version": "3.18.2",
+            "mts_version": "3.30.2",
             "sts_version": "12-18-2022",
             "dependencies": [
                 "basemod",
@@ -95403,8 +95160,8 @@
         {
             "id": "anniv5:SneckoPack",
             "name": "Snecko",
-            "description": "Unrelieable but powerful effects as befitting of our lord.",
-            "author": "Gk (Erasels), Pandemonium",
+            "description": "Unreliable but powerful effects as befitting of our lord.",
+            "author": "(Gk) Erasels, Pandemonium",
             "credits": "Art sourced from the Downfall mod.",
             "offense": "3",
             "defense": "1",

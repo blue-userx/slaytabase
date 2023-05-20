@@ -30,7 +30,7 @@ async function embed(item, msg, embeds=[], encode=true) {
         case 'card':
             e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/cards/${item.id.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('\"', '').replaceAll('?', '').replaceAll('/', '')}.png`.toLowerCase()};
             e.color = item.character[1];
-            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.hasOwnProperty('pack') ? `Pack: ${item.pack}` : item.mod}\n\n${item.description.replaceAll('~~-', '​~~-')}`;
+            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.hasOwnProperty('pack') ? `Pack: ${item.pack}` : item.mod}\n\n${item.description.replaceAll('~~-', '​~~-')}${item.flavor ? `\n*${item.flavor}*` : ''}`;
             break;
 
         case 'relic':
@@ -44,7 +44,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.id.replaceAll(' ', '').replaceAll(':','-')}.png`.toLowerCase()};
             if (item.character[0] != 'All')
                 e.color = item.character[1];
-            e.description = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}`;
+            e.description = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}${item.flavor ? `\n*${item.flavor}*` : ''}`;
             break;
         
         case 'event':
