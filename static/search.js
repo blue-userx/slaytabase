@@ -70,7 +70,7 @@ function addItems(items) {
         switch(item.itemType) {
             case 'card':
                 block.thumbnail = `/${item.mod}/cards/${item.id.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('\"', '').replaceAll('?', '').replaceAll('/', '')}.png`.toLowerCase();
-                block.content = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.hasOwnProperty('pack') ? `Pack: ${item.pack}` : item.mod}\n\n${item.description}`;
+                block.content = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.hasOwnProperty('pack') ? `Pack: ${item.pack}` : item.mod}\n\n${item.description}${item.flavor ? `\n*${item.flavor}*` : ''}`;
                 break;
 
             case 'relic':
@@ -80,7 +80,7 @@ function addItems(items) {
                 
             case 'potion':
                 block.thumbnail = `/${item.mod}/potions/${item.id.replaceAll(' ', '').replaceAll(':','-')}.png`.toLowerCase();
-                block.content = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}`;
+                block.content = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}${item.flavor ? `\n*${item.flavor}*` : ''}`;
                 break;
             
             case 'event':

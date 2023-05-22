@@ -821,6 +821,7 @@ __List of memes:__
 <image of [item] is typing>
 <another one [item]>
 <i have [card]?left in my hand>
+<i have [card]?left in my pocket>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -1433,6 +1434,21 @@ __List of memes:__
                         texts: [],
                     });
             }
+        ],
+
+        'i have ': [
+            ' in my pocket',
+            async (msg, arg) => await meme(msg, arg, {
+                w: 996,
+                h: 664,
+                bg: 'pocket.png',
+                items: [0],
+                put: [
+                    [0, [[504, 273], [607, 92], [767, 297], [696, 459]]],
+                    ['pocketover.png', 0, 0, 996, 664]
+                ],
+                texts: [],
+            }),
         ],
 
         'i believe in ': [
