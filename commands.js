@@ -360,6 +360,8 @@ __Commands:__
                 return {title: "stopping soon."};
             } else return {title: "...nice try"};
         },
+
+        'character voting': () => ({title: 'https://sts-character-voting.ocean.lol/'}),
     },
 
     prefix: {
