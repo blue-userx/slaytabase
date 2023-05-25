@@ -1393,9 +1393,9 @@ __List of memes:__
         },
     },
 
-    prefixAndSuffix: {
-        'i know': [
-            ' got me',
+    prefixAndSuffix: [
+        [
+            'i know ', ' got me',
             async (msg, arg) => await meme(msg, arg, {
                 w: 680,
                 h: 651,
@@ -1406,8 +1406,8 @@ __List of memes:__
             }),
         ],
         
-        'i have ': [
-            ' in my hand',
+        [
+            'i have ', ' in my hand',
             async (msg, arg) => {
                 if (arg.includes('='))
                     return await meme(msg, arg, {
@@ -1438,8 +1438,8 @@ __List of memes:__
             }
         ],
 
-        'i have ': [
-            ' in my pocket',
+        [
+            'i have ', ' in my pocket',
             async (msg, arg) => await meme(msg, arg, {
                 w: 996,
                 h: 664,
@@ -1453,8 +1453,8 @@ __List of memes:__
             }),
         ],
 
-        'i believe in ': [
-            ' supremacy',
+        [
+            'i believe in ', ' supremacy',
             async (msg, arg) => await meme(msg, arg, {
                 w: 502,
                 h: 497,
@@ -1465,8 +1465,8 @@ __List of memes:__
             }),
         ],
 
-        'damn ': [
-            ' got hands',
+        [
+            'damn ', ' got hands',
             async (msg, arg) => await meme(msg, arg, {
                 w: 515,
                 h: 500,
@@ -1480,8 +1480,8 @@ __List of memes:__
             }),
         ],
 
-        'live ': [
-            ' reaction',
+        [
+            'live ', ' reaction',
             async (msg, arg) => await meme(msg, arg, {
                 w: 196,
                 h: 145,
@@ -1496,8 +1496,8 @@ __List of memes:__
             }),
         ],
 
-        'image of ': [
-            ' is typing',
+        [
+            'image of ', ' is typing',
             async (msg, arg, args, oa) => {
                 let items = await getMemeItems(arg, {items: [0]}, msg);
                 if (!Array.isArray(items))
@@ -1519,7 +1519,7 @@ __List of memes:__
                 };
             },
         ]
-    }
+    ]
 };
 
 export default commands;

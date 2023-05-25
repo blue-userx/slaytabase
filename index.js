@@ -207,13 +207,13 @@ async function getEmbeds(msg, edit=true) {
                                 itemType: 'command',
                                 originalQuery,
                             }};
-                    for (let i in commands.prefixAndSuffix)
-                        if (query.startsWith(i) && query.endsWith(commands.prefixAndSuffix[i][0]))
+                    for (let i of commands.prefixAndSuffix)
+                        if (query.startsWith(i[0]) && query.endsWith(i[1]))
                             item = {item: {
-                                name: i,
-                                suffix: commands.prefixAndSuffix[i][0],
+                                name: i[0],
+                                suffix: i[1],
                                 type: 'prefixAndSuffix',
-                                do: commands.prefixAndSuffix[i][1],
+                                do: i[2],
                                 itemType: 'command',
                                 originalQuery,
                             }};
@@ -648,6 +648,10 @@ async function main() {
 
                 case 'events':
                     character = characters[item.character];
+                    break;
+                
+                case 'mods':
+                    item.mod = item.name;
                     break;
             }
             if (item.hasOwnProperty('altDescription')) {
