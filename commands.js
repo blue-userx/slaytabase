@@ -827,22 +827,22 @@ __List of memes:__
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
+        
 
-        'megamind no ': async (msg, arg) => await meme(msg, arg, {
-            w: 640,
-            h: 640,
-            bg: 'mm.jpg',
-            items: [0],
-            put: [[0, 182, 39, 354, 96]]
-        }),
+        'megamind no ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/mm.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
+            ctx.drawImage(items[0].image, 185, 7, 158, 45);
+        }, {fps: 12}),
+        
 
-        'megamind textno ': async (msg, _, __, oa) => await meme(msg, oa, {
-            w: 640,
-            h: 640,
-            bg: 'mm.jpg',
-            items: [1],
-            texts: [[0, 182, 39, 354, 96, 'white']]
-        }),
+        'megamind textno ': async (msg, arg, _, oa) => await gifMeme(msg, arg, './memetemplates/mm.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
+            ctx.fillStyle = 'white';
+            drawMultilineText(ctx, oa, {
+                rect: {x: 185, y: 7, width: 158, height: 45},
+                lineHeight: 1.0,
+                minFontSize: 1,
+                maxFontSize: 500,
+            });
+        }, {fps: 12}),
 
         'friendship ended ': async (msg, arg) => await meme(msg, arg, {
             w: 600,
