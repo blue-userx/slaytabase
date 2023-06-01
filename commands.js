@@ -270,7 +270,7 @@ __Commands:__
 - - in=drawpile - results must include the phrase "draw pile" (ignores spaces)
 - - ex=? - no results will include the specified phrase
 - - r=2 - get second result
-<s~item>, <d~[item]>, <i~[item name]>, <t~[item]> and <~[item]> are the same as the above, but the result is formatted differently
+<s~item>, <d~[item]>, <i~[item name]>, <t~[item]>, <f~[item]> and <~[item]> are the same as the above, but the result is formatted differently
 <customcommands> - lists the server's custom commands
 <del> deletes your last search in this channel
 <?[search query]> shows the most likely results for a search query
@@ -360,8 +360,6 @@ __Commands:__
                 return {title: "stopping soon."};
             } else return {title: "...nice try"};
         },
-
-        'character voting': () => ({title: 'https://sts-character-voting.ocean.lol/'}),
     },
 
     prefix: {
@@ -514,6 +512,16 @@ __Commands:__
                 title: itemEmbed.data.thumbnail == null ? `No image for ${item.item.itemType} "${item.item.name}"` : '​',
                 thumbnail: itemEmbed.data.thumbnail,
                 color: itemEmbed.data.color,
+            };
+        },
+        
+        'f~': async (msg, arg) => {
+            let item = fn.find(arg);
+            let itemEmbed = await embed({...item.item, score: item.score, query: arg}, undefined, undefined, false);
+            return {
+                ...itemEmbed.data,
+                thumbnail: {},
+                image: itemEmbed.data.thumbnail,
             };
         },
 

@@ -138,8 +138,7 @@ async function startThread() {
             let itemMessage = await thread.send({
                 content: `Daily Discussion ${discussionNum}/${total}`,
                 embeds: [
-                    EmbedBuilder.from({title: ' ', color: daEmbed.data.color, image: daEmbed.data.thumbnail}),
-                    daEmbed,
+                    EmbedBuilder.from({...daEmbed.data, thumbnail: {}, image: daEmbed.data.thumbnail}),
                 ]
             }).catch(e => {});
             itemMessage.pin().catch(e => {});
