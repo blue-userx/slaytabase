@@ -251,6 +251,11 @@ function getFilesFromEmbeds(embeds, spoiler=false) {
         if (spoiler)
             files = files.map(file => {
                 let newName = `SPOILER_${file}`;
+                for (let i of ['author', 'thumbnail', 'image', 'footer'])
+                    if (embed.data.hasOwnProperty(i))
+                        for (let j of ['iconURL', 'url'])
+                            if (embed.data[i].hasOwnProperty(j))
+                                embed.data[i][j] = embed.data[i][j].replace(file, newName);
                 if (fs.existsSync(file))
                     fs.renameSync(file, newName);
                 return newName;
