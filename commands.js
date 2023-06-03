@@ -840,17 +840,32 @@ __List of memes:__
         'megamind no ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/mm.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
             ctx.drawImage(items[0].image, 185, 7, 158, 45);
         }, {fps: 12}),
-        
 
-        'megamind textno ': async (msg, arg, _, oa) => await gifMeme(msg, arg, './memetemplates/mm.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
-            ctx.fillStyle = 'white';
-            drawMultilineText(ctx, oa, {
-                rect: {x: 185, y: 7, width: 158, height: 45},
+        'megamind textno': async (msg, arg, args, oa) => {
+            let textCanvas = createCanvas(158, 45);
+            let textCtx = textCanvas.getContext('2d');
+            textCtx.fillStyle = 'white';
+            drawMultilineText(textCtx, oa, {
+                rect: {x: 0, y: 0, width: 158, height: 45},
                 lineHeight: 1.0,
                 minFontSize: 1,
                 maxFontSize: 500,
             });
-        }, {fps: 12}),
+            let buffer = await canvasGif(
+                './memetemplates/mm.gif',
+                (ctx, w, h, totalFrames, currentFrame) => {
+                    ctx.drawImage(textCanvas, 185, 7);
+                },
+                {fps: 12}
+            );
+            let filename = `export${String(Math.random()).slice(2)}.gif`;
+            fs.writeFileSync(filename, buffer);
+            return {
+                title: ' ',
+                image: {url: 'attachment://'+filename},
+                files: [filename]
+            };
+        },
 
         'friendship ended ': async (msg, arg) => await meme(msg, arg, {
             w: 600,
@@ -1378,16 +1393,19 @@ __List of memes:__
         }),
 
         ' is typing': async (msg, arg, args, oa) => {
+            let textCanvas = createCanvas(194, 48);
+            let textCtx = textCanvas.getContext('2d');
+            textCtx.fillStyle = 'white';
+            drawMultilineText(textCtx, oa, {
+                rect: {x: 0, y: 0, width: 194, height: 48},
+                lineHeight: 1.0,
+                minFontSize: 1,
+                maxFontSize: 500,
+            });
             let buffer = await canvasGif(
                 './memetemplates/typing.gif',
                 (ctx, w, h, totalFrames, currentFrame) => {
-                    ctx.fillStyle = 'white';
-                    drawMultilineText(ctx, oa, {
-                        rect: {x: 87, y: 3, width: 194, height: 48},
-                        lineHeight: 1.0,
-                        minFontSize: 1,
-                        maxFontSize: 500,
-                    });
+                    ctx.drawImage(textCanvas, 87, 3);
                 },
                 {fps: 12}
             );

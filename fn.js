@@ -17,7 +17,7 @@ function shuffle(array) {
 
 function findAll(query) {
     let args = query.split(' ');
-    let actualSearch = args.filter(w => !w.includes('=')).join(' ');
+    let actualSearch = args.filter(w => !w.includes('=')).join(' ').slice(0, 100);
     let results;
     args = args.map(a => a.endsWith('?left') ? a.replace('?left', '') : a);
     args = args.map(a => a.endsWith('?right') ? a.replace('?right', '') : a);

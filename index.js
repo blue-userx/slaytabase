@@ -186,7 +186,7 @@ async function getEmbeds(msg, edit=true) {
                 let query = new String(fn.unPunctuate(originalQuery));
                 query.filter = filters[i] ? filter : false;
                 if (query.length <= 0) continue;
-                let item = fn.find(query);
+                let item;
                 if (msg.inGuild()) {
                     let customCommand = await db.CustomCommand.findOne({where: {guild: msg.guildId, call: query}});
                     if (customCommand != null)
@@ -217,6 +217,8 @@ async function getEmbeds(msg, edit=true) {
                                 itemType: 'command',
                                 originalQuery,
                             }};
+                if (!item)
+                    item = fn.find(query)
                 console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                 let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
                 if (genEmbed != null) {
