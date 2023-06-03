@@ -86,7 +86,7 @@ function findAll(query) {
         });
     }
     let total = results.length;
-    results = [...results.slice(0, 25).sort((a,b) => {
+    results = [...results.slice(0, 100).sort((a,b) => {
         let aM = a.item.searchName == actualSearch || a.item.searchId == actualSearch;
         let bM = b.item.searchName == actualSearch || b.item.searchId == actualSearch;
         if (aM && !bM) return -1;
@@ -98,10 +98,9 @@ function findAll(query) {
             if (!bV && aV) return 1;
             return 0;
         } else return 0;
-    }), ...results.slice(25)];
+    }), ...results.slice(100)];
     results = results.slice(10*page);
     results = results.slice(result);
-    console.log(limit);
     if (limit > 0)
         results = results.slice(0, limit);
     results.total = total;
