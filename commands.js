@@ -417,6 +417,11 @@ __Commands:__
         'searchtext ': async (msg, arg) => {
             let result = fn.find(arg);
             if (result.item.itemType == 'fail') return {title: "no result?"};
+            if (!result.hasOwnProperty('matches'))
+                return {
+                    title: `"${arg}" yields:`,
+                    description: result.item.searchText,
+                };
             let chars = [];
             for (let i of result.matches[0].indices)
                 for (let j = i[0]; j <= i[1]; j++)
