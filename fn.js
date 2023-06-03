@@ -31,6 +31,7 @@ function findAll(query) {
     let page = 0;
     let mods = [];
     let result = 0;
+    let limit = 0;
     for (let i of args) {
         if (i.includes("=")) {
             let prop = i.slice(0, i.indexOf("="));
@@ -69,6 +70,11 @@ function findAll(query) {
                     page = Math.max(0, parseInt(val)-1);
                     if (Number.isNaN(page)) page = 0;
                     break;
+                
+                case "limit":
+                    let limitNum = Math.max(1, Math.min(parseInt(val), results.length)) - 1;
+                    if (!Number.isNaN(limitNum)) limit += limitNum;
+                    break;
             }
         }
     }
@@ -80,8 +86,23 @@ function findAll(query) {
         });
     }
     let total = results.length;
+    results = [...results.slice(0, 25).sort((a,b) => {
+        let aM = a.item.searchName == actualSearch || a.item.searchId == actualSearch;
+        let bM = b.item.searchName == actualSearch || b.item.searchId == actualSearch;
+        if (aM && !bM) return -1;
+        else if (!aM && bM) return 1;
+        else if (aM && bM) {
+            let aV = a.item.mod == 'Slay the Spire';
+            let bV = b.item.mod == 'Slay the Spire';
+            if (aV && !bV) return -1;
+            if (!bV && aV) return 1;
+            return 0;
+        } else return 0;
+    }), ...results.slice(25)];
     results = results.slice(10*page);
     results = results.slice(result);
+    if (limit > 0)
+        results = results.slice(0, limit+1);
     results.total = total;
     results.page = page;
     return results;
@@ -94,7 +115,7 @@ function find(query) {
     query = query.map(a => a.endsWith('?right') ? a.replace('?right', '') : a);
     query = new String(query.join(' '));
     query.filter = filter;
-    let actualSearch = query.split(' ').filter(w => !w.includes('=')).join(' ');
+    //let actualSearch = query.split(' ').filter(w => !w.includes('=')).join(' ');
     let results = findAll(query);
     let item = results.length > 0 ? results[0] : undefined; //(query.includes('+') ? results.find(e => e.name.includes('+')) : results[0])
     if (item == undefined)
@@ -102,11 +123,6 @@ function find(query) {
             itemType: 'fail',
             name: 'No results',
         }};
-    else if (item.item.searchName != actualSearch) {
-        let exactMatch = results.find(e => e.item.searchName == actualSearch || e.item.searchId == actualSearch);
-        if (exactMatch != undefined)
-            item = exactMatch;
-    }
     return item;
 }
 
