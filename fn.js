@@ -72,7 +72,7 @@ function findAll(query) {
                     break;
                 
                 case "limit":
-                    let limitNum = Math.max(1, Math.min(parseInt(val), results.length)) - 1;
+                    let limitNum = Math.max(1, Math.min(parseInt(val), results.length));
                     if (!Number.isNaN(limitNum)) limit += limitNum;
                     break;
             }
@@ -101,8 +101,9 @@ function findAll(query) {
     }), ...results.slice(25)];
     results = results.slice(10*page);
     results = results.slice(result);
+    console.log(limit);
     if (limit > 0)
-        results = results.slice(0, limit+1);
+        results = results.slice(0, limit);
     results.total = total;
     results.page = page;
     return results;
