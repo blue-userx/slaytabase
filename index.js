@@ -171,7 +171,7 @@ async function getEmbeds(msg, edit=true) {
     let queries = [...msg.content.matchAll(/(^|[^\\])((\<(.*?)\>)|(\[\[(.*?)\]\]))/g)];
     let filters = queries.map(e => e[2].trim().startsWith('<'));
     queries = queries.map(e => e[2].trim().startsWith('<') ? e[4] : e[5])
-        .filter(q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init'));
+        .filter(q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init' || q.length <= 0));
     if (queries.length <= queryLimit) {
         if (queries.length > 0) {
             let typing;
@@ -185,7 +185,6 @@ async function getEmbeds(msg, edit=true) {
                 let originalQuery = queries[i];
                 let query = new String(fn.unPunctuate(originalQuery));
                 query.filter = filters[i] ? filter : false;
-                if (query.length <= 0) continue;
                 let item;
                 if (msg.inGuild()) {
                     let customCommand = await db.CustomCommand.findOne({where: {guild: msg.guildId, call: query}});
