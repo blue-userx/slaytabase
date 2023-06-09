@@ -646,7 +646,7 @@ __Commands:__
         
                         let smallcanvas = createCanvas(250,190);
                         let smallctx = smallcanvas.getContext('2d');
-                        smallctx.drawImage(cutcanvas, 0, 0, 250, 190);
+                        smallctx.drawImage(cutcanvas, 0, 3, 250, 190);
                         let filename3 = filename2.replace('_p-', '-');
                         fs.writeFileSync(filename3, smallcanvas.toBuffer());
                         await optimise(filename3);
