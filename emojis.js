@@ -34,7 +34,14 @@ const emojis = [
     ['theunchainedmod:Crushed_Armor', 'CrushedArmor:1064667253896904734'],
     ['theunchainedmod:Relay ', 'Relay:1064667209663774751'],
     ['theunchainedmod:Relay.', 'Relay:1064667209663774751'],
-
+    ['clockworkchar:Wind_Up', 'crankywindup:1117518847717687426'],
+    ['clockworkchar:Spin', 'crankyspin:1117518630561787934'],
+    ['clockworkchar:Let_Go', 'crankyspin:1117518630561787934'],
+    ['clockworkchar:Attune', 'crankyattune:1117519047244918924'],
+    ['clockworkchar:Actuate', 'crankyattune:1117519047244918924'],
+    ['clockworkchar:Proficiency', 'crankyproficiency:1117518430044692542'],
+    ['clockworkchar:Part', 'crankypart:1117519374614544446'],
+    ['clockworkchar:Dizzy', 'crankydizzy:1117518578149761045'],
 ];
 
 export default function emojify(text, character) {

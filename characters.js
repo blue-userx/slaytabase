@@ -87,4 +87,5 @@ export default {
     'Duelist_traps': ['Traps', 2823208, '<:colorless_energy:382625433016991745>'],
     'Duelist_crc': ['Custom Resummon Card', 1582631, '<:colorless_energy:382625433016991745>'],
     'Default_gray_color': ['CHANGE YOUR ENUM VALUE', 0, '😠'],
+    'Clockwork_brown_color': ['Cranky', 7161648, '<:crankyenergy:1117518233419927662>']
 };
