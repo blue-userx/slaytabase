@@ -42,6 +42,7 @@ const emojis = [
     ['clockworkchar:Proficiency', 'crankyproficiency:1117518430044692542'],
     ['clockworkchar:Part', 'crankypart:1117519374614544446'],
     ['clockworkchar:Dizzy', 'crankydizzy:1117518578149761045'],
+    ['clockworkchar:Battery', 'battery:1107557955932520519'],
 ];
 
 export default function emojify(text, character) {
