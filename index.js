@@ -630,7 +630,7 @@ bot.on('interactionCreate', async interaction => {
 
 async function main() {
     console.log('loading and parsing data...');
-    data = JSON.parse(fs.readFileSync('./docs/data.json'));
+    data = JSON.parse(fs.readFileSync('./docs/dataformatted.json'));
     for (let itemType in data)
         for (let item of data[itemType]) {
             let character = characters[''];
