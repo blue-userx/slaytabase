@@ -16,7 +16,7 @@ export default {
     'Guardian': ['The Guardian', 10721357, '<:energy_guardian:801277163650416710>'],
     'Hermit_yellow': ['The Hermit', 10049803, '<:energy_hermit:1016192189438627980> '],
     'Unchained_orange_color': ['The Unchained', 8013057, '<:UnchainedEnergy:1064527209471156274>'],
-    'Packmaster_rainbow': ['The Packmaster', 11375735, '<:colorless_energy:382625433016991745>'],
+    'Packmaster_rainbow': ['The Packmaster', 11375735, '<:PackmasterEnergy:1120007941572014091>'],
     'Astrologer': ['The Astrologer', 723723, '<:colorless_energy:382625433016991745>'],
     'Avocado_green': ['The Avocado', 6517821, '<:colorless_energy:382625433016991745>'],
     'Bard_color': ['The Bard', 3498151, '<:colorless_energy:382625433016991745>'],
@@ -87,5 +87,12 @@ export default {
     'Duelist_traps': ['Traps', 2823208, '<:colorless_energy:382625433016991745>'],
     'Duelist_crc': ['Custom Resummon Card', 1582631, '<:colorless_energy:382625433016991745>'],
     'Default_gray_color': ['CHANGE YOUR ENUM VALUE', 0, '😠'],
-    'Clockwork_brown_color': ['Cranky', 7161648, '<:crankyenergy:1117518233419927662>']
+    'Clockwork_brown_color': ['Cranky', 7161648, '<:crankyenergy:1117518233419927662>'],
+    'Grifters': ['Grifters', 9495778, '<:colorless_energy:382625433016991745>'],
+    'Grifter_green': ['The Wastrel', 7968578, '<:colorless_energy:382625433016991745>'],
+    'Grifter_purple': ['The Spy', 4795962, '<:colorless_energy:382625433016991745>'],
+    'Grifter_red': ['The Bounty Hunter', 9311780, '<:colorless_energy:382625433016991745>'],
+    'The_vixen_orange': ['The Vixen', 16403970, '<:colorless_energy:382625433016991745>'],
+    'Sleuth_gray_color': ['The Sleuth', 5263444, '<:colorless_energy:382625433016991745>'],
+    'Evolution_blue': ['The Evolution', 1670512, '<:colorless_energy:382625433016991745>'],
 };
