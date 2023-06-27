@@ -16,6 +16,7 @@ export default {
     'Guardian': ['The Guardian', 10721357, '<:energy_guardian:801277163650416710>'],
     'Hermit_yellow': ['The Hermit', 10049803, '<:energy_hermit:1016192189438627980> '],
     'Unchained_orange_color': ['The Unchained', 8013057, '<:UnchainedEnergy:1064527209471156274>'],
+    'Unchained_booster_color': ['Unchained: Booster Pack', 8013057, '<:UnchainedEnergy:1064527209471156274>'],
     'Packmaster_rainbow': ['The Packmaster', 11375735, '<:PackmasterEnergy:1120007941572014091>'],
     'Astrologer': ['The Astrologer', 723723, '<:colorless_energy:382625433016991745>'],
     'Avocado_green': ['The Avocado', 6517821, '<:colorless_energy:382625433016991745>'],
