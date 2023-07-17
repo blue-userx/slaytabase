@@ -39,10 +39,10 @@ function useExtraData(data, dataToUse) {
         for (let editData of dataToUse.edit[category]) {
             let item = data[category].find(i => Object.keys(editData.where).filter(key => i[key] != editData.where[key]).length == 0);
             for (let i in editData.to) {
-                if (typeof editData.to[i] == 'string')
-                    item[i] = editData.to[i];
-                else
+                if (typeof editData.to[i] == 'function')
                     item[i] = editData.to[i](item[i]);
+                else
+                    item[i] = editData.to[i];
             }
         }
 }
@@ -265,6 +265,35 @@ async function exportMod(modPath){
             boss.description = `Act ${boss.act} Boss\n\n**${boss.buff[0]}** - ${boss.buff[1]}\n\n**Cards**: ${boss.cards.join(', ')}\n\n**Relics**: ${boss.relics.join(', ')}${boss.hasOwnProperty('customCards') ? `\n\n**Unique Cards**:\n${boss.customCards.map(c => `${c[0]} - ${c[1]}`).join('\n')}` : ''}`;
             data.bosss[i] = boss;
         }
+    
+    if (data.hasOwnProperty('creatures')) {
+        let colours = {
+            'n': '[0;2m',
+            'r': '[2;31m',
+            'b': '[2;34m',
+            'g': '[2;32m',
+            'y': '[2;33m'
+        };
+        for (let creature of data.creatures) {
+            if (creature.hasOwnProperty('moves'))
+                for (let move of creature.moves) {
+                    let description = '';
+                    let colour = '';
+                    for (let word of move.description.split(' ')) {
+                        let wordColour = 'n';
+                        if (word.startsWith('#'))
+                            wordColour = word[1];
+                        if (wordColour != colour) {
+                            colour = wordColour;
+                            description += colours[wordColour];
+                        }
+                        description += (word.startsWith('#') ? word.slice(2) : word) + ' ';
+                    }
+                    move.colouredDesc = description.trim();
+                    move.description = move.description.split(' ').map(w => w.startsWith('#') ? w.slice(2) : w).join(' ');
+                }
+        }
+    }
     
     if (data.hasOwnProperty('events'))
         for (let i in data.events) {

@@ -6,33 +6,45 @@ export default {
                     {
                         "name": "Spike Slime (L)",
                         "type": "Normal",
-                        "minHP": "35",
-                        "maxHP": "35",
-                        "id": "SpikeSlime_L"
+                        "minHP": "64",
+                        "maxHP": "70",
+                        "minHPA": "67",
+                        "maxHPA": "73",
+                        "id": "SpikeSlime_L",
+                        "img": "/extraImages/creatures/Spike-slime-l.png"
                     },
     
                     {
                         "name": "Bronze Orb",
                         "type": "Boss",
-                        "minHP": "55",
-                        "maxHP": "55",
-                        "id": "BronzeOrb"
+                        "minHP": "52",
+                        "maxHP": "58",
+                        "minHPA": "54",
+                        "maxHPA": "60",
+                        "id": "BronzeOrb",
+                        "img": "/extraImages/creatures/Bronze-orb.png"
                     },
     
                     {
                         "name": "Torch Head",
                         "type": "Boss",
-                        "minHP": "39",
-                        "maxHP": "39",
-                        "id": "TorchHead"
+                        "minHP": "38",
+                        "maxHP": "40",
+                        "minHPA": "40",
+                        "maxHPA": "45",
+                        "id": "TorchHead",
+                        "img": "/extraImages/creatures/Torchhead.png"
                     },
     
                     {
                         "name": "Mad Gremlin",
                         "type": "Normal",
-                        "minHP": "22",
-                        "maxHP": "22",
-                        "id": "GremlinWarrior"
+                        "minHP": "20",
+                        "maxHP": "24",
+                        "minHPA": "21",
+                        "maxHPA": "25",
+                        "id": "GremlinWarrior",
+                        "img": "/extraImages/creatures/Mad-gremlin.png"
                     },
                 ],
 
@@ -45,7 +57,821 @@ export default {
             },
 
             "edit": {
-
+                "creatures": [
+                    /*
+                    move types:
+                        a - attack
+                        d - debuff
+                        D - debuff (large)
+                        f - buff
+                        b - block
+                        bd - block + debuff
+                        bf - block + buff
+                        af - attack + buff
+                        ad - attack + debuff
+                        ab - attack + block
+                        u - unknown
+                        s - stunned
+                        e - escape
+                        z - sleep
+                    */
+                    {
+                        "where": {"id": "AcidSlime_L"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Corrosive Spit", "description": "#r11 #b(12). Shuffles #r2 #ySlimed into your discard pile."},
+                                {"type": "d", "name": "Lick", "description": "Applies #r2 #yWeak."},
+                                {"type": "a", "name": "Tackle", "description": "#r16 #b(18)."},
+                                {"type": "u", "name": "Split", "description": "Splits into #r2 Acid Slimes (M) with its current HP."},
+                            ],
+                            "description": "30%/40%/30% (40%/30%/30% on A17) chance to use Corrosive Spit/Tackle/Lick.\nWhen its HP is at or below 50%, switches its intent to Split.\nCannot use Tackle twice in a row or Corrosive Spit three times in a row. Cannot use Lick three times in a row (or twice in a row on A17)."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "AcidSlime_M"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Corrosive Spit", "description": "#r7 #b(8). Shuffles #r2 #ySlimed into your discard pile."},
+                                {"type": "d", "name": "Lick", "description": "Applies #r1 #yWeak."},
+                                {"type": "a", "name": "Tackle", "description": "#r10 #b(12)."},
+                            ],
+                            "description": "30%/40%/30% (40%/40%/20% on A17) chance to use Corrosive Spit/Tackle/Lick.\nCannot use Tackle twice in a row or Corrosive Spit three times in a row. Cannot use Lick three times in a row (or twice in a row on A17)."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "AcidSlime_S"},
+                        "to": {
+                            "moves": [
+                                {"type": "d", "name": "Lick", "description": "Applies #r1 #yWeak."},
+                                {"type": "a", "name": "Tackle", "description": "#r3 #b(4)."},
+                            ],
+                            "description": "Starts with Lick on A17, otherwise starts with a random move. Then alternates between moves."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "AwakenedOne"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Slash", "description": "#r20."},
+                                {"type": "a", "name": "Soul Strike", "description": "#r6x4."},
+                                {"type": "u", "name": "Rebirth", "description": "Removes all debuffs. Removes curiosity. Heals to full. Switches to Awakened Form."},
+                                {"type": "a", "name": "Dark Echo", "description": "#r40."},
+                                {"type": "ad", "name": "Sludge", "description": "#r18. Shuffle #r1 #yVoid into the draw pile."},
+                                {"type": "a", "name": "Tackle", "description": "#r10x3."},
+                            ],
+                            "description": "Whenever you play a power, gains 1 Strength (2 on A19). Starts with 2 Strength on A4. Heals 10 HP at the end of its turn (15 on A19).\nWhen killed for the first time, changes its intent to Rebirth.\nUnawakened Form: Starts with Slash. Then has a 25%/75% chance to use Soul Strike/Slash.\nCannot use Slash three times in a row or Soul Strike twice in a row.\nAwakened Form: Starts with Dark Echo. Then has a 50%/50% chance to use Tackle/Sludge.\nCannot use any move three times in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "BanditBear"},
+                        "to": {
+                            "moves": [
+                                {"type": "d", "name": "Bear Hug", "description": "Removes #r2 #b(4) #yDexterity."},
+                                {"type": "ab", "name": "Lunge", "description": "#r9 #b(10) damage, #r9 #yBlock."},
+                                {"type": "a", "name": "Maul", "description": "#r18 #b(20)."},
+                            ],
+                            "description": "Starts with Bear Hug, then alternates between Lunge and Maul."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "BookOfStabbing"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Multi-Stab", "description": "#r6xN #b(7xN)."},
+                                {"type": "a", "name": "Simgle Stab", "description": "#r21 #b(24)."},
+                            ],
+                            "description": "N=2 and increases by 1 when Multi-Stab is used. On A18, N=1+turn number. Whenever it deals unblocked damage, adds a Wound to your discard pile.\nHas an 85%/15% chance to use Multi-Stab/Single Stab.\nCannot use Multi-Stab 3 times in a row or Single Stab twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "BronzeAutomaton"},
+                        "to": {
+                            "moves": [
+                                {"type": "u", "name": "Spawn Orbs", "description": "Spawns 2 Bronze Orbs."},
+                                {"type": "bf", "name": "Boost", "description": "Gains #r3 #b(4) #yStrength and #r9 #b(12) Block."},
+                                {"type": "a", "name": "Flail", "description": "#r7x2 #b(8x2)."},
+                                {"type": "a", "name": "HYPER BEAM", "description": "#r45 #b(50)."},
+                                {"type": "s", "name": "Stunned", "description": "Nothing."},
+                            ],
+                            "description": "Has 3 Artifact.\nStarts with Spawn Orbs, then repeats Flail/Boost/Flail/Boost/HYPER BEAM/Stunned. On A19, Stunned is replaced with Boost."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Byrd"},
+                        "to": {
+                            "moves": [
+                                {"type": "f", "name": "Caw", "description": "Gains #r1 #yStrength."},
+                                {"type": "a", "name": "Peck", "description": "#r1x5 #b(1x6)"},
+                                {"type": "a", "name": "Swoop", "description": "#r12 #b(14)."},
+                                {"type": "s", "name": "Stunned", "description": "Nothing."},
+                                {"type": "a", "name": "Headbutt", "description": "#r3."},
+                                {"type": "u", "name": "Fly", "description": "Starts Flying."},
+                            ],
+                            "description": "Starts out Flying. When Flying, it takes half as much attack damage. If hit 3 (4 on A17) times in a turn while Flying, it becomes grounded.\nFlying: On turn 1, has a 62.5%/37.5% chance to use Peck/Caw. Then, has a 50%/20%/30% chance of using Peck/Swoop/Caw.\nCannot use Peck three times in a row or use Caw or Swoop twice in a row.\nGrounded: Uses Stunned then Headbutt then Fly."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "ByrdGrounded"},
+                        "to": {
+                            "moves": [],
+                            "description": "See Byrd."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Centurion"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Slash", "description": "#r12 #b(14)."},
+                                {"type": "a", "name": "Fury", "description": "#r6x3 #b(7x3)."},
+                                {"type": "b", "name": "Defend", "description": "#r15 #b(20) to ally."},
+                            ],
+                            "description": "65%/35% chance to use Slash/Defend. If its ally is dead, uses Defend instead of Fury."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Chosen"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Poke", "description": "#r5x2 #b(6x2)."},
+                                {"type": "a", "name": "Zap", "description": "#r18 #b(21)."},
+                                {"type": "ad", "name": "Debilitate", "description": "#r10 #b(12). Applies #r2 #yVulnerable."},
+                                {"type": "d", "name": "Drain", "description": "Applies #r3 #yWeak and gains #r3 #yStrength."},
+                                {"type": "D", "name": "Hex", "description": "Applies Hex."},
+                            ],
+                            "description": "Hex - Shuffle a Dazed into your draw pile whenever you play a skill.\nStarts with Poke then Hex. On A17 starts with just Hex. Then alternates between a 50%/50% chance to use Debilitate/Drain and a 60%/40% chance of using Poke/Zap."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "CorruptHeart"},
+                        "to": {
+                            "moves": [
+                                {"type": "D", "name": "Debilitate", "description": "Applies #r2 #yVulnerable, #yWeak, and #yFrail. Shuffles #r1 of #rEVERY status into your draw pile."},
+                                {"type": "a", "name": "Blood Shots", "description": "#r2x12 #b(2x15)."},
+                                {"type": "a", "name": "Echo", "description": "#r40 #b(45)."},
+                                {"type": "f", "name": "Buff", "description": "Removes negative #yStrength. Gains #r2 #yStrength. Gains an extra buff based on the buff number."},
+                            ],
+                            "description": "Whenever you play a card, deals 1 damage (2 on A19). Caps all damage in a turn to 250 (200 on A19).\nStarts with Debilitate. Then repeats Blood Shots/Echo/Buff and Echo/Blood Shots/Buff at random.\nExtra buffs, in order: 2 Artifact, +1 to the damage dealt whenever you play a card, starts adding a Wound to your discard whenever it deals unblocked attack damage, +10 Strength, +50 Strength. Further buffs repeat the +50 Strength."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Cultist"},
+                        "to": {
+                            "moves": [
+                                {"type": "f", "name": "Incantation", "description": "Gains #r3 #b(4) #b(5) #yRitual."},
+                                {"type": "a", "name": "Dark Strike", "description": "6."},
+                            ],
+                            "description": "Starts with Incantation, then repeats Dark Strike."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Dagger"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Stab", "description": "#r9. Adds a #yWound to your discard pile."},
+                                {"type": "a", "name": "Explode", "description": "#r25. Dies."},
+                            ],
+                            "description": "Uses Stab then Explode."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Darkling"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Nip", "description": "#rD #b(D+2)."},
+                                {"type": "a", "name": "Chomp", "description": "#r8x2 #b(9x2)."},
+                                {"type": "b", "name": "Harden", "description": "#r12. #b(Gains 2 #yStrength)."},
+                                {"type": "u", "name": "Regrow", "description": "Nothing."},
+                                {"type": "f", "name": "Reincarnate", "description": "Revives with 50% HP."},
+                            ],
+                            "description": "D is a random number chosen between 7 and 11 for each darkling that does not change.\nMiddle Darkling: 50%/50% chance to use Nip/Harden.\nSide Darklings: Same pattern as the middle Darkling on turn 1, then has a 30%/40%/30% chance to use Nip/Chomp/Harden.\nCannot use Harden or Chomp twice in a row, or Nip three times in a row.\nWhen killed, if there are other Darklings alive, uses Regrow then Reincarnate.\nDespite not being a \"minion\" enemy, Fatal effects used on Darklings will not trigger unless there are no other darklings alive."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Deca"},
+                        "to": {
+                            "moves": [
+                                {"type": "b", "name": "Square of Protection", "description": "#r16 to all enemies. #b(Applies #r3 #bPlated #bArmor #bto #ball #benemies.)"},
+                                {"type": "ad", "name": "Beam", "description": "#r10x2 #b(12x2). Adds #r2 #yDazed to your discard pile."},
+                            ],
+                            "description": "Has 2 (3 on A19) Artifact.\nRepeats Square of Protection/Beam."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Donu"},
+                        "to": {
+                            "moves": [
+                                {"type": "f", "name": "Circle of Power", "description": "Applies #r3 #yStrength to all enemies."},
+                                {"type": "a", "name": "Beam", "description": "#r10x2 #b(12x2)."},
+                            ],
+                            "description": "Has 2 (3 on A19) Artifact.\nRepeats Beam/Circle of Power."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Exploder"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Slam", "description": "#r9 #b(11)."},
+                                {"type": "u", "name": "Explode", "description": "Deals 30 non-attack damage. Dies."},
+                            ],
+                            "description": "Uses Slam then Slam then Explode."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "GremlinFat"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Smash", "description": "#r4 #b(5). Applies #r1 #yWeak #b(And #yFrail)."},
+                            ],
+                            "description": "Repeats Smash."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "FungiBeast"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Bite", "description": "#r6."},
+                                {"type": "f", "name": "Grow", "description": "Gains #r3 #b(4) #b(5) #yStrength."},
+                            ],
+                            "description": "Applies 2 Vulnerable on death.\n60%/40% to use Bite/Grow. Cannot use Bite three times in a row or Grow twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "GiantHead"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Count", "description": "#r13."},
+                                {"type": "d", "name": "Glare", "description": "Applies #r1 #yWeak."},
+                                {"type": "a", "name": "It Is Time", "description": "#r30 #b(40). Increases the damage of It Is Time by 5."},
+                            ],
+                            "description": "For the first 4 (3 on A18) turns, has a 50%/50% chance of using Count/Glare, then repeats It Is Time.\nCannot use Count or Glare three times in a row.\nIt Is Time's damage cannot be increased by more than a total of 30."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "GremlinLeader"},
+                        "to": {
+                            "moves": [
+                                {"type": "bf", "name": "Encourage", "description": "#r6 #b(10) to allies. Applies #r3 #b(4) #b(5) #yStrength to all enemies."},
+                                {"type": "a", "name": "Stab", "description": "#r6x3."},
+                                {"type": "u", "name": "Rally!", "description": "Summon #r2 random Gremlins."},
+                            ],
+                            "description": "Starts combat with the effects of Rally!\nWith 0 allies: Has a 75%/25% chance to use Rally!/Stab.\nWith 1 ally: If the last move was Encourage, has a 50%/50% chance to use Rally!/Stab. If the last move was Stab, has a 62.5%/37.5% chance to use Rally!/Encourage.\nWith 2+ allies: Has a 67%/33% chance to use Encourage/Stab.\nCannot use any of its move twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "GremlinNob"},
+                        "to": {
+                            "moves": [
+                                {"type": "f", "name": "Bellow", "description": "Gains #r2 #b(3) Enrage."},
+                                {"type": "ad", "name": "Skull Bash", "description": "#r6 #b(8). Applies #r2 #yVulnerable."},
+                                {"type": "a", "name": "Rush", "description": "#r14 #b(16)."},
+                            ],
+                            "description": "Enrage - Gains Strength whenever you play a skill.\nStarts with Bellow. Then, has a 33%/67% chance to use Skull Bash/Rush, or, if on A18, repeats Skull Bash/Rush/Rush.\nCannot use Rush 3 times in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "GremlinWizard"},
+                        "to": {
+                            "moves": [
+                                {"type": "u", "name": "Charging", "description": "Nothing."},
+                                {"type": "a", "name": "Ultimate Blast", "description": "#r25 #b(30)."},
+                            ],
+                            "description": "Repeats Charging/Charging/Ultimate Blast. On A17, uses Charging for the first 2 turns then repeats Ultimate Blast."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Hexaghost"},
+                        "to": {
+                            "moves": [
+                                {"type": "u", "name": "Activate", "description": "Nothing."},
+                                {"type": "a", "name": "Divider", "description": "#rHx6."},
+                                {"type": "ad", "name": "Sear", "description": "#r6. Adds #r1 #b(2) #yBurn(s) to your discard pile."},
+                                {"type": "a", "name": "Tackle", "description": "#r5x2 #b(6x2)."},
+                                {"type": "bf", "name": "Inflame", "description": "12. Gains #r2 #b(3) #yStrength."},
+                                {"type": "a", "name": "Inferno", "description": "#r2x6 #b(3x6). Upgrades ALL current and future #yBurns. Adds 3 #yBurns to your discard pile."},
+                            ],
+                            "description": "H=Current Player HP / 12 + 1.\nStarts with Activate and Divider, then repeats Sear/Tackle/Sear/Inflame/Tackle/Sear/Inferno."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "JawWorm"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Chomp", "description": "#r11 #b(12)."},
+                                {"type": "ab", "name": "Thrash", "description": "#r7 damage, #r5 #yBlock."},
+                                {"type": "bf", "name": "Bellow", "description": "#r6 #b(9). Gains #r3 #b(4) #b(5) #yStrength."},
+                            ],
+                            "description": "Starts with Chomp. Then has a 45%/30%/25% chance of using Bellow/Thrash/Chomp. Cannot use Bellow or Chomp twice in a row, or Thrash three times in a row.\nIn the act 3 encounter of 3 Jaw Worms, they start combat with the effects of Bellow."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Lagavulin"},
+                        "to": {
+                            "moves": [
+                                {"type": "z", "name": "Sleep", "description": "Nothing."},
+                                {"type": "s", "name": "Wake", "description": "Loses #g8 Metallicize."},
+                                {"type": "a", "name": "Attack", "description": "#r18 #b(20)."},
+                                {"type": "D", "name": "Siphon Soul", "description": "Removes #r1 #b(2) #yStrength and #yDexterity."},
+                            ],
+                            "description": "Starts with 8 Block and Metallicize.\nUses Sleep for the first 2 turns, then uses Wake. If it loses HP while Sleeping, it changes its intent to Wake. After using Wake, it repeats Attack/Attack/Siphon Soul."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "LagavulinAwake"},
+                        "to": {
+                            "moves": [],
+                            "description": "See Lagavulin."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Looter"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Mug", "description": "#r10 #b(11)."},
+                                {"type": "a", "name": "Lunge", "description": "#r12 #b(14)."},
+                                {"type": "b", "name": "Smoke Bomb", "description": "#r6."},
+                                {"type": "e", "name": "Escape", "description": "Escape."},
+                            ],
+                            "description": "Steals 15 (20 on A17) gold whenever it attacks. If killed before it manages to Escape, all stolen gold is added to the post-combat rewards.\nStarts with Mug then Mug. Then, has a 50%/50% chance to use Lunge then Smoke Bomb, or immediately use Smoke Bomb. Then, uses Escape."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "FuzzyLouseDefensive"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Bite", "description": "#rD #b(D+1)."},
+                                {"type": "d", "name": "Spit Web", "description": "Applies #r2 #yWeak."},
+                            ],
+                            "description": "D is a random number chosen between 5 and 7 for each louse that does not change. Gains 3-7 (4-8 on A7, 9-12 on A17) Block the first time it's hit.\nHas a 25%/75% chance to use Spit Web/Bite.\nCannot use Bite or Spit Web three times in a row. On A17, cannot use Spit Web twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "FuzzyLouseNormal"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Bite", "description": "#rD #b(D+1)."},
+                                {"type": "f", "name": "Grow", "description": "Gains #r3 #b(4) #yStrength."},
+                            ],
+                            "description": "D is a random number chosen between 5 and 7 for each louse that does not change. Gains 3-7 (4-8 on A7, 9-12 on A17) Block the first time it's hit.\nHas a 25%/75% chance to use Grow/Bite.\nCannot use Bite or Grow three times in a row. On A17, cannot use Grow twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Mugger"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Mug", "description": "#r10 #b(11)."},
+                                {"type": "a", "name": "Lunge", "description": "#r16 #b(18)."},
+                                {"type": "b", "name": "Smoke Bomb", "description": "#r11 #b(17)."},
+                                {"type": "e", "name": "Escape", "description": "Escape."},
+                            ],
+                            "description": "Steals 15 (20 on A17) gold whenever it attacks. If killed before it manages to Escape, all stolen gold is added to the post-combat rewards.\nStarts with Mug then Mug. Then, has a 50%/50% chance to use Lunge then Smoke Bomb, or immediately use Smoke Bomb. Then, uses Escape."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Healer"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Attack", "description": "#r8 #b(9). Applies #r2 #yFrail."},
+                                {"type": "f", "name": "Heal", "description": "Heals all enemies for #r16 #b(20)."},
+                                {"type": "f", "name": "Buff", "description": "Applies #r2 #b(3) #b(4) #yStrength to all enemies."},
+                            ],
+                            "description": "If the total amount of HP that the enemy team is missing is at least 16 (21 if A17), will use Heal. Otherwise has a 40%/60% chance to use Buff/Heal.\nCannot use any move three times in a row. On A17, cannot use Attack twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Nemesis"},
+                        "to": {
+                            "moves": [
+                                {"type": "d", "name": "Debuff", "description": "Adds #r3 #b(5) #yBurns to your discard pile."},
+                                {"type": "a", "name": "Attack", "description": "#r6x3 #b(7x3)/"},
+                                {"type": "a", "name": "Scythe", "description": "#r45."},
+                            ],
+                            "description": "Has Intangible on even-numbered turns.\nHas a 35%/35%/30% chance to use Debuff/Attack/Scythe, but cannot use Scythe on turn 1.\nCannot use attack three times in a row, or use Debuff or Scythe twice in a row.\nBoot fearer."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Orb Walker"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Laser", "description": "#r10 #b(11). Shuffles a #yBurn into your draw pile. Adds a #yBurn to your discard pile."},
+                                {"type": "a", "name": "Claw", "description": "#r15 #b(16)."},
+                            ],
+                            "description": "Gains 3 (5 on A17) Strength at the end of its turn.\nHas a 60%/40% chance to use Laser/Claw.\nCannot use either move three times in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "BanditChild"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Attack", "description": "#r5x2 #r(6x2)."},
+                            ],
+                            "description": "Repeats Attack."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Reptomancer"},
+                        "to": {
+                            "moves": [
+                                {"type": "u", "name": "Summon", "description": "Summons #r1 #b(2) #yDagger(s)."},
+                                {"type": "ad", "name": "Snake Strike", "description": "#r13x2 #b(16x2). Applies #r1 #yWeak."},
+                                {"type": "a", "name": "Big Bite", "description": "#r30 #b(34)."},
+                            ],
+                            "description": "Starts with 2 daggers.\nStarts with Summon. Then, has a 33%/33%/33% chance to use Summon/Snake Strike/Big Bite, or if there are 4 daggers, has a 67%/33% chance to use Snake Strike/Big Bite.\nCannot use Summon three times in a row, or use Snake Strike or Big Bite twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Repulsor"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Bash", "description": "#r11 #b(13)."},
+                                {"type": "d", "name": "Repulse", "description": "Shuffles #r2 #yDazed into your draw pile."},
+                            ],
+                            "description": "Has a 20%/80% chance to use Bash/Repulse.\nCannot use Bash twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "BanditLeader"},
+                        "to": {
+                            "moves": [
+                                {"type": "u", "name": "Mock", "description": "Nothing."},
+                                {"type": "ad", "name": "Agonizing Slash", "description": "#r10 #r(12). Applies #r2 #r(3) #yWeak."},
+                                {"type": "a", "name": "Cross Slash", "description": "#r15 #r(17)."},
+                            ],
+                            "description": "Starts with Mock, then repeats Agonizing Slash/Cross Slash (Agonizing Slash/Cross Slash/Cross Slash on A17)."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Sentry"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Beam", "description": "#r9 #b(10)."},
+                                {"type": "d", "name": "Bolt", "description": "Adds #r2 #b(3) #yDazed to your discard pile."},
+                            ],
+                            "description": "Has 1 Artifact.\nWhen starting between two other sentries, repeats Beam/Bolt, otherwise repeats Bolt/Beam."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Shelled Parasite"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Fell", "description": "#r18 #b(21). Applies #r2 #yFrail."},
+                                {"type": "a", "name": "Double Strike", "description": "#r6x2 #b(7x2)."},
+                                {"type": "af", "name": "Suck", "description": "#r10 #b(12). Heals HP equal to unblocked damage dealt."},
+                                {"type": "s", "name": "Stun", "description": "Nothing."},
+                            ],
+                            "description": "Starts with 14 Block and Plated Armor.\nStarts with a 50%/50% chance to use Suck/Double Strike. On A17 starts with Fell. Then, has a 40%/40$/20% chance to use Double Strike/Suck/Fell. If its Plated Armor is reduced to 0, sets its intent to Stun.\nCannot use Double Strike or Suck three times in a row, or Fell twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "GremlinTsundere"},
+                        "to": {
+                            "moves": [
+                                {"type": "b", "name": "Protect", "description": "#r7 #b(8) #b(11) to a random ally."},
+                                {"type": "a", "name": "Shield Bash", "description": "#r6 #b(8)."},
+                            ],
+                            "description": "Repeats Protect until no other enemies are alive, then repeats Shield Bash."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SlaverBlue"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Stab", "description": "#r12 #b(13)."},
+                                {"type": "ad", "name": "Rake", "description": "#r7 #b(8). Applies #r1 #b(2) #yWeak."},
+                            ],
+                            "description": "Has a 40%/60% chance to use Rake/Stab.\nCannot use any move 3 times in a row. On A17, cannot use Rake twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SlaverRed"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Stab", "description": "#r13 #b(14)."},
+                                {"type": "ad", "name": "Scrape", "description": "#r8 #b(9). Applies #r1 #b(2) #Vulnerable."},
+                                {"type": "D", "name": "Entangle", "description": "Stops the player from playing attacks for #r1 turn."},
+                            ],
+                            "description": "Starts with Stab. Then, repeats Scrape/Scrape/Stab (Scrape/Stab on A17) with a 25% chance replace Entangle as any move. After Entangle is used, has a 55%/45% chance to use Scrape/Stab.\nCannot use any move 3 times in a row. On A17, cannot use Scrape twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SlimeBoss"},
+                        "to": {
+                            "moves": [
+                                {"type": "D", "name": "Goop Spray", "description": "Adds #r3 #b(5) #ySlimed to your discard pile."},
+                                {"type": "u", "name": "Preparing", "description": "Nothing."},
+                                {"type": "a", "name": "Slam", "description": "#r35 #b(38)."},
+                                {"type": "u", "name": "Split", "description": "Splits into an Acid Slime (L) and a Spike Slime (L) with its current HP."},
+                            ],
+                            "description": "Repeats Goop Spray/Preparing/Slam. When its HP is at or below 50%, switches its intent to Split."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SnakePlant"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Chomp", "description": "#r7x3 #b(8x3)."},
+                                {"type": "D", "name": "Enfeebling Spores", "description": "Applies #r2 #yFrail and #yWeak."},
+                            ],
+                            "description": "Starts with 3 Malleable - Gains block when attacked and increases that block by 1. Resets to 3 at the start of its turn.\nHas a 65%/35% chance to use Chomp/Enfeebling Spores. On A17, after using Enfeebling Spores for the first time, repeats Chomp/Chomp/Enfeebling Spores.\nCannot use Chomp three times in a row or Enfeebling Spores twice in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "GremlinThief"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Puncture", "description": "#r9 #b(10)."},
+                            ],
+                            "description": "Repeats Puncture."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Snecko"},
+                        "to": {
+                            "moves": [
+                                {"type": "D", "name": "Perplexing Glare", "description": "Applies #yConfused."},
+                                {"type": "a", "name": "Tail Whip", "description": "#r8 #b(10). Applies #r2 #yVulnerable #b(and #yWeak)"},
+                                {"type": "a", "name": "Bite", "description": "#r15 #b(18)."},
+                            ],
+                            "description": "Starts with Perplexing Glare. Then, has a 60%/40% chance to use Bite/Tail Whip.\nCannot use Bite 3 times in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SphericGuardian"},
+                        "to": {
+                            "moves": [
+                                {"type": "b", "name": "Activate", "description": "#r25 #b(35)."},
+                                {"type": "ad", "name": "Attack", "description": "#r10 #b(11). Apply #r5 #yFrail."},
+                                {"type": "a", "name": "Slam", "description": "#r10x2 #b(11x2)."},
+                                {"type": "ab", "name": "Harden", "description": "#r10 #b(11) damage, #r15 #yBlock."},
+                            ],
+                            "description": "Has 3 Artifact, 40 Block, and the effects of Barricade.\nStarts with Activate then Attack. Then, repeats Slam/Harden."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SpikeSlime_L"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Flame Tackle", "description": "#r16 #b(18). Shuffles #r2 #ySlimed into your discard pile."},
+                                {"type": "d", "name": "Lick", "description": "Applies #r2 #Frail."},
+                                {"type": "u", "name": "Split", "description": "Splits into #r2 Acid Slimes (M) with its current HP."},
+                            ],
+                            "description": "30%/70% chance to use Flame Tackle/Lick.\nWhen its HP is at or below 50%, switches its intent to Split.\nCannot use any move three times in a row. Cannot use Lick twice in a row on A17."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SpikeSlime_M"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Flame Tackle", "description": "#r8 #b(10). Shuffles #r2 #ySlimed into your discard pile."},
+                                {"type": "d", "name": "Lick", "description": "Applies #r1 #yFrail."},
+                            ],
+                            "description": "30%/70% chance to use Flame Tackle/Lick.\nCannot use either move three times in a row. Cannot use Lick twice in a row on A17."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SpikeSlime_S"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Tackle", "description": "#r5 #b(6)."},
+                            ],
+                            "description": "Repeats Tackle."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Spiker"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Cut", "description": "#r7 #b(9)."},
+                                {"type": "f", "name": "Spike", "description": "Gains #r2 #yThorns."},
+                            ],
+                            "description": "Starts with 3 (4 on A2 and 7 on A17) Thorns.\nHas a 50%/50% chance to use Cut/Spike. Can only use Spike 6 times.\nCannot use Cut twice in a row, unless Spike has reached its maximum uses."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Serpent"},
+                        "to": {
+                            "moves": [
+                                {"type": "D", "name": "Constrict", "description": "Applies #r10 #b(12) Constricted."},
+                                {"type": "a", "name": "Quick Tackle", "description": "#r16 #b(18)."},
+                                {"type": "a", "name": "Smash", "description": "#r22 #b(25)."},
+                            ],
+                            "description": "Constrict - At the end of your turn, take damage.\nIf the player is Constricted or if Constrict was used last turn, has a 50%/50% chance to use Quick Tackle/Smash. Otherwise, has a 50%/50% (100%/0% on A17) chance to use Constrict/Quick Tackle."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SpireShield"},
+                        "to": {
+                            "moves": [
+                                {"type": "b", "name": "Bash", "description": "#r30 to all enemies."},
+                                {"type": "ad", "name": "Fortify", "description": "#r12 #b(14). Removes #r1 #yStrength."},
+                                {"type": "ab", "name": "Smash", "description": "#r34 #b(38). Gains #yBlock equal to damage dealt #b(99)."},
+                            ],
+                            "description": "Has 1 (2 on A18) Artifact. Deals +50% damage from behind.\nIf the player has any Orb slots, the Strength removal has a 50% chance to be replaced with 1 Focus removal.\nRepeats Bash/Fortify/Smash and Fortify/Bash/Smash at random."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SpireSpear"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Burn Strike", "description": "#r5x2 #b(6x2). Adds #r2 #yBurns to your discard #b(the top of your draw) pile."},
+                                {"type": "f", "name": "Piercer", "description": "Applies #r2 #yStrength to all enemies."},
+                                {"type": "a", "name": "Skewer", "description": "#r10x3 #b(10x4)."},
+                            ],
+                            "description": "Has 1 (2 on A18) Artifact. Deals +50% damage from behind.\nStarts with Burn Strike. Then, repeats Skewer/Burn Strike/Piercer and Skewer/Piercer/Burn Strike at random."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "SlaverBoss"},
+                        "to": {
+                            "moves": [
+                                {"type": "ad", "name": "Scouring Whip", "description": "#r7. Adds #r1 #b(2) #b(3) #yWound(s) to your discard pile. #b(Gains #r1 #yStrength.)"},
+                            ],
+                            "description": "Repeats Scouring Whip."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Champ"},
+                        "to": {
+                            "moves": [
+                                {"type": "bf", "name": "Defensive Stance", "description": "#r15 #b(18) #b(20). Gains #r5 #b(6) #b(7) Metallicize."},
+                                {"type": "ad", "name": "Face Slap", "description": "#r12 #b(14). Applies #r2 #yFrail and #yVulnerable."},
+                                {"type": "d", "name": "Taunt", "description": "Applies #r2 #yWeak and #yVulnerable."},
+                                {"type": "a", "name": "Heavy Slash", "description": "#r16 #b(18)."},
+                                {"type": "f", "name": "Gloat", "description": "Gains #r2 #b(3) #b(4) #yStrength."},
+                                {"type": "f", "name": "Anger", "description": "Removes all debuffs. Gains #r6 #b(9) #b(12) #yStrength."},
+                                {"type": "af", "name": "Execute", "description": "#r10x2."},
+                            ],
+                            "description": "Uses Taunt every 4 turns. Otherwise, has a 15%/15%/25%/45% chance to use Defensive Stance/Gloat/Face Slap/Heavy Slash. On A19, Gloat is replaced with Defensive Stance, if it can be used.\nAfter its HP is reduced below 50%, uses Anger then repeats Execute/Move as normal/Move as normal.\nCannot use any move twice in a row. Cannot use Defensive Stance more than twice per combat."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "TheCollector"},
+                        "to": {
+                            "moves": [
+                                {"type": "u", "name": "Spawn", "description": "Spawns Torch Heads until there are #r2."},
+                                {"type": "a", "name": "Fireball", "description": "#r18 #b(21)."},
+                                {"type": "bf", "name": "Buff", "description": "#r15 #b(18) #b(23). Applies #r3 #b(4) #b(5) #yStrength to all enemies."},
+                                {"type": "D", "name": "YOU ARE MINE", "description": "Applies #r3 #b(5) #yWeak, #yVulnerable, and #yFrail."},
+                            ],
+                            "description": "Starts with Spawn. Uses YOU ARE MINE on turn 4. Otherwise, has a 25%/45%/30% chance to use Spawn/Fireball/Buff.\nCannot use Spawn if there are 2 Torch Heads (uses Fireball instead). Cannot use Buff twice in a row or Fireball three times in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "TheGuardian"},
+                        "to": {
+                            "moves": [
+                                {"type": "b", "name": "Charging Up", "description": "#r9."},
+                                {"type": "a", "name": "Fierce Bash", "description": "#r32 #b(36)."},
+                                {"type": "D", "name": "Vent Steam", "description": "Applies #r2 #yVulnerable and #yWeak."},
+                                {"type": "a", "name": "Whirlwind", "description": "#r5x4."},
+                                {"type": "f", "name": "Defending...", "description": "Gains #r3 #b(4) Sharp Hide."},
+                                {"type": "a", "name": "Roll Attack", "description": "#r9 #b(10)."},
+                                {"type": "af", "name": "Twin Slam", "description": "#r8x2. Removes Sharp Hide. Switches to Offensive Mode."},
+                            ],
+                            "description": "Sharp Hide - Whenever you play an attack, take damage. Has Mode Shift 30 (35 on A9, 40 on A19), which reduces by unblocked damage dealt. When it reaches 0, switches to Defensive Mode. Starts in Offensive Mode.\nOffensive Mode: Repeats Charging Up/Fierce Bash/Vent Steam/Whirlwind. Starts with Whirlwind when coming out of Defensive Mode.\nDefensive Mode: Uses Defending... then Roll Attack then Twin Slam."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Maw"},
+                        "to": {
+                            "moves": [
+                                {"type": "D", "name": "Roar", "description": "Applies #r3 #b(5) #yWeak and #yFrail."},
+                                {"type": "f", "name": "Slam", "description": "#r25 #b(30)."},
+                                {"type": "a", "name": "Nom", "description": "#r5xT."},
+                                {"type": "a", "name": "Drool", "description": "Gains #r3 #b(5) #yStrength."},
+                            ],
+                            "description": "T=turn number / 2, rounded up.\nStarts with Roar. After using Roar or Drool, has a 50%/50% chance to use Slam/Nom. After using Slam, has a 50%/50% chance to use Drool/Nom. After using Nom, uses Drool."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "TimeEater"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Reverbrate", "description": "#r7x3 #b(8x3)."},
+                                {"type": "a", "name": "Head Slam", "description": "#r26 #b(32). Reduces draw by #r1 for the next #r2 turns. #b(Adds #r2 #ySlimed #bto #byour #bdiscard #bpile.)"},
+                                {"type": "bd", "name": "Ripple", "description": "#r20. Applies #r1 #yVulnerable, #yWeak #b(and #yFrail)."},
+                                {"type": "f", "name": "Haste", "description": "Removes all debuffs. Heals to 50% HP."},
+                            ],
+                            "description": "For each 12 cards you play, ends your turn and gains 2 Strength.\nIf its HP is below 50%, uses Haste. Otherwise, has a 20%/45%/35% chance to use Ripple/Reverbrate/Head Slam.\nCannot use Ripple or Head Slam twice in a row, or Reverbrate three times in a row. Can only use Haste once per combat."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "Transient"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Attack", "description": "#r30 #b(40). Increases the damage of Attack by #r10."},
+                            ],
+                            "description": "Dies after 5 (6 if A17) turns. When attacked, loses Strength equal to damage taken. Gains that Strength back at the end of its turn.\nRepeats Attack."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "WrithingMass"},
+                        "to": {
+                            "moves": [
+                                {"type": "ab", "name": "Flail", "description": "#r15 #b(16) damage, #r16 #b(18) #yBlock."},
+                                {"type": "ad", "name": "Wither", "description": "#r10 #b(12). Applies #b2 #yWeak and #yVulnerable"},
+                                {"type": "a", "name": "Multi-Strike", "description": "#r7x3 #b(9x3)."},
+                                {"type": "a", "name": "Strong Strike", "description": "#r32 #b(38)."},
+                                {"type": "D", "name": "Implant", "description": "Permanently adds a #yParasite to your deck."},
+                            ],
+                            "description": "When attacked, changes its intent. Starts with 3 Malleable - Gains block when attacked and increases that block by 1. Resets to 3 at the start of its turn.\nIts starting move has an equal chance to be any move but Implant. Future moves have a 10%/30%/20%/30%/10% chance to be Implant/Flail/Wither/Multi-Strike/Strong Strike.\nCan only use Implant once per combat."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "BronzeOrb"},
+                        "to": {
+                            "moves": [
+                                {"type": "D", "name": "Stasis", "description": "Steals the rarest card in the draw pile, or from the discard pile if the draw pile is empty."},
+                                {"type": "a", "name": "Beam", "description": "#r8."},
+                                {"type": "b", "name": "Support Beam", "description": "#r12 to Bronze Automaton."},
+                            ],
+                            "description": "When killed, adds the card taken from Stasis to your hand.\nHas a 75%/7.5%/17.5% chance to use Stasis/Beam/Support Beam.\nCan only use Stasis once per combat. Cannot use any move 3 times in a row."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "TorchHead"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Tackle", "description": "#r7."},
+                            ],
+                            "description": "Repeats Tackle."
+                        }
+                    },
+                    
+                    {
+                        "where": {"id": "GremlinWarrior"},
+                        "to": {
+                            "moves": [
+                                {"type": "a", "name": "Scratch", "description": "#r4 #b(5)."},
+                            ],
+                            "description": "Gains 1 (2 on A17) Strength when hit."
+                        }
+                    }
+                ]
             }
         },
     
@@ -642,138 +1468,23 @@ export default {
     
                 "creatures": [
                     {
-                        "where": {"name": "Mystic"},
-                        "to": {"img": "/Slay the Spire/creatures/Healer.png"}
+                        "where": {"id": "FuzzyLouseNormal"},
+                        "to": {"name": "Red Louse"}
                     },
     
                     {
-                        "where": {"name": "Book of Stabbing"},
-                        "to": {"img": "/Slay the Spire/creatures/BookOfStabbing.png"}
+                        "where": {"id": "FuzzyLouseDefensive"},
+                        "to": {"name": "Green Louse"}
+                    },
+
+                    {
+                        "where": {"id": "SlaverBlue"},
+                        "to": {"name": "Blue Slaver"}
                     },
     
                     {
-                        "where": {"name": "The Champ", type: "Boss"},
-                        "to": {"img": "/Slay the Spire/creatures/Champ.png"}
-                    },
-    
-                    {
-                        "where": {"name": "The Maw"},
-                        "to": {"img": "/Slay the Spire/creatures/Maw.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Taskmaster"},
-                        "to": {"img": "/Slay the Spire/creatures/SlaverBoss.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Slaver", "minHP": "47"},
-                        "to": {"name": "Blue Slaver", "img": "/Slay the Spire/creatures/SlaverBlue.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Slaver", "minHP": "50"},
-                        "to": {"name": "Red Slaver", "img": "/Slay the Spire/creatures/SlaverRed.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Louse", "minHP": "13"},
-                        "to": {"name": "Green Louse", "img": "/Slay the Spire/creatures/FuzzyLouseDefensive.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Louse", "minHP": "11"},
-                        "to": {"name": "Red Louse", "img": "/Slay the Spire/creatures/FuzzyLouseNormal.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Lagavulin (Awake)"},
-                        "to": {"img": "/Slay the Spire/creatures/LagavulinAwake.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Spire Growth"},
-                        "to": {"img": "/Slay the Spire/creatures/Serpent.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Torch Head"},
-                        "to": {"img": "/extraImages/creatures/Torchhead.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Bronze Orb"},
-                        "to": {"img": "/extraImages/creatures/Bronze-orb.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Spike Slime (L)"},
-                        "to": {"img": "/extraImages/creatures/Spike-slime-l.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Spike Slime (M)"},
-                        "to": {"img": "/Slay the Spire/creatures/SpikeSlime_M.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Spike Slime (S)"},
-                        "to": {"img": "/Slay the Spire/creatures/SpikeSlime_S.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Acid Slime (L)"},
-                        "to": {"img": "/Slay the Spire/creatures/AcidSlime_L.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Acid Slime (M)"},
-                        "to": {"img": "/Slay the Spire/creatures/AcidSlime_M.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Acid Slime (S)"},
-                        "to": {"img": "/Slay the Spire/creatures/AcidSlime_S.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Mad Gremlin"},
-                        "to": {"img": "/extraImages/creatures/Mad-gremlin.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Sneaky Gremlin"},
-                        "to": {"img": "/Slay the Spire/creatures/GremlinThief.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Fat Gremlin"},
-                        "to": {"img": "/Slay the Spire/creatures/GremlinFat.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Shield Gremlin"},
-                        "to": {"img": "/Slay the Spire/creatures/GremlinTsundere.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Romeo"},
-                        "to": {"img": "/Slay the Spire/creatures/BanditLeader.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Bear"},
-                        "to": {"img": "/Slay the Spire/creatures/BanditBear.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Pointy"},
-                        "to": {"img": "/Slay the Spire/creatures/BanditChild.png"}
-                    },
-    
-                    {
-                        "where": {"name": "Byrd (Grounded)"},
-                        "to": {"img": "/Slay the Spire/creatures/ByrdGrounded.png"}
+                        "where": {"id": "SlaverRed"},
+                        "to": {"name": "Red Slaver"}
                     },
                 ],
             }

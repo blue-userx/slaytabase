@@ -57,6 +57,23 @@ loadMoreButton.onclick = async () => {
 
 const stars = n => Array(Number(n)).fill('⭐').join('');
 
+const intentEmojis = {
+    D: '1130343362575208450',
+    a: '1130343365251174421',
+    ab: '1130343275191087195',
+    ad: '1130343273827934288',
+    af: '1130343276491317318',
+    b: '1130343282841501797',
+    bd: '1130343281579004074',
+    bf: '1130343278898839642',
+    d: '1130343288382173264',
+    e: '1130343265833586738',
+    f: '1130343284099797082',
+    s: '1130343269637832805',
+    u: '1130343270879338588',
+    z: '1130343268329214022',
+};
+
 function addItems(items) {
     for (let i of items) {
         let item = i.item;
@@ -91,7 +108,7 @@ function addItems(items) {
                 
             case 'creature':
                 block.thumbnail = `/${item.mod}/creatures/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`.toLowerCase();
-                block.content = `${item.type} / ${item.minHP}-${item.maxHP} HP / ${item.mod}`;
+                block.content = `${item.type} / ${item.minHP == item.maxHP ? item.maxHP : `${item.minHP}-${item.maxHP}`}${item.hasOwnProperty('minHPA') && item.minHPA != item.minHP || item.maxHPA != item.maxHPA ? ` (${item.minHPA != item.maxHPA ? `${item.minHPA}-${item.maxHPA}` : item.maxHPA})` : ''} HP / ${item.mod}\n\n${item.hasOwnProperty('moves') ? item.moves.map(m => `**<:intent_${m.type}:${intentEmojis[m.type]}> ${m.name}**: ${m.description}`).join('\n') : ''}${item.description ? `\n\n${item.description}` : ''}`;
                 break;
 
             case 'blight':

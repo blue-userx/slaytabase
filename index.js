@@ -708,6 +708,8 @@ async function main() {
                     }
                     else return '';
                 }).join(' '));
+            if (newItem.hasOwnProperty('moves'))
+                newItem.searchText += ' ' + fn.unPunctuate(newItem.moves.map(m => `${m.name} ${m.description}`).join(' '));
             if (newItem.description != null)
                 newItem.description = keywordify(emojify(newItem.originalDescription, character));
             search.add(newItem);
