@@ -718,10 +718,12 @@ async function main() {
                 newItem.description = keywordify(emojify(newItem.originalDescription, character));
             if (!newItem.hasOwnProperty('id'))
                 newItem.id = String(Math.random()).slice(2);
+            let origId = newItem.id;
             while (search._idToShortId.has(newItem.id))
                 newItem.id += '_';
             search.add(newItem);
             search._docs[newItem.id] = newItem;
+            newItem.id = origId;
         }
     search._docslist = Object.values(search._docs);
     console.log('parsed data, connecting to discord...');
