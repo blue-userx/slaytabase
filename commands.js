@@ -814,6 +814,7 @@ __List of memes:__
 <[name] is typing>
 <image of [item] is typing>
 <another one [item]>
+<ill take that [item]>
 <i have [card]?left in my hand>
 <i have [card]?left in my pocket>
 `,
@@ -1100,6 +1101,14 @@ __List of memes:__
         }, {
             coalesce: true,
             fps: 12
+        }),
+
+        'ill take that ': async (msg, arg) => await gifMeme(msg, arg, './memetemplates/cattake.gif', (ctx, w, h, totalFrames, currentFrame, items) => {
+            if (currentFrame >= 55 && currentFrame <= 113)
+            (new Perspective(ctx, items[0].image)).draw([[69, 172], [122, 185], [102, 226], [48, 216]].map(c => [c[0]+currentFrame * 0.1, c[1]]));
+        }, {
+            coalesce: true,
+            fps: 33
         }),
 
         'sb ': async (msg, _, __, oa) => {
