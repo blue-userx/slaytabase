@@ -98,4 +98,10 @@ export default {
     'The_vixen_orange': ['The Vixen', 16403970, '<:colorless_energy:382625433016991745>'],
     'Sleuth_gray_color': ['The Sleuth', 5263444, '<:colorless_energy:382625433016991745>'],
     'Evolution_blue': ['The Evolution', 1670512, '<:colorless_energy:382625433016991745>'],
+    'Flarous_blue_color': ['The Flagbearer', 4882114, '<:colorless_energy:382625433016991745>'],
+    'Milkman_white': ['The Milkman', 3186845, '<:colorless_energy:382625433016991745>'],
+    'Color_rhythm_girl': ['The Rhythm Girl', 7815483, '<:colorless_energy:382625433016991745>'],
+    'Blessing': ['Blessings', 10790052, '<:colorless_energy:382625433016991745>'],
+    'Clockwork': ['The Clockwork', 43447, '<:colorless_energy:382625433016991745>'],
+    'Mari': ['Mari Ohara', 15584768, '<:colorless_energy:382625433016991745>'],
 };

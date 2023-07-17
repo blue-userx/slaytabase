@@ -192,9 +192,9 @@ export default {
                             "moves": [
                                 {"type": "a", "name": "Slash", "description": "#r12 #b(14)."},
                                 {"type": "a", "name": "Fury", "description": "#r6x3 #b(7x3)."},
-                                {"type": "b", "name": "Defend", "description": "#r15 #b(20) to ally."},
+                                {"type": "b", "name": "Defend", "description": "#r15 #b(20) to other enemy, or self if alone."},
                             ],
-                            "description": "65%/35% chance to use Slash/Defend. If its ally is dead, uses Defend instead of Fury."
+                            "description": "65%/35% chance to use Slash/Defend. If Mystic is dead, uses Defend instead of Fury."
                         }
                     },
                     
@@ -331,11 +331,11 @@ export default {
                         "where": {"id": "GremlinLeader"},
                         "to": {
                             "moves": [
-                                {"type": "bf", "name": "Encourage", "description": "#r6 #b(10) to allies. Applies #r3 #b(4) #b(5) #yStrength to all enemies."},
+                                {"type": "bf", "name": "Encourage", "description": "#r6 #b(10) to other enemies. Applies #r3 #b(4) #b(5) #yStrength to all enemies."},
                                 {"type": "a", "name": "Stab", "description": "#r6x3."},
                                 {"type": "u", "name": "Rally!", "description": "Summon #r2 random Gremlins."},
                             ],
-                            "description": "Starts combat with the effects of Rally!\nWith 0 allies: Has a 75%/25% chance to use Rally!/Stab.\nWith 1 ally: If the last move was Encourage, has a 50%/50% chance to use Rally!/Stab. If the last move was Stab, has a 62.5%/37.5% chance to use Rally!/Encourage.\nWith 2+ allies: Has a 67%/33% chance to use Encourage/Stab.\nCannot use any of its move twice in a row."
+                            "description": "Starts combat with the effects of Rally!\nWith 0 minions: Has a 75%/25% chance to use Rally!/Stab.\nWith 1 minion: If the last move was Encourage, has a 50%/50% chance to use Rally!/Stab. If the last move was Stab, has a 62.5%/37.5% chance to use Rally!/Encourage.\nWith 2+ minions: Has a 67%/33% chance to use Encourage/Stab.\nCannot use any of its move twice in a row."
                         }
                     },
                     
@@ -566,7 +566,7 @@ export default {
                         "where": {"id": "GremlinTsundere"},
                         "to": {
                             "moves": [
-                                {"type": "b", "name": "Protect", "description": "#r7 #b(8) #b(11) to a random ally."},
+                                {"type": "b", "name": "Protect", "description": "#r7 #b(8) #b(11) to a random other enemy, or self if alone."},
                                 {"type": "a", "name": "Shield Bash", "description": "#r6 #b(8)."},
                             ],
                             "description": "Repeats Protect until no other enemies are alive, then repeats Shield Bash."
@@ -831,7 +831,7 @@ export default {
                         "to": {
                             "moves": [
                                 {"type": "ab", "name": "Flail", "description": "#r15 #b(16) damage, #r16 #b(18) #yBlock."},
-                                {"type": "ad", "name": "Wither", "description": "#r10 #b(12). Applies #b2 #yWeak and #yVulnerable"},
+                                {"type": "ad", "name": "Wither", "description": "#r10 #b(12). Applies #b2 #yWeak and #yVulnerable."},
                                 {"type": "a", "name": "Multi-Strike", "description": "#r7x3 #b(9x3)."},
                                 {"type": "a", "name": "Strong Strike", "description": "#r32 #b(38)."},
                                 {"type": "D", "name": "Implant", "description": "Permanently adds a #yParasite to your deck."},
@@ -2273,6 +2273,39 @@ export default {
                         "to": {"description": "At the start of your turn, add the following cards with Ethereal and Exhaust to your hand:\n\nBellow (0 [E] ): Gain 2 (3) Strength for each enemy that does not intend to Attack.\nSkull Bash (1 [E] ): Deal 6 (8) damage. Apply 2 Vulnerable.\nRush (1 [E] ): Deal 14 (16) damage.\n\nYou can no longer :Swap. When you would lose all :Temporary :HP, prevent further damage and revert back."}
                     }
                 ],
+            }
+        }
+    },
+
+    "The Unchained Mod": {
+        "pre": {
+            "add": {
+
+            },
+
+            "edit": {
+
+            }
+        },
+
+        "post": {
+            "add": {
+                "events": [
+                    {
+                        "name": "The Demon Speaks",
+                        "acts": [1],
+                        "character": "Unchained_orange_color",
+                        "options": [
+                            ["Unstoppable Force", null, "g/Obtain Crushing Gauntlets. r/Take 7 a/(10) r/damage."],
+                            ["Unlimited Power", null, "g/Obtain Arcane Amplifier. r/Gain a Writhe."],
+                            ["Tell him to shove it", null, ""],
+                        ]
+                    },
+                ]
+            },
+
+            "edit": {
+
             }
         }
     },

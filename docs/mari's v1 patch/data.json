@@ -1,0 +1,1 @@
+{"mods":[{"name":"Mari's V1 Patch","version":"1.0.0","authors":["iryan72"],"credits":"!","description":"small compatibility patch to allow Mari V1 to function. (Mari V2.0 is on the way!)","mts_version":"3.7.0","sts_version":"07-17-2019","dependencies":["basemod","stslib"],"optional_dependencies":[]}]}
