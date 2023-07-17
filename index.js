@@ -93,10 +93,17 @@ router.use('/', express.static('./static'));
 router.use('/', express.static('./docs'));
 website.use(router);
 
-export {bot, search, website};
+export {bot, search, website, setActivity};
+
+const setActivity = () => {
+    if (fs.existsSync('presence.txt'))
+        bot.user.setActivity(fs.readFileSync('presence.txt', 'utf-8'));
+    else bot.user.setActivity('Slay the Spire | <help>');
+};
 
 bot.once('ready', async () => {
-    bot.user.setActivity('Slay the Spire | <help>');
+    setActivity();
+    setInterval(setActivity, 1000 * 60 * 60);
 	console.log('connected to discord. ready!');
     await bot.users.fetch().catch(e => {});
     await bot.channels.fetch().catch(e => {});
@@ -222,7 +229,7 @@ async function getEmbeds(msg, edit=true) {
                             }};
                 if (!item)
                     item = fn.find(query)
-                console.log(`${msg.author.tag} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
+                console.log(`${msg.author.username} searched for "${query}", found ${typeof item == 'object' ? `${item.item.itemType} "${item.item.name}"` : 'nothing'}`);
                 let genEmbed = await embed({...item.item, score: item.score, query}, msg, embeds);
                 if (genEmbed != null) {
                     embeds.push(genEmbed);
@@ -363,6 +370,11 @@ bot.on('interactionCreate', async interaction => {
                             else
                                 await onEdit(msg, msg, true);
                         }
+                        return await interaction.deleteReply();
+                    }
+                    if (interaction.content.startsWith('devsay ') && cfg.overriders.includes(interaction.user.id)) {
+                        await interaction.channel.sendTyping();
+                        setTimeout(() => interaction.channel.send(interaction.content.slice('devsay '.length)), 1000);
                         return await interaction.deleteReply();
                     }
                     let attachment = interaction.options.getAttachment('attachment');

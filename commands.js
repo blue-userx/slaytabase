@@ -1,4 +1,4 @@
-import { bot, search } from './index.js';
+import { bot, search, setActivity } from './index.js';
 import db from './models/index.js';
 import { User, EmbedBuilder } from 'discord.js';
 import { createCanvas, createImageData, loadImage, registerFont } from 'canvas';
@@ -771,6 +771,21 @@ __Commands:__
                 console.log(e);
                 return {title: "error resizing"};
             }
+        },
+
+        'setnick ': async (msg, _, __, oa) => {
+            if (cfg.overriders.includes(msg.author.id) && msg.inGuild()) {
+                (await msg.guild.members.fetchMe()).setNickname(oa);
+                return {title: ':+1:'};
+            } else return {title: "oi!!"};
+        },
+
+        'setpresence ': async (msg, _, __, oa) => {
+            if (cfg.overriders.includes(msg.author.id)) {
+                fs.writeFileSync('presence.txt', Buffer.from(oa));
+                setActivity();
+                return {title: ':+1:'};
+            } else return {title: "this ain't for you"};
         },
 
         memes: () => ({
