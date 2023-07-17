@@ -375,11 +375,11 @@ __Commands:__
             let totalResults = results.total;
             results = results.slice(0, 10);
 
-            let resultText = results.map((i, index) => `${(page*10)+index+1}: ${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} **${i.item.name}** - ${String(Math.round((1 - i.score) * 100))}% sure`).join('\n');
+            let resultText = results.map((i, index) => `${(page*10)+index+1}: ${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '').toLowerCase() : ''} ${i.item.itemType} **${i.item.name}** - ${i.score.toFixed(2)}`).join('\n');
             let firstEmbed = results.length > 0 ? await embed(results[0].item, msg, undefined, false) : {data: {thumbnail: null}};
 
             return {
-                title: `Searched for "${args.filter(a => !a.includes('=')).join(' ')}"`,
+                title: `Searched for "${args.filter(a => !a.includes('=')).join(' ').slice(0, 70)}"`,
                 url: `${cfg.exportURL}/search?${encodeURIComponent(arg)}`,
                 description: results.length == 0 ? 'No results.' : resultText,
                 thumbnail: firstEmbed.data.thumbnail,
@@ -405,7 +405,7 @@ __Commands:__
             results = results.slice(0, num);
             let embeds = await Promise.all(results.map(async (item, index) => {
                 let e = await embed({...item.item, score: item.score, query}, undefined, undefined, index != 0);
-                e.data.description = `${String(Math.round((1 - item.score) * 100))}% sure / ${e.data.description}`;
+                e.data.description = `${item.score.toFixed(2)} / ${e.data.description}`;
                 e.data.footer = null;//{text: `${String(Math.round((1 - item.score) * 100))}% sure`};
                 return e;
             }));
@@ -417,35 +417,14 @@ __Commands:__
         'searchtext ': async (msg, arg) => {
             let result = fn.find(arg);
             if (result.item.itemType == 'fail') return {title: "no result?"};
-            if (!result.hasOwnProperty('matches'))
+            if (!result.hasOwnProperty('terms'))
                 return {
                     title: `"${arg}" yields:`,
                     description: result.item.searchText,
                 };
-            let chars = [];
-            for (let i of result.matches[0].indices)
-                for (let j = i[0]; j <= i[1]; j++)
-                    chars.push(j);
-            chars = [...new Set(chars)];
-            chars.sort((a,b)=>a-b);
-            let val = result.matches[0].value;
-            let last = -Infinity;
-            let highlighted = '';
-            for (let i = 0; i < val.length; i++) {
-                if (chars.includes(i)) {
-                    if (i - last > 1)
-                        highlighted += '__';
-                    last = i;
-                } else if (i - last == 1) {
-                    highlighted += '__';
-                }
-                highlighted += val[i];
-            }
-            if (last == val.length-1)
-                highlighted += '__';
             return {
-                title: `"${arg}" yields:`,
-                description: highlighted,
+                title: `"${arg.slice(0,70)}" (${result.score}) yields:`,
+                description: result.item.searchText.split(' ').map(w => result.terms.includes(w) ? `__${w}__` : w).join(' '),
             };
         },
 

@@ -45,7 +45,7 @@ async function getItems(serverSettings, exclude=[]) {
         where: {guild: serverSettings.guild}
     })).map(i => i.item);
 
-    let possibleItems = search._docs.filter(item =>
+    let possibleItems = search._docslist.filter(item =>
         JSON.parse(serverSettings.mod).includes(item.mod)
         && ['card', 'relic', 'potion', 'event', 'boss'].includes(item.itemType)
         && !['Event', 'Special'].includes(item.rarity)
@@ -60,8 +60,8 @@ async function getItems(serverSettings, exclude=[]) {
 
     return {
         items,
-        embeds: await Promise.all(items.map(i => embed({...search._docs.find(e => e.searchId == i), score: 1, query: fn.unPunctuate(i)}))),
-        components: items.length == 0 ? [] : [new ActionRowBuilder().addComponents(items.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(itemTitle(search._docs.find(e => e.searchId == v))).setStyle(ButtonStyle.Secondary)))],
+        embeds: await Promise.all(items.map(i => embed({...search._docslist.find(e => e.searchId == i), score: 1, query: fn.unPunctuate(i)}))),
+        components: items.length == 0 ? [] : [new ActionRowBuilder().addComponents(items.map((v, i) => new ButtonBuilder().setCustomId(i.toString()).setLabel(itemTitle(search._docslist.find(e => e.searchId == v))).setStyle(ButtonStyle.Secondary)))],
         discussionNum: previousItems.length+1,
         total: previousItems.length+possibleItems.length+items.length+exclude.length,
     };
@@ -144,11 +144,15 @@ async function startThread() {
             }).catch(e => {});
             itemMessage.pin().catch(e => {});
             
+            let time = lastDiscussion.next;
+            while (time <= Date.now())
+                time += timeBetweenDiscussions;
+
             await db.DailyDiscussion.create({
                 guild: serverSettings.guild,
                 channel: thread.id,
                 item: itemId,
-                next: lastDiscussion.next + timeBetweenDiscussions,
+                next: time,
                 voteMessage: voteMessage.id,
                 voteOptions: JSON.stringify(items),
             });

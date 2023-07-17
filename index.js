@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import { Client, GatewayIntentBits, ContextMenuCommandBuilder, ApplicationCommandType, Partials, SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, Collection, TextInputBuilder, TextInputStyle, ModalBuilder } from 'discord.js';
-import Fuse from 'fuse.js'
+import MiniSearch from 'minisearch';
 import fs from 'fs';
 import commands from './commands.js';
 import embed from './embed.js';
@@ -16,17 +16,21 @@ import express from 'express';
 
 const bot = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.DirectMessages], partials: [Partials.Channel] });
 
-const search = new Fuse([], {
-    includeScore: true,
-    includeMatches: true,
-    useExtendedSearch: true,
-    keys: ['searchText'],
-    ignoreLocation: true,
+const search = new MiniSearch({
+    fields: ['name', 'searchText'],
+    searchOptions: {
+        fuzzy: true,
+        boost: {
+            name: 0.1
+        }
+    }
 });
+search._docs = {};
 search.searchFn = search.search;
 search.search = str => {
     let results = search.searchFn(fn.unPunctuate(str));
     if (str.filter) results = results.filter(str.filter);
+    results.forEach(r => r.item = search._docs[r.id]);
     return results;
 }
 const queryLimit = 10; //max number of embeds on a discord message
@@ -468,7 +472,7 @@ bot.on('interactionCreate', async interaction => {
             switch (interaction.commandName) {
                 case 'i':
                     await interaction.respond(search.search(fn.unPunctuate(interaction.options.getFocused() == '' ? 'basic card' : interaction.options.getFocused())).slice(0,25).map(i => ({
-                        name: `${i.item.name} (${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '')+' ' : ''}${i.item.itemType})${i.item.originalDescription ? ` - ${i.item.originalDescription.replaceAll('\n', ' ')}` : ''}`.slice(0,94) + ` (${String(Math.round((1 - i.score) * 100))}%)`,
+                        name: `${i.item.name} (${i.item.itemType == 'card' ? i.item.character[0].replace('The ', '')+' ' : ''}${i.item.itemType})${i.item.originalDescription ? ` - ${i.item.originalDescription.replaceAll('\n', ' ')}` : ''}`.slice(0,93) + ` (${String(i.score).slice(0,4)})`,
                         value: i.item.searchText.slice(0,100)//i.item.hasOwnProperty('id') ? i.item.id : i.item.name,
                     })));
                     break;
@@ -492,7 +496,7 @@ bot.on('interactionCreate', async interaction => {
                     for (let i = 0; i < words.length; i++) {
                         for (let j = i; j < words.length && j < i + 3; j++) {
                             let query = words.slice(i, j+1).join(' ');
-                            let exactMatch = search._docs.find(e => e.searchName == query);
+                            let exactMatch = search._docslist.find(e => e.searchName == query);
                             if (exactMatch != undefined) matches.push(exactMatch.name);
                         }
                     }
@@ -712,8 +716,14 @@ async function main() {
                 newItem.searchText += ' ' + fn.unPunctuate(newItem.moves.map(m => `${m.name} ${m.description}`).join(' '));
             if (newItem.description != null)
                 newItem.description = keywordify(emojify(newItem.originalDescription, character));
+            if (!newItem.hasOwnProperty('id'))
+                newItem.id = String(Math.random()).slice(2);
+            while (search._idToShortId.has(newItem.id))
+                newItem.id += '_';
             search.add(newItem);
+            search._docs[newItem.id] = newItem;
         }
+    search._docslist = Object.values(search._docs);
     console.log('parsed data, connecting to discord...');
     bot.login(cfg.token);
     website.listen(cfg.websitePort, () => console.log(`Site running! Test at http://localhost:${cfg.websitePort}`));

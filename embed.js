@@ -41,7 +41,7 @@ async function embed(item, msg, embeds=[], encode=true) {
     if (item.hasOwnProperty('query') && !item.query.includes(fn.unPunctuate(item.name)) && item.query != item.searchId)
         e.footer = {
             //iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=32`,
-            text: `${item.query.filter ? '<' : '[['}${item.query.slice(0, 75)}${item.query.length > 75 ? '...' : ''}${item.query.filter ? '>' : ']]'} = ${item.name == 'No results' ? '?' : item.searchName}${item.score != undefined ? ', '+String(Math.round((1 - item.score) * 100))+'% sure' : ''}`, //text: `${msg.author.username}: <${item.query}>`,
+            text: `${item.query.filter ? '<' : '[['}${item.query.slice(0, 75)}${item.query.length > 75 ? '...' : ''}${item.query.filter ? '>' : ']]'} = ${item.name == 'No results' ? '?' : item.searchName}${item.score != undefined ? ', '+item.score.toFixed(2) : ''}`, //text: `${msg.author.username}: <${item.query}>`,
         };
     switch (item.itemType) {
         case 'card':

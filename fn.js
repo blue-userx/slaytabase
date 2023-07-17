@@ -22,9 +22,9 @@ function findAll(query) {
     args = args.map(a => a.endsWith('?left') ? a.replace('?left', '') : a);
     args = args.map(a => a.endsWith('?right') ? a.replace('?right', '') : a);
     if (args[0] == "randomitem")
-        results = shuffle(search._docs.map((r, i) => ({item: r, score: 0, refIndex: i})));
+        results = shuffle(search._docslist.map((r, i) => ({item: r, score: 0, refIndex: i})));
     else if (actualSearch == "")
-        results = search._docs.map((r, i) => ({item: r, score: 0, refIndex: i}));
+        results = search._docslist.map((r, i) => ({item: r, score: 0, refIndex: i}));
     else
         results = search.search(actualSearch);
     if (query.filter) results = results.filter(query.filter);

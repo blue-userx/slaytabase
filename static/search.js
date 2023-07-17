@@ -79,7 +79,7 @@ function addItems(items) {
         let item = i.item;
         let block = {
             title: item.name,
-            footer: `${String(Math.round((1 - i.score) * 100))}% - ${item.id}`
+            footer: `${i.score.toFixed(2)} - ${item.id}`
         };
         if (item.hasOwnProperty('character'))
             block.colour = item.character[1];

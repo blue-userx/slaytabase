@@ -10,7 +10,7 @@ html
             meta(property="og:type" content="website")
             meta(property="og:site_name" content="Slaytabase")
             meta(property="og:title" content=`Search for "${query}"`.replaceAll('"', '&quot;'))
-            meta(property="og:description" content=results.map((e, i) => `${i+1}: ${e.item.itemType == 'card' ? e.item.character[0].replace('The ', '').toLowerCase()+' ' : ''}${e.item.itemType} ${e.item.name} - ${String(Math.round((1 - e.score) * 100))}%`).join('\n').replaceAll('"', '&quot;'))
+            meta(property="og:description" content=results.map((e, i) => `${i+1}: ${e.item.itemType == 'card' ? e.item.character[0].replace('The ', '').toLowerCase()+' ' : ''}${e.item.itemType} ${e.item.name} - ${e.score.toFixed(2)}`).join('\n').replaceAll('"', '&quot;'))
             meta(name="theme-color" content="#ffffff")
             if firstEmbed.data.hasOwnProperty('thumbnail') && firstEmbed.data.thumbnail.url
                 meta(property="og:image" content=firstEmbed.data.thumbnail.url)
