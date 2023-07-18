@@ -177,12 +177,12 @@ bot.once('ready', async () => {
     ]);
 });
 
+let validQuery = q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init' || q.length <= 0);
 async function getEmbeds(msg, edit=true) {
     if (msg.content.includes('`')) return 0;
-    let queries = [...msg.content.matchAll(/(^|[^\\])((\<(.*?)\>)|(\[\[(.*?)\]\]))/g)];
-    let filters = queries.map(e => e[2].trim().startsWith('<'));
-    queries = queries.map(e => e[2].trim().startsWith('<') ? e[4] : e[6])
-        .filter(q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init' || q.length <= 0));
+    let queries = [...msg.content.matchAll(/(?<=(^|[^\\]))((\<(.*?)\>)|(\[\[(.*?)\]\]))/g)];
+    let filters = queries.filter(e => e[2].trim().startsWith('<') ? validQuery(e[4]) : validQuery(e[6])).map(e => e[2].trim().startsWith('<'));
+    queries = queries.map(e => e[2].trim().startsWith('<') ? e[4] : e[6]).filter(validQuery);
     if (queries.length <= queryLimit) {
         if (queries.length > 0) {
             let typing;
