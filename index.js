@@ -374,7 +374,8 @@ bot.on('interactionCreate', async interaction => {
                     }
                     if (interaction.content.startsWith('devsay ') && cfg.overriders.includes(interaction.user.id)) {
                         await interaction.channel.sendTyping();
-                        setTimeout(() => interaction.channel.send(interaction.content.slice('devsay '.length)), 1000);
+                        console.log(interaction.content);
+                        setTimeout(() => interaction.channel.send(interaction.content.slice('devsay '.length).replaceAll('\\n', '\n')), 1000);
                         return await interaction.deleteReply();
                     }
                     let attachment = interaction.options.getAttachment('attachment');
