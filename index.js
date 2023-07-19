@@ -44,6 +44,7 @@ var website = express();
 website.set('views', './views')
 website.set('view engine', 'pug');
 var router = express.Router({caseSensitive: true});
+router.get('/redirect/*', (req, res) => res.redirect(decodeURIComponent(req.originalUrl.slice('/redirect/'.length))));
 router.use('/', (req, res, next) => {
     if (req.originalUrl.includes('cards/') || req.originalUrl.includes('potions/')) {
         let imageUrl;
@@ -64,7 +65,6 @@ router.use('/', (req, res, next) => {
 });
 router.get('/', (req, res) => res.render('home'));
 router.get('/exports', (req, res) => res.sendFile('./docs/index.html', {root: '.'}));
-router.get('/redirect/*', (req, res) => res.redirect(decodeURIComponent(req.originalUrl.slice('/redirect/'.length))));
 router.get('/search', async (req, res) => res.render('search', {
     results: req.originalUrl.length > 8 ? fn.findAll(decodeURIComponent(req.originalUrl.slice(8))).slice(0, 10) : [],
     firstEmbed: req.originalUrl.length > 8 ? await embed({...(fn.find(decodeURIComponent(req.originalUrl.slice(8))).item), score: 0, query: ''}) : {},
@@ -374,7 +374,6 @@ bot.on('interactionCreate', async interaction => {
                     }
                     if (interaction.content.startsWith('devsay ') && cfg.overriders.includes(interaction.user.id)) {
                         await interaction.channel.sendTyping();
-                        console.log(interaction.content);
                         setTimeout(() => interaction.channel.send(interaction.content.slice('devsay '.length).replaceAll('\\n', '\n')), 1000);
                         return await interaction.deleteReply();
                     }
