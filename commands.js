@@ -376,10 +376,10 @@ __Commands:__
                 cardEffects.push(effects[Math.floor(Math.random() * effects.length)].replaceAll('\n','').trim());
             }
             name = name.join(' ');
-            let description = cardEffects.join('.\n')+'.';
+            let description = cardEffects.join('.\n').replaceAll('*', '')+'.';
             let cardType = description.toLowerCase().includes('deal') && description.toLowerCase().includes('damage') ? 'Attack' : (Math.random() > 0.8 ? 'Power' : 'Skill');
 
-            let generated = await meme(msg, `${cost}=${name.replaceAll('=','')}=${description.replaceAll('=','')}=${cardType}`, {
+            let generated = await meme(msg, `${cost}=${name.replaceAll('=','')}=${description.replaceAll('~', '').replaceAll('=','').replace(/\<\:(.*)\>/g)}=${cardType}`, {
                 w: 350,
                 h: 500,
                 bg: 'makeacard.png',
