@@ -93,6 +93,7 @@ async function exportMod(modPath){
         };
     }
 
+    data.mod.name = data.mod.name.replaceAll(':', '');
     data.mods = [data.mod];
     delete data.mod;
     let mod = data.mods[0].name;
