@@ -367,8 +367,10 @@ __Commands:__
             let rarity = ['Common', 'Uncommon', 'Rare'][Math.floor(Math.random() * 3)];
             let name = [];
             let cardEffects = [];
+            let query = new String('randomitem type=card');
+            query.filter = arg.filter;
             for (let i = 0; i < numEffects; i++) {
-                let card = fn.find('randomitem type=card').item;
+                let card = fn.find(query).item;
                 let nameWords = card.name.split(' ');
                 let effects = card.description.split('.').filter(e => fn.unPunctuate(e).length > 2);
                 if (effects.length == 0) continue;
