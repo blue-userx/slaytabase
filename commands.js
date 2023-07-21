@@ -360,6 +360,47 @@ __Commands:__
                 return {title: "stopping soon."};
             } else return {title: "...nice try"};
         },
+
+        'make me a card idea': async (msg, arg) => {
+            let numEffects = 2 + Math.round(Math.random());
+            let cost = Math.floor(Math.random() * 4);
+            let rarity = ['Common', 'Uncommon', 'Rare'][Math.floor(Math.random() * 3)];
+            let name = [];
+            let cardEffects = [];
+            for (let i = 0; i < numEffects; i++) {
+                let card = fn.find('randomitem type=card').item;
+                let nameWords = card.name.split(' ');
+                let effects = card.description.split('.').filter(e => fn.unPunctuate(e).length > 2);
+                if (effects.length == 0) continue;
+                name.push(nameWords[Math.floor(Math.random() * nameWords.length)]);
+                cardEffects.push(effects[Math.floor(Math.random() * effects.length)].replaceAll('\n','').trim());
+            }
+            name = name.join(' ');
+            let description = cardEffects.join('.\n')+'.';
+            let cardType = description.toLowerCase().includes('deal') && description.toLowerCase().includes('damage') ? 'Attack' : (Math.random() > 0.8 ? 'Power' : 'Skill');
+
+            let generated = await meme(msg, `${cost}=${name.replaceAll('=','')}=${description.replaceAll('=','')}=${cardType}`, {
+                w: 350,
+                h: 500,
+                bg: 'makeacard.png',
+                items: [1, 1, 1,1],
+                put: [],
+                texts: [
+                    [0, 43, 32, 40, 42, 'white'],
+                    [1, 72, 75, 217, 32, 'white'],
+                    [2, 67, 283, 198, 156, 'white'],
+                    [3, 146, 235, 55, 16, 'white'],
+                ]
+            });
+
+            return {
+                title: name,
+                description: `${rarity} ${cardType} / ${cost} <:colorless_energy:382625433016991745> / The Slaytabase / No One\n\n${description}`,
+                thumbnail: generated.image,
+                files: generated.files,
+                footer: {text: 'i made this one just for you <3'}
+            };
+        },
     },
 
     prefix: {
