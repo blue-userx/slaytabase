@@ -104,4 +104,5 @@ export default {
     'Blessing': ['Blessings', 10790052, '<:colorless_energy:382625433016991745>'],
     'Clockwork': ['The Clockwork', 43447, '<:colorless_energy:382625433016991745>'],
     'Mari': ['Mari Ohara', 15584768, '<:colorless_energy:382625433016991745>'],
+    'Rodent_colour_ocean': ['the rodent', 16771304, '<:rodentenergy:1133066123231887360>'],
 };
