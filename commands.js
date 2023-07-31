@@ -875,6 +875,7 @@ __List of memes:__
 <ill take that [item]>
 <i have [card]?left in my hand>
 <i have [card]?left in my pocket>
+<waiter waiter more [item] please>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -1584,6 +1585,20 @@ __List of memes:__
                     ['livereaction2.png', 0, 0, 196, 145],
                 ],
                 texts: [[0, 42, 6, 65, 22, 'white']]
+            }),
+        ],
+
+        [
+            'waiter waiter more ', ' please',
+            async (msg, arg) => await meme(msg, arg, {
+                w: 352,
+                h: 466,
+                bg: 'waiterwaiter.png',
+                items: [0],
+                put: [
+                    [0, 47, 63, 128, 156]
+                ],
+                texts: []
             }),
         ],
 
