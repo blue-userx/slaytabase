@@ -34,7 +34,7 @@ export default {
     'Marisa_derivations': ['Marisa: Derivations', 18548, '<:colorless_energy:382625433016991745>'],
     'Ego': ['Ego', 3866905, '<:colorless_energy:382625433016991745>'],
     'Somnambulant_gray': ['The Somnambulant', 4613489, '<:colorless_energy:382625433016991745>'],
-    'Fishing_color': ['The Adventurer', 3712943, '<:colorless_energy:382625433016991745>'],
+    'Fishing_color': ['The Adventurer', 3712943, '<:AdventurerEnergy:1136100700712087674>'],
     'Artist_rainbow_color': ['The Artist', 15395562, '<:colorless_energy:382625433016991745>'],
     'Axe_color': ['The Axe', 6560793, '<:colorless_energy:382625433016991745>'],
     'Constructmod': ['The Construct', 13092685, '<:colorless_energy:382625433016991745>'],
