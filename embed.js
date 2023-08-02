@@ -112,6 +112,10 @@ async function embed(item, msg, embeds=[], encode=true) {
             e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/nodemodifiers/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`.toLowerCase()};
             break;
         
+        case 'adventurerboard':
+            e.description = `${item.type} Board / ${item.mod}\n\n${item.specialRule != 'None' ? `Special rule: ${item.specialRule}\n\n` : ''}${item.effects.map((e,i) => `${i+1}. ${e}`).join('\n')}`;
+            break;
+        
         case 'command':
             e.color = 16777215;
             e.title = '';

@@ -471,6 +471,15 @@ __Commands:__
             };
         },
 
+        'data?': async (msg, arg) => {
+            let result = fn.find(arg);
+            if (result.item.itemType == 'fail') return {title: "no result?"};
+            return {
+                title: ' ',
+                description: `\`\`\`json\n${JSON.stringify(result.item, null, 4)}\n\`\`\``,
+            };
+        },
+
         'exportjson': async (msg, arg) => {
             let results = fn.findAll(arg).slice(0, 100);
             results.forEach(r => delete r.matches);

@@ -708,6 +708,8 @@ async function main() {
                     'cards',
                     'tags',
                     'rooms',
+                    'specialRule',
+                    'effects',
                 ].map(key => {
                     if (Array.isArray(key)) {
                         let look = newItem;
