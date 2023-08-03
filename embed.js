@@ -98,7 +98,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             break;
         
         case 'pack':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/packs/${item.id.slice(item.id.indexOf(':')+1)}.png`.toLowerCase()};
+            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/packs/${item.id.replaceAll(':', '-')}.png`.toLowerCase()};
             e.color = 12083229;
             e.description = `${item.mod.replace('The ', '')} Card Pack / By ${item.author}\n\n${item.description}\nOffense: ${stars(item.offense)}\nDefense: ${stars(item.defense)}\nSupport: ${stars(item.support)}\nFrontload: ${stars(item.frontload)}\nScaling: ${stars(item.scaling)}\nTags: ${item.tags.join(', ')}\n\nCards: ${item.cards.join(', ')}${item.credits.length > 0 ? '\n\nCredits: '+item.credits : ''}`;
             break;
