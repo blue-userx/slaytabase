@@ -403,6 +403,19 @@ __Commands:__
                 footer: {text: 'i made this one just for you <3'}
             };
         },
+
+        'adventurer board forecast': async msg => {
+            return {
+                title: 'The board forecast for this week:',
+                url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2848995399',
+                description: [-1, 0, 1, 2, 3, 4, 5, 6].map(d => {
+                    let date = new Date(Date.now() + d * 1000 * 60 * 60 * 24);
+                    let boards = fn.findAll(`type=board type=${date.getUTCDay() == 0 || date.getUTCDay() == 1 ? 'complex' : 'regular'}`);
+                    let board = boards[Math.floor(date.getTime() / (1000 * 60 * 60 * 24)) % boards.length];
+                    return `${d==0?'__':''}${date.toLocaleDateString(undefined, {weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'})}${d==0?'__':''}: ${board.item.type == 'Complex' ? `**${board.item.name}**` : board.item.name}`;
+                }).join('\n')
+            }
+        },
     },
 
     prefix: {
