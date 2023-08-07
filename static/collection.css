@@ -1,0 +1,60 @@
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+#colours {
+    overflow-y: scroll;
+}
+
+.result {
+    padding: 0.644em 0.5em;
+    transition: ease-in-out padding 0.1s;
+}
+
+.result:hover {
+    padding: 0;
+}
+
+.result > div {
+    overflow: hidden
+}
+
+.result > div > img {
+    width: 200%;
+    color: white;
+}
+
+.right {
+    margin-left: -100%;
+}
+
+#colours > div {
+    display: flex;
+    justify-content: center;
+    padding: 0.2em 0;
+}
+
+#colours button {
+    width: 10em;
+}
+
+#popup {
+    background: #000000af;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+#popup img {
+    margin-left: 12.5vw;
+    margin-top: 12.5vh;
+    width: 75vw;
+    height: 75vh;
+    object-fit: contain;
+    user-select: none;
+}

@@ -3,19 +3,20 @@ import { search } from './index.js';
 const unPunctuate = str => str.replaceAll('\n', ' ').replace(/[^\w\s?~=:]|_/g, "").replace(/\s+/g, " ").trim().toLowerCase();
 
 function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
-  
+    let currentIndex = array.length, randomIndex;
     while (currentIndex != 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
         [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
     }
-  
     return array;
-  }
+}
   
 
 function findAll(query) {
+    let filter = query.filter;
+    query = new String(unPunctuate(query));
+    query.filter = filter;
     let args = query.split(' ');
     let actualSearch = args.filter(w => !w.includes('=')).join(' ').slice(0, 100);
     let results;
@@ -59,6 +60,10 @@ function findAll(query) {
 
                 case "ex":
                     results = results.filter(r => !r.item.searchText.replaceAll(' ', '').includes(val));
+                    break;
+                
+                case "color":
+                    results = results.filter(r => (r.item.hasOwnProperty('color') && unPunctuate(r.item.color) == val) || (r.item.hasOwnProperty('tier') && unPunctuate(r.item.tier) == val));
                     break;
                 
                 case "r":

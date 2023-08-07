@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Slaytabase Collection View
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet")
+        link(href="/collection.css" rel="stylesheet")
+        meta(property="og:type" content="website")
+        meta(property="og:site_name" content="Slaytabase")
+        meta(property="og:title" content=`Slaytabase collection view for search "${query}"`.replaceAll('"', '&quot;'))
+        meta(property="og:description" content=`View Slay the Spire cards in a grid view.`)
+        meta(name="theme-color" content="#ffffff")
+        style#imageSize
+        style#showUpgrade
+
+    body
+        .d-flex.vh-100.flex-column.bg-dark.text-light#content
+            div.px-4
+                h3.text-light.text-center #[img(src="/icon.png" height=48)] Slaytabase Collection View
+                input.form-control.form-control-lg#search(type="text" placeholder="Search for Slay the Spire cards")
+                .d-flex
+                    input.form-range#imagesPerRow(type="range" step=1 min=1 value=5 max=15 oninput="setImageSize(this)")
+                    div.form-check.ps-5
+                        input.form-check-input#showUpgradeCheck(type="checkbox" oninput="setUpgraded(this)")
+                        label.form-check-label(for="showUpgradeCheck"): b Upgrade
+                hr.text-secondary
+            #colours.d-none: each character, color in characters
+                div: button.btn.btn-primary(style=`background:#${character[1].toString(16).padStart(6, 0)};color:${(character[1]/65536*299)+(character[1]%65536/256*587)+(character[1]%256*114) > 155000 ? 'black': 'white'}` onclick=`color('${color}')`)= character[0]
+            #results
+            #resultFormat.result.d-none: div: img(alt="no result" loading="lazy" onclick="popup(this)")
+        #popup(style="display: none")
+            img
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js")
+        script(src="/collection.js")

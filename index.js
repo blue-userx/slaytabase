@@ -70,9 +70,15 @@ router.get('/search', async (req, res) => res.render('search', {
     firstEmbed: req.originalUrl.length > 8 ? await embed({...(fn.find(decodeURIComponent(req.originalUrl.slice(8))).item), score: 0, query: ''}) : {},
     query: req.originalUrl.length > 8 ? fn.unPunctuate(decodeURIComponent(req.originalUrl.slice(8))) : ''
 }));
+router.get('/collection', async (req, res) => res.render('collection', {characters, query: req.originalUrl.length > 12 ? fn.unPunctuate(decodeURIComponent(req.originalUrl.slice(12))) : ''}));
 router.get('/s', (req, res) => {
     if (req.originalUrl.length > 3)
         return res.json(fn.findAll(decodeURIComponent(req.originalUrl.slice(3))).slice(0, 50));
+    else return res.json([]);
+});
+router.get('/sf', (req, res) => {
+    if (req.originalUrl.length > 4)
+        return res.json(fn.findAll(decodeURIComponent(req.originalUrl.slice(4))));
     else return res.json([]);
 });
 router.get('/e', async (req, res) => {
