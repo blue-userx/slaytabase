@@ -892,6 +892,7 @@ __List of memes:__
 <live [name]=[item] reaction>
 <same picture [item]=[other item]>
 <trade offer [item]=[other item]>
+<guardian presents [card]?left>
 <[name] is typing>
 <image of [item] is typing>
 <another one [item]>
@@ -1069,6 +1070,17 @@ __List of memes:__
                 [1, 346, 181, 194, 176],
             ],
             texts: [],
+        }),
+
+        'guardian presents': async (msg, arg) => await meme(msg, arg, {
+            w: 720,
+            h: 512,
+            bg: 'guardianpresents1.png',
+            items: [0],
+            put: [
+                [0, 6, 28, 287, 370],
+                ['guardianpresents2.png', 0, 0, 720, 512]
+            ],
         }),
 
         'pet the ': async (msg, arg) => {
