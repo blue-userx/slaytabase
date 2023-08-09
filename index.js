@@ -285,7 +285,24 @@ function getFilesFromEmbeds(embeds, spoiler=false) {
 
 const delfiles = files => files.forEach(file => fs.unlinkSync(file));
 
+const emojiReactions = {
+    '🦊': ['fox'],
+    '🐈': ['cat', 'kitty', 'kitten'],
+    '🐃': ['buffalo'],
+    '🐑': ['sheep'],
+};
+
 bot.on('messageCreate', async msg => {
+    if (msg.inGuild())
+        for (let i in emojiReactions) {
+            if (msg.member.displayName.includes(i)) {
+                if (msg.content.includes(i))
+                    msg.react(i);
+                for (let j of emojiReactions[i])
+                    if (msg.content.includes(j))
+                        msg.react(i);
+            }
+        }
     let embeds = await getEmbeds(msg, false);
     if (embeds === null)
         msg.reply('I can only take up to 10 queries at a time! Edit your message to use 10 or fewer queries, and I\'ll update mine.').catch(e => {});
@@ -294,12 +311,16 @@ bot.on('messageCreate', async msg => {
         let files = getFilesFromEmbeds(embeds, msg.content.includes('(s)'));
         if (files.length > 10) await msg.reply('I can only attach 10 images per message! Edit your message so that I would use fewer than 10 images in my reply, and I\'ll update mine.');
         else {
+            let reply;
             if (msg.content.includes('(s)')) {
-                let reply = await msg.reply({content: `||https://bit.ly/3aSgJDF||`, allowedMentions: {repliedUser: false}});
+                reply = await msg.reply({content: `||https://bit.ly/3aSgJDF||`, allowedMentions: {repliedUser: false}});
                 await (new Promise(res => setTimeout(res, 1000)));
                 await reply.edit({embeds,components: embeds.components, files, allowedMentions: {repliedUser: false}}).catch(e => {});
             } else
-                await msg.reply({embeds, components: embeds.components, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+                reply = await msg.reply({embeds, components: embeds.components, files, allowedMentions: {repliedUser: false}}).catch(e => {});
+            if (msg.author.id == 115569858724233216 && msg.inGuild() && Math.random() < 0.1) //10% chance if vex is the caller
+                for (let i of ["👀", "😤", "👍", "👆"])
+                    reply.react(i);
         };
         delfiles(files);
     }
