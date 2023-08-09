@@ -27,6 +27,7 @@ import { JSDOM } from 'jsdom';
 import { off } from './dailyDiscussion.js';
 
 registerFont('./memetemplates/Kreon-Regular.ttf', {family: "Kreon"});
+const mtsbotdata = JSON.parse(fs.readFileSync('./docs/mtsbotdata.json'));
 const charter = new ChartJSNodeCanvas({width: 800, height: 600, backgroundColour: 'white'});
 const delSearchLimit = 25;
 const masks = {};
@@ -278,6 +279,7 @@ __Commands:__
 <show10 [search query]> shows the full item details for the first 10 results for a search query
 <count?[search query]> shows the total number of results for a search query (more helpful with filters!)
 <ws?[mod]> - searches for a slay the spire mod on the steam workshop
+<mtsbot?[item]> - searches ModTheSpire Bot's data for an item. has a different search, type <mtsbot?> for help
 <memes> help with the bot's meme generator
 <artpreview [card name]> takes your first attachment and uses it as card art for a card
 <c~artpreview [card name]> compares the art preview to the current card
@@ -443,6 +445,116 @@ __Commands:__
                 footer: {text: `Page ${page+1}/${Math.ceil(totalResults/10)}`},
                 color: 14598591,
             };
+        },
+
+        'mtsbot?': async (msg, arg, args, oa) => {
+            try {
+                if (arg.length == 0 || arg == 'help' || arg == '?')
+                    return {
+                        title: 'ModTheSpire Bot data archive',
+                        color: 16745472,
+                        description: `You can use this command to search for items from the data of ModTheSpire Bot, which includes a bunch of older mods that may not be included in Slaytabase\'s data.
+You must search for the exact item name with this search.
+There are some filters available, but these are custom to this command and work differently from the ones from the regular search. Examples:
+- cost=1 cost=x etc
+- type=card type=skill etc
+- rarity=boss
+- mod=basegame mod=downfall etc (can be either modid or mod name)
+- in=deal6damage in=gain5block etc (checks if the description has a certain string)
+- ex=damage (makes sure description does NOT contain a certain string)
+- r=2 r=3 etc (get nth result)
+`
+                    };
+                let filters = args.filter(a => a.includes('=') && !a.startsWith('=') && !a.endsWith("="));
+                args = args.filter(i => !filters.includes(i));
+                let argFilter = arg.filter;
+                arg = args.join(' ');
+                filters = filters.map(f => [f.slice(0, f.indexOf('=')), f.slice(f.indexOf('=')+1)]);
+                let items = mtsbotdata;
+                if (argFilter)
+                    items = items.filter(i => argFilter({item: i}));
+                if (args.length > 0) {
+                    items = items.filter(i => fn.unPunctuate(i.name) == arg);
+                    if (oa.includes('+')) items = items.filter(i => i.name.includes('+'));
+                    else items = items.filter(i => !i.name.includes('+'));
+                }
+    
+                let resultNum = 0;
+                for (let f of filters)
+                    switch (f[0]) {
+                        case 'cost':
+                            items = items.filter(i => i.hasOwnProperty('cost') && cost.toString() == f[1]);
+                            break;
+    
+                        case 'type':
+                            items = items.filter(i => i.hasOwnProperty('type') && i.type.toLowerCase() == f[1] || i.itemType == f[1]);
+                            break;
+    
+                        case 'rarity':
+                            items = items.filter(i => i.hasOwnProperty('rarity') && i.rarity.toLowerCase() == f[1] || i.hasOwnProperty('tier') && i.tier.toLowerCase() == f[1]);
+                            break;
+    
+                        case 'mod':
+                            items = items.filter(i => i.hasOwnProperty('modId') && i.modId.includes(f[1]) || i.hasOwnProperty('mod') && (fn.unPunctuate(i.mod.replaceAll(' ', '')).includes(f[1]) || f[1].includes(fn.unPunctuate(i.mod.replaceAll(' ', '')))));
+                            break;
+    
+                        case 'in':
+                            items = items.filter(i => i.hasOwnProperty('description') && fn.unPunctuate(i.description.replaceAll(' ', '')).includes(f[1]));
+                            break;
+    
+                        case 'ex':
+                            items = items.filter(i => i.hasOwnProperty('description') && !fn.unPunctuate(i.description.replaceAll(' ', '')).includes(f[1]));
+                            break;
+    
+                        case 'r':
+                            let r = Math.max(1, parseInt(f[1])) - 1;
+                            if (!Number.isNaN(r)) resultNum += r;
+                            break;
+                    }
+                
+                if (items.length >= resultNum+1) {
+                    let i = items[resultNum];
+                    let desc = '';
+                    let keywordify = true;
+                    switch (i.itemType) {
+                        case 'mod':
+                            desc = `\`Mod\` \`v${i.version}\`\nAuthor:    ${i.authors.join(' ')}\n${i.description}`;
+                            keywordify = false;
+                            break;
+
+                        case 'card':
+                            desc = `\`${i.type}\` \`${i.cost}\` \`${i.rarity}\` \`${i.color}\` \`${i.mod}\`\n${i.description}`;
+                            break;
+                            
+                        case 'relic':
+                            desc = `\`${i.tier} Relic\`${i.pool == '' ? '' : ` \`${i.pool}\``} \`${i.mod}\`\n${i.description}\n*${i.flavorText}*`;
+                            break;
+                            
+                        case 'potion':
+                            desc = `\`${i.rarity} Potion\` \`${i.mod}\`\n${i.description}`;
+                            break;
+                        
+                        case 'keyword':
+                            desc = `\`${i.mod} Keyword\`\n${i.description}`;
+                            break;
+                    
+                        case 'creature':
+                            desc = `\`${i.mod} ${i.type} Creature\` \`${i.minHP}-${i.maxHP}HP\``;
+                            break;
+                    }
+                    if (keywordify)
+                        desc = desc.replaceAll('\n', '\n ').split(' ').map(w => w.includes(':') ? `**${w.slice(w.indexOf(':')+1)}**` : w).join(' ').replaceAll('\n ', '\n')
+                            .replaceAll('[R]', '<:red_energy:382625376838615061>')
+                            .replaceAll('[G]', '<:green_energy:646206147220471808>')
+                            .replaceAll('[B]', '<:blue_energy:668151236003889184>')
+                            .replaceAll('[W]', '<:purple_energy:620384758068674560>')
+                            .replaceAll('[E]', '<:colorless_energy:382625433016991745>');
+                    return {title: i.name, description: desc, footer: items.length > 1 ? {text: `result ${resultNum+1}/${items.length}`} : null, color: 16745472};
+                } else return {color: 0, title: `${items.length} results found.`}
+            } catch (e) {
+                console.error(e);
+                return {color: 0, title: 'some kind of error happened?'};
+            }
         },
 
         'count?': (msg, arg) => ({title: `Found ${fn.findAll(arg).total} results for "${arg}"`}),
