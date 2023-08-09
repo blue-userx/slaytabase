@@ -299,7 +299,7 @@ bot.on('messageCreate', async msg => {
                 if (msg.content.includes(i))
                     msg.react(i);
                 for (let j of emojiReactions[i])
-                    if (msg.content.includes(j))
+                    if (msg.content.toLowerCase().includes(j))
                         msg.react(i);
             }
         }
