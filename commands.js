@@ -483,7 +483,7 @@ There are some filters available, but these are custom to this command and work 
                 for (let f of filters)
                     switch (f[0]) {
                         case 'cost':
-                            items = items.filter(i => i.hasOwnProperty('cost') && cost.toString() == f[1]);
+                            items = items.filter(i => i.hasOwnProperty('cost') && i.cost.toLowerCase() == f[1]);
                             break;
     
                         case 'type':
