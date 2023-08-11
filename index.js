@@ -293,7 +293,7 @@ const emojiReactions = {
 };
 
 bot.on('messageCreate', async msg => {
-    if (msg.inGuild())
+    if (msg.inGuild() && msg.member)
         for (let i in emojiReactions) {
             if (msg.member.displayName.includes(i)) {
                 if (msg.content.includes(i))
