@@ -51,7 +51,6 @@ async function getItems(serverSettings, exclude=[]) {
         && !['Event', 'Special'].includes(item.rarity)
         && item.tier != 'Special'
         && !['???', 'Strike', 'Defend'].includes(item.name)
-        && item.color != "The_collector" && item.color != "Collectible" && item.pool != "The_collector" //remove this line when collector is fully released
     )
         .map(item => item.searchId)
         .filter(item => !previousItems.includes(item) && !exclude.includes(item));
