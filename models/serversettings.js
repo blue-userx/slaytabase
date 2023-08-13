@@ -16,7 +16,8 @@ export default async (sequelize, DataTypes) => {
   ServerSettings.init({
     guild: DataTypes.STRING,
     mod: DataTypes.STRING,
-    discussionChannel: DataTypes.STRING
+    discussionChannel: DataTypes.STRING,
+    forceDiscussion: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'ServerSettings',

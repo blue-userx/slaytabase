@@ -38,6 +38,11 @@ function checkForDiscussions() {
     });
 };
 
+function getAllServerItems(serverSettings) {
+    let possibleMods = JSON.parse(serverSettings.mod);
+    return search._docslist.filter(i => possibleMods.includes(i.mod) && i.hasOwnProperty('hasId') && i.hasId);
+}
+
 async function getItems(serverSettings, exclude=[]) {
     await db.DailyDiscussion.destroy({where: {item: null}});
     let previousItems = (await db.DailyDiscussion.findAll({
@@ -45,8 +50,9 @@ async function getItems(serverSettings, exclude=[]) {
         where: {guild: serverSettings.guild}
     })).map(i => i.item);
 
+    let possibleMods = JSON.parse(serverSettings.mod);
     let possibleItems = search._docslist.filter(item =>
-        JSON.parse(serverSettings.mod).includes(item.mod)
+        possibleMods.includes(item.mod)
         && ['card', 'relic', 'potion', 'event', 'boss'].includes(item.itemType)
         && !['Event', 'Special'].includes(item.rarity)
         && item.tier != 'Special'
@@ -93,82 +99,96 @@ async function startThread() {
     await Promise.all((await db.ServerSettings.findAll()).map(async serverSettings => {
         if (serverSettings.discussionChannel == null) return;
         let lastDiscussion = await db.DailyDiscussion.findOne({where: {guild: serverSettings.guild}, order: [['createdAt', 'DESC']]});
-        if (lastDiscussion != null && lastDiscussion.next < Date.now()) {
-            let oldThread = await bot.channels.fetch(lastDiscussion.channel);
-            let options = JSON.parse(lastDiscussion.voteOptions);
-
-            let votes = {};
-            let itemId;
-            if (options.length > 0) {
-                let winner = 0;
-                for (let i of (await db.DiscussionVote.findAll({attributes: ['vote'], where: {discussion: lastDiscussion.id}})).map(v => v.vote))
-                    votes[i] = votes.hasOwnProperty(i) ? votes[i] + 1 : 1;
-                if (Object.keys(votes).length > 0) {
-                    let highest = Object.keys(votes).filter(v => votes[v] == Math.max(...Object.values(votes)));
-                    winner = Number(highest[Math.floor(Math.random() * highest.length)]);
-                }
-        
-                itemId = options[winner];
-            } else {
-                let availableItems = (await getItems(serverSettings)).items;
-                if (availableItems.length == 0) {
-                    lastDiscussion.update({next: lastDiscussion.next + timeBetweenDiscussions});
-                    return;
-                };
-                itemId = availableItems[0];
+        if (lastDiscussion != null) {
+            let forceItem = null;
+            if (serverSettings.forceDiscussion != null) {
+                let allItems = getAllServerItems(serverSettings);
+                if (serverSettings.forceDiscussion >= 0 && serverSettings.forceDiscussion < allItems.length)
+                    forceItem = allItems[serverSettings.forceDiscussion];
             }
-
-            let item = fn.find(itemId);
-            let channel = await bot.channels.fetch(serverSettings.discussionChannel);
-            if (channel == null) return;
+            if (forceItem != null || lastDiscussion.next < Date.now()) {
+                let oldThread = await bot.channels.fetch(lastDiscussion.channel);
+                let options = JSON.parse(lastDiscussion.voteOptions);
     
-            let { items, embeds, components, discussionNum, total } = await getItems(serverSettings, [itemId]);
+                let votes = {};
+                let itemId;
+                let item;
+                if (forceItem != null)
+                    itemId = forceItem.searchId;
+                else {
+                    if (options.length > 0) {
+                        let winner = 0;
+                        for (let i of (await db.DiscussionVote.findAll({attributes: ['vote'], where: {discussion: lastDiscussion.id}})).map(v => v.vote))
+                            votes[i] = votes.hasOwnProperty(i) ? votes[i] + 1 : 1;
+                        if (Object.keys(votes).length > 0) {
+                            let highest = Object.keys(votes).filter(v => votes[v] == Math.max(...Object.values(votes)));
+                            winner = Number(highest[Math.floor(Math.random() * highest.length)]);
+                        }
+                
+                        itemId = options[winner];
+                    } else {
+                        let availableItems = (await getItems(serverSettings)).items;
+                        if (availableItems.length == 0) {
+                            lastDiscussion.update({next: lastDiscussion.next + timeBetweenDiscussions});
+                            return;
+                        };
+                        itemId = availableItems[0];
+                    }
+                }
     
-            let thread = await oldThread.parent.threads.create({name: `${itemTitle(item.item)} - Daily Discussion ${(new Date()).getDate()} ${(new Date()).toLocaleString('default', {month: 'long'}).slice(0, 3)}`}).catch(e => {});
-            if (thread == null) return;
-            await thread.send(`Previous Daily Discussion: <#${oldThread.id}>`);
-            let voteMessage = await thread.send({
-                content: items.length > 0 ? `Vote for tomorrow's Daily Discussion (<t:${~~((lastDiscussion.next + timeBetweenDiscussions)/1000)}:R>) here!` : 'No items left to vote on!',
-                embeds,
-                components,
-            });
-            voteMessage.pin().catch(e => {});
-            
-            let daEmbed = await embed({...item.item, score: item.score, query: itemId});
-            let itemMessage = await thread.send({
-                content: `Daily Discussion ${discussionNum}/${total}`,
-                embeds: [
-                    EmbedBuilder.from({...daEmbed.data, thumbnail: {}, image: daEmbed.data.thumbnail}),
-                ]
-            }).catch(e => {});
-            itemMessage.pin().catch(e => {});
-            
-            let time = lastDiscussion.next;
-            while (time <= Date.now())
-                time += timeBetweenDiscussions;
-
-            await db.DailyDiscussion.create({
-                guild: serverSettings.guild,
-                channel: thread.id,
-                item: itemId,
-                next: time,
-                voteMessage: voteMessage.id,
-                voteOptions: JSON.stringify(items),
-            });
-    
-            if (lastDiscussion.voteMessage != null)
-                await (await oldThread.messages.fetch(lastDiscussion.voteMessage).catch(e => {}))?.edit({
-                    content: `Next Daily Discussion: <#${thread.id}>\n\n__Votes__:\n${options.map((e,i) => `${itemTitle(fn.find(e).item)}: ${votes.hasOwnProperty(i) ? votes[i] : 0}`).join('\n')}`,
-                    embeds: [],
-                    components: []
+                item = fn.find(itemId);
+                let channel = await bot.channels.fetch(serverSettings.discussionChannel);
+                if (channel == null) return;
+        
+                let { items, embeds, components, discussionNum, total } = await getItems(serverSettings, [itemId]);
+        
+                let thread = await oldThread.parent.threads.create({name: `${itemTitle(item.item)} - Daily Discussion ${(new Date()).getDate()} ${(new Date()).toLocaleString('default', {month: 'long'}).slice(0, 3)}`}).catch(e => {});
+                if (thread == null) return;
+                await thread.send(`Previous Daily Discussion: <#${oldThread.id}>`);
+                let voteMessage = await thread.send({
+                    content: items.length > 0 ? `Vote for tomorrow's Daily Discussion (<t:${~~((lastDiscussion.next + timeBetweenDiscussions)/1000)}:R>) here!` : 'No items left to vote on!',
+                    embeds,
+                    components,
+                });
+                voteMessage.pin().catch(e => {});
+                
+                let daEmbed = await embed({...item.item, score: item.score, query: itemId});
+                let itemMessage = await thread.send({
+                    content: `Daily Discussion ${discussionNum}/${total}`,
+                    embeds: [
+                        EmbedBuilder.from({...daEmbed.data, thumbnail: {}, image: daEmbed.data.thumbnail}),
+                    ]
                 }).catch(e => {});
-            await oldThread.setArchived(true).catch(e => {});
+                itemMessage.pin().catch(e => {});
+                
+                let time = lastDiscussion.next;
+                while (time <= Date.now())
+                    time += timeBetweenDiscussions;
+    
+                await serverSettings.update({forceDiscussion: null});
 
-            let silentAddMessage = await thread.send('Adding subscribed users...');
-            for (let subscriber of await db.Subscription.findAll({where: {guild: serverSettings.guild}}))
-                await silentAddMessage.edit(`Adding subscribed users...\n<@${subscriber.user}>`);
-            await silentAddMessage.delete();
-            return;
+                await db.DailyDiscussion.create({
+                    guild: serverSettings.guild,
+                    channel: thread.id,
+                    item: itemId,
+                    next: time,
+                    voteMessage: voteMessage.id,
+                    voteOptions: JSON.stringify(items),
+                });
+        
+                if (lastDiscussion.voteMessage != null)
+                    await (await oldThread.messages.fetch(lastDiscussion.voteMessage).catch(e => {}))?.edit({
+                        content: `Next Daily Discussion: <#${thread.id}>\n\n__Votes__:\n${options.map((e,i) => `${itemTitle(fn.find(e).item)}: ${votes.hasOwnProperty(i) ? votes[i] : 0}`).join('\n')}`,
+                        embeds: [],
+                        components: []
+                    }).catch(e => {});
+                await oldThread.setArchived(true).catch(e => {});
+                let silentAddMessage = await thread.send('Adding subscribed users...');
+                for (let subscriber of await db.Subscription.findAll({where: {guild: serverSettings.guild}}))
+                    await silentAddMessage.edit(`Adding subscribed users...\n<@${subscriber.user}>`);
+                await silentAddMessage.delete();
+                return;
+            }
         }
     }));
 
@@ -185,4 +205,4 @@ async function startThread() {
     }
 }
 
-export {checkForDiscussions, firstDiscussion, off};
+export {checkForDiscussions, firstDiscussion, off, getAllServerItems};

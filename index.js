@@ -9,7 +9,7 @@ import keywordify from './keywords.js';
 import emojify from './emojis.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
-import { checkForDiscussions, firstDiscussion } from './dailyDiscussion.js';
+import { checkForDiscussions, firstDiscussion, getAllServerItems } from './dailyDiscussion.js';
 import db from './models/index.js';
 import { match } from 'assert';
 import express from 'express';
@@ -174,6 +174,15 @@ bot.once('ready', async () => {
             .setName('customcommands')
             .setDMPermission(false)
             .setDescription('Manage this server\'s custom commands.'),
+        new SlashCommandBuilder()
+            .setName('forcenextdailydiscussion')
+            .setDescription('Immediately starts the next daily discussion with a certain item')
+            .setDMPermission(false)
+            .addStringOption(option =>
+                option.setName('item')
+                .setDescription('Item (must use autofill)')
+                .setRequired(true)
+                .setAutocomplete(true)),
         new ContextMenuCommandBuilder()
             .setName('find items')
             .setType(ApplicationCommandType.Message),
@@ -506,6 +515,19 @@ bot.on('interactionCreate', async interaction => {
                         )]
                     });
                     break;
+                
+                case 'forcenextdailydiscussion':
+                    await interaction.deferReply({ephemeral: true});
+                    if (!interaction.inGuild()) return interaction.editReply('This is a server-only command.');
+                    if (!(interaction.memberPermissions.has('ManageGuild') || cfg.overriders.includes(interaction.user.id))) return interaction.editReply('You must have the Manage Server permission to use this command.');
+                    let discussSettings = await db.ServerSettings.findOne({where: {guild: interaction.guildId}});
+                    if (discussSettings == null || discussSettings.discussionChannel == null) return interaction.editReply('This server doesn\'t have daily discussions set up yet.');
+                    let allItems = getAllServerItems(discussSettings);
+                    let num = parseInt(interaction.options.getString('item'));
+                    if (isNaN(num) || num < 0 || num >= allItems.length) return interaction.editReply('Could not get that item.');
+                    await discussSettings.update({forceDiscussion: num});
+                    await interaction.editReply({content: `Got it. Next discussion will start very soon for the following item:`, embeds: [await embed({...allItems[num], score: 0, query: num.toString()})]});
+                    break;
             }
         } else if (interaction.isAutocomplete()) {
             switch (interaction.commandName) {
@@ -525,6 +547,14 @@ bot.on('interactionCreate', async interaction => {
                     if (settings == null)
                         return interaction.respond([]);
                     await interaction.respond(JSON.parse(settings.mod).filter(m => m.toLowerCase().includes(interaction.options.getFocused().toLowerCase())).slice(0,25).map(i => ({name: i, value: i})));
+                    break;
+                
+                case 'forcenextdailydiscussion':
+                    if (!interaction.inGuild()) return interaction.respond([]);
+                    let discussSettings = await db.ServerSettings.findOne({where: {guild: interaction.guildId}});
+                    if (discussSettings == null || discussSettings.discussionChannel == null) return interaction.respond([]);
+                    let allItems = getAllServerItems(discussSettings);
+                    await interaction.respond(allItems.filter(i => i.name.toLowerCase().includes(interaction.options.getFocused().toLowerCase())).slice(0,25).map(i => ({name: `${i.name} (${i.itemType == 'card' ? i.character[0].replace('The ', '')+' ' : ''}${i.itemType})${i.originalDescription ? ` - ${i.originalDescription.replaceAll('\n', ' ')}` : ''}`.slice(0,100), value: allItems.indexOf(i).toString()})));
                     break;
             }
         } else if (interaction.isMessageContextMenuCommand()) {
@@ -757,7 +787,9 @@ async function main() {
                 newItem.searchText += ' ' + fn.unPunctuate(newItem.moves.map(m => `${m.name} ${m.description}`).join(' '));
             if (newItem.description != null)
                 newItem.description = keywordify(emojify(newItem.originalDescription, character));
-            if (!newItem.hasOwnProperty('id'))
+            if (newItem.hasOwnProperty('id'))
+                newItem.hasId = true;
+            else
                 newItem.id = String(Math.random()).slice(2);
             let origId = newItem.id;
             while (search._idToShortId.has(newItem.id))
