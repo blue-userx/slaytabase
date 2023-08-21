@@ -1531,6 +1531,8 @@ __List of memes:__
         },
 
         'mtg?': async (msg, arg) => {
+            let filters = arg.split(' ').filter(a => a.includes('=')).map(a => a.split('='));
+            arg = arg.split(' ').filter(a => !a.includes('=')).join(' ');
             let url = `https://api.scryfall.com/cards/search?q=${encodeURIComponent(arg)}`;
             let response = await fetch(url);
             let body = await response.text();
@@ -1567,12 +1569,20 @@ __List of memes:__
             };
             try {
                 let results = JSON.parse(body);
-                if (results.hasOwnProperty('data')) {
-                    let result = results.data[0];
+                let resultNum = 0;
+                for (let f of filters) {
+                    if (f[0] == 'r') {
+                        let r = Math.max(1, parseInt(f[1])) - 1;
+                        if (!Number.isNaN(r)) resultNum += r;
+                    }
+                }
+                console.log(resultNum);
+                if (results.hasOwnProperty('data') && results.data.length > resultNum) {
+                    let result = results.data[resultNum];
                     let embed = {
                         title: `${result.name}${result.mana_cost.length > 0 ? ` / ${result.mana_cost}` : ''}`,
                         url: result.scryfall_uri,
-                        description: `${result.hasOwnProperty('type_line') ? result.type_line : ''}${result.hasOwnProperty('oracle_text') ? `\n\n${result.oracle_text}` : ''}${result.hasOwnProperty('flavor_text') ? `\n\n*${result.flavor_text}*` : ''}`,
+                        description: `${result.hasOwnProperty('type_line') ? result.type_line : ''}${result.hasOwnProperty('power') ? ` | ${result.power}/${result.toughness}` : ''}${result.hasOwnProperty('oracle_text') ? `\n\n${result.oracle_text}` : ''}${result.hasOwnProperty('flavor_text') ? `\n\n*${result.flavor_text}*` : ''}`,
                         color: result.hasOwnProperty('color_identity') && result.color_identity.length > 0 && colors.hasOwnProperty(result.color_identity[0]) ? colors[result.color_identity[0]][0] : 3158833,
                         thumbnail: {url: result.image_uris.normal}
                     };
