@@ -1530,6 +1530,69 @@ __List of memes:__
             }
         },
 
+        'mtg?': async (msg, arg) => {
+            let url = `https://api.scryfall.com/cards/search?q=${encodeURIComponent(arg)}`;
+            let response = await fetch(url);
+            let body = await response.text();
+            const colors = {
+                R: [16727357, '<:red:1142975145737195583>'],
+                G: [5745515, '<:green:1142975140666290287>'],
+                B: [1776667, '<:black:1142975136996262068>'],
+                U: [6393287, '<:blue:1142975141651955723>'],
+                W: [16774356, '<:white:1142975145015791706>'],
+            };
+            const emojis = {
+                0: '<:zero:1142978589969625118>',
+                1: '<:one:1142978590548439142>',
+                2: '<:two:1142978592679153734>',
+                3: '<:three:1142978593681571871>',
+                4: '<:four:1142978595027963944>',
+                5: '<:five:1142978596672114799>',
+                6: '<:six:1142978597741678612>',
+                7: '<:seven:1142978598693765310>',
+                8: '<:eight:1142978621431087265>',
+                9: '<:nine:1142978602003091526>',
+                C: '<:colorless:1142975138829176892>',
+                X: '<:x_:1142975143803637862>',
+                'G/U': '<:gu:1142979006514348163>',
+                'G/W': '<:gw:1142979014823247922>',
+                'B/R': '<:br:1142979005247651951>',
+                'R/G': '<:rg:1142979013787267072>',
+                'U/B': '<:ub:1142979009190313994>',
+                'U/R': '<:ur:1142979008183668757>',
+                'W/B': '<:wb:1142979016664551464>',
+                'R/W': '<:wr:1142979012495425587>',
+                'W/U': '<:wu:1142979017784438824>',
+                T: '<:tap:1142979030077947994>',
+            };
+            try {
+                let results = JSON.parse(body);
+                if (results.hasOwnProperty('data')) {
+                    let result = results.data[0];
+                    let embed = {
+                        title: `${result.name}${result.mana_cost.length > 0 ? ` / ${result.mana_cost}` : ''}`,
+                        url: result.scryfall_uri,
+                        description: `${result.hasOwnProperty('type_line') ? result.type_line : ''}${result.hasOwnProperty('oracle_text') ? `\n\n${result.oracle_text}` : ''}${result.hasOwnProperty('flavor_text') ? `\n\n*${result.flavor_text}*` : ''}`,
+                        color: result.hasOwnProperty('color_identity') && result.color_identity.length > 0 && colors.hasOwnProperty(result.color_identity[0]) ? colors[result.color_identity[0]][0] : 3158833,
+                        thumbnail: {url: result.image_uris.normal}
+                    };
+                    for (let c in colors) {
+                        embed.title = embed.title.replaceAll(`{${c}}`, colors[c][1]);
+                        embed.description = embed.description.replaceAll(`{${c}}`, colors[c][1]);
+                    }
+                    for (let e in emojis) {
+                        embed.title = embed.title.replaceAll(`{${e}}`, emojis[e]);
+                        embed.description = embed.description.replaceAll(`{${e}}`, emojis[e]);
+                    }
+                    return embed;
+                } else
+                    return {title: `Scryfall returned no result for "${arg}"`, url};
+            } catch (e) {
+                console.error(e);
+                return {title: `Unknown error?`, url};
+            }
+        },
+
         'remindme ': async (msg, arg, args) => {
             let reqTime = Number(args[0].slice(0, -1));
             let time = reqTime;
