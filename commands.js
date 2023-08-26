@@ -360,6 +360,8 @@ __Commands:__
         'forcestop': async (msg, arg) => {
             if (cfg.overriders.includes(msg.author.id)) {
                 off.off = true;
+                bot.user.setStatus('idle');
+                bot.user.setActivity('about to restart...');
                 return {title: "stopping soon."};
             } else return {title: "...nice try"};
         },

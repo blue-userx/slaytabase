@@ -245,8 +245,9 @@ async function startThread() {
     }
 
     if (off.off) {
-        bot.destroy();
-        process.exit();
+        bot.user.setStatus('dnd');
+        bot.user.setActivity('restarting...');
+        setTimeout(process.exit, 2000);
     }
 }
 
