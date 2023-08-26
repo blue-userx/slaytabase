@@ -105,4 +105,6 @@ export default {
     'Clockwork': ['The Clockwork', 43447, '<:colorless_energy:382625433016991745>'],
     'Mari': ['Mari Ohara', 15584768, '<:colorless_energy:382625433016991745>'],
     'Rodent_colour_ocean': ['the rodent', 16771304, '<:rodentenergy:1133066123231887360>'],
+    'Queen_yellow': ['The Queen', 6371840, '<:colorless_energy:382625433016991745>'],
+    'Drifter_blue': ['The Drifter', 1315860, '<:colorless_energy:382625433016991745>'],
 };
