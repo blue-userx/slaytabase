@@ -294,6 +294,7 @@ __Commands:__
 <feedback?[message]> sends a message to a channel seen only by the bot author
 <lists> links to the bot's data
 <wiki?[search]> searches certain modding-related github repos for wiki pages
+<mtg?[card]> searches scryfall for a card from magic the gathering
 `,
             thumbnail: {url: bot.user.avatarURL()},
         }),
@@ -1576,7 +1577,6 @@ __List of memes:__
                         if (!Number.isNaN(r)) resultNum += r;
                     }
                 }
-                console.log(resultNum);
                 if (results.hasOwnProperty('data') && results.data.length > resultNum) {
                     let result = results.data[resultNum];
                     let embed = {

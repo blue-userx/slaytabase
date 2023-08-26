@@ -1,10 +1,13 @@
 import { bot, search } from './index.js';
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, InteractionResponse } from 'discord.js';
 import { Op } from 'sequelize';
+import fetch from 'node-fetch';
+import { JSDOM } from 'jsdom';
 import commands from './commands.js';
 import embed from './embed.js';
 import fn from './fn.js';
 import db from './models/index.js';
+import cfg from './cfg.js';
 
 const timeBetweenDiscussions = 24 * 60 * 60 * 1000;
 const itemsPerVote = 3;
@@ -12,6 +15,7 @@ const itemsPerVote = 3;
 const itemTitle = item => `${item.name} (${item.itemType == 'boss' || item.character[0] == 'All' ? '' : item.character[0].replace('The ', '')+' '}${item.itemType})`;
 
 var off = {off: false};
+var lastHour = new Date().getHours();
 
 function checkForDiscussions() {
     startThread();
@@ -198,6 +202,47 @@ async function startThread() {
             await user.send({embeds: [EmbedBuilder.from({title: reminder.contents, description: reminder.message})]});
         reminder.destroy();
     }));
+
+    if (new Date().getHours() != lastHour) {
+        lastHour = new Date().getHours();
+        if (cfg.workshopReleasesChannel != null) {
+            let response = await fetch('https://steamcommunity.com/workshop/browse/?appid=646570&browsesort=mostrecent&section=readytouseitems&actualsort=mostrecent&p=1&numperpage=9');
+            let body = await response.text();
+            
+            if (body.includes('workshopItem')) {
+                let dom = new JSDOM(body);
+                let items = Array.from(dom.window.document.getElementsByClassName('workshopItem')).map(e => ({
+                    id: e.children[0].getAttribute('data-publishedfileid'),
+                    name: e.children[4].children[0].innerHTML,
+                    url: e.children[0].href,
+                    img: e.children[0].children[0].children[0].src,
+                    author: e.children[5].children[0].innerHTML,
+                    authorURL: e.children[5].children[0].href,
+                    weirdScriptThingy: e.parentElement.children[Array.from(e.parentElement.children).indexOf(e)+1].innerHTML.trim()
+                }));
+                let existsAlready = await Promise.all(items.map(async i => i.hasOwnProperty('id') && (await db.WorkshopItem.count({where: {id: i.id}}) > 0)));
+                items = items.filter((e, i) => !existsAlready[i]);
+                items.forEach(i => {
+                    db.WorkshopItem.create({id: i.id});
+                    i.description = JSON.parse(i.weirdScriptThingy.slice(i.weirdScriptThingy.indexOf('{'), -3)).description.replaceAll('<br />', '');
+                });
+
+                if (items.length > 0) {
+                    let embeds = items.map(i => ({
+                        title: i.name,
+                        url: i.url,
+                        description: i.description,
+                        thumbnail: {url: i.img},
+                        author: {name: `${i.author}'s Workshop`, url: i.authorURL, iconURL: `https://static.wikia.nocookie.net/logopedia/images/5/56/Steam_Icon_2014.svg/revision/latest/scale-to-width-down/50?cb=20190826175003`},
+                        color: 1779768,
+                    }));
+                    let channel = await bot.channels.fetch(cfg.workshopReleasesChannel);
+                    if (channel != null)
+                        channel.send({content: `${embeds.length > 1 ? `${embeds.length} n` : 'N'}ew Steam Workshop release${embeds.length > 1 ? 's' : ''}!`, embeds});
+                }
+            }
+        }
+    }
 
     if (off.off) {
         bot.destroy();
