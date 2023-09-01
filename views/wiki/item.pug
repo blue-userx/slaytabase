@@ -95,6 +95,13 @@ block content
                         tr
                             th Tags
                             td!= item.tags.map(t => `<a href="/search?type%3Dpack%20tag%3D${t}">${t}</a>`).join(', ')
+                        tr
+                            th Author
+                            td= item.author
+                        if item.credits != ""
+                            tr
+                                th Credits
+                                td= item.credits
                     else if item.itemType == 'nodemodifier'
                         th Appears On
                         td= item.rooms.map(i => `${i.slice(0,1).toUpperCase()}${i.slice(1)}`).join(', ')
