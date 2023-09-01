@@ -38,6 +38,8 @@ async function embed(item, msg, embeds=[], encode=true) {
     let wiki = wikis.hasOwnProperty(item.mod) ? wikis[item.mod] : false;
     if (wiki)
         e.url = `https://${wikis[item.mod]}.fandom.com/wiki/${searchize(item)}`;
+    else if (item.hasId)
+        e.url = `${cfg.exportURL}/w/${encodeURIComponent(item.mod)}/${encodeURIComponent(item.id)}`;
     if (item.hasOwnProperty('query') && !item.query.includes(fn.unPunctuate(item.name)) && item.query != item.searchId)
         e.footer = {
             //iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=32`,

@@ -66,6 +66,10 @@ function findAll(query) {
                     results = results.filter(r => (r.item.hasOwnProperty('color') && unPunctuate(r.item.color) == val) || (r.item.hasOwnProperty('tier') && unPunctuate(r.item.tier) == val));
                     break;
                 
+                case "tag":
+                    results = results.filter(r => (r.item.hasOwnProperty('tags') && r.item.tags.find(t => t.toLowerCase() == val) != undefined));
+                    break;
+                
                 case "r":
                     let resultNum = Math.max(1, Math.min(parseInt(val), results.length)) - 1;
                     if (!Number.isNaN(resultNum)) result += resultNum;

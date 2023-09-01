@@ -1,0 +1,124 @@
+extends lay.pug
+
+
+block title
+    -
+        const stars = n => Array(Number(n)).fill('⭐').join('');
+        var themeColor = embed.hasOwnProperty('color') ? `#${embed.color.toString(16)}` : '#171717';
+
+    = item.name
+
+
+block head
+    meta(property="og:type" content="website")
+    meta(property="og:title" content=embed.title.replaceAll('"', '&quot;'))
+    meta(property="og:description" content=embed.description.replaceAll('*', '').replaceAll('"', '&quot;').replace(item.character[2], '⚪').replaceAll('\\⭐', '⭐').replace(/\<\:(.*?)\:(.*?)\>/gm, ''))
+    meta(name="theme-color" content=themeColor)
+    if embed.hasOwnProperty('thumbnail') && embed.thumbnail.url
+        meta(property="og:image" content=embed.thumbnail.url)
+
+block content
+    .result.m-3(style=`background:${themeColor}0d`)
+        .color-block(style=`background:${themeColor}`)
+        .result-details
+            h1.text-center= item.name
+            h5.text-center
+                = item.itemType.slice(0, 1).toUpperCase()
+                = item.itemType.slice(1)
+            if embed.hasOwnProperty('thumbnail') && embed.thumbnail.url
+                .d-flex.justify-content-center: a(href=embed.thumbnail.url target="_blank"): img.mb-3#item-img(src=embed.thumbnail.url)
+            case item.itemType
+                when 'card'
+                    p!= webify(item.description)
+                    if item.hasOwnProperty('flavor')
+                        p: i!= webify(item.flavor)
+                when 'potion'
+                    p!= webify(item.description)
+                    if item.hasOwnProperty('flavor')
+                        p: i!= webify(item.flavor)
+                when 'relic'
+                    p!= webify(item.description)
+                    p: i!= webify(item.flavorText)
+                when 'pack'
+                    p!= webify(item.description)
+                    .d-flex.flex-wrap.justify-content-center
+                        each card in cards
+                            .overflow-hidden.pack-card
+                                a(href=`/w/${card.mod}/${card.id}`): img(src=`/${encodeURIComponent(card.mod)}/cards/${encodeURIComponent(card.id.replaceAll(':', '-').replaceAll(' ', ''))}.png`.toLowerCase() style="width:200%")
+                when 'creature'
+                    if embed.description.includes('\n\n')
+                        p!= webify(embed.description.slice(embed.description.indexOf('\n\n')+2)).replaceAll('</b><br><br>', '</b>: ')
+                when 'event'
+                    if embed.description.includes('\n```')
+                        p!= webify(embed.description.slice(embed.description.indexOf('\n')+1)).replaceAll('<br><br>', '<br>')
+                when 'nodemodifier'
+                    p!= webify(item.description)
+                default
+                    if embed.description.includes('\n\n')
+                        p!= webify(embed.description.slice(embed.description.indexOf('\n\n')+2))
+            div.rounded.overflow-hidden.my-1: table.table.table-hover.table-borderless.table-dark.my-0
+                tbody.rounded
+                    tr
+                        th Mod
+                        td: a(href=`/search?mod%3D${encodeURIComponent(item.mod)}`)= item.mod
+                    tr
+                        th Character
+                        td= item.character[0]
+                    if item.hasOwnProperty('pack') && pack != undefined
+                        tr
+                            th Pack
+                            td: a(href=`/w/${pack.mod}/${pack.id}`)= pack.name
+                    if item.hasOwnProperty('cost')
+                        tr
+                            th Cost
+                            if item.cost == ""
+                                td -
+                            else
+                                td!= webify(`${item.cost} ${item.character[2]}`)
+                    if item.hasOwnProperty('type')
+                        tr
+                            th Type
+                            td= item.type
+                    if item.hasOwnProperty('rarity')
+                        tr
+                            th Rarity
+                            td= item.rarity
+                    else if item.hasOwnProperty('tier')
+                        tr
+                            th Rarity
+                            td= item.tier
+                    if item.itemType == 'pack'
+                        each i in ['Offense', 'Defense', 'Support', 'Frontload', 'Scaling']
+                            tr
+                                th= i 
+                                td= stars(item[i.toLowerCase()])
+                        tr
+                            th Tags
+                            td!= item.tags.map(t => `<a href="/search?type%3Dpack%20tag%3D${t}">${t}</a>`).join(', ')
+                    else if item.itemType == 'nodemodifier'
+                        th Appears On
+                        td= item.rooms.map(i => `${i.slice(0,1).toUpperCase()}${i.slice(1)}`).join(', ')
+                    tr
+                        th ID
+                        td: code= item.id
+    
+    hr.w-100
+
+    .w-100.px-3#disqus_thread
+    script.
+        /* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        var disqus_config = function () {
+            this.page.url = 'https://slay.ocean.lol/w/!{encodeURIComponent(item.mod)}/!{encodeURIComponent(item.id)}';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '!{encodeURIComponent(item.mod)}/!{encodeURIComponent(item.id)}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://slaytabase.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    
+    .d-flex.align-items-center#logoContainer
+        a(href="/search"): img#logo(src="/icon.png")
+        h5#slay.ps-2 Slaytabase

@@ -85,15 +85,34 @@ router.get('/e', async (req, res) => {
     if (req.originalUrl.length > 3) {
         let e = (await embed({...(fn.find(decodeURIComponent(req.originalUrl.slice(3)))).item, score: 0, query: ''})).data;
         return res.send(`<html><head>
-            <meta property="og:type" content="website">
-            <meta property="og:title" content="${e.title.replaceAll('"', '&quot;')}">
-            <meta property="og:description" content="${e.description.replaceAll('*', '').replaceAll('"', '&quot;').replace(/\<\:e_(.*?)\:(.*?)\>/gm, '⚪').replaceAll('\\⭐', '⭐').replace(/\<\:(.*?)\:(.*?)\>/gm, '')}">
-            ${e.hasOwnProperty('thumbnail') && e.thumbnail.url ? `<meta property="og:image" content="${e.thumbnail.url}">` : ''}
-            ${e.hasOwnProperty('color') ? `<meta name="theme-color" content="#${e.color.toString(16)}">` : ''}
-            <meta http-equiv="refresh" content="0; url=${req.originalUrl.replace('/e', '/search').replaceAll('"', '&quot;')}">
         </head></html>`);
     }
     else return res.send('');
+});
+router.get('/w/*/*', async (req, res) => {
+    if (req.originalUrl.endsWith('/')) return res.redirect(req.originalUrl.slice(0, -1));
+    let modName = decodeURIComponent(req.originalUrl).slice(3);
+    let itemId = modName.slice(modName.indexOf('/')+1);
+    modName = modName.slice(0, modName.indexOf('/'));
+    let item = search._docslist.find(i => i.mod.toLowerCase() == modName && i.id.toLowerCase() == itemId);
+    if (item != undefined) {
+        if (item.hasId) {
+            let cards;
+            if (item.itemType == 'pack')
+                cards = item.cards.map(c => search._docslist.find(i => i.itemType == 'card' && (i.mod == item.mod || i.mod == "Slay the Spire") && i.name == c)).filter(c => c != undefined);
+            let pack;
+            if (item.hasOwnProperty('pack'))
+                pack = search._docslist.find(i => i.mod == item.mod && i.itemType == 'pack' && i.name == item.pack);
+            return res.render('wiki/item', {
+                item,
+                embed: (await embed({...item, score: 0, query: ''})).data,
+                cards,
+                pack
+            });
+        }
+        else return res.send("This item type is not yet supported, sorry!");
+    }
+        else return res.send("Could not find that item, sorry!");
 });
 router.use('/', express.static('./static'));
 router.use('/', express.static('./docs'));

@@ -1,0 +1,37 @@
+-
+    const webify = text => text.replaceAll('\n', '<br>')
+        .replaceAll('```ansi', '')
+        .replaceAll('```', '')
+        .replaceAll('[2;37m', '')
+        .replaceAll('[2;31m', '')
+        .replaceAll('[2;32m', '')
+        .replaceAll('[0;2m', '')
+        .replaceAll('[2;34m', '')
+        .replaceAll('[2;33m', '')
+        .replace(/\*\*(.*?)\*\*/gm, '<b>$1</b>')
+        .replace(/\*(.*?)\*/gm, '<i>$1</i>')
+        .replace(/~~(.*?)~~/gm, '<s>$1</s>')
+        .replace(/\<\:(.*?)\:(.*?)\>/gm, '<img src="https://cdn.discordapp.com/emojis/$2?size=20">');
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title
+            block title
+            = ' | Slaytabase'
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet")
+        link(href="/wiki.css" rel="stylesheet")
+        block head
+            meta(property="og:type" content="website")
+            meta(property="og:site_name" content="Slaytabase")
+            meta(property="og:title" content=``)
+            meta(property="og:description" content=`View Slay the Spire cards in a grid view.`)
+            meta(name="theme-color" content="#30ff4c")
+
+    body
+        .d-flex.vh-100.flex-column.align-items-center.bg-dark.text-light.overflow-y-scroll#content
+            block content
+                h1 put content here
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js")

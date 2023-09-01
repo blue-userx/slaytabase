@@ -160,8 +160,7 @@ function addItems(items) {
             el.removeChild(el.lastChild)
         let info = el.childNodes[1];
         info.firstChild.firstChild.innerText = block.title;
-        info.firstChild.firstChild.onclick = () => copyEmbed(item.hasOwnProperty('id') ? item.id : `${item.name} mod=${item.mod.replaceAll(' ', '')}`, info.firstChild.firstChild);
-        info.firstChild.firstChild.tooltip = new bootstrap.Tooltip(info.firstChild.firstChild);
+        info.firstChild.firstChild.href = `/w/${item.mod}/${item.id}`;
         info.lastChild.innerText = block.footer;
         let content = info.childNodes[1];
         content.innerHTML = block.content
@@ -184,14 +183,6 @@ function addItems(items) {
 
     if (items.length >= ITEMS_RETURNED)
         resultsBox.appendChild(loadMoreButton);
-}
-
-function copyEmbed(url, e) {
-    navigator.clipboard.writeText(location.origin+'/e?'+encodeURIComponent(url));
-    e.title = 'Copied!';
-    e.tooltip.hide();
-    e.tooltip = new bootstrap.Tooltip(e);
-    e.tooltip.show();
 }
 
 function previewImage(image) {
