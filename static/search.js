@@ -152,7 +152,7 @@ function addItems(items) {
         let el = resultFormat.cloneNode(true);
         el.id = item.id;
         el.classList.remove('d-none');
-        el.firstChild.style.backgroundColor = `#${block.colour.toString(16)}`;
+        el.firstChild.style.backgroundColor = `#${block.colour.toString(16).padStart(6, "0")}`;
         el.style.backgroundColor = el.firstChild.style.backgroundColor.replace('rgb', 'rgba').replace(')', ', 0.05)');
         if (block.hasOwnProperty('thumbnail'))
             el.lastChild.firstChild.src = block.thumbnail;

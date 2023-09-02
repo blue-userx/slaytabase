@@ -4,7 +4,7 @@ extends lay.pug
 block title
     -
         const stars = n => Array(Number(n)).fill('⭐').join('');
-        var themeColor = embed.hasOwnProperty('color') ? `#${embed.color.toString(16)}` : '#171717';
+        var themeColor = embed.hasOwnProperty('color') ? `#${embed.color.toString(16).padStart(6, "0")}` : '#171717';
 
     = item.name
 
