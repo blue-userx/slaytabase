@@ -720,36 +720,72 @@ bot.on('interactionCreate', async interaction => {
     }
 });
 
+const searchize = item => {
+    if (!item.hasOwnProperty('name'))
+        return '';
+    let name = item.name;
+    return name.replaceAll(' ', '_').replaceAll('+', '').replaceAll('???', 'Unidentified');
+};
+
 async function main() {
     console.log('loading and parsing data...');
     data = JSON.parse(fs.readFileSync('./docs/dataformatted.json'));
+    let wikis = {'Slay the Spire': 'slay-the-spire'};
     for (let itemType in data)
         for (let item of data[itemType]) {
             let character = characters[''];
             //if (item.type == 'Player' && item.name != 'The Snecko') continue;
+            let img = null;
+            let wiki = wikis.hasOwnProperty(item.mod) ? wikis[item.mod] : false;
+            let url = null;
+            if (wiki)
+                url = `https://${wikis[item.mod]}.fandom.com/wiki/${searchize(item)}`;
             switch(itemType) {
                 case 'cards':
+                    img = `${item.mod}/cards/${item.id.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('\"', '').replaceAll('?', '').replaceAll('/', '')}.png`;
                     character = characters[item.color];
                     break;
 
                 case 'relics':
+                    img = `${item.mod}/relics/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '').replaceAll('?', '')}.png`;
                     character = characters[item.pool];
                     break;
 
                 case 'potions':
+                    img = `${item.mod}/potions/${item.id.replaceAll(' ', '').replaceAll(':','-')}.png`;
+                    if (wiki) url = `https://${wikis[item.mod]}.fandom.com/wiki/Potions`;
                     character = characters[item.hasOwnProperty('color') ? item.color : ''];
                     break;
 
                 case 'bosss':
+                    img = `extraImages/bosses/${item.name.replaceAll(' ', '')}.png`;
                     character = Object.values(characters).find(ch => ch[0].replace('The ', '') == item.name.slice(0, item.name.indexOf(' ')));
                     break;
 
                 case 'events':
+                    img = `extraImages/events/${item.name.toLowerCase().replaceAll(' ', '').replaceAll('?', '').replaceAll('!', '')}.jpg`;
                     character = characters[item.character];
+                    break;
+                
+                case 'creatures':
+                    img = `${item.mod}/creatures/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`;
+                    break;
+                
+                case 'blight':
+                    img = `${item.mod}/blights/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`;
+                    if (wiki) url = `https://${wikis[item.mod]}.fandom.com/wiki/Blights`;
                     break;
                 
                 case 'mods':
                     item.mod = item.name;
+                    break;
+                
+                case 'pack':
+                    img = `${cfg.exportURL}/${item.mod}/packs/${item.id.replaceAll(':', '-')}.png`;
+                    break;
+                
+                case 'nodemodifier':
+                    img = `${cfg.exportURL}/${item.mod}/nodemodifiers/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`;
                     break;
             }
             if (item.hasOwnProperty('altDescription')) {
@@ -765,6 +801,12 @@ async function main() {
                 description: item.hasOwnProperty('description') ? keywordify(item.description, character) : undefined,
                 character,
             };
+            if (url != null)
+                newItem.url = url;
+            if (item.hasOwnProperty('img'))
+                newItem.img = item.img.slice(1);
+            else if (img != null)
+                newItem.img = img.toLowerCase();
             if (newItem.name == '') newItem.name = ' ';
             newItem.searchText = fn.unPunctuate([
                     'name',
@@ -816,6 +858,8 @@ async function main() {
             search.add(newItem);
             search._docs[newItem.id] = newItem;
             newItem.id = origId;
+            if (newItem.hasId && !newItem.hasOwnProperty('url'))
+                newItem.url = `${cfg.exportURL}/w/${encodeURIComponent(item.mod)}/${encodeURIComponent(item.id)}`.toLowerCase();
         }
     search._docslist = Object.values(search._docs);
     console.log('parsed data, connecting to discord...');

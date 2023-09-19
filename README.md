@@ -30,4 +30,5 @@ also, all of the following must be true:
 1. `npm ci`
 2. install [GraphicsMagick](http://www.graphicsmagick.org/download.html)
 3. create `cfg.js` and paste the following in: `export default {"token":"jsdakfhajksdfh", "exportURL": "https://slay.ocean.lol", websitePort: 8622, "overriders": ["106068236000329728"], "mkswtKey": null, "feedbackChannel": "???", "workshopReleasesChannel": null}` and set `token` as your discord bot token and set `feedbackChannel` as the channel ID of a channel where you want the bot to send feedback messages (can be a thread channel)
-4. `npm start`
+4. `npx sequelize-cli db:migrate`
+5. `npm start`

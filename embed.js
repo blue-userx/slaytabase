@@ -1,18 +1,7 @@
 import { EmbedBuilder } from 'discord.js';
-import wikiItems from './wikiItems.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
 
-const searchize = item => {
-    if (!item.hasOwnProperty('name'))
-        return '';
-    let name = item.name;
-    if (item.hasOwnProperty('character') && wikiItems[item.character[0]].hasOwnProperty(item.name))
-        name = wikiItems[item.character[0]][item.name]
-    return name.replaceAll(' ', '_').replaceAll('+', '').replaceAll('???', 'Unidentified');
-};
-
-let wikis = {'Slay the Spire': 'slay-the-spire'};
 let stars = n => Array(Number(n)).fill('\\⭐').join('');
 
 const intentEmojis = {
@@ -35,11 +24,10 @@ const intentEmojis = {
 async function embed(item, msg, embeds=[], encode=true) {
     let e = {};
     e.title = `${item.name}`;
-    let wiki = wikis.hasOwnProperty(item.mod) ? wikis[item.mod] : false;
-    if (wiki)
-        e.url = `https://${wikis[item.mod]}.fandom.com/wiki/${searchize(item)}`;
-    else if (item.hasId)
-        e.url = `${cfg.exportURL}/w/${encodeURIComponent(item.mod)}/${encodeURIComponent(item.id)}`;
+    if (item.hasOwnProperty('url'))
+        e.url = item.url;
+    if (item.hasOwnProperty('img'))
+        e.thumbnail = {url: `${cfg.exportURL}/${item.img}`};
     if (item.hasOwnProperty('query') && !item.query.includes(fn.unPunctuate(item.name)) && item.query != item.searchId)
         e.footer = {
             //iconURL: `https://cdn.discordapp.com/avatars/${msg.author.id}/${msg.author.avatar}.webp?size=32`,
@@ -47,20 +35,16 @@ async function embed(item, msg, embeds=[], encode=true) {
         };
     switch (item.itemType) {
         case 'card':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/cards/${item.id.replace('+', '').replaceAll(' ', '').replaceAll(':', '-').replaceAll('\'', '').replaceAll('\"', '').replaceAll('?', '').replaceAll('/', '')}.png`.toLowerCase()};
             e.color = item.character[1];
             e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.hasOwnProperty('pack') ? `Pack: ${item.pack}` : item.mod}\n\n${item.description.replaceAll('~~-', '​~~-')}${item.flavor ? `\n*${item.flavor}*` : ''}`;
             break;
 
         case 'relic':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/relics/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '').replaceAll('?', '')}.png`.toLowerCase()};
             e.color = item.character[1];
             e.description = ` ${item.tier} Relic / ${item.character[0]} / ${item.mod}\n\n${item.description}\n*${item.flavorText}*`;
             break;
             
         case 'potion':
-            if (wiki) e.url = `https://${wikis[item.mod]}.fandom.com/wiki/Potions`;
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/potions/${item.id.replaceAll(' ', '').replaceAll(':','-')}.png`.toLowerCase()};
             if (item.character[0] != 'All')
                 e.color = item.character[1];
             e.description = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}${item.flavor ? `\n*${item.flavor}*` : ''}`;
@@ -68,26 +52,20 @@ async function embed(item, msg, embeds=[], encode=true) {
         
         case 'event':
             e.color = 4608066;
-            e.thumbnail = {url: `${cfg.exportURL}/extraImages/events/${item.name.toLowerCase().replaceAll(' ', '').replaceAll('?', '').replaceAll('!', '')}.jpg`.toLowerCase()};
             e.description = `Event / Act${item.acts.length > 1 ? 's' : ''} ${item.acts.join(', ')} / ${item.character[0]}${item.character == 'All' ? ' characters' : ''} / ${item.mod}\n\`\`\`ansi\n${item.colouredDesc.replaceAll('\n', '\n``````ansi\n')}\n\`\`\``;
             break;
             
         case 'creature':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/creatures/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`.toLowerCase()};
             e.description = `${item.type} / ${item.minHP == item.maxHP ? item.maxHP : `${item.minHP}-${item.maxHP}`}${item.hasOwnProperty('minHPA') && item.minHPA != item.minHP || item.maxHPA != item.maxHPA ? ` (${item.minHPA != item.maxHPA ? `${item.minHPA}-${item.maxHPA}` : item.maxHPA})` : ''} HP / ${item.mod}\n\n${item.hasOwnProperty('moves') ? item.moves.map(m => `**<:intent_${m.type}:${intentEmojis[m.type]}> ${m.name}**\n\`\`\`ansi\n${m.colouredDesc}\n\`\`\``).join('') : ''}${item.description ? `\n${item.description}` : ''}`;
             break;
 
         case 'blight':
-            if (wiki) e.url = `https://${wikis[item.mod]}.fandom.com/wiki/Blights`;
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/blights/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`.toLowerCase()};
             e.description = `Blight / ${item.mod}\n\n${item.description}`;
             break;
         
         case 'boss':
-            e.thumbnail = {url: `${cfg.exportURL}/extraImages/bosses/${item.name.replaceAll(' ', '')}.png`.toLowerCase()};
             e.color = item.character[1];
             e.description = item.description;
-            if (wiki) e.url = e.url.replace('_', '_(Act_')+'_Boss)';
             break;
         
         case 'keyword':
@@ -100,7 +78,7 @@ async function embed(item, msg, embeds=[], encode=true) {
             break;
         
         case 'pack':
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/packs/${item.id.replaceAll(':', '-')}.png`.toLowerCase()};
+            e.thumbnail = {url: item.img};
             e.color = 12083229;
             e.description = `${item.mod.replace('The ', '')} Card Pack / By ${item.author}\n\n${item.description}\nOffense: ${stars(item.offense)}\nDefense: ${stars(item.defense)}\nSupport: ${stars(item.support)}\nFrontload: ${stars(item.frontload)}\nScaling: ${stars(item.scaling)}\nTags: ${item.tags.join(', ')}\n\nCards: ${item.cards.join(', ')}${item.credits.length > 0 ? '\n\nCredits: '+item.credits : ''}`;
             break;
@@ -111,7 +89,7 @@ async function embed(item, msg, embeds=[], encode=true) {
         
         case 'nodemodifier':
             e.description = `${item.type} Node Modifier / ${item.mod}\n\n${item.description}\n*Appears on ${item.rooms.length > 1 ? `${item.rooms.slice(0, -1).join(', ')} and ${item.rooms.slice(-1)}` : item.rooms.join(', ')}*.`;
-            e.thumbnail = {url: `${cfg.exportURL}/${item.mod}/nodemodifiers/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`.toLowerCase()};
+            e.thumbnail = {url: item.img};
             break;
         
         case 'adventurerboard':
@@ -156,8 +134,6 @@ async function embed(item, msg, embeds=[], encode=true) {
             break;
     }
 
-    if (item.hasOwnProperty('img'))
-        e.thumbnail = {url: cfg.exportURL+item.img};
     if (encode) {
         if (e.thumbnail && e.thumbnail.hasOwnProperty('url'))
             e.thumbnail.url = encodeURI(e.thumbnail.url);
