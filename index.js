@@ -771,7 +771,7 @@ async function main() {
                     img = `${item.mod}/creatures/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '')}.png`;
                     break;
                 
-                case 'blight':
+                case 'blights':
                     img = `${item.mod}/blights/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`;
                     if (wiki) url = `https://${wikis[item.mod]}.fandom.com/wiki/Blights`;
                     break;
@@ -780,12 +780,12 @@ async function main() {
                     item.mod = item.name;
                     break;
                 
-                case 'pack':
-                    img = `${cfg.exportURL}/${item.mod}/packs/${item.id.replaceAll(':', '-')}.png`;
+                case 'packs':
+                    img = `${item.mod}/packs/${item.id.replaceAll(':', '-')}.png`;
                     break;
                 
-                case 'nodemodifier':
-                    img = `${cfg.exportURL}/${item.mod}/nodemodifiers/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`;
+                case 'nodemodifiers':
+                    img = `${item.mod}/nodemodifiers/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`;
                     break;
             }
             if (item.hasOwnProperty('altDescription')) {

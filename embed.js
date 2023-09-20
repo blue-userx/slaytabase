@@ -78,7 +78,6 @@ async function embed(item, msg, embeds=[], encode=true) {
             break;
         
         case 'pack':
-            e.thumbnail = {url: item.img};
             e.color = 12083229;
             e.description = `${item.mod.replace('The ', '')} Card Pack / By ${item.author}\n\n${item.description}\nOffense: ${stars(item.offense)}\nDefense: ${stars(item.defense)}\nSupport: ${stars(item.support)}\nFrontload: ${stars(item.frontload)}\nScaling: ${stars(item.scaling)}\nTags: ${item.tags.join(', ')}\n\nCards: ${item.cards.join(', ')}${item.credits.length > 0 ? '\n\nCredits: '+item.credits : ''}`;
             break;
@@ -89,7 +88,6 @@ async function embed(item, msg, embeds=[], encode=true) {
         
         case 'nodemodifier':
             e.description = `${item.type} Node Modifier / ${item.mod}\n\n${item.description}\n*Appears on ${item.rooms.length > 1 ? `${item.rooms.slice(0, -1).join(', ')} and ${item.rooms.slice(-1)}` : item.rooms.join(', ')}*.`;
-            e.thumbnail = {url: item.img};
             break;
         
         case 'adventurerboard':
