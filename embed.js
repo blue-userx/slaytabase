@@ -87,11 +87,11 @@ async function embed(item, msg, embeds=[], encode=true) {
             break;
         
         case 'nodemodifier':
-            e.description = `${item.type} Node Modifier / ${item.mod}\n\n${item.description}\n*Appears on ${item.rooms.length > 1 ? `${item.rooms.slice(0, -1).join(', ')} and ${item.rooms.slice(-1)}` : item.rooms.join(', ')}*.`;
+            e.description = `${item.type} Nodemodifier / ${item.mod}\n\n${item.description}\n*Appears on ${item.rooms.length > 1 ? `${item.rooms.slice(0, -1).join(', ')} and ${item.rooms.slice(-1)}` : item.rooms.join(', ')}*.`;
             break;
         
         case 'adventurerboard':
-            e.description = `${item.type} Board / ${item.mod}\n\n${item.specialRule != 'None' ? `Special rule: ${item.specialRule}\n\n` : ''}${item.effects.map((e,i) => `${i+1}. ${e}`).join('\n')}`;
+            e.description = `Adventurerboard / ${item.mod}\n\n${item.specialRule != 'None' ? `Special rule: ${item.specialRule}\n\n` : ''}${item.effects}`;
             break;
         
         case 'command':

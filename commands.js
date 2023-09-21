@@ -415,10 +415,10 @@ __Commands:__
                 url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2848995399',
                 description: [-1, 0, 1, 2, 3, 4, 5, 6].map(d => {
                     let date = new Date(Date.now() + d * 1000 * 60 * 60 * 24);
-                    let boards = fn.findAll(`type=board type=${date.getUTCDay() == 0 || date.getUTCDay() == 1 ? 'complex' : 'regular'}`);
+                    let boards = fn.findAll(`type=board`);
                     let dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
                     let board = boards[dayOfYear % boards.length];
-                    return `${d==0?'__':''}${date.toLocaleDateString(undefined, {weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'})}${d==0?'__':''}: ${board.item.type == 'Complex' ? `**${board.item.name}**` : board.item.name}`;
+                    return `${d==0?'__':''}${date.toLocaleDateString(undefined, {weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'})}${d==0?'__':''}: ${board.item.name}`;
                 }).join('\n')
             }
         },

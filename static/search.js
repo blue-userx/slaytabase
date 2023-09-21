@@ -134,12 +134,12 @@ function addItems(items) {
                 break;
         
             case 'nodemodifier':
-                block.content = `${item.type} Node Modifier / ${item.mod}\n\n${item.description}\n*Appears on ${item.rooms.length > 1 ? `${item.rooms.slice(0, -1).join(', ')} and ${item.rooms.slice(-1)}` : item.rooms.join(', ')}*.`;
+                block.content = `${item.type} Nodemodifier / ${item.mod}\n\n${item.description}\n*Appears on ${item.rooms.length > 1 ? `${item.rooms.slice(0, -1).join(', ')} and ${item.rooms.slice(-1)}` : item.rooms.join(', ')}*.`;
                 block.thumbnail = `/${item.mod}/nodemodifiers/${item.id.slice(item.id.indexOf(':')+1).replaceAll(' ', '').replaceAll('\'', '')}.png`.toLowerCase();
                 break;
         
             case 'adventurerboard':
-                block.content = `${item.type} Board / ${item.mod}\n\n${item.specialRule != 'None' ? `Special rule: ${item.specialRule}\n\n` : ''}${item.effects.map((e,i) => `${i+1}. ${e}`).join('\n')}`;
+                block.content = `Adventurerboard / ${item.mod}\n\n${item.specialRule != 'None' ? `Special rule: ${item.specialRule}\n\n` : ''}${item.effects}`;
                 break;
             
             case 'pack':
