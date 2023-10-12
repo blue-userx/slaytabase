@@ -418,7 +418,7 @@ __Commands:__
                     let boards = fn.findAll(`type=board`);
                     let dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
                     let board = boards[dayOfYear % boards.length];
-                    return `${d==0?'__':''}${date.toLocaleDateString(undefined, {weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'})}${d==0?'__':''}: ${board.item.name}`;
+                    return `${d==0?'__':''}${date.toLocaleDateString(undefined, {weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'})}${d==0?'__':''}: [${board.item.name}](${board.item.url})`;
                 }).join('\n')
             }
         },
