@@ -107,4 +107,5 @@ export default {
     'Rodent_colour_ocean': ['the rodent', 16771304, '<:rodentenergy:1133066123231887360>'],
     'Queen_yellow': ['The Queen', 6371840, '<:colorless_energy:382625433016991745>'],
     'Drifter_blue': ['The Drifter', 1315860, '<:colorless_energy:382625433016991745>'],
+    'Ocean_bogwarden_color': ['The Bogwarden', 2116417, '<:bogwardenenergy:1161308754470506607>'],
 };

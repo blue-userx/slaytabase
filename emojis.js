@@ -43,6 +43,10 @@ const emojis = [
     ['clockworkchar:Part', 'crankypart:1117519374614544446'],
     ['clockworkchar:Dizzy', 'crankydizzy:1117518578149761045'],
     ['clockworkchar:Battery', 'battery:1107557955932520519'],
+    ['bogwarden:Mojo', 'bogwardenmojo:1161308927993065533'],
+    ['bogwarden:Maledict', 'bogwardenmaledict:1161308927007391875'],
+    ['bogwarden:Spines', 'bogwardenspines:1161308929553354862'],
+    ['bogwarden:Venom', 'bogwardenvenom:1161308924830564372'],
 ];
 
 export default function emojify(text, character) {
