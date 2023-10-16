@@ -1015,6 +1015,7 @@ __List of memes:__
 <i have [card]?left in my hand>
 <i have [card]?left in my pocket>
 <waiter waiter more [item] please>
+<finally i have them all [item1]=[item2]=[item3]>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -1195,6 +1196,18 @@ __List of memes:__
             put: [
                 [0, 6, 28, 287, 370],
                 ['guardianpresents2.png', 0, 0, 720, 512]
+            ],
+        }),
+
+        'finally i have them all ': async (msg, arg) => await meme(msg, arg, {
+            w: 1920,
+            h: 1920,
+            bg: 'finally.png',
+            items: [0, 0, 0],
+            put: [
+                [0, [[588, 6], [921, 171], [591, 465], [246, 288]]],
+                [1, [[948, 186], [1299, 348], [945, 672], [615, 507]]],
+                [2, [[1323, 369], [1668, 528], [1311, 861], [957, 693]]],
             ],
         }),
 
