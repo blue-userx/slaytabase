@@ -422,6 +422,16 @@ __Commands:__
                 }).join('\n')
             }
         },
+
+        'star compass': msg => ({title: ' ', description: 'Oops, I dropped it. Oh well.'}),
+
+        'xy': msg => ({
+            title: 'Looks like a case of the good ol\' XY problem.',
+            url: 'https://xyproblem.info/',
+            description: 'Ask about the issue, not about your attempted solution and give us some goddamn info!!',
+            thumbnail: {url: 'https://i.imgur.com/bCmEbPU.png'},
+            color: 15438388,
+        })
     },
 
     prefix: {
@@ -1016,6 +1026,7 @@ __List of memes:__
 <i have [card]?left in my pocket>
 <waiter waiter more [item] please>
 <finally i have them all [item1]=[item2]=[item3]>
+<[item] wants to know your location>
 `,
             thumbnail: {url: 'https://media.discordapp.net/attachments/802410376498249820/1002367368623825027/unknown.png?width=566&height=566'},
         }),
@@ -1718,6 +1729,15 @@ __List of memes:__
                 files: [filename]
             };
         },
+
+        ' wants to know your location': async (msg, arg) => await meme(msg, arg, {
+            w: 777,
+            h: 290,
+            bg: 'location.png',
+            items: [0],
+            put: [[0, 116, 46, 208, 55]],
+            texts: []
+        }),
     },
 
     prefixAndSuffix: [
