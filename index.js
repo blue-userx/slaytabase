@@ -318,6 +318,14 @@ const emojiReactions = {
     '🐈': ['cat', 'kitty', 'kitten'],
     '🐃': ['buffalo'],
     '🐑': ['sheep'],
+    '🐶': ['dog'],
+    '🐼': ['panda'],
+    '🐻': ['bear'],
+    '🐵': ['monkey'],
+    '🦁': ['lion'],
+    '🐯': ['tiger'],
+    '🐢': ['turtle'],
+    '🐸': ['frog'],
 };
 
 bot.on('messageCreate', async msg => {
