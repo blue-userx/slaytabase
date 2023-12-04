@@ -1,8 +1,10 @@
 import { bot, search } from './index.js';
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, InteractionResponse } from 'discord.js';
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle, Embed, EmbedBuilder, InteractionResponse, ThreadAutoArchiveDuration } from 'discord.js';
+import { createCanvas, loadImage } from 'canvas';
 import { Op } from 'sequelize';
 import fetch from 'node-fetch';
 import { JSDOM } from 'jsdom';
+import fs from 'fs';
 import commands from './commands.js';
 import embed from './embed.js';
 import fn from './fn.js';
@@ -16,6 +18,12 @@ const itemTitle = item => `${item.name} (${item.itemType == 'boss' || item.chara
 
 var off = {off: false};
 var lastHour = new Date().getHours();
+
+const packDiscussionsFilename = 'packdiscussions.json';
+if (!fs.existsSync(packDiscussionsFilename))
+    fs.writeFileSync(packDiscussionsFilename, '[]');
+const timeBetweenPackDiscussions = 24 * 60 * 60 * 1000 * 7;
+var packDiscussions = JSON.parse(fs.readFileSync(packDiscussionsFilename));
 
 function checkForDiscussions() {
     startThread();
@@ -239,6 +247,50 @@ async function startThread() {
                     let channel = await bot.channels.fetch(cfg.workshopReleasesChannel);
                     if (channel != null)
                         channel.send({content: `${embeds.length > 1 ? `${embeds.length} n` : 'N'}ew Steam Workshop release${embeds.length > 1 ? 's' : ''}!`, embeds});
+                }
+            }
+        }
+    }
+
+    if (cfg.hasOwnProperty('packDiscussions') && cfg.packDiscussions != null && Date.now() > cfg.packDiscussions.startTime + timeBetweenPackDiscussions * packDiscussions.length) {
+        let packs = fn.findAll('type=pack mod=packmaster')
+            .filter(p => !packDiscussions.includes(p.item.id));
+        if (packs.length > 0) {
+            let pack = fn.shuffle(packs)[0];
+            let channel = await bot.channels.fetch(cfg.packDiscussions.channel);
+            if (channel) {
+                let daEmbed = await embed({...pack.item, score: pack.score, query: fn.unPunctuate(pack.item.id)});
+                let mods = [pack.item.mod, "Slay the Spire"];
+                let cards = pack.item.cards.map(n => search._docslist.find(c => c.name == n && c.itemType == 'card' && mods.includes(c.mod))); //search._docslist.filter(c => c.itemType == 'card' && mods.includes(c.mod) && item.item.cards.includes(c.name));
+                let canvas = createCanvas(339 * 5, 437 * Math.ceil(cards.length / 5));
+                let ctx = canvas.getContext('2d');
+                for (let i = 0; i < cards.length; i++) {
+                    let img = await loadImage('docs/'+cards[i].img);
+                    ctx.drawImage(img, 0, 0, 678, 874, (i % 5) * 339, Math.floor(i / 5) * 437, 339, 437);
+                }
+                let filename = `export${String(Math.random()).slice(2)}.png`;
+                fs.writeFileSync(filename, canvas.toBuffer('image/png'));
+                let thread = await channel.threads.create({
+                    name: `${pack.item.name} - PM Pack Discussion #${packDiscussions.length + 1}`,
+                    message: {
+                        content: pack.item.description,
+                        embeds: [
+                            EmbedBuilder.from({...daEmbed.data, thumbnail: {}, image: daEmbed.data.thumbnail}),
+                            EmbedBuilder.from({
+                                title: 'Cards',
+                                description: cards.map(c => `[${c.name}](${c.url}) ${c.cost.length > 0 ? `(${c.cost} ${c.character[2]})` : ''}: ${c.description.replaceAll('\n', ' ')}`).join('\n').slice(0, 4096),
+                                image: {url: 'attachment://'+filename},
+                                color: 11375735,
+                            })
+                        ],
+                        files: [filename]
+                    },
+                    autoArchiveDuration: ThreadAutoArchiveDuration.ThreeDays
+                }).catch(e => console.error(e));
+                fs.rmSync(filename);
+                if (thread) {
+                    packDiscussions.push(pack.item.id);
+                    fs.writeFileSync(packDiscussionsFilename, JSON.stringify(packDiscussions));
                 }
             }
         }
