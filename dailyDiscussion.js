@@ -272,6 +272,7 @@ async function startThread() {
                 fs.writeFileSync(filename, canvas.toBuffer('image/png'));
                 let thread = await channel.threads.create({
                     name: `${pack.item.name} - PM Pack Discussion #${packDiscussions.length + 1}`,
+                    appliedTags: cfg.packDiscussions.tags,
                     message: {
                         content: pack.item.description,
                         embeds: [
