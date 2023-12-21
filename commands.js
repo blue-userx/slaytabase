@@ -593,6 +593,7 @@ There are some filters available, but these are custom to this command and work 
             }));
             if (embeds.length == 0)
                 return {title: 'no results'};
+            console.log({...embeds[0].data, extra_embeds: embeds.slice(1)});
             return {...embeds[0].data, extra_embeds: embeds.slice(1)};
         },
 
@@ -1603,11 +1604,10 @@ __List of memes:__
                         if (!Number.isNaN(r)) resultNum += r;
                     }
                 }
-                if (results.hasOwnProperty('data') && results.data.length > resultNum) {
-                    let result = results.data[resultNum];
+                let makeEmbed = (result, uri) => {
                     let embed = {
                         title: `${result.name}${result.mana_cost.length > 0 ? ` / ${result.mana_cost}` : ''}`,
-                        url: result.scryfall_uri,
+                        url: uri,
                         description: `${result.hasOwnProperty('type_line') ? result.type_line : ''}${result.hasOwnProperty('power') ? ` | ${result.power}/${result.toughness}` : ''}${result.hasOwnProperty('oracle_text') ? `\n\n${result.oracle_text}` : ''}${result.hasOwnProperty('flavor_text') ? `\n\n*${result.flavor_text}*` : ''}`,
                         color: result.hasOwnProperty('color_identity') && result.color_identity.length > 0 && colors.hasOwnProperty(result.color_identity[0]) ? colors[result.color_identity[0]][0] : 3158833,
                         thumbnail: {url: result.image_uris.normal}
@@ -1620,8 +1620,17 @@ __List of memes:__
                         embed.title = embed.title.replaceAll(`{${e}}`, emojis[e]);
                         embed.description = embed.description.replaceAll(`{${e}}`, emojis[e]);
                     }
-                    return embed;
-                } else
+                    return new EmbedBuilder(embed);
+                }
+                if (results.hasOwnProperty('data') && results.data.length > resultNum) {
+                    let result = results.data[resultNum];
+                    console.log({...makeEmbed(result.card_faces[0], result.scryfall_uri).data, extra_embeds: result.card_faces.slice(1).map(r => makeEmbed(r, result.scryfall_uri))});
+                    if (result.hasOwnProperty('card_faces'))
+                        return {...makeEmbed(result.card_faces[0], result.scryfall_uri).data, extra_embeds: result.card_faces.slice(1).map(r => makeEmbed(r, result.scryfall_uri))};
+                    else
+                        return makeEmbed(result, result.scryfall_uri).data;
+                }
+                else
                     return {title: `Scryfall returned no result for "${arg}"`, url};
             } catch (e) {
                 console.error(e);
