@@ -1624,7 +1624,6 @@ __List of memes:__
                 }
                 if (results.hasOwnProperty('data') && results.data.length > resultNum) {
                     let result = results.data[resultNum];
-                    console.log({...makeEmbed(result.card_faces[0], result.scryfall_uri).data, extra_embeds: result.card_faces.slice(1).map(r => makeEmbed(r, result.scryfall_uri))});
                     if (result.hasOwnProperty('card_faces'))
                         return {...makeEmbed(result.card_faces[0], result.scryfall_uri).data, extra_embeds: result.card_faces.slice(1).map(r => makeEmbed(r, result.scryfall_uri))};
                     else
