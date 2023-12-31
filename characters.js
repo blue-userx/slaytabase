@@ -108,4 +108,9 @@ export default {
     'Queen_yellow': ['The Queen', 6371840, '<:colorless_energy:382625433016991745>'],
     'Drifter_blue': ['The Drifter', 1315860, '<:colorless_energy:382625433016991745>'],
     'Ocean_bogwarden_color': ['The Bogwarden', 2116417, '<:bogwardenenergy:1161308754470506607>'],
+    'Gatherer_lime': ['The Gatherer', 3329330, '<:colorless_energy:382625433016991745>'],
+    'Lost_light_blue_color': ['The Lost', 12566463, '<:colorless_energy:382625433016991745>'],
+    'Poker_player_gray': ['The Poker Player', 4605504, '<:colorless_energy:382625433016991745>'],
+    'Color_chaser': ['The Chaser', 16731469, '<:colorless_energy:382625433016991745>'],
+    'Dt_orange': ['The Dragon Tamer', 1602776, '<:colorless_energy:382625433016991745>'],
 };
