@@ -207,7 +207,7 @@ async function startThread() {
     await Promise.all((await db.Reminder.findAll({where: {at: {[Op.lt]: Date.now()}}})).map(async reminder => {
         let user = await bot.users.fetch(reminder.user);
         if (user)
-            await user.send({embeds: [EmbedBuilder.from({title: reminder.contents, description: reminder.message})]});
+            user.send({embeds: [EmbedBuilder.from({title: reminder.contents, description: reminder.message})]}).catch(e => console.error);
         reminder.destroy();
     }));
 
