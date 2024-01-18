@@ -56,10 +56,9 @@ function getAllServerItems(serverSettings) {
 }
 
 async function getItems(serverSettings, exclude=[]) {
-    await db.DailyDiscussion.destroy({where: {item: null}});
     let previousItems = (await db.DailyDiscussion.findAll({
         attributes: ['item'],
-        where: {guild: serverSettings.guild}
+        where: {guild: serverSettings.guild, item: {[Op.not]: null}}
     })).map(i => i.item);
 
     let possibleMods = JSON.parse(serverSettings.mod);
