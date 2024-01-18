@@ -113,4 +113,8 @@ export default {
     'Poker_player_gray': ['The Poker Player', 4605504, '<:colorless_energy:382625433016991745>'],
     'Color_chaser': ['The Chaser', 16731469, '<:colorless_energy:382625433016991745>'],
     'Dt_orange': ['The Dragon Tamer', 1602776, '<:colorless_energy:382625433016991745>'],
+    'Mad_science': ['Mad Scientist', 9263647, '<:colorless_energy:382625433016991745>'],
+    'Glutton': ['The Glutton', 2860346, '<:colorless_energy:382625433016991745>'],
+    'Quartz_purple': ['Little Bone', 853546, '<:colorless_energy:382625433016991745>'],
+    'Witch': ['The Witch', 5263989, '<:colorless_energy:382625433016991745>'],
 };
