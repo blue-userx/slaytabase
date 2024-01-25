@@ -1558,9 +1558,9 @@ __List of memes:__
             }
         },
 
-        'mtg?': async (msg, arg) => {
-            let filters = arg.split(' ').filter(a => a.includes('=')).map(a => a.split('='));
-            arg = arg.split(' ').filter(a => !a.includes('=')).join(' ');
+        'mtg?': async (msg, _, __, oa) => {
+            let filters = oa.toLowerCase().split(' ').filter(a => a.includes('=')).map(a => a.split('='));
+            let arg = oa.toLowerCase().split(' ').filter(a => !a.includes('=')).join(' ');
             let url = `https://api.scryfall.com/cards/search?q=${encodeURIComponent(arg)}`;
             let response = await fetch(url);
             let body = await response.text();
