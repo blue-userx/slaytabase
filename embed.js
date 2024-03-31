@@ -139,6 +139,19 @@ async function embed(item, msg, embeds=[], encode=true) {
             e.image.url = encodeURI(e.image.url);
     }
 
+    if (e.title != null)
+        e.title = e.title.split(" ").map(w => "blub").join(" ")
+    if (e.description != null)
+        e.description = e.description.split(" ").map(w => "blub").join(" ")
+    if (e.footer != null)
+        e.footer.text = e.footer.text.split(" ").map(w => "blub").join(" ")
+    if (e.thumbnail && e.thumbnail.hasOwnProperty('url'))
+        e.thumbnail.url = "https://i.stack.imgur.com/iskSu.png"
+    if (e.image && e.image.url)
+        e.image.url = "https://i.stack.imgur.com/iskSu.png"
+    e.color = 5094;
+    e.url = "https://steamcommunity.com/sharedfiles/filedetails/?id=3014420331";
+
     return e.title == '' ? null : new EmbedBuilder(e);
 }
 
