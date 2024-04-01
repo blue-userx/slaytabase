@@ -146,9 +146,9 @@ async function embed(item, msg, embeds=[], encode=true) {
     if (e.footer != null)
         e.footer.text = e.footer.text.split(" ").map(w => "blub").join(" ")
     if (e.thumbnail && e.thumbnail.hasOwnProperty('url'))
-        e.thumbnail.url = "https://i.stack.imgur.com/iskSu.png"
+        e.thumbnail.url = "https://149366088.v2.pressablecdn.com/wp-content/uploads/2011/11/Screen-Shot-2011-11-24-at-11.44.11-500x172.png"
     if (e.image && e.image.url)
-        e.image.url = "https://i.stack.imgur.com/iskSu.png"
+        e.image.url = "https://149366088.v2.pressablecdn.com/wp-content/uploads/2011/11/Screen-Shot-2011-11-24-at-11.44.11-500x172.png"
     e.color = 5094;
     e.url = "https://steamcommunity.com/sharedfiles/filedetails/?id=3014420331";
 
