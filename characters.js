@@ -118,4 +118,5 @@ export default {
     'Quartz_purple': ['Little Bone', 853546, '<:colorless_energy:382625433016991745>'],
     'Witch': ['The Witch', 5263989, '<:colorless_energy:382625433016991745>'],
     'Medium_ruby_color': ['The Professor', 6438560, '<:colorless_energy:382625433016991745>'],
+    'Theconstrictor_color': ['The Constrictor', 3026992, '<:colorless_energy:382625433016991745>'],
 };
