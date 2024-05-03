@@ -119,7 +119,7 @@ export default {
     'Witch': ['The Witch', 5263989, '<:colorless_energy:382625433016991745>'],
     'Medium_ruby_color': ['The Professor', 6438560, '<:colorless_energy:382625433016991745>'],
     'Theconstrictor_color': ['The Constrictor', 3026992, '<:colorless_energy:382625433016991745>'],
-    'TheShadeMod_color': ['The Shade', 1662745, '<:colorless_energy:382625433016991745>'],
+    'Shade_color': ['The Shade', 1662745, '<:colorless_energy:382625433016991745>'],
     'Yellow': ['The Dreamwalker', 12566463, '<:colorless_energy:382625433016991745>'],
     'Character_gray_color': ['Relica', 12566463, '<:colorless_energy:382625433016991745>'],
     'Green And Red': ['The Silent & The Ironclad', 16777215, '<:colorless_energy:382625433016991745>'],
