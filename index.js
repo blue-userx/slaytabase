@@ -315,7 +315,7 @@ const delfiles = files => files.forEach(file => fs.unlinkSync(file));
 
 const emojiReactions = {
     '🦊': ['fox'],
-    '🐈': ['cat', 'kitty', 'kitten', 'meow'],
+    '🐈': ['cat', 'kitty', 'kitten', 'meow', 'purrr'],
     '🐃': ['buffalo'],
     '🐑': ['sheep', 'bah', 'baah', 'baaah'],
     '🐶': ['dog', 'woof', 'bark'],
