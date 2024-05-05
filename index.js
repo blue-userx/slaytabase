@@ -315,13 +315,13 @@ const delfiles = files => files.forEach(file => fs.unlinkSync(file));
 
 const emojiReactions = {
     '🦊': ['fox'],
-    '🐈': ['cat', 'kitty', 'kitten'],
+    '🐈': ['cat', 'kitty', 'kitten', 'meow'],
     '🐃': ['buffalo'],
-    '🐑': ['sheep'],
-    '🐶': ['dog'],
+    '🐑': ['sheep', 'bah', 'baah', 'baaah'],
+    '🐶': ['dog', 'woof', 'bark'],
     '🐼': ['panda'],
     '🐻': ['bear'],
-    '🐵': ['monkey'],
+    '🐵': ['monkey', 'see_no_evil', 'hear_no_evil', 'speak_no_evil'], // monkey-containing emoji that don't contain the word "monkey"
     '🦁': ['lion'],
     '🐯': ['tiger'],
     '🐢': ['turtle'],
