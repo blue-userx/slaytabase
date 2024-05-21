@@ -211,7 +211,7 @@ bot.once('ready', async () => {
     ]);
 });
 
-let validQuery = q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init' || q.length <= 0);
+let validQuery = q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('id:') || q.startsWith('http') || q == 'init' || q.length <= 0);
 async function getEmbeds(msg, edit=true) {
     if (msg.content.includes('`')) return 0;
     let queries = [...msg.content.matchAll(/(?<=(^|[^\\]))((\<(.*?)\>)|(\[\[(.*?)\]\]))/g)];
