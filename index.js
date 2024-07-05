@@ -211,7 +211,7 @@ bot.once('ready', async () => {
     ]);
 });
 
-let validQuery = q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('http') || q == 'init' || q.length <= 0);
+let validQuery = q => !(q.startsWith('@') || q.startsWith('#') || q.startsWith(':') || q.startsWith('/') || q.startsWith('a:') || q.startsWith('t:') || q.startsWith('id:') || q.startsWith('http') || q == 'init' || q.length <= 0);
 async function getEmbeds(msg, edit=true) {
     if (msg.content.includes('`')) return 0;
     let queries = [...msg.content.matchAll(/(?<=(^|[^\\]))((\<(.*?)\>)|(\[\[(.*?)\]\]))/g)];
@@ -314,14 +314,15 @@ function getFilesFromEmbeds(embeds, spoiler=false) {
 const delfiles = files => files.forEach(file => fs.unlinkSync(file));
 
 const emojiReactions = {
-    '🦊': ['fox'],
-    '🐈': ['cat', 'kitty', 'kitten'],
+    '🦊': ['fox', '@silent'],
+    '🐈': ['cat', 'kitty', 'kitten', 'meow', 'purrr'],
+    '🐀': ['rat'],
     '🐃': ['buffalo'],
-    '🐑': ['sheep'],
-    '🐶': ['dog'],
+    '🐑': ['sheep', 'bah', 'baah', 'baaah'],
+    '🐶': ['dog', 'woof', 'bark'],
     '🐼': ['panda'],
     '🐻': ['bear'],
-    '🐵': ['monkey'],
+    '🐵': ['monkey', 'see_no_evil', 'hear_no_evil', 'speak_no_evil'], // monkey-containing emoji that don't contain the word "monkey"
     '🦁': ['lion'],
     '🐯': ['tiger'],
     '🐢': ['turtle'],
