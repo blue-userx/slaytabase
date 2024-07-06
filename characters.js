@@ -131,4 +131,5 @@ export default {
     'Gorgon_purple_color': ['The Gorgon', 16724953, '<:colorless_energy:382625433016991745>'],
     'Locksmith_color': ['The Locksmith', 4128959, '<:colorless_energy:382625433016991745>'],
     'Octo_gray_color': ['The Octopus', 12648262, '<:colorless_energy:382625433016991745>'],
+    'Shadowreaper_color': ['The Shadow Reaper', 0, '<:colorless_energy:382625433016991745>'],
 };
