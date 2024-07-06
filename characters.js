@@ -128,4 +128,7 @@ export default {
     'Green And Purple': ['The Silent & The Watcher', 16777215, '<:colorless_energy:382625433016991745>'],
     'Red And Purple': ['The Ironclad & The Watcher', 16777215, '<:colorless_energy:382625433016991745>'],
     'Blue And Purple': ['The Defect & The Watcher', 16777215, '<:colorless_energy:382625433016991745>'],
+    'Gorgon_purple_color': ['The Gorgon', 16724953, '<:colorless_energy:382625433016991745>'],
+    'Locksmith_color': ['The Locksmith', 4128959, '<:colorless_energy:382625433016991745>'],
+    'Octo_gray_color': ['The Octopus', 12648262, '<:colorless_energy:382625433016991745>'],
 };
