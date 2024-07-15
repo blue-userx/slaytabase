@@ -348,7 +348,7 @@ __Commands:__
 
         'lists': async () => ({
             title: "lists",
-            description: `web search: ${cfg.exportURL}/search\nexport: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/slaytabase/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/slaytabase/blob/main/docs/dataFormatted.json\nmanually added items: https://github.com/OceanUwU/slaytabase/blob/main/extraItems.js`,
+            description: `web search: ${cfg.exportURL}/search\nexport: ${cfg.exportURL}\nfull data: https://github.com/OceanUwU/slaytabase/blob/main/docs/data.json\nfull data (formatted): https://github.com/OceanUwU/slaytabase/blob/main/docs/dataformatted.json\nmanually added items: https://github.com/OceanUwU/slaytabase/blob/main/extraItems.js`,
         }),
 
         'customcommands': async msg => {

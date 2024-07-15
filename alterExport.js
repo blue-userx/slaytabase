@@ -393,7 +393,7 @@ async function exportAll() {
             let filePath = `${path}/${file}`;
             if (filePath != filePath.toLowerCase())
                 fs.renameSync(filePath, filePath.toLowerCase());
-            if (fs.lstatSync(filePath).isDirectory())
+            else if (fs.lstatSync(filePath).isDirectory())
                 lowercasify(filePath.toLowerCase())
         }
     }
@@ -412,7 +412,7 @@ async function exportAll() {
     }
     page = page.slice(0, page.indexOf('<ul>')+4) + fs.readdirSync('docs').filter(isMod).map(mod => `<li><a href="${mod}">${JSON.parse(fs.readFileSync(`docs/${mod}/data.json`)).mods[0].name}</a></li>`).join('') + "</ul>Note: If you're the author of any of these mods and don't want its data in the Slaytabase, contact Ocean on the slay the spire discord.<br>" + page.slice(page.indexOf('</ul>')+5);
     fs.writeFileSync('docs/data.json', JSON.stringify(fullData));
-    fs.writeFileSync('docs/dataFormatted.json', JSON.stringify(fullData, null, 4));
+    fs.writeFileSync('docs/dataformatted.json', JSON.stringify(fullData, null, 4));
     fs.writeFileSync('docs/index.html', page);
     console.log('Finished!');
 }

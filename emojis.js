@@ -27,6 +27,7 @@ const emojis = [
     ['[fist_icon]', 'finisher:961810374120849418', true],
     ['gremlin:Wiz', 'p_wiz:997275808316010607'],
     ['hexamod:Soulburn', 'p_soulburn:997276073010147328'],
+    ['TheBrainlets:Soulburn', 'p_soulburn:997276073010147328'],
     ['hexamod:Intensity', 'p_intensity:997274751028437022'],
     ['slimeboundmod:Potency', 'p_potency:997276392007925852'],
     ['slimeboundmod:Goop', 'p_goop:997275103463219280'],
