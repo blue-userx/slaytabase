@@ -523,7 +523,7 @@ bot.on('interactionCreate', async interaction => {
                         if (settings == null)
                             await db.User.create({id: interaction.user.id, mods: JSON.stringify([userMod])});
                         else
-                            await db.User.update({mods: JSON.stringify([...JSON.parse(settings.mod), userMod])}, {where: {id: interaction.user.id}});
+                            await db.User.update({mods: JSON.stringify([...JSON.parse(settings.mods), userMod])}, {where: {id: interaction.user.id}});
                         await interaction.editReply(`Added \`${userMod}\` to your main mods.`);
                     } else {
                         let settings = await db.User.findOne({where: {id: interaction.user.id}});
