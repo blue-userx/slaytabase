@@ -516,7 +516,7 @@ bot.on('interactionCreate', async interaction => {
                     break;
 
                 case 'addusermod':
-                    await interaction.deferReply();
+                    await interaction.deferReply({ephemeral: true});
                     let userMod = interaction.options.getString('mod');
                     if (interaction.inGuild()) {
                         let settings = await db.User.findOne({where: {id: interaction.user.id}});
@@ -536,7 +536,7 @@ bot.on('interactionCreate', async interaction => {
                     break;
                 
                 case 'removeusermod':
-                    await interaction.deferReply();
+                    await interaction.deferReply({ephemeral: true});
                     let removeUserMod = interaction.options.getString('mod');
                     let userSettings;
                     if (interaction.inGuild()) {
