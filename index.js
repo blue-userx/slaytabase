@@ -164,6 +164,22 @@ bot.once('ready', async () => {
                 .setRequired(true)
                 .setAutocomplete(true)),
         new SlashCommandBuilder()
+            .setName('addusermod')
+            .setDescription('Adds a mod to your personal <> calls.')
+            .addStringOption(option =>
+                option.setName('mod')
+                .setDescription('Mod name')
+                .setRequired(true)
+                .setAutocomplete(true)),
+        new SlashCommandBuilder()
+            .setName('removeusermod')
+            .setDescription('Removes a mod from your personal <> calls.')
+            .addStringOption(option =>
+                option.setName('mod')
+                .setDescription('Mod name')
+                .setRequired(true)
+                .setAutocomplete(true)),
+        new SlashCommandBuilder()
             .setName('setdiscussionchannel')
             .setDescription('Bot will create a thread to discuss a random item from the server\'s main mod every day.')
             .setDMPermission(false)
@@ -223,7 +239,8 @@ async function getEmbeds(msg, edit=true) {
             if (!edit) typing = msg.channel.sendTyping();
             let embeds = [];
             let server = await db.ServerSettings.findOne({where: {guild: msg.inGuild() ? msg.guildId : msg.channelId}});
-            let filter = server == null ? item => 'Slay the Spire' == item.item.mod : item => ['Slay the Spire', ...JSON.parse(server.mod)].includes(item.item.mod);
+            let user = await db.User.findOne({where: {id: msg.author.id}});
+            let filter = item => ['Slay the Spire', ...(server == null ? [] : JSON.parse(server.mod)), ...(user == null ? [] : JSON.parse(user.mods))].includes(item.item.mod);
             for (let i = 0; i < queries.length; i++) {
                 if (!edit)
                     typing = msg.channel.sendTyping();
@@ -498,6 +515,43 @@ bot.on('interactionCreate', async interaction => {
                         await interaction.editReply(`Removed \`${removeMod}\` from this DM channel's main mods.`);
                     break;
 
+                case 'addusermod':
+                    await interaction.deferReply();
+                    let userMod = interaction.options.getString('mod');
+                    if (interaction.inGuild()) {
+                        let settings = await db.User.findOne({where: {id: interaction.user.id}});
+                        if (settings == null)
+                            await db.User.create({id: interaction.user.id, mods: JSON.stringify([userMod])});
+                        else
+                            await db.User.update({mods: JSON.stringify([...JSON.parse(settings.mod), userMod])}, {where: {id: interaction.user.id}});
+                        await interaction.editReply(`Added \`${userMod}\` to your main mods.`);
+                    } else {
+                        let settings = await db.User.findOne({where: {id: interaction.user.id}});
+                        if (settings == null)
+                            await db.User.create({id: interaction.user.id, mods: JSON.stringify([userMod])});
+                        else
+                            await db.User.update({mods: JSON.stringify([...JSON.parse(settings.mods), userMod])}, {where: {id: interaction.user.id}});
+                        await interaction.editReply(`Added \`${userMod}\` to your main mods.`);
+                    }
+                    break;
+                
+                case 'removeusermod':
+                    await interaction.deferReply();
+                    let removeUserMod = interaction.options.getString('mod');
+                    let userSettings;
+                    if (interaction.inGuild()) {
+                        userSettings = await db.User.findOne({where: {id: interaction.user.id}});
+                    } else
+                    userSettings = await db.User.findOne({where: {id: interaction.user.id}});
+                    if (userSettings == null)
+                        return interaction.editReply('Can\'t remove a server mod if you haven\'t set any yet!');
+                    await userSettings.update({mods: JSON.stringify(JSON.parse(userSettings.mods).filter(m => m != removeUserMod))});
+                    if (interaction.inGuild())
+                        await interaction.editReply(`Removed \`${removeUserMod}\` from your main mods.`);
+                    else
+                        await interaction.editReply(`Removed \`${removeUserMod}\` from your main mods.`);
+                    break;
+
                 case 'setdiscussionchannel':
                     await interaction.deferReply();
                     let on = interaction.options.getBoolean('on');
@@ -575,6 +629,17 @@ bot.on('interactionCreate', async interaction => {
                     if (settings == null)
                         return interaction.respond([]);
                     await interaction.respond(JSON.parse(settings.mod).filter(m => m.toLowerCase().includes(interaction.options.getFocused().toLowerCase())).slice(0,25).map(i => ({name: i, value: i})));
+                    break;
+
+                case 'addusermod':
+                    await interaction.respond(data.mods.filter(mod => mod.name.toLowerCase().includes(interaction.options.getFocused().toLowerCase())).slice(0,25).map(i => ({name: i.name,value: i.name})));
+                    break;
+
+                case 'removeusermod':
+                    let userSettings  = await db.User.findOne({where: {id: interaction.user.id}});
+                    if (userSettings == null)
+                        return interaction.respond([]);
+                    await interaction.respond(JSON.parse(userSettings.mods).filter(m => m.toLowerCase().includes(interaction.options.getFocused().toLowerCase())).slice(0,25).map(i => ({name: i, value: i})));
                     break;
                 
                 case 'forcenextdailydiscussion':
