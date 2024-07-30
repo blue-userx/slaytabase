@@ -36,18 +36,18 @@ async function embed(item, msg, embeds=[], encode=true) {
     switch (item.itemType) {
         case 'card':
             e.color = item.character[1];
-            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.hasOwnProperty('pack') ? `Pack: ${item.pack}` : item.mod}\n\n${item.description.replaceAll('~~-', '​~~-')}${item.flavor ? `\n*${item.flavor}*` : ''}`;
+            e.description = `${item.type != 'Curse' ? `${item.rarity} ${item.type} / ` : ''}${item.cost == '' ? '' : `${item.cost} ${item.character[2]} / `}${item.character[0]} / ${item.hasOwnProperty('pack') ? `Pack: ${item.pack}` : item.mod}\n\n${item.description.replaceAll('~~-', '​~~-')}${item.flavor ? `\n*-# ${item.flavor.replaceAll("\n", "\n#- ")}*` : ''}`;
             break;
 
         case 'relic':
             e.color = item.character[1];
-            e.description = ` ${item.tier} Relic / ${item.character[0]} / ${item.mod}\n\n${item.description}\n*${item.flavorText}*`;
+            e.description = ` ${item.tier} Relic / ${item.character[0]} / ${item.mod}\n\n${item.description}\n*-# ${item.flavorText.replaceAll("\n", "\n#- ")}*`;
             break;
             
         case 'potion':
             if (item.character[0] != 'All')
                 e.color = item.character[1];
-            e.description = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}${item.flavor ? `\n*${item.flavor}*` : ''}`;
+            e.description = `${item.rarity} Potion / ${item.character[0]} / ${item.mod}\n\n${item.description}${item.flavor ? `\n*-# ${item.flavor.replaceAll("\n", "\n#- ")}` : ''}*`;
             break;
         
         case 'event':
