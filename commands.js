@@ -722,7 +722,7 @@ There are some filters available, but these are custom to this command and work 
                 title: ' ',
                 thumbnail: null,
                 footer: null,
-                description: `__**${itemEmbed.data.title}**__: ${itemEmbed.data.description.split('\n').slice(2).join(' ')}`,
+                description: `[${itemEmbed.data.title}](${itemEmbed.data.url}): ${itemEmbed.data.description.split('\n').slice(2).join(' ')}`,
             };
         },
 
@@ -747,7 +747,7 @@ There are some filters available, but these are custom to this command and work 
             return {
                 ...itemEmbed.data,
                 title: ' ',
-                description: `**${itemEmbed.data.title}** - ${itemEmbed.data.description.replace('\n\n', '$$$$$').replaceAll('\n', ' ').replace('$$$', '\n')}`,
+                description: `[${itemEmbed.data.title}](${itemEmbed.data.url}) - ${itemEmbed.data.description.replace('\n\n', '$$$$$').replaceAll('\n', ' ').replace('$$$', '\n')}`,
                 thumbnail: null,
                 footer: null,
             };
