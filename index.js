@@ -336,7 +336,7 @@ const emojiReactions = {
     '🐀': ['rat'],
     '🐃': ['buffalo'],
     '🐑': ['sheep', 'bah', 'baah', 'baaah'],
-    '🐶': ['dog', 'woof', 'bark'],
+    '🐶': ['dog', 'woof', 'bark', 'puppy'],
     '🐼': ['panda'],
     '🐻': ['bear'],
     '🐵': ['monkey', 'see_no_evil', 'hear_no_evil', 'speak_no_evil'], // monkey-containing emoji that don't contain the word "monkey"
