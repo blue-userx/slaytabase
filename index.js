@@ -344,6 +344,7 @@ const emojiReactions = {
     '🐯': ['tiger'],
     '🐢': ['turtle'],
     '🐸': ['frog'],
+    '🦦': ['otter'],
 };
 
 bot.on('messageCreate', async msg => {
