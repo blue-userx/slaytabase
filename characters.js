@@ -133,4 +133,5 @@ export default {
     'Octo_gray_color': ['The Octopus', 12648262, '<:colorless_energy:382625433016991745>'],
     'Shadowreaper_color': ['The Shadow Reaper', 0, '<:colorless_energy:382625433016991745>'],
     'Brainlets_purple_orange': ['The Brainlets', 11731935, '<:colorless_energy:382625433016991745>'],
+    'Time_walker_color': ['The Time Walker', 6122690, '<:colorless_energy:382625433016991745>'],
 };
