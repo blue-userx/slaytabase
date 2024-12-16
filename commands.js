@@ -3,7 +3,7 @@ import db from './models/index.js';
 import { User, EmbedBuilder } from 'discord.js';
 import { createCanvas, createImageData, loadImage, registerFont } from 'canvas';
 import drawMultilineText from './canvas-multiline-text.js';
-import { Gif } from 'make-a-gif'
+import GIFEncoder from 'gif-encoder-2';
 import { fmFunc } from 'calculator-by-str';
 import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
 import { plot } from 'plot';
@@ -133,12 +133,13 @@ async function meme(msg, arg, options) {
                     );*/
                 }
             
-            let buffer = canvas.toBuffer('image/png');
-            let gif = new Gif(options.w, options.h, 500);
-            await gif.addFrame({src: buffer});
-            let render = await gif.encode();
+            let encoder = new GIFEncoder(options.w, options.h);
+            encoder.setDelay(500);
+            encoder.start();
+            encoder.addFrame(ctx);
+            encoder.finish();
             let filename = `export${String(Math.random()).slice(2)}.gif`;
-            fs.writeFileSync(filename, render);
+            fs.writeFileSync(filename, encoder.out.getData());
             return {
                 title: ' ',
                 image: {url: 'attachment://'+filename},
@@ -1528,6 +1529,7 @@ __List of memes:__
             let url = `https://github.com/search?type=wikis&q=repo%3Akiooeht%2FModTheSpire+repo%3Adaviscook477%2FBaseMod+repo%3Akiooeht%2FStSLib+repo%3AAlchyr%2FBasicMod+${arg.replaceAll(' ', '+')}`;
             let response = await fetch(url);
             let body = await response.text();
+            console.log(body);
             try {
                 let result = JSON.parse(body).payload.results[0];
                 let baseWikiUrl = `https://github.com/${result.repo.repository.owner_login}/${result.repo.repository.name}/wiki/`;
