@@ -134,4 +134,7 @@ export default {
     'Shadowreaper_color': ['The Shadow Reaper', 0, '<:colorless_energy:382625433016991745>'],
     'Brainlets_purple_orange': ['The Brainlets', 11731935, '<:colorless_energy:382625433016991745>'],
     'Time_walker_color': ['The Time Walker', 6122690, '<:colorless_energy:382625433016991745>'],
+    'Thesolidified': ['The Solidified', 9528371, '<:colorless_energy:382625433016991745>'],
+    'Cast': ['Lava Smith', 11730958, '<:colorless_energy:382625433016991745>'],
+    'Snowy_blue_color': ['The Conductor', 1380942, '<:conducto_energy:1320902604125110322>'],
 };

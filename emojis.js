@@ -48,6 +48,8 @@ const emojis = [
     ['bogwarden:Maledict', 'bogwardenmaledict:1161308927007391875'],
     ['bogwarden:Spines', 'bogwardenspines:1161308929553354862'],
     ['bogwarden:Venom', 'bogwardenvenom:1161308924830564372'],
+    ['[snowpunk:SnowIcon]', 'conducto_snow:1320903821869846538', true],
+    ['[snowpunk:GearIcon]', 'conducto_gear:1320903832162668585', true],
 ];
 
 export default function emojify(text, character) {
