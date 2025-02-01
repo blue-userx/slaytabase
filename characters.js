@@ -137,4 +137,5 @@ export default {
     'Thesolidified': ['The Solidified', 9528371, '<:colorless_energy:382625433016991745>'],
     'Cast': ['Lava Smith', 11730958, '<:colorless_energy:382625433016991745>'],
     'Snowy_blue_color': ['The Conductor', 1380942, '<:conducto_energy:1320902604125110322>'],
+    'Ori':['Ori', 12643583, '<:colorless_energy:382625433016991745>'],
 };
