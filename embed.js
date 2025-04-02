@@ -1,8 +1,6 @@
 import { EmbedBuilder } from 'discord.js';
 import cfg from './cfg.js';
 import fn from './fn.js';
-import owofify from 'owoifyx';
-const owoify = owofify.default;
 
 let stars = n => Array(Number(n)).fill('\\⭐').join('');
 
@@ -141,14 +139,6 @@ async function embed(item, msg, embeds=[], encode=true) {
             e.image.url = encodeURI(e.image.url);
     }
 
-    if (e.title)
-        e.title = owoify(e.title);
-    if (e.description)
-        e.description = owoify(e.description)
-    if (e.footer && e.footer.text)
-        e.footer.text = owoify(e.footer.text)
-    if (e.author && e.author.name)
-        e.author.name = owoify(e.author.name)
     return e.title == '' ? null : new EmbedBuilder(e);
 }
 
